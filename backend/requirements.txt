@@ -1,0 +1,4 @@
+Flask
+pandas
+openpyxl  # Para leer archivos Excel
+flask-cors  # Para manejar CORS entre frontend y backend
