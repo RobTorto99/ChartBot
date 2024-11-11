@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+// src/components/ChatInput.tsx
+
+import React from 'react';
 import { Send } from 'lucide-react';
 import { FileUpload } from './FileUpload';
 import { FileAttachmentComponent } from './FileAttachment';
-import { parseFile } from '../utils/fileParser';
+import { parseFile } from '../utils/fileParser'; // Asegúrate de tener esta función
 import type { FileAttachment as FileAttachmentType } from '../types';
 
 interface ChatInputProps {
@@ -12,22 +14,27 @@ interface ChatInputProps {
 }
 
 export function ChatInput({ input, setInput, onSubmit }: ChatInputProps) {
-  const [selectedFile, setSelectedFile] = useState<FileAttachmentType | null>(null);
+  const [selectedFile, setSelectedFile] = React.useState<FileAttachmentType | null>(null);
 
   const handleFileSelect = async (file: File) => {
+    const allowedExtensions = ['csv', 'xlsx', 'xls'];
+    const fileExtension = file.name.split('.').pop()?.toLowerCase();
+
+    if (!fileExtension || !allowedExtensions.includes(fileExtension)) {
+      alert('Por favor, selecciona un archivo CSV o Excel (.csv, .xlsx, .xls)');
+      return;
+    }
+
     try {
       const parsedFile = await parseFile(file);
       setSelectedFile(parsedFile);
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error al parsear el archivo:', error);
-      // Aquí puedes manejar errores, por ejemplo, mostrar una notificación al usuario
+      alert('Error al parsear el archivo. Por favor, verifica que el archivo esté correcto.');
     }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!input.trim() && !selectedFile) return;
-
     onSubmit(e, selectedFile || undefined);
     setInput('');
     setSelectedFile(null);

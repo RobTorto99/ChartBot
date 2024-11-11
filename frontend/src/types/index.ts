@@ -6,7 +6,7 @@ export interface Message {
   isBot: boolean;
   timestamp: Date;
   showChart?: boolean;
-  chartOptions?: Options; // Añadido
+  chartOptions?: Highcharts.Options; // Añadido
   attachment?: FileAttachment; // Agregamos attachment como opcional
   canvasCode?: string;  
 }

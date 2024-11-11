@@ -1,13 +1,13 @@
+// src/App.tsx
+
 import React, { useState, useRef, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { Message, Chat } from './types';
+import type { Message, Chat, FileAttachment } from './types';
 import { ChatHeader } from './components/ChatHeader';
 import { ChatMessage } from './components/ChatMessage';
 import { ChatInput } from './components/ChatInput';
 import { ChatTray } from './components/ChatTray';
 import HighchartsChart from './components/HighchartsChart';
-import type { FileAttachment as FileAttachmentType } from './types';
-
 
 const createInitialChat = (): Chat => ({
   id: uuidv4(),
@@ -83,62 +83,68 @@ function App() {
     );
   };
 
-  const handleSubmit = async (e: React.FormEvent, file?: FileAttachmentType) => {
+  const handleSubmit = async (e: React.FormEvent, file?: FileAttachment): Promise<void> => {
     e.preventDefault();
     if (!input.trim() && !file) return;
-  
+
     const currentChat = getCurrentChat();
+    const messageId = currentChat.messages.length + 1;
+    const timestamp = new Date();
+
     const userMessage: Message = {
-      id: currentChat.messages.length + 1,
+      id: messageId,
       text: input || (file ? `Archivo adjunto: ${file.name}` : ''),
       isBot: false,
-      timestamp: new Date(),
+      timestamp,
       attachment: file,
     };
-  
-    const updatedChat = {
+
+    let updatedChat: Chat = {
       ...currentChat,
       messages: [...currentChat.messages, userMessage],
-      lastUpdated: new Date(),
+      lastUpdated: timestamp,
       title:
         currentChat.messages.length === 1 ? input || file?.name || 'Chat' : currentChat.title,
     };
-  
+
     updateChat(activeChat, updatedChat);
     setInput('');
-    setIsTyping(true);
-  
-    // Crear FormData para enviar el archivo y el prompt
-    const formData = new FormData();
-    formData.append('prompt', input);
+
     if (file) {
-      // Suponiendo que necesitas enviar el archivo original, no el parseado
-      // Si necesitas enviar el archivo parseado, debes ajustarlo aquí
-      formData.append('file', new Blob([JSON.stringify(file.content)], { type: 'application/json' }), file.name);
-    }
+      setIsTyping(true); // Mostrar indicador de escritura
 
-    // Realizar la llamada a la API
-    const apiUrl = 'https://your-backend-api-url/chart-data';
+      try {
+        // Crear FormData para enviar el archivo y el prompt
+        const formData = new FormData();
+        formData.append('prompt', input);
+        // Asumiendo que necesitas enviar el contenido parseado como JSON
+        formData.append(
+          'file',
+          new Blob([JSON.stringify(file.content)], { type: 'application/json' }),
+          file.name
+        );
 
-    fetch(apiUrl, {
-      method: 'POST',
-      body: formData,
-    })
-      .then((response) => {
+        // Realizar la llamada a la API
+        const apiUrl = 'https://your-backend-api-url/chart-data'; // Reemplaza con tu URL real
+
+        const response = await fetch(apiUrl, {
+          method: 'POST',
+          body: formData,
+        });
+
         if (!response.ok) {
-          throw new Error(
-            `La solicitud a la API falló con el estado ${response.status}`
-          );
+          throw new Error(`La solicitud a la API falló con el estado ${response.status}`);
         }
-        return response.json();
-      })
-      .then((data) => {
+
+        const data = await response.json();
+
         const { visualization_code, visualization_explanation } = data;
 
         if (!visualization_code) {
           throw new Error('La respuesta de la API no contiene visualization_code');
         }
 
+        // Parsear visualization_code a opciones de Highcharts
         let options: Highcharts.Options;
         try {
           options = JSON.parse(visualization_code);
@@ -146,8 +152,9 @@ function App() {
           throw new Error('Error al parsear visualization_code: ' + err);
         }
 
+        // Crear el mensaje del bot con el gráfico
         const botMessage: Message = {
-          id: updatedChat.messages.length + 1,
+          id: messageId + 1,
           text: visualization_explanation || 'Aquí está tu gráfico.',
           isBot: true,
           timestamp: new Date(),
@@ -155,29 +162,50 @@ function App() {
           chartOptions: options,
         };
 
-        updateChat(activeChat, {
+        // Actualizar el chat con el mensaje del bot
+        updatedChat = {
           ...updatedChat,
           messages: [...updatedChat.messages, botMessage],
           lastUpdated: new Date(),
-        });
-        setIsTyping(false);
-      })
-      .catch((err) => {
+        };
+
+        updateChat(activeChat, updatedChat);
+      } catch (err: any) {
         console.error('Error al obtener los datos del gráfico:', err);
         const botMessage: Message = {
-          id: updatedChat.messages.length + 1,
+          id: messageId + 1,
           text: 'Lo siento, ocurrió un error al generar el gráfico: ' + err.message,
           isBot: true,
           timestamp: new Date(),
         };
 
-        updateChat(activeChat, {
+        updatedChat = {
           ...updatedChat,
           messages: [...updatedChat.messages, botMessage],
           lastUpdated: new Date(),
-        });
-        setIsTyping(false);
-      });
+        };
+
+        updateChat(activeChat, updatedChat);
+      } finally {
+        setIsTyping(false); // Ocultar indicador de escritura
+      }
+    } else {
+      // Si no hay archivo adjunto, manejar como mensaje normal o proporcionar feedback
+      const botMessage: Message = {
+        id: messageId + 1,
+        text: 'Por favor, adjunta un archivo Excel o CSV para generar un gráfico.',
+        isBot: true,
+        timestamp: new Date(),
+      };
+
+      updatedChat = {
+        ...updatedChat,
+        messages: [...updatedChat.messages, botMessage],
+        lastUpdated: new Date(),
+      };
+
+      updateChat(activeChat, updatedChat);
+    }
   };
 
   return (

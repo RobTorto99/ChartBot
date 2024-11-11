@@ -1,8 +1,12 @@
+// src/components/ChatMessage.tsx
+
 import React from 'react';
 import { Bot, User } from 'lucide-react';
-import { Message } from '../types';
+import type { Message } from '../types';
 import { FileAttachmentComponent } from './FileAttachment';
 import { CanvasBoard } from './CanvasBoard';
+import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
 
 interface ChatMessageProps {
   message: Message;
@@ -31,8 +35,13 @@ export function ChatMessage({ message }: ChatMessageProps) {
         {message.attachment && (
           <FileAttachmentComponent file={message.attachment} />
         )}
-        {message.canvasCode && (
-          <CanvasBoard code={message.canvasCode} />
+        {message.showChart && message.chartOptions && (
+          <div className="my-4">
+            <HighchartsReact
+              highcharts={Highcharts}
+              options={message.chartOptions}
+            />
+          </div>
         )}
         <span className="text-xs opacity-50 mt-1 block">
           {message.timestamp.toLocaleTimeString()}
