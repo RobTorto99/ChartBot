@@ -1,4 +1,3 @@
-// src/App.tsx
 import React, { useState, useRef, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { Message, Chat } from './types';
@@ -7,6 +6,8 @@ import { ChatMessage } from './components/ChatMessage';
 import { ChatInput } from './components/ChatInput';
 import { ChatTray } from './components/ChatTray';
 import HighchartsChart from './components/HighchartsChart';
+import type { FileAttachment as FileAttachmentType } from './types';
+
 
 const createInitialChat = (): Chat => ({
   id: uuidv4(),
@@ -82,19 +83,19 @@ function App() {
     );
   };
 
-  const handleSubmit = async (e: React.FormEvent, file?: File) => {
+  const handleSubmit = async (e: React.FormEvent, file?: FileAttachmentType) => {
     e.preventDefault();
     if (!input.trim() && !file) return;
-
+  
     const currentChat = getCurrentChat();
     const userMessage: Message = {
       id: currentChat.messages.length + 1,
       text: input || (file ? `Archivo adjunto: ${file.name}` : ''),
       isBot: false,
       timestamp: new Date(),
-      // attachment: file ? { name: file.name, type: file.type } : undefined,
+      attachment: file,
     };
-
+  
     const updatedChat = {
       ...currentChat,
       messages: [...currentChat.messages, userMessage],
@@ -102,16 +103,18 @@ function App() {
       title:
         currentChat.messages.length === 1 ? input || file?.name || 'Chat' : currentChat.title,
     };
-
+  
     updateChat(activeChat, updatedChat);
     setInput('');
     setIsTyping(true);
-
+  
     // Crear FormData para enviar el archivo y el prompt
     const formData = new FormData();
     formData.append('prompt', input);
     if (file) {
-      formData.append('file', file);
+      // Suponiendo que necesitas enviar el archivo original, no el parseado
+      // Si necesitas enviar el archivo parseado, debes ajustarlo aquí
+      formData.append('file', new Blob([JSON.stringify(file.content)], { type: 'application/json' }), file.name);
     }
 
     // Realizar la llamada a la API

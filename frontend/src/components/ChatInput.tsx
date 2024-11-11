@@ -1,17 +1,28 @@
-// src/components/ChatInput.tsx
 import React, { useState } from 'react';
 import { Send } from 'lucide-react';
 import { FileUpload } from './FileUpload';
 import { FileAttachmentComponent } from './FileAttachment';
+import { parseFile } from '../utils/fileParser';
+import type { FileAttachment as FileAttachmentType } from '../types';
 
 interface ChatInputProps {
   input: string;
   setInput: (value: string) => void;
-  onSubmit: (e: React.FormEvent, file?: File) => void;
+  onSubmit: (e: React.FormEvent, file?: FileAttachmentType) => Promise<void>;
 }
 
 export function ChatInput({ input, setInput, onSubmit }: ChatInputProps) {
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [selectedFile, setSelectedFile] = useState<FileAttachmentType | null>(null);
+
+  const handleFileSelect = async (file: File) => {
+    try {
+      const parsedFile = await parseFile(file);
+      setSelectedFile(parsedFile);
+    } catch (error) {
+      console.error('Error al parsear el archivo:', error);
+      // Aquí puedes manejar errores, por ejemplo, mostrar una notificación al usuario
+    }
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,10 +38,7 @@ export function ChatInput({ input, setInput, onSubmit }: ChatInputProps) {
       {selectedFile && (
         <div className="max-w-4xl mx-auto mb-4">
           <FileAttachmentComponent
-            file={{
-              name: selectedFile.name,
-              type: selectedFile.type,
-            }}
+            file={selectedFile}
             onRemove={() => setSelectedFile(null)}
             isPreview
           />
@@ -49,7 +57,7 @@ export function ChatInput({ input, setInput, onSubmit }: ChatInputProps) {
           className="w-full bg-gray-700 text-white rounded-lg pl-12 pr-12 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <div className="absolute left-2 top-1/2 -translate-y-1/2">
-          <FileUpload onFileSelect={setSelectedFile} disabled={!!selectedFile} />
+          <FileUpload onFileSelect={handleFileSelect} disabled={!!selectedFile} />
         </div>
         <button
           type="submit"

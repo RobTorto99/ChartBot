@@ -5,9 +5,10 @@ export interface Message {
   text: string;
   isBot: boolean;
   timestamp: Date;
-  //attachment?: FileAttachment;
   showChart?: boolean;
   chartOptions?: Options; // Añadido
+  attachment?: FileAttachment; // Agregamos attachment como opcional
+  canvasCode?: string;  
 }
 
 
@@ -21,6 +22,6 @@ export interface Chat {
 export interface FileAttachment {
   name: string;
   type: string;
-  content?: string; // Cambia content a opcional
-  preview?: string;
+  content: string[][]; // O el tipo que corresponda
+  preview: string[][]; // O el tipo que corresponda
 }
