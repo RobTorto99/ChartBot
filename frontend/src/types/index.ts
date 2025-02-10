@@ -1,5 +1,3 @@
-import { Options } from 'highcharts'; // Añade esta línea
-
 export interface Message {
   id: number;
   text: string;
@@ -7,7 +5,7 @@ export interface Message {
   timestamp: Date;
   showChart?: boolean;
   chartOptions?: Highcharts.Options; // Añadido
-  attachment?: FileAttachment; // Agregamos attachment como opcional
+  attachment?: File; // Agregamos attachment como opcional
   canvasCode?: string;  
 }
 
@@ -20,8 +18,9 @@ export interface Chat {
 }
 
 export interface FileAttachment {
+  file: File;
   name: string;
   type: string;
-  content: string[][]; // O el tipo que corresponda
+  //content: any; // O el tipo que corresponda
   preview: string[][]; // O el tipo que corresponda
 }

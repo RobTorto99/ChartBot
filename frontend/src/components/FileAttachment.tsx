@@ -8,10 +8,16 @@ interface FileAttachmentProps {
   isPreview?: boolean;
 }
 
-export function FileAttachmentComponent({ file, onRemove, isPreview }: FileAttachmentProps) {
+export function FileAttachmentComponent({
+    file,
+    onRemove,
+    isPreview
+  }: FileAttachmentProps) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const previewData = isPreview ? file.preview : file.content;
+  const previewData = file.preview; 
+
   const maxRows = 5;
+
 
   if (!previewData?.length) return null;
 
@@ -43,12 +49,13 @@ export function FileAttachmentComponent({ file, onRemove, isPreview }: FileAttac
           </button>
         </div>
       </div>
+
       {isExpanded && (
         <div className="p-3 overflow-x-auto">
           <table className="w-full text-sm text-left text-gray-300">
             <thead className="text-xs uppercase bg-gray-800">
               <tr>
-                {previewData[0].map((header, i) => (
+                {previewData[0].map((header: string, i: number) => (
                   <th key={i} className="px-4 py-2">
                     {header}
                   </th>
@@ -56,9 +63,9 @@ export function FileAttachmentComponent({ file, onRemove, isPreview }: FileAttac
               </tr>
             </thead>
             <tbody>
-              {previewData.slice(1, maxRows + 1).map((row, i) => (
+              {previewData.slice(1, maxRows + 1).map((row: string[], i: number) => (
                 <tr key={i} className="border-b border-gray-700">
-                  {row.map((cell, j) => (
+                  {row.map((cell: string, j: number) => (
                     <td key={j} className="px-4 py-2">
                       {cell}
                     </td>
@@ -67,6 +74,7 @@ export function FileAttachmentComponent({ file, onRemove, isPreview }: FileAttac
               ))}
             </tbody>
           </table>
+
           {previewData.length > maxRows + 1 && (
             <p className="text-xs text-gray-400 mt-2 text-center">
               Showing {maxRows} of {previewData.length - 1} rows

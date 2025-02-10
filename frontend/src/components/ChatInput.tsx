@@ -1,78 +1,110 @@
 // src/components/ChatInput.tsx
-
 import React from 'react';
-import { Send } from 'lucide-react';
+import { Send, Paintbrush2, CheckCircle, X } from 'lucide-react';
 import { FileUpload } from './FileUpload';
-import { FileAttachmentComponent } from './FileAttachment';
-import { parseFile } from '../utils/fileParser'; // Asegúrate de tener esta función
-import type { FileAttachment as FileAttachmentType } from '../types';
 
 interface ChatInputProps {
   input: string;
   setInput: (value: string) => void;
-  onSubmit: (e: React.FormEvent, file?: FileAttachmentType) => Promise<void>;
+  onSubmit: (e: React.FormEvent, file?: File, generateChart?: boolean) => Promise<void>;
 }
 
 export function ChatInput({ input, setInput, onSubmit }: ChatInputProps) {
-  const [selectedFile, setSelectedFile] = React.useState<FileAttachmentType | null>(null);
+  const [selectedFile, setSelectedFile] = React.useState<File | null>(null);
+  const [generateChart, setGenerateChart] = React.useState<boolean>(true);
 
-  const handleFileSelect = async (file: File) => {
+  const handleFileSelect = (file: File) => {
     const allowedExtensions = ['csv', 'xlsx', 'xls'];
     const fileExtension = file.name.split('.').pop()?.toLowerCase();
-
     if (!fileExtension || !allowedExtensions.includes(fileExtension)) {
       alert('Por favor, selecciona un archivo CSV o Excel (.csv, .xlsx, .xls)');
       return;
     }
-
-    try {
-      const parsedFile = await parseFile(file);
-      setSelectedFile(parsedFile);
-    } catch (error: any) {
-      console.error('Error al parsear el archivo:', error);
-      alert('Error al parsear el archivo. Por favor, verifica que el archivo esté correcto.');
-    }
+    setSelectedFile(file);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    onSubmit(e, selectedFile || undefined);
+    e.preventDefault();
+    onSubmit(e, selectedFile || undefined, generateChart);
     setInput('');
+    setSelectedFile(null);
+  };
+
+  // Botón para “desmarcar” el archivo
+  const handleRemoveFile = () => {
     setSelectedFile(null);
   };
 
   return (
     <div className="border-t border-gray-700 bg-gray-800 p-4">
+      {/* Se muestra sólo si hay un archivo seleccionado */}
       {selectedFile && (
-        <div className="max-w-4xl mx-auto mb-4">
-          <FileAttachmentComponent
-            file={selectedFile}
-            onRemove={() => setSelectedFile(null)}
-            isPreview
-          />
+        <div className="flex items-center justify-center gap-2 mb-4 text-sm text-white">
+          {/* Icono de check en verde */}
+          <CheckCircle className="w-5 h-5 text-green-400" />
+          <span>
+            Archivo subido:
+            <span className="ml-1 font-semibold">{selectedFile.name}</span>
+          </span>
+          {/* Botón para quitar el archivo */}
+          <button
+            onClick={handleRemoveFile}
+            className="text-red-400 hover:text-red-500 p-1"
+            title="Quitar archivo"
+          >
+            <X className="w-4 h-4" />
+          </button>
         </div>
       )}
+
       <form onSubmit={handleSubmit} className="max-w-4xl mx-auto relative">
+        
+        {/* INPUT DE TEXTO */}
         <input
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder={
             selectedFile
-              ? "Describe what you'd like to know about this file..."
-              : "Type your message..."
+              ? "Describe lo que quieras sobre este archivo..."
+              : "Escribe tu mensaje..."
           }
-          className="w-full bg-gray-700 text-white rounded-lg pl-12 pr-12 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full bg-gray-700 text-white rounded-lg pl-24 pr-12 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
-        <div className="absolute left-2 top-1/2 -translate-y-1/2">
+
+        {/* ZONA IZQUIERDA (BOTONES ADJUNTAR + PINCEL) */}
+        <div className="absolute left-2 top-1/2 -translate-y-1/2 flex items-center gap-2">
+          {/* Botón de subir archivo */}
           <FileUpload onFileSelect={handleFileSelect} disabled={!!selectedFile} />
+
+          {/* Botón para activar/desactivar el gráfico */}
+          <button
+            type="button"
+            onClick={() => setGenerateChart(!generateChart)}
+            className={`
+              p-1 rounded-full transition-colors
+              ${generateChart
+                ? 'bg-blue-500 text-white hover:bg-blue-600'
+                : 'bg-transparent text-gray-400 hover:bg-gray-600'
+              }
+            `}
+            title="Generar gráfico"
+          >
+            <Paintbrush2 className="w-5 h-5" />
+          </button>
         </div>
+
+        {/* BOTÓN DE ENVIAR (A LA DERECHA) */}
         <button
           type="submit"
-          className={`absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white p-2 rounded-lg transition-colors ${
-            !input.trim() && !selectedFile
+          className={`
+            absolute right-2 top-1/2 -translate-y-1/2
+            text-gray-400 hover:text-white p-2 rounded-lg transition-colors
+            ${(!input.trim() && !selectedFile)
               ? 'opacity-50 cursor-not-allowed'
               : 'hover:bg-gray-600'
-          }`}
+            }
+          `}
           disabled={!input.trim() && !selectedFile}
         >
           <Send className="w-5 h-5" />

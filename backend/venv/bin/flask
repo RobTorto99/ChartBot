@@ -1,4 +1,4 @@
-#!/home/roberto/Projects/ChartBot_v1.0/venv/bin/python3
+#!/home/roberto/Projects/ChartBot_v1.0/backend/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
