@@ -6,3 +6,4 @@ torch
 unsloth
 peft
 transformers
+orjson

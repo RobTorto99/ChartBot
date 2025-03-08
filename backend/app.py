@@ -8,6 +8,7 @@ from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from transformers import logging as hf_logging
 from typing import Optional
+import orjson
 
 hf_logging.set_verbosity_error() 
 
@@ -137,28 +138,30 @@ def chart_data():
         cleaned_response = clean_json_response(model_response)
         print("Respuesta limpiada:")
         print(cleaned_response)
-        
-        try:
+        data = cleaned_response
+        """try:
             response_json = json.loads(cleaned_response)
+            print('paso 1')
             visualization_code = response_json.get('visualization_code', '{}')
+            print('paso 2')
             visualization_explanation = response_json.get('visualization_explanation', '')
+            print('paso 3')
         except json.JSONDecodeError as err:
             print("Error al parsear JSON:", err)
             visualization_code = {}
-            visualization_explanation = "El modelo devolvió un formato inesperado."
+            visualization_explanation = "El modelo devolvió un formato inesperado.\""""
 
     else:
-        # Si no se requiere gráfico, se devuelve una respuesta normal
         visualization_code = json.dumps({})
         visualization_explanation = "Respuesta normal: " + (prompt or "Sin texto")
+        data = {
+            'visualization_code': visualization_code,
+            'visualization_explanation': visualization_explanation
+        }
     
-    print(f"visualization_code:\n{visualization_code}")
-    print(f"visualization_explanation:\n{visualization_explanation}")
-
-    return jsonify({
-        'visualization_code': visualization_code,
-        'visualization_explanation': visualization_explanation
-    })
+    print('respuesta final:\n')
+    print(data)
+    return data
 
 
 @app.route('/', defaults={'path': ''})
