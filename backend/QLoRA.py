@@ -12,35 +12,14 @@ from unsloth import FastLanguageModel
 from datasets import Dataset, DatasetDict, Features, Value
 import glob
 import pandas as pd
-from peft import LoraConfig, prepare_model_for_kbit_training, PeftModel, get_peft_model
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
-import tensorflow as tf
+from transformers import BitsAndBytesConfig
+
 
 torch.set_default_dtype(torch.bfloat16 if is_bfloat16_supported() else torch.float16)
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 
-
 max_seq_length = 1024 # Choose any! We auto support RoPE Scaling internally!
 dtype = None # None for auto detection. Float16 for Tesla T4, V100, Bfloat16 for Ampere+
-load_in_4bit = True # Use 4bit quantization to reduce memory usage. Can be False.
-models = [
-    "unsloth/mistral-7b-v0.3-bnb-4bit",     
-    "unsloth/mistral-7b-instruct-v0.3-bnb-4bit",
-    "unsloth/llama-3-8b-bnb-4bit",                  # probar la normal
-    "unsloth/llama-3-8b-Instruct-bnb-4bit",         # probar la version que sabe seguir instrucciones code
-    "unsloth/llama-3-70b-bnb-4bit",
-    "unsloth/Phi-3-mini-4k-instruct",     
-    "unsloth/Phi-3-medium-4k-instruct",
-    "unsloth/mistral-7b-bnb-4bit",
-    "unsloth/gemma-7b-bnb-4bit",
-    "Qwen/Qwen2.5-Coder-7B-Instruct",
-    "unsloth/Qwen2.5-Coder-3B-bnb-4bit",
-    "Qwen/Qwen2.5-Coder-3B-Instruct",
-    "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
-    "unsloth/DeepSeek-R1-Distill-Llama-8B-unsloth-bnb-4bit",
-    "Qwen/Qwen2.5-Coder-14B-Instruct",
-    "unsloth/Qwen2.5-Coder-14B-Instruct"
-]
 
 # Configurar BitsAndBytes para cuantización en 4 bits
 bnb_config = BitsAndBytesConfig(
@@ -52,7 +31,7 @@ bnb_config = BitsAndBytesConfig(
 
 # Carga el modelo con Unsloth (optimizado para entrenamiento)
 model, tokenizer = FastLanguageModel.from_pretrained(
-    model_name="Qwen/Qwen2.5-Coder-14B-Instruct",
+    model_name="unsloth/Qwen2.5-Coder-7B-Instruct",
     max_seq_length=max_seq_length,
     dtype=torch.bfloat16 if is_bfloat16_supported() else torch.float16,
     load_in_4bit=True,
@@ -73,7 +52,7 @@ model.print_trainable_parameters()
 
 alpaca_prompt= """Below is an instruction that give a prompt. Write a response that appropriately completes the request and gives you a visualization code and the corresponding explanation.
 
-### visualization _prompt:
+### visualization_prompt:
 {}
 
 ### visualization_code:
@@ -112,7 +91,7 @@ def formatting_prompts_func(examples, tokenizer):
 
 
 # Ruta a los archivos del dataset
-dataset_path = "/home/roberto/Projects/ChartBot/dataset_test_2/*.json"  # Ajusta la extensión si es necesario
+dataset_path = "dataset_test_2/*.json"  # Ajusta la extensión si es necesario
 
 # Paso 1: Leer y consolidar todos los archivos JSON
 data = []
@@ -182,7 +161,7 @@ dataset = DatasetDict({
 })
 
 dataset["train"] = dataset["train"].map(
-    formatting_prompts_func_2,
+    formatting_prompts_func,
     batched=True,
     fn_kwargs={'tokenizer': tokenizer},
     remove_columns=["visualization_prompt", "visualization_code", "visualization_explanation"]
@@ -192,7 +171,7 @@ dataset["train"] = dataset["train"].map(
 
 # Aplicar el formateo al split de validación
 dataset["validation"] = dataset["validation"].map(
-    formatting_prompts_func_2,
+    formatting_prompts_func,
     batched=True,
     fn_kwargs={'tokenizer': tokenizer},
     remove_columns=["visualization_prompt", "visualization_code", "visualization_explanation"]
@@ -215,7 +194,7 @@ training_args = TrainingArguments(
     weight_decay=0.01,
     lr_scheduler_type="linear", # antes --> cosine
     seed=3407,
-    output_dir="outputs",
+    output_dir="output_logs_QLoRA",
     gradient_checkpointing=False,
     max_grad_norm= 0.3  # Desactivar clipping de gradiente
 )
@@ -260,5 +239,5 @@ print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.
 
 model.eval()  # Poner el modelo en modo de evaluación
 
-model.save_pretrained("./output_Qwen2.5_14B_Coder_Instruct")
-tokenizer.save_pretrained("./output_Qwen2.5_14B_Coder_Instruct")
+model.save_pretrained("./output_QLoRA")
+tokenizer.save_pretrained("./output_QLoRA")
