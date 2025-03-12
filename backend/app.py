@@ -1,19 +1,16 @@
 import torch
 from unsloth import FastLanguageModel
 from peft import PeftModel
-from transformers import AutoTokenizer
 import pandas as pd
 import json
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from transformers import logging as hf_logging
 from typing import Optional
-import orjson
 
 hf_logging.set_verbosity_error() 
 
 app = Flask(__name__)
-# Permitir que TODAS las rutas (/*) se consuman DESDE http://localhost:5173
 CORS(app, resources={r"/*": {"origins": ["http://localhost:5173", "http://127.0.0.1:5173"]}})
 
 print("Cargando modelo...")
@@ -34,34 +31,27 @@ base_model = FastLanguageModel.get_peft_model(
     use_gradient_checkpointing=True
 )
 
-model = PeftModel.from_pretrained(base_model, "/home/roberto/Projects/ChartBot/modelo_v1")
+model = PeftModel.from_pretrained(base_model, "/output_QLoRA")
 model = FastLanguageModel.for_inference(model)
 
 print("Modelo cargado.")
 
 
 def clean_json_response(response_str: str) -> str:
-    # Quita espacios y saltos de línea al principio y al final
     response_str = response_str.strip()
-    # Si está envuelto en backticks o delimitadores, quítalos:
     if response_str.startswith("```") and response_str.endswith("```"):
-        # Quita los backticks y cualquier especificador de lenguaje (por ejemplo, "json")
         lines = response_str.splitlines()
-        # Si la primera línea es algo como "```json", la descartamos
         if lines[0].startswith("```"):
             lines = lines[1:]
-        # Si la última línea contiene ``` se descarta
         if lines and lines[-1].strip().startswith("```"):
             lines = lines[:-1]
         response_str = "\n".join(lines).strip()
-    # Otra opción: extraer el primer substring que comience con "{" y termine con "}"
     start = response_str.find("{")
     end = response_str.rfind("}")
     if start != -1 and end != -1:
         response_str = response_str[start:end+1]
     return response_str
 
-# Función de inferencia usando el modelo cargado
 def generate_visualization_code(prompt: str, df: Optional[pd.DataFrame] = None) -> str:
     if df is None:
         system_message = (
@@ -71,7 +61,6 @@ def generate_visualization_code(prompt: str, df: Optional[pd.DataFrame] = None) 
             "Please follow exactly that JSON structure without extra text.\n\n"
         )
     else:
-        # Si df existe, conviértelo a string y úsalo en la instrucción
         df_str = df.to_string()
         system_message = (
             "It responds in JSON format with two attributes:\n"
@@ -81,7 +70,6 @@ def generate_visualization_code(prompt: str, df: Optional[pd.DataFrame] = None) 
             f"Use this dataframe to create the chart: \n{df_str}\n\n"
         )
 
-    # Construye el texto final con el prompt
     text = f"{system_message}Prompt:\n{prompt}\n\nResponse:\n"
     inputs = tokenizer(text, return_tensors="pt").to(model.device)
     
@@ -112,7 +100,6 @@ def chart_data():
 
     if generate_chart:
         
-        # 1. Procesar el archivo (si se envió) con Pandas
         if file:
             if file.filename.endswith('.csv'):
                 df = pd.read_csv(file)
@@ -125,16 +112,11 @@ def chart_data():
         else:
             df = None
 
-        # 2. Llamar a la función del modelo
         model_response = generate_visualization_code(prompt, df)
             
-        # 3. Parsear la cadena que devuelve el modelo (si es JSON)
-        #    El modelo ya responde en JSON con 2 atributos. 
-        #    Podemos hacer un try/except:
         print("Respuesta original del modelo:")
         print(model_response)
         
-        # Limpia la respuesta para convertirla en JSON válido
         cleaned_response = clean_json_response(model_response)
         print("Respuesta limpiada:")
         print(cleaned_response)
