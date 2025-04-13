@@ -1,7 +1,7 @@
 Flask
 pandas
-openpyxl  # Para leer archivos Excel
-flask-cors  # Para manejar CORS entre frontend y backend
+openpyxl
+flask-cors
 torch
 unsloth
 peft

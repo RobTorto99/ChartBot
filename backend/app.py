@@ -19,7 +19,7 @@ base_model, tokenizer = FastLanguageModel.from_pretrained(
     "unsloth/Qwen2.5-Coder-7B-Instruct",
     load_in_4bit=True,
     dtype=torch.float16,
-    max_seq_length=1024,
+    max_seq_length=4096,
 )
 
 base_model = FastLanguageModel.get_peft_model(
@@ -31,7 +31,7 @@ base_model = FastLanguageModel.get_peft_model(
     use_gradient_checkpointing=True
 )
 
-model = PeftModel.from_pretrained(base_model, "/output_QLoRA")
+model = PeftModel.from_pretrained(base_model, "/home/roberto/Projects/ChartBot/output_QLoRA_final")
 model = FastLanguageModel.for_inference(model)
 
 print("Modelo cargado.")
@@ -76,7 +76,7 @@ def generate_visualization_code(prompt: str, df: Optional[pd.DataFrame] = None) 
     with torch.no_grad():
         output = model.generate(
             **inputs,
-            max_new_tokens=800,
+            max_new_tokens=4096,
             do_sample=True,
             top_k=40,
             top_p=0.9,
