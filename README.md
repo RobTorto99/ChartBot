@@ -97,5 +97,5 @@ cd Proyecto-de-TFG
 ## Contacto
 
 **Roberto Tortoledo**
-[roberto@tuuniversidad.edu](mailto:roberto7tortoledo@gmail.com)
+[roberto7tortoledo@gmail.com](mailto:roberto7tortoledo@gmail.com)
 TFG: “Desarrollo de aplicación web para implementar Inteligencia Artificial Generativa ajustada vía QLoRA en la creación de visualizaciones de datos”
