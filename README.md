@@ -65,8 +65,10 @@ cd Proyecto-de-TFG
 
 1. Instalar dependencias con npm (o yarn/pnpm):
 
+   Desde otra terminal ejecuta.
+
    ```bash
-   cd ../frontend
+   cd frontend
    npm install
    ```
 
