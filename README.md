@@ -9,6 +9,7 @@ Este repositorio contiene un **ChatBot** capaz de recibir texto y/o un archivo C
 
 ## Requisitos previos
 
+* GPU de al menos 6 GB de VRAM
 * **Python** ≥ 3.10
 * **Node.js** ≥ 16
 * Git (para clonar el repositorio)
