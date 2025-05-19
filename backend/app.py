@@ -114,12 +114,8 @@ def chart_data():
 
         model_response = generate_visualization_code(prompt, df)
             
-        print("Respuesta original del modelo:")
-        print(model_response)
-        
         cleaned_response = clean_json_response(model_response)
-        print("Respuesta limpiada:")
-        print(cleaned_response)
+
         data = cleaned_response
         """try:
             response_json = json.loads(cleaned_response)
@@ -141,8 +137,6 @@ def chart_data():
             'visualization_explanation': visualization_explanation
         }
     
-    print('respuesta final:\n')
-    print(data)
     return data
 
 

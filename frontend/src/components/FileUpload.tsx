@@ -1,4 +1,3 @@
-// src/components/FileUpload.tsx
 import React, { useRef } from 'react';
 import { Paperclip } from 'lucide-react';
 
@@ -14,7 +13,6 @@ export function FileUpload({ onFileSelect, disabled }: FileUploadProps) {
     const file = e.target.files?.[0];
     if (!file) return;
 
-    // Validate file size
     const maxSize = 10 * 1024 * 1024; // 10MB
     if (file.size > maxSize) {
       alert('File size exceeds 10MB limit. Please choose a smaller file.');

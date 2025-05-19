@@ -61,9 +61,7 @@ export function ChatTray({
         ${collapsed ? 'w-16' : 'w-64'}
       `}
     >
-      {/* Encabezado del tray con el botón de colapso */}
       <div className="flex items-center justify-between px-4 py-3 bg-gray-900">
-        {/* Si NO está colapsado, mostramos el botón "New Chat" */}
         {!collapsed && (
           <button
             onClick={onNewChat}
@@ -73,7 +71,6 @@ export function ChatTray({
             <span className="text-sm">New Chat</span>
           </button>
         )}
-        {/* Botón para colapsar/expandir */}
         <button
           onClick={toggleCollapse}
           className="text-gray-200 hover:text-white p-1 rounded transition-colors"
@@ -82,7 +79,6 @@ export function ChatTray({
         </button>
       </div>
 
-      {/* Contenido de la lista de chats, se oculta si está colapsado */}
       {!collapsed && (
         <div className="flex-1 overflow-y-auto">
           {chats.map((chat) => (

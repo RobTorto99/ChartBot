@@ -4,8 +4,8 @@ export interface Message {
   isBot: boolean;
   timestamp: Date;
   showChart?: boolean;
-  chartOptions?: Highcharts.Options; // Añadido
-  attachment?: File; // Agregamos attachment como opcional
+  chartOptions?: Highcharts.Options;
+  attachment?: File;
   canvasCode?: string;  
 }
 
@@ -21,6 +21,5 @@ export interface FileAttachment {
   file: File;
   name: string;
   type: string;
-  //content: any; // O el tipo que corresponda
-  preview: string[][]; // O el tipo que corresponda
+  preview: string[][];
 }

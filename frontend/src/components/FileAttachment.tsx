@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { FileSpreadsheet, ChevronDown, ChevronUp, X } from 'lucide-react';
 import type { FileAttachment as FileAttachmentType } from '../types';
 

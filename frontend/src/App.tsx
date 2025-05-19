@@ -1,8 +1,6 @@
-// src/App.tsx
-
 import React, { useState, useRef, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import type { Message, Chat } from './types'; // sin FileAttachment
+import type { Message, Chat } from './types';
 import { ChatHeader } from './components/ChatHeader';
 import { ChatMessage } from './components/ChatMessage';
 import { ChatInput } from './components/ChatInput';
@@ -215,9 +213,6 @@ function App() {
     }
   };
   
-  
-  
-
   return (
     <div className="flex h-screen bg-gray-900">
       <ChatTray

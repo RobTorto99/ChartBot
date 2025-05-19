@@ -1,5 +1,3 @@
-// src/components/ChatMessage.tsx
-
 import { Bot, User, File } from 'lucide-react';
 import type { Message } from '../types';
 import Highcharts from 'highcharts';
