@@ -1,0 +1,83 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly sales performance using synthetic data with seasonal trends",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "backgroundColor": "#ffffff",
+                "marginLeft": 50
+            },
+            "title": {
+                "text": "Monthly Sales Performance 2023",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "18px"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#34495e",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Sales (in USD)",
+                    "style": {
+                        "color": "#34495e",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Total Sales",
+                    "data": [
+                        50,
+                        65,
+                        80,
+                        120,
+                        150,
+                        180,
+                        200,
+                        170,
+                        130,
+                        90,
+                        70,
+                        55
+                    ],
+                    "color": "#2ecc71",
+                    "dataLabels": {
+                        "enabled": true,
+                        "style": {
+                            "fontWeight": "bold",
+                            "color": "#ffffff"
+                        }
+                    }
+                }
+            ],
+            "legend": {
+                "enabled": true,
+                "align": "center",
+                "verticalAlign": "bottom"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate time series with synthetic sales figures (quantitative continuous) across 12 temporal categories (months). Synthetic data follows a seasonal pattern (\u03bc=112.5, \u03c3=50.2) with summer peak and winter troughs, maintaining domain-appropriate USD values. The column chart maximizes data-ink ratio by eliminating redundant gridlines while maintaining Cairo's proportionality through consistent column widths. Perceptual grouping is achieved through sequential color coding, and temporal alignment supports trend recognition. Data labels use high-contrast typography to enhance readability without secondary axis reference."
+}

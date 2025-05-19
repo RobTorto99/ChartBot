@@ -1,0 +1,89 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a bubble chart with the following specifications: Chart type: bubble, Chart title: 'Highcharts draggable bubbles demo', Axes and labels styling: Use a dark background with white text for titles and labels, Data series: Include a single series with the name 'Bubble Data' and data points [100, 240, 3], [200, 130, 10], [450, 290, 15], Custom colors: Use a gradient from blue to green for the bubbles, Additional configurations: Disable animations, enable draggable points for both X and Y axes, and set the Y-axis to have a soft minimum of 0 and a soft maximum of 350.",
+    "visualization_code": {
+        "chart": {
+            "type": "bubble",
+            "animation": false,
+            "backgroundColor": "#1a1a1a"
+        },
+        "title": {
+            "text": "Highcharts draggable bubbles demo",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#ffffff"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Y-Axis",
+                "style": {
+                    "color": "#ffffff"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#ffffff"
+                }
+            },
+            "softMin": 0,
+            "softMax": 350
+        },
+        "tooltip": {
+            "valueDecimals": 2
+        },
+        "series": [
+            {
+                "name": "Bubble Data",
+                "type": "bubble",
+                "cursor": "move",
+                "dragDrop": {
+                    "draggableX": true,
+                    "draggableY": true
+                },
+                "data": [
+                    [
+                        100,
+                        240,
+                        3
+                    ],
+                    [
+                        200,
+                        130,
+                        10
+                    ],
+                    [
+                        450,
+                        290,
+                        15
+                    ]
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 1,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#0000ff"
+                        ],
+                        [
+                            1,
+                            "#00ff00"
+                        ]
+                    ]
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a bubble chart with a dark background and white text for titles and labels. The chart type is set to 'bubble', and the title is 'Highcharts draggable bubbles demo'. The data series includes a single series named 'Bubble Data' with three data points. The bubbles are colored using a gradient from blue to green. Additional configurations include disabling animations, enabling draggable points for both X and Y axes, and setting the Y-axis to have a soft minimum of 0 and a soft maximum of 350. This setup ensures a visually appealing and interactive chart that meets the specified requirements."
+}

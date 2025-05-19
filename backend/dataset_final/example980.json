@@ -1,0 +1,49 @@
+{
+    "visualization_prompt": "Create a Highcharts network graph with the following specifications: Chart type should be 'networkgraph'. The chart title should be 'Network Graph Example'. The axes and labels should have a font size of 14px and a color of #333333. The data series should include one series with the name 'Connections' and data points connecting nodes 'A' to 'B'. Custom colors should be used for the nodes and connections, with nodes colored #4CAF50 and connections colored #FF5722. Additional configurations should include a white background for the chart, a legend positioned at the bottom of the chart, and margins set to 50 pixels on all sides.",
+    "visualization_code": {
+        "chart": {
+            "type": "networkgraph",
+            "backgroundColor": "#ffffff",
+            "margin": 50
+        },
+        "title": {
+            "text": "Network Graph Example",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333333"
+            }
+        },
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        },
+        "series": [
+            {
+                "name": "Connections",
+                "dataLabels": {
+                    "enabled": true,
+                    "borderColor": "#000000",
+                    "borderWidth": 1,
+                    "allowOverlap": true,
+                    "style": {
+                        "fontSize": "14px",
+                        "color": "#333333"
+                    }
+                },
+                "marker": {
+                    "radius": 35,
+                    "fillColor": "#4CAF50"
+                },
+                "data": [
+                    {
+                        "from": "A",
+                        "to": "B",
+                        "color": "#FF5722"
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration object is designed to render a network graph with specific visual and functional attributes. The chart type is set to 'networkgraph', which is suitable for displaying relationships between nodes. The chart title is 'Network Graph Example', styled with a font size of 18px and a color of #333333. The axes and labels are styled with a font size of 14px and a color of #333333. The data series includes one series named 'Connections' with a single data point connecting nodes 'A' to 'B'. The nodes are colored #4CAF50, and the connection between them is colored #FF5722. The chart has a white background and a legend positioned at the bottom, centered horizontally. Margins of 50 pixels are set on all sides to provide spacing around the chart."
+}

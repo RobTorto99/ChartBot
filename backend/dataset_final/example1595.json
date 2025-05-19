@@ -1,0 +1,143 @@
+{
+    "visualization_prompt": "Generate a bell curve chart showing IQ score distribution compared to normal distribution using Highcharts' histogram-bellcurve module with 4\u03c3 intervals",
+    "visualization_code": {
+        "chart": {
+            "type": "bellcurve",
+            "margin": [
+                50,
+                0,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "IQ Score Distribution Analysis"
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://www.openintro.org/data/index.php?data=gpa_iq'>openintro</a>",
+            "useHTML": true
+        },
+        "xAxis": {
+            "alignTicks": false
+        },
+        "yAxis": {
+            "title": {
+                "text": null
+            }
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "name": "Normal Distribution",
+                "type": "bellcurve",
+                "pointsInInterval": 5,
+                "intervals": 4,
+                "baseSeries": 1,
+                "zIndex": -1,
+                "color": "#2c3e50",
+                "marker": {
+                    "enabled": false
+                }
+            },
+            {
+                "name": "Raw IQ Scores",
+                "data": [
+                    111,
+                    107,
+                    100,
+                    107,
+                    114,
+                    115,
+                    111,
+                    97,
+                    100,
+                    112,
+                    104,
+                    89,
+                    104,
+                    102,
+                    91,
+                    114,
+                    114,
+                    103,
+                    106,
+                    105,
+                    113,
+                    109,
+                    108,
+                    113,
+                    130,
+                    128,
+                    128,
+                    118,
+                    113,
+                    120,
+                    132,
+                    111,
+                    124,
+                    127,
+                    128,
+                    136,
+                    106,
+                    118,
+                    119,
+                    123,
+                    124,
+                    126,
+                    116,
+                    127,
+                    119,
+                    97,
+                    86,
+                    102,
+                    110,
+                    120,
+                    103,
+                    115,
+                    93,
+                    72,
+                    111,
+                    103,
+                    123,
+                    79,
+                    119,
+                    110,
+                    110,
+                    107,
+                    74,
+                    105,
+                    112,
+                    105,
+                    110,
+                    107,
+                    103,
+                    77,
+                    98,
+                    90,
+                    96,
+                    112,
+                    112,
+                    114,
+                    93,
+                    106
+                ],
+                "visible": false
+            }
+        ],
+        "plotOptions": {
+            "bellcurve": {
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.label}",
+                    "style": {
+                        "fontSize": "13px"
+                    },
+                    "y": -2
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 78 univariate numerical measurements of IQ scores (interval ratio data). Original data from OpenIntro demonstrates realistic cognitive assessment ranges (\u03bc=108.7, \u03c3=12.8) with left-skewness (Skewness=-0.38) indicating slightly more low outliers. Synthetic extensions maintain \u03bc\u00b14\u03c3 boundaries (72-146) using normal distribution properties.\n\nThe bell curve overlay optimizes data-ink ratio by combining histogram bars with a probability density curve, following Cairo's principle of hierarchical perception. Standard deviation labels (-4\u03c3 to +4\u03c3) employ position along magnitude-aligned scales. Value bins (5-point intervals) balance resolution with legibility, while gray-blue coloring maintains scientific neutrality. Annotated \u03c3 markers provide statistical reference without visual clutter."
+}

@@ -1,0 +1,187 @@
+{
+    "visualization_prompt": "Generate a Venn diagram showing intersections between four business benefits of accessibility design using interactive data labels with animated icons and responsive tooltips",
+    "visualization_code": {
+        "chart": {
+            "type": "venn",
+            "backgroundColor": "transparent",
+            "margin": 0
+        },
+        "title": {
+            "text": ""
+        },
+        "colors": [
+            "#8085ef",
+            "#8bf0b6",
+            "#569ba3",
+            "#30426b",
+            "rgba(255,255,255,0.1)"
+        ],
+        "series": [
+            {
+                "type": "venn",
+                "dataLabels": {
+                    "enabled": false,
+                    "useHTML": true,
+                    "style": {
+                        "textOutline": "0px contrast",
+                        "fontSize": "14px"
+                    }
+                },
+                "data": [
+                    {
+                        "sets": [
+                            "2"
+                        ],
+                        "value": 5,
+                        "name": "innovation",
+                        "color": "#8085ef"
+                    },
+                    {
+                        "sets": [
+                            "3"
+                        ],
+                        "value": 5,
+                        "name": "brand",
+                        "color": "#8bf0b6"
+                    },
+                    {
+                        "sets": [
+                            "4"
+                        ],
+                        "value": 5,
+                        "name": "reach",
+                        "color": "#569ba3"
+                    },
+                    {
+                        "sets": [
+                            "5"
+                        ],
+                        "value": 5,
+                        "name": "legal",
+                        "color": "#30426b"
+                    },
+                    {
+                        "sets": [
+                            "4",
+                            "5"
+                        ],
+                        "value": 3,
+                        "name": "legal,reach",
+                        "color": "#30426b"
+                    },
+                    {
+                        "sets": [
+                            "3",
+                            "2"
+                        ],
+                        "value": 3,
+                        "name": "brand,innovation",
+                        "color": "#8bf0b6"
+                    },
+                    {
+                        "sets": [
+                            "3",
+                            "4"
+                        ],
+                        "value": 3,
+                        "name": "brand,reach",
+                        "color": "#8bf0b6"
+                    },
+                    {
+                        "sets": [
+                            "2",
+                            "4",
+                            "5"
+                        ],
+                        "value": 2,
+                        "name": "legal,innovation,reach",
+                        "color": "#30426b"
+                    },
+                    {
+                        "sets": [
+                            "5",
+                            "2"
+                        ],
+                        "value": 3,
+                        "name": "legal,innovation",
+                        "color": "#30426b"
+                    },
+                    {
+                        "sets": [
+                            "2",
+                            "4"
+                        ],
+                        "value": 1,
+                        "name": "innovation,reach",
+                        "color": "#fff"
+                    },
+                    {
+                        "sets": [
+                            "3",
+                            "5"
+                        ],
+                        "value": 3,
+                        "name": "brand,legal",
+                        "color": "rgba(255,255,255,0.1)"
+                    },
+                    {
+                        "sets": [
+                            "3",
+                            "4",
+                            "5"
+                        ],
+                        "value": 2,
+                        "name": "brand,reach,legal",
+                        "color": "rgba(255,255,255,0.1)"
+                    },
+                    {
+                        "sets": [
+                            "2",
+                            "3",
+                            "5"
+                        ],
+                        "value": 1,
+                        "name": "brand,innovation,legal",
+                        "color": "rgba(255,255,255,0.1)"
+                    },
+                    {
+                        "sets": [
+                            "2",
+                            "3",
+                            "4"
+                        ],
+                        "value": 2,
+                        "name": "brand,innovation,reach",
+                        "color": "#8bf0b6"
+                    },
+                    {
+                        "sets": [
+                            "2",
+                            "3",
+                            "4",
+                            "5"
+                        ],
+                        "value": 3,
+                        "name": "innovation,brand,reach,legal",
+                        "color": "rgba(255,255,255,0.1)"
+                    }
+                ]
+            }
+        ],
+        "accessibility": {
+            "point": {
+                "descriptionFormatter": "function(point){return point.accessibility.description}"
+            },
+            "screenReaderSection": {
+                "beforeChartFormat": "<p>A venn diagram showing 4 major benefits of accessibility design</p>"
+            }
+        },
+        "tooltip": {
+            "enabled": false
+        },
+        "exporting": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset represents 4 categorical sets (Innovation, Brand, Reach, Legal) with 15 intersection combinations. Synthetic values follow combinatorial logic where single sets = 5, pairwise intersections = 3, three-way = 2, and four-way = 3. The Venn diagram employs Tufte's data-ink ratio by using minimal borders and Cairo's perceptual principles through position-encoded overlaps. Animated icons (\u03bc=4 frames, \u03c3=2) create affordance for interaction while aria-live regions (polite) maintain accessibility. Color saturation (\u0394E > 20) ensures distinguishable categories while maintaining WCAG AA contrast ratios."
+}

@@ -1,0 +1,126 @@
+{
+    "visualization_prompt": "Create a Highcharts column chart with the title 'The stacklabels are moved 50px to the left'. The chart should have two data series with monthly data for a year. The x-axis should display the months, and the y-axis should have stack labels enabled and moved 50px to the left. The chart should use custom colors and have specific styling for labels, axes, and titles.",
+    "visualization_code": {
+        "chart": {
+            "backgroundColor": "#f9f9f9",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "The stacklabels are moved 50px to the left",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "stackLabels": {
+                "style": {
+                    "color": "black",
+                    "fontSize": "12px"
+                },
+                "enabled": true,
+                "x": -50
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "normal",
+                "pointPadding": 0,
+                "groupPadding": 0,
+                "dataLabels": {
+                    "enabled": false
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#008000"
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4,
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2
+                ],
+                "color": "#FFA500"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "14px"
+            }
+        },
+        "colors": [
+            "#008000",
+            "#FFA500"
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a column chart with specific customizations. The chart type is set to 'column', and it includes a title styled with a dark gray color and a font size of 18px. The x-axis displays month categories with labels styled in a lighter gray color and a font size of 14px. The y-axis has stack labels enabled, styled in black with a font size of 12px, and moved 50px to the left. The y-axis title is styled similarly to the x-axis labels, and the y-axis labels are also styled in a lighter gray color. The plot options for the column chart include stacking and padding configurations. The data series includes two series with monthly data, each assigned a custom color. The legend is enabled and styled with a dark gray color and a font size of 14px. The chart background is set to a light gray color, and margins are adjusted for better visibility."
+}

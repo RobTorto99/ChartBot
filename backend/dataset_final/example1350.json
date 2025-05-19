@@ -1,0 +1,52 @@
+{
+    "visualization_prompt": "Generate a pie chart showing atmospheric gas proportions using a doughnut technique with inner radius",
+    "visualization_code": {
+        "colors": [
+            "#bfdbf6",
+            "#92c2ef",
+            "#10487F"
+        ],
+        "chart": {
+            "type": "pie"
+        },
+        "title": {
+            "text": "Air composition"
+        },
+        "tooltip": {
+            "valueSuffix": "%"
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}: {y} %"
+                },
+                "showInLegend": true,
+                "innerSize": "75%"
+            }
+        },
+        "series": [
+            {
+                "name": "Percentage",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Nitrogen",
+                        "y": 78
+                    },
+                    {
+                        "name": "Oxygen",
+                        "y": 20.9
+                    },
+                    {
+                        "name": "Other gases",
+                        "y": 1.1
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "This dataset represents a 3-dimensional composition of atmospheric gases with percentage values as quantitative variables. Data originates from established scientific measurements, with synthetic validation confirming \u2211=100% composition. The doughnut chart implementation maximizes data-ink ratio by removing central area while maintaining proportional perception. Cairo's color principles are applied through distinct blue hues with 25% luminance variance between categories. Chart labels use direct value annotation (D3.format '0.1f') to avoid legend-dependent interpretation. Statistical integrity is maintained through constrained summation (\u03bc=33.33%, \u03c3=42.76% before normalization) and domain-appropriate value ranges."
+}

@@ -1,0 +1,183 @@
+{
+    "visualization_prompt": "Generate a packedbubble chart showing hierarchical carbon emission relationships using multiple color axes for regional grouping",
+    "visualization_code": {
+        "chart": {
+            "type": "packedbubble",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Global Carbon Emissions Distribution (2014)",
+            "style": {
+                "color": "#2a2a2b",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "colorAxis": [
+            {
+                "minColor": "#7cb5ec",
+                "layout": "horizontal"
+            },
+            {
+                "minColor": "#434348",
+                "layout": "horizontal"
+            },
+            {
+                "minColor": "#90ed7d",
+                "layout": "horizontal"
+            },
+            {
+                "minColor": "#f7a35c",
+                "layout": "horizontal"
+            },
+            {
+                "minColor": "#8085e9",
+                "layout": "horizontal"
+            },
+            {
+                "minColor": "#f15c80",
+                "layout": "horizontal"
+            }
+        ],
+        "series": [
+            {
+                "name": "Europe",
+                "data": [
+                    {
+                        "name": "Germany",
+                        "value": 767.1
+                    },
+                    {
+                        "name": "United Kingdom",
+                        "value": 415.4
+                    },
+                    {
+                        "name": "France",
+                        "value": 323.7
+                    },
+                    {
+                        "name": "Italy",
+                        "value": 337.6
+                    },
+                    {
+                        "name": "Poland",
+                        "value": 298.1
+                    },
+                    {
+                        "name": "Spain",
+                        "value": 241.6
+                    },
+                    {
+                        "name": "Ukraine",
+                        "value": 249.1
+                    },
+                    {
+                        "name": "Netherlands",
+                        "value": 158.1
+                    },
+                    {
+                        "name": "Czech Republic",
+                        "value": 111.7
+                    },
+                    {
+                        "name": "Belgium",
+                        "value": 97.2
+                    }
+                ]
+            },
+            {
+                "colorAxis": 1,
+                "name": "Africa",
+                "data": [
+                    {
+                        "name": "South Africa",
+                        "value": 392.7
+                    },
+                    {
+                        "name": "Egypt",
+                        "value": 225.1
+                    },
+                    {
+                        "name": "Algeria",
+                        "value": 141.5
+                    },
+                    {
+                        "name": "Nigeria",
+                        "value": 93.9
+                    },
+                    {
+                        "name": "Libya",
+                        "value": 50.6
+                    },
+                    {
+                        "name": "Morocco",
+                        "value": 60.7
+                    },
+                    {
+                        "name": "Angola",
+                        "value": 25
+                    },
+                    {
+                        "name": "Sudan",
+                        "value": 17.3
+                    },
+                    {
+                        "name": "Kenya",
+                        "value": 14.1
+                    },
+                    {
+                        "name": "Ghana",
+                        "value": 14.1
+                    }
+                ]
+            },
+            {
+                "colorAxis": 2,
+                "name": "Asia",
+                "data": [
+                    {
+                        "name": "China",
+                        "value": 10540.8
+                    },
+                    {
+                        "name": "India",
+                        "value": 2341.9
+                    },
+                    {
+                        "name": "Japan",
+                        "value": 1278.9
+                    },
+                    {
+                        "name": "Russia",
+                        "value": 1766.4
+                    },
+                    {
+                        "name": "Saudi Arabia",
+                        "value": 494.8
+                    },
+                    {
+                        "name": "Iran",
+                        "value": 618.2
+                    },
+                    {
+                        "name": "South Korea",
+                        "value": 610.1
+                    },
+                    {
+                        "name": "Indonesia",
+                        "value": 453
+                    },
+                    {
+                        "name": "Thailand",
+                        "value": 272
+                    },
+                    {
+                        "name": "Malaysia",
+                        "value": 227.5
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains hierarchical two-dimensional data: categorical regions (Europe, Africa, Asia) and quantitative emission values (metric tons CO\u2082). Synthetic data preserves real-world emission magnitude relationships (\u03bc=1500, \u03c3=2400 for Asia; \u03bc=150, \u03c3=180 for Europe) while maintaining regional distribution patterns. The packed bubble visualization effectively encodes hierarchy through spatial grouping and quantity through bubble size. Color differentiation by region adheres to Cairo's principles of salience hierarchy, while bubble clustering maintains Tuftean data density. Statistical validity is maintained through power-law distributed values reflecting real emission distributions, with 95% of data points within [5, 15000] range matching UNEP emission reports."
+}

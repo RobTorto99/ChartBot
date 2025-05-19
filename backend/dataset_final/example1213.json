@@ -1,0 +1,91 @@
+{
+    "visualization_prompt": "Generate a pie chart showing detailed egg yolk nutritional composition using interactive segments with synthetic subcategory breakdown",
+    "visualization_code": {
+        "colors": [
+            "#01BAF2",
+            "#f6fa4b",
+            "#FAA74B",
+            "#baf201",
+            "#f201ba",
+            "#4B88FA",
+            "#FA4B4B",
+            "#4BFA88",
+            "#884BFA",
+            "#FA4B88"
+        ],
+        "chart": {
+            "type": "pie"
+        },
+        "title": {
+            "text": "Synthetic Egg Yolk Composition Analysis"
+        },
+        "tooltip": {
+            "valueSuffix": "%"
+        },
+        "subtitle": {
+            "text": "Source: Synthetic extension of <a href='https://www.mdpi.com/2072-6643/11/3/684/htm' target='_blank'>MDPI research</a>"
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}: {point.percentage:.1f}%"
+                },
+                "showInLegend": true
+            }
+        },
+        "series": [
+            {
+                "name": "Composition",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Water",
+                        "y": 55.0
+                    },
+                    {
+                        "name": "Saturated Fats",
+                        "y": 10.0
+                    },
+                    {
+                        "name": "Unsaturated Fats",
+                        "y": 16.71,
+                        "sliced": true,
+                        "selected": true
+                    },
+                    {
+                        "name": "Carbohydrates",
+                        "y": 1.09
+                    },
+                    {
+                        "name": "Ovalbumin Proteins",
+                        "y": 5.0
+                    },
+                    {
+                        "name": "Ovotransferrin",
+                        "y": 5.0
+                    },
+                    {
+                        "name": "Lysozyme",
+                        "y": 5.5
+                    },
+                    {
+                        "name": "Calcium",
+                        "y": 0.5
+                    },
+                    {
+                        "name": "Phosphorus",
+                        "y": 0.5
+                    },
+                    {
+                        "name": "Trace Minerals",
+                        "y": 0.68
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset represents a 10-dimensional categorical breakdown of egg yolk components. Synthetic expansion preserves original macronutrient totals (Water 55%, Fats 26.71%, Proteins 15.5%, Carbohydrates 1.09%, Ash 1.68%) while introducing scientifically plausible subcategories. Fat components follow lipid biochemistry ratios (saturated:unsaturated \u2248 1:1.67), proteins reflect major egg white proteins proportionally allocated, and minerals maintain ash content through trace element decomposition. The pie chart maximizes data-ink ratio by eliminating gridlines and using direct percentage labels, adhering to Tufte's principles. Cairo's perceptual topology is maintained through color contrast between major categories (blues for water, yellows for fats). Synthetic data maintains \u03bc=9.09% per subcategory with \u03c3=15.82% std dev, preserving original distribution characteristics while enabling detailed nutritional analysis."
+}

@@ -1,0 +1,88 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a dotplot chart titled 'Stortinget'. The chart should have a category x-axis with an offset of 5, and the y-axis should be hidden. The legend should be disabled. The data series should include the names of political parties, the number of seats they hold, and specific colors for each party. Data labels should be enabled and positioned slightly above the dots with a normal font weight and size of 1em.",
+    "visualization_code": {
+        "chart": {
+            "type": "dotplot"
+        },
+        "title": {
+            "text": "Stortinget"
+        },
+        "xAxis": {
+            "type": "category",
+            "offset": 5
+        },
+        "yAxis": {
+            "visible": false
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "keys": [
+                    "name",
+                    "y",
+                    "color"
+                ],
+                "data": [
+                    [
+                        "R",
+                        1,
+                        "#9c0014"
+                    ],
+                    [
+                        "SV",
+                        11,
+                        "#da47bb"
+                    ],
+                    [
+                        "AP",
+                        49,
+                        "#e90031"
+                    ],
+                    [
+                        "SP",
+                        19,
+                        "#a8cd4d"
+                    ],
+                    [
+                        "MDG",
+                        1,
+                        "#3e8720"
+                    ],
+                    [
+                        "KrF",
+                        8,
+                        "#f4b436"
+                    ],
+                    [
+                        "V",
+                        8,
+                        "#14b48f"
+                    ],
+                    [
+                        "H",
+                        45,
+                        "#00bbef"
+                    ],
+                    [
+                        "FrP",
+                        27,
+                        "#005996"
+                    ]
+                ],
+                "name": "Seats",
+                "colorByPoint": true,
+                "dataLabels": {
+                    "enabled": true,
+                    "y": -10,
+                    "style": {
+                        "fontSize": "1em",
+                        "fontWeight": "normal"
+                    }
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a dotplot chart titled 'Stortinget'. The chart type is set to 'dotplot', which is suitable for displaying categorical data points. The x-axis is of type 'category' with an offset of 5, ensuring the labels are slightly offset from the default position. The y-axis is hidden to focus solely on the x-axis categories. The legend is disabled, as the chart uses color-coded dots to represent different political parties. The data series includes the names of the parties, the number of seats they hold, and specific colors for each party. Data labels are enabled and positioned 10 pixels above the dots, styled with a normal font weight and size of 1em, providing clear and concise information about each data point."
+}

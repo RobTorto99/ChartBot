@@ -1,0 +1,106 @@
+{
+    "visualization_prompt": "Generate a bullet graph showing performance vs target metrics using customizable target line styling and inverted orientation",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "bullet",
+                "inverted": true,
+                "backgroundColor": "#f8f9fa"
+            },
+            "title": {
+                "text": "Q3 Sales Performance vs Targets",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "20px",
+                    "fontWeight": "bold"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "A",
+                    "B",
+                    "C",
+                    "D"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#34495e",
+                        "fontWeight": "bold"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": null,
+                "gridLineColor": "#ecf0f1",
+                "labels": {
+                    "format": "${value}K",
+                    "style": {
+                        "color": "#7f8c8d"
+                    }
+                }
+            },
+            "legend": {
+                "enabled": false
+            },
+            "series": [
+                {
+                    "type": "bullet",
+                    "color": "#3498db",
+                    "data": [
+                        {
+                            "y": 58,
+                            "target": 65,
+                            "targetOptions": {
+                                "width": "150%",
+                                "height": 8,
+                                "borderWidth": 2,
+                                "borderColor": "#e74c3c",
+                                "color": "rgba(231,76,60,0.2)"
+                            }
+                        },
+                        {
+                            "y": 72,
+                            "target": 70,
+                            "targetOptions": {
+                                "width": "130%",
+                                "height": 6,
+                                "borderColor": "#27ae60",
+                                "color": "rgba(46,204,113,0.3)"
+                            }
+                        },
+                        {
+                            "y": 63,
+                            "target": 60,
+                            "targetOptions": {
+                                "width": "110%",
+                                "borderWidth": 3,
+                                "borderColor": "#f1c40f",
+                                "color": "rgba(241,196,15,0.25)"
+                            }
+                        },
+                        {
+                            "y": 81,
+                            "target": 75,
+                            "targetOptions": {
+                                "width": "170%",
+                                "height": 10,
+                                "borderColor": "#9b59b6",
+                                "color": "rgba(155,89,182,0.15)"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "plotOptions": {
+                "bullet": {
+                    "pointPadding": 0.25,
+                    "borderRadius": 5
+                }
+            },
+            "tooltip": {
+                "pointFormat": "Actual: <b>{point.y}K</b><br/>Target: <b>{point.target}K</b>"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 4 categorical dimensions (A-D) with paired numerical metrics (sales performance vs targets). Synthetic data follows normal distribution (\u03bc=68.5, \u03c3=9.2) with intentional variance: Category D shows overperformance (+8% vs target) while B demonstrates precise target matching. The inverted bullet graph maximizes data-ink ratio by eliminating legend and using position-aligned comparisons. Target line styling follows Cairo's pre-attentive processing principles through varied border colors (red-green-yellow-purple spectrum) and translucent fills. Proportional width encoding (110-170%) creates visual hierarchy while maintaining category spacing. Currency-formatted tooltips and baseline gridlines provide statistical anchors without chart junk."
+}

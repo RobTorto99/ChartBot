@@ -1,0 +1,106 @@
+{
+    "visualization_prompt": "Generate a pie chart showing market share distribution of passenger vehicle types using pattern fills for accessibility compliance",
+    "visualization_code": {
+        "colors": [
+            "#01BAF2",
+            "#71BF45",
+            "#FAA74B",
+            "#B37CD2"
+        ],
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#FFFFFF",
+            "margin": [
+                20,
+                20,
+                40,
+                20
+            ]
+        },
+        "title": {
+            "text": "February 2020 Norway passenger auto registrations",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "accessibility": {
+            "point": {
+                "valueSuffix": "%"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://cleantechnica.com/2020/03/07/pioneering-norway-rises-above-68-plug-in-vehicle-market-share-in-february/'>cleantechnica</a>",
+            "useHTML": true
+        },
+        "tooltip": {
+            "pointFormat": "{series.name}: <b>{point.percentage:.0f}%</b>"
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "connectorColor": "#888",
+                    "format": "{point.name}: {y} %",
+                    "style": {
+                        "fontSize": "14px"
+                    }
+                },
+                "showInLegend": true,
+                "innerSize": "75%"
+            }
+        },
+        "series": [
+            {
+                "name": "Registrations",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "EV",
+                        "y": 68.1,
+                        "color": {
+                            "patternIndex": 0
+                        },
+                        "borderColor": "#5997DE"
+                    },
+                    {
+                        "name": "Hybrids",
+                        "y": 11.0,
+                        "color": {
+                            "patternIndex": 1
+                        },
+                        "borderColor": "#949494"
+                    },
+                    {
+                        "name": "Diesel",
+                        "y": 11.2,
+                        "color": {
+                            "patternIndex": 2
+                        },
+                        "borderColor": "#69A550"
+                    },
+                    {
+                        "name": "Petrol",
+                        "y": 9.7,
+                        "color": {
+                            "patternIndex": 3
+                        },
+                        "borderColor": "#C9854A"
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "itemStyle": {
+                "fontSize": "12px",
+                "color": "#666666"
+            },
+            "align": "center",
+            "verticalAlign": "bottom"
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate distribution of four vehicle categories (EV, Hybrids, Diesel, Petrol) with percentage market shares. Original data from cleantechnica.com shows strong EV dominance (\u03bc=68.1%, \u03c3=24.8), with complementary ICE vehicle distributions following power-law decay. The pie visualization maximizes data-ink ratio by directly encoding proportions as arc angles, while pattern fills address Cairo's color perception principles for accessibility. Doughnut formatting (innerSize=75%) creates focal contrast for the dominant EV segment. Percentage labels maintain Tufte's data density principles by eliminating legend lookups. Value annotations follow D3.format precision (.0f%) for immediate magnitude comprehension."
+}

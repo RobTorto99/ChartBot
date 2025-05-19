@@ -1,0 +1,353 @@
+{
+    "visualization_prompt": "Generate a tilemap showing geographical distribution of Chinese provinces using regional color-coding and coordinate positioning",
+    "visualization_code": {
+        "chart": {
+            "type": "tilemap",
+            "inverted": true
+        },
+        "colors": [
+            "rgba(255, 192, 77, 0.5)",
+            "rgba(255, 153, 255, 0.5)",
+            "rgba(255, 77, 77, 0.5)",
+            "rgba(0, 200, 83, 0.5)",
+            "rgba(41, 98, 255, 0.5)",
+            "rgba(41, 205, 255, 0.5)"
+        ],
+        "title": {
+            "text": "Provinces of China"
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://en.wikipedia.org/wiki/Provinces_of_China'>Wikipedia.org</a>"
+        },
+        "xAxis": {
+            "visible": false
+        },
+        "yAxis": {
+            "visible": false
+        },
+        "legend": {
+            "enabled": true
+        },
+        "tooltip": {
+            "headerFormat": null,
+            "pointFormat": "- The province of <b>{point.province}</b><br/>- <b>{point.capital}</b> is the capital<br/>- Chinese abbreviation <b>{point.abbreviation}</b><br/>- <b>{point.region}</b> region"
+        },
+        "plotOptions": {
+            "series": {
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.abbreviation}",
+                    "color": "#000000",
+                    "style": {
+                        "textOutline": false
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "South Central China",
+                "data": [
+                    {
+                        "x": 7,
+                        "y": 5,
+                        "abbreviation": "\u743c",
+                        "capital": "Haikou",
+                        "province": "Hainan",
+                        "region": "South Central China"
+                    },
+                    {
+                        "x": 5,
+                        "y": 4,
+                        "abbreviation": "\u6842",
+                        "capital": "Nanning",
+                        "province": "Guangxi",
+                        "region": "South Central China"
+                    },
+                    {
+                        "x": 6,
+                        "y": 3,
+                        "abbreviation": "\u7ca4",
+                        "capital": "Guangzhou",
+                        "province": "Guangdong",
+                        "region": "South Central China"
+                    },
+                    {
+                        "x": 4,
+                        "y": 4,
+                        "abbreviation": "\u6e58",
+                        "capital": "Changsha",
+                        "province": "Hunan",
+                        "region": "South Central China"
+                    },
+                    {
+                        "x": 5,
+                        "y": 3,
+                        "abbreviation": "\u9102",
+                        "capital": "Wuhan",
+                        "province": "Hubei",
+                        "region": "South Central China"
+                    },
+                    {
+                        "x": 3,
+                        "y": 4,
+                        "abbreviation": "\u8c6b",
+                        "capital": "Zhengzhou",
+                        "province": "Henan",
+                        "region": "South Central China"
+                    },
+                    {
+                        "x": 6,
+                        "y": 5,
+                        "abbreviation": "\u6e2f",
+                        "capital": "Hong Kong",
+                        "province": "Hong Kong",
+                        "region": "South Central China"
+                    },
+                    {
+                        "x": 6,
+                        "y": 4,
+                        "abbreviation": "\u6fb3",
+                        "capital": "Macau",
+                        "province": "Macau",
+                        "region": "South Central China"
+                    }
+                ]
+            },
+            {
+                "name": "Southwest China",
+                "data": [
+                    {
+                        "x": 3,
+                        "y": 2,
+                        "abbreviation": "\u4e91(\u6ec7)",
+                        "capital": "Kunming",
+                        "province": "Yunnan",
+                        "region": "Southwest China"
+                    },
+                    {
+                        "x": 3,
+                        "y": 1,
+                        "abbreviation": "\u5ddd(\u8700)",
+                        "capital": "Chengdu",
+                        "province": "Sichuan",
+                        "region": "Southwest China"
+                    },
+                    {
+                        "x": 4,
+                        "y": 3,
+                        "abbreviation": "\u8d35(\u9ed4)",
+                        "capital": "Guiyang",
+                        "province": "Guizhou",
+                        "region": "Southwest China"
+                    },
+                    {
+                        "x": 3,
+                        "y": 3,
+                        "abbreviation": "\u6e1d",
+                        "capital": "Chongqing",
+                        "province": "Chongqing",
+                        "region": "Southwest China"
+                    },
+                    {
+                        "x": 2,
+                        "y": 0,
+                        "abbreviation": "\u85cf",
+                        "capital": "Lhasa",
+                        "province": "Tibet",
+                        "region": "Southwest China"
+                    }
+                ]
+            },
+            {
+                "name": "East China",
+                "data": [
+                    {
+                        "x": 6,
+                        "y": 6,
+                        "abbreviation": "\u95fd",
+                        "capital": "Fuzhou",
+                        "province": "Fujian",
+                        "region": "East China"
+                    },
+                    {
+                        "x": 4,
+                        "y": 6,
+                        "abbreviation": "\u8d63",
+                        "capital": "Nanchang",
+                        "province": "Jiangxi",
+                        "region": "East China"
+                    },
+                    {
+                        "x": 5,
+                        "y": 6,
+                        "abbreviation": "\u6d59",
+                        "capital": "Hangzhou",
+                        "province": "Zhejiang",
+                        "region": "East China"
+                    },
+                    {
+                        "x": 3,
+                        "y": 5,
+                        "abbreviation": "\u7696",
+                        "capital": "Hefei",
+                        "province": "Anhui",
+                        "region": "East China"
+                    },
+                    {
+                        "x": 4,
+                        "y": 5,
+                        "abbreviation": "\u82cf",
+                        "capital": "Nanjing",
+                        "province": "Jiangsu",
+                        "region": "East China"
+                    },
+                    {
+                        "x": 5,
+                        "y": 7,
+                        "abbreviation": "\u6caa",
+                        "capital": "Shanghai",
+                        "province": "Shanghai",
+                        "region": "East China"
+                    },
+                    {
+                        "x": 5,
+                        "y": 5,
+                        "abbreviation": "\u9c81",
+                        "capital": "Jinan",
+                        "province": "Shandong",
+                        "region": "East China"
+                    },
+                    {
+                        "x": 7,
+                        "y": 8,
+                        "abbreviation": "\u53f0",
+                        "capital": "Taipei",
+                        "province": "Taiwan",
+                        "region": "East China"
+                    }
+                ]
+            },
+            {
+                "name": "Northwest China",
+                "data": [
+                    {
+                        "x": 2,
+                        "y": 1,
+                        "abbreviation": "\u9752",
+                        "capital": "Xining",
+                        "province": "Qinghai",
+                        "region": "Northwest China"
+                    },
+                    {
+                        "x": 2,
+                        "y": 2,
+                        "abbreviation": "\u7518(\u9647)",
+                        "capital": "Lanzhou",
+                        "province": "Gansu",
+                        "region": "Northwest China"
+                    },
+                    {
+                        "x": 1,
+                        "y": 2,
+                        "abbreviation": "\u9655(\u79e6)",
+                        "capital": "Xi'an",
+                        "province": "Shaanxi",
+                        "region": "Northwest China"
+                    },
+                    {
+                        "x": 1,
+                        "y": 1,
+                        "abbreviation": "\u65b0",
+                        "capital": "\u00dcr\u00fcmqi",
+                        "province": "Xinjiang",
+                        "region": "Northwest China"
+                    },
+                    {
+                        "x": 2,
+                        "y": 3,
+                        "abbreviation": "\u5b81",
+                        "capital": "Yinchuan",
+                        "province": "Ningxia",
+                        "region": "Northwest China"
+                    }
+                ]
+            },
+            {
+                "name": "Northeast China",
+                "data": [
+                    {
+                        "x": 1,
+                        "y": 7,
+                        "abbreviation": "\u8fbd",
+                        "capital": "Shenyang",
+                        "province": "Liaoning",
+                        "region": "Northeast China"
+                    },
+                    {
+                        "x": 0,
+                        "y": 8,
+                        "abbreviation": "\u9ed1",
+                        "capital": "Harbin",
+                        "province": "Heilongjiang",
+                        "region": "Northeast China"
+                    },
+                    {
+                        "x": 1,
+                        "y": 8,
+                        "abbreviation": "\u5409",
+                        "capital": "Changchun",
+                        "province": "Jilin",
+                        "region": "Northeast China"
+                    }
+                ]
+            },
+            {
+                "name": "North China",
+                "data": [
+                    {
+                        "x": 1,
+                        "y": 6,
+                        "abbreviation": "\u5180",
+                        "capital": "Shijiazhuang",
+                        "province": "Hebei",
+                        "region": "North China"
+                    },
+                    {
+                        "x": 3,
+                        "y": 6,
+                        "abbreviation": "\u6d25",
+                        "capital": "Tianjin",
+                        "province": "Tianjin",
+                        "region": "North China"
+                    },
+                    {
+                        "x": 2,
+                        "y": 5,
+                        "abbreviation": "\u664b",
+                        "capital": "Taiyuan",
+                        "province": "Shanxi",
+                        "region": "North China"
+                    },
+                    {
+                        "x": 2,
+                        "y": 6,
+                        "abbreviation": "\u4eac",
+                        "capital": "Beijing",
+                        "province": "Beijing",
+                        "region": "North China"
+                    },
+                    {
+                        "x": 2,
+                        "y": 4,
+                        "abbreviation": "\u5167\u8499\u53e4(\u8499)",
+                        "capital": "Hohhot",
+                        "province": "Inner Mongolia Autonomous",
+                        "region": "North China"
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains 34 provincial-level divisions across 6 regions, with each data point representing a province through multiple dimensions: categorical (region name, province name), nominal (abbreviations), and numerical (x/y coordinates). Synthetic spatial coordinates maintain relative geographical positioning while optimizing tilemap layout, with regional clustering preserving northwest-to-southeast orientation. Data quality demonstrates domain consistency through accurate administrative capitals and official abbreviations. The tilemap visualization maximizes data-ink ratio by eliminating axis lines while preserving spatial relationships through grid positioning. Semi-transparent colors apply Cairo's principle of salience through chromatic differentiation while maintaining figure-ground relationships. Data labels follow Tufte's minimum effective difference principle with black abbreviations on pastel backgrounds. Regional clustering (\u03bc=5.7 provinces per region, \u03c3=2.1) reveals uneven distribution characteristic of China's administrative geography."
+}

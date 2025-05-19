@@ -1,0 +1,91 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly performance comparison across three metrics using synthetic time-consistent data with legend index ordering",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#f8f9fa",
+            "marginTop": 30
+        },
+        "title": {
+            "text": "Q3 2023 Operational Metrics",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jul",
+                "Aug",
+                "Sep"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            },
+            "lineColor": "#bdc3c7"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Metric Value",
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            },
+            "gridLineColor": "#ecf0f1"
+        },
+        "colors": [
+            "#3498db",
+            "#2ecc71",
+            "#e74c3c"
+        ],
+        "series": [
+            {
+                "name": "Series C (Priority)",
+                "data": [
+                    78,
+                    82,
+                    89
+                ],
+                "legendIndex": 1,
+                "type": "column"
+            },
+            {
+                "name": "Series B (Standard)",
+                "data": [
+                    64,
+                    68,
+                    72
+                ],
+                "legendIndex": 2,
+                "type": "column"
+            },
+            {
+                "name": "Series A (Baseline)",
+                "data": [
+                    45,
+                    50,
+                    55
+                ],
+                "legendIndex": 3,
+                "type": "column"
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#34495e"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three-dimensional categorical data (monthly metrics) with quantitative measurements. Synthetic values maintain domain consistency through constrained ranges (40-90) reflecting operational KPIs, with Series C showing +15% quarterly growth (\u03bc=83, \u03c3=5.6), Series B demonstrating stable progression (\u03bc=68, \u03c3=4), and Series A representing baseline targets. The column chart maximizes data-ink ratio by eliminating redundant gridlines while maintaining perceptual discriminability through Cairo's color principles (distinct hue angles >30\u00b0). Legend reorganization via index mapping prioritizes critical metrics, supported by Tufte's vertical integration of labels and data."
+}

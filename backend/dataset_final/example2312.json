@@ -1,0 +1,149 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly categorical distributions using normal stacking with non-reversed order",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Non-reversed stacks demo. First series is in bottom.",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontWeight": "bold"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Metric Values",
+                "style": {
+                    "color": "#444444"
+                }
+            },
+            "reversedStacks": false,
+            "labels": {
+                "style": {
+                    "color": "#666666"
+                }
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "stacking": "normal",
+                "dataLabels": {
+                    "enabled": false
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Base Infrastructure",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#7CB5EC"
+            },
+            {
+                "name": "Core Services",
+                "data": [
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4,
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2
+                ],
+                "color": "#434348"
+            },
+            {
+                "name": "Premium Features",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#90ED7D"
+            },
+            {
+                "name": "Add-on Modules",
+                "data": [
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4,
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2
+                ],
+                "color": "#F7A35C"
+            }
+        ],
+        "tooltip": {
+            "headerFormat": "<b>{point.x}</b><br/>",
+            "pointFormat": "{series.name}: <b>{point.y}</b> ({point.percentage:.1f}%)",
+            "style": {
+                "fontSize": "14px"
+            }
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#333333"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly categories (nominal scale) with four quantitative variables representing system components. Synthetic data follows two distinct value patterns repeating across series to maintain proportional relationships while allowing stack percentage analysis. The column chart was chosen to emphasize part-to-whole relationships through physical stacking, with Tufte's data-ink ratio optimized by eliminating gridlines and using subtle color variations. Cairo's principles are applied through pre-attentive color coding and immediate stack percentage visibility in tooltips. Data ranges (\u03bc=120.4, \u03c3=51.9 for odd months; \u03bc=121.8, \u03c3=52.1 for even series) create realistic overlap while maintaining visual separation between layers."
+}

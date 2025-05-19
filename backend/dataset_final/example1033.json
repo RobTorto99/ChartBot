@@ -1,0 +1,100 @@
+{
+    "visualization_prompt": "Generate a 3D pie chart showing proportional market share distribution of consumer electronics categories using a semicircular design with depth-enhanced segments",
+    "visualization_code": {
+        "chart": {
+            "type": "pie",
+            "options3d": {
+                "enabled": true,
+                "alpha": 25,
+                "beta": 0
+            },
+            "backgroundColor": "#FFFFFF",
+            "marginTop": 40
+        },
+        "title": {
+            "text": "2023 Consumer Electronics Market Share (Semicircular 3D Projection)",
+            "style": {
+                "fontSize": "18px",
+                "color": "#2E4053",
+                "fontWeight": "bold"
+            }
+        },
+        "plotOptions": {
+            "pie": {
+                "depth": 45,
+                "startAngle": -90,
+                "endAngle": 90,
+                "dataLabels": {
+                    "format": "{point.name}: {point.percentage:.1f}%",
+                    "style": {
+                        "textOutline": "none",
+                        "fontSize": "12px"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Market Share",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Smartphones",
+                        "y": 22.3,
+                        "color": "#4A90E2"
+                    },
+                    {
+                        "name": "Laptops",
+                        "y": 18.7,
+                        "color": "#50E3C2"
+                    },
+                    {
+                        "name": "Wearables",
+                        "y": 15.4,
+                        "color": "#F5A623"
+                    },
+                    {
+                        "name": "Tablets",
+                        "y": 12.1,
+                        "color": "#BD10E0"
+                    },
+                    {
+                        "name": "Gaming Consoles",
+                        "y": 9.8,
+                        "color": "#D0021B"
+                    },
+                    {
+                        "name": "Smart Home",
+                        "y": 8.2,
+                        "color": "#7ED321"
+                    },
+                    {
+                        "name": "Cameras",
+                        "y": 6.5,
+                        "color": "#8B572A"
+                    },
+                    {
+                        "name": "Audio Equipment",
+                        "y": 4.9,
+                        "color": "#9013FE"
+                    },
+                    {
+                        "name": "PC Peripherals",
+                        "y": 1.7,
+                        "color": "#4A4A4A"
+                    },
+                    {
+                        "name": "VR Headsets",
+                        "y": 0.4,
+                        "color": "#C1C1C1"
+                    }
+                ]
+            }
+        ],
+        "tooltip": {
+            "pointFormat": "<b>{point.percentage:.1f}%</b> of total market",
+            "valueSuffix": "%"
+        }
+    },
+    "visualization_explanation": "The dataset represents a unidimensional categorical distribution with 10 distinct consumer electronics categories. Synthetic data was generated using a Pareto principle model (\u03bc=8.2%, \u03c3=6.8) to simulate typical market concentration patterns, with smartphone and laptop segments forming the characteristic 'head' of the distribution. Data integrity is maintained through explicit sum validation to 100% and industry-appropriate category labeling. The 3D semicircular pie visualization was selected to emphasize dominant market segments while conserving horizontal space. The depth dimension (z-axis) enhances categorical discrimination through stereoscopic separation while maintaining accurate angular proportion representation. Chart configuration adheres to Tufte's data-ink principles by eliminating axis lines and using direct percentage labeling. Color choices follow Cairo's perceptual topology guidelines with distinct hues for adjacent segments and luminance gradients indicating market position (cool colors for growth categories, warm for mature markets)."
+}

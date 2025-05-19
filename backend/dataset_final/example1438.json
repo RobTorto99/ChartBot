@@ -1,0 +1,82 @@
+{
+    "visualization_prompt": "Generate a column chart showing agricultural production comparison between corn and wheat across major producing countries using grouped columns with value annotations",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "zooming": {
+                "type": "y"
+            }
+        },
+        "title": {
+            "text": "Corn vs Wheat Estimated Production for 2020 (1000 MT)"
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://www.indexmundi.com/agriculture/?commodity=corn'>indexmundi</a>"
+        },
+        "xAxis": {
+            "categories": [
+                "USA",
+                "China",
+                "Brazil",
+                "EU",
+                "India",
+                "Russia"
+            ],
+            "title": {
+                "text": null
+            },
+            "accessibility": {
+                "description": "Countries"
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Production in 1000 million ton"
+            },
+            "labels": {
+                "overflow": "justify"
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "dataLabels": {
+                    "enabled": true
+                }
+            }
+        },
+        "tooltip": {
+            "valueSuffix": " (1000 MT)",
+            "stickOnContact": true,
+            "backgroundColor": "rgba(255, 255, 255, 0.93)"
+        },
+        "legend": {
+            "enabled": true
+        },
+        "series": [
+            {
+                "name": "Corn",
+                "data": [
+                    406292,
+                    260000,
+                    107000,
+                    68300,
+                    27500,
+                    14500
+                ],
+                "borderColor": "#949494"
+            },
+            {
+                "name": "Wheat",
+                "data": [
+                    51086,
+                    136000,
+                    5500,
+                    141000,
+                    107180,
+                    77000
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains two-dimensional categorical data comparing production quantities of two crops (corn/wheat) across six geopolitical regions. Each series represents an agricultural commodity with six numerical values in thousand metric tons, sourced from indexmundi's authoritative agricultural database. The original data shows authentic production estimates with clear magnitude differences between crops and countries. A grouped column chart was selected to enable direct visual comparison between commodities within each country cluster, maximizing data-ink ratio by eliminating gridlines while maintaining clear value labels. The gray/black color scheme follows Cairo's principle of luminance contrast for categorical distinction. Proportional scaling maintains accurate magnitude perception, with the US corn production (406,292) serving as a statistical anchor point for comparison with other values."
+}

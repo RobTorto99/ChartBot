@@ -1,0 +1,128 @@
+{
+    "visualization_prompt": "Generate a stacked area chart showing discontinuous temporal patterns using null value gaps and gradient fills",
+    "visualization_code": {
+        "chart": {
+            "type": "area",
+            "backgroundColor": "#FFFFFF",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "stacking: normal, connectNulls: false",
+            "style": {
+                "color": "#333",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "plotOptions": {
+            "area": {
+                "stacking": "normal",
+                "connectNulls": false,
+                "marker": {
+                    "enabled": false
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Blue Series",
+                "data": [
+                    1,
+                    1,
+                    null,
+                    1,
+                    1,
+                    1
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#A7D8FF"
+                        ],
+                        [
+                            1,
+                            "#005A9C"
+                        ]
+                    ]
+                }
+            },
+            {
+                "name": "Green Series",
+                "data": [
+                    1,
+                    1,
+                    1,
+                    null,
+                    1,
+                    1
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#B8E986"
+                        ],
+                        [
+                            1,
+                            "#2E7D32"
+                        ]
+                    ]
+                }
+            }
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        }
+    },
+    "visualization_explanation": "The dataset contains two categorical time series with 6 monthly observations each, demonstrating missing data patterns. Synthetic null values at positions 3 and 4 create discontinuous areas, testing the connectNulls functionality. Both series maintain identical non-null values (\u03bc=1, \u03c3=0) to emphasize visualization artifacts rather than numerical relationships. The gradient fills employ Cairo's perceptual principles by using luminance contrast for series differentiation while maintaining color harmony. Tufte's data-ink ratio is optimized through minimal gridlines and uncluttered markers. The stacked normalization ensures proportional comparison despite data gaps, with temporal continuity maintained through x-axis categorical labeling."
+}

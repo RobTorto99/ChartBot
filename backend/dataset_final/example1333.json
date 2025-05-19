@@ -1,0 +1,119 @@
+{
+    "visualization_prompt": "Generate a spline chart showing weekly trends in meal sales, disposal, and totals using synchronized data tables with dynamic formula calculations",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#ffffff",
+            "marginRight": 30
+        },
+        "title": {
+            "text": "Weekly Meal Preparation Trends",
+            "style": {
+                "fontFamily": "Helvetica, Arial, sans-serif",
+                "fontSize": "18px",
+                "color": "#333333"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Day 1",
+                "Day 2",
+                "Day 3",
+                "Day 4",
+                "Day 5",
+                "Day 6"
+            ],
+            "labels": {
+                "style": {
+                    "fontFamily": "Helvetica, Arial, sans-serif",
+                    "color": "#666666"
+                }
+            },
+            "title": {
+                "text": "Weekday",
+                "style": {
+                    "fontFamily": "Helvetica, Arial, sans-serif",
+                    "color": "#666666"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Number of Meals",
+                "style": {
+                    "fontFamily": "Helvetica, Arial, sans-serif",
+                    "color": "#666666"
+                }
+            },
+            "labels": {
+                "style": {
+                    "fontFamily": "Helvetica, Arial, sans-serif",
+                    "color": "#666666"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Sold Meals",
+                "data": [
+                    10,
+                    20,
+                    30,
+                    40,
+                    50,
+                    60
+                ],
+                "color": "#def",
+                "marker": {
+                    "symbol": "circle",
+                    "radius": 5
+                }
+            },
+            {
+                "name": "Disposed Meals",
+                "data": [
+                    1,
+                    2,
+                    4,
+                    8,
+                    16,
+                    32
+                ],
+                "color": "#bdf",
+                "marker": {
+                    "symbol": "square",
+                    "radius": 5
+                }
+            },
+            {
+                "name": "Total Meals",
+                "data": [
+                    11,
+                    22,
+                    34,
+                    48,
+                    66,
+                    92
+                ],
+                "color": "#a9c",
+                "marker": {
+                    "symbol": "diamond",
+                    "radius": 5
+                }
+            }
+        ],
+        "legend": {
+            "itemStyle": {
+                "fontFamily": "Helvetica, Arial, sans-serif",
+                "color": "#333333"
+            },
+            "align": "center",
+            "verticalAlign": "bottom"
+        },
+        "tooltip": {
+            "valueSuffix": " meals",
+            "shared": true
+        }
+    },
+    "visualization_explanation": "The dataset contains three time-series dimensions tracking daily meal preparation metrics over six operational days. Each series demonstrates distinct statistical patterns: Sold Meals show linear growth (slope +10/day), Disposed Meals exhibit exponential growth (doubling trend), and Total Meals combine both behaviors. The spline chart format emphasizes continuous operational trends while maintaining individual data point visibility through differentiated markers. Color coding aligns with table highlighting conventions (#def for sales, #bdf for waste, #a9c for totals) to maintain cross-component visual consistency. The design follows Tufte's data-ink principles by eliminating unnecessary gridlines while preserving Cairo's effectiveness requirements through shape-coded markers and contextual tooltips. Statistical validity is maintained through mathematical relationships between series (Total = Sold + Disposed) with R\u00b2=1 consistency across all data points."
+}

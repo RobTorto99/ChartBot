@@ -1,0 +1,76 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a chart with the following specifications: Chart type: area, Chart title: 'Height profile for Vidasete Opp', Axes and labels styling: X-axis title 'Distance (km)', Y-axis title 'Elevation (m)', Data series: Elevation data extracted from GPX file, Custom colors: Gradient fill from rgba(65, 116, 158, 0.7) to rgba(255, 255, 255, 0.7), Additional configurations: Tooltip displaying distance and elevation, legend disabled.",
+    "visualization_code": {
+        "chart": {
+            "type": "area"
+        },
+        "xAxis": {
+            "title": {
+                "text": "Distance ( km )"
+            },
+            "minPadding": 0.05
+        },
+        "yAxis": {
+            "startOnTick": true,
+            "endOnTick": false,
+            "minPadding": 0,
+            "title": {
+                "text": "Elevation ( m )"
+            },
+            "labels": {
+                "align": "left",
+                "x": 0,
+                "y": -2
+            }
+        },
+        "title": {
+            "text": "Height profile for Vidasete Opp"
+        },
+        "subtitle": {
+            "text": "Display GPX data in Highcharts"
+        },
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "Distance: {point.x} km<br/>{point.y} m a. s. l.",
+            "shared": true
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "data": [],
+                "name": "Elevation",
+                "marker": {
+                    "enabled": false,
+                    "states": {
+                        "hover": {
+                            "enabled": true
+                        }
+                    }
+                },
+                "fillColor": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "rgba(65, 116, 158, 0.7)"
+                        ],
+                        [
+                            1,
+                            "rgba(255, 255, 255, 0.7)"
+                        ]
+                    ]
+                },
+                "threshold": null,
+                "turboThreshold": 0
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render an area chart displaying the elevation profile of a track extracted from a GPX file. The chart includes an X-axis titled 'Distance (km)' and a Y-axis titled 'Elevation (m)'. The data series is named 'Elevation' and is filled with a gradient color from rgba(65, 116, 158, 0.7) to rgba(255, 255, 255, 0.7). The tooltip displays the distance in kilometers and the elevation in meters above sea level. The legend is disabled, and the chart has a title 'Height profile for Vidasete Opp' and a subtitle 'Display GPX data in Highcharts'. The data points are not marked by default, but markers are enabled on hover. The chart is designed to handle the GPX data efficiently with a turbo threshold set to 0."
+}

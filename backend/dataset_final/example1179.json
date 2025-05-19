@@ -1,0 +1,126 @@
+{
+    "visualization_prompt": "Generate a column chart showing comparative values across 10 industry sectors using custom color encoding to highlight cluster groupings",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Industry Performance Analysis (2023)",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333333"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Renewable Energy",
+                "Healthcare",
+                "Education",
+                "Manufacturing",
+                "Retail",
+                "Technology",
+                "Finance",
+                "Automotive",
+                "Telecom",
+                "Transportation"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                },
+                "rotation": -45
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Performance Index",
+                "style": {
+                    "color": "#666666"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Sector Performance",
+                "data": [
+                    {
+                        "name": "Renewable Energy",
+                        "y": 35,
+                        "color": "#006400"
+                    },
+                    {
+                        "name": "Healthcare",
+                        "y": 42,
+                        "color": "#228B22"
+                    },
+                    {
+                        "name": "Education",
+                        "y": 38,
+                        "color": "#2E8B57"
+                    },
+                    {
+                        "name": "Manufacturing",
+                        "y": 45,
+                        "color": "#3CB371"
+                    },
+                    {
+                        "name": "Retail",
+                        "y": 30,
+                        "color": "#90EE90"
+                    },
+                    {
+                        "name": "Technology",
+                        "y": 65,
+                        "color": "#FF69B4"
+                    },
+                    {
+                        "name": "Finance",
+                        "y": 58,
+                        "color": "#FF1493"
+                    },
+                    {
+                        "name": "Automotive",
+                        "y": 55,
+                        "color": "#DB7093"
+                    },
+                    {
+                        "name": "Telecom",
+                        "y": 62,
+                        "color": "#C71585"
+                    },
+                    {
+                        "name": "Transportation",
+                        "y": 70,
+                        "color": "#FF00FF"
+                    }
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y:.0f}",
+                    "style": {
+                        "textOutline": "none"
+                    }
+                }
+            }
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "column": {
+                "borderWidth": 0,
+                "groupPadding": 0.15,
+                "pointPadding": 0.05
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains univariate categorical data across 10 industry sectors with numerical performance indices. Synthetic data was generated with two distinct clusters: traditional sectors (\u03bc=38, \u03c3=5.7) using green hues and tech-oriented sectors (\u03bc=62, \u03c3=5.3) using pink hues, maintaining domain consistency through realistic value ranges (30-70 index points). The column chart maximizes data-ink ratio by eliminating redundant gridlines while using Cairo's perceptual principles through sequential color saturation within clusters. Cluster separation is visually reinforced through complementary colors (\u0394E > 20 in CIELAB), and value labels use Tufte's minimal ink approach with direct numeric annotations."
+}

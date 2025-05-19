@@ -1,0 +1,128 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly temperature variation using synthetic seasonal data with a cosine wave pattern plus Gaussian noise",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "spline",
+                "backgroundColor": "#FFFFFF",
+                "borderColor": "#CCCCCC",
+                "borderWidth": 1,
+                "margin": [
+                    30,
+                    30,
+                    60,
+                    60
+                ]
+            },
+            "title": {
+                "text": "Monthly Temperature Variation (2023)",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "18px",
+                    "fontWeight": "bold"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#666666",
+                        "fontSize": "12px"
+                    }
+                },
+                "title": {
+                    "text": "Month",
+                    "style": {
+                        "color": "#666666",
+                        "fontSize": "14px"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Temperature (\u00b0C)",
+                    "style": {
+                        "color": "#666666",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#666666",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "tooltip": {
+                "backgroundColor": {
+                    "linearGradient": [
+                        0,
+                        0,
+                        0,
+                        60
+                    ],
+                    "stops": [
+                        [
+                            0,
+                            "#E6F3FF"
+                        ],
+                        [
+                            1,
+                            "#B0D4FF"
+                        ]
+                    ]
+                },
+                "borderWidth": 2,
+                "borderColor": "#3366CC",
+                "style": {
+                    "color": "#333333"
+                }
+            },
+            "series": [
+                {
+                    "name": "Average Temperature",
+                    "data": [
+                        98,
+                        103,
+                        128,
+                        152,
+                        178,
+                        190,
+                        202,
+                        195,
+                        172,
+                        148,
+                        127,
+                        108
+                    ],
+                    "color": "#FF4444",
+                    "marker": {
+                        "fillColor": "#FFFFFF",
+                        "lineWidth": 2,
+                        "lineColor": "#FF4444"
+                    }
+                }
+            ],
+            "legend": {
+                "itemStyle": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate time series with 12 monthly observations. Synthetic data was generated using y = 150 + 50cos(\u03c0/6*(m-6)) + \u03b5 where \u03b5 \u223c N(0,5), creating a seasonal pattern (\u03bc=150\u00b0C annual average, \u03c3=35\u00b0C variability). The cosine term models expected hemispheric seasonality while Gaussian noise adds realistic variance. A spline chart was selected to emphasize continuous seasonal patterns through smooth interpolation between points, adhering to Tufte's data-ink ratio by eliminating gridlines and redundant markers. Cairo's perceptual principles are applied through high-contrast color encoding (#FF4444 series against white background) and proportional axis labeling. Tooltip formatting uses D3-style precision ('+0.2\u00b0C' delta annotations) while the gradient background (#E6F3FF to #B0D4FF) creates visual hierarchy in interactive elements."
+}

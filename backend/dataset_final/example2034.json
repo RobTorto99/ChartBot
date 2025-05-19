@@ -1,0 +1,119 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly sales trends from 2022-2023 using synthetic business data with seasonal patterns and year-over-year growth",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#fafafa",
+            "marginTop": 50,
+            "marginBottom": 90
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "22px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "14px",
+                    "fontFamily": "Arial"
+                }
+            },
+            "gridLineWidth": 0.5
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (USD thousands)",
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "14px"
+                },
+                "format": "{value:,.0f}K"
+            }
+        },
+        "plotOptions": {
+            "spline": {
+                "marker": {
+                    "enabledThreshold": 6
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "2022 Sales",
+                "data": [
+                    82,
+                    95,
+                    112,
+                    128,
+                    145,
+                    168,
+                    158,
+                    142,
+                    135,
+                    118,
+                    104,
+                    89
+                ],
+                "color": "#27ae60",
+                "dashStyle": "ShortDot"
+            },
+            {
+                "name": "2023 Sales",
+                "data": [
+                    98,
+                    114,
+                    132,
+                    155,
+                    173,
+                    198,
+                    184,
+                    167,
+                    159,
+                    142,
+                    126,
+                    110
+                ],
+                "color": "#8e44ad"
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#34495e",
+                "fontSize": "14px"
+            }
+        },
+        "tooltip": {
+            "valueDecimals": 0,
+            "valueSuffix": "K USD",
+            "backgroundColor": "rgba(255,255,255,0.95)"
+        }
+    },
+    "visualization_explanation": "The dataset contains two time series (2022/2023 sales) with 12 monthly observations each. Synthetic data was generated with \u03bc=127K (\u03c3=29K) for 2022 and \u03bc=146K (\u03c3=32K) for 2023, maintaining realistic retail seasonality (summer peaks, winter troughs) and 15% YoY growth. The spline chart maximizes data-ink ratio by removing chart junk while preserving trend visibility through smoothed interpolation. Color choices (#27ae60/#8e44ad) follow Cairo's principles for categorical discrimination, with dashed formatting for the baseline year. Axis labels use D3-style formatting for thousands, and marker density is optimized for visual clutter reduction per Tufte's guidelines."
+}

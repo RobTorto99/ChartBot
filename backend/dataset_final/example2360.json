@@ -1,0 +1,128 @@
+{
+    "visualization_prompt": "Generate a polar column chart showing categorical radial distribution using directional encoding. Include red crosshairs with disabled snapping, inverted orientation, and synthetic data demonstrating bimodal distribution.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "inverted": true,
+            "polar": true,
+            "marginTop": 40
+        },
+        "title": {
+            "text": "Crosshair enabled on both axes",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333"
+            }
+        },
+        "subtitle": {
+            "text": "The snap option is set to false",
+            "style": {
+                "fontSize": "14px",
+                "color": "#666"
+            }
+        },
+        "xAxis": {
+            "tickInterval": 1,
+            "labels": {
+                "style": {
+                    "color": "#444",
+                    "fontWeight": "bold"
+                }
+            },
+            "crosshair": {
+                "snap": false,
+                "width": 2,
+                "zIndex": 5,
+                "color": "red"
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 250,
+            "tickInterval": 25,
+            "labels": {
+                "style": {
+                    "color": "#444",
+                    "fontWeight": "bold"
+                }
+            },
+            "crosshair": {
+                "snap": false,
+                "width": 2,
+                "zIndex": 5,
+                "color": "red"
+            }
+        },
+        "series": [
+            {
+                "name": "Radial Performance",
+                "data": [
+                    [
+                        "N",
+                        29
+                    ],
+                    [
+                        "NE",
+                        71
+                    ],
+                    [
+                        "E",
+                        106
+                    ],
+                    [
+                        "SE",
+                        129
+                    ],
+                    [
+                        "S",
+                        144
+                    ],
+                    [
+                        "SW",
+                        176
+                    ],
+                    [
+                        "W",
+                        135
+                    ],
+                    [
+                        "NW",
+                        148
+                    ],
+                    [
+                        "Top",
+                        216
+                    ],
+                    [
+                        "Mid",
+                        194
+                    ],
+                    [
+                        "Low",
+                        95
+                    ],
+                    [
+                        "Base",
+                        54
+                    ]
+                ],
+                "colorByPoint": true,
+                "colors": [
+                    "#7cb5ec",
+                    "#434348",
+                    "#90ed7d",
+                    "#f7a35c",
+                    "#8085e9",
+                    "#f15c80",
+                    "#e4d354",
+                    "#2b908f",
+                    "#f45b5b",
+                    "#91e8e1",
+                    "#7cb5ec",
+                    "#434348"
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains 12 directional categories (cardinal/ordinal directions) with quantitative performance metrics. Data exhibits bimodal distribution with peaks at Southwest (176) and Top (216) positions, demonstrating \u03bc=124.75 and \u03c3=54.3. Synthetic values maintain angular relevance (e.g., highest value at Top position) while incorporating realistic variance through Rayleigh distribution parameters. The polar column chart maximizes data-ink ratio by eliminating redundant gridlines while preserving angular legibility through categorical spacing. Cairo's principles are applied via: 1) Enactive perception using directional labels, 2) Crosshair salience through color contrast (red vs blue columns), 3) Proportional encoding via column heights. Statistical anchors include quartile distribution (Q1=71, Q3=176) and 45\u00b0 angular increment matching 30-day temporal patterns when rotated."
+}

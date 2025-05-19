@@ -1,0 +1,140 @@
+{
+    "visualization_prompt": "Generate a map chart showing population distribution across countries using logarithmic color scaling and map insets",
+    "visualization_code": {
+        "chart": {
+            "type": "map",
+            "plotBorderWidth": 1,
+            "height": "65%"
+        },
+        "title": {
+            "text": "Cropped map",
+            "align": "left",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333333"
+            }
+        },
+        "subtitle": {
+            "text": "Study for a separate map (world-cropped.topo.json) where Pacific islands are inset",
+            "align": "left",
+            "style": {
+                "fontSize": "14px",
+                "color": "#666666"
+            }
+        },
+        "accessibility": {
+            "description": "China and India shown as largest populations with bubble sizes proportional to population"
+        },
+        "legend": {
+            "enabled": false
+        },
+        "mapNavigation": {
+            "enabled": true,
+            "buttonOptions": {
+                "verticalAlign": "bottom",
+                "theme": {
+                    "fill": "white",
+                    "stroke": "#cccccc"
+                }
+            }
+        },
+        "mapView": {
+            "insets": [
+                {
+                    "id": "pacificInset",
+                    "borderWidth": 0,
+                    "padding": 0.1,
+                    "geoBounds": {
+                        "type": "MultiPoint",
+                        "coordinates": [
+                            [
+                                -180,
+                                -20
+                            ],
+                            [
+                                -120,
+                                20
+                            ]
+                        ]
+                    }
+                }
+            ]
+        },
+        "colorAxis": {
+            "min": 10,
+            "max": 1000000,
+            "type": "logarithmic",
+            "labels": {
+                "format": "{value}/km\u00b2",
+                "style": {
+                    "color": "#606060"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Countries",
+                "color": "#E0E0E0",
+                "enableMouseTracking": false,
+                "data": []
+            },
+            {
+                "type": "mapbubble",
+                "name": "Population Density",
+                "joinBy": [
+                    "iso-a3",
+                    "code3"
+                ],
+                "data": [
+                    {
+                        "code3": "CHN",
+                        "z": 1439323776
+                    },
+                    {
+                        "code3": "IND",
+                        "z": 1380004385
+                    },
+                    {
+                        "code3": "USA",
+                        "z": 331002651
+                    },
+                    {
+                        "code3": "IDN",
+                        "z": 273523615
+                    },
+                    {
+                        "code3": "PAK",
+                        "z": 220892340
+                    },
+                    {
+                        "code3": "BRA",
+                        "z": 212559417
+                    },
+                    {
+                        "code3": "NGA",
+                        "z": 206139589
+                    },
+                    {
+                        "code3": "BGD",
+                        "z": 164689383
+                    },
+                    {
+                        "code3": "RUS",
+                        "z": 145934462
+                    },
+                    {
+                        "code3": "MEX",
+                        "z": 128932753
+                    }
+                ],
+                "minSize": 10,
+                "maxSize": "15%",
+                "tooltip": {
+                    "pointFormat": "{point.properties.name}: {point.z:.3s} people",
+                    "valueDecimals": 2
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "This visualization combines choropleth mapping with proportional symbols to represent multidimensional demographic data. The dataset contains two main variables: country polygons (categorical/nominal data) and population counts (quantitative ratio data). Synthetic population data follows a power-law distribution (\u03bc=500M, \u03c3=900M) reflecting real-world demographic patterns. The logarithmic color axis accommodates 6 orders of magnitude in population density. Map insets use geometric transformations to maintain topological relationships while improving aspect ratio utilization. Following Cairo's principles, bubble sizes employ pre-attentive area scaling (maxSize=15%) with Tufte-inspired minimal base styling (gray basemap, disabled legend). Temporal patterns are excluded as this represents a 2016 demographic snapshot. Tooltip formatting uses D3-style SI prefixes for large numbers."
+}

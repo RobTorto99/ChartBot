@@ -1,0 +1,137 @@
+{
+    "visualization_prompt": "Generate a column chart showing 2023 global smartphone brand market shares using synthetic data with selective label visibility and categorical sorting.",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "backgroundColor": "#f9f9f9"
+            },
+            "title": {
+                "text": "Global Smartphone Market Share (2023)",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "20px",
+                    "fontWeight": "bold"
+                }
+            },
+            "subtitle": {
+                "text": "Synthetic data illustrating brand distribution | \u03bc=10.0%, \u03c3=7.2%",
+                "align": "left"
+            },
+            "xAxis": {
+                "type": "category",
+                "labels": {
+                    "style": {
+                        "color": "#34495e",
+                        "fontSize": "12px"
+                    },
+                    "rotation": -45
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Market Share (%)",
+                    "style": {
+                        "color": "#34495e",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "format": "{value}%",
+                    "style": {
+                        "color": "#7f8c8d"
+                    }
+                },
+                "max": 100
+            },
+            "tooltip": {
+                "headerFormat": "<b>{point.key}</b><br/>",
+                "pointFormat": "{series.name}: <b>{point.y:.1f}%</b>"
+            },
+            "series": [
+                {
+                    "name": "Market Share",
+                    "data": [
+                        {
+                            "name": "Samsung",
+                            "y": 22.4,
+                            "dataLabels": {
+                                "enabled": true
+                            }
+                        },
+                        {
+                            "name": "Apple",
+                            "y": 19.1,
+                            "dataLabels": {
+                                "enabled": true
+                            }
+                        },
+                        {
+                            "name": "Xiaomi",
+                            "y": 12.7
+                        },
+                        {
+                            "name": "Oppo",
+                            "y": 9.3
+                        },
+                        {
+                            "name": "Vivo",
+                            "y": 8.6
+                        },
+                        {
+                            "name": "Huawei",
+                            "y": 7.8
+                        },
+                        {
+                            "name": "Realme",
+                            "y": 6.1
+                        },
+                        {
+                            "name": "Motorola",
+                            "y": 5.4
+                        },
+                        {
+                            "name": "Sony",
+                            "y": 4.9
+                        },
+                        {
+                            "name": "Nokia",
+                            "y": 3.7
+                        }
+                    ],
+                    "colorByPoint": true,
+                    "dataLabels": {
+                        "enabled": false,
+                        "style": {
+                            "textOutline": "none",
+                            "color": "#2c3e50"
+                        }
+                    }
+                }
+            ],
+            "colors": [
+                "#1abc9c",
+                "#3498db",
+                "#9b59b6",
+                "#f1c40f",
+                "#e67e22",
+                "#e74c3c",
+                "#95a5a6",
+                "#2ecc71",
+                "#d35400",
+                "#8e44ad"
+            ],
+            "plotOptions": {
+                "column": {
+                    "borderWidth": 0,
+                    "pointPadding": 0.1,
+                    "groupPadding": 0.15
+                }
+            },
+            "legend": {
+                "enabled": false
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains univariate categorical data (10 smartphone brands) with quantitative values (market share percentages). Synthetic data was generated with a mean of 10.0% and standard deviation of 7.2%, maintaining logical market hierarchy and sum validation to 100%. Top brands follow Pareto distribution while others show exponential decay. The column chart maximizes data-ink ratio by eliminating gridlines and using minimal contrasting colors. Cairo's principles are applied through position-based encoding (height comparison) and pre-attentive color differentiation. Selective data labeling emphasizes market leaders while maintaining visual clarity. Value ranges (0-100%) and percentage formatting create immediate quantitative context without cognitive load."
+}

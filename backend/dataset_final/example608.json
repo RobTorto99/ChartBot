@@ -1,0 +1,76 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a solid gauge chart with the following specifications: Chart type: solid gauge, Chart title: 'Engine RPM Gauge', Axes and labels styling: Use a dark gray color (#333) for the title and labels, with a font size of 14px for the title and 12px for the labels, Data series: The series should represent the engine RPM with a single data point of -1, Custom colors: Use a gradient from red to green for the gauge, Additional configurations: Set the chart margins to 20 pixels on all sides, add a legend with a white background and black text, and ensure the chart background is light gray (#f0f0f0).",
+    "visualization_code": {
+        "chart": {
+            "type": "solidgauge",
+            "margin": [
+                20,
+                20,
+                20,
+                20
+            ]
+        },
+        "title": {
+            "text": "Engine RPM Gauge",
+            "style": {
+                "color": "#333",
+                "fontSize": "14px"
+            }
+        },
+        "pane": {
+            "startAngle": -90,
+            "endAngle": 90,
+            "background": {
+                "innerRadius": "60%",
+                "outerRadius": "100%",
+                "shape": "arc"
+            }
+        },
+        "yAxis": {
+            "min": -5,
+            "max": 5,
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "data": [
+                    -1
+                ],
+                "colorByPoint": true,
+                "dataLabels": {
+                    "format": "{y}",
+                    "style": {
+                        "fontSize": "12px",
+                        "color": "#333"
+                    }
+                }
+            }
+        ],
+        "plotOptions": {
+            "solidgauge": {
+                "dataLabels": {
+                    "y": 5
+                },
+                "linecap": "round",
+                "stickyTracking": false,
+                "rounded": true
+            }
+        },
+        "legend": {
+            "backgroundColor": "#ffffff",
+            "itemStyle": {
+                "color": "#000000"
+            }
+        },
+        "colors": [
+            "#FF0000",
+            "#00FF00"
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a solid gauge chart that represents an engine RPM gauge. The chart type is set to 'solidgauge', and the title is styled with a dark gray color and a font size of 14px. The gauge itself is configured with a start angle of -90 degrees and an end angle of 90 degrees, creating a semi-circular shape. The y-axis is set to range from -5 to 5, with labels styled in dark gray and a font size of 12px. The data series includes a single data point of -1, representing the engine RPM, and the gauge uses a gradient from red to green to visually indicate the RPM value. Additional configurations include setting the chart margins to 20 pixels on all sides, adding a legend with a white background and black text, and ensuring the chart background is light gray. This setup provides a clear and visually appealing representation of the engine RPM."
+}

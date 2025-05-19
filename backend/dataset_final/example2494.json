@@ -1,0 +1,123 @@
+{
+    "visualization_prompt": "Generate a packed bubble chart showing renewable energy production capacity across Asian nations using synthetic generation with \u03bc=150 TWh and \u03c3=90",
+    "visualization_code": {
+        "chart": {
+            "type": "packedbubble",
+            "height": "100%",
+            "backgroundColor": "#f7f7f7"
+        },
+        "title": {
+            "text": "Asian Renewable Energy Production (2023)",
+            "style": {
+                "color": "#1a4d36",
+                "fontSize": "20px"
+            }
+        },
+        "tooltip": {
+            "useHTML": true,
+            "pointFormat": "<b>{point.name}:</b> {point.value:.1f} TWh"
+        },
+        "plotOptions": {
+            "packedbubble": {
+                "minSize": "15%",
+                "maxSize": "120%",
+                "layoutAlgorithm": {
+                    "splitSeries": false,
+                    "parentNodeLimit": true
+                },
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}",
+                    "filter": {
+                        "property": "value",
+                        "operator": ">",
+                        "value": 200
+                    },
+                    "style": {
+                        "fontWeight": "bold",
+                        "textOutline": "none"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Asia",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "China",
+                        "value": 745.3,
+                        "color": "#2e5d34"
+                    },
+                    {
+                        "name": "India",
+                        "value": 158.9,
+                        "color": "#4c8055"
+                    },
+                    {
+                        "name": "Japan",
+                        "value": 112.4,
+                        "color": "#6ba375"
+                    },
+                    {
+                        "name": "South Korea",
+                        "value": 89.7,
+                        "color": "#8ac695"
+                    },
+                    {
+                        "name": "Vietnam",
+                        "value": 67.2,
+                        "color": "#a9d9b5"
+                    },
+                    {
+                        "name": "Thailand",
+                        "value": 54.8,
+                        "color": "#c8edd5"
+                    },
+                    {
+                        "name": "Malaysia",
+                        "value": 48.3,
+                        "color": "#d4f0de"
+                    },
+                    {
+                        "name": "Uzbekistan",
+                        "value": 31.6,
+                        "color": "#e0f4e7"
+                    },
+                    {
+                        "name": "Pakistan",
+                        "value": 28.4,
+                        "color": "#ecf8f0"
+                    },
+                    {
+                        "name": "Bangladesh",
+                        "value": 22.1,
+                        "color": "#f8fcf9"
+                    },
+                    {
+                        "name": "Taiwan",
+                        "value": 208.7,
+                        "color": "#1a4d36"
+                    },
+                    {
+                        "name": "Kazakhstan",
+                        "value": 189.4,
+                        "color": "#2e5d34"
+                    },
+                    {
+                        "name": "Nepal",
+                        "value": 42.9,
+                        "color": "#4c8055"
+                    },
+                    {
+                        "name": "Sri Lanka",
+                        "value": 37.5,
+                        "color": "#6ba375"
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains two-dimensional energy production data (country vs capacity) with nominal categorical labels and ratio-scale quantitative values. Synthetic data follows a right-skewed distribution (\u03bc=150 TWh, \u03c3=90) reflecting real-world renewable adoption patterns, with strategic outliers highlighting regional leaders. The packed bubble encoding maximizes data-ink ratio by using area for quantitative comparison while maintaining Cairo's preattentive processing principles through size-based grouping. Color saturation (green gradient from #1a4d36 to #f8fcf9) reinforces magnitude perception while avoiding chromatic distortion. Cluster analysis reveals three tiers: super-producers (>200 TWh), mid-range adopters (50-200 TWh), and emerging markets (<50 TWh)."
+}

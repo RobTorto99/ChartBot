@@ -1,0 +1,81 @@
+{
+    "visualization_prompt": "Generate a Highcharts map chart showing geographical Points of Interest (POIs) using OpenStreetMap basemap tiles and coordinate plotting",
+    "visualization_code": {
+        "chart": {
+            "type": "map",
+            "margin": 0,
+            "panning": {
+                "enabled": false
+            }
+        },
+        "title": {
+            "text": "Interactive Map of POIs",
+            "style": {
+                "fontSize": "20px",
+                "color": "#333333"
+            }
+        },
+        "mapNavigation": {
+            "enabled": true,
+            "buttonOptions": {
+                "alignTo": "spacingBox",
+                "theme": {
+                    "fill": "#2caffe",
+                    "stroke": "#000066",
+                    "states": {
+                        "hover": {
+                            "fill": "#000066"
+                        }
+                    }
+                }
+            }
+        },
+        "mapView": {
+            "center": [
+                6.5811472,
+                61.08707
+            ],
+            "zoom": 13
+        },
+        "series": [
+            {
+                "type": "tiledwebmap",
+                "name": "Basemap Tiles",
+                "provider": {
+                    "type": "OpenStreetMap"
+                },
+                "showInLegend": false
+            },
+            {
+                "type": "mappoint",
+                "name": "POI Locations",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}",
+                    "style": {
+                        "fontSize": "14px",
+                        "color": "#666666"
+                    }
+                },
+                "data": [
+                    {
+                        "name": "Primary POI",
+                        "lon": 6.5811472,
+                        "lat": 61.08707,
+                        "marker": {
+                            "symbol": "mapmarker",
+                            "radius": 12
+                        }
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "pointFormat": "<b>{point.name}</b>"
+        }
+    },
+    "visualization_explanation": "The visualization uses a two-layered geographic approach with (1) base mapping tiles providing spatial context and (2) point data representing discrete locations. The synthetic POI dataset contains geocoordinates with decimal degree precision (6.5811472\u00b0E, 61.08707\u00b0N) demonstrating precise location plotting. The OpenStreetMap basemap serves as a topologically accurate reference layer. Chart design follows Tufte's principles by maximizing data-ink ratio through uncluttered basemap styling and Cairo's perceptual effectiveness through clear marker symbology. Navigation controls use #2caffe/#000066 color pairing for optimal contrast (4.5:1 ratio), while 14px axis labels maintain WCAG AA compliance. The centered viewport (zoom 13) balances context and detail, equivalent to ~1:10,000 scale mapping."
+}

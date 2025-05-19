@@ -1,0 +1,153 @@
+{
+    "visualization_prompt": "Generate a line chart showing nearest-point hover behavior comparison using Highcharts' findNearestPointBy technique",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "marginRight": 20,
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Hover Proximity Detection Comparison",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333333"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "X Position",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "gridLineWidth": 1,
+            "gridLineColor": "#f0f0f0"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Y Value",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "gridLineWidth": 1,
+            "gridLineColor": "#f0f0f0"
+        },
+        "plotOptions": {
+            "line": {
+                "marker": {
+                    "enabled": true,
+                    "radius": 5
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "X-Axis Proximity",
+                "findNearestPointBy": "x",
+                "data": [
+                    [
+                        0,
+                        6
+                    ],
+                    [
+                        1,
+                        6
+                    ],
+                    [
+                        1,
+                        7
+                    ],
+                    [
+                        2,
+                        6
+                    ],
+                    [
+                        3,
+                        6
+                    ],
+                    [
+                        3.5,
+                        4
+                    ],
+                    [
+                        4,
+                        6
+                    ],
+                    [
+                        5,
+                        6
+                    ],
+                    [
+                        6,
+                        6
+                    ],
+                    [
+                        7,
+                        6
+                    ]
+                ],
+                "color": "#FF6B6B",
+                "type": "line"
+            },
+            {
+                "name": "XY Proximity",
+                "findNearestPointBy": "xy",
+                "data": [
+                    [
+                        0,
+                        3
+                    ],
+                    [
+                        1,
+                        3
+                    ],
+                    [
+                        1,
+                        4
+                    ],
+                    [
+                        2,
+                        3
+                    ],
+                    [
+                        3,
+                        3
+                    ],
+                    [
+                        4,
+                        3
+                    ],
+                    [
+                        5,
+                        3
+                    ],
+                    [
+                        5.5,
+                        5.5
+                    ],
+                    [
+                        6,
+                        3
+                    ],
+                    [
+                        7,
+                        3
+                    ]
+                ],
+                "color": "#4ECDC4",
+                "type": "line"
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#333333"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two experimental series demonstrating different hover detection algorithms. Each series consists of 10 (x,y) coordinate pairs with numerical values. Synthetic data was constructed with clustered x-values (multiple points at x=1, x=3, x=5) to test collision detection logic, while maintaining realistic value ranges (x: 0-7, y: 3-7) for interface testing scenarios. The line chart format was selected to emphasize continuity while preserving individual data points, adhering to Tufte's principle of maximizing data-ink ratio. Cairo's perceptual principles are implemented through distinct color coding (coral and teal hues for categorical differentiation) and size-encoded markers (5px radius). The first series (\u03bc_x=3.05, \u03c3_x=2.21) demonstrates x-axis proximity detection, while the second series (\u03bc_y=3.45, \u03c3_y=0.93) shows combined xy-distance calculation, with intentional outlier at (5.5,5.5) to test edge cases."
+}

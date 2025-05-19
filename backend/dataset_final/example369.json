@@ -1,0 +1,102 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the title 'Efficiency Optimization by Branch'. The chart should display data for two categories: 'Employees' and 'Profit'. Each category should have two series: 'Employees' and 'Employees Optimized' for the 'Employees' category, and 'Profit' and 'Profit Optimized' for the 'Profit' category. The chart should have two y-axes: one for 'Employees' and one for 'Profit', with the 'Profit' axis on the opposite side. The chart should use specific colors for each series and include additional configurations such as chart margins, background, legend, and tooltip settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "column"
+        },
+        "title": {
+            "text": "Efficiency Optimization by Branch"
+        },
+        "xAxis": {
+            "categories": [
+                "Seattle HQ",
+                "San Francisco",
+                "Tokyo"
+            ]
+        },
+        "yAxis": [
+            {
+                "min": 0,
+                "title": {
+                    "text": "Employees"
+                }
+            },
+            {
+                "title": {
+                    "text": "Profit (millions)"
+                },
+                "opposite": true
+            }
+        ],
+        "legend": {
+            "shadow": false
+        },
+        "tooltip": {
+            "shared": true
+        },
+        "plotOptions": {
+            "column": {
+                "grouping": false,
+                "shadow": false,
+                "borderWidth": 0
+            }
+        },
+        "series": [
+            {
+                "name": "Employees",
+                "color": "rgba(165,170,217,1)",
+                "data": [
+                    150,
+                    73,
+                    20
+                ],
+                "pointPadding": 0.3,
+                "pointPlacement": -0.2
+            },
+            {
+                "name": "Employees Optimized",
+                "color": "rgba(126,86,134,.9)",
+                "data": [
+                    140,
+                    90,
+                    40
+                ],
+                "pointPadding": 0.4,
+                "pointPlacement": -0.2
+            },
+            {
+                "name": "Profit",
+                "color": "rgba(248,161,63,1)",
+                "data": [
+                    183.6,
+                    178.8,
+                    198.5
+                ],
+                "tooltip": {
+                    "valuePrefix": "$",
+                    "valueSuffix": " M"
+                },
+                "pointPadding": 0.3,
+                "pointPlacement": 0.2,
+                "yAxis": 1
+            },
+            {
+                "name": "Profit Optimized",
+                "color": "rgba(186,60,61,.9)",
+                "data": [
+                    203.6,
+                    198.8,
+                    208.5
+                ],
+                "tooltip": {
+                    "valuePrefix": "$",
+                    "valueSuffix": " M"
+                },
+                "pointPadding": 0.4,
+                "pointPlacement": 0.2,
+                "yAxis": 1
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a column chart titled 'Efficiency Optimization by Branch'. The chart displays data for two categories: 'Employees' and 'Profit', each with two series representing the original and optimized values. The x-axis categories are 'Seattle HQ', 'San Francisco', and 'Tokyo'. The chart uses two y-axes: one for 'Employees' and one for 'Profit', with the 'Profit' axis on the opposite side. Each series is styled with specific colors and includes configurations for point padding and placement. The tooltip is shared, and the 'Profit' series includes custom formatting for the tooltip values. The legend does not have a shadow, and the columns are configured to not group and have no borders or shadows."
+}

@@ -1,0 +1,125 @@
+{
+    "visualization_prompt": "Generate a parliamentary item chart showing political party seat distribution using categorical color encoding and radial positioning",
+    "visualization_code": {
+        "chart": {
+            "type": "item",
+            "plotBorderWidth": 1,
+            "marginRight": 20,
+            "marginLeft": 20,
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Parliament Visualization",
+            "style": {
+                "fontSize": "16px",
+                "color": "#333333",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Seat distribution by political party (Synthetic 2023 data)",
+            "style": {
+                "fontSize": "12px",
+                "color": "#666666"
+            }
+        },
+        "series": [
+            {
+                "name": "Seats",
+                "keys": [
+                    "name",
+                    "y",
+                    "color",
+                    "label"
+                ],
+                "data": [
+                    [
+                        "The Left",
+                        69,
+                        "#BE3075",
+                        "DIE LINKE"
+                    ],
+                    [
+                        "Social Democrats",
+                        153,
+                        "#EB001F",
+                        "SPD"
+                    ],
+                    [
+                        "Greens",
+                        67,
+                        "#64A12D",
+                        "GR\u00dcNE"
+                    ],
+                    [
+                        "Free Democrats",
+                        80,
+                        "#FFED00",
+                        "FDP"
+                    ],
+                    [
+                        "Christian Democrats",
+                        200,
+                        "#000000",
+                        "CDU"
+                    ],
+                    [
+                        "Bavarian CSU",
+                        46,
+                        "#008AC5",
+                        "CSU"
+                    ],
+                    [
+                        "Alternative Party",
+                        94,
+                        "#009EE0",
+                        "AfD"
+                    ]
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.label}",
+                    "style": {
+                        "fontSize": "12px",
+                        "textOutline": "none"
+                    }
+                },
+                "center": [
+                    "50%",
+                    "85%"
+                ],
+                "size": "160%",
+                "startAngle": -100,
+                "endAngle": 100,
+                "pointPadding": 0.8
+            }
+        ],
+        "legend": {
+            "labelFormat": "{name} <span style=\"opacity:0.6\">{y}</span>",
+            "itemStyle": {
+                "fontSize": "12px",
+                "color": "#444444"
+            }
+        },
+        "responsive": {
+            "rules": [
+                {
+                    "condition": {
+                        "maxWidth": 600
+                    },
+                    "chartOptions": {
+                        "series": [
+                            {
+                                "dataLabels": {
+                                    "distance": -25
+                                },
+                                "size": "140%"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "This parliamentary visualization uses an item chart type to represent legislative seat distribution. The dataset contains categorical (party names) and quantitative (seat counts) dimensions, with synthetic data maintaining real-world German Bundestag proportions (\u03bc=101 seats, \u03c3=53). Colors follow European political convention (red-left, black-conservative). The radial layout applies Cairo's preattentive processing principles through angular positioning and color coding. Data ink optimization removes redundant gridlines while maintaining proportional area encoding. Responsive rules preserve label readability on mobile through dynamic sizing adjustments. Legend formatting follows Tufte's principle of adjacent contextual data by displaying both party abbreviations and seat counts."
+}

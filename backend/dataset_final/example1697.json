@@ -1,0 +1,100 @@
+{
+    "visualization_prompt": "Generate a pie chart showing proportional market share distribution using interactive segmentation with percentage-based tooltips",
+    "visualization_code": {
+        "chart": {
+            "plotBackgroundColor": null,
+            "plotBorderWidth": null,
+            "plotShadow": false,
+            "type": "pie"
+        },
+        "title": {
+            "text": "Global Browser Market Share (Q2 2024)",
+            "style": {
+                "color": "#2f4f4f",
+                "fontSize": "18px"
+            }
+        },
+        "tooltip": {
+            "pointFormat": "{series.name}: <b>{point.percentage:.1f}%</b>",
+            "style": {
+                "fontSize": "14px"
+            }
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<b>{point.name}</b>: {point.percentage:.1f}%",
+                    "style": {
+                        "fontSize": "12px"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Market Share",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Chrome",
+                        "y": 58.3,
+                        "sliced": true,
+                        "selected": true
+                    },
+                    {
+                        "name": "Safari",
+                        "y": 17.1
+                    },
+                    {
+                        "name": "Edge",
+                        "y": 9.4
+                    },
+                    {
+                        "name": "Firefox",
+                        "y": 7.2
+                    },
+                    {
+                        "name": "Samsung Internet",
+                        "y": 3.8
+                    },
+                    {
+                        "name": "Opera",
+                        "y": 1.9
+                    },
+                    {
+                        "name": "Brave",
+                        "y": 1.2
+                    },
+                    {
+                        "name": "UC Browser",
+                        "y": 0.9
+                    },
+                    {
+                        "name": "Tor",
+                        "y": 0.7
+                    },
+                    {
+                        "name": "Other",
+                        "y": 0.5
+                    }
+                ]
+            }
+        ],
+        "colors": [
+            "#4285f4",
+            "#34a853",
+            "#ff6d01",
+            "#ea4335",
+            "#757575",
+            "#fbbc04",
+            "#8a2be2",
+            "#00bcd4",
+            "#4b0082",
+            "#cd5c5c"
+        ]
+    },
+    "visualization_explanation": "The dataset contains two dimensions: categorical (browser names) and quantitative (percentage shares). Synthetic data follows Pareto distribution (\u03bc=8.5%, \u03c3=16.2) reflecting typical market concentration patterns. Values sum to 100% \u00b10.1% rounding tolerance. The pie chart maximizes data-ink ratio by eliminating redundant axes while maintaining Cairo's fundamental visual variables through area encoding and chromatic differentiation. Interactive elements adhere to perceptual principles by emphasizing selected segments through spatial separation. Statistical validity is maintained through synthetic clusters (Chrome dominance at 58.3% vs long-tail distribution of others) mimicking real-world competition dynamics in tech markets."
+}

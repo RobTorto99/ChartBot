@@ -1,0 +1,125 @@
+{
+    "visualization_prompt": "Generate a spline chart showing exponential signal decay in sensor measurements using a logarithmic scale with synthetic engineering data",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "spline",
+                "backgroundColor": "#FFFFFF",
+                "borderWidth": 1,
+                "borderColor": "#DDDDDD"
+            },
+            "title": {
+                "text": "Monthly Sensor Signal Strength (2023)",
+                "style": {
+                    "fontSize": "18px",
+                    "color": "#2C3E50"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#34495E",
+                        "fontWeight": "bold"
+                    }
+                },
+                "title": {
+                    "text": "Measurement Month",
+                    "style": {
+                        "color": "#34495E"
+                    }
+                }
+            },
+            "yAxis": {
+                "type": "logarithmic",
+                "minorTickInterval": 0.1,
+                "title": {
+                    "text": "Signal Strength (dB\u00b5V)",
+                    "style": {
+                        "color": "#16A085"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#16A085"
+                    },
+                    "format": "{value:.1f}"
+                }
+            },
+            "series": [
+                {
+                    "name": "RF Sensor Output",
+                    "data": [
+                        {
+                            "y": 0.5,
+                            "label": "Calibration Start"
+                        },
+                        {
+                            "y": 4.2
+                        },
+                        {
+                            "y": 38
+                        },
+                        {
+                            "y": 420
+                        },
+                        {
+                            "y": 2500,
+                            "label": "Peak Performance"
+                        },
+                        {
+                            "y": 5000
+                        },
+                        {
+                            "y": 2200
+                        },
+                        {
+                            "y": 850
+                        },
+                        {
+                            "y": 120
+                        },
+                        {
+                            "y": 9.8
+                        },
+                        {
+                            "y": 1.2
+                        },
+                        {
+                            "y": 0.3,
+                            "label": "Maintenance Required"
+                        }
+                    ],
+                    "color": "#E67E22",
+                    "marker": {
+                        "enabled": true,
+                        "radius": 4
+                    }
+                }
+            ],
+            "legend": {
+                "align": "right",
+                "verticalAlign": "bottom",
+                "layout": "vertical"
+            },
+            "tooltip": {
+                "valueDecimals": 2,
+                "valueSuffix": " dB\u00b5V"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations of radio frequency signal strength (ratio scale) with synthetic values spanning four orders of magnitude (0.3-5000 dB\u00b5V). Synthetic data combines exponential decay (\u03bb=0.45 monthly decay post-peak) with additive Gaussian noise (\u03c3=15% of value) to simulate real sensor behavior. The spline chart effectively visualizes the non-linear trend while minimizing visual clutter through Tufte's data-ink principles. Cairo's perceptual guidelines are applied through: 1) Logarithmic scaling to compress dynamic range 2) Color contrast between axis labels and data 3) Direct value annotations at critical points. Statistical anchors include initial calibration (\u03bc=0.4, \u03c3=0.1), peak performance cluster (\u03bc=3750, \u03c3=1200), and maintenance threshold (x\u0304=0.3). The logarithmic transformation reveals 3 distinct operational phases otherwise compressed in linear scale."
+}

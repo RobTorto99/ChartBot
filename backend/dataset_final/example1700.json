@@ -1,0 +1,71 @@
+{
+    "visualization_prompt": "Generate a scatter plot showing density distribution of 50,000 synthetic data points using performance-optimized rendering with composite shape grouping",
+    "visualization_code": {
+        "chart": {
+            "type": "scatter",
+            "animation": false,
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "High-Density Scatter Distribution",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333333"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "X Value",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "gridLineWidth": 1,
+            "gridLineColor": "#f0f0f0"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Y Value",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "min": 0,
+            "max": 100,
+            "gridLineColor": "#f0f0f0"
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "name": "Data Density",
+                "data": "/* 50,000 points generated in original code */",
+                "color": "rgba(152,0,67,0.2)",
+                "marker": {
+                    "radius": 1,
+                    "states": {
+                        "hover": {
+                            "radius": 2,
+                            "lineWidth": 1,
+                            "lineColor": "black"
+                        }
+                    }
+                },
+                "tooltip": {
+                    "followPointer": false,
+                    "pointFormat": "[{point.x:.1f}, {point.y:.1f}]"
+                }
+            }
+        ],
+        "plotOptions": {
+            "scatter": {
+                "turboThreshold": 0,
+                "clip": false
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two continuous numerical variables (X,Y coordinates) with 50,000 observations. Synthetic data follows a squared uniform distribution (X,Y = random\u00b2 \u00d7 100), creating natural clustering near the origin. Data quality is artificially perfect with no missing values. The scatter plot was chosen for its ability to reveal density patterns through alpha blending. The optimized rendering technique maintains Tufte's data-ink ratio by eliminating non-essential chart elements. Cairo's principles are applied through: 1) Pre-attentive color coding (density-based opacity) 2) Effective use of negative space (light gridlines) 3) Proportional ink allocation (marker size vs data density). Statistical anchors: \u03bc_x=33.3, \u03bc_y=33.3 with \u03c3\u224827.2 for both axes, demonstrating expected values for squared uniform distribution."
+}

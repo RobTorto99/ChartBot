@@ -1,0 +1,96 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render an area chart with the following specifications: Chart type: area, Chart title: 'Sample Area Chart', Axes and labels styling: Use a dark theme with white labels and titles, Data series: One series with data [1, 2, 3, 5, 1, 2, 3], Custom colors: Use a gradient from blue to green, Additional configurations: Include annotations with a sun icon at the top-left corner, set chart margins, background, and legend.",
+    "visualization_code": {
+        "chart": {
+            "type": "area",
+            "backgroundColor": "#2c3e50",
+            "marginTop": 60,
+            "marginBottom": 60,
+            "marginLeft": 80,
+            "marginRight": 80
+        },
+        "title": {
+            "text": "Sample Area Chart",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#ffffff"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#ffffff"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#ffffff"
+                }
+            }
+        },
+        "annotations": [
+            {
+                "shapes": [
+                    {
+                        "type": "image",
+                        "src": "https://www.highcharts.com/samples/graphics/sun.png",
+                        "width": 30,
+                        "height": 30,
+                        "point": {
+                            "x": 2,
+                            "y": 2,
+                            "xAxis": 0,
+                            "yAxis": 0
+                        }
+                    }
+                ]
+            }
+        ],
+        "series": [
+            {
+                "name": "Data Series",
+                "data": [
+                    1,
+                    2,
+                    3,
+                    5,
+                    1,
+                    2,
+                    3
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#007acc"
+                        ],
+                        [
+                            1,
+                            "#32cd32"
+                        ]
+                    ]
+                }
+            }
+        ],
+        "legend": {
+            "itemStyle": {
+                "color": "#ffffff"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures an area chart with a dark theme, featuring white labels and titles for both axes. The chart includes a gradient color scheme from blue to green for the data series. Annotations are added to the chart with a sun icon positioned at the top-left corner. The chart's margins are set to ensure adequate spacing around the chart area. The legend is styled to match the dark theme with white text. This configuration effectively visualizes the provided data series in a visually appealing and informative manner."
+}

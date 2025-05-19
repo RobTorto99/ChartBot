@@ -1,0 +1,100 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render an inverted area chart. The chart should display the revenue of Alibaba and Meta (Facebook) from 2014 to 2023. The chart should have a title 'Alibaba and Meta (Facebook) revenue', with axes labels styled in a specific color and font size. The legend should be floating and positioned to the right. The chart should also include custom colors for the series and additional configurations such as chart margins and background.",
+    "visualization_code": {
+        "chart": {
+            "marginRight": 150,
+            "backgroundColor": "#f8f8f8"
+        },
+        "title": {
+            "text": "Alibaba and Meta (Facebook) revenue",
+            "align": "left"
+        },
+        "accessibility": {
+            "keyboardNavigation": {
+                "seriesNavigation": {
+                    "mode": "serialize"
+                }
+            }
+        },
+        "tooltip": {
+            "pointFormat": "&#8226; {series.name}: <b>${point.y} B</b>"
+        },
+        "legend": {
+            "layout": "vertical",
+            "align": "right",
+            "verticalAlign": "top",
+            "x": -150,
+            "y": 100,
+            "floating": true,
+            "borderWidth": 1,
+            "backgroundColor": "#FFFFFF"
+        },
+        "yAxis": {
+            "labels": {
+                "format": "${text}",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Revenue (billions USD)",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "pointStart": 2014
+            },
+            "area": {
+                "fillOpacity": 0.5
+            }
+        },
+        "series": [
+            {
+                "name": "Alibaba",
+                "data": [
+                    11.44,
+                    14.89,
+                    21.4,
+                    34.03,
+                    51.52,
+                    70.49,
+                    94.46,
+                    129.44,
+                    127.84,
+                    130.8
+                ],
+                "color": "#FF6347"
+            },
+            {
+                "name": "Meta (Facebook)",
+                "data": [
+                    11.49,
+                    17.08,
+                    26.88,
+                    39.94,
+                    55.01,
+                    69.65,
+                    84.17,
+                    117.93,
+                    116.61,
+                    134.9
+                ],
+                "color": "#4682B4"
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures an inverted area chart to display the revenue data of Alibaba and Meta (Facebook) from 2014 to 2023. The chart title is set to 'Alibaba and Meta (Facebook) revenue' and is aligned to the left. The axes labels and titles are styled with a specific color and font size for better readability. The legend is configured to float on the right side of the chart, providing a clear distinction between the series. The series data includes custom colors for each company, enhancing visual distinction. Additional configurations include setting the chart margins and background color to improve the overall appearance and layout of the chart."
+}

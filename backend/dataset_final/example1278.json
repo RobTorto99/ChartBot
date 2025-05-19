@@ -1,0 +1,140 @@
+{
+    "visualization_prompt": "Generate a lineargauge chart showing performance metrics against predefined thresholds using color-coded plot bands and target indicators",
+    "visualization_code": {
+        "chartOptions1": {
+            "chart": {
+                "type": "lineargauge",
+                "inverted": true,
+                "marginLeft": 20,
+                "plotBorderWidth": 0.5
+            },
+            "title": {
+                "text": "Target on axis, with line enabled, column disabled"
+            },
+            "yAxis": {
+                "min": 0,
+                "max": 100,
+                "plotBands": [
+                    {
+                        "from": 0,
+                        "to": 20,
+                        "color": "#666"
+                    },
+                    {
+                        "from": 20,
+                        "to": 70,
+                        "color": "#999"
+                    },
+                    {
+                        "from": 70,
+                        "to": 100,
+                        "color": "#bbb"
+                    }
+                ]
+            },
+            "series": [
+                {
+                    "onPoint": false,
+                    "showColumn": false,
+                    "showLine": true,
+                    "data": [
+                        85
+                    ],
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "{y}+20% YTD"
+                    }
+                }
+            ]
+        },
+        "chartOptions2": {
+            "chart": {
+                "type": "lineargauge",
+                "inverted": true
+            },
+            "title": {
+                "text": "Target on point, with line disabled, column disabled"
+            },
+            "yAxis": {
+                "min": 0,
+                "max": 100,
+                "plotBands": [
+                    {
+                        "from": 0,
+                        "to": 20,
+                        "color": "#666"
+                    },
+                    {
+                        "from": 20,
+                        "to": 70,
+                        "color": "#999"
+                    },
+                    {
+                        "from": 70,
+                        "to": 100,
+                        "color": "#bbb"
+                    }
+                ]
+            },
+            "series": [
+                {
+                    "onPoint": true,
+                    "showColumn": false,
+                    "showLine": false,
+                    "data": [
+                        36
+                    ],
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "\u03bc=35, \u03c3=5"
+                    }
+                }
+            ]
+        },
+        "chartOptions3": {
+            "chart": {
+                "type": "lineargauge",
+                "inverted": true
+            },
+            "title": {
+                "text": "Target on point, with line disabled, column enabled"
+            },
+            "yAxis": {
+                "min": 0,
+                "max": 100,
+                "plotBands": [
+                    {
+                        "from": 0,
+                        "to": 20,
+                        "color": "#666"
+                    },
+                    {
+                        "from": 20,
+                        "to": 70,
+                        "color": "#999"
+                    },
+                    {
+                        "from": 70,
+                        "to": 100,
+                        "color": "#bbb"
+                    }
+                ]
+            },
+            "series": [
+                {
+                    "onPoint": true,
+                    "showColumn": true,
+                    "showLine": false,
+                    "data": [
+                        73
+                    ],
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "Q3: {y}"
+                    }
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The dataset contains three univariate measurements (85, 36, 73) representing performance metrics. Synthetic thresholds (0-20: critical, 20-70: warning, 70-100: normal) create ordinal categories through plot bands. Data quality is artificially maintained with single-point precision matching gauge visualization requirements. Lineargauges were selected for their ability to display absolute values against qualitative ranges. The design maximizes data-ink ratio by eliminating gridlines and using minimal tick marks. Cairo's preattentive processing is leveraged through sequential band coloring. Chart 1 shows a -15% deviation from maximum threshold (\u03bc=100, \u03c3=10), while Chart 3 demonstrates 73% compliance with \u03c3=2 process control limits. Formatting follows D3-style annotations for contextual interpretation (+20% YTD, \u03bc=35 labels)."
+}

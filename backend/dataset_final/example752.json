@@ -1,0 +1,329 @@
+{
+    "visualization_prompt": "Create a Highcharts map chart to visualize the results of the Canadian federal election in 2015. The chart should display the number of seats won by each political party in different provinces and territories of Canada. The chart should include a title, styled axes and labels, and a legend. The data series should represent the number of seats for each party in each region, and the chart should use specific colors for each party as defined in the provided code.",
+    "visualization_code": {
+        "chart": {
+            "map": "countries/ca/ca-all"
+        },
+        "title": {
+            "text": "Results of the Canadian federal election, 2015",
+            "style": {
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Source: Wikipedia",
+            "style": {
+                "fontSize": "14px"
+            }
+        },
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical",
+            "itemStyle": {
+                "fontSize": "12px"
+            }
+        },
+        "credits": {
+            "enabled": false
+        },
+        "tooltip": {
+            "formatter": "function () { return this.point.name + ': ' + this.point.value + ' seats'; }"
+        },
+        "series": [
+            {
+                "name": "Liberal",
+                "color": "#EE696B",
+                "data": [
+                    {
+                        "code": "ca-bc",
+                        "value": 17
+                    },
+                    {
+                        "code": "ca-ab",
+                        "value": 4
+                    },
+                    {
+                        "code": "ca-sk",
+                        "value": 1
+                    },
+                    {
+                        "code": "ca-mb",
+                        "value": 7
+                    },
+                    {
+                        "code": "ca-on",
+                        "value": 80
+                    },
+                    {
+                        "code": "ca-qc",
+                        "value": 40
+                    },
+                    {
+                        "code": "ca-nb",
+                        "value": 10
+                    },
+                    {
+                        "code": "ca-ns",
+                        "value": 11
+                    },
+                    {
+                        "code": "ca-pe",
+                        "value": 4
+                    },
+                    {
+                        "code": "ca-nl",
+                        "value": 7
+                    },
+                    {
+                        "code": "ca-yt",
+                        "value": 1
+                    },
+                    {
+                        "code": "ca-nt",
+                        "value": 1
+                    },
+                    {
+                        "code": "ca-nu",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "Conservative",
+                "color": "#5A98EA",
+                "data": [
+                    {
+                        "code": "ca-bc",
+                        "value": 10
+                    },
+                    {
+                        "code": "ca-ab",
+                        "value": 29
+                    },
+                    {
+                        "code": "ca-sk",
+                        "value": 10
+                    },
+                    {
+                        "code": "ca-mb",
+                        "value": 5
+                    },
+                    {
+                        "code": "ca-on",
+                        "value": 33
+                    },
+                    {
+                        "code": "ca-qc",
+                        "value": 12
+                    },
+                    {
+                        "code": "ca-nb",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-ns",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-pe",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-nl",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-yt",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-nt",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-nu",
+                        "value": 0
+                    }
+                ]
+            },
+            {
+                "name": "New Democratic",
+                "color": "#F8A166",
+                "data": [
+                    {
+                        "code": "ca-bc",
+                        "value": 14
+                    },
+                    {
+                        "code": "ca-ab",
+                        "value": 1
+                    },
+                    {
+                        "code": "ca-sk",
+                        "value": 3
+                    },
+                    {
+                        "code": "ca-mb",
+                        "value": 2
+                    },
+                    {
+                        "code": "ca-on",
+                        "value": 8
+                    },
+                    {
+                        "code": "ca-qc",
+                        "value": 16
+                    },
+                    {
+                        "code": "ca-nb",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-ns",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-pe",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-nl",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-yt",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-nt",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-nu",
+                        "value": 0
+                    }
+                ]
+            },
+            {
+                "name": "Bloc Qu\u00e9b\u00e9cois",
+                "color": "#80D0F8",
+                "data": [
+                    {
+                        "code": "ca-bc",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-ab",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-sk",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-mb",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-on",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-qc",
+                        "value": 10
+                    },
+                    {
+                        "code": "ca-nb",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-ns",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-pe",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-nl",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-yt",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-nt",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-nu",
+                        "value": 0
+                    }
+                ]
+            },
+            {
+                "name": "Green",
+                "color": "#99C85F",
+                "data": [
+                    {
+                        "code": "ca-bc",
+                        "value": 1
+                    },
+                    {
+                        "code": "ca-ab",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-sk",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-mb",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-on",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-qc",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-nb",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-ns",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-pe",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-nl",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-yt",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-nt",
+                        "value": 0
+                    },
+                    {
+                        "code": "ca-nu",
+                        "value": 0
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The Highcharts map chart is configured to display the results of the Canadian federal election in 2015, showing the number of seats won by each political party in different provinces and territories. The chart includes a title and subtitle, with the title styled in bold and larger font size to stand out. The legend is enabled and positioned to the right of the chart for better readability. The tooltip provides detailed information about the number of seats won by each party in each region when hovered over. The data series are configured with specific colors for each party, as defined in the provided code, to ensure consistency and clarity in the visualization. The chart is designed to be informative and visually appealing, making it easy to interpret the election results across Canada."
+}

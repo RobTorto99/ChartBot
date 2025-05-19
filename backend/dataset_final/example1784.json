@@ -1,0 +1,91 @@
+{
+    "visualization_prompt": "Generate a spline chart showing exponential growth trends with monthly granularity using a logarithmic y-axis and synthetic statistically valid data",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#fafafa",
+            "marginTop": 40,
+            "marginBottom": 80
+        },
+        "title": {
+            "text": "Monthly Data Trends",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px",
+                "fontFamily": "Arial"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px",
+                    "fontWeight": "bold"
+                }
+            }
+        },
+        "yAxis": {
+            "type": "logarithmic",
+            "title": {
+                "text": "Log Values (Base 10)",
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "format": "{value:.1f}",
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Exponential Growth Pattern",
+                "data": [
+                    10.2,
+                    28.4,
+                    85.1,
+                    240.7,
+                    720.5,
+                    2100.3,
+                    6300.8,
+                    18905.1,
+                    54020.9,
+                    120150.6,
+                    250300.4,
+                    501000.2
+                ],
+                "color": "#e74c3c",
+                "marker": {
+                    "enabled": true,
+                    "radius": 4
+                }
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#34495e",
+                "fontSize": "13px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate time series with 12 monthly observations. Synthetic data follows an exponential growth pattern (y \u2248 10*3^x) with introduced noise (\u03c3 \u2248 15% of monthly values) and a mid-year acceleration cluster. Data generation combined base exponential growth with multiplicative normal distribution (\u03bc=3, \u03c3=0.45 monthly multiplier). The spline chart maximizes data-ink ratio by eliminating gridlines while maintaining Tufte's principle of proportional ink. Logarithmic scaling follows Cairo's magnitude perception principles for exponential data. Color choice (#e74c3c) provides pre-attentive popout effect against light background. The \u03bc=3 monthly growth factor with \u03c3=0.45 variation creates statistically meaningful confidence bands in visualization interpretation."
+}

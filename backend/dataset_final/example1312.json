@@ -1,0 +1,129 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly sales trends for 2023 actuals vs 2024 projections using annotated time-series segmentation",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#ffffff",
+            "borderColor": "#cccccc",
+            "borderWidth": 1,
+            "margin": [
+                30,
+                40,
+                60,
+                60
+            ]
+        },
+        "title": {
+            "text": "Monthly Sales Performance 2023 vs 2024 Projections",
+            "style": {
+                "fontSize": "18px",
+                "color": "#2c3e50"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#666"
+                },
+                "rotation": -45
+            },
+            "title": {
+                "text": "Month",
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#2c3e50"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales (USD Thousands)",
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#2c3e50"
+                }
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#666"
+                },
+                "format": "${value}"
+            }
+        },
+        "tooltip": {
+            "headerFormat": "<b>{point.x}</b><br/>",
+            "pointFormat": "{series.name}: ${point.y:,.1f}K"
+        },
+        "legend": {
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#666"
+            }
+        },
+        "colors": [
+            "#2c5e77",
+            "#4c8c4a"
+        ],
+        "series": [
+            {
+                "name": "2023 Actual Sales",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "marker": {
+                    "radius": 5
+                }
+            },
+            {
+                "name": "2024 Projected Sales",
+                "data": [
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4,
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5
+                ],
+                "dashStyle": "ShortDot"
+            }
+        ],
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset contains two 12-month time series (\u03bc\u2081=125.3k, \u03c3\u2081=58.9; \u03bc\u2082=125.3k, \u03c3\u2082=58.9) demonstrating inverse annual patterns. Synthetic data preserves equal annual means while showing counter-cyclical seasonality - 2023 peaks in Q3 while 2024 projections peak in Q1. Spline charts maximize data-ink ratio by eliminating redundant gridlines while preserving trend continuity. Cairo's principles are implemented through: 1) Distinct hue/saturation differentiation between series 2) Direct value labels avoiding legend lookups 3) Dual-axis anchoring through shared monetary scale. The mirrored distribution (identical statistical moments with inverted temporal patterns) highlights business strategy shifts through visual comparison of waveform structures."
+}

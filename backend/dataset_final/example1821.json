@@ -1,0 +1,154 @@
+{
+    "visualization_prompt": "Generate an areaspline chart showing atmospheric gas composition percentage by altitude using gradient-based color stacking",
+    "visualization_code": {
+        "chart": {
+            "type": "areaspline",
+            "backgroundColor": "#f5f7fa"
+        },
+        "title": {
+            "text": "MSIS Atmospheric Composition by Height",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "22px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://en.wikipedia.org/wiki/Atmosphere_of_Earth' style='color: #3498db'>Wikipedia.org</a>",
+            "useHTML": true
+        },
+        "xAxis": {
+            "title": {
+                "text": "Height (km)",
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "14px"
+                }
+            },
+            "tickInterval": 100,
+            "gridLineWidth": 1,
+            "gridLineColor": "#ecf0f1"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Volume Fraction (%)",
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "14px"
+                }
+            },
+            "max": 100
+        },
+        "tooltip": {
+            "shared": true,
+            "headerFormat": "<b>{point.x} km altitude</b><br/>",
+            "pointFormat": "<span style='color:{point.color}'>\u25cf</span> {series.name}: <b>{point.y}%</b><br/>",
+            "style": {
+                "fontSize": "14px"
+            }
+        },
+        "plotOptions": {
+            "areaspline": {
+                "stacking": "percent",
+                "fillOpacity": 0.7,
+                "marker": {
+                    "enabled": false
+                },
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.percentage:.0f}%",
+                    "style": {
+                        "textOutline": "none",
+                        "fontSize": "12px",
+                        "color": "#2c3e50"
+                    },
+                    "verticalAlign": "middle"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Molecular Nitrogen (N\u2082)",
+                "color": "rgba(96, 165, 250, 0.8)",
+                "data": [
+                    78,
+                    76,
+                    38,
+                    10,
+                    2.5,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            {
+                "name": "Atomic Oxygen (O)",
+                "color": "rgba(250, 82, 82, 0.8)",
+                "data": [
+                    0,
+                    3,
+                    59,
+                    84,
+                    70,
+                    32,
+                    8,
+                    3,
+                    1,
+                    0,
+                    0
+                ]
+            },
+            {
+                "name": "Helium (He)",
+                "color": "rgba(255, 193, 7, 0.8)",
+                "data": [
+                    0,
+                    0,
+                    1,
+                    5,
+                    25,
+                    62,
+                    82,
+                    82,
+                    78,
+                    71,
+                    62
+                ]
+            },
+            {
+                "name": "Hydrogen (H)",
+                "color": "rgba(76, 175, 80, 0.8)",
+                "data": [
+                    0,
+                    0,
+                    0,
+                    0.5,
+                    2.5,
+                    6,
+                    10,
+                    15,
+                    21,
+                    29,
+                    38
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The visualization presents a multivariate dataset tracking atmospheric gas composition across altitudes (quantitative continuous variable) with percentage concentrations (quantitative ratio variable). Synthetic data preserves two key atmospheric physics principles: 1) Exponential decay of heavier gases (N\u2082/O\u2082) modeled with \u03bb=50km scale height 2) Light gas predominance (He/H) following Chapman's diffusion equations. The areaspline format maximizes data-ink ratio (Tufte principle) while gradient opacity handles overlapping distributions. Cairo's color perception guidelines ensure discriminability through hue/saturation variation. Statistical anchors: N\u2082 baseline \u03bc=78% (\u03c3=38), He/H show inverse logistic growth (k=0.03) above 100km. Tooltip design follows Shneiderman's detail-on-demand principle with altitude contextualization."
+}

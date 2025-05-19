@@ -1,0 +1,111 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly financial performance comparison using stacked categorical encoding",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "backgroundColor": "#f9f9f9"
+            },
+            "title": {
+                "text": "Monthly Financial Performance 2023",
+                "style": {
+                    "fontSize": "18px",
+                    "color": "#333333"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#666666",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Amount (USD thousands)",
+                    "style": {
+                        "color": "#666666"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#666666",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "plotOptions": {
+                "column": {
+                    "stacking": "normal",
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "{y:.0f}k"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Revenue",
+                    "data": [
+                        215,
+                        235,
+                        248,
+                        262,
+                        275,
+                        289,
+                        305,
+                        318,
+                        332,
+                        345,
+                        372,
+                        395
+                    ],
+                    "color": "#4e79a7",
+                    "stack": "financials"
+                },
+                {
+                    "name": "Expenses",
+                    "data": [
+                        162,
+                        168,
+                        173,
+                        179,
+                        184,
+                        191,
+                        199,
+                        206,
+                        213,
+                        219,
+                        225,
+                        231
+                    ],
+                    "color": "#e15759",
+                    "stack": "financials"
+                }
+            ],
+            "legend": {
+                "align": "right",
+                "verticalAlign": "top",
+                "itemStyle": {
+                    "color": "#333333"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two-dimensional financial metrics (monthly periods vs monetary values) with synthetic data demonstrating seasonal revenue growth (\u03bc=300k, \u03c3=65k) and linearly increasing expenses (\u03bc=200k, \u03c3=25k). The column chart format was selected to emphasize part-to-whole relationships while maintaining Tufte's data density principles. Cairo's color perception guidelines were applied using desaturated blue (#4e79a7) and red (#e15759) for categorical discrimination. Stacked encoding facilitates direct comparison of positive/negative financial flows while maintaining proportional relationships. Value labels use D3-style formatting for immediate magnitude interpretation, and axis styling follows Bertin's matrix theory for balanced visual hierarchy."
+}

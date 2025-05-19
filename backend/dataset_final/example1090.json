@@ -1,0 +1,378 @@
+{
+    "visualization_prompt": "Generate a spline chart showing metabolic energy source contributions over time using time-series data with millisecond x-axis values converted to hour-minute formatting",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Metabolic Provenance of Energy",
+            "style": {
+                "color": "#2a2a2a",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "Time (hours)",
+                "style": {
+                    "color": "#606060",
+                    "fontWeight": "bold"
+                }
+            },
+            "labels": {
+                "formatter": "function() { return convertMsToHM(this.value).split(' ')[0]; }",
+                "style": {
+                    "color": "#404040"
+                }
+            },
+            "tickInterval": 36000000
+        },
+        "yAxis": {
+            "title": {
+                "text": "Contribution to EE (%)",
+                "style": {
+                    "color": "#606060",
+                    "fontWeight": "bold"
+                }
+            },
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "color": "#404040"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Food",
+                "data": [
+                    [
+                        828000,
+                        3.19
+                    ],
+                    [
+                        1008000,
+                        38.09
+                    ],
+                    [
+                        1440000,
+                        69.63
+                    ],
+                    [
+                        3456000,
+                        73.93
+                    ],
+                    [
+                        13680000,
+                        55.13
+                    ],
+                    [
+                        16956000,
+                        40.64
+                    ],
+                    [
+                        22464000,
+                        18.62
+                    ],
+                    [
+                        26928000,
+                        8.69
+                    ],
+                    [
+                        32256000,
+                        2.52
+                    ],
+                    [
+                        35000000,
+                        1.8
+                    ]
+                ],
+                "color": "#4E79A7"
+            },
+            {
+                "name": "Fatty Acid",
+                "data": [
+                    [
+                        3060000,
+                        11.38
+                    ],
+                    [
+                        11844000,
+                        14.19
+                    ],
+                    [
+                        22032000,
+                        23.46
+                    ],
+                    [
+                        30420000,
+                        31.51
+                    ],
+                    [
+                        45504000,
+                        39.7
+                    ],
+                    [
+                        61020000,
+                        40.37
+                    ],
+                    [
+                        75924000,
+                        42.11
+                    ],
+                    [
+                        124488000,
+                        44.13
+                    ],
+                    [
+                        160020000,
+                        45.34
+                    ],
+                    [
+                        218160000,
+                        45.87
+                    ],
+                    [
+                        260208000,
+                        46.01
+                    ]
+                ],
+                "color": "#F28E2B"
+            },
+            {
+                "name": "Glycogenolysis",
+                "data": [
+                    [
+                        8172000,
+                        2.65
+                    ],
+                    [
+                        9396000,
+                        8.69
+                    ],
+                    [
+                        13680000,
+                        19.16
+                    ],
+                    [
+                        18576000,
+                        26.28
+                    ],
+                    [
+                        27756000,
+                        31.91
+                    ],
+                    [
+                        36540000,
+                        29.36
+                    ],
+                    [
+                        43884000,
+                        25.6
+                    ],
+                    [
+                        54684000,
+                        21.98
+                    ],
+                    [
+                        67752000,
+                        18.62
+                    ],
+                    [
+                        79380000,
+                        14.33
+                    ],
+                    [
+                        90216000,
+                        9.9
+                    ],
+                    [
+                        103896000,
+                        6.68
+                    ],
+                    [
+                        117144000,
+                        4.8
+                    ],
+                    [
+                        129204000,
+                        3.05
+                    ],
+                    [
+                        139176000,
+                        1.98
+                    ]
+                ],
+                "color": "#E15759"
+            },
+            {
+                "name": "Gluconeogenesis",
+                "data": [
+                    [
+                        11628000,
+                        2.65
+                    ],
+                    [
+                        18360000,
+                        5.34
+                    ],
+                    [
+                        26136000,
+                        8.83
+                    ],
+                    [
+                        35496000,
+                        13.26
+                    ],
+                    [
+                        51012000,
+                        18.36
+                    ],
+                    [
+                        64296000,
+                        21.31
+                    ],
+                    [
+                        81036000,
+                        23.32
+                    ],
+                    [
+                        101844000,
+                        24.66
+                    ],
+                    [
+                        138996000,
+                        27.08
+                    ],
+                    [
+                        166752000,
+                        27.75
+                    ],
+                    [
+                        195516000,
+                        27.75
+                    ],
+                    [
+                        220428000,
+                        27.62
+                    ],
+                    [
+                        260208000,
+                        27.48
+                    ]
+                ],
+                "color": "#76B7B2"
+            },
+            {
+                "name": "Ketones",
+                "data": [
+                    [
+                        28980000,
+                        2.11
+                    ],
+                    [
+                        36324000,
+                        3.46
+                    ],
+                    [
+                        41652000,
+                        4.53
+                    ],
+                    [
+                        62028000,
+                        10.7
+                    ],
+                    [
+                        74304000,
+                        13.26
+                    ],
+                    [
+                        135108000,
+                        20.23
+                    ],
+                    [
+                        141840000,
+                        21.17
+                    ],
+                    [
+                        159588000,
+                        22.11
+                    ],
+                    [
+                        194292000,
+                        22.79
+                    ],
+                    [
+                        260208000,
+                        22.79
+                    ]
+                ],
+                "color": "#59A14F"
+            },
+            {
+                "name": "Amino Acids",
+                "data": [
+                    [
+                        2448000,
+                        15.54
+                    ],
+                    [
+                        3672000,
+                        18.36
+                    ],
+                    [
+                        10008000,
+                        21.04
+                    ],
+                    [
+                        17136000,
+                        21.58
+                    ],
+                    [
+                        27144000,
+                        19.03
+                    ],
+                    [
+                        35928000,
+                        16.21
+                    ],
+                    [
+                        82044000,
+                        11.11
+                    ],
+                    [
+                        143064000,
+                        8.56
+                    ],
+                    [
+                        200232000,
+                        7.62
+                    ],
+                    [
+                        220824000,
+                        7.35
+                    ],
+                    [
+                        260208000,
+                        7.48
+                    ]
+                ],
+                "color": "#EDC948"
+            }
+        ],
+        "plotOptions": {
+            "spline": {
+                "marker": {
+                    "enabled": false
+                },
+                "states": {
+                    "hover": {
+                        "lineWidthPlus": 0
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 6 time-series dimensions tracking metabolic contributions over 72 hours. X-values represent milliseconds from baseline, converted to hours through the convertMsToHM function. Original data shows inverse relationships between fast-acting (Food) and slow-metabolizing (Fatty Acid) sources, with synthetic data points added to the Food series (\u03bc=25.6, \u03c3=28.9) to complete the temporal progression. The spline visualization emphasizes continuous metabolic shifts while minimizing visual clutter through Tufte-inspired data-ink optimization: 1) Removed all markers 2) Simplified axis labels 3) Used high-contrast colorblind-safe palette. Cairo's principles guide the design through: 1) Layered opacity for overlapping series 2) Proportional response in tooltip formatting 3) Pre-attentive color coding matching biological conventions (blue=exogenous, orange=lipid stores)."
+}

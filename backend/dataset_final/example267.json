@@ -1,0 +1,72 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Sample Data Chart'. The chart should have styled axes and labels with specific colors and font sizes. The data series should include three data points with names 'First', 'Second', and 'Third', and their respective values. The chart should also have custom colors for the series and additional configurations such as chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 50,
+            "marginBottom": 80
+        },
+        "title": {
+            "text": "Sample Data Chart",
+            "style": {
+                "color": "#333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "First",
+                "Second",
+                "Third"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            },
+            "title": {
+                "text": "Data Points",
+                "style": {
+                    "color": "#777",
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#777",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Data Series",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4
+                ],
+                "color": "#0073e6"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#444",
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart with a title 'Sample Data Chart'. The chart type is set to 'spline', and it includes custom styling for the axes and labels, with specific colors and font sizes. The data series includes three data points named 'First', 'Second', and 'Third', with their respective values. The chart also has custom colors for the series and additional configurations such as chart margins, background color, and legend settings. The legend is enabled and styled with a specific font size and color. Overall, this configuration ensures a visually appealing and well-organized chart."
+}

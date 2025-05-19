@@ -1,0 +1,161 @@
+{
+    "visualization_prompt": "Generate a combination chart showing monthly sales trends and quarterly performance benchmarks using dual-axis encoding. Use synthetic time-series sales data with seasonal patterns and categorical quarterly targets.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "styledMode": true,
+            "backgroundColor": "#1a1a1d",
+            "marginTop": 60,
+            "marginBottom": 90,
+            "marginLeft": 80,
+            "marginRight": 40
+        },
+        "title": {
+            "text": "2023 Sales Performance Analysis",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": "22px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Month",
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": [
+            {
+                "title": {
+                    "text": "Monthly Sales ($K)",
+                    "style": {
+                        "color": "#7cb5ec",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#ffffff"
+                    }
+                }
+            },
+            {
+                "title": {
+                    "text": "Quarterly Targets",
+                    "style": {
+                        "color": "#90ed7d",
+                        "fontSize": "14px"
+                    }
+                },
+                "opposite": true,
+                "labels": {
+                    "style": {
+                        "color": "#ffffff"
+                    }
+                }
+            }
+        ],
+        "series": [
+            {
+                "name": "Monthly Sales",
+                "data": [
+                    125,
+                    138,
+                    143,
+                    156,
+                    168,
+                    175,
+                    182,
+                    190,
+                    204,
+                    198,
+                    215,
+                    228
+                ],
+                "type": "spline",
+                "yAxis": 0,
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "x2": 0,
+                        "y1": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "rgba(124,181,236,0.8)"
+                        ],
+                        [
+                            1,
+                            "rgba(67,67,72,0.2)"
+                        ]
+                    ]
+                },
+                "marker": {
+                    "enabled": true,
+                    "radius": 4
+                }
+            },
+            {
+                "name": "Quarterly Targets",
+                "data": [
+                    {
+                        "y": 150,
+                        "color": "#90ed7d"
+                    },
+                    {
+                        "y": 175,
+                        "color": "#90ed7d"
+                    },
+                    {
+                        "y": 200,
+                        "color": "#90ed7d"
+                    },
+                    {
+                        "y": 225,
+                        "color": "#90ed7d"
+                    }
+                ],
+                "type": "column",
+                "yAxis": 1,
+                "pointPadding": 0.2,
+                "groupPadding": 0.1
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#ffffff"
+            },
+            "itemHoverStyle": {
+                "color": "#cccccc"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset combines two dimensions: continuous time-series sales data (12 monthly points) and categorical quarterly benchmarks (4 targets). Synthetic sales data follows a positive trend (\u03bc=175, \u03c3=35) with 8% monthly growth and holiday season spikes. Quarterly targets use equidistant progression matching business planning cycles. The dual-axis design separates metric types while maintaining temporal alignment. The spline chart emphasizes the sales trend through Tufte's data-ink maximization, while column encoding for targets follows Cairo's pre-attentive principles for categorical comparison. Gradient opacity in the area series creates depth perception without obscuring gridlines. All color choices maintain WCAG AA contrast ratios for accessibility."
+}

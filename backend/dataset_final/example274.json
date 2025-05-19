@@ -1,0 +1,78 @@
+{
+    "visualization_prompt": "Create a Highcharts pie chart with the following specifications: Chart type: pie, Chart title: 'Browser market shares in March, 2022', Axes and labels styling: Title font size 18px, color #333333, Legend font size 14px, color #555555, Data series: Series name 'Brands', data includes Chrome (74.77%), Edge (12.82%), Firefox (4.63%), Safari (2.44%), Internet Explorer (2.02%), and Other (3.28%), Custom colors: Use default Highcharts colors, Additional configurations: Allow point selection, show data in legend, disable data labels.",
+    "visualization_code": {
+        "chart": {
+            "plotBackgroundColor": null,
+            "plotBorderWidth": null,
+            "plotShadow": false,
+            "type": "pie"
+        },
+        "title": {
+            "text": "Browser market shares in March, 2022",
+            "align": "left",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333333"
+            }
+        },
+        "tooltip": {
+            "pointFormat": "{series.name}: <b>{point.percentage:.1f}%</b>"
+        },
+        "accessibility": {
+            "point": {
+                "valueSuffix": "%"
+            }
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": false
+                },
+                "showInLegend": true
+            }
+        },
+        "legend": {
+            "itemStyle": {
+                "fontSize": "14px",
+                "color": "#555555"
+            }
+        },
+        "series": [
+            {
+                "name": "Brands",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Chrome",
+                        "y": 74.77,
+                        "sliced": true,
+                        "selected": true
+                    },
+                    {
+                        "name": "Edge",
+                        "y": 12.82
+                    },
+                    {
+                        "name": "Firefox",
+                        "y": 4.63
+                    },
+                    {
+                        "name": "Safari",
+                        "y": 2.44
+                    },
+                    {
+                        "name": "Internet Explorer",
+                        "y": 2.02
+                    },
+                    {
+                        "name": "Other",
+                        "y": 3.28
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration object is designed to render a pie chart that visualizes the market share of different browsers in March 2022. The chart is titled 'Browser market shares in March, 2022' with the title text aligned to the left and styled with a font size of 18px and a color of #333333. The legend is styled with a font size of 14px and a color of #555555. The data series is named 'Brands' and includes six data points representing Chrome, Edge, Firefox, Safari, Internet Explorer, and Other, each with their respective market share percentages. The pie chart allows for point selection, shows data in the legend, and disables data labels. The chart uses default Highcharts colors for the pie slices."
+}

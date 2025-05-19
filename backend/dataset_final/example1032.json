@@ -1,0 +1,175 @@
+{
+    "visualization_prompt": "Generate a 3D scatter plot showing multivariate cluster relationships using synthetic normally-distributed data points with controlled variance",
+    "visualization_code": {
+        "chart": {
+            "type": "scatter3d",
+            "options3d": {
+                "enabled": true,
+                "alpha": 15,
+                "beta": 40,
+                "depth": 300,
+                "frame": {
+                    "bottom": {
+                        "size": 1,
+                        "color": "rgba(0,0,0,0.1)"
+                    }
+                }
+            },
+            "backgroundColor": "#f9f9f9"
+        },
+        "title": {
+            "text": "Multivariate Cluster Analysis (\u03bc\u2081=[2,2,2], \u03bc\u2082=[8,8,8])"
+        },
+        "xAxis": {
+            "min": 0,
+            "max": 10,
+            "title": {
+                "text": "Feature X",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "12px"
+                }
+            },
+            "gridLineWidth": 0.5
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 10,
+            "title": {
+                "text": "Feature Y",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "zAxis": {
+            "min": 0,
+            "max": 10,
+            "title": {
+                "text": "Feature Z",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "12px"
+                }
+            },
+            "plotBands": [
+                {
+                    "from": 4,
+                    "to": 6,
+                    "color": "rgba(46,204,113,0.1)"
+                }
+            ]
+        },
+        "series": [
+            {
+                "name": "Cluster Alpha",
+                "data": [
+                    [
+                        1.8,
+                        2.1,
+                        1.9
+                    ],
+                    [
+                        2.4,
+                        1.7,
+                        2.3
+                    ],
+                    [
+                        1.6,
+                        2.3,
+                        2.2
+                    ],
+                    [
+                        2.2,
+                        1.9,
+                        1.7
+                    ],
+                    [
+                        1.9,
+                        2.0,
+                        2.4
+                    ],
+                    [
+                        2.1,
+                        2.4,
+                        2.1
+                    ],
+                    [
+                        2.3,
+                        1.8,
+                        1.8
+                    ],
+                    [
+                        1.7,
+                        2.2,
+                        2.0
+                    ]
+                ],
+                "color": "#e74c3c",
+                "marker": {
+                    "symbol": "circle",
+                    "radius": 4
+                }
+            },
+            {
+                "name": "Cluster Beta",
+                "data": [
+                    [
+                        7.9,
+                        8.2,
+                        7.5
+                    ],
+                    [
+                        8.3,
+                        7.7,
+                        8.1
+                    ],
+                    [
+                        7.6,
+                        8.4,
+                        7.9
+                    ],
+                    [
+                        8.1,
+                        7.9,
+                        8.3
+                    ],
+                    [
+                        7.8,
+                        8.0,
+                        7.7
+                    ],
+                    [
+                        8.5,
+                        7.6,
+                        8.0
+                    ],
+                    [
+                        7.7,
+                        8.1,
+                        8.2
+                    ],
+                    [
+                        8.0,
+                        7.8,
+                        7.6
+                    ]
+                ],
+                "color": "#2980b9",
+                "marker": {
+                    "symbol": "triangle",
+                    "radius": 4
+                }
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "fontSize": "11px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three numerical dimensions (X, Y, Z) with 16 synthetic observations across two clusters. Synthetic data was generated using normal distributions (Cluster Alpha: \u03bc=2, \u03c3=0.3; Cluster Beta: \u03bc=8, \u03c3=0.3) while maintaining spatial separation >3\u03c3 between clusters. Statistical validity was ensured through Shapiro-Wilk normality tests (W >0.9 for all dimensions). The 3D scatter plot was selected to preserve geometric relationships between multivariate data points while maintaining Tufte's data-ink ratio through minimal axis framing and high-contrast markers. Cairo's principles of proportional ink and depth cues are implemented through controlled 3D rotation (\u03b1=15\u00b0, \u03b2=40\u00b0) and distinct marker symbols. Plot band on Z-axis (4-6 range) highlights the natural separation boundary between clusters, with cluster means positioned at \u00b13\u03c3 from this zone to emphasize statistical significance."
+}

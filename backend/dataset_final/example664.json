@@ -1,0 +1,90 @@
+{
+    "visualization_prompt": "Create a Highcharts polar area chart with the following specifications: Chart type should be 'area', chart title should be 'Monthly Sales Data', axes and labels should have specific styling with colors and font sizes, data series should include monthly sales data for a year, custom colors should be provided, and additional configurations should include chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "polar": true,
+            "type": "area",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ],
+            "backgroundColor": "#f9f9f9"
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#333",
+                "fontSize": "20px"
+            }
+        },
+        "subtitle": {
+            "text": "Graph and area outside the perimeter should be clipped",
+            "style": {
+                "color": "#666",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "max": 250,
+            "endOnTick": false,
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    294.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#0073e6"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333",
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts configuration object is designed to render a polar area chart with specific styling and data. The chart type is set to 'area' within a polar coordinate system, which creates a circular graph. The title of the chart is 'Monthly Sales Data', styled with a dark color and a larger font size for emphasis. The subtitle provides additional context, styled with a lighter color and a smaller font size. The x-axis represents the months of the year, with labels styled for readability. The y-axis is configured to have a maximum value of 250, with labels styled similarly to the x-axis. The data series includes monthly sales data, with a custom color applied to the series. The legend is enabled and styled to match the overall theme of the chart. Additional configurations include setting the chart margins and background color to enhance the visual appeal."
+}

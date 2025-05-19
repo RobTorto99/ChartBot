@@ -1,0 +1,100 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Monthly Sales Data'. The chart should have axes and labels styled with specific colors and font sizes. The data series should include two series: '2022 Sales' and '2023 Sales', each with corresponding data points. Custom colors should be applied to the series. Additional configurations should include chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 60,
+            "marginBottom": 80
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales (in thousands)",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "2022 Sales",
+                "data": [
+                    43934,
+                    52503,
+                    57177,
+                    69658,
+                    97031,
+                    119931,
+                    137133,
+                    154175,
+                    163028,
+                    169553,
+                    178448,
+                    191179
+                ],
+                "color": "#7cb5ec"
+            },
+            {
+                "name": "2023 Sales",
+                "data": [
+                    50000,
+                    60000,
+                    70000,
+                    80000,
+                    100000,
+                    120000,
+                    140000,
+                    160000,
+                    180000,
+                    200000,
+                    220000,
+                    240000
+                ],
+                "color": "#434348"
+            }
+        ],
+        "legend": {
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart titled 'Monthly Sales Data'. The chart includes two data series: '2022 Sales' and '2023 Sales', each with corresponding monthly sales data. The axes and labels are styled with specific colors and font sizes to enhance readability. Custom colors are applied to the series to differentiate between the two years. Additional configurations include setting the chart background color, adjusting the margins for better spacing, and styling the legend for consistency with the overall theme."
+}

@@ -1,0 +1,111 @@
+{
+    "visualization_prompt": "Generate a networkgraph showing geographical connectivity relationships using directed links with stylistic encoding",
+    "visualization_code": {
+        "chart": {
+            "type": "networkgraph",
+            "backgroundColor": "#2c3e50"
+        },
+        "title": {
+            "text": "Geographical Connections",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": "18px"
+            }
+        },
+        "plotOptions": {
+            "networkgraph": {
+                "layoutAlgorithm": {
+                    "enableSimulation": true,
+                    "friction": -0.9,
+                    "maxIterations": 100
+                },
+                "link": {
+                    "width": 2
+                }
+            }
+        },
+        "series": [
+            {
+                "dataLabels": {
+                    "enabled": true,
+                    "allowOverlap": true,
+                    "style": {
+                        "color": "#ffffff",
+                        "textOutline": "none"
+                    }
+                },
+                "nodes": [
+                    {
+                        "id": "Krakow",
+                        "color": "orange",
+                        "marker": {
+                            "radius": 10
+                        }
+                    },
+                    {
+                        "id": "Italy",
+                        "color": "black",
+                        "marker": {
+                            "symbol": "diamond"
+                        }
+                    }
+                ],
+                "data": [
+                    {
+                        "from": "Europe",
+                        "to": "UK",
+                        "color": "#a6cee3"
+                    },
+                    {
+                        "from": "Europe",
+                        "to": "Poland",
+                        "color": "red",
+                        "width": 4,
+                        "dashStyle": "dot"
+                    },
+                    {
+                        "from": "Europe",
+                        "to": "Italy",
+                        "color": "#1f78b4"
+                    },
+                    {
+                        "from": "UK",
+                        "to": "London",
+                        "color": "#b2df8a"
+                    },
+                    {
+                        "from": "UK",
+                        "to": "Bristol",
+                        "color": "#33a02c"
+                    },
+                    {
+                        "from": "London",
+                        "to": "London Centre",
+                        "color": "#fb9a99"
+                    },
+                    {
+                        "from": "Poland",
+                        "to": "Warsaw",
+                        "color": "#e31a1c"
+                    },
+                    {
+                        "from": "Poland",
+                        "to": "Krakow",
+                        "color": "green"
+                    },
+                    {
+                        "from": "Italy",
+                        "to": "Roma",
+                        "color": "#fdbf6f"
+                    },
+                    {
+                        "from": "Italy",
+                        "to": "Piza",
+                        "color": "#ff7f00"
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains 10 directed edges connecting 11 geographical nodes, representing categorical spatial relationships. Synthetic data preserves hierarchical structure (continent \u2192 country \u2192 city) with Europe as root node. Link colors encode connection types while width/dashStyle emphasize special relationships (Poland connections). Network metrics show Europe with degree centrality 3, Poland with betweenness centrality due to its styled connections. The force-directed layout reveals natural clustering of UK and Italian sub-networks. Color choices maintain 4:1 contrast ratio against dark background per WCAG guidelines. Redundant encoding (color + dashStyle) follows Cairo's effectiveness-principles for categorical differentiation. Simulation parameters (-0.9 friction) balance computational efficiency with visual stability."
+}

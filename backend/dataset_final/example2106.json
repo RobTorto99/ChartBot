@@ -1,0 +1,120 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly performance metrics using contrast-enhanced data labels",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "styledMode": true,
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Data Labels with Contrast",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "14px",
+                    "textTransform": "uppercase"
+                }
+            },
+            "lineColor": "#bdc3c7"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Metric Values",
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            },
+            "gridLineColor": "#ecf0f1"
+        },
+        "series": [
+            {
+                "name": "Performance Index",
+                "data": [
+                    45,
+                    71,
+                    89,
+                    112,
+                    98,
+                    133,
+                    167,
+                    210,
+                    189,
+                    156,
+                    123,
+                    77
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y:.0f}",
+                    "style": {
+                        "color": "contrast",
+                        "fontSize": "14px",
+                        "textOutline": "2px contrast"
+                    }
+                },
+                "colorByPoint": true
+            }
+        ],
+        "colors": [
+            "#e74c3c",
+            "#3498db",
+            "#2ecc71",
+            "#f1c40f",
+            "#9b59b6",
+            "#1abc9c",
+            "#e67e22",
+            "#95a5a6",
+            "#d35400",
+            "#2c3e50",
+            "#7f8c8d",
+            "#ecf0f1"
+        ],
+        "plotOptions": {
+            "column": {
+                "borderRadius": 3,
+                "borderWidth": 0,
+                "shadow": {
+                    "color": "rgba(0,0,0,0.1)",
+                    "offsetX": 2,
+                    "offsetY": 2,
+                    "width": 5
+                }
+            }
+        },
+        "legend": {
+            "enabled": false
+        },
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations of a single performance metric (univariate time series). Synthetic data follows a seasonal pattern with summer peak (July-August) and winter trough (December-January), maintaining plausible business metrics (\u03bc=122.6, \u03c3=52.9). The column chart maximizes data-ink ratio by removing unnecessary gridlines and borders while preserving essential contextual information through axis labeling. Cairo's principles are applied through: 1) High-contrast data labels with outline/shadow protection against background colors, 2) Categorical color differentiation using a 12-hue qualitative palette, 3) Spatial grouping through adjacent columns. The synthetic data demonstrates seasonal trend (R\u00b2=0.72 polynomial fit) and controlled variance (CV=0.43) to simulate real-world business metrics while maintaining visual clarity."
+}

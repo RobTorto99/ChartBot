@@ -31,7 +31,7 @@ base_model = FastLanguageModel.get_peft_model(
     use_gradient_checkpointing=True
 )
 
-model = PeftModel.from_pretrained(base_model, "/home/roberto/Projects/ChartBot/output_QLoRA_final")
+model = PeftModel.from_pretrained(base_model, "output_QLoRA")
 model = FastLanguageModel.for_inference(model)
 
 print("Modelo cargado.")
@@ -67,7 +67,7 @@ def generate_visualization_code(prompt: str, df: Optional[pd.DataFrame] = None) 
             " - 'visualization_code': must contain only the chartOptions object from HighchartJS and must not contain expressions that do not accept the JSON format.\n"
             " - 'visualization_explanation': must contain only the explanation of the chart.\n\n"
             "Please follow exactly that JSON structure without extra text.\n\n"
-            f"Use this dataframe to create the chart: \n{df_str}\n\n"
+            f"Use this dataframe to create the chart if is not empty: \n{df_str}\n\n"
         )
 
     text = f"{system_message}Prompt:\n{prompt}\n\nResponse:\n"

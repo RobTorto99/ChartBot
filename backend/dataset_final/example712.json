@@ -1,0 +1,102 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Monthly Precipitation'. The chart should have styled axes and labels with specific colors and font sizes. The data series should represent monthly precipitation data with a custom color scheme. Additionally, configure the chart with specific margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "renderTo": "container",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ],
+            "backgroundColor": "#f9f9f9"
+        },
+        "title": {
+            "text": "Monthly Precipitation",
+            "style": {
+                "color": "#333",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Months",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Precipitation (mm)",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "tooltip": {
+            "pointFormat": "Value: {point.y:,.0f} mm"
+        },
+        "series": [
+            {
+                "name": "Precipitation",
+                "data": [
+                    1029.9,
+                    1071.5,
+                    1106.4,
+                    1129.2,
+                    1144.0,
+                    1176.0,
+                    1135.6,
+                    1148.5,
+                    1216.4,
+                    1194.1,
+                    1095.6,
+                    1054.4
+                ],
+                "color": "#008080"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical",
+            "itemStyle": {
+                "color": "#333",
+                "fontSize": "12px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart titled 'Monthly Precipitation'. The chart type is set to 'spline', and the title is styled with a bold, 18px font in a dark color. The x-axis represents months with styled labels and a title, while the y-axis represents precipitation in millimeters, also with styled labels and a title. The data series includes monthly precipitation data with a custom color of teal. The tooltip displays the value in a user-friendly format. Additional configurations include specific chart margins, a light background color, and a legend positioned to the right with vertical alignment and styled items."
+}

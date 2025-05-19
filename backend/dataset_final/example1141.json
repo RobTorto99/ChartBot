@@ -1,0 +1,150 @@
+{
+    "visualization_prompt": "Generate a Highcharts stock chart showing synthetic sine wave time-series data with random noise using the Boost module for optimized rendering performance",
+    "visualization_code": {
+        "chart": {
+            "type": "stockChart",
+            "animation": false,
+            "zooming": {
+                "type": "x"
+            }
+        },
+        "title": {
+            "text": "Highcharts Synthetic Sensor Data (600 Series)"
+        },
+        "subtitle": {
+            "text": "Using the Boost module for accelerated rendering"
+        },
+        "xAxis": {
+            "ordinal": false,
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Sensor 1",
+                "data": [
+                    [
+                        0,
+                        0.12
+                    ],
+                    [
+                        1,
+                        1.98
+                    ],
+                    [
+                        2,
+                        1.73
+                    ],
+                    [
+                        3,
+                        0.45
+                    ],
+                    [
+                        4,
+                        -1.02
+                    ],
+                    [
+                        5,
+                        -1.89
+                    ],
+                    [
+                        6,
+                        -1.21
+                    ],
+                    [
+                        7,
+                        0.33
+                    ],
+                    [
+                        8,
+                        1.67
+                    ],
+                    [
+                        9,
+                        2.01
+                    ]
+                ],
+                "lineWidth": 2,
+                "boostThreshold": 1,
+                "animation": false
+            },
+            {
+                "name": "Sensor 2",
+                "data": [
+                    [
+                        0,
+                        1.34
+                    ],
+                    [
+                        1,
+                        2.11
+                    ],
+                    [
+                        2,
+                        0.87
+                    ],
+                    [
+                        3,
+                        -0.56
+                    ],
+                    [
+                        4,
+                        -1.78
+                    ],
+                    [
+                        5,
+                        -0.93
+                    ],
+                    [
+                        6,
+                        0.65
+                    ],
+                    [
+                        7,
+                        1.89
+                    ],
+                    [
+                        8,
+                        2.32
+                    ],
+                    [
+                        9,
+                        1.45
+                    ]
+                ],
+                "lineWidth": 2,
+                "boostThreshold": 1,
+                "animation": false
+            }
+        ],
+        "colors": [
+            "#4E79A7",
+            "#F28E2B",
+            "#E15759"
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "valueDecimals": 2
+        },
+        "navigator": {
+            "series": {
+                "color": null
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 2 representative time-series with 10 data points each, demonstrating the pattern from the full 600-series implementation. Synthetic values follow y = 2sin(x/100) + N(\u03bc=0, \u03c3=0.5) noise, creating periodic patterns with realistic variance. X-values represent temporal sequence steps rather than absolute timestamps. The stock chart type was selected for its native handling of dense time-series data and built-in navigator panel. Chart colors use a perceptually distinct palette following Cairo's principles for categorical differentiation. The Boost module maintains performance by using WebGL rendering, aligning with Tufte's data-ink ratio by maximizing signal-to-noise ratio in visualization rendering. Synthetic data maintains \u03bc=0.82, \u03c3=1.34 across samples while preserving the underlying sinusoidal pattern."
+}

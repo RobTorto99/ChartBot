@@ -1,0 +1,56 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a polar column chart with a title 'Crosshair enabled on both axes'. The chart should have custom styling for axes and labels, including red crosshairs on both axes. The data series should include one series with the provided data. The chart should also have a subtitle 'The snap option is set to false' and additional configurations such as inverted and polar settings, and a marginTop of 40.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "inverted": true,
+            "polar": true,
+            "marginTop": 40
+        },
+        "title": {
+            "text": "Crosshair enabled on both axes"
+        },
+        "subtitle": {
+            "text": "The snap option is set to false"
+        },
+        "xAxis": {
+            "tickInterval": 1,
+            "crosshair": {
+                "snap": false,
+                "width": 2,
+                "zIndex": 5,
+                "color": "red"
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 250,
+            "tickInterval": 25,
+            "crosshair": {
+                "snap": false,
+                "width": 2,
+                "zIndex": 5,
+                "color": "red"
+            }
+        },
+        "series": [
+            {
+                "data": [
+                    29,
+                    71,
+                    106,
+                    129,
+                    144,
+                    176,
+                    135,
+                    148,
+                    216,
+                    194,
+                    95,
+                    54
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a polar column chart with several custom settings. The chart type is set to 'column', and it is inverted and polar, which means the chart will be displayed in a circular format with columns radiating from the center. The title of the chart is 'Crosshair enabled on both axes', and there is a subtitle indicating that the crosshair snap option is set to false. The xAxis and yAxis configurations include a tick interval and a red crosshair with a width of 2 and a zIndex of 5, ensuring it appears above other chart elements. The data series contains a single series with the provided data points. Additional configurations include a marginTop of 40 to adjust the spacing above the chart."
+}

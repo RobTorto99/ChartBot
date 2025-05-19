@@ -1,0 +1,121 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly revenue growth using synthetic business data with positive trend and seasonal variation",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "backgroundColor": "#f8f9fa",
+                "marginTop": 40
+            },
+            "title": {
+                "text": "Monthly Sales Growth 2023",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "20px",
+                    "fontWeight": "bold"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#2c3e50",
+                        "fontSize": "12px"
+                    }
+                },
+                "title": {
+                    "text": "Months",
+                    "style": {
+                        "color": "#2c3e50",
+                        "fontSize": "14px"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Revenue (USD thousands)",
+                    "style": {
+                        "color": "#2c3e50",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "format": "${value}K",
+                    "style": {
+                        "color": "#2c3e50"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Sales Performance",
+                    "data": [
+                        35,
+                        45,
+                        60,
+                        75,
+                        90,
+                        110,
+                        105,
+                        120,
+                        130,
+                        145,
+                        160,
+                        180
+                    ],
+                    "color": {
+                        "linearGradient": {
+                            "x1": 0,
+                            "x2": 0,
+                            "y1": 0,
+                            "y2": 1
+                        },
+                        "stops": [
+                            [
+                                0,
+                                "#1abc9c"
+                            ],
+                            [
+                                1,
+                                "#2c3e50"
+                            ]
+                        ]
+                    },
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "${y}K",
+                        "color": "#2c3e50"
+                    }
+                }
+            ],
+            "legend": {
+                "borderWidth": 1,
+                "borderRadius": 0,
+                "itemStyle": {
+                    "color": "#2c3e50"
+                }
+            },
+            "plotOptions": {
+                "column": {
+                    "borderRadius": 2,
+                    "pointPadding": 0.1,
+                    "groupPadding": 0.15
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations of revenue data (ratio scale) with synthetic values demonstrating two statistical properties: 1) An overall positive trend (\u03bc=105.8, \u03c3=45.2) showing 415% annual growth, and 2) Seasonal variation with Q2 peaks and July dip. Synthetic values maintain financial plausibility through constrained variance (CV=0.43) and monotonic progression. The column chart maximizes data-ink ratio per Tufte by eliminating gridlines while using gradient fills for depth perception. Cairo's principles are applied through proportional width encoding and direct value labels, avoiding 3D distortion. The teal-to-navy gradient enhances magnitude perception while maintaining grayscale readability."
+}

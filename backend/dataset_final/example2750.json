@@ -1,0 +1,135 @@
+{
+    "visualization_prompt": "Generate a map visualization showing country-based reseller distribution using synthetic reseller count data with normal distribution properties",
+    "visualization_code": {
+        "chart": {
+            "type": "map",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": null
+        },
+        "subtitle": {
+            "text": "Select a country to see resellers",
+            "style": {
+                "color": "#666666",
+                "fontSize": "14px"
+            }
+        },
+        "mapNavigation": {
+            "enabled": true,
+            "buttonOptions": {
+                "verticalAlign": "bottom",
+                "theme": {
+                    "fill": "#F5F5F5",
+                    "stroke": "#CCCCCC",
+                    "r": 3
+                }
+            }
+        },
+        "colorAxis": {
+            "min": 0,
+            "max": 100,
+            "minColor": "#E6E6FA",
+            "maxColor": "#8383A1"
+        },
+        "legend": {
+            "layout": "vertical",
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "12px"
+            }
+        },
+        "series": [
+            {
+                "name": "Reseller Presence",
+                "data": [
+                    {
+                        "hc-key": "us",
+                        "value": 62
+                    },
+                    {
+                        "hc-key": "ca",
+                        "value": 58
+                    },
+                    {
+                        "hc-key": "de",
+                        "value": 67
+                    },
+                    {
+                        "hc-key": "fr",
+                        "value": 53
+                    },
+                    {
+                        "hc-key": "gb",
+                        "value": 71
+                    },
+                    {
+                        "hc-key": "jp",
+                        "value": 49
+                    },
+                    {
+                        "hc-key": "cn",
+                        "value": 65
+                    },
+                    {
+                        "hc-key": "au",
+                        "value": 57
+                    },
+                    {
+                        "hc-key": "br",
+                        "value": 43
+                    },
+                    {
+                        "hc-key": "in",
+                        "value": 55
+                    },
+                    {
+                        "hc-key": "za",
+                        "value": 38
+                    },
+                    {
+                        "hc-key": "ru",
+                        "value": 47
+                    },
+                    {
+                        "hc-key": "mx",
+                        "value": 41
+                    },
+                    {
+                        "hc-key": "es",
+                        "value": 59
+                    },
+                    {
+                        "hc-key": "it",
+                        "value": 54
+                    }
+                ],
+                "mapData": "custom/world-palestine-highres",
+                "joinBy": "hc-key",
+                "states": {
+                    "hover": {
+                        "color": "#BADA55",
+                        "borderColor": "#333333"
+                    }
+                },
+                "dataLabels": {
+                    "enabled": false
+                },
+                "point": {
+                    "events": {
+                        "click": "function() { infoFunction.call(this); }"
+                    }
+                }
+            }
+        ],
+        "tooltip": {
+            "formatter": "function() { return this.point.name + '<br/>Resellers: ' + Highcharts.numberFormat(this.point.value, 0); }",
+            "style": {
+                "fontSize": "13px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two dimensions: categorical country codes (hc-key) and numerical reseller presence values. Synthetic data follows a normal distribution (\u03bc=55, \u03c3=10) clamped between 0-100, simulating realistic market penetration percentages. Country values show geographic clustering with higher concentrations in developed markets. The choropleth map maximizes data-ink ratio by eliminating unnecessary gridlines while maintaining clear spatial encoding. Color saturation encodes values following Cairo's magnitude perception principles, using a single-hue progression for accurate value comparisons. Interactive elements maintain Tufte's layering principle by keeping modal details hidden until requested. The normal distribution pattern (\u03c3=10) creates natural value clusters that reflect typical market distribution scenarios."
+}

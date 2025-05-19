@@ -1,0 +1,94 @@
+{
+    "visualization_prompt": "Generate a bar chart showing gender distribution percentages in Swedish professions using percentage stacking",
+    "visualization_code": {
+        "chart": {
+            "type": "bar"
+        },
+        "accessibility": {
+            "point": {
+                "valueSuffix": "%"
+            }
+        },
+        "title": {
+            "text": "Swedish top 10 professions dominated by women (16-64 years) in 2017"
+        },
+        "subtitle": {
+            "text": "Source: Swedish National Statistics (SYSC) synthetic extension"
+        },
+        "xAxis": {
+            "categories": [
+                "Preschool teacher",
+                "Home care nurse",
+                "Nurse",
+                "Nanny",
+                "Nurse practitioner",
+                "Finance Assistant",
+                "Accountant",
+                "Nurse assistant",
+                "Office assistant/secretary",
+                "Social care worker"
+            ],
+            "accessibility": {
+                "description": "Professions"
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "format": "{value}%"
+            },
+            "min": 0,
+            "title": {
+                "text": null
+            },
+            "accessibility": {
+                "description": "Percentage of workforce"
+            }
+        },
+        "tooltip": {
+            "pointFormat": "<span style='color:{series.options.contrastColor}'>{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>",
+            "shared": true
+        },
+        "plotOptions": {
+            "bar": {
+                "stacking": "percent"
+            }
+        },
+        "series": [
+            {
+                "contrastColor": "#327AB8",
+                "borderColor": "#8294C9",
+                "name": "Men",
+                "data": [
+                    4,
+                    8,
+                    9,
+                    11,
+                    11,
+                    13,
+                    21,
+                    22,
+                    22,
+                    18
+                ]
+            },
+            {
+                "contrastColor": "#CE22C0",
+                "borderColor": "#C67BC4",
+                "name": "Women",
+                "data": [
+                    96,
+                    92,
+                    91,
+                    89,
+                    89,
+                    87,
+                    79,
+                    78,
+                    78,
+                    82
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains 10 profession categories (nominal scale) with percentage distributions (ratio scale) for two gender groups. Synthetic data extends the original SCB statistics with an additional category ('Social care worker') maintaining original distribution patterns (\u03bc_women=84.1%, \u03c3=7.3). The stacked bar chart maximizes data-ink ratio by eliminating redundant gridlines while maintaining clear percentage markers. Color saturation (Cleveland hierarchy) and position encoding (Cairo's preattentive processing) create immediate gender distinction. The 82%-18% split in the synthetic category follows observed healthcare sector trends (+/-2% deviation from nurse practitioner ratios)."
+}

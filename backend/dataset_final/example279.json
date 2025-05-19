@@ -1,0 +1,80 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with live updating data. The chart should have a title 'Live random data', with axes labels styled in specific colors and font sizes. The data series should be named 'Random data' and should include initial data points generated randomly. The chart should also include a pulsating marker effect when new points are added. Additional configurations should include disabling the export feature and setting up accessibility options.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "events": {
+                "load": "onChartLoad"
+            }
+        },
+        "time": {
+            "useUTC": false
+        },
+        "title": {
+            "text": "Live random data",
+            "style": {
+                "color": "#333",
+                "fontSize": "18px"
+            }
+        },
+        "accessibility": {
+            "announceNewData": {
+                "enabled": true,
+                "minAnnounceInterval": 15000,
+                "announcementFormatter": "function (allSeries, newSeries, newPoint) { if (newPoint) { return 'New point added. Value: ' + newPoint.y; } return false; }"
+            }
+        },
+        "xAxis": {
+            "type": "datetime",
+            "tickPixelInterval": 150,
+            "maxPadding": 0.1,
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Value",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            },
+            "plotLines": [
+                {
+                    "value": 0,
+                    "width": 1,
+                    "color": "#808080"
+                }
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "tooltip": {
+            "headerFormat": "<b>{series.name}</b><br/>",
+            "pointFormat": "{point.x:%Y-%m-%d %H:%M:%S}<br/>{point.y:.2f}"
+        },
+        "legend": {
+            "enabled": false
+        },
+        "exporting": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "name": "Random data",
+                "lineWidth": 2,
+                "color": "#2f7ed8",
+                "data": "data"
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart that updates live with random data points every second. The chart title is 'Live random data', styled with a dark gray color and a font size of 18px. The axes labels are styled with a medium gray color and a font size of 12px, while the y-axis title is styled with a medium gray color and a font size of 14px. The data series is named 'Random data' and uses a specific color (#2f7ed8) with a line width of 2. The chart includes a pulsating marker effect when new points are added, enhancing the visual feedback. Accessibility features are enabled to announce new data points, and the export feature is disabled to focus on the live data presentation."
+}

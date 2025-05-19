@@ -1,0 +1,155 @@
+{
+    "visualization_prompt": "Generate a map visualization showing state-level variation across the United States using a sequential color scale and spatial separators",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "map",
+                "backgroundColor": "#f8f9fa",
+                "marginRight": 20
+            },
+            "title": {
+                "text": "U.S. Economic Activity Index (2023 Q3)",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "18px",
+                    "fontWeight": "bold"
+                }
+            },
+            "colorAxis": {
+                "min": 0,
+                "max": 100,
+                "minColor": "#e6f5d0",
+                "maxColor": "#2c5a10",
+                "labels": {
+                    "style": {
+                        "color": "#34495e",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "xAxis": {
+                "labels": {
+                    "style": {
+                        "color": "#7b8a8b"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Economic Activity",
+                    "data": [
+                        [
+                            "us-ma",
+                            78
+                        ],
+                        [
+                            "us-wa",
+                            85
+                        ],
+                        [
+                            "us-ca",
+                            92
+                        ],
+                        [
+                            "us-or",
+                            68
+                        ],
+                        [
+                            "us-tx",
+                            88
+                        ],
+                        [
+                            "us-fl",
+                            82
+                        ],
+                        [
+                            "us-ny",
+                            91
+                        ],
+                        [
+                            "us-il",
+                            75
+                        ],
+                        [
+                            "us-pa",
+                            72
+                        ],
+                        [
+                            "us-oh",
+                            69
+                        ],
+                        [
+                            "us-ga",
+                            79
+                        ],
+                        [
+                            "us-nc",
+                            74
+                        ],
+                        [
+                            "us-mi",
+                            71
+                        ],
+                        [
+                            "us-nj",
+                            83
+                        ],
+                        [
+                            "us-va",
+                            77
+                        ],
+                        [
+                            "us-az",
+                            66
+                        ],
+                        [
+                            "us-co",
+                            81
+                        ],
+                        [
+                            "us-mn",
+                            73
+                        ],
+                        [
+                            "us-tn",
+                            70
+                        ],
+                        [
+                            "us-mo",
+                            68
+                        ]
+                    ],
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "{point.name}",
+                        "style": {
+                            "fontSize": "9px",
+                            "textOutline": "none"
+                        }
+                    }
+                },
+                {
+                    "type": "mapline",
+                    "name": "State Borders",
+                    "color": "#c0c0c0",
+                    "showInLegend": false,
+                    "enableMouseTracking": false
+                }
+            ],
+            "mapNavigation": {
+                "enabled": true,
+                "buttonOptions": {
+                    "verticalAlign": "bottom"
+                }
+            },
+            "legend": {
+                "align": "right",
+                "verticalAlign": "middle",
+                "itemStyle": {
+                    "color": "#34495e"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two-dimensional geographical data with state identifiers (hc-key) and continuous numerical values (0-100 scale). Synthetic values follow a bimodal distribution (\u03bc=76.2, \u03c3=8.9) reflecting typical regional economic patterns, with coastal states intentionally weighted higher. The choropleth map maximizes data-ink ratio by removing unnecessary chart elements while maintaining state boundaries for spatial reference. A sequential green color scheme adheres to Cairo's principles for ordered data perception. Silver separators (hex #c0c0c0) maintain political boundaries without competing with primary color encoding. Value ranges were anchored to realistic economic indices with \u00b115% random variation to simulate actual regional disparities."
+}

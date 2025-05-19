@@ -1,0 +1,153 @@
+{
+    "visualization_prompt": "Generate a bell curve showing IQ score distribution using normal probability density function overlay on empirical data",
+    "visualization_code": {
+        "chart": {
+            "type": "bellcurve",
+            "height": 400
+        },
+        "title": {
+            "text": "IQ Score Distribution Analysis",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "IQ Score",
+                "style": {
+                    "color": "#34495e",
+                    "fontWeight": "bold"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            },
+            "alignTicks": false
+        },
+        "yAxis": {
+            "title": {
+                "text": "Probability Density",
+                "style": {
+                    "color": "#34495e",
+                    "fontWeight": "bold"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Normal Distribution (\u03bc=108.9, \u03c3=13.2)",
+                "type": "bellcurve",
+                "baseSeries": 1,
+                "zIndex": -1,
+                "color": "#e74c3c"
+            },
+            {
+                "name": "Raw IQ Scores",
+                "data": [
+                    111,
+                    107,
+                    100,
+                    107,
+                    114,
+                    115,
+                    111,
+                    97,
+                    100,
+                    112,
+                    104,
+                    89,
+                    104,
+                    102,
+                    91,
+                    114,
+                    114,
+                    103,
+                    106,
+                    105,
+                    113,
+                    109,
+                    108,
+                    113,
+                    130,
+                    128,
+                    128,
+                    118,
+                    113,
+                    120,
+                    132,
+                    111,
+                    124,
+                    127,
+                    128,
+                    136,
+                    106,
+                    118,
+                    119,
+                    123,
+                    124,
+                    126,
+                    116,
+                    127,
+                    119,
+                    97,
+                    86,
+                    102,
+                    110,
+                    120,
+                    103,
+                    115,
+                    93,
+                    72,
+                    111,
+                    103,
+                    123,
+                    79,
+                    119,
+                    110,
+                    110,
+                    107,
+                    74,
+                    105,
+                    112,
+                    105,
+                    110,
+                    107,
+                    103,
+                    77,
+                    98,
+                    90,
+                    96,
+                    112,
+                    112,
+                    114,
+                    93,
+                    106
+                ],
+                "visible": false,
+                "color": "#3498db"
+            }
+        ],
+        "plotOptions": {
+            "bellcurve": {
+                "fillOpacity": 0.25,
+                "lineWidth": 2
+            }
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#2c3e50"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 78 numerical IQ score measurements from a psychological study. As univariate continuous data, values range 72-136 (x\u0304=108.9, s=13.2) showing slight negative skewness. Source data from OpenIntro demonstrates collection rigor through controlled study conditions. The bell curve visualization effectively contrasts empirical distribution against theoretical normality using Tufte's principle of direct comparison. Color saturation (red curve vs blue hidden histogram) follows Cairo's preattentive processing guidelines. Semi-transparent fill maintains data-ink balance while emphasizing distribution shape. Statistical parameters anchor interpretation: normal curve parameters match sample moments (\u03bc=108.9, \u03c3=13.2), enabling visual goodness-of-fit assessment."
+}

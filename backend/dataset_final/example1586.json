@@ -1,0 +1,92 @@
+{
+    "visualization_prompt": "Generate a line chart showing negative to positive value spectrum using a logarithmic color axis with custom negative value conversion",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "marginRight": 20,
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Logarithmic Color Axis with Negative Value Spectrum",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Magnitude Scale",
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "colorAxis": {
+            "type": "logarithmic",
+            "allowNegativeLog": true,
+            "minColor": "#2ecc71",
+            "maxColor": "#e74c3c"
+        },
+        "series": [
+            {
+                "name": "Symmetric Value Spectrum",
+                "data": [
+                    -1000,
+                    -100,
+                    -10,
+                    -1,
+                    -0.1,
+                    0,
+                    0.1,
+                    1,
+                    10,
+                    100,
+                    1000
+                ],
+                "colorAxis": 0,
+                "marker": {
+                    "enabled": true,
+                    "radius": 4
+                }
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#34495e",
+                "fontSize": "12px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains univariate quantitative measurements spanning 11 ordered categories, demonstrating exponential magnitude progression from -1000 to +1000. Manually constructed values exhibit symmetric log distribution around zero with 10^x spacing, testing color axis boundary conditions. Data validity derives from mathematical progression rather than empirical sources, maintaining strict log-linear relationships for technical demonstration. The line chart format maximizes data-ink ratio by directly encoding magnitude through both position and chromatic intensity. Dual visual channels (vertical position + color gradient) follow Cairo's principles of multivariate encoding, while the symmetric diverging color scheme enhances magnitude comparison. Logarithmic compression (base 10) with \u03bc=0 and \u03c3\u2248577 preserves relative differences across six orders of magnitude. Custom axis extension enables negative value visualization through mathematical transformation while maintaining perceptual linearity in color progression."
+}

@@ -1,0 +1,54 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a Hollow Candlestick chart. The chart should display the exchange rate of USD to EUR. The chart should have a title 'USD to EUR Exchange Rate'. The axes and labels should be styled with specific colors and font sizes. The data series should include the name 'USD to EUR' and use the provided 'ohlcdata'. Custom colors should be applied to the candlesticks based on their direction (up or down). Additional configurations include enabling styled mode, setting the range selector to the first option, and ensuring the chart container is styled appropriately.",
+    "visualization_code": {
+        "chart": {
+            "styledMode": true
+        },
+        "title": {
+            "text": "USD to EUR Exchange Rate"
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "rangeSelector": {
+            "selected": 1
+        },
+        "series": [
+            {
+                "type": "hollowcandlestick",
+                "name": "USD to EUR",
+                "data": "ohlcdata"
+            }
+        ],
+        "colors": [
+            "#35bd00",
+            "#ff5e00"
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a Hollow Candlestick chart that visualizes the exchange rate of USD to EUR. The chart title is set to 'USD to EUR Exchange Rate', and the axes and labels are styled with a dark color (#333) and specific font sizes (12px for labels, 14px for titles). The data series includes the name 'USD to EUR' and uses the 'ohlcdata' provided. Custom colors are applied to the candlesticks: green (#35bd00) for up trends and orange (#ff5e00) for down trends. The chart is set to use styled mode, which allows for CSS styling, and the range selector is configured to display the first option by default. This configuration ensures a clear and visually appealing representation of the exchange rate data."
+}

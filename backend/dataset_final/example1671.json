@@ -1,0 +1,255 @@
+{
+    "visualization_prompt": "Generate a combination chart showing the distribution of iris sepal widths against a normal probability curve using overlapping scatter plot and calculated bell curve with standard deviation zones",
+    "visualization_code": {
+        "chart": {
+            "type": "bellcurve",
+            "renderTo": "container",
+            "events": {
+                "render": "function(){/* Zone coloring logic */}"
+            }
+        },
+        "title": {
+            "text": "Iris Sepal Width Distribution Analysis"
+        },
+        "xAxis": [
+            {
+                "title": {
+                    "text": "Sepal Width (cm)",
+                    "style": {
+                        "color": "#606060",
+                        "fontSize": "12px"
+                    }
+                },
+                "gridLineWidth": 0
+            },
+            {
+                "title": {
+                    "text": "Normal Distribution",
+                    "style": {
+                        "color": "#2c5c7a",
+                        "fontSize": "12px"
+                    }
+                },
+                "opposite": true
+            }
+        ],
+        "yAxis": [
+            {
+                "title": {
+                    "text": "Frequency",
+                    "style": {
+                        "color": "#606060",
+                        "fontSize": "12px"
+                    }
+                },
+                "gridLineColor": "#f0f0f0"
+            },
+            {
+                "title": {
+                    "text": "Probability Density",
+                    "style": {
+                        "color": "#2c5c7a",
+                        "fontSize": "12px"
+                    }
+                },
+                "opposite": true
+            }
+        ],
+        "series": [
+            {
+                "name": "Empirical Data",
+                "type": "scatter",
+                "data": [
+                    3.5,
+                    3.0,
+                    3.2,
+                    3.1,
+                    3.6,
+                    3.9,
+                    3.4,
+                    3.4,
+                    2.9,
+                    3.1,
+                    3.7,
+                    3.4,
+                    3.0,
+                    3.0,
+                    4.0,
+                    4.4,
+                    3.9,
+                    3.5,
+                    3.8,
+                    3.8,
+                    3.4,
+                    3.7,
+                    3.6,
+                    3.3,
+                    3.4,
+                    3.0,
+                    3.4,
+                    3.5,
+                    3.4,
+                    3.2,
+                    3.1,
+                    3.4,
+                    4.1,
+                    4.2,
+                    3.1,
+                    3.2,
+                    3.5,
+                    3.6,
+                    3.0,
+                    3.4,
+                    3.5,
+                    2.3,
+                    3.2,
+                    3.5,
+                    3.8,
+                    3.0,
+                    3.8,
+                    3.2,
+                    3.7,
+                    3.3,
+                    3.2,
+                    3.2,
+                    3.1,
+                    2.3,
+                    2.8,
+                    2.8,
+                    3.3,
+                    2.4,
+                    2.9,
+                    2.7,
+                    2.0,
+                    3.0,
+                    2.2,
+                    2.9,
+                    2.9,
+                    3.1,
+                    3.0,
+                    2.7,
+                    2.2,
+                    2.5,
+                    3.2,
+                    2.8,
+                    2.5,
+                    2.8,
+                    2.9,
+                    3.0,
+                    2.8,
+                    3.0,
+                    2.9,
+                    2.6,
+                    2.4,
+                    2.4,
+                    2.7,
+                    2.7,
+                    3.0,
+                    3.4,
+                    3.1,
+                    2.3,
+                    3.0,
+                    2.5,
+                    2.6,
+                    3.0,
+                    2.6,
+                    2.3,
+                    2.7,
+                    3.0,
+                    2.9,
+                    2.9,
+                    2.5,
+                    2.8,
+                    3.3,
+                    2.7,
+                    3.0,
+                    2.9,
+                    3.0,
+                    3.0,
+                    2.5,
+                    2.9,
+                    2.5,
+                    3.6,
+                    3.2,
+                    2.7,
+                    3.0,
+                    2.5,
+                    2.8,
+                    3.2,
+                    3.0,
+                    3.8,
+                    2.6,
+                    2.2,
+                    3.2,
+                    2.8,
+                    2.8,
+                    2.7,
+                    3.3,
+                    3.2,
+                    2.8,
+                    3.0,
+                    2.8,
+                    3.0,
+                    2.8,
+                    3.8,
+                    2.8,
+                    2.8,
+                    2.6,
+                    3.0,
+                    3.4,
+                    3.1,
+                    3.0,
+                    3.1,
+                    3.1,
+                    3.1,
+                    2.7,
+                    3.2,
+                    3.3,
+                    3.0,
+                    2.5,
+                    3.0,
+                    3.4,
+                    3.0
+                ],
+                "marker": {
+                    "radius": 2,
+                    "fillColor": "rgba(92,175,214,0.7)"
+                }
+            },
+            {
+                "name": "Normal Distribution (\u03bc=3.05, \u03c3=0.43)",
+                "type": "bellcurve",
+                "baseSeries": 1,
+                "zones": [
+                    {
+                        "value": 2.62,
+                        "color": "#9ecae1"
+                    },
+                    {
+                        "value": 3.05,
+                        "color": "#6baed6"
+                    },
+                    {
+                        "value": 3.48,
+                        "color": "#3182bd"
+                    },
+                    {
+                        "value": 3.91,
+                        "color": "#6baed6"
+                    },
+                    {
+                        "value": 4.34,
+                        "color": "#9ecae1"
+                    }
+                ]
+            }
+        ],
+        "plotOptions": {
+            "bellcurve": {
+                "fillOpacity": 0.4,
+                "lineWidth": 2
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 150 measurements of iris sepal widths (quantitative continuous variable) paired with their probability density estimates. The synthetic normal distribution (\u03bc=3.05cm, \u03c3=0.43cm) was calculated using maximum likelihood estimation from the empirical data, maintaining statistical fidelity through preservation of original moments. The visualization employs a dual-axis design separating raw data distribution (left y-axis) from probability density (right y-axis), following Tufte's principle of data-ink maximization by using semi-transparent area fills instead of heavy borders. Color progression in standard deviation zones (light blue \u2192 dark blue \u2192 light blue) applies Cairo's preattentive processing principles for immediate pattern recognition. The superimposed scatterplot maintains individual data visibility through small marker radii and partial transparency, allowing density estimation while preserving granular detail."
+}

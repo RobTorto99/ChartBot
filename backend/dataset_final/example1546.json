@@ -1,0 +1,99 @@
+{
+    "visualization_prompt": "Generate a 3D column chart showing monthly sales trends using synthetic data with seasonal variation and an upward trend",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "options3d": {
+                "enabled": true,
+                "alpha": 15,
+                "beta": 15,
+                "depth": 50,
+                "viewDistance": 25
+            },
+            "renderTo": "container"
+        },
+        "title": {
+            "text": "Monthly Sales Performance (2023)",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales (USD thousands)",
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "depth": 25,
+                "colorByPoint": true
+            }
+        },
+        "colorAxis": {
+            "minColor": "#3498db",
+            "maxColor": "#2ecc71",
+            "showInLegend": false
+        },
+        "series": [
+            {
+                "name": "Monthly Sales",
+                "data": [
+                    62,
+                    88,
+                    112,
+                    135,
+                    157,
+                    189,
+                    143,
+                    165,
+                    204,
+                    228,
+                    172,
+                    148
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "${y:.1f}k",
+                    "style": {
+                        "textOutline": "none"
+                    }
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset represents 12 months of synthetic sales figures (univariate time-series) with injected seasonality and trend. Artificially generated data (\u03bc=152k, \u03c3=52k) maintains financial plausibility through constrained value ranges and Q2-Q3 peak alignment with retail patterns. The 3D column visualization emphasizes volumetric comparisons while violating Tufte's ink ratio principles for enhanced perceptual salience. Cairo's depth cues are implemented through controlled perspective distortion (alpha/beta=15\u00b0). Color encoding supplements magnitude perception with a blue-green spectrum (colorAxis) while maintaining accessibility through luminance contrast."
+}

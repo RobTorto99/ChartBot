@@ -1,0 +1,141 @@
+{
+    "visualization_prompt": "Generate a pie chart showing synthetic market share distribution among 10 technology companies using pattern fills with categorical differentiation",
+    "visualization_code": {
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#FFFFFF",
+            "margin": [
+                20,
+                20,
+                40,
+                20
+            ]
+        },
+        "title": {
+            "text": "Global Tech Market Share Q3 2024",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Source: Synthetic market analysis | Values in percentage",
+            "style": {
+                "color": "#7f8c8d"
+            }
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<b>{point.name}</b>: {point.percentage:.1f}%",
+                    "connectorColor": "#95a5a6",
+                    "style": {
+                        "textOutline": "none"
+                    }
+                },
+                "showInLegend": true
+            }
+        },
+        "series": [
+            {
+                "name": "Market Share",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "QuantumCore",
+                        "y": 22.1,
+                        "patternIndex": 0
+                    },
+                    {
+                        "name": "NeuroTech",
+                        "y": 18.4,
+                        "patternIndex": 1
+                    },
+                    {
+                        "name": "SkyNet Systems",
+                        "y": 15.7,
+                        "patternIndex": 2
+                    },
+                    {
+                        "name": "BioHive",
+                        "y": 12.9,
+                        "patternIndex": 3
+                    },
+                    {
+                        "name": "GreenVolt",
+                        "y": 9.3,
+                        "patternIndex": 4
+                    },
+                    {
+                        "name": "CloudForge",
+                        "y": 7.8,
+                        "patternIndex": 5
+                    },
+                    {
+                        "name": "NanoMesh",
+                        "y": 5.6,
+                        "patternIndex": 6
+                    },
+                    {
+                        "name": "VisionX",
+                        "y": 4.2,
+                        "patternIndex": 7
+                    },
+                    {
+                        "name": "DroneWorks",
+                        "y": 2.9,
+                        "patternIndex": 8
+                    },
+                    {
+                        "name": "SafeChain",
+                        "y": 1.1,
+                        "patternIndex": 9
+                    }
+                ]
+            }
+        ],
+        "colors": [
+            {
+                "patternIndex": 0
+            },
+            {
+                "patternIndex": 1
+            },
+            {
+                "patternIndex": 2
+            },
+            {
+                "patternIndex": 3
+            },
+            {
+                "patternIndex": 4
+            },
+            {
+                "patternIndex": 5
+            },
+            {
+                "patternIndex": 6
+            },
+            {
+                "patternIndex": 7
+            },
+            {
+                "patternIndex": 8
+            },
+            {
+                "patternIndex": 9
+            }
+        ],
+        "legend": {
+            "itemStyle": {
+                "color": "#34495e"
+            },
+            "backgroundColor": "rgba(255,255,255,0.9)"
+        }
+    },
+    "visualization_explanation": "The dataset contains univariate categorical data (10 technology companies) with quantitative market share percentages. Synthetic values follow a Pareto distribution (\u03bc=8.6%, \u03c3=6.8) to simulate typical market concentration patterns, summing to 100% through iterative normalization. The pie chart maximizes data-ink ratio by eliminating gridlines while maintaining Tufte's principle of proportional ink allocation through pattern density variation. Cairo's perceptual principles are applied through: 1) Pattern complexity scaling with segment size, 2) Legend grouping by market position tiers, 3) High-contrast connector lines for small segments. Statistical validity is maintained through synthetic generation rules: market leader (20-25%), challengers (12-19%), niche players (5-11%), and marginal entrants (1-4%)."
+}

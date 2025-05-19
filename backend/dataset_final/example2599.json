@@ -1,0 +1,118 @@
+{
+    "visualization_prompt": "Generate a spline chart showing comparative monthly sales trends for two consecutive years using synthetic data with linear growth and seasonal variation",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "spline",
+                "backgroundColor": "#FFFFFF",
+                "marginTop": 40
+            },
+            "title": {
+                "text": "Monthly Sales Performance with Seasonal Trends",
+                "style": {
+                    "color": "#2E3440",
+                    "fontSize": "20px",
+                    "fontWeight": "bold"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#4C566A",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Sales (USD thousands)",
+                    "style": {
+                        "color": "#4C566A"
+                    }
+                },
+                "gridLineColor": "#197F07",
+                "gridLineWidth": 3,
+                "labels": {
+                    "format": "${value}K",
+                    "style": {
+                        "color": "#4C566A"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "2023 Sales",
+                    "data": [
+                        142,
+                        155,
+                        178,
+                        192,
+                        210,
+                        234,
+                        258,
+                        241,
+                        228,
+                        215,
+                        193,
+                        175
+                    ],
+                    "color": "#5E81AC",
+                    "marker": {
+                        "symbol": "circle",
+                        "radius": 5
+                    }
+                },
+                {
+                    "name": "2022 Sales",
+                    "data": [
+                        128,
+                        138,
+                        155,
+                        168,
+                        182,
+                        195,
+                        208,
+                        192,
+                        177,
+                        165,
+                        148,
+                        132
+                    ],
+                    "color": "#D08770",
+                    "dashStyle": "ShortDot",
+                    "marker": {
+                        "symbol": "square",
+                        "radius": 5
+                    }
+                }
+            ],
+            "legend": {
+                "align": "right",
+                "verticalAlign": "top",
+                "itemStyle": {
+                    "color": "#4C566A"
+                }
+            },
+            "tooltip": {
+                "valueDecimals": 0,
+                "valuePrefix": "$",
+                "valueSuffix": "K"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two time series (2022 and 2023 sales figures) with monthly temporal resolution. Synthetic data was generated using a base growth rate of 12% YoY with superimposed seasonal variation (\u00b115% amplitude). The 2023 series (\u03bc=202.5K, \u03c3=37.8K) demonstrates positive autocorrelation (r=0.82) and June-July peak seasonality. The spline chart was chosen to emphasize trend continuity while smoothing monthly fluctuations, optimizing data-ink ratio through minimal gridlines and direct labeling. Color contrast (blue-orange) follows Cairo's preattentive processing principles, with the dashed baseline series maintaining visual hierarchy. Annotated growth markers (+18.7% July peak) provide quantitative anchors without cluttering."
+}

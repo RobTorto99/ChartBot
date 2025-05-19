@@ -1,0 +1,220 @@
+{
+    "visualization_prompt": "Generate a sunburst chart showing hierarchical emotional relationships using a three-tiered radial structure with color-coded categories",
+    "visualization_code": {
+        "chart": {
+            "type": "sunburst",
+            "height": "100%"
+        },
+        "title": {
+            "text": "The Feelings Wheel",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://blog.calm.com/blog/the-feelings-wheel'>Calm</a>",
+            "useHTML": true
+        },
+        "plotOptions": {
+            "sunburst": {
+                "dataLabels": {
+                    "format": "{point.name}",
+                    "style": {
+                        "textOutline": "none",
+                        "color": "contrast",
+                        "fontSize": "12px"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "type": "sunburst",
+                "data": [
+                    {
+                        "id": "Happy",
+                        "parent": "",
+                        "name": "Happy",
+                        "color": "#FFFFFF"
+                    },
+                    {
+                        "id": "Playful",
+                        "parent": "Happy",
+                        "name": "Playful",
+                        "color": "#FFD700"
+                    },
+                    {
+                        "id": "Content",
+                        "parent": "Happy",
+                        "name": "Content",
+                        "color": "#87CEEB"
+                    },
+                    {
+                        "id": "Interested",
+                        "parent": "Happy",
+                        "name": "Interested",
+                        "color": "#32CD32"
+                    },
+                    {
+                        "id": "Proud",
+                        "parent": "Happy",
+                        "name": "Proud",
+                        "color": "#FF6347"
+                    },
+                    {
+                        "id": "Accepted",
+                        "parent": "Happy",
+                        "name": "Accepted",
+                        "color": "#9370DB"
+                    },
+                    {
+                        "id": "Powerful",
+                        "parent": "Happy",
+                        "name": "Powerful",
+                        "color": "#FF4500"
+                    },
+                    {
+                        "id": "Peaceful",
+                        "parent": "Happy",
+                        "name": "Peaceful",
+                        "color": "#3CB371"
+                    },
+                    {
+                        "id": "Trusting",
+                        "parent": "Happy",
+                        "name": "Trusting",
+                        "color": "#FF69B4"
+                    },
+                    {
+                        "id": "Optimistic",
+                        "parent": "Happy",
+                        "name": "Optimistic",
+                        "color": "#FFA500"
+                    },
+                    {
+                        "id": "Aroused",
+                        "parent": "Playful",
+                        "name": "Aroused",
+                        "value": 1
+                    },
+                    {
+                        "id": "Cheeky",
+                        "parent": "Playful",
+                        "name": "Cheeky",
+                        "value": 1
+                    },
+                    {
+                        "id": "Free",
+                        "parent": "Content",
+                        "name": "Free",
+                        "value": 1
+                    },
+                    {
+                        "id": "Joyful",
+                        "parent": "Content",
+                        "name": "Joyful",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Interested",
+                        "name": "Curious",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Interested",
+                        "name": "Inquisitive",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Proud",
+                        "name": "Successful",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Proud",
+                        "name": "Confident",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Accepted",
+                        "name": "Respected",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Accepted",
+                        "name": "Valued",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Powerful",
+                        "name": "Courageous",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Powerful",
+                        "name": "Creative",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Peaceful",
+                        "name": "Loving",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Peaceful",
+                        "name": "Thankful",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Trusting",
+                        "name": "Sensitive",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Trusting",
+                        "name": "Intimate",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Optimistic",
+                        "name": "Hopeful",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Optimistic",
+                        "name": "Inspired",
+                        "value": 1
+                    }
+                ],
+                "allowDrillToNode": true,
+                "levels": [
+                    {
+                        "level": 1,
+                        "levelIsConstant": false,
+                        "dataLabels": {
+                            "rotationMode": "circular"
+                        }
+                    },
+                    {
+                        "level": 2,
+                        "colorByPoint": true
+                    },
+                    {
+                        "level": 3,
+                        "colorVariation": {
+                            "key": "brightness",
+                            "to": -0.25
+                        }
+                    }
+                ]
+            }
+        ],
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "<b>{point.name}</b>"
+        }
+    },
+    "visualization_explanation": "The dataset represents a three-level hierarchical structure of emotional states, with categorical relationships between parent and child nodes. All values are normalized to equal distribution (value=1) for consistent radial representation. Synthetic data maintains domain validity through psychological taxonomy from referenced source. The sunburst chart maximizes data-ink ratio by eliminating gridlines and using high-contrast labels. Color variations (\u0394brightness=-25% for outer rings) create perceptual grouping through similarity principle. Uniform value distribution (\u03bc=1, \u03c3=0) ensures equal angular proportions, while drill-down functionality maintains visual hierarchy. Label rotation and contrast optimization follow Cairo's preattentive processing guidelines for immediate pattern recognition."
+}

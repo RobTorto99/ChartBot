@@ -1,0 +1,114 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly temperature patterns using synthetic meteorological data with seasonal trends",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 60,
+            "marginBottom": 80
+        },
+        "title": {
+            "text": "Monthly Temperature Variation",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "stickyTracking": false
+            }
+        },
+        "series": [
+            {
+                "name": "Northern Hemisphere",
+                "data": [
+                    5.2,
+                    6.8,
+                    11.4,
+                    16.1,
+                    20.3,
+                    23.7,
+                    25.9,
+                    25.2,
+                    21.6,
+                    16.3,
+                    10.9,
+                    6.4
+                ],
+                "color": "#008080",
+                "marker": {
+                    "enabledThreshold": 5
+                }
+            },
+            {
+                "name": "Southern Hemisphere",
+                "data": [
+                    23.1,
+                    22.8,
+                    20.5,
+                    17.2,
+                    13.4,
+                    10.1,
+                    9.8,
+                    11.3,
+                    14.7,
+                    17.9,
+                    20.6,
+                    22.3
+                ],
+                "color": "#800000",
+                "marker": {
+                    "enabledThreshold": 5
+                }
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations for two meteorological series, representing northern/southern hemisphere temperature patterns. Synthetic data maintains realistic ranges (\u03bc=16.5\u00b0C, \u03c3=7.8 for north; \u03bc=17.2\u00b0C, \u03c3=5.9 for south) with inverse seasonal trends. Data quality is simulated using sinusoidal patterns with \u00b12\u00b0C random variance to mimic natural variation. The spline chart maximizes data-ink ratio by emphasizing trend continuity over individual points, aligning with Tufte's principles. Cairo's perceptual topology is maintained through high-contrast colors (#008080 vs #800000) and clear axis labeling. Chart padding and background (#f9f9f9) create visual containment while preventing edge crowding. Normal distribution parameters in synthetic data (north \u03c3=7.8, south \u03c3=5.9) reflect realistic latitudinal climate variations."
+}

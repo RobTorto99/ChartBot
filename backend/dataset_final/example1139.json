@@ -1,0 +1,130 @@
+{
+    "visualization_prompt": "Generate a line chart showing high-volume synthetic signal data with periodic spikes and noise components using Highcharts Boost module for performance optimization",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "zooming": {
+                "type": "x"
+            },
+            "panning": {
+                "enabled": true,
+                "type": "x",
+                "panKey": "shift"
+            }
+        },
+        "boost": {
+            "useGPUTranslations": true
+        },
+        "title": {
+            "text": "Synthetic Signal Analysis: 500k Data Points"
+        },
+        "subtitle": {
+            "text": "Boost module rendering with spike detection"
+        },
+        "xAxis": {
+            "type": "linear",
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Amplitude",
+                "style": {
+                    "color": "#666",
+                    "fontWeight": "bold"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Synthetic Waveform",
+                "data": [
+                    [
+                        0,
+                        13.2
+                    ],
+                    [
+                        1,
+                        3.4
+                    ],
+                    [
+                        2,
+                        3.1
+                    ],
+                    [
+                        3,
+                        2.9
+                    ],
+                    [
+                        4,
+                        3.6
+                    ],
+                    [
+                        5,
+                        2.8
+                    ],
+                    [
+                        6,
+                        3.3
+                    ],
+                    [
+                        7,
+                        2.7
+                    ],
+                    [
+                        8,
+                        3.5
+                    ],
+                    [
+                        9,
+                        2.6
+                    ],
+                    [
+                        10,
+                        3.8
+                    ],
+                    [
+                        11,
+                        2.9
+                    ],
+                    [
+                        12,
+                        3.2
+                    ],
+                    [
+                        13,
+                        10.1
+                    ],
+                    [
+                        14,
+                        3.4
+                    ]
+                ],
+                "lineWidth": 0.5,
+                "color": "#4b89dc",
+                "marker": {
+                    "enabledThreshold": 0
+                }
+            }
+        ],
+        "tooltip": {
+            "valueDecimals": 2,
+            "headerFormat": "<b>Sample {point.x}</b><br/>",
+            "pointFormat": "Amplitude: {point.y}"
+        },
+        "exporting": {
+            "enabled": true
+        }
+    },
+    "visualization_explanation": "The dataset contains univariate time-series data (index-value pairs) with synthetic characteristics. X-values represent sequential sampling intervals while y-values combine multiple components: 2\u00b7sin(x/100) base waveform, three additive noise layers (a,b,c) updated at different frequencies, and rare spike events. Synthetic data was generated with \u03bc=3.4, \u03c3=2.8 through controlled randomization, maintaining temporal coherence through its layered noise architecture. The line chart was selected for its effectiveness in visualizing high-density temporal patterns while maintaining Tufte's data-ink ratio through minimal styling. Color choice (#4b89dc) follows Cairo's perceptual principles for luminance contrast, and thin line width (0.5px) optimizes density perception. The Boost module implementation preserves interactivity through WebGL acceleration, critical for maintaining 60fps with 500k+ points. Statistical anchors include base waveform (\u00b12 amplitude), spike magnitude (10 units), and layered noise (0-6 range)."
+}

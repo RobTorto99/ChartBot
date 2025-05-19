@@ -1,0 +1,82 @@
+{
+    "visualization_prompt": "Generate a solidgauge chart showing a single data point exceeding axis limits using gradient color encoding and angular pane configuration",
+    "visualization_code": {
+        "chart": {
+            "type": "solidgauge",
+            "backgroundColor": "#222",
+            "marginTop": 40
+        },
+        "title": {
+            "text": "Solidgauge data overflow past full circle (#2997)",
+            "style": {
+                "color": "#fff",
+                "fontSize": "18px",
+                "fontWeight": "normal"
+            }
+        },
+        "pane": {
+            "startAngle": -90,
+            "endAngle": 90,
+            "background": {
+                "innerRadius": "60%",
+                "outerRadius": "100%",
+                "shape": "arc",
+                "borderWidth": 0
+            }
+        },
+        "yAxis": {
+            "min": -5,
+            "max": 5,
+            "lineWidth": 0,
+            "labels": {
+                "style": {
+                    "color": "#fff",
+                    "fontSize": "14px",
+                    "textShadow": "0 0 3px rgba(0,0,0,0.8)"
+                },
+                "format": "{value}",
+                "distance": 20
+            }
+        },
+        "series": [
+            {
+                "name": "Pressure Differential",
+                "data": [
+                    38
+                ],
+                "dataLabels": {
+                    "format": "<div style=\"text-align:center\">{y}<br/></div>",
+                    "style": {
+                        "color": "#fff",
+                        "fontSize": "24px",
+                        "textOutline": "none"
+                    }
+                },
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "x2": 0,
+                        "y1": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#FF0000"
+                        ],
+                        [
+                            1,
+                            "#00FF00"
+                        ]
+                    ]
+                },
+                "innerRadius": "60%",
+                "radius": "100%"
+            }
+        ],
+        "tooltip": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset contains a single numerical value (38) representing an engineering measurement exceeding normal operational limits. Synthetic data was generated to demonstrate gauge overflow behavior, with the value intentionally set 760% above the axis maximum (5) to test visualization boundary conditions. The solidgauge chart effectively employs Cairo's preattentive processing through radial position and color gradient encoding. Tufte's data-ink ratio is maximized by removing non-essential elements (gridlines, minor ticks). The red-green gradient (\u03bc=16.5, \u03c3=23.5) creates intuitive danger/safety zones, while the arc background (innerRadius=60%) prevents visual crowding. Angular configuration (-90\u00b0 to +90\u00b0) converts linear scale to radial geometry, maintaining proportional interpretation despite data overflow."
+}

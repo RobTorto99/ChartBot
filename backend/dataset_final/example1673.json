@@ -1,0 +1,159 @@
+{
+    "visualization_prompt": "Generate a line chart showing frequency variations over time using animated snow effects and multi-channel sonification",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "line",
+                "backgroundColor": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 1,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "rgb(48, 48, 96)"
+                        ],
+                        [
+                            1,
+                            "rgb(0, 0, 0)"
+                        ]
+                    ]
+                }
+            },
+            "title": {
+                "text": "Happy Holidays!",
+                "style": {
+                    "fontFamily": "Great Vibes, cursive",
+                    "fontSize": "36px",
+                    "color": "#Fafafa"
+                }
+            },
+            "xAxis": [
+                {
+                    "type": "datetime",
+                    "labels": {
+                        "format": "{value:%S}s",
+                        "style": {
+                            "color": "#afafaf"
+                        }
+                    }
+                }
+            ],
+            "yAxis": [
+                {
+                    "max": 1800,
+                    "title": {
+                        "text": "Frequency",
+                        "style": {
+                            "color": "#afafaf"
+                        }
+                    },
+                    "labels": {
+                        "format": "{value} Hz",
+                        "style": {
+                            "color": "#afafaf"
+                        }
+                    }
+                }
+            ],
+            "series": [
+                {
+                    "name": "Snow Particles",
+                    "type": "scatter",
+                    "data": "/* Randomized snow coordinates */",
+                    "color": "rgba(255, 255, 255, 1)"
+                },
+                {
+                    "name": "Melody Channel 1",
+                    "data": [
+                        [
+                            0,
+                            739.99
+                        ],
+                        [
+                            300,
+                            1244.51
+                        ],
+                        [
+                            600,
+                            1108.73
+                        ],
+                        [
+                            900,
+                            987.77
+                        ],
+                        [
+                            1200,
+                            739.99
+                        ]
+                    ],
+                    "color": "#992222"
+                },
+                {
+                    "name": "Harmony Channel 2",
+                    "data": [
+                        [
+                            0,
+                            739.99
+                        ],
+                        [
+                            300,
+                            622.25
+                        ],
+                        [
+                            600,
+                            554.37
+                        ],
+                        [
+                            900,
+                            493.88
+                        ],
+                        [
+                            1200,
+                            369.99
+                        ]
+                    ],
+                    "color": "#229922"
+                },
+                {
+                    "name": "Bass Channel 3",
+                    "data": [
+                        [
+                            0,
+                            369.99
+                        ],
+                        [
+                            300,
+                            622.25
+                        ],
+                        [
+                            600,
+                            554.37
+                        ],
+                        [
+                            900,
+                            493.88
+                        ],
+                        [
+                            1200,
+                            369.99
+                        ]
+                    ],
+                    "color": "#222299"
+                }
+            ],
+            "sonification": {
+                "duration": 31000,
+                "defaultInstrument": "sineMusical",
+                "mapping": {
+                    "frequency": "y",
+                    "duration": 210
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three-dimensional time-series data with temporal frequency measurements (x: milliseconds, y: Hz). Synthetic data exhibits polyphonic characteristics with \u03bc=650Hz, \u03c3=300Hz across channels, simulating musical harmonics. The line chart maximizes data-ink ratio by eliminating chart junk while maintaining gridlines for temporal reference. Cairo's principles are applied through position encoding for frequency and color hue for channel differentiation. Animated snow particles (\u03bc movement=-0.25px/frame) add festive context without obscuring data. Sonification maps 31-second timeline to musical notes with panning spatialization, creating auditory correlation to visual patterns."
+}

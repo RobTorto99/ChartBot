@@ -1,0 +1,89 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object that renders a column chart with the title 'Monthly Sales Data'. The x-axis should have categories for each month from January to December. The y-axis should display the sales data for each month. The chart should have a custom color palette and include a legend. The title should be styled with a larger font size and a specific color. The axes labels should also have a specific font size and color. The chart should have a white background and a margin of 50 pixels on all sides.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#ffffff",
+            "margin": 50
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "fontSize": "20px",
+                "color": "#333333"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#666666"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales",
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#666666"
+                }
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#666666"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#008080"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "fontSize": "12px",
+                "color": "#666666"
+            }
+        },
+        "exporting": {
+            "buttons": {
+                "contextButton": {
+                    "text": "Export"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a column chart with a title 'Monthly Sales Data'. The chart type is set to 'column', and it includes a white background with a margin of 50 pixels on all sides. The title is styled with a larger font size and a dark gray color. The x-axis displays categories for each month from January to December, with labels styled in a smaller font size and a medium gray color. The y-axis is labeled 'Sales' with a slightly larger font size and medium gray color. The data series represents monthly sales data with a custom color of teal. The legend is enabled and styled with a smaller font size and medium gray color. Additionally, an export button is included with the text 'Export'."
+}

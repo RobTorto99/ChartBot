@@ -1,0 +1,112 @@
+{
+    "visualization_prompt": "Generate an organization chart showing hierarchical relationships of data types using color-coded categorical grouping and semantic accessibility annotations",
+    "visualization_code": {
+        "chart": {
+            "type": "organization",
+            "inverted": true
+        },
+        "title": {
+            "text": "Data Type Taxonomy"
+        },
+        "series": [
+            {
+                "name": "Statistical Measurement Levels",
+                "keys": [
+                    "from",
+                    "to"
+                ],
+                "data": [
+                    [
+                        "Data Type",
+                        "Categorical"
+                    ],
+                    [
+                        "Data Type",
+                        "Continuous"
+                    ],
+                    [
+                        "Categorical",
+                        "Nominal"
+                    ],
+                    [
+                        "Categorical",
+                        "Ordinal"
+                    ],
+                    [
+                        "Continuous",
+                        "Interval"
+                    ],
+                    [
+                        "Continuous",
+                        "Ratio"
+                    ]
+                ],
+                "nodes": [
+                    {
+                        "id": "Data Type",
+                        "color": "#D0E2F2"
+                    },
+                    {
+                        "id": "Categorical",
+                        "color": "#F2CFE2"
+                    },
+                    {
+                        "id": "Nominal",
+                        "color": "#F2CFE2"
+                    },
+                    {
+                        "id": "Ordinal",
+                        "color": "#F2CFE2"
+                    },
+                    {
+                        "id": "Continuous",
+                        "color": "#E1F3CF"
+                    },
+                    {
+                        "id": "Interval",
+                        "color": "#E1F3CF"
+                    },
+                    {
+                        "id": "Ratio",
+                        "color": "#E1F3CF"
+                    }
+                ],
+                "levels": [
+                    {
+                        "level": 0,
+                        "color": "#D0E2F2",
+                        "dataLabels": {
+                            "color": "#000000"
+                        },
+                        "height": 25
+                    },
+                    {
+                        "level": 1,
+                        "dataLabels": {
+                            "color": "#000000"
+                        },
+                        "height": 25
+                    }
+                ],
+                "dataLabels": {
+                    "color": "white",
+                    "style": {
+                        "fontSize": "12px"
+                    }
+                },
+                "borderColor": "white",
+                "nodeWidth": 65
+            }
+        ],
+        "accessibility": {
+            "point": {
+                "descriptionFormatter": "function(point) {return `${point.index}. ${point.toNode.name}, reports to ${point.fromNode.id}`}"
+            }
+        },
+        "exporting": {
+            "sourceWidth": 800,
+            "sourceHeight": 600
+        }
+    },
+    "visualization_explanation": "The dataset represents a hierarchical taxonomy of statistical data types with three structural levels: root node (Data Type), first-level categories (Categorical/Continuous), and measurement levels (Nominal/Ordinal/Interval/Ratio). Synthetic node relationships follow established statistical classification systems with color encoding matching common data visualization conventions (pastel pink for categorical subtypes, mint green for continuous subtypes). The organization chart format maximizes data-ink ratio by directly mapping node connections to hierarchical relationships while maintaining Cairo's perceptual principles through spatial grouping and color consistency. Accessibility features implement WCAG 2.1 requirements through semantic ARIA annotations describing node relationships in screen reader-compatible format."
+}

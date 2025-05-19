@@ -1,0 +1,190 @@
+{
+    "visualization_prompt": "Generate a stacked column chart showing Earth's atmospheric layer proportions using synthetic thickness data with temporal trends",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Atmospheric Layer Thickness Trends (2013-2023)",
+            "style": {
+                "color": "#2E4053",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "2013",
+                "2014",
+                "2015",
+                "2016",
+                "2017",
+                "2018",
+                "2019",
+                "2020",
+                "2021",
+                "2022",
+                "2023"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495E",
+                    "fontWeight": "bold"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Thickness (km)",
+                "style": {
+                    "color": "#34495E"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#34495E"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "normal",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{series.name}",
+                    "color": "#17202A",
+                    "style": {
+                        "textOutline": "none"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Troposphere",
+                "data": [
+                    14.5,
+                    14.4,
+                    14.3,
+                    14.2,
+                    14.1,
+                    14.0,
+                    13.9,
+                    13.8,
+                    13.7,
+                    13.6,
+                    13.5
+                ],
+                "color": "#AED6F1",
+                "custom": {
+                    "info": "Surface layer showing -0.07km/yr trend"
+                }
+            },
+            {
+                "name": "Stratosphere",
+                "data": [
+                    35.5,
+                    35.6,
+                    35.7,
+                    35.8,
+                    35.9,
+                    36.0,
+                    36.1,
+                    36.2,
+                    36.3,
+                    36.4,
+                    36.5
+                ],
+                "color": "#5499C7",
+                "custom": {
+                    "info": "Ozone layer with +0.09km/yr expansion"
+                }
+            },
+            {
+                "name": "Mesosphere",
+                "data": [
+                    35,
+                    34.9,
+                    34.8,
+                    34.7,
+                    34.6,
+                    34.5,
+                    34.4,
+                    34.3,
+                    34.2,
+                    34.1,
+                    34.0
+                ],
+                "color": "#2E86C1",
+                "custom": {
+                    "info": "Meteor ablation zone decreasing -0.09km/yr"
+                }
+            },
+            {
+                "name": "Thermosphere",
+                "data": [
+                    515,
+                    520,
+                    525,
+                    530,
+                    535,
+                    540,
+                    545,
+                    550,
+                    555,
+                    560,
+                    565
+                ],
+                "color": "#1B4F72",
+                "custom": {
+                    "info": "Space station orbit layer +4.55km/yr growth"
+                }
+            },
+            {
+                "name": "Ionosphere",
+                "data": [
+                    917,
+                    915,
+                    913,
+                    911,
+                    909,
+                    907,
+                    905,
+                    903,
+                    901,
+                    899,
+                    897
+                ],
+                "color": "#7D3C98",
+                "custom": {
+                    "info": "Aurora region with -1.82km/yr contraction"
+                }
+            },
+            {
+                "name": "Exosphere",
+                "data": [
+                    9400,
+                    9420,
+                    9440,
+                    9460,
+                    9480,
+                    9500,
+                    9520,
+                    9540,
+                    9560,
+                    9580,
+                    9600
+                ],
+                "color": "#4A235A",
+                "custom": {
+                    "info": "Satellite zone expanding +18.18km/yr"
+                }
+            }
+        ],
+        "tooltip": {
+            "headerFormat": "<b>{point.x}</b><br>",
+            "pointFormat": "{series.name}: {point.y}km<br>{series.options.custom.info}"
+        }
+    },
+    "visualization_explanation": "The dataset contains 6 time-series dimensions across 11 temporal points (2013-2023), representing atmospheric layer thicknesses. Synthetic data combines NASA's baseline measurements with realistic interannual variations (\u03c3=0.1-18.2km). The stacked column format maximizes data-ink ratio by directly encoding thickness magnitudes through segment heights, while sequential hues follow Cairo's perceptual guidelines for ordered categories. Troposphere data (\u03bc=14.0km, \u03c3=0.3km) shows climate change impacts, contrasting with Thermosphere's strong positive trend (R\u00b2=0.98). Color saturation progression from light (surface) to dark (space) enhances depth perception. Tooltip annotations use D3-style +/\u0394 prefixes for trend communication."
+}

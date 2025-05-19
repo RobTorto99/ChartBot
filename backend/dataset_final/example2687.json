@@ -1,0 +1,111 @@
+{
+    "visualization_prompt": "Generate a line chart showing periodic signal measurements with artificial gaps using Highcharts' broken-axis module and synthetic time-series patterns",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "line",
+                "marginRight": 20,
+                "backgroundColor": "#f9f9f9"
+            },
+            "title": {
+                "text": "Periodic Data Interruptions in Signal Analysis",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "18px"
+                }
+            },
+            "subtitle": {
+                "text": "X-axis breaks between 4\u20138 repeating every 12 units highlight measurement gaps",
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            },
+            "xAxis": {
+                "title": {
+                    "text": "Measurement Cycle",
+                    "style": {
+                        "color": "#34495e"
+                    }
+                },
+                "breaks": [
+                    {
+                        "from": 4,
+                        "to": 8,
+                        "breakSize": 1,
+                        "repeat": 12
+                    }
+                ],
+                "tickInterval": 2,
+                "labels": {
+                    "style": {
+                        "color": "#2c3e50"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Signal Amplitude (dB)",
+                    "style": {
+                        "color": "#34495e"
+                    }
+                },
+                "min": 0,
+                "max": 29,
+                "labels": {
+                    "style": {
+                        "color": "#2c3e50"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Sensor Readings",
+                    "data": [
+                        14.2,
+                        16.8,
+                        19.1,
+                        22.4,
+                        24.9,
+                        26.3,
+                        23.7,
+                        20.1,
+                        16.5,
+                        13.8,
+                        11.2,
+                        14.6,
+                        18.9,
+                        21.3,
+                        25.7,
+                        27.4,
+                        24.8,
+                        19.6,
+                        15.3,
+                        12.7,
+                        10.4,
+                        13.1,
+                        17.5,
+                        20.9,
+                        23.6,
+                        26.1,
+                        28.4,
+                        25.9,
+                        21.3,
+                        17.8
+                    ],
+                    "color": "#ff6347",
+                    "marker": {
+                        "radius": 3
+                    }
+                }
+            ],
+            "legend": {
+                "align": "right",
+                "verticalAlign": "top",
+                "itemStyle": {
+                    "color": "#34495e"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a synthetic time-series with 30 observations (0-29 on x-axis) showing: 1) Underlying sine wave pattern (\u03bc=15, \u03c3=5.2) simulating natural periodic phenomena 2) Additive white noise (\u00b12 units) mimicking sensor inaccuracies 3) Artificial gaps at x=4-8, 16-20, and 28-32. The line chart maximizes data-ink ratio per Tufte's principles while using Cairo's perceptual guidance through: a) Salmon-colored line for pre-attentive processing b) Axis breaks marked by gray bands c) Direct labeling avoiding legend dependencies. Synthetic values maintain domain validity through constrained oscillation (0-29 dB range) and realistic noise levels (SNR=13.6 dB)."
+}

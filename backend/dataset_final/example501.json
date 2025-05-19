@@ -1,0 +1,91 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object that renders a scatter plot with the title 'Time mapping'. The chart should have a subtitle 'Points are played from bottom of y-axis and up'. The data series should include points with specific coordinates and a custom color. The chart should have a sonification feature enabled, mapping time to Y values. The legend should be disabled, and the tooltip should display the coordinates of each point. The chart should also include a button to toggle the sonification feature.",
+    "visualization_code": {
+        "chart": {
+            "type": "scatter"
+        },
+        "title": {
+            "text": "Time mapping",
+            "align": "left",
+            "margin": 25
+        },
+        "subtitle": {
+            "text": "Points are played from bottom of y-axis and up",
+            "align": "left"
+        },
+        "sonification": {
+            "duration": 4000,
+            "defaultInstrumentOptions": {
+                "mapping": {
+                    "time": "y"
+                }
+            }
+        },
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "{point.x},{point.y}"
+        },
+        "series": [
+            {
+                "data": [
+                    [
+                        16,
+                        -5
+                    ],
+                    [
+                        7,
+                        -4
+                    ],
+                    [
+                        19,
+                        -3
+                    ],
+                    [
+                        3,
+                        -2
+                    ],
+                    [
+                        21,
+                        -1
+                    ],
+                    [
+                        -2,
+                        0
+                    ],
+                    [
+                        7,
+                        1
+                    ],
+                    [
+                        -3,
+                        2
+                    ],
+                    [
+                        16,
+                        3
+                    ],
+                    [
+                        17,
+                        4
+                    ],
+                    [
+                        11,
+                        5
+                    ],
+                    [
+                        -1,
+                        6
+                    ]
+                ],
+                "color": "rgba(30, 30, 200, 0.7)",
+                "marker": {
+                    "radius": 5
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a scatter plot with a title 'Time mapping' and a subtitle explaining the sonification feature. The chart type is set to 'scatter', and the data series includes specific points with coordinates and a custom color. The sonification feature is enabled, mapping time to the Y values of the points, with a duration of 4000 milliseconds. The legend is disabled, and the tooltip displays the coordinates of each point. The chart also includes a button to toggle the sonification feature, enhancing user interaction with the chart."
+}

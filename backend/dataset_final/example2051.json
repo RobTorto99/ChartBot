@@ -1,0 +1,192 @@
+{
+    "visualization_prompt": "Generate an areaspline chart showing atmospheric gas composition stratification using percentage-stacked visualization with height-dependent concentration gradients",
+    "visualization_code": {
+        "chart": {
+            "type": "areaspline",
+            "backgroundColor": "#f8f9fa"
+        },
+        "title": {
+            "text": "MSIS atmospheric composition by height",
+            "style": {
+                "fontSize": "24px",
+                "color": "#2c3e50",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://en.wikipedia.org/wiki/Atmosphere_of_Earth' target='_blank'>Wikipedia.org</a>",
+            "style": {
+                "color": "#7f8c8d",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "Height (km)",
+                "style": {
+                    "fontSize": "16px",
+                    "color": "#34495e"
+                }
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#7f8c8d"
+                }
+            },
+            "tickmarkPlacement": "on",
+            "min": 0,
+            "max": 1000
+        },
+        "yAxis": {
+            "title": {
+                "text": "Volume fraction",
+                "style": {
+                    "fontSize": "16px",
+                    "color": "#34495e"
+                }
+            },
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#7f8c8d"
+                }
+            }
+        },
+        "tooltip": {
+            "shared": true,
+            "headerFormat": "",
+            "pointFormat": "<b>{series.name}</b>: {point.y}%",
+            "valueSuffix": "%",
+            "style": {
+                "fontSize": "14px"
+            }
+        },
+        "plotOptions": {
+            "areaspline": {
+                "stacking": "percent",
+                "marker": {
+                    "enabled": false
+                },
+                "fillOpacity": 0.6,
+                "states": {
+                    "hover": {
+                        "enabled": false
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "N\u2082",
+                "color": "rgba(160, 217, 255, 0.7)",
+                "data": [
+                    78,
+                    76,
+                    38,
+                    10,
+                    2.5,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            {
+                "name": "O\u2082",
+                "color": "rgba(196, 253, 255, 0.7)",
+                "data": [
+                    21,
+                    20,
+                    2,
+                    0.5,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            {
+                "name": "Atomic Oxygen (O)",
+                "color": "rgba(88, 145, 200, 0.7)",
+                "data": [
+                    0,
+                    3,
+                    59,
+                    84,
+                    70,
+                    32,
+                    8,
+                    3,
+                    1,
+                    0,
+                    0
+                ]
+            },
+            {
+                "name": "Argon",
+                "color": "rgba(52, 109, 164, 0.7)",
+                "data": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            {
+                "name": "Helium",
+                "color": "rgba(15, 72, 127, 0.7)",
+                "data": [
+                    0,
+                    0,
+                    1,
+                    5,
+                    25,
+                    62,
+                    82,
+                    82,
+                    78,
+                    71,
+                    62
+                ]
+            },
+            {
+                "name": "Atomic Hydrogen",
+                "color": "rgba(12, 57, 101, 0.7)",
+                "data": [
+                    0,
+                    0,
+                    0,
+                    0.5,
+                    2.5,
+                    6,
+                    10,
+                    15,
+                    21,
+                    29,
+                    38
+                ]
+            }
+        ],
+        "legend": {
+            "itemStyle": {
+                "fontSize": "14px",
+                "color": "#2c3e50"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 6 atmospheric components (categorical variables) measured across 11 altitude levels (quantitative, 0-1000km). Synthetic concentrations follow inverse exponential relationships for light gases (H/He) and logistic decay patterns for heavier molecules (N\u2082/O\u2082), maintaining domain validity through atmospheric layer characteristics. The percentage-stacked areaspline maximizes data-ink ratio by using vertical space efficiently while maintaining perceptual grouping through semi-transparent color gradients. Cairo's principles are applied through ordered color saturation (increasing with altitude) and immediate layer recognition via color constancy. Data distributions show: N\u2082 dominance below 100km (\u03bc=25.2, \u03c3=32.1), O peaks at 400km (max 84%), and light gas predominance above 600km (H+He \u03bc=63.4, \u03c3=15.7)."
+}

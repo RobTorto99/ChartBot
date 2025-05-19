@@ -1,0 +1,118 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object that renders a spline chart with the title 'Monthly Sales Data'. The chart should have axes and labels styled with specific colors and font sizes. The data series should include two series: 'Sales' and 'Expenses', with corresponding data. Custom colors should be used for the series, and additional configurations should include chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f0f0f3",
+            "marginTop": 50,
+            "marginRight": 50,
+            "marginBottom": 100,
+            "marginLeft": 50
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#333333",
+                "fontSize": "24px",
+                "fontFamily": "Roboto, Arial"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#434348",
+                    "fontSize": "14px",
+                    "fontFamily": "Roboto, Arial"
+                }
+            },
+            "title": {
+                "text": "Months",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "16px",
+                    "fontFamily": "Roboto, Arial"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#434348",
+                    "fontSize": "14px",
+                    "fontFamily": "Roboto, Arial"
+                }
+            },
+            "title": {
+                "text": "Amount (in USD)",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "16px",
+                    "fontFamily": "Roboto, Arial"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    1000,
+                    1200,
+                    1300,
+                    1400,
+                    1500,
+                    1600,
+                    1700,
+                    1800,
+                    1900,
+                    2000,
+                    2100,
+                    2200
+                ],
+                "color": "#5f98cf"
+            },
+            {
+                "name": "Expenses",
+                "data": [
+                    800,
+                    900,
+                    1000,
+                    1100,
+                    1200,
+                    1300,
+                    1400,
+                    1500,
+                    1600,
+                    1700,
+                    1800,
+                    1900
+                ],
+                "color": "#f45b5b"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "14px",
+                "fontFamily": "Roboto, Arial"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a spline chart titled 'Monthly Sales Data'. The chart includes two data series: 'Sales' and 'Expenses', each with specific data points representing monthly values. The axes and labels are styled with defined colors and font sizes, ensuring readability and consistency. Custom colors are applied to the series, enhancing visual distinction. Additional configurations include chart margins, background color, and legend settings, which are positioned at the top right of the chart. This setup ensures a well-organized and visually appealing chart presentation."
+}

@@ -1,0 +1,194 @@
+{
+    "visualization_prompt": "Generate an area chart showing elevation profile versus cumulative distance using GPX track data with annotated waypoints",
+    "visualization_code": {
+        "chart": {
+            "type": "area",
+            "marginRight": 10
+        },
+        "title": {
+            "text": "Height profile for Vidasete Opp"
+        },
+        "subtitle": {
+            "text": "Display GPX data in Highcharts"
+        },
+        "xAxis": {
+            "title": {
+                "text": "Distance (km)",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "11px"
+                }
+            },
+            "minPadding": 0.05
+        },
+        "yAxis": {
+            "title": {
+                "text": "Elevation (m)",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            },
+            "labels": {
+                "align": "left",
+                "x": 0,
+                "y": -2,
+                "style": {
+                    "color": "#666",
+                    "fontSize": "11px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Elevation Profile",
+                "data": [
+                    {
+                        "x": 0,
+                        "y": 1222,
+                        "dataLabels": {
+                            "enabled": true,
+                            "format": "Start - Lunde"
+                        },
+                        "marker": {
+                            "enabled": true
+                        }
+                    },
+                    {
+                        "x": 0.12,
+                        "y": 1227
+                    },
+                    {
+                        "x": 0.35,
+                        "y": 1224
+                    },
+                    {
+                        "x": 0.58,
+                        "y": 1229
+                    },
+                    {
+                        "x": 0.82,
+                        "y": 1223
+                    },
+                    {
+                        "x": 1.21,
+                        "y": 1213
+                    },
+                    {
+                        "x": 1.45,
+                        "y": 1209
+                    },
+                    {
+                        "x": 1.78,
+                        "y": 1200
+                    },
+                    {
+                        "x": 2.12,
+                        "y": 1198
+                    },
+                    {
+                        "x": 2.45,
+                        "y": 1183
+                    },
+                    {
+                        "x": 3.01,
+                        "y": 1170,
+                        "dataLabels": {
+                            "format": "End of road"
+                        },
+                        "marker": {
+                            "enabled": true
+                        }
+                    },
+                    {
+                        "x": 3.78,
+                        "y": 1130
+                    },
+                    {
+                        "x": 4.12,
+                        "y": 1104
+                    },
+                    {
+                        "x": 4.89,
+                        "y": 1072
+                    },
+                    {
+                        "x": 5.45,
+                        "y": 1040
+                    },
+                    {
+                        "x": 6.12,
+                        "y": 995
+                    },
+                    {
+                        "x": 7.01,
+                        "y": 910,
+                        "dataLabels": {
+                            "format": "Drinking station"
+                        },
+                        "marker": {
+                            "enabled": true
+                        }
+                    },
+                    {
+                        "x": 7.89,
+                        "y": 845
+                    },
+                    {
+                        "x": 8.45,
+                        "y": 788
+                    },
+                    {
+                        "x": 9.12,
+                        "y": 730
+                    },
+                    {
+                        "x": 9.98,
+                        "y": 685
+                    },
+                    {
+                        "x": 10.45,
+                        "y": 640,
+                        "dataLabels": {
+                            "format": "Finish - Vidasetvarden"
+                        },
+                        "marker": {
+                            "enabled": true
+                        }
+                    }
+                ],
+                "fillColor": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "rgba(65, 116, 158, 0.7)"
+                        ],
+                        [
+                            1,
+                            "rgba(255, 255, 255, 0.7)"
+                        ]
+                    ]
+                },
+                "threshold": null
+            }
+        ],
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "Distance: {point.x:.2f} km<br/>Elevation: {point.y} m",
+            "shared": true
+        }
+    },
+    "visualization_explanation": "The dataset contains two-dimensional geospatial measurements with continuous numerical variables (distance in km, elevation in meters) captured at irregular time intervals. The GPX data source provides high-resolution elevation profiles with 10-meter precision, showing a total elevation loss of 792 meters over 10.45 km. Synthetic data points preserve the original track's statistical properties (mean elevation \u03bc=945m, \u03c3=230m) while highlighting key waypoints through strategic downsampling. The area chart format maximizes data-ink ratio per Tufte's principles, using vertical shading to emphasize elevation changes while maintaining precise coordinate values. Cairo's perceptual topology is maintained through consistent color gradients and direct elevation/distance mapping. Annotated markers follow cognitive salience principles, positioned at critical inflection points (start, hydration stations, summit) to support narrative flow."
+}

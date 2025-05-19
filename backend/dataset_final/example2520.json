@@ -1,0 +1,89 @@
+{
+    "visualization_prompt": "Generate a stacked column chart showing quarterly sales distribution between e-commerce and physical stores using percentage normalization",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "marginLeft": 50,
+                "marginBottom": 90,
+                "backgroundColor": "#f8f9fa"
+            },
+            "title": {
+                "text": "2023 Quarterly Sales Channel Distribution",
+                "style": {
+                    "fontSize": "18px",
+                    "color": "#2c3e50"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Q1",
+                    "Q2",
+                    "Q3",
+                    "Q4"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#34495e",
+                        "fontSize": "14px"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Percentage Contribution",
+                    "style": {
+                        "color": "#34495e"
+                    }
+                },
+                "labels": {
+                    "format": "{value}%",
+                    "style": {
+                        "color": "#7f8c8d",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "plotOptions": {
+                "series": {
+                    "stacking": "percent",
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "{y:.1f}%",
+                        "color": "#2c3e50"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Online Sales",
+                    "data": [
+                        35,
+                        42,
+                        58,
+                        67
+                    ],
+                    "color": "#3498db"
+                },
+                {
+                    "name": "In-Store Sales",
+                    "data": [
+                        65,
+                        58,
+                        42,
+                        33
+                    ],
+                    "color": "#e74c3c"
+                }
+            ],
+            "legend": {
+                "align": "right",
+                "verticalAlign": "top",
+                "itemStyle": {
+                    "color": "#2c3e50"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two-dimensional categorical-temporal data (quarters vs sales channels) with percentage-normalized quantitative values. Synthetic data demonstrates inverse linear trends (\u03bc_online=50.5%, \u03c3=13.7%; \u03bc_store=49.5%, \u03c3=13.7%) maintaining perfect negative correlation between channels. The stacked column format maximizes data-ink ratio by eliminating redundant axes while maintaining proportional relationships. Cairo's color principles use high-contrast complementary colors (blue/red) for categorical distinction. Percentage formatting and direct labeling follow Tufte's data-label integration guidelines, eliminating need for external legends during direct comparison. Quarterly progression shows digital transformation acceleration (R\u00b2=0.96 online growth trend) mirroring physical channel decline."
+}

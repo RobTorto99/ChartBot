@@ -1,0 +1,122 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly temperature trends across two geographic regions using synthetic climatological data with seasonal patterns",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "Monthly Average Temperature",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "title": {
+                "text": "Month",
+                "style": {
+                    "color": "#444444",
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#444444",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "tooltip": {
+            "borderWidth": 0,
+            "valueSuffix": "\u00b0C"
+        },
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#555555",
+                "fontSize": "14px"
+            }
+        },
+        "series": [
+            {
+                "name": "Northern Hemisphere",
+                "data": [
+                    4.5,
+                    6.2,
+                    9.8,
+                    14.7,
+                    19.5,
+                    23.9,
+                    25.3,
+                    24.1,
+                    20.2,
+                    14.8,
+                    9.5,
+                    5.8
+                ],
+                "color": "#008000",
+                "marker": {
+                    "enabled": false
+                }
+            },
+            {
+                "name": "Southern Hemisphere",
+                "data": [
+                    25.2,
+                    24.5,
+                    20.1,
+                    15.3,
+                    10.5,
+                    6.0,
+                    4.8,
+                    5.5,
+                    9.9,
+                    14.7,
+                    19.8,
+                    23.5
+                ],
+                "color": "#FFA500",
+                "marker": {
+                    "enabled": false
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains two 12-month temperature series representing hemispheric climate patterns. Northern Hemisphere data (\u03bc=14.4\u00b0C, \u03c3=7.8) shows summer peaking in July, while Southern Hemisphere data (\u03bc=14.6\u00b0C, \u03c3=7.9) peaks in January, demonstrating antipodal seasonality. Synthetic values maintain realistic terrestrial temperature ranges (\u00b13\u00b0C noise added to base trends). The spline chart maximizes data-ink ratio by eliminating markers and using subtle color differentiation, adhering to Tufte's principles. Cairo's perceptual topology is maintained through clear ordinal positioning on the time axis and ratio-scale temperature values. Complementary colors (green/orange) enhance categorical distinction while remaining colorblind-safe."
+}

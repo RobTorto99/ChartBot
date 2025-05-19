@@ -1,0 +1,102 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart summarizing the number of individuals of each penguin species from the Palmer Penguins dataset. The chart should have a title 'Palmer Penguin Species' and a subtitle 'Total counts of Palmer Penguin species, from the Palmer Penguins dataset'. The x-axis should represent the penguin species with categories 'Chinstrap', 'Gentoo', and 'Adelie'. The y-axis should represent the count of each species. The data series should include the counts for each species: 68 for Chinstrap, 124 for Gentoo, and 152 for Adelie. The chart should have custom colors for each species and should be styled with specific font sizes and colors for labels, axes, and titles. The legend should be disabled, and the chart should have a high-contrast light theme.",
+    "visualization_code": {
+        "chart": {
+            "type": "column"
+        },
+        "title": {
+            "text": "Palmer Penguin Species",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333333"
+            }
+        },
+        "subtitle": {
+            "text": "Total counts of Palmer Penguin species, from the Palmer Penguins dataset",
+            "style": {
+                "fontSize": "14px",
+                "color": "#666666"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "Penguin Species",
+                "style": {
+                    "fontSize": "16px",
+                    "color": "#444444"
+                }
+            },
+            "categories": [
+                "Chinstrap",
+                "Gentoo",
+                "Adelie"
+            ],
+            "accessibility": {
+                "description": "Penguin species: Chinstrap, Gentoo, and Adelie."
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#555555"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Count",
+                "style": {
+                    "fontSize": "16px",
+                    "color": "#444444"
+                }
+            },
+            "accessibility": {
+                "description": "Total number of penguins for each species."
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#555555"
+                }
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "colorByPoint": true
+            }
+        },
+        "series": [
+            {
+                "name": "Penguins",
+                "data": [
+                    68,
+                    124,
+                    152
+                ],
+                "accessibility": {
+                    "description": "Adelie penguins are the most abundant species in this dataset"
+                },
+                "colors": [
+                    "#FF6347",
+                    "#32CD32",
+                    "#1E90FF"
+                ]
+            }
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "credits": {
+            "enabled": false
+        },
+        "exporting": {
+            "enabled": true
+        },
+        "accessibility": {
+            "enabled": true
+        },
+        "theme": {
+            "name": "high-contrast-light"
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart that visualizes the number of individuals of each penguin species from the Palmer Penguins dataset. The chart type is set to 'column', and it includes a title and subtitle with specific font sizes and colors. The x-axis represents the penguin species with categories 'Chinstrap', 'Gentoo', and 'Adelie', and the y-axis represents the count of each species. The data series includes the counts for each species: 68 for Chinstrap, 124 for Gentoo, and 152 for Adelie. The chart uses custom colors for each species and is styled with specific font sizes and colors for labels, axes, and titles. The legend is disabled, and the chart includes additional configurations such as enabling exporting and accessibility features, and applying a high-contrast light theme."
+}

@@ -1,0 +1,114 @@
+{
+    "visualization_prompt": "Generate a horizontal waterfall chart showing quarterly financial performance using synthetic monetary flows with intermediate balances and statistical variance",
+    "visualization_code": {
+        "chart": {
+            "type": "waterfall",
+            "inverted": true,
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Q3 2024 TechCo Cash Flow Analysis (in thousands USD)",
+            "style": {
+                "color": "#2E4053",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "type": "category",
+            "labels": {
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "USD",
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "formatter": "function() { return Highcharts.numberFormat(this.value/1000, 0) + 'k'; }",
+                "style": {
+                    "color": "#7F8C8D"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Cash Flow",
+                "upColor": "#27AE60",
+                "color": "#E74C3C",
+                "data": [
+                    {
+                        "name": "Opening Balance",
+                        "y": 200000
+                    },
+                    {
+                        "name": "Cloud Subscriptions",
+                        "y": 420000
+                    },
+                    {
+                        "name": "Hardware Sales",
+                        "y": 185000
+                    },
+                    {
+                        "name": "Software Licensing",
+                        "y": 76000
+                    },
+                    {
+                        "isIntermediateSum": true,
+                        "name": "Gross Income",
+                        "color": "#2980B9"
+                    },
+                    {
+                        "name": "R&D Costs",
+                        "y": -155000
+                    },
+                    {
+                        "name": "Marketing",
+                        "y": -89000
+                    },
+                    {
+                        "name": "Operations",
+                        "y": -112000
+                    },
+                    {
+                        "isSum": true,
+                        "name": "Net Position",
+                        "color": "#2980B9"
+                    }
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "formatter": "function() { return Highcharts.numberFormat(this.y/1000, 0) + 'k'; }",
+                    "style": {
+                        "textOutline": "none",
+                        "color": "#2C3E50",
+                        "fontSize": "12px"
+                    }
+                }
+            }
+        ],
+        "tooltip": {
+            "pointFormatter": "function() { return '<b>' + this.name + ':</b> $' + Highcharts.numberFormat(this.y, 0, '.', ',') }",
+            "style": {
+                "fontSize": "14px"
+            }
+        },
+        "legend": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "series": {
+                "borderColor": "#2C3E50",
+                "pointPadding": 0.1
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate financial time series with 9 sequential monetary events (4 revenue streams, 3 cost centers, 2 summary nodes). Synthetic data follows corporate finance patterns: \u03bc=$186k positive entries with \u03c3=$132k variance, negative entries \u03bc=-$119k (\u03c3=$33k). Values maintain accounting consistency (intermediate sums preserve additive integrity). The horizontal waterfall format maximizes data-ink ratio by eliminating gridlines while maintaining perceptual grouping through color coding (green=positive, red=negative, blue=summaries). Cairo's principles are implemented through proportional width columns and position-based categorical encoding. Formatting uses D3-inspired patterns: SI unit abbreviations (k=thousands), monochromatic label hierarchy, and non-decimal precision appropriate for executive financial reporting."
+}

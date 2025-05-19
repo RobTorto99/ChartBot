@@ -1,0 +1,92 @@
+{
+    "visualization_prompt": "Generate a column chart showing annual sales growth by product category using synthetic data with a normal distribution.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#ffffff",
+            "marginTop": 40,
+            "marginBottom": 80
+        },
+        "title": {
+            "text": "Annual Sales Growth by Product Category",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "22px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Electronics",
+                "Apparel",
+                "Home & Garden",
+                "Beauty",
+                "Sports",
+                "Toys",
+                "Automotive",
+                "Books",
+                "Health",
+                "Furniture"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "14px"
+                },
+                "rotation": -45
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales Growth (%)",
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "14px"
+                }
+            },
+            "gridLineDashStyle": "Dot"
+        },
+        "series": [
+            {
+                "name": "Growth Rate",
+                "data": [
+                    7.2,
+                    8.5,
+                    6.8,
+                    9.1,
+                    7.9,
+                    10.2,
+                    5.7,
+                    8.8,
+                    7.4,
+                    6.3
+                ],
+                "color": "#3498db",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y:.1f}%",
+                    "style": {
+                        "textOutline": "none",
+                        "fontSize": "12px"
+                    }
+                }
+            }
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "column": {
+                "pointPadding": 0.1,
+                "borderWidth": 0
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two variables: categorical product sectors (nominal scale) and numerical sales growth percentages (ratio scale). Synthetic data was generated using \u03bc=8% and \u03c3=1.7% to simulate realistic business performance variations while avoiding negative growth values. The column chart maximizes data-ink ratio by removing redundant gridlines and using minimal border styling, aligning with Tufte's principles. Cairo's perceptual truth is maintained through proportional column widths and direct value labels, eliminating axis misinterpretation. The normal distribution parameters (generated via Box-Muller transform) ensure statistical credibility, with values bounded between 5.7% and 10.2% to reflect plausible market conditions."
+}

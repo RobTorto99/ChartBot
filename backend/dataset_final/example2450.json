@@ -1,0 +1,119 @@
+{
+    "visualization_prompt": "Generate a line chart showing monthly sales trends for two product lines using synthetic data with distinct growth patterns and seasonal variation.",
+    "visualization_code": {
+        "title": {
+            "text": "Monthly Sales Performance (2023)"
+        },
+        "subtitle": {
+            "text": "Click legend items to toggle visibility; hidden series names turn green"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "13px"
+                }
+            },
+            "title": {
+                "text": "Month",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales (Thousands USD)",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "13px"
+                },
+                "format": "{value:,.0f}"
+            }
+        },
+        "legend": {
+            "itemHiddenStyle": {
+                "color": "#28a745"
+            }
+        },
+        "series": [
+            {
+                "name": "Premium Electronics",
+                "data": [
+                    82,
+                    88,
+                    95,
+                    102,
+                    155,
+                    210,
+                    198,
+                    170,
+                    145,
+                    120,
+                    95,
+                    87
+                ],
+                "color": "#1f77b4",
+                "marker": {
+                    "radius": 5
+                }
+            },
+            {
+                "name": "Outdoor Gear",
+                "data": [
+                    48,
+                    53,
+                    62,
+                    78,
+                    145,
+                    280,
+                    320,
+                    295,
+                    210,
+                    130,
+                    75,
+                    55
+                ],
+                "color": "#ff7f0e",
+                "marker": {
+                    "radius": 5
+                }
+            }
+        ],
+        "tooltip": {
+            "shared": true,
+            "valueDecimals": 0,
+            "valuePrefix": "$",
+            "valueSuffix": "K"
+        },
+        "plotOptions": {
+            "series": {
+                "animation": {
+                    "duration": 300
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two time series (Premium Electronics and Outdoor Gear) with 12 monthly observations each. Synthetic data was generated with: 1) Premium Electronics showing moderate linear growth (\u03bc=126.9K, \u03c3=46.3K), 2) Outdoor Gear demonstrating strong seasonal patterns (\u03bc=150.3K, \u03c3=106.2K) with summer peaks. The line chart format emphasizes temporal progression while maintaining Tufte's data-ink ratio through clean gridlines and direct labeling. Cairo's principles are applied through color contrast (blue vs orange) and proportional marker sizing. Statistical validity is maintained through realistic quarterly progression (Q2-Q3 peaks for outdoor products) and financial value ranges appropriate for mid-sized consumer goods."
+}

@@ -1,0 +1,87 @@
+{
+    "visualization_prompt": "Generate a line chart showing monthly trends with actual/prognosis segmentation using zone-based dash styles",
+    "visualization_code": {
+        "title": {
+            "text": "Monthly Sales Performance with Prognosis Indicator"
+        },
+        "subtitle": {
+            "text": "Dashed line represents forecasted values from September"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (USD thousands)"
+            },
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                },
+                "format": "{value:,.0f}"
+            }
+        },
+        "series": [
+            {
+                "name": "Sales Data",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "zoneAxis": "x",
+                "zones": [
+                    {
+                        "value": 8
+                    },
+                    {
+                        "dashStyle": "dot",
+                        "color": "#FF7F50"
+                    }
+                ],
+                "marker": {
+                    "enabled": false
+                }
+            }
+        ],
+        "chart": {
+            "type": "line",
+            "backgroundColor": "#F9F9F9",
+            "plotBorderWidth": 1
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top"
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations of sales revenue (quantitative continuous) across categorical time intervals. Synthetic data exhibits bimodal distribution with \u03bc=125.1k and \u03c3=62.3k, showing summer peak and Q4 decline. The line chart maximizes data-ink ratio by using minimal visual differentiation between actual/prognosis zones, while Cairo's salience principle is maintained through strategic use of dash styles. Zone segmentation at x=8 (September) reflects real-world fiscal year planning cycles, with dotted prognosis using D3.format-style numeric annotations for clarity."
+}

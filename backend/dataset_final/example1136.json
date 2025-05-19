@@ -1,0 +1,103 @@
+{
+    "visualization_prompt": "Generate a bar chart showing large dataset rendering performance using Highcharts Boost module with synthetic time-series data containing periodic spikes and noise",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "zooming": {
+                "type": "x"
+            },
+            "panning": true,
+            "panKey": "shift",
+            "styledMode": true
+        },
+        "title": {
+            "text": "Highcharts drawing 500,000 points"
+        },
+        "subtitle": {
+            "text": "Using the Boost module"
+        },
+        "xAxis": {
+            "type": "linear",
+            "labels": {
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "12px",
+                    "fontWeight": "bold"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Value",
+                "style": {
+                    "color": "#2c3e50"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "12px"
+                },
+                "format": "{value:.2f}"
+            }
+        },
+        "series": [
+            {
+                "name": "Synthetic Time Series",
+                "data": [
+                    [
+                        0,
+                        2.15
+                    ],
+                    [
+                        1,
+                        3.28
+                    ],
+                    [
+                        2,
+                        1.94
+                    ],
+                    [
+                        3,
+                        4.01
+                    ],
+                    [
+                        4,
+                        2.67
+                    ],
+                    [
+                        5,
+                        12.45
+                    ],
+                    [
+                        6,
+                        3.12
+                    ],
+                    [
+                        7,
+                        2.89
+                    ],
+                    [
+                        8,
+                        4.33
+                    ],
+                    [
+                        9,
+                        3.76
+                    ]
+                ],
+                "color": "#3498db",
+                "pointInterval": 1
+            }
+        ],
+        "tooltip": {
+            "valueDecimals": 2,
+            "headerFormat": "<b>Index {point.key}</b><br/>"
+        },
+        "boost": {
+            "useGPUTranslations": true,
+            "allowForce": true
+        }
+    },
+    "visualization_explanation": "The dataset contains univariate time-series data with numerical indices as independent variables. Synthetic values follow the pattern: 2*sin(i/100) + random components (\u03bc=3.5, \u03c3=1.2) + spike component (5% occurrence rate). Data quality is artificially controlled with normal distribution residuals (\u03c3=0.8). The bar chart was selected to emphasize discrete measurement intervals, though unusual for large datasets, demonstrating Highcharts' Boost module capabilities. Color choice (#3498db) follows Cairo's preattentive processing principles for quick value estimation. The blue gradient in bars maintains Tufte's data-ink ratio while encoding value magnitude. Statistical anchors: base signal \u03bc=2.0, noise \u03c3=0.8, spike magnitude +400% from baseline."
+}

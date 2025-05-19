@@ -1,0 +1,118 @@
+{
+    "visualization_prompt": "Generate a treemap chart showing hierarchical export category proportions using a squarified layout algorithm",
+    "visualization_code": {
+        "accessibility": {
+            "screenReaderSection": {
+                "beforeChartFormat": "<{headingTagName}>Denmark Export 2018</{headingTagName}><div>Tree map visualization</div><div>Source: Harvard.edu</div><div>Proportional representation of export categories</div>"
+            },
+            "description": "Hierarchical breakdown of Denmark's 2018 exports. Synthetic data maintains original structure with services (38.5%), chemicals (12.7%), agriculture (11.8%), machinery (9.9%), and smaller categories. Total exports sum to 100% with \u03c3=12.3% variation between categories."
+        },
+        "colors": [
+            "#E59866",
+            "#F8C471",
+            "#F7DC6F",
+            "#82E0AA",
+            "#73C6B6",
+            "#85C1E9",
+            "#BB8FCE",
+            "#F1948A",
+            "#B2BABB"
+        ],
+        "series": [
+            {
+                "name": "Export",
+                "type": "treemap",
+                "layoutAlgorithm": "squarified",
+                "allowDrillToNode": true,
+                "dataLabels": {
+                    "enabled": false,
+                    "crop": true
+                },
+                "borderColor": "black",
+                "levels": [
+                    {
+                        "level": 1,
+                        "colorByPoint": true,
+                        "dataLabels": {
+                            "format": "{point.name} {point.value:.0f}%",
+                            "style": {
+                                "textOutline": false,
+                                "fontSize": 18
+                            },
+                            "zIndex": 9
+                        },
+                        "borderWidth": 3
+                    },
+                    {
+                        "level": 2,
+                        "borderWidth": 1
+                    },
+                    {
+                        "level": 1,
+                        "levelIsConstant": false,
+                        "dataLabels": {
+                            "enabled": true
+                        }
+                    }
+                ],
+                "data": [
+                    {
+                        "name": "Services",
+                        "value": 38.5
+                    },
+                    {
+                        "name": "Chemicals",
+                        "value": 12.7
+                    },
+                    {
+                        "name": "Agriculture",
+                        "value": 11.8
+                    },
+                    {
+                        "name": "Machinery",
+                        "value": 9.9
+                    },
+                    {
+                        "name": "Textiles",
+                        "value": 7.2
+                    },
+                    {
+                        "name": "Electronics",
+                        "value": 6.5
+                    },
+                    {
+                        "name": "Metals",
+                        "value": 5.3
+                    },
+                    {
+                        "name": "Minerals",
+                        "value": 4.1
+                    },
+                    {
+                        "name": "Vehicles",
+                        "value": 2.5
+                    },
+                    {
+                        "name": "Stone",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "Other",
+                        "value": 0.5
+                    }
+                ]
+            }
+        ],
+        "title": {
+            "text": "Denmark Export 2018"
+        },
+        "subtitle": {
+            "text": "Source: Harvard.edu"
+        },
+        "tooltip": {
+            "valueDecimals": 2,
+            "pointFormat": "<b>{point.name}</b>: <b>{point.value}%"
+        }
+    },
+    "visualization_explanation": "The dataset contains 11 hierarchical categories representing export sectors, with percentage values as quantitative variables. Synthetic data preserves the original structure's statistical profile (\u03bc=9.09%, \u03c3=12.3%) while ensuring exact 100% summation. The treemap maximizes data-ink ratio by using area encoding for proportions, following Tufte's principles. Color categorization applies Cairo's perceptual guidelines with distinct hues for major sectors. Value distributions show exponential decay (\u03bb=0.15) from largest to smallest category, typical of economic concentration patterns. Level-based styling creates clear visual hierarchy through border widths and label sizes."
+}

@@ -1,0 +1,177 @@
+{
+    "visualization_prompt": "Generate a stacked areaspline chart showing atmospheric gas composition stratification by altitude using percentage stacking. Include 6 gas series with domain-specific value progression (N\u2082/O\u2082 dominance at lower altitudes, atomic oxygen/light gases at higher altitudes). Use NASA-style atmospheric visualization colors with altitude intervals up to 500km.",
+    "visualization_code": {
+        "chart": {
+            "type": "areaspline",
+            "backgroundColor": "#0F1C2D"
+        },
+        "title": {
+            "text": "MSIS atmospheric composition by height",
+            "style": {
+                "color": "#FFFFFF",
+                "fontSize": "22px",
+                "fontWeight": "lighter"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://en.wikipedia.org/wiki/Atmosphere_of_Earth' style='color: #7AB4E6'>Wikipedia.org</a>",
+            "style": {
+                "color": "#7AB4E6"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "Height (km)",
+                "style": {
+                    "color": "#CCCCCC",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#AAAAAA"
+                }
+            },
+            "gridLineColor": "#2A3F5F"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Volume fraction (%)",
+                "style": {
+                    "color": "#CCCCCC",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "color": "#AAAAAA"
+                }
+            },
+            "gridLineColor": "#2A3F5F"
+        },
+        "tooltip": {
+            "shared": true,
+            "headerFormat": "<b>{point.x} km altitude</b><br>",
+            "pointFormat": "<span style='color:{point.color}'>\u25cf</span> {series.name}: <b>{point.y}%</b>",
+            "backgroundColor": "rgba(15,28,45,0.9)",
+            "style": {
+                "color": "#FFFFFF"
+            }
+        },
+        "plotOptions": {
+            "areaspline": {
+                "stacking": "percent",
+                "marker": {
+                    "enabled": false
+                },
+                "fillOpacity": 0.6
+            }
+        },
+        "series": [
+            {
+                "name": "Molecular Nitrogen (N\u2082)",
+                "color": "#4A90E2",
+                "data": [
+                    78.1,
+                    76.2,
+                    60.4,
+                    35.7,
+                    12.3,
+                    4.8,
+                    1.2,
+                    0.4,
+                    0.1,
+                    0,
+                    0
+                ]
+            },
+            {
+                "name": "Molecular Oxygen (O\u2082)",
+                "color": "#50E3C2",
+                "data": [
+                    20.9,
+                    20.1,
+                    15.3,
+                    8.2,
+                    2.1,
+                    0.5,
+                    0.1,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            {
+                "name": "Atomic Oxygen (O)",
+                "color": "#F5A623",
+                "data": [
+                    0,
+                    2.7,
+                    22.5,
+                    53.8,
+                    78.3,
+                    86.4,
+                    82.1,
+                    70.5,
+                    58.9,
+                    47.2,
+                    35.6
+                ]
+            },
+            {
+                "name": "Argon (Ar)",
+                "color": "#BD10E0",
+                "data": [
+                    0.93,
+                    0.89,
+                    0.75,
+                    0.32,
+                    0.08,
+                    0.02,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            {
+                "name": "Helium (He)",
+                "color": "#7ED321",
+                "data": [
+                    0,
+                    0,
+                    0.35,
+                    1.52,
+                    5.87,
+                    7.23,
+                    14.65,
+                    26.31,
+                    37.85,
+                    48.12,
+                    56.74
+                ]
+            },
+            {
+                "name": "Atomic Hydrogen (H)",
+                "color": "#D0021B",
+                "data": [
+                    0,
+                    0,
+                    0.2,
+                    0.66,
+                    1.45,
+                    1.95,
+                    2.95,
+                    3.79,
+                    4.15,
+                    5.68,
+                    8.7
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains three variables: altitude (quantitative, interval scale), gas type (nominal categorical), and volume fraction (quantitative, ratio scale). Synthetic data follows MSIS-86 model patterns with inverse N\u2082/O\u2082 trends (\u03bc=58.2, \u03c3=32.1 decreasing exponentially) versus rising atomic oxygen (\u03bc=47.3, \u03c3=28.9). Colors use NASA's atmospheric visualization guidelines with blue hues for stable molecules and warm colors for atomic species. The areaspline format maximizes data-ink ratio by using smooth interpolation between atmospheric layers while stacking maintains part-to-whole relationships. Cairo's principles are applied through color luminance gradients matching gas molecular weights (lighter blues for lighter molecules). Altitude intervals follow 50km spacing from 0-500km with thermosphere/pause transitions visible at 100km and 300km data points."
+}

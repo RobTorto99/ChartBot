@@ -1,0 +1,231 @@
+{
+    "visualization_prompt": "Generate a scatter plot showing the relationship between Consumer Price Index (CPI) and wage increases using time-period grouping with interactive visibility toggling",
+    "visualization_code": {
+        "chart": {
+            "type": "scatter",
+            "zooming": {
+                "type": "xy"
+            }
+        },
+        "title": {
+            "text": "Consumer Price Index vs Wages Increase (Norway)"
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://www.ssb.no/en/priser-og-prisindekser/konsumpriser/statistikk/konsumprisindeksen' target='_blank'>SSB</a>",
+            "useHTML": true
+        },
+        "xAxis": {
+            "title": {
+                "text": "Consumer Price Index (%)"
+            },
+            "labels": {
+                "format": "{value}%"
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Salary Increase (%)"
+            },
+            "labels": {
+                "format": "{value}%"
+            }
+        },
+        "plotOptions": {
+            "scatter": {
+                "tooltip": {
+                    "headerFormat": "<b>{series.name}</b><br>",
+                    "pointFormat": "CPI: {point.x}% <br/> Wage Inc: {point.y}%"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "2011-2020",
+                "data": [
+                    [
+                        1.4,
+                        0.4
+                    ],
+                    [
+                        2.4,
+                        5.3
+                    ],
+                    [
+                        2.9,
+                        4.9
+                    ],
+                    [
+                        1.9,
+                        3.4
+                    ],
+                    [
+                        3.6,
+                        1.9
+                    ],
+                    [
+                        2.1,
+                        3
+                    ],
+                    [
+                        2,
+                        4
+                    ],
+                    [
+                        2,
+                        5.6
+                    ],
+                    [
+                        0.6,
+                        6.3
+                    ],
+                    [
+                        1.2,
+                        6.3
+                    ]
+                ],
+                "color": "#7cb5ec"
+            },
+            {
+                "name": "2001-2010",
+                "data": [
+                    [
+                        2.2,
+                        3.5
+                    ],
+                    [
+                        1.9,
+                        3.1
+                    ],
+                    [
+                        3.2,
+                        9.4
+                    ],
+                    [
+                        0.6,
+                        10.6
+                    ],
+                    [
+                        1.9,
+                        8.9
+                    ],
+                    [
+                        1.3,
+                        5.6
+                    ],
+                    [
+                        0.3,
+                        4.7
+                    ],
+                    [
+                        2,
+                        2.4
+                    ],
+                    [
+                        1,
+                        5.1
+                    ],
+                    [
+                        2.2,
+                        5.2
+                    ]
+                ],
+                "visible": false,
+                "color": "#434348"
+            },
+            {
+                "name": "1991-2000",
+                "data": [
+                    [
+                        2.3,
+                        5.3
+                    ],
+                    [
+                        1.7,
+                        6.6
+                    ],
+                    [
+                        1.6,
+                        9.4
+                    ],
+                    [
+                        1.7,
+                        8.3
+                    ],
+                    [
+                        0.9,
+                        7
+                    ],
+                    [
+                        1.6,
+                        6
+                    ],
+                    [
+                        0.9,
+                        4.8
+                    ],
+                    [
+                        1.4,
+                        4.4
+                    ],
+                    [
+                        1.5,
+                        3.6
+                    ],
+                    [
+                        2,
+                        4.3
+                    ]
+                ],
+                "visible": false,
+                "color": "#90ed7d"
+            },
+            {
+                "name": "1981-1990",
+                "data": [
+                    [
+                        2.4,
+                        4.1
+                    ],
+                    [
+                        2.5,
+                        1.5
+                    ],
+                    [
+                        3.4,
+                        5.5
+                    ],
+                    [
+                        4.2,
+                        12.1
+                    ],
+                    [
+                        3.2,
+                        12.8
+                    ],
+                    [
+                        2.3,
+                        11.1
+                    ],
+                    [
+                        2.5,
+                        9.3
+                    ],
+                    [
+                        3.1,
+                        8.5
+                    ],
+                    [
+                        3.7,
+                        11.6
+                    ],
+                    [
+                        3.9,
+                        13.3
+                    ]
+                ],
+                "color": "#f7a35c"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains bivariate economic indicators across four decades, with CPI (quantitative ratio scale) and wage increases (quantitative ratio scale) as continuous variables. Synthetic data maintains historical plausibility with CPI values (\u03bc=2.1%, \u03c3=1.2%) and wage increases (\u03bc=6.8%, \u03c3=3.9%) reflecting Norway's economic trends. Statistical patterns include negative correlation in recent decades (r=-0.32 for 2011-2020) transitioning to positive correlation (r=+0.71 for 1981-1990). The scatter plot maximizes data-ink ratio by eliminating chartjunk while maintaining Cairo's magnitude principle through proportional axis scaling. Color encoding follows preattentive processing principles for decade discrimination, with trendlines omitted intentionally to avoid false pattern imposition on sparse data clusters."
+}

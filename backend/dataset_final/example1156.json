@@ -1,0 +1,150 @@
+{
+    "visualization_prompt": "Generate a 3D column chart showing quarterly sales trends across three years using color gradients and depth perception enhancements",
+    "visualization_code": {
+        "chart": {
+            "renderTo": "container",
+            "type": "column",
+            "options3d": {
+                "enabled": true,
+                "alpha": 15,
+                "beta": 15,
+                "depth": 50,
+                "viewDistance": 25
+            },
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Quarterly Sales Performance (2021-2023)",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Q1 2021",
+                "Q2 2021",
+                "Q3 2021",
+                "Q4 2021",
+                "Q1 2022",
+                "Q2 2022",
+                "Q3 2022",
+                "Q4 2022",
+                "Q1 2023",
+                "Q2 2023",
+                "Q3 2023",
+                "Q4 2023"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Fiscal Quarter",
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (USD thousands)",
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                },
+                "format": "{value:,.0f}k"
+            }
+        },
+        "colorAxis": {
+            "min": 30,
+            "max": 220,
+            "minColor": "#d4e6f1",
+            "maxColor": "#21618c",
+            "showInLegend": false
+        },
+        "plotOptions": {
+            "column": {
+                "depth": 25,
+                "colorByPoint": true
+            }
+        },
+        "series": [
+            {
+                "name": "Quarterly Revenue",
+                "data": [
+                    [
+                        0,
+                        29.9
+                    ],
+                    [
+                        1,
+                        71.5
+                    ],
+                    [
+                        2,
+                        106.4
+                    ],
+                    [
+                        3,
+                        129.2
+                    ],
+                    [
+                        4,
+                        144.0
+                    ],
+                    [
+                        5,
+                        176.0
+                    ],
+                    [
+                        6,
+                        135.6
+                    ],
+                    [
+                        7,
+                        148.5
+                    ],
+                    [
+                        8,
+                        216.4
+                    ],
+                    [
+                        9,
+                        194.1
+                    ],
+                    [
+                        10,
+                        195.6
+                    ],
+                    [
+                        11,
+                        224.4
+                    ]
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "${point.y:.1f}k",
+                    "color": "#2c3e50"
+                }
+            }
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "pointFormat": "Quarter {point.x}: <b>{point.y:,.1f}k</b>"
+        }
+    },
+    "visualization_explanation": "The dataset represents a 12-dimensional time series of quarterly financial metrics. Categorical temporal data (fiscal quarters) is paired with continuous numerical values (revenue in thousands). Synthetic data preserves original value ranges while introducing an upward trend (\u03bc=136.7, \u03c3=58.9) and Q4 seasonal peaks, maintaining domain-appropriate financial proportions. The 3D column chart enhances value comparison through depth cues while maintaining Tufte's data-ink ratio by eliminating redundant legend elements. Color saturation encodes value magnitude following Cairo's preattentive processing principles, using a single-hue progression from light blue (#d4e6f1) to dark blue (#21618c). Statistical anchors show 18.7% CAGR from Q1 2021 to Q4 2023, with Q4 averages 23.4% above yearly means."
+}

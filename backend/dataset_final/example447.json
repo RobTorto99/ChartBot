@@ -1,0 +1,51 @@
+{
+    "visualization_prompt": "Create a Highcharts timeline chart with the title 'Timeline of Space Exploration'. The chart should have invisible x and y axes. The data series should include events such as 'First dogs in space', 'Sputnik 1', 'First human spaceflight', and 'First human on the Moon'. Each event should have a name, label, and description. The data labels should have a silver connector with a width of 2. The chart should have a subtitle linking to the Wikipedia page for the timeline of space exploration.",
+    "visualization_code": {
+        "chart": {
+            "type": "timeline"
+        },
+        "xAxis": {
+            "visible": false
+        },
+        "yAxis": {
+            "visible": false
+        },
+        "title": {
+            "text": "Timeline of Space Exploration"
+        },
+        "subtitle": {
+            "text": "Info source: <a href=\"https://en.wikipedia.org/wiki/Timeline_of_space_exploration\">www.wikipedia.org</a>"
+        },
+        "series": [
+            {
+                "dataLabels": {
+                    "connectorColor": "silver",
+                    "connectorWidth": 2
+                },
+                "data": [
+                    {
+                        "name": "First dogs",
+                        "label": "1951: First dogs in space",
+                        "description": "22 July 1951 First dogs in space (Dezik and Tsygan)"
+                    },
+                    {
+                        "name": "Sputnik 1",
+                        "label": "1957: First artificial satellite",
+                        "description": "4 October 1957 First artificial satellite. First signals from space."
+                    },
+                    {
+                        "name": "First human spaceflight",
+                        "label": "1961: First human spaceflight (Yuri Gagarin)",
+                        "description": "First human spaceflight (Yuri Gagarin), and the first human-crewed orbital flight"
+                    },
+                    {
+                        "name": "First human on the Moon",
+                        "label": "1969: First human on the Moon",
+                        "description": "First human on the Moon, and first space launch from a celestial body other than the Earth. First sample return from the Moon"
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a timeline chart titled 'Timeline of Space Exploration'. The chart type is set to 'timeline', and both the x and y axes are set to be invisible. The title of the chart is styled with the specified text, and a subtitle is included with a link to the Wikipedia page for the timeline of space exploration. The data series includes four significant events in space exploration history, each with a name, label, and description. The data labels are styled with a silver connector of width 2, providing a clear visual connection between the labels and the data points. This configuration effectively visualizes the timeline of key events in space exploration."
+}

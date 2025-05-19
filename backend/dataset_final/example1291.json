@@ -1,0 +1,100 @@
+{
+    "visualization_prompt": "Generate a map showing spatial distribution using interactive drag-and-drop puzzle mechanics with state-based animations",
+    "visualization_code": {
+        "chart": {
+            "type": "map",
+            "renderTo": "container"
+        },
+        "title": {
+            "text": "Australian Administrative Regions Puzzle",
+            "style": {
+                "fontSize": "30px",
+                "color": "#333333"
+            }
+        },
+        "series": [
+            {
+                "name": "Base Map",
+                "borderColor": "#e8e8e8",
+                "nullColor": "transparent",
+                "showInLegend": false
+            },
+            {
+                "name": "Puzzle Pieces",
+                "colorByPoint": true,
+                "borderColor": "#000000",
+                "data": [
+                    {
+                        "hc-key": "au-act",
+                        "value": 1,
+                        "color": "#FFB6C1"
+                    },
+                    {
+                        "hc-key": "au-nsw",
+                        "value": 1,
+                        "color": "#87CEEB"
+                    },
+                    {
+                        "hc-key": "au-nt",
+                        "value": 1,
+                        "color": "#98FB98"
+                    },
+                    {
+                        "hc-key": "au-qld",
+                        "value": 1,
+                        "color": "#DDA0DD"
+                    },
+                    {
+                        "hc-key": "au-sa",
+                        "value": 1,
+                        "color": "#FFA07A"
+                    },
+                    {
+                        "hc-key": "au-tas",
+                        "value": 1,
+                        "color": "#20B2AA"
+                    },
+                    {
+                        "hc-key": "au-vic",
+                        "value": 1,
+                        "color": "#F0E68C"
+                    },
+                    {
+                        "hc-key": "au-wa",
+                        "value": 1,
+                        "color": "#CD5C5C"
+                    }
+                ],
+                "joinBy": "hc-key",
+                "states": {
+                    "hover": {
+                        "color": "#B0C4DE"
+                    }
+                }
+            }
+        ],
+        "plotOptions": {
+            "series": {
+                "states": {
+                    "inactive": {
+                        "opacity": 1
+                    }
+                }
+            }
+        },
+        "accessibility": {
+            "enabled": false
+        },
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "{point.name}",
+            "style": {
+                "fontSize": "20px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains geospatial vector data for Australian administrative regions, featuring two key variables: categorical region identifiers (hc-keys) and uniform numerical values. Spatial coordinates define polygon boundaries through SVG paths. Synthetic values (\u03bc=1, \u03c3=0) create equal puzzle piece importance despite lacking real numerical significance. Data quality ensures topological consistency through Highcharts' maintained map definitions. This choropleth map transforms into an interactive puzzle by applying affine transformations (scaling/translating) to vector shapes. The base map maintains Tufte's data-ink ratio through minimal borders (#e8e8e8) while puzzle pieces use high-contrast colors from a qualitative palette. Cairo's perceptual principles are enforced through consistent state transitions (hover color #B0C4DE) and puzzle piece scaling (mean 0.25\u00d7 reduction). Interaction mechanics leverage Highcharts' SVG manipulation API with springless animation (500ms linear) for cognitive load reduction. Puzzle completion tracking uses simple counting algebra (total=8, remaining=8) displayed through dynamic SVG text elements."
+}

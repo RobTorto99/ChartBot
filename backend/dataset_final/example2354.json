@@ -1,0 +1,159 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly temperature variations using gradient color encoding and temporal axis formatting",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f0f0f0",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Monthly Average Temperature",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333333"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#0000FF",
+                    "fontSize": "12px",
+                    "fontWeight": "bold"
+                }
+            },
+            "lineColor": "#AAAAAA"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#008000",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#008000",
+                    "fontSize": "14px"
+                }
+            },
+            "gridLineColor": "#DDDDDD"
+        },
+        "series": [
+            {
+                "name": "Temperature",
+                "data": [
+                    {
+                        "y": 4.2,
+                        "color": "#0000FF"
+                    },
+                    {
+                        "y": 5.1,
+                        "color": "#1A00FF"
+                    },
+                    {
+                        "y": 8.7,
+                        "color": "#3300FF"
+                    },
+                    {
+                        "y": 12.4,
+                        "color": "#6600FF"
+                    },
+                    {
+                        "y": 16.8,
+                        "color": "#9900FF"
+                    },
+                    {
+                        "y": 20.3,
+                        "color": "#CC00FF"
+                    },
+                    {
+                        "y": 22.9,
+                        "color": "#FF00CC"
+                    },
+                    {
+                        "y": 22.5,
+                        "color": "#FF0099"
+                    },
+                    {
+                        "y": 19.1,
+                        "color": "#FF0066"
+                    },
+                    {
+                        "y": 14.3,
+                        "color": "#FF0033"
+                    },
+                    {
+                        "y": 9.0,
+                        "color": "#FF0000"
+                    },
+                    {
+                        "y": 5.5,
+                        "color": "#FF0000"
+                    }
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 1,
+                        "y2": 0
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#0000FF"
+                        ],
+                        [
+                            1,
+                            "#FF0000"
+                        ]
+                    ]
+                },
+                "marker": {
+                    "enabled": true,
+                    "radius": 4
+                }
+            }
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "12px"
+            }
+        },
+        "plotOptions": {
+            "spline": {
+                "lineWidth": 3,
+                "states": {
+                    "hover": {
+                        "lineWidth": 4
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains univariate time-series data with 12 monthly observations. Temperature values (quantitative continuous variable) are paired with categorical month labels. Synthetic data follows northern hemisphere seasonal patterns with \u03bc=13.4\u00b0C and \u03c3=6.8\u00b0C, showing realistic summer peak (July: 22.9\u00b0C) and winter low (January: 4.2\u00b0C). The spline chart maximizes data-ink ratio by removing chart junk while maintaining temporal continuity. Gradient color encoding (blue\u2192red) leverages Cairo's affective perception principles to reinforce temperature semantics. Axis styling uses high-contrast colors (blue x-axis labels for categorical months, green y-axis for metric scale) following Tufte's fundamental design principles. The smooth curve emphasizes seasonal transition patterns better than column charts would for this continuous phenomenon."
+}

@@ -1,0 +1,119 @@
+{
+    "visualization_prompt": "Generate a column chart showing month-over-month revenue growth using synthetic data with a 27% Q3-Q4 increase pattern",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Social Media Marketing has grown revenue by 27% in past 3 months",
+            "style": {
+                "fontSize": "18px",
+                "color": "#2E4053",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct"
+            ],
+            "labels": {
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#616A6B"
+                }
+            },
+            "crosshair": true
+        },
+        "yAxis": {
+            "title": {
+                "text": ""
+            },
+            "labels": {
+                "format": "{value}k $",
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#616A6B"
+                }
+            },
+            "gridLineColor": "#EAEDED"
+        },
+        "series": [
+            {
+                "name": "Revenue",
+                "data": [
+                    [
+                        "Jan",
+                        185
+                    ],
+                    [
+                        "Feb",
+                        192
+                    ],
+                    [
+                        "Mar",
+                        208
+                    ],
+                    [
+                        "Apr",
+                        215
+                    ],
+                    [
+                        "May",
+                        221
+                    ],
+                    [
+                        "Jun",
+                        234
+                    ],
+                    [
+                        "Jul",
+                        226
+                    ],
+                    [
+                        "Aug",
+                        245
+                    ],
+                    [
+                        "Sep",
+                        278
+                    ],
+                    [
+                        "Oct",
+                        287
+                    ]
+                ],
+                "color": "#2E86C1",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "+{point.percentage:.0f}%",
+                    "color": "#2E4053"
+                }
+            }
+        ],
+        "plotOptions": {
+            "column": {
+                "pointPadding": 0.15,
+                "borderWidth": 0,
+                "grouping": false
+            }
+        },
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "headerFormat": "<b>{point.key}</b><br>",
+            "pointFormat": "Revenue: <b>${point.y}k</b>"
+        }
+    },
+    "visualization_explanation": "The dataset contains univariate time-series data tracking monthly revenue values (quantitative, ratio scale) across 10 sequential months. Synthetic data follows a base normal distribution (\u03bc=220k, \u03c3=35k) with injected Q3-Q4 growth (+27% July-October), maintaining financial plausibility through constrained volatility (max 8% MoM variance). The column chart maximizes data-ink ratio by eliminating gridlines and legend while using a single-tone color progression. Cairo's principles are applied through proportional column widths and direct value labels, with perceptual grouping enhanced by quarterly segmentation. Anchored by calculated growth rates (22.3% YTD, 27% last quarter), the visualization emphasizes campaign impact timing through temporal value clustering."
+}

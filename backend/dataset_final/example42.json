@@ -1,0 +1,76 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the title 'Fruit Sales'. The chart should have custom styling for axes and labels, with specific colors for the data series. The legend should be horizontally aligned to the X axis. The data series should include the names of fruits and their corresponding sales data.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "borderWidth": 1
+        },
+        "title": {
+            "text": "Fruit Sales",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Apples",
+                "Pears",
+                "Bananas",
+                "Oranges"
+            ],
+            "title": {
+                "text": "Fruits",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#777777",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#777777",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "legend": {
+            "borderWidth": 1,
+            "align": "center",
+            "verticalAlign": "bottom"
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    1,
+                    4,
+                    3,
+                    5
+                ],
+                "color": "#FFA500"
+            }
+        ],
+        "colors": [
+            "#FFA500",
+            "#FFD700",
+            "#FF6347",
+            "#FF4500"
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a column chart titled 'Fruit Sales'. The chart includes custom styling for the title, axes, and labels, with specified colors and font sizes. The X-axis categories represent different fruits, and the Y-axis represents sales. The legend is configured to be horizontally aligned at the bottom of the chart. The data series includes sales data for each fruit, with a custom color applied to the columns. Additional colors are provided for potential future series. The chart is designed to be visually appealing and informative, with clear labels and a well-organized layout."
+}

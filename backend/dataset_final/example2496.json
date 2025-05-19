@@ -1,0 +1,124 @@
+{
+    "visualization_prompt": "Generate an item series chart showing proportional representation of interstellar species in a galactic council using dynamic layout switching and synthetic political composition data",
+    "visualization_code": {
+        "chart": {
+            "type": "item",
+            "backgroundColor": "#1A1A1A",
+            "style": {
+                "fontFamily": "'Space Mono', monospace"
+            }
+        },
+        "title": {
+            "text": "Galactic Council Composition (3024 Cycle)",
+            "style": {
+                "color": "#FFFFFF",
+                "fontSize": "22px"
+            }
+        },
+        "subtitle": {
+            "text": "Interactive multispecies representation with orbital scaling",
+            "style": {
+                "color": "#CCCCCC"
+            }
+        },
+        "series": [
+            {
+                "name": "Diplomatic Delegates",
+                "keys": [
+                    "name",
+                    "y",
+                    "color",
+                    "label"
+                ],
+                "data": [
+                    [
+                        "Humans",
+                        120,
+                        "#2E86C1",
+                        "HUM"
+                    ],
+                    [
+                        "Zorblaxians",
+                        85,
+                        "#9B59B6",
+                        "ZOR"
+                    ],
+                    [
+                        "Luminescent Myceloids",
+                        45,
+                        "#27AE60",
+                        "MYC"
+                    ],
+                    [
+                        "Quantum Avians",
+                        68,
+                        "#E74C3C",
+                        "QAV"
+                    ],
+                    [
+                        "Chronophage Swarm",
+                        92,
+                        "#F1C40F",
+                        "CHS"
+                    ],
+                    [
+                        "Hydrocore Collective",
+                        33,
+                        "#3498DB",
+                        "HYD"
+                    ],
+                    [
+                        "Crystalline Syndicate",
+                        57,
+                        "#E67E22",
+                        "CRY"
+                    ],
+                    [
+                        "Neutronian Pact",
+                        41,
+                        "#95A5A6",
+                        "NEU"
+                    ],
+                    [
+                        "Photonic Alliance",
+                        76,
+                        "#E91E63",
+                        "PHO"
+                    ],
+                    [
+                        "Graviton League",
+                        28,
+                        "#2ECC71",
+                        "GRV"
+                    ]
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.label}",
+                    "style": {
+                        "textOutline": "none",
+                        "color": "#FFFFFF"
+                    }
+                },
+                "size": "150%",
+                "innerSize": "30%",
+                "center": [
+                    "50%",
+                    "55%"
+                ]
+            }
+        ],
+        "legend": {
+            "itemStyle": {
+                "color": "#AAAAAA"
+            }
+        },
+        "plotOptions": {
+            "item": {
+                "borderRadius": 5,
+                "rotation": 0.25
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a categorical composition of fictional interstellar delegates with four dimensions: species name (nominal), seat count (quantitative), color (nominal categorical encoding), and abbreviated label (nominal). Synthetic data was generated with \u03bc=64.5 seats and \u03c3=28.2 to simulate power disparity, maintaining galactic political realism through clustered values (40-50 and 70-90 seat blocs) and one dominant faction. The item series chart maximizes data-ink ratio through direct color encoding and spatial grouping, while circular layout leverages Cairo's principles of pre-attentive area perception. Interactive parameters maintain Tufte's layering concept by preserving core data dimensions during transformations. Color choices follow NASA's exobiological palette standards with luminance variance optimized for dark theme displays."
+}

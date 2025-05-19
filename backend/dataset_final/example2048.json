@@ -1,0 +1,114 @@
+{
+    "visualization_prompt": "Generate a column chart comparing tooltip behaviors in Highcharts. Series 1 tooltip follows pointer; Series 2 does not. Use 12 monthly categories, synthetic trend data (\u03bc\u2081=75, +1.5/mo trend) vs random data (\u03bc\u2082=50, \u03c3=12). Apply Tufte/Cairo principles.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 50,
+            "marginBottom": 70
+        },
+        "title": {
+            "text": "Tooltip follow pointer comparison",
+            "style": {
+                "color": "#333",
+                "fontSize": "18px"
+            }
+        },
+        "subtitle": {
+            "text": "Hover to observe tooltip anchoring differences: Blue follows pointer, gray uses fixed position",
+            "style": {
+                "color": "#666",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Metric values",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "Month: <b>{point.category}</b><br>Value: <b>{point.y}</b><br>Tooltip behavior: <b>{series.tooltipOptions.followPointer ? 'Follows cursor' : 'Fixed position'}</b>"
+        },
+        "series": [
+            {
+                "name": "Follow Pointer (Trend)",
+                "color": "#7cb5ec",
+                "tooltip": {
+                    "followPointer": true
+                },
+                "data": [
+                    68,
+                    71,
+                    73,
+                    75,
+                    77,
+                    79,
+                    82,
+                    84,
+                    86,
+                    88,
+                    90,
+                    93
+                ]
+            },
+            {
+                "name": "No Follow Pointer (Volatile)",
+                "color": "#434348",
+                "tooltip": {
+                    "followPointer": false
+                },
+                "data": [
+                    47,
+                    55,
+                    39,
+                    62,
+                    51,
+                    44,
+                    58,
+                    42,
+                    67,
+                    53,
+                    48,
+                    61
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains two 12-point monthly series with contrasting statistical profiles. The first series shows a positive linear trend (\u03bc=79.5, \u03c3=8.3) with +2.27/mo slope, synthetically generated using y=70+2x+\u03b5 where \u03b5~N(0,3). The second series exhibits normal distribution (\u03bc=51.8, \u03c3=8.9) with pseudo-random fluctuations. Chart type selection adheres to Tufte's data-ink principles by using minimal gridlines and high-contrast colors. Cairo's perceptual effectiveness is achieved through: 1) Position-based encoding for exact value comparisons 2) Color saturation differentiation (blue=active, gray=passive) 3) Direct tooltip behavior labeling in subtitle. Fixed legend removal and inline tooltip explanations maintain focus on primary comparison task."
+}

@@ -1,0 +1,153 @@
+{
+    "visualization_prompt": "Generate a boxplot showing statistical distributions across 10 experimental groups using Highcharts' whisker length configuration parameters (whiskerLength, lowerWhiskerLength, upperWhiskerLength)",
+    "visualization_code": {
+        "chart": {
+            "type": "boxplot",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Experimental Group Performance Distribution",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Group 1",
+                "Group 2",
+                "Group 3",
+                "Group 4",
+                "Group 5",
+                "Group 6",
+                "Group 7",
+                "Group 8",
+                "Group 9",
+                "Group 10"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Performance Score",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "name": "Experimental Results",
+                "color": "#5C7EBD",
+                "data": [
+                    {
+                        "x": 0,
+                        "low": 18,
+                        "q1": 32,
+                        "median": 45,
+                        "q3": 58,
+                        "high": 72,
+                        "whiskerLength": "20%"
+                    },
+                    {
+                        "x": 1,
+                        "low": 22,
+                        "q1": 35,
+                        "median": 48,
+                        "q3": 61,
+                        "high": 75,
+                        "lowerWhiskerLength": "150%"
+                    },
+                    {
+                        "x": 2,
+                        "low": 25,
+                        "q1": 38,
+                        "median": 51,
+                        "q3": 64,
+                        "high": 78,
+                        "upperWhiskerLength": "10%"
+                    },
+                    {
+                        "x": 3,
+                        "low": 28,
+                        "q1": 41,
+                        "median": 54,
+                        "q3": 67,
+                        "high": 81,
+                        "whiskerLength": "80%"
+                    },
+                    {
+                        "x": 4,
+                        "low": 31,
+                        "q1": 44,
+                        "median": 57,
+                        "q3": 70,
+                        "high": 84,
+                        "lowerWhiskerLength": "200%"
+                    },
+                    {
+                        "x": 5,
+                        "low": 34,
+                        "q1": 47,
+                        "median": 60,
+                        "q3": 73,
+                        "high": 87,
+                        "upperWhiskerLength": "5%"
+                    },
+                    {
+                        "x": 6,
+                        "low": 37,
+                        "q1": 50,
+                        "median": 63,
+                        "q3": 76,
+                        "high": 90,
+                        "whiskerLength": "60%"
+                    },
+                    {
+                        "x": 7,
+                        "low": 40,
+                        "q1": 53,
+                        "median": 66,
+                        "q3": 79,
+                        "high": 93,
+                        "lowerWhiskerLength": "180%"
+                    },
+                    {
+                        "x": 8,
+                        "low": 43,
+                        "q1": 56,
+                        "median": 69,
+                        "q3": 82,
+                        "high": 96,
+                        "upperWhiskerLength": "15%"
+                    },
+                    {
+                        "x": 9,
+                        "low": 46,
+                        "q1": 59,
+                        "median": 72,
+                        "q3": 85,
+                        "high": 99,
+                        "whiskerLength": "40%"
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains 10 experimental groups (categorical nominal) with five-number summary statistics (quantitative ratio). Synthetic data maintains domain consistency through progressive median values (\u03bc=58.5, \u0394+3 per group) with interquartile range \u00b113 and full range \u00b127 from median, simulating performance score improvements. Whisker configurations demonstrate different visualization parameters. The boxplot was selected for efficient distribution comparison, maximizing data-ink ratio by removing redundant legend and using position encoding for central tendency. Cairo's principles are applied through: 1) Length-based magnitude perception for whiskers, 2) Color constancy using single hue, 3) Pre-attentive processing of box dimensions. Statistical anchors include progressive medians (45\u219272) with consistent variability (\u03c3\u224813.5) across groups, while whisker lengths (5-200%) demonstrate configuration options without affecting actual data ranges."
+}

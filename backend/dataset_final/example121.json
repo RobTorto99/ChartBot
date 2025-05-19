@@ -1,0 +1,75 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a solid gauge chart. The chart should have a title 'Performance Gauge'. The axes and labels should be styled with specific colors and font sizes. The data series should include a single series named 'Performance' with a value of 63. Custom colors should be used for the chart elements. Additional configurations should include chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "solidgauge",
+            "backgroundColor": "#f0f0f0",
+            "marginTop": 50,
+            "marginBottom": 50
+        },
+        "title": {
+            "text": "Performance Gauge",
+            "style": {
+                "color": "#333333",
+                "fontSize": "24px"
+            }
+        },
+        "pane": {
+            "startAngle": -130,
+            "endAngle": 130,
+            "background": {
+                "innerRadius": "50%",
+                "outerRadius": "100%",
+                "shape": "arc",
+                "backgroundColor": "#e0e0e0"
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 100,
+            "lineWidth": 2,
+            "minorTicks": false,
+            "tickWidth": 2,
+            "tickAmount": 2,
+            "labels": {
+                "distance": "75%",
+                "align": "auto",
+                "style": {
+                    "fontSize": "20px",
+                    "color": "#555555"
+                }
+            },
+            "plotLines": [
+                {
+                    "value": 35,
+                    "zIndex": 5,
+                    "width": 2,
+                    "color": "#ff0000"
+                }
+            ]
+        },
+        "series": [
+            {
+                "name": "Performance",
+                "innerRadius": "50%",
+                "radius": "100%",
+                "dataLabels": {
+                    "borderWidth": 0,
+                    "verticalAlign": "bottom",
+                    "style": {
+                        "fontSize": "30px",
+                        "color": "#008000"
+                    },
+                    "y": 13
+                },
+                "data": [
+                    63
+                ]
+            }
+        ],
+        "legend": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a solid gauge chart with a title 'Performance Gauge'. The chart type is set to 'solidgauge', and it includes specific styling for the title, axes, and labels. The title is styled with a dark gray color and a font size of 24px. The y-axis labels are styled with a font size of 20px and a medium gray color. The chart includes a single data series named 'Performance' with a value of 63, styled with a green color and a font size of 30px. The chart also includes custom colors for the background and plot lines. Additional configurations include settings for chart margins, background color, and disabling the legend."
+}

@@ -1,0 +1,73 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a bullet chart with the following specifications: Chart type: bullet, Chart title: '2017 YTD', Axes and labels styling: Custom colors and font sizes for labels, axes, and titles, Data series: One series with data points and targets, Custom colors: Specific list of colors for plot bands, Additional configurations: Chart margins, background, legend, and tooltip settings.",
+    "visualization_code": {
+        "chart": {
+            "inverted": true,
+            "marginLeft": 135,
+            "marginTop": 40,
+            "type": "bullet",
+            "styledMode": true
+        },
+        "title": {
+            "text": "2017 YTD"
+        },
+        "legend": {
+            "enabled": false
+        },
+        "xAxis": {
+            "categories": [
+                "<span class=\"hc-cat-title\">Revenue</span><br/>U.S. $ (1,000s)"
+            ]
+        },
+        "yAxis": {
+            "plotBands": [
+                {
+                    "from": 0,
+                    "to": 150,
+                    "className": "plot-band-low"
+                },
+                {
+                    "from": 150,
+                    "to": 225,
+                    "className": "plot-band-medium"
+                },
+                {
+                    "from": 225,
+                    "to": 9000000000.0,
+                    "className": "plot-band-high"
+                }
+            ],
+            "title": null,
+            "gridLineWidth": 0
+        },
+        "plotOptions": {
+            "series": {
+                "pointPadding": 0.25,
+                "borderWidth": 0,
+                "targetOptions": {
+                    "width": "200%"
+                }
+            }
+        },
+        "series": [
+            {
+                "data": [
+                    {
+                        "y": 275,
+                        "target": 250
+                    }
+                ]
+            }
+        ],
+        "tooltip": {
+            "pointFormat": "<b>{point.y}</b> (with target at {point.target})"
+        },
+        "credits": {
+            "enabled": false
+        },
+        "exporting": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a bullet chart with specific settings. The chart is inverted with a left margin of 135 pixels and a top margin of 40 pixels. The chart type is set to 'bullet', and styledMode is enabled for CSS styling. The title of the chart is '2017 YTD', and the legend is disabled. The xAxis contains a single category labeled 'Revenue' with a custom HTML span for styling. The yAxis includes three plot bands with custom classes for low, medium, and high ranges, and the grid lines are disabled. The series data includes one point with a value of 275 and a target of 250. The tooltip displays the point's value and target. Credits and exporting are disabled."
+}

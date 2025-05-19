@@ -1,0 +1,82 @@
+{
+    "visualization_prompt": "Create a Highcharts Polar Chart with the following specifications: Chart type: Polar. Chart title: 'Highcharts Polar Chart'. Axes and labels styling: X-axis labels should be formatted to display degrees (e.g., '45\u00b0'). Data series: Three series - 'Column' with data [8, 7, 6, 5, 4, 3, 2, 1], 'Line' with data [1, 2, 3, 4, 5, 6, 7, 8], and 'Area' with data [1, 8, 2, 7, 3, 6, 4, 5]. Custom colors: Not specified. Additional configurations: Polar chart with a start angle of 0 and end angle of 360, X-axis tick interval of 45, and Y-axis minimum value of 0.",
+    "visualization_code": {
+        "chart": {
+            "polar": true
+        },
+        "title": {
+            "text": "Highcharts Polar Chart"
+        },
+        "pane": {
+            "startAngle": 0,
+            "endAngle": 360
+        },
+        "xAxis": {
+            "tickInterval": 45,
+            "min": 0,
+            "max": 360,
+            "labels": {
+                "formatter": "function () { return this.value + '\u00b0'; }"
+            }
+        },
+        "yAxis": {
+            "min": 0
+        },
+        "plotOptions": {
+            "series": {
+                "pointStart": 0,
+                "pointInterval": 45
+            },
+            "column": {
+                "pointPadding": 0,
+                "groupPadding": 0
+            }
+        },
+        "series": [
+            {
+                "type": "column",
+                "name": "Column",
+                "data": [
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                ],
+                "pointPlacement": "between"
+            },
+            {
+                "type": "line",
+                "name": "Line",
+                "data": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            },
+            {
+                "type": "area",
+                "name": "Area",
+                "data": [
+                    1,
+                    8,
+                    2,
+                    7,
+                    3,
+                    6,
+                    4,
+                    5
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a Polar Chart with a specific set of features. The chart is configured to be polar, meaning it will display data in a circular format. The title of the chart is set to 'Highcharts Polar Chart'. The X-axis is configured to display labels in degrees, with a tick interval of 45 degrees, ranging from 0 to 360 degrees. The Y-axis is set to start from 0. The chart includes three data series: 'Column', 'Line', and 'Area', each with its own set of data points. The 'Column' series uses a column type with point placement between ticks, while the 'Line' and 'Area' series use line and area types, respectively. The plot options ensure that the series start at 0 degrees and have an interval of 45 degrees. This configuration effectively visualizes the data in a polar format, making it suitable for circular data representation."
+}

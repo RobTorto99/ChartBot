@@ -1,0 +1,75 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a stock chart with the following specifications: Chart type: stock, Chart title: 'AAPL Stock Price', Axes and labels styling: Use 'IBM Plex Sans' font for all text elements with a font size of 14px for labels and titles, Data series: Include a single series named 'AAPL' with data fetched from 'https://demo-live-data.highcharts.com/aapl-c.json', Custom colors: Apply a green color (#06d001) to the Fibonacci Time Zones annotations when the 'Apply colors' button is clicked, Additional configurations: Set the range selector to display one range, disable ordinal x-axis, and include a subtitle 'With Fibonacci Time Zones'.",
+    "visualization_code": {
+        "chart": {
+            "type": "stock"
+        },
+        "rangeSelector": {
+            "selected": 1
+        },
+        "title": {
+            "text": "AAPL Stock Price",
+            "style": {
+                "fontFamily": "'IBM Plex Sans', sans-serif",
+                "fontSize": "14px"
+            }
+        },
+        "subtitle": {
+            "text": "With Fibonacci Time Zones",
+            "style": {
+                "fontFamily": "'IBM Plex Sans', sans-serif",
+                "fontSize": "14px"
+            }
+        },
+        "annotations": [
+            {
+                "type": "fibonacciTimeZones",
+                "controlPointOptions": {
+                    "visible": true
+                },
+                "typeOptions": {
+                    "points": [
+                        {
+                            "x": null
+                        },
+                        {
+                            "x": null
+                        }
+                    ],
+                    "line": {
+                        "fill": "#06d001",
+                        "stroke": "#06d001",
+                        "strokeWidth": 2
+                    }
+                }
+            }
+        ],
+        "xAxis": {
+            "ordinal": false,
+            "labels": {
+                "style": {
+                    "fontFamily": "'IBM Plex Sans', sans-serif",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "fontFamily": "'IBM Plex Sans', sans-serif",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "AAPL",
+                "data": [],
+                "tooltip": {
+                    "valueDecimals": 2
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a stock chart displaying the AAPL stock price. The chart includes a title and subtitle styled with the 'IBM Plex Sans' font and a font size of 14px. The x-axis and y-axis labels are also styled with the same font and size. The chart includes a single data series named 'AAPL' with data fetched from a specified URL. Additionally, Fibonacci Time Zones annotations are included, which can be updated with a green color when the 'Apply colors' button is clicked. The range selector is set to display one range, and the x-axis is configured to be non-ordinal. This setup ensures a clear and styled visualization of the stock data with interactive annotations."
+}

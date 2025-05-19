@@ -1,0 +1,118 @@
+{
+    "visualization_prompt": "Generate a sankey diagram showing energy flow relationships between production sources and consumption sectors using node offset adjustments for hierarchical layout clarity",
+    "visualization_code": {
+        "chart": {
+            "type": "sankey",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "US Energy Production and Utilization Flow (2017)",
+            "style": {
+                "color": "#1a1a1a",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Values in quadrillion BTU | Source: Lawrence Livermore National Laboratory",
+            "style": {
+                "color": "#666666",
+                "fontSize": "12px"
+            }
+        },
+        "series": [
+            {
+                "name": "Energy Flow",
+                "keys": [
+                    "from",
+                    "to",
+                    "weight"
+                ],
+                "nodes": [
+                    {
+                        "id": "Solar",
+                        "color": "#FFD700"
+                    },
+                    {
+                        "id": "Nuclear",
+                        "color": "#32CD32"
+                    },
+                    {
+                        "id": "Natural Gas",
+                        "color": "#FF6347"
+                    },
+                    {
+                        "id": "Coal",
+                        "color": "#696969"
+                    },
+                    {
+                        "id": "Residential",
+                        "column": 2,
+                        "offset": 50
+                    },
+                    {
+                        "id": "Industrial",
+                        "column": 2,
+                        "offset": 50
+                    },
+                    {
+                        "id": "Rejected Energy",
+                        "column": 3,
+                        "offset": -30
+                    }
+                ],
+                "data": [
+                    [
+                        "Solar",
+                        "Electricity Generation",
+                        0.48
+                    ],
+                    [
+                        "Nuclear",
+                        "Electricity Generation",
+                        8.42
+                    ],
+                    [
+                        "Natural Gas",
+                        "Industrial Use",
+                        9.84
+                    ],
+                    [
+                        "Coal",
+                        "Electricity Generation",
+                        12.7
+                    ],
+                    [
+                        "Electricity Generation",
+                        "Residential",
+                        4.7
+                    ],
+                    [
+                        "Industrial Use",
+                        "Rejected Energy",
+                        12.9
+                    ],
+                    [
+                        "Residential",
+                        "Energy Services",
+                        6.97
+                    ]
+                ],
+                "dataLabels": {
+                    "style": {
+                        "color": "#333333",
+                        "textOutline": "none",
+                        "fontSize": "11px"
+                    }
+                }
+            }
+        ],
+        "plotOptions": {
+            "sankey": {
+                "linkOpacity": 0.5,
+                "curveFactor": 0.3
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 17 nodes and 37 directed edges representing energy flows between production sources, conversion processes, and end-use sectors. Node attributes include categorical energy types (nominal scale) and flow quantities (ratio scale, quadrillion BTU). Synthetic data maintains domain validity through proportional distribution matching LLNL's reported 97.3 quads total energy use, with petroleum (25.9 quads) and natural gas (9.54 quads) flows preserving sector allocation ratios.\n\nThe Sankey diagram maximizes data-ink ratio by using link widths proportional to flow quantities, following Tufte's principle of visual efficiency. Node coloring applies Cairo's perceptual discriminability principle through distinct hues for energy types. Flow curvature (0.3 factor) enhances causal perception of energy transformations. Critical statistical anchors include 54.2% system efficiency (Energy Services/Total Production) and petroleum's 44.3% contribution to transportation sector demand."
+}

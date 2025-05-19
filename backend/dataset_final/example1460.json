@@ -1,0 +1,102 @@
+{
+    "visualization_prompt": "Generate a sankey diagram showing hierarchical breakdown of Apple Inc.'s total assets using flow-optimized node-link relationships",
+    "visualization_code": {
+        "chart": {
+            "type": "sankey",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Apple Inc. Asset Composition 9/29/2020",
+            "style": {
+                "color": "#1a1a1a",
+                "fontSize": "18px"
+            }
+        },
+        "subtitle": {
+            "text": "Source: Yahoo Finance (Values in Billion USD)",
+            "style": {
+                "color": "#666666"
+            }
+        },
+        "series": [
+            {
+                "name": "Asset Allocation",
+                "keys": [
+                    "from",
+                    "to",
+                    "weight"
+                ],
+                "data": [
+                    [
+                        "Total Assets",
+                        "Current Assets",
+                        143.71
+                    ],
+                    [
+                        "Total Assets",
+                        "Non-Current Assets",
+                        180.17
+                    ],
+                    [
+                        "Current Assets",
+                        "Cash & Equivalents",
+                        90.94
+                    ],
+                    [
+                        "Current Assets",
+                        "Accounts Receivable",
+                        37.44
+                    ],
+                    [
+                        "Current Assets",
+                        "Inventory",
+                        4.06
+                    ],
+                    [
+                        "Current Assets",
+                        "Other Current Assets",
+                        11.26
+                    ],
+                    [
+                        "Non-Current Assets",
+                        "Property & Equipment",
+                        36.76
+                    ],
+                    [
+                        "Non-Current Assets",
+                        "Long-Term Investments",
+                        100.88
+                    ],
+                    [
+                        "Non-Current Assets",
+                        "Other Non-Current Assets",
+                        42.52
+                    ]
+                ],
+                "type": "sankey",
+                "dataLabels": {
+                    "style": {
+                        "color": "#1a1a1a",
+                        "textOutline": "none"
+                    },
+                    "format": "{point.sum:.1f}B"
+                },
+                "nodeWidth": 15,
+                "color": "#A8A8A8",
+                "borderColor": "#1a1a1a",
+                "borderWidth": 1
+            }
+        ],
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "<b>{point.fromNode.name}</b> \u2192 <b>{point.toNode.name}</b><br>Allocation: {point.weight:.2f}B"
+        },
+        "accessibility": {
+            "enabled": true
+        },
+        "exporting": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset represents a 2-level hierarchical breakdown of financial assets with nominal measurement scale. Primary dimensions are asset categories (nodes) and their monetary relationships (edges). Synthetic data preserves actual Yahoo Finance proportions (Total Assets = 323.88B) while maintaining subcategory summation integrity (Current Assets: 143.71B = 90.94+37.44+4.06+11.26). The sankey diagram maximizes data-ink ratio by using minimal shading while maintaining clear flow differentiation. Perceptual grouping follows Cairo's principles of salience through proportional width encoding. Grayscale color scheme ensures accessibility while border contrast maintains node differentiation. Numerical precision follows financial reporting standards with single-decimal billion USD formatting."
+}

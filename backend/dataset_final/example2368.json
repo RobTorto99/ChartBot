@@ -1,0 +1,108 @@
+{
+    "visualization_prompt": "Generate a polar area chart showing categorical data distribution using gradient color encoding",
+    "visualization_code": {
+        "chart": {
+            "type": "area",
+            "polar": true,
+            "height": 500,
+            "backgroundColor": "#2c3e50",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Polar Area Chart",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Sector A",
+                "Sector B",
+                "Sector C",
+                "Sector D",
+                "Sector E"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#ffffff"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#ffffff"
+                }
+            },
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#ffffff"
+                }
+            }
+        },
+        "plotOptions": {
+            "area": {
+                "connectNulls": false,
+                "stacking": "normal",
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#0073e6"
+                        ],
+                        [
+                            1,
+                            "#39b54a"
+                        ]
+                    ]
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Performance Metrics",
+                "data": [
+                    {
+                        "name": "Sector A",
+                        "y": 1
+                    },
+                    {
+                        "name": "Sector B",
+                        "y": 1
+                    },
+                    {
+                        "name": "Sector C",
+                        "y": null
+                    },
+                    {
+                        "name": "Sector D",
+                        "y": 1
+                    },
+                    {
+                        "name": "Sector E",
+                        "y": 1
+                    }
+                ],
+                "type": "area"
+            }
+        ],
+        "legend": {
+            "itemStyle": {
+                "color": "#ffffff"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate categorical distribution across five sectors with one missing data point. Synthetic values maintain binary states (0/1) with intentional null handling. The polar projection emphasizes cyclical relationships while the gradient encoding creates luminance-based value perception. Chart configuration adheres to Tufte's principles by maximizing data-ink through monochromatic encoding and Cairo's preattentive processing through radial symmetry. Null value preservation (\u03bc=0.8, \u03c3=0.4) maintains data integrity while the polar format enhances pattern recognition in directional data. Technical implementation uses Highcharts' parametric stacking with angular axis binding for radial geometry transformation."
+}

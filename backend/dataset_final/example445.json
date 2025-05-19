@@ -1,0 +1,53 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a pie chart displaying the composition of air. The chart should have a title 'Air composition', with data series representing the percentage of Nitrogen, Oxygen, and Other gases. The chart should use specific colors for each data point, allow point selection, display data labels in the format '{point.name}: {y} %', and show the legend. The chart should also have a donut-like appearance with an inner size of 75%.",
+    "visualization_code": {
+        "colors": [
+            "#01BAF2",
+            "#71BF45",
+            "#FAA74B",
+            "#B37CD2"
+        ],
+        "chart": {
+            "type": "pie"
+        },
+        "title": {
+            "text": "Air composition"
+        },
+        "tooltip": {
+            "valueSuffix": "%"
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}: {y} %"
+                },
+                "showInLegend": true
+            }
+        },
+        "series": [
+            {
+                "name": "Percentage",
+                "colorByPoint": true,
+                "innerSize": "75%",
+                "data": [
+                    {
+                        "name": "Nitrogen",
+                        "y": 78
+                    },
+                    {
+                        "name": "Oxygen",
+                        "y": 20.9
+                    },
+                    {
+                        "name": "Other gases",
+                        "y": 1.1
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a pie chart to display the composition of air. The chart is titled 'Air composition' and includes three data series representing Nitrogen, Oxygen, and Other gases, each with their respective percentages. The chart uses specific colors for each data point, allowing for easy differentiation. The pie chart is configured to allow point selection, with a cursor pointer indicating interactivity. Data labels are enabled and formatted to show both the name of the gas and its percentage. The chart also includes a legend for better readability. Additionally, the pie chart has an inner size of 75%, giving it a donut-like appearance, which can help in emphasizing the distribution of the data."
+}

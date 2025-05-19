@@ -1,0 +1,134 @@
+{
+    "visualization_prompt": "Create a Highcharts chart with the following specifications: Chart type: pie and column. Chart title: 'Fruit Consumption'. Axes and labels styling: Use custom colors for labels, axes, and titles. Data series: Include two series, one for pie chart and one for column chart, with the same fruit data. Custom colors: Use the provided CSS variables for dark and light themes. Additional configurations: Set chart margins, background, and legend as per the provided CSS and JavaScript code.",
+    "visualization_code": {
+        "chart": {
+            "styledMode": true
+        },
+        "title": {
+            "text": "Fruit Consumption"
+        },
+        "xAxis": {
+            "width": "40%",
+            "type": "category"
+        },
+        "yAxis": {
+            "width": "40%",
+            "title": {
+                "text": "kg"
+            }
+        },
+        "series": [
+            {
+                "type": "pie",
+                "allowPointSelect": true,
+                "keys": [
+                    "name",
+                    "y",
+                    "selected",
+                    "sliced"
+                ],
+                "data": [
+                    [
+                        "Apples",
+                        29.9,
+                        false
+                    ],
+                    [
+                        "Pears",
+                        71.5,
+                        false
+                    ],
+                    [
+                        "Oranges",
+                        106.4,
+                        false
+                    ],
+                    [
+                        "Plums",
+                        129.2,
+                        false
+                    ],
+                    [
+                        "Bananas",
+                        144.0,
+                        false
+                    ],
+                    [
+                        "Peaches",
+                        176.0,
+                        false
+                    ],
+                    [
+                        "Prunes",
+                        135.6,
+                        true,
+                        true
+                    ],
+                    [
+                        "Avocados",
+                        148.5,
+                        false
+                    ]
+                ],
+                "showInLegend": true,
+                "center": [
+                    "75%",
+                    "50%"
+                ]
+            },
+            {
+                "type": "column",
+                "keys": [
+                    "name",
+                    "y"
+                ],
+                "data": [
+                    [
+                        "Apples",
+                        29.9,
+                        false
+                    ],
+                    [
+                        "Pears",
+                        71.5,
+                        false
+                    ],
+                    [
+                        "Oranges",
+                        106.4,
+                        false
+                    ],
+                    [
+                        "Plums",
+                        129.2,
+                        false
+                    ],
+                    [
+                        "Bananas",
+                        144.0,
+                        false
+                    ],
+                    [
+                        "Peaches",
+                        176.0,
+                        false
+                    ],
+                    [
+                        "Prunes",
+                        135.6,
+                        true,
+                        true
+                    ],
+                    [
+                        "Avocados",
+                        148.5,
+                        false
+                    ]
+                ],
+                "colorByPoint": true,
+                "showInLegend": false
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a dual-type chart with both a pie chart and a column chart. The chart is titled 'Fruit Consumption' and includes data for various fruits, displayed in both pie and column formats. The pie chart allows for point selection and is centered on the right side of the chart area. The column chart uses color variations based on the data points and does not show in the legend. The chart is styled to adapt to both light and dark themes using CSS variables, which are applied based on user preference or selected theme. The styling includes custom colors for data series and points, as well as neutral and highlight color variations for better visual distinction. The chart also supports a tri-state theme selector, allowing users to choose between system default, light, and dark themes, dynamically changing the chart's appearance accordingly."
+}

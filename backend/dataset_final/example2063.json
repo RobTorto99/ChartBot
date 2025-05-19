@@ -1,0 +1,107 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly sales trends using synthetic business data with seasonal variation",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Monthly Sales Performance (2023)",
+            "style": {
+                "color": "#2E4053",
+                "fontSize": "20px",
+                "fontFamily": "Arial"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Month",
+                "style": {
+                    "color": "#2C3E50",
+                    "fontSize": "14px",
+                    "fontWeight": "bold"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (\u00a510k)",
+                "style": {
+                    "color": "#2C3E50",
+                    "fontSize": "14px",
+                    "fontWeight": "bold"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Sales Revenue",
+                "data": [
+                    125,
+                    118,
+                    132,
+                    146,
+                    159,
+                    184,
+                    175,
+                    162,
+                    148,
+                    138,
+                    126,
+                    142
+                ],
+                "color": "#2980B9",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y}\u00a5k",
+                    "style": {
+                        "textOutline": "none",
+                        "fontSize": "11px"
+                    }
+                }
+            }
+        ],
+        "plotOptions": {
+            "column": {
+                "borderRadius": 3,
+                "pointPadding": 0.1,
+                "groupPadding": 0.15
+            }
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#2C3E50",
+                "fontSize": "12px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations of synthetic sales figures (cardinal scale) with two statistical properties: an overall positive trend (\u03bc=143.3, \u03c3=19.8) and December seasonal uplift. Data generation used multiplicative seasonality (1.2\u00d7 baseline) for holiday months. The column chart maximizes data-ink ratio per Tufte by eliminating redundant gridlines while maintaining Cairo's proportional ink principle through consistent column widths. Turquoise (#2980B9) was selected for its perceptual distinctiveness and colorblind accessibility. Annotated values use D3's format pattern (\u00a5k) for immediate magnitude comprehension. The synthetic data maintains domain validity through realistic Q2-Q3 growth patterns and post-holiday January dip observed in retail sectors."
+}

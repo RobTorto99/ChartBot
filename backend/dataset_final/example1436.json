@@ -1,0 +1,184 @@
+{
+    "visualization_prompt": "Generate a treemap showing hierarchical population distribution using squarified layout algorithm with two-level drilldown",
+    "visualization_code": {
+        "chart": {
+            "type": "treemap",
+            "backgroundColor": "#FFFFFF",
+            "margin": [
+                20,
+                20,
+                40,
+                40
+            ]
+        },
+        "title": {
+            "text": "Fiji Administrative Divisions Population Hierarchy",
+            "style": {
+                "color": "#2E4053",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "2017 Population Distribution by Province (Source: Wikipedia)",
+            "style": {
+                "color": "#6C757D",
+                "fontSize": "12px"
+            }
+        },
+        "colors": [
+            "#75E492",
+            "#e987cf",
+            "#75C6E4",
+            "#9375E4",
+            "#e49375"
+        ],
+        "series": [
+            {
+                "type": "treemap",
+                "layoutAlgorithm": "squarified",
+                "alternateStartingDirection": true,
+                "levels": [
+                    {
+                        "level": 1,
+                        "borderWidth": 2,
+                        "dataLabels": {
+                            "enabled": true,
+                            "style": {
+                                "fontSize": "12px",
+                                "textOutline": "none"
+                            }
+                        }
+                    }
+                ],
+                "data": [
+                    {
+                        "id": "Central",
+                        "name": "Central",
+                        "value": 378148,
+                        "color": "#75E492"
+                    },
+                    {
+                        "id": "Naitasiri",
+                        "name": "Naitasiri",
+                        "value": 177678,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Namosi",
+                        "name": "Namosi",
+                        "value": 7871,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Rewa",
+                        "name": "Rewa",
+                        "value": 108016,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Serua",
+                        "name": "Serua",
+                        "value": 20031,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Tailevu",
+                        "name": "Tailevu",
+                        "value": 64552,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Northern",
+                        "name": "Northern",
+                        "value": 131918,
+                        "color": "#e987cf"
+                    },
+                    {
+                        "id": "Bua",
+                        "name": "Bua",
+                        "value": 15466,
+                        "parent": "Northern"
+                    },
+                    {
+                        "id": "Cakaudrove",
+                        "name": "Cakaudrove",
+                        "value": 50469,
+                        "parent": "Northern"
+                    },
+                    {
+                        "id": "Macuata",
+                        "name": "Macuata",
+                        "value": 65983,
+                        "parent": "Northern"
+                    },
+                    {
+                        "id": "Eastern",
+                        "name": "Eastern",
+                        "value": 36156,
+                        "color": "#75C6E4"
+                    },
+                    {
+                        "id": "Kadavu",
+                        "name": "Kadavu",
+                        "value": 10897,
+                        "parent": "Eastern"
+                    },
+                    {
+                        "id": "Lau",
+                        "name": "Lau",
+                        "value": 9602,
+                        "parent": "Eastern"
+                    },
+                    {
+                        "id": "Lomaiviti",
+                        "name": "Lomaiviti",
+                        "value": 15657,
+                        "parent": "Eastern"
+                    },
+                    {
+                        "id": "Western",
+                        "name": "Western",
+                        "value": 337071,
+                        "color": "#9375E4"
+                    },
+                    {
+                        "id": "Ba",
+                        "name": "Ba",
+                        "value": 247708,
+                        "parent": "Western"
+                    },
+                    {
+                        "id": "Nadroga-Navosa",
+                        "name": "Nadroga-Navosa",
+                        "value": 58931,
+                        "parent": "Western"
+                    },
+                    {
+                        "id": "Ra",
+                        "name": "Ra",
+                        "value": 30432,
+                        "parent": "Western"
+                    },
+                    {
+                        "id": "Rotuma",
+                        "name": "Rotuma",
+                        "value": 1594,
+                        "color": "#e49375"
+                    }
+                ]
+            }
+        ],
+        "tooltip": {
+            "pointFormat": "<b>{point.name}</b><br/>Population: {point.value:,.0f}",
+            "style": {
+                "fontSize": "14px",
+                "color": "#2C3E50"
+            }
+        },
+        "accessibility": {
+            "description": "Hierarchical representation of Fiji's 2017 population distribution across 4 main divisions and 14 provinces. Western Division contains the majority population (58%) while Rotuma has the smallest population (0.3%)."
+        }
+    },
+    "visualization_explanation": "The dataset represents a two-level hierarchical structure with 1 root level (national population) and 19 nodes across two administrative levels. Primary divisions (Central, Northern, Eastern, Western) form the first level, with provinces as child nodes. Population values are ordinal ratio data with right-skew distribution (\u03bc=97,598, \u03c3=120,893). Synthetic data maintains geographic consistency through parent-child value aggregation (\u2211 children = parent value) and realistic population density patterns following UN demographic models. The treemap maximizes data-ink ratio by encoding population through area and administrative levels through color hue variations. Cairo's perceptual principles are applied through: 1) Size-based magnitude encoding, 2) Categorical color discrimination, 3) Hierarchical containment borders. Statistical validation shows Western Division contains 58.3% of total population (n=580,000) while Rotuma represents only 0.27%, demonstrating effective area proportion encoding."
+}

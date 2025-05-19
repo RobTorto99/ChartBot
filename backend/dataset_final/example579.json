@@ -1,0 +1,66 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Click categories to search'. The x-axis should have categories 'Foo', 'Bar', and 'Foobar', each of which should be clickable and linked to a specific URL. The y-axis should display data series with values [29.9, 71.5, 106.4]. The chart should have custom styling for axes and labels, including specific colors and font sizes. Additionally, the chart should have a white background and a legend positioned at the bottom.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Click categories to search",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Foo",
+                "Bar",
+                "Foobar"
+            ],
+            "labels": {
+                "format": "<a href=\"{link}\">{text}</a>",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Data Series",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4
+                ],
+                "color": "#0073e6"
+            }
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#555555",
+                "fontSize": "12px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a spline chart with a title 'Click categories to search'. The x-axis categories are 'Foo', 'Bar', and 'Foobar', each linked to specific URLs defined in the categoryLinks object. The y-axis displays a single data series with values [29.9, 71.5, 106.4]. The chart includes custom styling for titles, labels, and axes, with specified colors and font sizes. The background of the chart is set to white, and the legend is positioned at the bottom of the chart, centered and horizontally aligned. This configuration ensures a visually appealing and interactive chart that meets the specified requirements."
+}

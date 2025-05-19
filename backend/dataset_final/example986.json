@@ -1,0 +1,173 @@
+{
+    "visualization_prompt": "Generate a scatter plot showing linear progression of annotated data points using Highcharts annotation modules with collision avoidance",
+    "visualization_code": {
+        "chart": {
+            "type": "scatter",
+            "marginRight": 50,
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Linear Data Distribution with Annotations",
+            "style": {
+                "color": "#2F4F4F",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "min": 0,
+            "max": 2,
+            "labels": {
+                "style": {
+                    "color": "#696969",
+                    "fontWeight": "bold"
+                }
+            },
+            "title": {
+                "text": "Normalized Progress",
+                "style": {
+                    "color": "#808080"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sequential Index",
+                "style": {
+                    "color": "#808080"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#696969",
+                    "fontWeight": "bold"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Data Nodes",
+                "color": "#4682B4",
+                "data": [
+                    [
+                        0.0,
+                        0,
+                        "id0"
+                    ],
+                    [
+                        0.05,
+                        1,
+                        "id1"
+                    ],
+                    [
+                        0.1,
+                        2,
+                        "id2"
+                    ],
+                    [
+                        0.15,
+                        3,
+                        "id3"
+                    ],
+                    [
+                        0.2,
+                        4,
+                        "id4"
+                    ],
+                    [
+                        0.25,
+                        5,
+                        "id5"
+                    ],
+                    [
+                        0.3,
+                        6,
+                        "id6"
+                    ],
+                    [
+                        0.35,
+                        7,
+                        "id7"
+                    ],
+                    [
+                        0.4,
+                        8,
+                        "id8"
+                    ],
+                    [
+                        0.45,
+                        9,
+                        "id9"
+                    ],
+                    [
+                        0.5,
+                        10,
+                        "id10"
+                    ]
+                ]
+            }
+        ],
+        "annotations": [
+            {
+                "labels": [
+                    {
+                        "point": "id0",
+                        "text": "Node 0"
+                    },
+                    {
+                        "point": "id1",
+                        "text": "Node 1"
+                    },
+                    {
+                        "point": "id2",
+                        "text": "Node 2"
+                    },
+                    {
+                        "point": "id3",
+                        "text": "Node 3"
+                    },
+                    {
+                        "point": "id4",
+                        "text": "Node 4"
+                    },
+                    {
+                        "point": "id5",
+                        "text": "Node 5"
+                    },
+                    {
+                        "point": "id6",
+                        "text": "Node 6"
+                    },
+                    {
+                        "point": "id7",
+                        "text": "Node 7"
+                    },
+                    {
+                        "point": "id8",
+                        "text": "Node 8"
+                    },
+                    {
+                        "point": "id9",
+                        "text": "Node 9"
+                    },
+                    {
+                        "point": "id10",
+                        "text": "Node 10"
+                    }
+                ],
+                "labelOptions": {
+                    "backgroundColor": "rgba(255,255,255,0.9)",
+                    "borderRadius": 3,
+                    "allowOverlap": false
+                }
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#2F4F4F"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 11 3D points (x position, y index, node ID) demonstrating a perfect linear relationship (y = 20x). Synthetic data maintains mathematical precision with x-values spaced at 0.05 intervals and y-values incrementing by 1 unit. The scatter plot maximizes data-ink ratio by eliminating gridlines while maintaining coordinate precision through axis labeling. Color choices (steel blue markers, slate gray text) follow Cairo's principles of discriminability and semantic transparency. Annotation collision avoidance demonstrates information layer management, with label boxes using partial opacity (0.9 alpha) for visual hierarchy. Statistical integrity is maintained through exact linear progression (R\u00b2=1.0) while the truncated dataset (11 points vs original 40) preserves pattern recognition without overcrowding."
+}

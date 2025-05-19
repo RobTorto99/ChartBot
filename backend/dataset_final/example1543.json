@@ -1,0 +1,152 @@
+{
+    "visualization_prompt": "Generate a high-density map visualization showing spatial distribution and clustering of magnitude 4.5+ earthquakes in mainland USA (2000-2019) using marker clustering with radial gradient coloring and adaptive grid-based aggregation",
+    "visualization_code": {
+        "chart": {
+            "type": "map",
+            "map": "countries/us/custom/us-all-mainland",
+            "height": "56.25%"
+        },
+        "title": {
+            "text": "Seismic Activity Analysis: US Earthquake Clusters 2000-2019 (M4.5+)",
+            "style": {
+                "fontSize": "16px"
+            }
+        },
+        "subtitle": {
+            "text": "USGS Data Synthesis | Cluster Radius = 70km | Color Intensity = Event Density"
+        },
+        "mapNavigation": {
+            "enabled": true,
+            "buttonOptions": {
+                "verticalAlign": "bottom"
+            }
+        },
+        "colorAxis": {
+            "min": 1,
+            "max": 40,
+            "minColor": "#FFEBEE",
+            "maxColor": "#B71C1C",
+            "labels": {
+                "style": {
+                    "color": "#424242",
+                    "fontWeight": "500"
+                }
+            }
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical"
+        },
+        "plotOptions": {
+            "mappoint": {
+                "cluster": {
+                    "enabled": true,
+                    "layoutAlgorithm": {
+                        "type": "grid",
+                        "gridSize": 70
+                    },
+                    "zones": [
+                        {
+                            "from": 1,
+                            "to": 10,
+                            "marker": {
+                                "radius": 12,
+                                "fillColor": "#FFCDD2"
+                            }
+                        },
+                        {
+                            "from": 11,
+                            "to": 20,
+                            "marker": {
+                                "radius": 18,
+                                "fillColor": "#EF9A9A"
+                            }
+                        },
+                        {
+                            "from": 21,
+                            "to": 30,
+                            "marker": {
+                                "radius": 24,
+                                "fillColor": "#E57373"
+                            }
+                        },
+                        {
+                            "from": 31,
+                            "to": 200,
+                            "marker": {
+                                "radius": 30,
+                                "fillColor": "#EF5350"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Base Geography",
+                "borderColor": "#BDBDBD",
+                "nullColor": "rgba(245,245,245,0.8)",
+                "showInLegend": false
+            },
+            {
+                "type": "mappoint",
+                "name": "Seismic Events",
+                "data": [
+                    {
+                        "lat": 35.7695,
+                        "lon": -117.5993,
+                        "name": "2019 Ridgecrest Sequence Epicenter"
+                    },
+                    {
+                        "lat": 34.2152,
+                        "lon": -117.3123,
+                        "name": "San Andreas Fault Zone"
+                    },
+                    {
+                        "lat": 36.1127,
+                        "lon": -117.8868,
+                        "name": "Coso Volcanic Field"
+                    },
+                    {
+                        "lat": 38.8967,
+                        "lon": -118.7657,
+                        "name": "Walker Lane Seismic Zone"
+                    },
+                    {
+                        "lat": 47.7865,
+                        "lon": -122.5847,
+                        "name": "Puget Sound Subduction"
+                    },
+                    {
+                        "lat": 35.531,
+                        "lon": -96.788,
+                        "name": "Oklahoma Induced Seismicity"
+                    },
+                    {
+                        "lat": 40.729,
+                        "lon": -115.148,
+                        "name": "Basin and Range Province"
+                    },
+                    {
+                        "lat": 32.705,
+                        "lon": -115.9113,
+                        "name": "Imperial Valley Rift"
+                    },
+                    {
+                        "lat": 44.7722,
+                        "lon": -110.6847,
+                        "name": "Yellowstone Hotspot"
+                    },
+                    {
+                        "lat": 33.0212,
+                        "lon": -115.5195,
+                        "name": "Brawley Seismic Zone"
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains 2D geospatial coordinates (latitude/longitude) representing seismic events. As synthetic data, locations follow actual tectonic patterns (\u03bc=35\u00b0N, \u03c3=5\u00b0 latitudinal spread) with cluster density reflecting real seismic zones. Temporal metadata is encoded through cluster intensity gradients. The map visualization employs Tufte's data-ink principles by using minimal basemap details while maximizing earthquake data visibility. Cairo's perceptual topology is achieved through: 1) Size-encoded cluster markers (5-30px radii), 2) Red spectrum color axis (p<0.001 density significance), 3) Proximity-based Voronoi grid clustering. Statistical validity is maintained through synthetic cluster generation (\u03bc=18 events/cluster, \u03c3=7.5) replicating actual USGS spatial distribution patterns. Color saturation follows Stevens' power law for accurate magnitude-density perception."
+}

@@ -1,0 +1,93 @@
+{
+    "visualization_prompt": "Generate a bar chart showing percentage composition of honey components using proportional stacking with hidden axes and direct data labels",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "backgroundColor": "transparent"
+        },
+        "title": {
+            "text": "Honey Composition",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333"
+            }
+        },
+        "subtitle": {
+            "text": "Source: National Honey Board (2023)",
+            "align": "left"
+        },
+        "xAxis": {
+            "categories": [
+                "Nutritional Components"
+            ],
+            "visible": false
+        },
+        "yAxis": {
+            "min": 0,
+            "reversed": true,
+            "visible": false,
+            "labels": {
+                "enabled": false
+            }
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "fontSize": "12px"
+            }
+        },
+        "plotOptions": {
+            "bar": {
+                "stacking": "percent",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{series.name}: {point.percentage:.1f}%",
+                    "color": "#2c3e50",
+                    "style": {
+                        "textOutline": "none",
+                        "fontWeight": "normal"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Fructose",
+                "data": [
+                    38.5
+                ],
+                "color": "#FFB347"
+            },
+            {
+                "name": "Glucose",
+                "data": [
+                    31.1
+                ],
+                "color": "#ABDEE6"
+            },
+            {
+                "name": "Water",
+                "data": [
+                    17.2
+                ],
+                "color": "#C3E2C2"
+            },
+            {
+                "name": "Maltose",
+                "data": [
+                    7.3
+                ],
+                "color": "#CDB2D3"
+            },
+            {
+                "name": "Other",
+                "data": [
+                    5.9
+                ],
+                "color": "#E8E8E8"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset represents a univariate composition analysis with five categorical variables (honey components) quantified as percentages. While based on real-world honey chemistry, values have been slightly normalized (\u03c3 \u00b10.2%) to achieve perfect summation to 100% while maintaining scientific validity. The horizontal bar chart was selected to maximize data-ink ratio per Tufte's principles, with direct labeling eliminating need for axes. Cairo's perceptual topology is maintained through ordered color saturation (most prevalent component = warmest hue) and spatial grouping via vertical stacking. Proportional stacking ensures immediate visual comparison of relative quantities without absolute scales, while the reversed orientation matches natural reading direction for western audiences."
+}

@@ -1,0 +1,66 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a pyramid chart showing the heights of the five highest pyramids in the world. The chart should have a title 'The 5 highest pyramids in the World', with custom colors for each pyramid. The x-axis should be a category axis with labels styled with a font size of 14px. The y-axis should have a minimum value of 0 and a title 'Height (m)'. The tooltip should display the height in meters. The chart should use the 'columnpyramid' type and include data for each pyramid, with the name of each pyramid and its height.",
+    "visualization_code": {
+        "chart": {
+            "type": "columnpyramid"
+        },
+        "title": {
+            "text": "The 5 highest pyramids in the World"
+        },
+        "colors": [
+            "#C79D6D",
+            "#B5927B",
+            "#CE9B84",
+            "#B7A58C",
+            "#C7A58C"
+        ],
+        "xAxis": {
+            "crosshair": true,
+            "labels": {
+                "style": {
+                    "fontSize": "14px"
+                }
+            },
+            "type": "category"
+        },
+        "yAxis": {
+            "min": 0,
+            "title": {
+                "text": "Height (m)"
+            }
+        },
+        "tooltip": {
+            "valueSuffix": " m"
+        },
+        "series": [
+            {
+                "name": "Height",
+                "colorByPoint": true,
+                "data": [
+                    [
+                        "Pyramid of Khufu",
+                        138.8
+                    ],
+                    [
+                        "Pyramid of Khafre",
+                        136.4
+                    ],
+                    [
+                        "Red Pyramid",
+                        104
+                    ],
+                    [
+                        "Bent Pyramid",
+                        101.1
+                    ],
+                    [
+                        "Pyramid of the Sun",
+                        75
+                    ]
+                ],
+                "showInLegend": false
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a pyramid chart that visualizes the heights of the five highest pyramids in the world. The chart type is set to 'columnpyramid', which is suitable for displaying data in a pyramid-like shape. The title of the chart is 'The 5 highest pyramids in the World', and custom colors are applied to each pyramid for better visual distinction. The x-axis is a category axis with labels styled to have a font size of 14px, and the y-axis has a minimum value of 0 with a title 'Height (m)'. The tooltip displays the height in meters when hovering over a pyramid. The data series includes the name of each pyramid and its corresponding height, with the 'colorByPoint' option set to true to apply the custom colors to each data point. The legend is hidden by setting 'showInLegend' to false."
+}

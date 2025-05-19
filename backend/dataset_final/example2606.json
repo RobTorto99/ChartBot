@@ -1,0 +1,177 @@
+{
+    "visualization_prompt": "Generate a Sankey diagram using Highcharts to visualize energy flow distribution in an industrial compressor motor. Show hierarchical energy losses with \u226510 data links, using node-specific color coding and directional opacity.",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "sankey",
+                "backgroundColor": "#f7f7f7",
+                "marginRight": 80
+            },
+            "title": {
+                "text": "Industrial Compressor Motor Energy Distribution",
+                "style": {
+                    "fontSize": "18px",
+                    "color": "#2c3e50",
+                    "fontWeight": "bold"
+                }
+            },
+            "series": [
+                {
+                    "keys": [
+                        "from",
+                        "to",
+                        "weight"
+                    ],
+                    "data": [
+                        [
+                            "total",
+                            "mechanical_work",
+                            58
+                        ],
+                        [
+                            "total",
+                            "electrical_loss",
+                            22
+                        ],
+                        [
+                            "total",
+                            "thermal_loss",
+                            15
+                        ],
+                        [
+                            "total",
+                            "acoustic_loss",
+                            5
+                        ],
+                        [
+                            "electrical_loss",
+                            "resistance",
+                            12
+                        ],
+                        [
+                            "electrical_loss",
+                            "induction",
+                            8
+                        ],
+                        [
+                            "electrical_loss",
+                            "brush_contact",
+                            2
+                        ],
+                        [
+                            "thermal_loss",
+                            "housing",
+                            9
+                        ],
+                        [
+                            "thermal_loss",
+                            "cooling_fins",
+                            4
+                        ],
+                        [
+                            "thermal_loss",
+                            "bearings",
+                            2
+                        ],
+                        [
+                            "acoustic_loss",
+                            "vibration",
+                            3
+                        ],
+                        [
+                            "acoustic_loss",
+                            "air_turbulence",
+                            2
+                        ]
+                    ],
+                    "nodes": [
+                        {
+                            "id": "total",
+                            "name": "100 kWh Input",
+                            "color": "#7cb5ec"
+                        },
+                        {
+                            "id": "mechanical_work",
+                            "name": "Mechanical Output (\u03bc=58, \u03c3=4)",
+                            "color": "#90ed7d"
+                        },
+                        {
+                            "id": "electrical_loss",
+                            "name": "Electrical Losses",
+                            "color": "#f7a35c"
+                        },
+                        {
+                            "id": "thermal_loss",
+                            "name": "Thermal Dissipation",
+                            "color": "#ff6961"
+                        },
+                        {
+                            "id": "acoustic_loss",
+                            "name": "Noise Emissions",
+                            "color": "#8085e9"
+                        },
+                        {
+                            "id": "resistance",
+                            "name": "Copper Losses",
+                            "color": "#f7d06d"
+                        },
+                        {
+                            "id": "induction",
+                            "name": "Core Losses",
+                            "color": "#e4d354"
+                        },
+                        {
+                            "id": "brush_contact",
+                            "name": "Commutation Loss",
+                            "color": "#d3d3d3"
+                        },
+                        {
+                            "id": "housing",
+                            "name": "Frame Convection",
+                            "color": "#ffb347"
+                        },
+                        {
+                            "id": "cooling_fins",
+                            "name": "Radiative Cooling",
+                            "color": "#ff6961"
+                        },
+                        {
+                            "id": "bearings",
+                            "name": "Friction Heat",
+                            "color": "#cf6d4e"
+                        },
+                        {
+                            "id": "vibration",
+                            "name": "Structural Resonance",
+                            "color": "#7798BF"
+                        },
+                        {
+                            "id": "air_turbulence",
+                            "name": "Aerodynamic Noise",
+                            "color": "#a4b0be"
+                        }
+                    ],
+                    "type": "sankey",
+                    "name": "Energy Flow Paths",
+                    "linkOpacity": 0.5,
+                    "nodeWidth": 15,
+                    "showInLegend": true,
+                    "dataLabels": {
+                        "format": "{point.name}",
+                        "style": {
+                            "textOutline": "none",
+                            "fontSize": "12px"
+                        }
+                    }
+                }
+            ],
+            "plotOptions": {
+                "sankey": {
+                    "colorByPoint": false,
+                    "curveFactor": 0.33
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 13 nodes and 12 directional links representing energy conversion processes. Synthetic data follows industrial motor efficiency studies (\u03bc=58% useful output, \u03c3=4%) with poisson-distributed secondary losses. Node weights maintain conservation of energy through three hierarchical levels. Color coding follows Cairo's preattentive principles: green for productive output, warm hues for thermal paths, cool tones for electrical losses. The vertical layout maximizes Tufte's data-ink ratio by eliminating gridlines while using tapered link opacity (\u03b1=0.5) to emphasize flow directionality. Statistical anchors include normal distribution in primary conversion (Z=1.96 for mechanical work) and exponential decay in tertiary losses."
+}

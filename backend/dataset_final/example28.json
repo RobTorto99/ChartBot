@@ -1,0 +1,143 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a treemap chart displaying Norwegian regions and counties. The chart should have a title 'Norwegian regions and counties' aligned to the left. The axes and labels should be styled with specific colors, font sizes, and styles. The data series should include the name of each region and its data, formatted appropriately for Highcharts. Custom colors should be applied to each region. Additional configurations should include chart margins, background, legend, and a tooltip that displays the area of each region in square kilometers.",
+    "visualization_code": {
+        "chart": {
+            "type": "treemap"
+        },
+        "plotOptions": {
+            "treemap": {
+                "layoutAlgorithm": "stripes",
+                "alternateStartingDirection": true,
+                "levels": [
+                    {
+                        "level": 1,
+                        "layoutAlgorithm": "sliceAndDice",
+                        "dataLabels": {
+                            "enabled": true,
+                            "align": "left",
+                            "verticalAlign": "top",
+                            "style": {
+                                "fontSize": "15px",
+                                "fontWeight": "bold"
+                            }
+                        }
+                    }
+                ]
+            },
+            "treegraph": {
+                "marker": {
+                    "symbol": "rect",
+                    "width": "25%"
+                }
+            }
+        },
+        "series": [
+            {
+                "data": [
+                    {
+                        "id": "root",
+                        "name": "Norway"
+                    },
+                    {
+                        "id": "A",
+                        "name": "Nord-Norge",
+                        "color": "#50FFB1",
+                        "parent": "root"
+                    },
+                    {
+                        "id": "B",
+                        "name": "Tr\u00f8ndelag",
+                        "color": "#F5FBEF",
+                        "parent": "root"
+                    },
+                    {
+                        "id": "C",
+                        "name": "Vestlandet",
+                        "color": "#A09FA8",
+                        "parent": "root"
+                    },
+                    {
+                        "id": "D",
+                        "name": "\u00d8stlandet",
+                        "color": "#E7ECEF",
+                        "parent": "root"
+                    },
+                    {
+                        "id": "E",
+                        "name": "S\u00f8rlandet",
+                        "color": "#A9B4C2",
+                        "parent": "root"
+                    },
+                    {
+                        "name": "Troms og Finnmark",
+                        "parent": "A",
+                        "value": 70923
+                    },
+                    {
+                        "name": "Nordland",
+                        "parent": "A",
+                        "value": 35759
+                    },
+                    {
+                        "name": "Tr\u00f8ndelag",
+                        "parent": "B",
+                        "value": 39494
+                    },
+                    {
+                        "name": "M\u00f8re og Romsdal",
+                        "parent": "C",
+                        "value": 13840
+                    },
+                    {
+                        "name": "Vestland",
+                        "parent": "C",
+                        "value": 31969
+                    },
+                    {
+                        "name": "Rogaland",
+                        "parent": "C",
+                        "value": 8576
+                    },
+                    {
+                        "name": "Viken",
+                        "parent": "D",
+                        "value": 22768
+                    },
+                    {
+                        "name": "Innlandet",
+                        "parent": "D",
+                        "value": 49391
+                    },
+                    {
+                        "name": "Oslo",
+                        "parent": "D",
+                        "value": 454
+                    },
+                    {
+                        "name": "Vestfold og Telemark",
+                        "parent": "D",
+                        "value": 15925
+                    },
+                    {
+                        "name": "Agder",
+                        "parent": "E",
+                        "value": 14981
+                    }
+                ]
+            }
+        ],
+        "title": {
+            "text": "Norwegian regions and counties",
+            "align": "left"
+        },
+        "subtitle": {
+            "text": "Source: <a href=\"https://snl.no/Norge\" target=\"_blank\">SNL</a>",
+            "align": "left"
+        },
+        "tooltip": {
+            "useHTML": true,
+            "pointFormat": "The area of <b>{point.name}</b> is <b>{point.value} km<sup>2</sup></b>"
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a treemap chart that visualizes the regions and counties of Norway. The chart type is set to 'treemap', and the title 'Norwegian regions and counties' is aligned to the left. The axes and labels are styled with specific font sizes and weights, ensuring clear and readable text. The data series includes the name of each region and its corresponding data, formatted appropriately for Highcharts. Custom colors are applied to each region, enhancing the visual distinction between different areas. Additional configurations include chart margins, background, and a legend. The tooltip is customized to display the area of each region in square kilometers, providing useful information when hovering over the chart elements."
+}

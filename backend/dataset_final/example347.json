@@ -1,0 +1,304 @@
+{
+    "visualization_prompt": "Create a Highcharts Dependency Wheel chart with the title 'Highcharts Dependency Wheel'. The chart should display weighted links between different points, representing data flow relationships. The axes and labels should be styled with specific colors and font sizes. The data series should include the name of each series and its data, formatted appropriately for Highcharts. Custom colors should be applied to the chart, and additional configurations such as chart margins, background, and legend should be set.",
+    "visualization_code": {
+        "title": {
+            "text": "Highcharts Dependency Wheel"
+        },
+        "accessibility": {
+            "point": {
+                "valueDescriptionFormat": "{index}. From {point.from} to {point.to}: {point.weight}."
+            }
+        },
+        "series": [
+            {
+                "keys": [
+                    "from",
+                    "to",
+                    "weight"
+                ],
+                "data": [
+                    [
+                        "Brazil",
+                        "Portugal",
+                        5
+                    ],
+                    [
+                        "Brazil",
+                        "France",
+                        1
+                    ],
+                    [
+                        "Brazil",
+                        "Spain",
+                        1
+                    ],
+                    [
+                        "Brazil",
+                        "England",
+                        1
+                    ],
+                    [
+                        "Canada",
+                        "Portugal",
+                        1
+                    ],
+                    [
+                        "Canada",
+                        "France",
+                        5
+                    ],
+                    [
+                        "Canada",
+                        "England",
+                        1
+                    ],
+                    [
+                        "Mexico",
+                        "Portugal",
+                        1
+                    ],
+                    [
+                        "Mexico",
+                        "France",
+                        1
+                    ],
+                    [
+                        "Mexico",
+                        "Spain",
+                        5
+                    ],
+                    [
+                        "Mexico",
+                        "England",
+                        1
+                    ],
+                    [
+                        "USA",
+                        "Portugal",
+                        1
+                    ],
+                    [
+                        "USA",
+                        "France",
+                        1
+                    ],
+                    [
+                        "USA",
+                        "Spain",
+                        1
+                    ],
+                    [
+                        "USA",
+                        "England",
+                        5
+                    ],
+                    [
+                        "Portugal",
+                        "Angola",
+                        2
+                    ],
+                    [
+                        "Portugal",
+                        "Senegal",
+                        1
+                    ],
+                    [
+                        "Portugal",
+                        "Morocco",
+                        1
+                    ],
+                    [
+                        "Portugal",
+                        "South Africa",
+                        3
+                    ],
+                    [
+                        "France",
+                        "Angola",
+                        1
+                    ],
+                    [
+                        "France",
+                        "Senegal",
+                        3
+                    ],
+                    [
+                        "France",
+                        "Mali",
+                        3
+                    ],
+                    [
+                        "France",
+                        "Morocco",
+                        3
+                    ],
+                    [
+                        "France",
+                        "South Africa",
+                        1
+                    ],
+                    [
+                        "Spain",
+                        "Senegal",
+                        1
+                    ],
+                    [
+                        "Spain",
+                        "Morocco",
+                        3
+                    ],
+                    [
+                        "Spain",
+                        "South Africa",
+                        1
+                    ],
+                    [
+                        "England",
+                        "Angola",
+                        1
+                    ],
+                    [
+                        "England",
+                        "Senegal",
+                        1
+                    ],
+                    [
+                        "England",
+                        "Morocco",
+                        2
+                    ],
+                    [
+                        "England",
+                        "South Africa",
+                        7
+                    ],
+                    [
+                        "South Africa",
+                        "China",
+                        5
+                    ],
+                    [
+                        "South Africa",
+                        "India",
+                        1
+                    ],
+                    [
+                        "South Africa",
+                        "Japan",
+                        3
+                    ],
+                    [
+                        "Angola",
+                        "China",
+                        5
+                    ],
+                    [
+                        "Angola",
+                        "India",
+                        1
+                    ],
+                    [
+                        "Angola",
+                        "Japan",
+                        3
+                    ],
+                    [
+                        "Senegal",
+                        "China",
+                        5
+                    ],
+                    [
+                        "Senegal",
+                        "India",
+                        1
+                    ],
+                    [
+                        "Senegal",
+                        "Japan",
+                        3
+                    ],
+                    [
+                        "Mali",
+                        "China",
+                        5
+                    ],
+                    [
+                        "Mali",
+                        "India",
+                        1
+                    ],
+                    [
+                        "Mali",
+                        "Japan",
+                        3
+                    ],
+                    [
+                        "Morocco",
+                        "China",
+                        5
+                    ],
+                    [
+                        "Morocco",
+                        "India",
+                        1
+                    ],
+                    [
+                        "Morocco",
+                        "Japan",
+                        3
+                    ],
+                    [
+                        "Japan",
+                        "Brazil",
+                        1
+                    ]
+                ],
+                "type": "dependencywheel",
+                "name": "Dependency wheel series",
+                "dataLabels": {
+                    "color": "#333",
+                    "style": {
+                        "textOutline": "none"
+                    },
+                    "textPath": {
+                        "enabled": true
+                    },
+                    "distance": 10
+                },
+                "size": "95%"
+            }
+        ],
+        "chart": {
+            "backgroundColor": "#f8f8f8",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical"
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a Dependency Wheel chart with the title 'Highcharts Dependency Wheel'. This chart type is particularly effective for visualizing data flow and relationships between different points. The chart includes a series of weighted links between points, with each link representing a specific data flow. The axes and labels are styled with a dark gray color (#333) and a font size of 12px, ensuring readability. The chart background is set to a light gray (#f8f8f8) with margins of 50 pixels on all sides. The legend is enabled and positioned to the right, vertically aligned in the middle, and laid out vertically for better visibility. The data series includes multiple points with their respective weights, formatted appropriately for Highcharts. Overall, this configuration provides a clear and visually appealing way to represent complex data relationships."
+}

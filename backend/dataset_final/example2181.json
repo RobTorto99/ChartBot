@@ -1,0 +1,65 @@
+{
+    "visualization_prompt": "Generate a dotplot showing monthly inventory transactions using categorical stacking",
+    "visualization_code": {
+        "chart": {
+            "type": "dotplot",
+            "marginTop": 50,
+            "marginRight": 100,
+            "marginBottom": 50,
+            "marginLeft": 100,
+            "backgroundColor": "#f9f9f9"
+        },
+        "title": {
+            "text": "Highcharts dotplot chart"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar"
+            ],
+            "labels": {
+                "style": {
+                    "fontFamily": "Arial",
+                    "fontSize": "12px",
+                    "color": "#333333"
+                }
+            }
+        },
+        "yAxis": {
+            "visible": false
+        },
+        "plotOptions": {
+            "series": {
+                "stacking": "normal",
+                "slotsPerBar": 1
+            }
+        },
+        "series": [
+            {
+                "name": "Items bought",
+                "data": [
+                    5,
+                    3,
+                    4
+                ],
+                "color": "green"
+            },
+            {
+                "name": "Items sold",
+                "data": [
+                    0,
+                    2,
+                    1
+                ],
+                "color": "red"
+            }
+        ],
+        "legend": {
+            "align": "center",
+            "verticalAlign": "bottom",
+            "layout": "horizontal"
+        }
+    },
+    "visualization_explanation": "This dotplot visualizes categorical inventory data across three months. The dataset contains two discrete numerical series (purchase/sale counts) against three categorical time periods. Synthetic data maintains integer counts with logical purchase > sale relationship. The dotplot format maximizes data-ink ratio by eliminating redundant axes while Cairo's principles ensure immediate recognition of transaction disparities through position encoding. Stacked dots (\u03bc=2.33 purchases, \u03bc=1 sale) create intuitive magnitude comparison without numerical labels. Color choice follows chromatic perceptual salience for fast positive/negative differentiation."
+}

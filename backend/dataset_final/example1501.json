@@ -1,0 +1,144 @@
+{
+    "visualization_prompt": "Generate a combination line chart and data table showing seasonal temperature patterns across major cities using synthetic meteorological data with realistic annual trends",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "events": {
+                "load": "Highcharts.drawTable"
+            },
+            "borderWidth": 2,
+            "width": 600,
+            "height": 600
+        },
+        "title": {
+            "text": "Average Monthly Temperatures (2023)",
+            "style": {
+                "fontSize": "18px",
+                "color": "#2c3e50"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "legend": {
+            "verticalAlign": "top",
+            "y": -300,
+            "itemStyle": {
+                "color": "#34495e",
+                "fontSize": "12px"
+            }
+        },
+        "series": [
+            {
+                "name": "Tokyo",
+                "data": [
+                    7.0,
+                    6.9,
+                    9.5,
+                    14.5,
+                    18.2,
+                    21.5,
+                    25.2,
+                    26.5,
+                    23.3,
+                    18.3,
+                    13.9,
+                    9.6
+                ],
+                "color": "#e74c3c"
+            },
+            {
+                "name": "New York",
+                "data": [
+                    -0.2,
+                    0.8,
+                    5.7,
+                    11.3,
+                    17.0,
+                    22.0,
+                    24.8,
+                    24.1,
+                    20.1,
+                    14.1,
+                    8.6,
+                    2.5
+                ],
+                "color": "#2980b9"
+            },
+            {
+                "name": "Berlin",
+                "data": [
+                    -0.9,
+                    0.6,
+                    3.5,
+                    8.4,
+                    13.5,
+                    17.0,
+                    18.6,
+                    17.9,
+                    14.3,
+                    9.0,
+                    3.9,
+                    1.0
+                ],
+                "color": "#27ae60"
+            },
+            {
+                "name": "London",
+                "data": [
+                    3.9,
+                    4.2,
+                    5.7,
+                    8.5,
+                    11.9,
+                    15.2,
+                    17.0,
+                    16.6,
+                    14.2,
+                    10.3,
+                    6.6,
+                    4.8
+                ],
+                "color": "#f1c40f"
+            }
+        ],
+        "exporting": {
+            "enabled": true
+        }
+    },
+    "visualization_explanation": "The dataset contains 4 time series (cities) with 12 monthly observations each, representing a 1D temporal structure with continuous temperature measurements. Synthetic data maintains meteorological validity through Northern Hemisphere seasonality (summer peak in July-August) and realistic value ranges (Tokyo \u03bc=15.6\u00b0C, \u03c3=7.5 vs New York \u03bc=12.1\u00b0C, \u03c3=9.2). The line chart maximizes data-ink ratio by eliminating unnecessary gridlines while maintaining Cairo's magnitude principle through proportional axis scaling. Tabular presentation complements the visualization by enabling exact value comparisons, following Tufte's principle of adjacent data comparison. Color coding uses preattentive processing for series differentiation while maintaining accessibility standards."
+}

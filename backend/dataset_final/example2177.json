@@ -1,0 +1,198 @@
+{
+    "visualization_prompt": "Generate a Highcharts organization chart showing hierarchical relationships in the Germanic language family using multi-level color coding and hanging node layouts",
+    "visualization_code": {
+        "chart": {
+            "type": "organization",
+            "inverted": true,
+            "height": 1500
+        },
+        "title": {
+            "text": "The Germanic Language Tree",
+            "style": {
+                "fontSize": "20px",
+                "color": "#2c3e50"
+            }
+        },
+        "series": [
+            {
+                "name": "Language Relationships",
+                "keys": [
+                    "from",
+                    "to"
+                ],
+                "nodeWidth": 33,
+                "levels": [
+                    {
+                        "level": 0,
+                        "color": "#dedede",
+                        "height": 25
+                    },
+                    {
+                        "level": 1,
+                        "color": "#dedede",
+                        "height": 25
+                    },
+                    {
+                        "level": 2,
+                        "color": "#00bcd4",
+                        "dataLabels": {
+                            "color": "white"
+                        }
+                    },
+                    {
+                        "level": 3,
+                        "color": "#ff9800"
+                    },
+                    {
+                        "level": 4,
+                        "color": "#4caf50"
+                    }
+                ],
+                "nodes": [
+                    {
+                        "id": "Proto-Germanic",
+                        "level": 0
+                    },
+                    {
+                        "id": "North Germanic",
+                        "level": 1,
+                        "layout": "hanging"
+                    },
+                    {
+                        "id": "West Germanic",
+                        "level": 1,
+                        "layout": "hanging"
+                    },
+                    {
+                        "id": "East Germanic",
+                        "level": 1,
+                        "layout": "hanging"
+                    },
+                    {
+                        "id": "West Scandinavian",
+                        "level": 2
+                    },
+                    {
+                        "id": "East Scandinavian",
+                        "level": 2
+                    },
+                    {
+                        "id": "Low German",
+                        "level": 2
+                    },
+                    {
+                        "id": "High German",
+                        "level": 2
+                    },
+                    {
+                        "id": "Low Franconian",
+                        "level": 2
+                    },
+                    {
+                        "id": "Anglo-Frisian",
+                        "level": 2
+                    },
+                    {
+                        "id": "Gothic",
+                        "level": 3
+                    },
+                    {
+                        "id": "Burgundian",
+                        "level": 3
+                    },
+                    {
+                        "id": "Vandalic",
+                        "level": 3
+                    },
+                    {
+                        "id": "Norwegian",
+                        "level": 4
+                    },
+                    {
+                        "id": "Icelandic",
+                        "level": 4
+                    },
+                    {
+                        "id": "Dutch",
+                        "level": 4
+                    },
+                    {
+                        "id": "English",
+                        "level": 4
+                    }
+                ],
+                "data": [
+                    [
+                        "Proto-Germanic",
+                        "North Germanic"
+                    ],
+                    [
+                        "Proto-Germanic",
+                        "West Germanic"
+                    ],
+                    [
+                        "Proto-Germanic",
+                        "East Germanic"
+                    ],
+                    [
+                        "North Germanic",
+                        "West Scandinavian"
+                    ],
+                    [
+                        "North Germanic",
+                        "East Scandinavian"
+                    ],
+                    [
+                        "West Germanic",
+                        "Low German"
+                    ],
+                    [
+                        "West Germanic",
+                        "High German"
+                    ],
+                    [
+                        "West Germanic",
+                        "Low Franconian"
+                    ],
+                    [
+                        "West Germanic",
+                        "Anglo-Frisian"
+                    ],
+                    [
+                        "East Germanic",
+                        "Gothic"
+                    ],
+                    [
+                        "East Germanic",
+                        "Burgundian"
+                    ],
+                    [
+                        "East Germanic",
+                        "Vandalic"
+                    ],
+                    [
+                        "West Scandinavian",
+                        "Norwegian"
+                    ],
+                    [
+                        "West Scandinavian",
+                        "Icelandic"
+                    ],
+                    [
+                        "Low Franconian",
+                        "Dutch"
+                    ],
+                    [
+                        "Anglo-Frisian",
+                        "English"
+                    ]
+                ]
+            }
+        ],
+        "tooltip": {
+            "outside": true,
+            "formatter": "function() { return '<b>' + this.point.from + '</b> \u2192 ' + this.point.to; }"
+        }
+    },
+    "visualization_explanation": "The dataset represents a hierarchical structure with 5 levels of linguistic relationships. Node levels correspond to language evolution chronology (0=Proto-Germanic, 4=Modern languages). Synthetic relationships follow historical linguistics consensus with color encoding showing temporal layers (gray roots \u2192 teal branches \u2192 modern orange/green leaves). The organization chart maximizes data-ink ratio by using minimal connecting lines and position encoding for relationships. Color progression follows Cairo's principle of perceptual ordering with increasing saturation. Node distribution shows branching factor (\u03bc=3.2 children/node) with hanging layout preventing overlap. Level 4 languages show geographic distribution patterns (blue=Scandinavian, orange=West Germanic, green=Global languages)."
+}

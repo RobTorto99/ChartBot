@@ -1,0 +1,74 @@
+{
+    "visualization_prompt": "Create a Highcharts dotplot chart with the following specifications: Chart type: dotplot, Chart title: 'Highcharts dotplot chart', Axes and labels styling: X-axis labels should be in 'Arial' font, size 12, and color '#333333'. Y-axis should be hidden. Data series: Two series, 'Items bought' with data [5, 3, 4] and 'Items sold' with data [0, 2, 1]. Custom colors: 'Items bought' in green and 'Items sold' in red. Additional configurations: Chart margins set to 50px top, 100px right, 50px bottom, and 100px left. Background color of the chart set to '#f9f9f9'. Legend positioned at the bottom of the chart.",
+    "visualization_code": {
+        "chart": {
+            "type": "dotplot",
+            "marginTop": 50,
+            "marginRight": 100,
+            "marginBottom": 50,
+            "marginLeft": 100,
+            "backgroundColor": "#f9f9f9"
+        },
+        "title": {
+            "text": "Highcharts dotplot chart"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "fontFamily": "Arial",
+                    "fontSize": "12px",
+                    "color": "#333333"
+                }
+            }
+        },
+        "yAxis": {
+            "visible": false
+        },
+        "plotOptions": {
+            "series": {
+                "slotsPerBar": 1,
+                "stacking": "normal"
+            }
+        },
+        "series": [
+            {
+                "name": "Items bought",
+                "data": [
+                    5,
+                    3,
+                    4
+                ],
+                "color": "green"
+            },
+            {
+                "name": "Items sold",
+                "data": [
+                    0,
+                    2,
+                    1
+                ],
+                "color": "red"
+            }
+        ],
+        "legend": {
+            "align": "center",
+            "verticalAlign": "bottom",
+            "layout": "horizontal"
+        }
+    },
+    "visualization_explanation": "The provided Highcharts configuration sets up a dotplot chart with specific customizations. The chart type is set to 'dotplot', and the title is 'Highcharts dotplot chart'. The X-axis labels are styled with 'Arial' font, size 12, and color '#333333'. The Y-axis is hidden to focus solely on the X-axis categories. The data series include 'Items bought' with data [5, 3, 4] and 'Items sold' with data [0, 2, 1], each with custom colors (green for 'Items bought' and red for 'Items sold'). Additional configurations include setting the chart margins to 50px top, 100px right, 50px bottom, and 100px left, and a background color of '#f9f9f9'. The legend is positioned at the bottom of the chart, centered and horizontally laid out."
+}

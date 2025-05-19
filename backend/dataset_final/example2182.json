@@ -1,0 +1,118 @@
+{
+    "visualization_prompt": "Generate an organization chart showing hierarchical corporate structure using Highcharts' inverted layout with borderless nodes and embedded images",
+    "visualization_code": {
+        "chart": {
+            "type": "organization",
+            "inverted": true,
+            "height": 600,
+            "borderColor": "none"
+        },
+        "title": {
+            "text": "Highcharts Org Chart with Borderless Design",
+            "style": {
+                "fontSize": "18px",
+                "color": "#2f2f2f"
+            }
+        },
+        "series": [
+            {
+                "type": "organization",
+                "name": "Corporate Structure",
+                "keys": [
+                    "from",
+                    "to"
+                ],
+                "data": [
+                    [
+                        "Shareholders",
+                        "Board"
+                    ],
+                    [
+                        "Board",
+                        "CEO"
+                    ],
+                    [
+                        "CEO",
+                        "CTO"
+                    ],
+                    [
+                        "CEO",
+                        "CPO"
+                    ],
+                    [
+                        "CEO",
+                        "CSO"
+                    ],
+                    [
+                        "CEO",
+                        "CMO"
+                    ],
+                    [
+                        "CEO",
+                        "HR"
+                    ],
+                    [
+                        "CTO",
+                        "Product"
+                    ],
+                    [
+                        "CTO",
+                        "Web"
+                    ],
+                    [
+                        "CSO",
+                        "Sales"
+                    ],
+                    [
+                        "CMO",
+                        "Market"
+                    ]
+                ],
+                "nodes": [
+                    {
+                        "id": "CEO",
+                        "title": "Chief Executive Officer",
+                        "name": "Grethe Hjetland",
+                        "image": "https://example.com/ceo.jpg",
+                        "color": "#f7f7f7"
+                    },
+                    {
+                        "id": "CTO",
+                        "title": "Chief Technology Officer",
+                        "name": "Christer Vasseng",
+                        "image": "https://example.com/cto.jpg",
+                        "column": 2,
+                        "layout": "hanging"
+                    },
+                    {
+                        "id": "Product",
+                        "name": "Product Team",
+                        "color": "#e6f3ff",
+                        "dataLabels": {
+                            "format": "{point.name}"
+                        }
+                    }
+                ],
+                "dataLabels": {
+                    "color": "#333",
+                    "defer": false,
+                    "style": {
+                        "textOutline": "none"
+                    }
+                },
+                "nodeWidth": 75,
+                "hangingIndent": 60
+            }
+        ],
+        "tooltip": {
+            "outside": true,
+            "formatter": "function() { return '<b>' + this.point.name + '</b><br>' + (this.point.title || ''); }"
+        },
+        "exporting": {
+            "allowHTML": true,
+            "sourceWidth": 800,
+            "sourceHeight": 600
+        }
+    },
+    "visualization_explanation": "The dataset represents a 3-level hierarchical structure with 11 nodes and 10 relationships. Node entities contain categorical data (roles) with image URLs and positional metadata. Edge data uses ordinal pairs to define reporting lines. Synthetic data maintains organizational validity through C-suite conventions and department segmentation. The inverted organization chart maximizes horizontal space utilization while maintaining Tufte's data-ink ratio through borderless nodes and minimal labels. Cairo's principles are applied through: 1) Pre-attentive image processing in node avatars 2) Positional grouping of technical roles 3) Color-coding consistency for leadership tiers. Structural patterns include balanced branching (CEO\u21925 reports) and departmental clustering (CTO\u2192technical teams)."
+}

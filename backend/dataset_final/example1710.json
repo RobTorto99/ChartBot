@@ -1,0 +1,129 @@
+{
+    "visualization_prompt": "Generate a 3D bar chart showing distribution of tree species biomass in a forest ecosystem using color-coded categorical encoding",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "margin": 75,
+            "options3d": {
+                "enabled": true,
+                "alpha": 15,
+                "beta": 15,
+                "depth": 50
+            }
+        },
+        "title": {
+            "text": "Tree Species Biomass Distribution (kg/m\u00b2)",
+            "style": {
+                "fontSize": "18px",
+                "color": "#2E3440"
+            }
+        },
+        "xAxis": {
+            "type": "category",
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#4C566A"
+                }
+            },
+            "title": {
+                "text": "Species",
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#3B4252"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Biomass Density",
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#3B4252"
+                }
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#4C566A"
+                }
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "depth": 25,
+                "colorByPoint": true,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y:.1f}",
+                    "style": {
+                        "textOutline": "none"
+                    }
+                }
+            }
+        },
+        "colors": [
+            "#88C0D0",
+            "#81A1C1",
+            "#5E81AC",
+            "#BF616A",
+            "#D08770",
+            "#EBCB8B",
+            "#A3BE8C",
+            "#B48EAD",
+            "#8FBCBB",
+            "#4C566A"
+        ],
+        "series": [
+            {
+                "name": "Biomass Density",
+                "data": [
+                    [
+                        "Douglas Fir",
+                        42.3
+                    ],
+                    [
+                        "Coast Redwood",
+                        58.6
+                    ],
+                    {
+                        "name": "Ponderosa Pine",
+                        "y": 35.2
+                    },
+                    [
+                        "White Oak",
+                        28.7
+                    ],
+                    [
+                        "Sugar Maple",
+                        31.9
+                    ],
+                    [
+                        "Yellow Birch",
+                        25.4
+                    ],
+                    [
+                        "Lodgepole Pine",
+                        39.1
+                    ],
+                    [
+                        "Western Hemlock",
+                        33.8
+                    ],
+                    [
+                        "Red Alder",
+                        22.6
+                    ],
+                    [
+                        "Quaking Aspen",
+                        19.4
+                    ]
+                ]
+            }
+        ],
+        "legend": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset contains two dimensions: categorical (tree species) and continuous numerical (biomass density). Synthetic data follows ecological plausibility with \u03bc=33.5 kg/m\u00b2 and \u03c3=11.2 kg/m\u00b2, reflecting typical temperate forest biomass distributions. Values maintain ordinal relationships matching species growth patterns. The 3D bar chart enhances categorical comparison through depth perception while maintaining Tufte's data-ink principles via minimal gridlines. Cairo's perceptual topology is preserved through ordered color progression and direct labeling. Color coding leverages HSLuv space for equal luminance differentiation. Statistical validity is maintained through constrained variance (\u03c3 \u224833% of \u03bc) and ecological ordering from climax to pioneer species."
+}

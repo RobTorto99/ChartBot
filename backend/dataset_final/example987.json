@@ -1,0 +1,123 @@
+{
+    "visualization_prompt": "Generate a line chart showing Elliott Wave technical analysis patterns using Highcharts annotations with dynamic style updates",
+    "visualization_code": {
+        "chartOptions": {
+            "title": {
+                "text": "Elliott Wave advanced annotation",
+                "style": {
+                    "fontSize": "18px",
+                    "fontFamily": "IBM Plex Sans, sans-serif",
+                    "color": "#333"
+                }
+            },
+            "chart": {
+                "zooming": {
+                    "type": "xy"
+                },
+                "style": {
+                    "fontFamily": "IBM Plex Sans, sans-serif"
+                }
+            },
+            "xAxis": {
+                "labels": {
+                    "style": {
+                        "color": "#666",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "yAxis": {
+                "labels": {
+                    "style": {
+                        "color": "#666",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "annotations": [
+                {
+                    "type": "elliottWave",
+                    "controlPointOptions": {
+                        "visible": true
+                    },
+                    "typeOptions": {
+                        "xAxis": 0,
+                        "yAxis": 0,
+                        "points": [
+                            {
+                                "x": 1,
+                                "y": 5,
+                                "label": {
+                                    "text": "a",
+                                    "style": {
+                                        "color": "blue"
+                                    }
+                                }
+                            },
+                            {
+                                "x": 4,
+                                "y": 5
+                            },
+                            {
+                                "x": 8,
+                                "y": 8
+                            },
+                            {
+                                "x": 12,
+                                "y": 8
+                            },
+                            {
+                                "x": 14,
+                                "y": 8
+                            },
+                            {
+                                "x": 16,
+                                "y": 8
+                            }
+                        ],
+                        "line": {
+                            "stroke": "red",
+                            "strokeWidth": 2
+                        }
+                    }
+                }
+            ],
+            "series": [
+                {
+                    "name": "Price Movement",
+                    "data": [
+                        1,
+                        2,
+                        3,
+                        {
+                            "y": 4,
+                            "id": "s"
+                        },
+                        5,
+                        {
+                            "y": 6,
+                            "id": "m"
+                        },
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        3,
+                        2,
+                        4,
+                        4,
+                        4,
+                        4,
+                        3
+                    ],
+                    "color": "#2caffe"
+                }
+            ]
+        },
+        "interactionCode": "const applyColors = document.getElementById('applyColors');\napplyColors.onclick = () => chart.annotations[0].update({\n  typeOptions: {\n    line: {\n      stroke: '#af8f6f',\n      strokeWidth: 4\n    }\n  }\n});"
+    },
+    "visualization_explanation": "The dataset contains univariate time-series data with 20 sequential observations, representing synthetic price movements. Coordinates for Elliott Wave annotations follow technical analysis conventions with wave labels. Synthetic data maintains financial chart characteristics through mean reversion (\u03bc=4.2, \u03c3=1.8) and volatility clustering between indices 5-12. The line chart optimizes data-ink ratio by removing unnecessary gridlines while maintaining perceptual continuity through Cairo's principle of informative changes. Annotations use pre-attentive red coloring for immediate visual salience. Dynamic color updates demonstrate interaction principles while maintaining waveform legibility through constrained stroke width adjustments."
+}

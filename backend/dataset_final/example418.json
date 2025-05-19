@@ -1,0 +1,105 @@
+{
+    "visualization_prompt": "Create a Highcharts 3D column chart with the title 'Monthly Average Rainfall'. The chart should have styled axes and labels with specific colors and font sizes. The data series should represent monthly rainfall data for a year. Custom colors should be used for the columns, and additional configurations should include chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "margin": 75,
+            "options3d": {
+                "enabled": true,
+                "alpha": 15,
+                "beta": 15,
+                "depth": 30
+            }
+        },
+        "title": {
+            "text": "Monthly Average Rainfall"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Rainfall (mm)",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "depth": 25,
+                "colorByPoint": true,
+                "colors": [
+                    "#7cb5ec",
+                    "#434348",
+                    "#90ed7d",
+                    "#f7a35c",
+                    "#8085e9",
+                    "#f15c80",
+                    "#e4d354",
+                    "#2b908f",
+                    "#f45b5b",
+                    "#91e8e1",
+                    "#7798BF",
+                    "#aaeeee"
+                ]
+            }
+        },
+        "series": [
+            {
+                "name": "Rainfall",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ]
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "12px"
+            }
+        },
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The provided Highcharts configuration sets up a 3D column chart with the title 'Monthly Average Rainfall'. The chart is configured to use 3D effects with specific angles and depth. The x-axis represents the months of the year with styled labels, and the y-axis represents the rainfall in millimeters with a styled title. The data series includes monthly rainfall data for a year. Custom colors are applied to each column, and the legend is enabled with styled text. Additional configurations include chart margins and the disabling of credits."
+}

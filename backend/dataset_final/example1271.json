@@ -1,0 +1,104 @@
+{
+    "visualization_prompt": "Generate a pie chart showing hierarchical category proportions using interactive drilldown connectors with synthetic market share data",
+    "visualization_code": {
+        "title": {
+            "text": "Product Category Market Share Analysis"
+        },
+        "subtitle": {
+            "text": "Interactive drilldown to subcategory-level distribution"
+        },
+        "plotOptions": {
+            "pie": {
+                "dataLabels": {
+                    "distance": -30,
+                    "format": "{point.name}: {point.percentage:.1f}%"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Main Categories",
+                "data": [
+                    {
+                        "name": "Electronics",
+                        "y": 35,
+                        "drilldownConnector": {
+                            "seriesId": "subcategories"
+                        }
+                    },
+                    {
+                        "name": "Apparel",
+                        "y": 25
+                    },
+                    {
+                        "name": "Home & Living",
+                        "y": 20
+                    },
+                    {
+                        "name": "Books",
+                        "y": 15
+                    },
+                    {
+                        "name": "Others",
+                        "y": 5
+                    }
+                ],
+                "type": "pie",
+                "center": [
+                    "25%",
+                    "50%"
+                ],
+                "colors": [
+                    "#7cb5ec",
+                    "#434348",
+                    "#90ed7d",
+                    "#f7a35c",
+                    "#8085e9"
+                ]
+            },
+            {
+                "name": "Electronics Breakdown",
+                "data": [
+                    {
+                        "name": "Smartphones",
+                        "y": 40
+                    },
+                    {
+                        "name": "Laptops",
+                        "y": 35
+                    },
+                    {
+                        "name": "Accessories",
+                        "y": 15
+                    },
+                    {
+                        "name": "Tablets",
+                        "y": 10
+                    }
+                ],
+                "type": "pie",
+                "center": [
+                    "75%",
+                    "50%"
+                ],
+                "id": "subcategories",
+                "colors": [
+                    "rgba(124, 181, 236, 0.9)",
+                    "rgba(124, 181, 236, 0.7)",
+                    "rgba(124, 181, 236, 0.5)",
+                    "rgba(124, 181, 236, 0.3)"
+                ]
+            }
+        ],
+        "chart": {
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 40
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical"
+        }
+    },
+    "visualization_explanation": "The dataset contains two hierarchical levels: 5 main product categories (nominal data) and 4 electronics subcategories (ordinal breakdown). Synthetic data maintains proportional validity with primary series summing to 100% (\u03bc=20%, \u03c3=11.2%) and secondary series representing 100% of electronics share (\u03bc=25%, \u03c3=13.7%). The pie chart format was selected to emphasize part-to-whole relationships despite Tufte's data-ink ratio concerns, justified by the interactive drilldown requirement. Cairo's perceptual principles are applied through: 1) Color value progression in subcategories 2) Proximity grouping of related segments 3) Connector lines maintaining visual momentum during interaction. Percentage formatting follows D3-style pattern formatting for immediate magnitude comprehension."
+}

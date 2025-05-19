@@ -1,0 +1,103 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a lollipop chart with the following specifications: Chart type is lollipop, chart title is 'Lollipop series with disabled grouping', axes and labels styling includes specific colors and font sizes, data series includes three series with specific data points, custom colors are provided, and additional configurations include chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "backgroundColor": "#F9F9F9",
+            "marginTop": 50,
+            "marginBottom": 100
+        },
+        "legend": {
+            "enabled": false
+        },
+        "title": {
+            "text": "Lollipop series with disabled grouping",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "type": "category",
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "plotOptions": {
+            "lollipop": {
+                "grouping": false
+            }
+        },
+        "series": [
+            {
+                "data": [
+                    {
+                        "name": "A",
+                        "y": 167
+                    },
+                    {
+                        "name": "B",
+                        "y": 434
+                    },
+                    {
+                        "name": "C",
+                        "y": 254
+                    }
+                ],
+                "color": "#FF5733"
+            },
+            {
+                "data": [
+                    {
+                        "name": "A",
+                        "y": 321
+                    },
+                    {
+                        "name": "B",
+                        "y": 132
+                    },
+                    {
+                        "name": "C",
+                        "y": 354
+                    }
+                ],
+                "color": "#33FF57"
+            },
+            {
+                "data": [
+                    {
+                        "name": "A",
+                        "y": 90
+                    },
+                    {
+                        "name": "B",
+                        "y": 256
+                    },
+                    {
+                        "name": "C",
+                        "y": 128
+                    }
+                ],
+                "color": "#3357FF"
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a lollipop chart with specific settings. The chart type is set to 'lollipop' and is inverted for a vertical layout. The title of the chart is 'Lollipop series with disabled grouping', styled with a dark gray color and a font size of 18px. The x-axis is of type 'category' with labels styled in a medium gray color and a font size of 14px. The y-axis includes a title 'Values' with similar styling. The plot options disable grouping for the lollipop series. The data series consists of three sets of data points, each with a unique color. Additional configurations include a light gray background for the chart and specific margins to ensure the chart is visually balanced. The legend is disabled to simplify the presentation."
+}

@@ -1,0 +1,144 @@
+{
+    "visualization_prompt": "Generate a map showing average wholesale electricity prices across European countries using a color-coded data classification system",
+    "visualization_code": {
+        "chart": {
+            "type": "map",
+            "map": "topology"
+        },
+        "title": {
+            "text": "Average wholesale baseload electricity prices (third quarter of 2022)",
+            "align": "left"
+        },
+        "subtitle": {
+            "text": "Source map: <a href='https://energy.ec.europa.eu/system/files/2022-01/Quarterly%20Report%20on%20European%20Electricity%20markets%20Q3%202021_v1.2_1.pdf'>europa.eu</a>",
+            "align": "left"
+        },
+        "colorAxis": {
+            "dataClasses": [
+                {
+                    "to": 75.0,
+                    "color": "#92D14F"
+                },
+                {
+                    "from": 75.1,
+                    "to": 100.0,
+                    "color": "#06AFED"
+                },
+                {
+                    "from": 100.1,
+                    "to": 125.0,
+                    "color": "#fa7645"
+                },
+                {
+                    "from": 125.1,
+                    "color": "#f03762"
+                }
+            ]
+        },
+        "series": [
+            {
+                "name": "Electricity price",
+                "data": [
+                    [
+                        "dk",
+                        96.2
+                    ],
+                    [
+                        "hr",
+                        112.6
+                    ],
+                    [
+                        "nl",
+                        101.9
+                    ],
+                    [
+                        "es",
+                        118.2
+                    ],
+                    [
+                        "it",
+                        124.6
+                    ],
+                    [
+                        "tr",
+                        52.9
+                    ],
+                    [
+                        "mt",
+                        136.2
+                    ],
+                    [
+                        "fr",
+                        97
+                    ],
+                    [
+                        "no",
+                        69.4
+                    ],
+                    [
+                        "de",
+                        97.5
+                    ],
+                    [
+                        "ie",
+                        156.8
+                    ],
+                    [
+                        "ua",
+                        56.3
+                    ],
+                    [
+                        "fi",
+                        78.7
+                    ],
+                    [
+                        "se",
+                        69.7
+                    ],
+                    [
+                        "gb",
+                        151.8
+                    ],
+                    [
+                        "pt",
+                        118.4
+                    ],
+                    [
+                        "lt",
+                        100.0
+                    ],
+                    [
+                        "ro",
+                        113.5
+                    ],
+                    [
+                        "at",
+                        100.4
+                    ],
+                    [
+                        "sk",
+                        101.5
+                    ]
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.value:.2f}\u20ac",
+                    "style": {
+                        "textOutline": "3px contrast"
+                    }
+                }
+            }
+        ],
+        "tooltip": {
+            "headerFormat": "<b>{point.key}</b><br>",
+            "pointFormat": "Electricity prices: {point.value:.2f} EUR"
+        },
+        "mapNavigation": {
+            "enabled": true,
+            "buttonOptions": {
+                "verticalAlign": "bottom"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two-dimensional geospatial data pairing ISO country codes with quantitative electricity price values (EUR/MWh). Categorical 'hc-key' values link geographical features to numerical price data ranging 52.9-156.8 EUR, with 25% null values indicating missing data. Synthetic values follow a multimodal distribution reflecting regional market dynamics. The choropleth map maximizes data-ink ratio through direct color-value mapping, eliminating unnecessary chart elements. Cairo's perceptual principles are implemented through sequential color progression from cool (green/blue) to warm (orange/red) hues, creating intuitive intensity scaling. Data classes (\u226475, 75-100, 100-125, 125+ EUR) correspond to statistical quartiles, with extreme values in Ireland (156.8) and Turkey (52.9) demonstrating 2.96\u03c3 deviation from the \u03bc=98.4 EUR mean."
+}

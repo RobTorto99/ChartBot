@@ -1,0 +1,90 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart comparing the estimated production of corn and wheat for the year 2020 across different countries. The chart should have a title and subtitle, with styled axes and labels. The data series should include the names of the series and their respective data. Custom colors and additional configurations such as chart margins, background, and legend should be specified.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "zooming": {
+                "type": "y"
+            }
+        },
+        "title": {
+            "text": "Corn vs wheat estimated production for 2020 (1000 MT)"
+        },
+        "subtitle": {
+            "text": "Source: <a href=\"https://www.indexmundi.com/agriculture/?commodity=corn\">indexmundi</a>"
+        },
+        "xAxis": {
+            "categories": [
+                "USA",
+                "China",
+                "Brazil",
+                "EU",
+                "India",
+                "Russia"
+            ],
+            "title": {
+                "text": null
+            },
+            "accessibility": {
+                "description": "Countries"
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Production in 1000 million ton"
+            },
+            "labels": {
+                "overflow": "justify"
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "dataLabels": {
+                    "enabled": true
+                }
+            }
+        },
+        "tooltip": {
+            "valueSuffix": " (1000 MT)",
+            "stickOnContact": true,
+            "borderColor": "#555",
+            "backgroundColor": "rgba(255, 255, 255, 0.93)"
+        },
+        "legend": {
+            "enabled": true
+        },
+        "series": [
+            {
+                "name": "Corn",
+                "data": [
+                    406292,
+                    260000,
+                    107000,
+                    68300,
+                    27500,
+                    14500
+                ],
+                "color": {
+                    "patternIndex": 0
+                },
+                "borderColor": "#5f98cf"
+            },
+            {
+                "name": "Wheat",
+                "data": [
+                    51086,
+                    136000,
+                    5500,
+                    141000,
+                    107180,
+                    77000
+                ],
+                "color": {
+                    "patternIndex": 1
+                },
+                "borderColor": "#555"
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart that compares the estimated production of corn and wheat for the year 2020 across six countries: USA, China, Brazil, EU, India, and Russia. The chart includes a title and subtitle, with the subtitle providing a source link for the data. The x-axis represents the countries, and the y-axis represents the production in 1000 million tons. The chart allows for y-axis zooming and includes data labels for each column. The tooltip displays the production value with a suffix of ' (1000 MT)' and has a specific background and border color. The legend is enabled to differentiate between the two series: Corn and Wheat. Each series has custom colors and border colors applied to them."
+}

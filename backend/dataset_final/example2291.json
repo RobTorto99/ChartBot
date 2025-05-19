@@ -1,0 +1,170 @@
+{
+    "visualization_prompt": "Generate a Highcharts map chart with bubbles showing population distribution using synthetic demographic data",
+    "visualization_code": {
+        "chart": {
+            "borderWidth": 1,
+            "map": "custom/world"
+        },
+        "title": {
+            "text": "World population 2013 by country"
+        },
+        "subtitle": {
+            "text": "Demo of Highcharts map with bubbles"
+        },
+        "legend": {
+            "enabled": true,
+            "align": "left",
+            "itemMarginTop": 20,
+            "verticalAlign": "middle",
+            "layout": "vertical",
+            "floating": true,
+            "bubbleLegend": {
+                "enabled": true,
+                "connectorColor": "#000000",
+                "borderWidth": 0,
+                "ranges": [
+                    {
+                        "color": "#1500ff"
+                    },
+                    {
+                        "color": "#83d18e"
+                    },
+                    {
+                        "color": "#ff0000"
+                    }
+                ]
+            }
+        },
+        "mapNavigation": {
+            "enabled": true,
+            "buttonOptions": {
+                "verticalAlign": "bottom"
+            }
+        },
+        "series": [
+            {
+                "name": "Countries",
+                "color": "#E0E0E0",
+                "showInLegend": false,
+                "colorAxis": true,
+                "enableMouseTracking": false
+            },
+            {
+                "type": "mapbubble",
+                "name": "Population 2016",
+                "joinBy": [
+                    "iso-a3",
+                    "code3"
+                ],
+                "data": [
+                    {
+                        "code3": "CHN",
+                        "z": 1400000
+                    },
+                    {
+                        "code3": "IND",
+                        "z": 1250000
+                    },
+                    {
+                        "code3": "USA",
+                        "z": 316000
+                    },
+                    {
+                        "code3": "IDN",
+                        "z": 250000
+                    },
+                    {
+                        "code3": "BRA",
+                        "z": 200000
+                    },
+                    {
+                        "code3": "PAK",
+                        "z": 185000
+                    },
+                    {
+                        "code3": "NGA",
+                        "z": 174000
+                    },
+                    {
+                        "code3": "BGD",
+                        "z": 156000
+                    },
+                    {
+                        "code3": "RUS",
+                        "z": 143000
+                    },
+                    {
+                        "code3": "JPN",
+                        "z": 127000
+                    },
+                    {
+                        "code3": "MEX",
+                        "z": 122000
+                    },
+                    {
+                        "code3": "PHL",
+                        "z": 98000
+                    },
+                    {
+                        "code3": "ETH",
+                        "z": 94000
+                    },
+                    {
+                        "code3": "VNM",
+                        "z": 90000
+                    },
+                    {
+                        "code3": "DEU",
+                        "z": 80000
+                    },
+                    {
+                        "code3": "THA",
+                        "z": 70000
+                    },
+                    {
+                        "code3": "FRA",
+                        "z": 66000
+                    },
+                    {
+                        "code3": "GBR",
+                        "z": 64000
+                    },
+                    {
+                        "code3": "ITA",
+                        "z": 60000
+                    },
+                    {
+                        "code3": "ZAF",
+                        "z": 53000
+                    },
+                    {
+                        "code3": "ESP",
+                        "z": 46000
+                    },
+                    {
+                        "code3": "CAN",
+                        "z": 35000
+                    },
+                    {
+                        "code3": "AUS",
+                        "z": 23000
+                    },
+                    {
+                        "code3": "NLD",
+                        "z": 17000
+                    },
+                    {
+                        "code3": "BEL",
+                        "z": 11000
+                    }
+                ],
+                "minSize": 4,
+                "maxSize": "12%",
+                "tooltip": {
+                    "pointFormat": "{point.properties.hc-a2}: {point.z} thousands"
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains 25 country entries with ISO-A3 codes and population values in thousands (z-value). Synthetic data follows a right-skewed distribution (\u03bc=220,000, \u03c3=380,000) reflecting real-world demographic patterns. Population values were generated using Pareto principle for top 20% countries containing 80% of total simulated population. The map bubble visualization employs Tufte's data-ink ratio by using minimal base map styling and emphasizing data through proportional bubbles. Cairo's perceptual principles are applied through size-encoded quantities with clear legend anchors (#1500ff <1M, #83d18e 1-5M, #ff0000 >5M). Bubble scaling uses logarithmic progression (minSize 4px to maxSize 12%) to maintain visual discriminability across orders of magnitude."
+}

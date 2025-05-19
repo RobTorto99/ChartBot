@@ -1,0 +1,133 @@
+{
+    "visualization_prompt": "Generate a 3D stacked column chart showing quarterly revenue distribution across product categories using synthetic industry financial data with seasonal trends",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "margin": 75,
+            "options3d": {
+                "enabled": true,
+                "alpha": 15,
+                "beta": 15,
+                "depth": 60
+            },
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Q1 2023 Revenue by Industry Segment and Region",
+            "style": {
+                "fontSize": "18px",
+                "color": "#2E4053"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Technology",
+                "Healthcare",
+                "Automotive",
+                "Retail",
+                "Energy",
+                "Finance",
+                "Education",
+                "Manufacturing",
+                "Telecom",
+                "Transportation"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (Million USD)",
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "depth": 40,
+                "stacking": true,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "${point.y:.1f}M"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "North America",
+                "data": [
+                    82.4,
+                    75.2,
+                    68.7,
+                    64.1,
+                    59.8,
+                    72.3,
+                    65.4,
+                    70.1,
+                    78.9,
+                    81.2
+                ],
+                "stack": 0,
+                "color": "#27AE60"
+            },
+            {
+                "name": "Europe",
+                "data": [
+                    58.3,
+                    62.7,
+                    54.9,
+                    49.6,
+                    52.1,
+                    60.8,
+                    57.3,
+                    55.4,
+                    63.2,
+                    59.7
+                ],
+                "stack": 0,
+                "color": "#2980B9"
+            },
+            {
+                "name": "Asia-Pacific",
+                "data": [
+                    112.4,
+                    108.7,
+                    121.3,
+                    115.9,
+                    124.6,
+                    118.2,
+                    127.5,
+                    122.8,
+                    116.4,
+                    129.1
+                ],
+                "stack": 1,
+                "color": "#E67E22"
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#2C3E50"
+            }
+        },
+        "tooltip": {
+            "pointFormat": "<b>{series.name}</b>: ${point.y:.2f}M",
+            "valueDecimals": 2
+        }
+    },
+    "visualization_explanation": "The dataset contains three-dimensional financial information with 10 categorical industry segments (x-axis) and two regional revenue stacks (y-axis). Synthetic data maintains quarterly patterns (\u03bc_NA=72.0, \u03c3_NA=8.7; \u03bc_EU=57.5, \u03c3_EU=4.9; \u03bc_AP=118.7, \u03c3_AP=6.4) showing Asia-Pacific dominance with +65% mean premium over other regions. The 3D column format enhances categorical comparisons while maintaining Tufte's data-ink ratio through restrained depth effects. Color choices follow Cairo's preattentive processing principles using distinct hue families (green-blue-orange) with luminance matching data magnitude relationships. Stacked encoding reveals both absolute values and regional contribution proportions simultaneously."
+}

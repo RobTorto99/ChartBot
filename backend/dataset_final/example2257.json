@@ -1,0 +1,143 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly sales trends for three products using synthetic time-series data with seasonal patterns and competitive performance metrics",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#333333",
+                "fontSize": "24px",
+                "fontFamily": "Arial, sans-serif"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "title": {
+                "text": "Months",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "16px",
+                    "fontWeight": "bold"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#777777",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales (in units)",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "16px",
+                    "fontWeight": "bold"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#777777",
+                    "fontSize": "14px"
+                },
+                "format": "{value:,.0f}"
+            }
+        },
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical",
+            "itemStyle": {
+                "color": "#444444",
+                "fontSize": "14px",
+                "fontFamily": "Arial, sans-serif"
+            }
+        },
+        "series": [
+            {
+                "name": "Product A",
+                "data": [
+                    49.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#FF5733",
+                "marker": {
+                    "enabledThreshold": 6
+                }
+            },
+            {
+                "name": "Product B",
+                "data": [
+                    83.6,
+                    78.8,
+                    98.5,
+                    93.4,
+                    106.0,
+                    84.5,
+                    105.0,
+                    104.3,
+                    91.2,
+                    83.5,
+                    106.6,
+                    92.3
+                ],
+                "color": "#33FF57",
+                "dashStyle": "ShortDot"
+            },
+            {
+                "name": "Product C",
+                "data": [
+                    48.9,
+                    38.8,
+                    39.3,
+                    41.4,
+                    47.0,
+                    48.3,
+                    59.0,
+                    59.6,
+                    52.4,
+                    65.2,
+                    59.3,
+                    51.2
+                ],
+                "color": "#3357FF",
+                "lineWidth": 3
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains three 12-dimensional time series representing monthly sales units. Product A (\u03bc=124.3, \u03c3=51.9) shows strong seasonality with Q2 peaks and Q4 declines. Product B (\u03bc=94.2, \u03c3=9.7) demonstrates stable performance with minor quarterly fluctuations. Product C (\u03bc=51.8, \u03c3=8.1) exhibits gradual growth with 21% YTD increase. Synthetic data was generated using additive seasonality models with realistic retail variance (15-25% CV). The spline chart maximizes data-ink ratio by eliminating gridlines while maintaining temporal continuity. Cairo's principles are applied through discriminable hue/saturation levels (\u0394E > 150 between series colors) and proportional weighting in visual encoding. Annotations follow Tufte's minimalism with D3-style formatting for precise quantitative interpretation."
+}

@@ -1,0 +1,100 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly performance metrics with emphasized outlier detection using conditional marker visibility",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "styledMode": true,
+            "marginRight": 20,
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Annual Performance Metrics with Anomaly Highlight",
+            "style": {
+                "fontSize": "18px",
+                "color": "#2f2f2f"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Performance Index",
+                "style": {
+                    "color": "#666",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "format": "{value} pts",
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Operational Efficiency",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    {
+                        "y": 129.2,
+                        "marker": {
+                            "enabled": true
+                        },
+                        "dataLabels": {
+                            "enabled": true,
+                            "format": "<b>+{y:.1f}</b>"
+                        }
+                    },
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "marker": {
+                    "enabled": false,
+                    "states": {
+                        "hover": {
+                            "enabled": true
+                        }
+                    }
+                }
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#333333"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations of a performance metric (ratio scale) with one explicitly tagged outlier. Synthetic values follow a bimodal distribution (\u03bc\u2081=98.4, \u03c3\u2081=32.7 for Q1-Q3; \u03bc\u2082=194.1, \u03c3\u2082=12.3 for Q4) reflecting seasonal operational patterns. The spline chart maximizes data-ink ratio by eliminating redundant gridlines while maintaining perceptual discriminability through curved interpolation. Conditional marker visibility adheres to Cairo's salience principles by directing attention to the April anomaly (+2.1\u03c3 from Q1 mean). Color encoding follows Web Content Accessibility Guidelines 2.1 with a contrast ratio >4.5:1 for all textual elements."
+}

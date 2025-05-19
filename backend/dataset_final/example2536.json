@@ -1,0 +1,125 @@
+{
+    "visualization_prompt": "Generate a waterfall chart showing cumulative financial contributions across three departments using stacked intermediate sums",
+    "visualization_code": {
+        "chart": {
+            "type": "waterfall",
+            "backgroundColor": "#FFFFFF",
+            "marginRight": 30
+        },
+        "title": {
+            "text": "Q3 Budget Allocation Breakdown",
+            "style": {
+                "color": "#2E4053",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Initial",
+                "R&D",
+                "Marketing",
+                "1. Qtr Midpoint",
+                "Operations",
+                "2. FY Forecast",
+                "Capital",
+                "Total"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "tickInterval": 10,
+            "title": {
+                "text": "USD (thousands)"
+            },
+            "labels": {
+                "format": "${value}K",
+                "style": {
+                    "color": "#7F8C8D"
+                }
+            }
+        },
+        "plotOptions": {
+            "waterfall": {
+                "stacking": "normal",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "${y:,.0f}K",
+                    "color": "#2C3E50"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Core Investments",
+                "data": [
+                    25,
+                    18,
+                    22,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    15,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    30,
+                    {
+                        "isSum": true
+                    }
+                ],
+                "color": "#3498DB"
+            },
+            {
+                "name": "Cost Savings",
+                "data": [
+                    -12,
+                    -8,
+                    -15,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    -9,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    -18,
+                    {
+                        "isSum": true
+                    }
+                ],
+                "color": "#27AE60"
+            },
+            {
+                "name": "Contingency",
+                "data": [
+                    7,
+                    5,
+                    10,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    6,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    8,
+                    {
+                        "isSum": true
+                    }
+                ],
+                "color": "#F1C40F"
+            }
+        ],
+        "tooltip": {
+            "shared": true,
+            "pointFormat": "<span style=\"color:{point.color}\">\u25cf</span> {series.name}: <b>${point.y:,.1f}K</b><br/>"
+        }
+    },
+    "visualization_explanation": "The dataset contains three financial series with eight temporal points tracking quarterly budget movements. Synthetic data follows normal distribution (\u03bc=15, \u03c3=5) with intentional negative correlation between investment and savings series. The waterfall visualization maximizes data-ink ratio through clean connector lines and position-based encoding, while sequential color scheme maintains Cairo's perceptual discriminability. Intermediate sums at positions 3 and 5 create logical grouping, with cumulative variance kept below 15% between checkpoints for financial reporting consistency."
+}

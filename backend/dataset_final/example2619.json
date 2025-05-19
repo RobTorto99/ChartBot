@@ -1,0 +1,112 @@
+{
+    "visualization_prompt": "Generate a treemap showing hierarchical value distribution using synthetic organizational data with parent-child relationships and variable weighting",
+    "visualization_code": {
+        "chart": {
+            "type": "treemap",
+            "backgroundColor": "#f9f9f9"
+        },
+        "title": {
+            "text": "Resource Allocation Hierarchy",
+            "style": {
+                "fontSize": "18px",
+                "color": "#2c3e50"
+            }
+        },
+        "subtitle": {
+            "text": "Node X contains nested allocations (X1-X3). Click to drill down",
+            "style": {
+                "color": "#7f8c8d"
+            }
+        },
+        "series": [
+            {
+                "type": "treemap",
+                "layoutAlgorithm": "stripes",
+                "allowDrillToNode": true,
+                "interactByLeaf": true,
+                "levels": [
+                    {
+                        "level": 1,
+                        "borderColor": "#34495e",
+                        "dataLabels": {
+                            "color": "#ecf0f1"
+                        }
+                    }
+                ],
+                "data": [
+                    {
+                        "id": "root",
+                        "name": "X",
+                        "color": "#16a085"
+                    },
+                    {
+                        "id": "x1",
+                        "name": "X1",
+                        "value": 3,
+                        "parent": "root",
+                        "colorValue": 1
+                    },
+                    {
+                        "id": "x2",
+                        "name": "X2",
+                        "value": 2,
+                        "parent": "root",
+                        "colorValue": 2
+                    },
+                    {
+                        "id": "x3",
+                        "name": "X3",
+                        "value": 1,
+                        "parent": "root",
+                        "colorValue": 3
+                    },
+                    {
+                        "name": "Y",
+                        "value": 5,
+                        "colorValue": 4
+                    },
+                    {
+                        "name": "Z",
+                        "value": 7,
+                        "colorValue": 5
+                    },
+                    {
+                        "name": "D",
+                        "value": 4,
+                        "colorValue": 6
+                    },
+                    {
+                        "name": "E",
+                        "value": 3,
+                        "colorValue": 7
+                    },
+                    {
+                        "name": "F",
+                        "value": 2,
+                        "colorValue": 8
+                    },
+                    {
+                        "name": "G",
+                        "value": 1,
+                        "colorValue": 9
+                    }
+                ],
+                "colorAxis": {
+                    "minColor": "#a3e4d7",
+                    "maxColor": "#0b5345"
+                }
+            }
+        ],
+        "plotOptions": {
+            "treemap": {
+                "dataLabels": {
+                    "formatter": "function() { return this.point.name + ': ' + Highcharts.numberFormat(this.point.value, 0); }",
+                    "style": {
+                        "textOutline": "none"
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains hierarchical categorical data with 10 nodes across two levels. Parent node X (\u03bc=2, \u03c3=0.82 across children) contains three child allocations, while seven root-level nodes follow a right-skewed distribution (\u03bc=3.14, \u03c3=2.12). Synthetic values maintain proportional relationships through constrained random variation (+/-15% from base weights) while preserving hierarchy. The treemap's stripe layout improves perceptual grouping compared to squarified algorithms through consistent directional flow. Color saturation encodes value density following Cairo's preattentive processing principles, while the drill-down feature maintains Tufte's data density by preserving context during navigation. Interactive labels use Highcharts' number formatting for precise value communication."
+}

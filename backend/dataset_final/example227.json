@@ -1,0 +1,62 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a pie chart with the following specifications: Chart type: pie, Chart title: 'Monthly Sales Distribution', Axes and labels styling: Use a dark gray color (#333) for labels and titles, with a font size of 14px, Data series: Include three data points with the names 'January', 'February', and 'March', and values 29.9, 71.5, and 106.4 respectively, Custom colors: Use specific colors for each slice - #FF5733, #33FF57, and #3357FF, Additional configurations: Set the chart background to light gray (#f2f2f2), add a legend at the bottom of the chart, and set the chart margins to 50 pixels on all sides.",
+    "visualization_code": {
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#f2f2f2",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Monthly Sales Distribution",
+            "style": {
+                "color": "#333",
+                "fontSize": "14px"
+            }
+        },
+        "legend": {
+            "layout": "vertical",
+            "align": "right",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#333",
+                "fontSize": "14px"
+            }
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "January",
+                        "y": 29.9,
+                        "color": "#FF5733"
+                    },
+                    {
+                        "name": "February",
+                        "y": 71.5,
+                        "color": "#33FF57"
+                    },
+                    {
+                        "name": "March",
+                        "y": 106.4,
+                        "color": "#3357FF"
+                    }
+                ],
+                "dataLabels": {
+                    "format": "{point.y}",
+                    "style": {
+                        "color": "#333",
+                        "fontSize": "14px"
+                    }
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The Highcharts chartOptions object is configured to render a pie chart with specific customizations. The chart type is set to 'pie', and the title is 'Monthly Sales Distribution' with a dark gray color and a font size of 14px. The data series includes three slices representing 'January', 'February', and 'March' with values 29.9, 71.5, and 106.4 respectively, each with a unique color. The chart background is set to light gray, and the legend is positioned at the bottom right of the chart. The chart margins are set to 50 pixels on all sides to provide ample space around the chart. The data labels are formatted to display the value of each slice and styled with the same dark gray color and font size."
+}

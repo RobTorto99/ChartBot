@@ -1,0 +1,97 @@
+{
+    "visualization_prompt": "Generate a pie chart showing the percentage composition of egg yolk components using categorical color coding",
+    "visualization_code": {
+        "chart_type": {
+            "type": "pie",
+            "title": {
+                "text": "Egg Yolk Composition",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "20px",
+                    "fontWeight": "bold"
+                }
+            },
+            "subtitle": {
+                "text": "Source: <a href='https://www.mdpi.com/2072-6643/11/3/684/htm'>MDPI</a>",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            },
+            "colors": [
+                "#10487F",
+                "#406D99",
+                "#668AAD",
+                "#85A1BD",
+                "#C1CFDD"
+            ],
+            "labels": {
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#333333"
+                }
+            }
+        },
+        "data_series": {
+            "series": [
+                {
+                    "name": "Composition",
+                    "colorByPoint": true,
+                    "data": [
+                        {
+                            "name": "Water",
+                            "y": 55.02
+                        },
+                        {
+                            "name": "Fat",
+                            "y": 26.71
+                        },
+                        {
+                            "name": "Carbohydrates",
+                            "y": 1.09
+                        },
+                        {
+                            "name": "Protein",
+                            "y": 15.5
+                        },
+                        {
+                            "name": "Ash",
+                            "y": 1.68
+                        }
+                    ]
+                }
+            ]
+        },
+        "additional_config": {
+            "tooltip": {
+                "valueSuffix": "%",
+                "headerFormat": "<b>{point.key}</b><br/>"
+            },
+            "plotOptions": {
+                "pie": {
+                    "allowPointSelect": true,
+                    "cursor": "pointer",
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "{point.name}: {point.percentage:.1f}%",
+                        "distance": -30,
+                        "style": {
+                            "fontWeight": "bold",
+                            "color": "white"
+                        }
+                    },
+                    "showInLegend": true
+                }
+            },
+            "legend": {
+                "align": "right",
+                "verticalAlign": "middle",
+                "itemStyle": {
+                    "color": "#333333",
+                    "fontSize": "12px"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The visualization presents a 1D categorical dataset showing egg yolk composition percentages. Synthetic data maintains nutritional science domain consistency with \u2211=100% validation. The pie chart maximizes data-ink ratio through direct percentage labeling, while Cairo's principles are applied through: 1) Color luminance progression matching component prevalence 2) Legend/text spatial grouping 3) High-contrast white labels on dark slices. ColorBrewer-inspired sequential blues (\u03bc lightness=45%, \u03c3=15%) create intuitive magnitude perception. Interactive selection and value-formatted tooltips ('Fat: 26.71%') enhance data transparency while maintaining graphical integrity."
+}

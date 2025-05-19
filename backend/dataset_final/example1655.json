@@ -1,0 +1,100 @@
+{
+    "visualization_prompt": "Generate a stacked bar chart showing gender distribution percentages across Swedish professions using categorical data grouping with percentage stacking",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "backgroundColor": "#FFFFFF"
+        },
+        "accessibility": {
+            "point": {
+                "valueSuffix": "%"
+            }
+        },
+        "title": {
+            "text": "Swedish Top 10 Female-Dominated Professions (16-64 Years)"
+        },
+        "subtitle": {
+            "text": "Source: Synthetic data based on Swedish labor statistics patterns"
+        },
+        "xAxis": {
+            "categories": [
+                "Preschool teacher",
+                "Home care nurse",
+                "Nurse",
+                "Nanny",
+                "Nurse practitioner",
+                "Finance Assistant",
+                "Accountant",
+                "Nurse assistant",
+                "Office assistant/secretary",
+                "Midwife"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            },
+            "min": 0,
+            "title": {
+                "text": null
+            }
+        },
+        "plotOptions": {
+            "bar": {
+                "stacking": "percent",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.percentage:.0f}%",
+                    "color": "#333333"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Men",
+                "data": [
+                    4,
+                    8,
+                    9,
+                    11,
+                    11,
+                    13,
+                    21,
+                    22,
+                    22,
+                    5
+                ],
+                "color": "#C0C0C0",
+                "borderColor": "#949494"
+            },
+            {
+                "name": "Women",
+                "data": [
+                    96,
+                    92,
+                    91,
+                    89,
+                    89,
+                    87,
+                    79,
+                    78,
+                    78,
+                    95
+                ],
+                "color": "#0C090A",
+                "borderColor": "#333333"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains two-dimensional categorical data comparing gender distribution across professions. Each record consists of profession (nominal categorical) and percentage values (ratio scale) for both genders. Synthetic data maintains original statistical relationships (\u03bc_women=87.4%, \u03c3_women=7.3) while expanding to 10 categories for completeness, preserving inverse correlation between gender percentages (r=-1.0). The stacked bar format maximizes data-ink ratio by directly encoding proportions through bar segments, while Cairo's principles are applied through position-based encoding for accurate proportion perception and high-contrast color differentiation. Percentage stacking enables immediate comparison of gender dominance patterns across professions, with synthetic data maintaining realistic labor market distributions (e.g., 95% female midwives vs 5% male)."
+}

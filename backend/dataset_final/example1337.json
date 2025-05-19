@@ -1,0 +1,71 @@
+{
+    "visualization_prompt": "Generate a solid gauge chart showing a single performance metric (KPI) using pane border radius styling and proportional data labeling",
+    "visualization_code": {
+        "chart": {
+            "type": "solidgauge",
+            "height": 400,
+            "width": 500
+        },
+        "title": {
+            "text": "Customer Satisfaction Score (CSS)",
+            "style": {
+                "fontSize": "20px",
+                "color": "#2c3e50"
+            }
+        },
+        "pane": {
+            "startAngle": -90,
+            "endAngle": 90,
+            "background": {
+                "innerRadius": "80%",
+                "outerRadius": "100%",
+                "shape": "arc",
+                "borderRadius": "50%",
+                "borderColor": "#95a5a6"
+            },
+            "size": "120%",
+            "center": [
+                "50%",
+                "75%"
+            ]
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 100,
+            "lineWidth": 0,
+            "tickWidth": 0,
+            "minorTickWidth": 0,
+            "labels": {
+                "enabled": false
+            }
+        },
+        "series": [
+            {
+                "name": "Current Score",
+                "data": [
+                    78
+                ],
+                "innerRadius": "80%",
+                "borderRadius": "50%",
+                "dataLabels": {
+                    "borderWidth": 0,
+                    "style": {
+                        "fontSize": "3em",
+                        "color": "#2ecc71",
+                        "textOutline": "none"
+                    },
+                    "format": "{y}%",
+                    "verticalAlign": "bottom"
+                },
+                "enableMouseTracking": false
+            }
+        ],
+        "plotOptions": {
+            "solidgauge": {
+                "color": "#2ecc71",
+                "borderRadius": "50%"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate performance metric with a single quantitative value (78%) in a [0,100] scale. Synthetic data maintains domain validity through constrained range and industry-standard KPI formatting. The solid gauge visualization maximizes data-ink ratio by eliminating gridlines and tick marks while maintaining numerical precision through bold data labeling. Perceptual effectiveness is achieved through: 1) Pre-attentive color coding (green=positive), 2) Spatial position encoding (angular position=value magnitude), 3) Size contrast (prominent central label). Statistical anchoring shows the value (\u03bc=78) positioned between qualitative thresholds (50=unacceptable, 85=excellent)."
+}

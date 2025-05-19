@@ -1,0 +1,95 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the title 'Monthly Sales Data'. The chart should have styled axes and labels with specific colors and font sizes. The data series should include two series: 'Product A' and 'Product B', with corresponding sales data. Custom colors should be used for the series, and additional configurations should include a legend, chart margins, and a background color.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "styledMode": true,
+            "backgroundColor": "#f9f9f9",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#333333",
+                "fontSize": "24px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun"
+            ],
+            "title": {
+                "text": "Months",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#777777",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#777777",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Product A",
+                "data": [
+                    120,
+                    200,
+                    150,
+                    230,
+                    280,
+                    300
+                ],
+                "color": "#008000"
+            },
+            {
+                "name": "Product B",
+                "data": [
+                    80,
+                    140,
+                    110,
+                    180,
+                    210,
+                    250
+                ],
+                "color": "#0000FF"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#444444",
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart titled 'Monthly Sales Data'. The chart includes two data series, 'Product A' and 'Product B', each with specific sales data for the months of January through June. The chart's axes and labels are styled with custom colors and font sizes to enhance readability. The chart also includes a legend, custom background color, and adjusted margins for better visual presentation. The use of styledMode ensures that the chart elements are styled using CSS, which is imported from the Highcharts library."
+}

@@ -1,0 +1,119 @@
+{
+    "visualization_prompt": "Generate a map chart showing US population density distribution using logarithmic color scaling with synthetic data",
+    "visualization_code": {
+        "chart": {
+            "map": "countries/us/us-all",
+            "styledMode": true,
+            "borderWidth": 1
+        },
+        "title": {
+            "text": "US population density (/km\u00b2)"
+        },
+        "exporting": {
+            "sourceWidth": 600,
+            "sourceHeight": 500
+        },
+        "legend": {
+            "layout": "horizontal",
+            "borderWidth": 0,
+            "backgroundColor": "rgba(255,255,255,0.85)",
+            "floating": true,
+            "verticalAlign": "top",
+            "y": 25
+        },
+        "mapNavigation": {
+            "enabled": true
+        },
+        "colorAxis": {
+            "min": 1,
+            "type": "logarithmic",
+            "minColor": "#2b908f",
+            "maxColor": "#000022",
+            "stops": [
+                [
+                    0,
+                    "#2b908f"
+                ],
+                [
+                    0.6,
+                    "#4444aa"
+                ],
+                [
+                    1,
+                    "#000022"
+                ]
+            ]
+        },
+        "series": [
+            {
+                "animation": {
+                    "duration": 1000
+                },
+                "data": [
+                    {
+                        "code": "CA",
+                        "value": 251.3
+                    },
+                    {
+                        "code": "TX",
+                        "value": 109.9
+                    },
+                    {
+                        "code": "FL",
+                        "value": 158.2
+                    },
+                    {
+                        "code": "NY",
+                        "value": 415.7
+                    },
+                    {
+                        "code": "IL",
+                        "value": 230.5
+                    },
+                    {
+                        "code": "PA",
+                        "value": 116.1
+                    },
+                    {
+                        "code": "OH",
+                        "value": 109.3
+                    },
+                    {
+                        "code": "NJ",
+                        "value": 467.2
+                    },
+                    {
+                        "code": "MA",
+                        "value": 336.8
+                    },
+                    {
+                        "code": "AK",
+                        "value": 0.5
+                    },
+                    {
+                        "code": "MT",
+                        "value": 2.9
+                    },
+                    {
+                        "code": "WY",
+                        "value": 2.3
+                    }
+                ],
+                "joinBy": [
+                    "postal-code",
+                    "code"
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "color": "#FFFFFF",
+                    "format": "{point.code}"
+                },
+                "name": "Population density",
+                "tooltip": {
+                    "pointFormat": "{point.code}: {point.value}/km\u00b2"
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains two-dimensional geographical data with state postal codes (categorical nominal) and population density values (continuous quantitative). Synthetic data follows a log-normal distribution (\u03bc=3.5, \u03c3=1.2) to reflect real-world density patterns, with coastal states showing 10-100x higher densities than mountainous regions. The logarithmic color scale optimizes perceptual discrimination of extreme value ranges while maintaining Cairo's proportionality principles. Tufte's data-ink ratio is maximized through subtle basemap styling and elimination of non-essential chart elements. Floating legend placement and semi-transparent background adhere to modern visualization heuristics for layered information display."
+}

@@ -1,0 +1,103 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Temperature forecast'. The chart should display two series: one for average temperatures and another for temperature ranges. The x-axis should be of type 'datetime' with the title 'Day', and the y-axis should have the title 'Temperature' with labels formatted to show the value followed by '\u00b0C'. The chart should have a shared tooltip displaying values in '\u00b0C'. The legend should be disabled, and the chart should have a background color of '#f8f8f8'. The temperature range series should be filled with a semi-transparent color.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f8f8f8"
+        },
+        "title": {
+            "text": "Temperature forecast"
+        },
+        "xAxis": {
+            "type": "datetime",
+            "title": {
+                "text": "Day"
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature"
+            },
+            "labels": {
+                "format": "{value}\u00b0C"
+            }
+        },
+        "tooltip": {
+            "shared": true,
+            "valueSuffix": "\u00b0C"
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "name": "Average Temperature",
+                "data": [
+                    [
+                        1246406400000,
+                        21.5
+                    ],
+                    [
+                        1246492800000,
+                        22.1
+                    ],
+                    [
+                        1246579200000,
+                        23
+                    ],
+                    [
+                        1246665600000,
+                        23.8
+                    ],
+                    [
+                        1246752000000,
+                        21.4
+                    ],
+                    [
+                        1246838400000,
+                        21.3
+                    ]
+                ]
+            },
+            {
+                "name": "Temperature Range",
+                "data": [
+                    [
+                        1246406400000,
+                        14.3,
+                        27.7
+                    ],
+                    [
+                        1246492800000,
+                        14.5,
+                        27.8
+                    ],
+                    [
+                        1246579200000,
+                        15.5,
+                        29.6
+                    ],
+                    [
+                        1246665600000,
+                        16.7,
+                        30.7
+                    ],
+                    [
+                        1246752000000,
+                        16.5,
+                        25.0
+                    ],
+                    [
+                        1246838400000,
+                        17.8,
+                        25.7
+                    ]
+                ],
+                "type": "arearange",
+                "color": "#7cb5ec",
+                "fillOpacity": 0.3
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a spline chart titled 'Temperature forecast'. The chart includes two data series: one for average temperatures and another for temperature ranges. The x-axis is configured as a datetime axis with the title 'Day', while the y-axis is titled 'Temperature' and formatted to display values in degrees Celsius. The tooltip is shared and appends '\u00b0C' to the values. The legend is disabled, and the chart background is set to a light gray color. The temperature range series is rendered as an area range with a semi-transparent fill color, providing a visual representation of the temperature variability over time."
+}

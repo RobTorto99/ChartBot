@@ -1,0 +1,91 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly sales trends with seasonal variation using synthetic time-series data incorporating trend and noise components",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "spline",
+                "backgroundColor": "#F5F5F5",
+                "marginTop": 40
+            },
+            "title": {
+                "text": "Monthly Sales Performance 2023",
+                "style": {
+                    "color": "#2E2E2E",
+                    "fontSize": "20px"
+                }
+            },
+            "subtitle": {
+                "text": "YTD Change: +15%",
+                "useHTML": true
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "rotation": -45,
+                    "style": {
+                        "color": "#2E2E2E"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Sales (Thousands USD)",
+                    "style": {
+                        "color": "#4CAF50"
+                    }
+                },
+                "gridLineColor": "#E0E0E0"
+            },
+            "series": [
+                {
+                    "name": "Product Sales",
+                    "data": [
+                        55,
+                        62,
+                        68,
+                        74,
+                        81,
+                        89,
+                        82,
+                        75,
+                        78,
+                        84,
+                        91,
+                        95
+                    ],
+                    "color": "#7E57C2",
+                    "lineWidth": 3
+                }
+            ],
+            "plotOptions": {
+                "series": {
+                    "cursor": "pointer",
+                    "events": {
+                        "click": "function(event) { alert(`${this.name} clicked\\nAlt: ${event.altKey}\\nControl: ${event.ctrlKey}\\nMeta: ${event.metaKey}\\nShift: ${event.shiftKey}`); }"
+                    }
+                }
+            },
+            "legend": {
+                "align": "right",
+                "verticalAlign": "bottom",
+                "itemStyle": {
+                    "color": "#616161"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate time series with 12 monthly observations of sales figures. Synthetic data was generated using a composite model: base trend (\u03bc=75, \u0394=+3.6/month) + seasonal component (15% amplitude) + Gaussian noise (\u03c3=5). The spline chart emphasizes trend continuity while minimizing visual clutter, adhering to Tufte's data-ink principles. Color choices (#7E57C2 series vs #4CAF50 axis) follow Cairo's preattentive processing guidelines for quick pattern recognition. The upward trend with Q2 peak and Q3 dip reflects common retail seasonality patterns, while the YTD annotation provides immediate performance context."
+}

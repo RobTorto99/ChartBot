@@ -1,0 +1,180 @@
+{
+    "visualization_prompt": "Generate a spline chart showing message success rate relationships between female sender attractiveness levels and male recipient attractiveness categories using gradient color encoding",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Message Success By Attractiveness (Female Senders)",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "useHTML": true,
+            "text": "Source: <a href='https://theblog.okcupid.com/your-looks-and-your-inbox-8715c0f1561e' style='color: #3498db'>OkCupid Research Data</a>"
+        },
+        "xAxis": {
+            "categories": [
+                "Least attractive",
+                "",
+                "",
+                "Medium attractiveness",
+                "",
+                "",
+                "Most attractive"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "13px",
+                    "textOverflow": "none"
+                }
+            },
+            "title": {
+                "text": "Male Recipient Attractiveness",
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Reply Rate (%)",
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                },
+                "format": "{value}%"
+            },
+            "gridLineColor": "#ecf0f1"
+        },
+        "tooltip": {
+            "headerFormat": "<b>{point.x}</b><br>",
+            "pointFormat": "{series.name}: <b>{point.y}%</b> reply rate",
+            "backgroundColor": "rgba(255,255,255,0.95)",
+            "borderColor": "#bdc3c7"
+        },
+        "plotOptions": {
+            "spline": {
+                "marker": {
+                    "enabled": false
+                },
+                "states": {
+                    "hover": {
+                        "halo": {
+                            "size": 5,
+                            "opacity": 0.1
+                        }
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Top 10% Female Attractiveness",
+                "data": [
+                    62,
+                    68,
+                    71,
+                    69,
+                    65,
+                    61,
+                    55
+                ],
+                "color": "#63BE7B",
+                "dashStyle": "Solid"
+            },
+            {
+                "name": "Upper Quartile",
+                "data": [
+                    58,
+                    63,
+                    65,
+                    62,
+                    58,
+                    53,
+                    48
+                ],
+                "color": "#99CF81"
+            },
+            {
+                "name": "Mid-Upper Tier",
+                "data": [
+                    54,
+                    58,
+                    59,
+                    56,
+                    51,
+                    46,
+                    40
+                ],
+                "color": "#CCDD82"
+            },
+            {
+                "name": "Median Tier",
+                "data": [
+                    48,
+                    51,
+                    50,
+                    47,
+                    43,
+                    38,
+                    33
+                ],
+                "color": "#FFEB84"
+            },
+            {
+                "name": "Mid-Lower Tier",
+                "data": [
+                    42,
+                    44,
+                    42,
+                    39,
+                    35,
+                    30,
+                    26
+                ],
+                "color": "#FDCA7D"
+            },
+            {
+                "name": "Lower Quartile",
+                "data": [
+                    36,
+                    37,
+                    35,
+                    32,
+                    28,
+                    23,
+                    19
+                ],
+                "color": "#FBA977"
+            },
+            {
+                "name": "Bottom 10% Female Attractiveness",
+                "data": [
+                    29,
+                    30,
+                    28,
+                    25,
+                    21,
+                    17,
+                    13
+                ],
+                "color": "#F8696B",
+                "dashStyle": "Dash"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset represents a 7\u00d77 matrix comparing female sender attractiveness tiers against male recipient attractiveness categories. Synthetic reply rates follow logical decreasing trends (\u03bc=45.2%, \u03c3=16.8) with inverse relationships between sender/receiver attractiveness levels. Color progression from green (#63BE7B) to red (#F8696B) creates immediate visual stratification. The spline chart format emphasizes rate continuity between categories while minimizing visual clutter through Tufte's data-ink principles. Cairo's perceptual effectiveness is achieved through: 1) Color luminance progression matching data directionality 2) Consistent curve thickness maintaining focus on trend relationships 3) Strategic axis labeling that maintains data context without overplotting."
+}

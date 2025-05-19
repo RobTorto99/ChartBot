@@ -1,0 +1,182 @@
+{
+    "visualization_prompt": "Generate a vector plot showing directional magnitude relationships using synthetic coordinate-derived vectors",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "vector",
+                "backgroundColor": "#F5F7FA",
+                "margin": [
+                    40,
+                    40,
+                    60,
+                    60
+                ]
+            },
+            "title": {
+                "text": "Synthetic Vector Field Analysis",
+                "style": {
+                    "color": "#2E4053",
+                    "fontSize": "18px",
+                    "fontWeight": "bold"
+                }
+            },
+            "xAxis": {
+                "min": 0,
+                "max": 100,
+                "gridLineWidth": 1,
+                "gridLineColor": "#D5D8DC",
+                "labels": {
+                    "style": {
+                        "color": "#616A6B",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "yAxis": {
+                "min": 0,
+                "max": 100,
+                "labels": {
+                    "style": {
+                        "color": "#616A6B",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "type": "vector",
+                    "name": "Electromagnetic Field Simulation",
+                    "rotationOrigin": "start",
+                    "color": "#E74C3C",
+                    "data": [
+                        [
+                            15,
+                            15,
+                            38.2,
+                            135
+                        ],
+                        [
+                            15,
+                            30,
+                            67.5,
+                            225
+                        ],
+                        [
+                            15,
+                            45,
+                            90,
+                            315
+                        ],
+                        [
+                            30,
+                            15,
+                            67.5,
+                            45
+                        ],
+                        [
+                            30,
+                            30,
+                            90,
+                            135
+                        ],
+                        [
+                            30,
+                            45,
+                            112.5,
+                            225
+                        ],
+                        [
+                            45,
+                            15,
+                            90,
+                            315
+                        ],
+                        [
+                            45,
+                            30,
+                            112.5,
+                            45
+                        ],
+                        [
+                            45,
+                            45,
+                            135,
+                            135
+                        ],
+                        [
+                            60,
+                            60,
+                            180,
+                            225
+                        ],
+                        [
+                            60,
+                            75,
+                            202.5,
+                            315
+                        ],
+                        [
+                            75,
+                            60,
+                            202.5,
+                            45
+                        ],
+                        [
+                            75,
+                            75,
+                            225,
+                            135
+                        ],
+                        [
+                            85,
+                            15,
+                            153,
+                            315
+                        ],
+                        [
+                            15,
+                            85,
+                            153,
+                            225
+                        ],
+                        [
+                            30,
+                            75,
+                            157.5,
+                            315
+                        ],
+                        [
+                            75,
+                            30,
+                            157.5,
+                            45
+                        ],
+                        [
+                            85,
+                            85,
+                            255,
+                            135
+                        ]
+                    ],
+                    "vectorLength": 0.2,
+                    "marker": {
+                        "radius": 3,
+                        "fillColor": "#2E4053"
+                    }
+                }
+            ],
+            "legend": {
+                "align": "right",
+                "verticalAlign": "middle",
+                "itemStyle": {
+                    "color": "#616A6B"
+                }
+            },
+            "tooltip": {
+                "pointFormat": "Strength: {point.z} \u03bcT<br>Angle: {point.direction:.1f}\u00b0",
+                "valueDecimals": 1
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a 2D vector field with four dimensions: X position (0-100), Y position (0-100), vector magnitude (\u03bcT), and angular direction (0-360\u00b0). Synthetic data follows a quadrant pattern with magnitude increasing radially (\u03bc=127.5, \u03c3=63.7) and direction following rotational symmetry, created using: magnitude = 1.5\u221a(x\u00b2+y\u00b2), direction = 45\u00b0(x/y) + 90\u00b0. The vector plot maximizes data-ink ratio by removing chart junk while maintaining grid reference. Directional encoding uses pre-attentive rotation attributes, with color saturation (Cairo's principles) showing intensity gradients. Magnitude distribution shows strong positive skew (\u03b31=0.87) with cluster separation at 150\u03bcT threshold."
+}

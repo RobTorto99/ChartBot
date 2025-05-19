@@ -1,0 +1,132 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Tooltip with long series name'. The chart should have axes and labels styled with specific colors and font sizes. The data series should include the names 'Installation', 'Manufacturing', 'Sales & Distribution', 'Project Development', and 'Other' with their respective data. Custom colors should be applied to the series. Additional configurations should include settings for chart margins, background, and legend.",
+    "visualization_code": {
+        "chart": {
+            "backgroundColor": "#F9F9F9",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "Tooltip with long series name",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "pointStart": 2010
+            }
+        },
+        "tooltip": {
+            "shared": true
+        },
+        "series": [
+            {
+                "name": "Installation - a very very long text, this can happen and then the text should either be shortened or wrapped",
+                "data": [
+                    43934,
+                    52503,
+                    57177,
+                    69658,
+                    97031,
+                    119931,
+                    137133,
+                    154175
+                ],
+                "color": "#FF5733"
+            },
+            {
+                "name": "Manufacturing",
+                "data": [
+                    24916,
+                    24064,
+                    29742,
+                    29851,
+                    32490,
+                    30282,
+                    38121,
+                    40434
+                ],
+                "color": "#33FF57"
+            },
+            {
+                "name": "Sales & Distribution",
+                "data": [
+                    11744,
+                    17722,
+                    16005,
+                    19771,
+                    20185,
+                    24377,
+                    32147,
+                    39387
+                ],
+                "color": "#3357FF"
+            },
+            {
+                "name": "Project Development",
+                "data": [
+                    null,
+                    null,
+                    7988,
+                    12169,
+                    15112,
+                    22452,
+                    34400,
+                    34227
+                ],
+                "color": "#FF33A1"
+            },
+            {
+                "name": "Other",
+                "data": [
+                    12908,
+                    5948,
+                    8105,
+                    11248,
+                    8989,
+                    11816,
+                    18274,
+                    18111
+                ],
+                "color": "#A133FF"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#666666",
+                "fontSize": "12px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart with a title 'Tooltip with long series name'. The chart includes five data series: 'Installation', 'Manufacturing', 'Sales & Distribution', 'Project Development', and 'Other', each with specific data points. The axes and labels are styled with defined colors and font sizes to enhance readability. Custom colors are applied to each series to differentiate them visually. Additional configurations include settings for chart margins, background color, and legend styling to ensure a clean and organized presentation. The tooltip is set to share data across series for better comparison."
+}

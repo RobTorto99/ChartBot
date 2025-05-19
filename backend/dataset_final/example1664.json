@@ -1,0 +1,185 @@
+{
+    "visualization_prompt": "Generate a percent-stacked areaspline chart showing atmospheric gas composition variation with altitude using synthetic data aligned with atmospheric science models",
+    "visualization_code": {
+        "chart": {
+            "type": "areaspline",
+            "backgroundColor": "#ffffff",
+            "marginTop": 40
+        },
+        "title": {
+            "text": "Atmospheric Composition Stratification by Altitude",
+            "style": {
+                "color": "#2a2a2a",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "Altitude (km)",
+                "style": {
+                    "color": "#606060",
+                    "fontSize": "14px"
+                }
+            },
+            "tickmarkPlacement": "on",
+            "gridLineWidth": 1,
+            "labels": {
+                "style": {
+                    "color": "#404040"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Volume Fraction (%)",
+                "style": {
+                    "color": "#606060",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "color": "#404040"
+                }
+            }
+        },
+        "tooltip": {
+            "shared": true,
+            "headerFormat": "<b>Altitude: {point.x} km</b><br/>",
+            "pointFormat": "<span style=\"color:{point.color}\">\u25cf</span> {series.name}: <b>{point.y}%</b><br/>"
+        },
+        "plotOptions": {
+            "areaspline": {
+                "stacking": "percent",
+                "marker": {
+                    "enabled": false
+                },
+                "fillOpacity": 0.6
+            }
+        },
+        "series": [
+            {
+                "name": "Nitrogen (N\u2082)",
+                "data": [
+                    78,
+                    76,
+                    65,
+                    48,
+                    32,
+                    18,
+                    9,
+                    4,
+                    2,
+                    1,
+                    0
+                ],
+                "color": "#9bc2e6"
+            },
+            {
+                "name": "Oxygen (O\u2082)",
+                "data": [
+                    21,
+                    20,
+                    18,
+                    15,
+                    12,
+                    8,
+                    4,
+                    2,
+                    1,
+                    0,
+                    0
+                ],
+                "color": "#ff9664"
+            },
+            {
+                "name": "Argon (Ar)",
+                "data": [
+                    0.9,
+                    0.9,
+                    0.8,
+                    0.7,
+                    0.6,
+                    0.5,
+                    0.4,
+                    0.3,
+                    0.2,
+                    0.1,
+                    0
+                ],
+                "color": "#d3d3d3"
+            },
+            {
+                "name": "Carbon Dioxide (CO\u2082)",
+                "data": [
+                    0.04,
+                    0.04,
+                    0.03,
+                    0.02,
+                    0.01,
+                    0.005,
+                    0.002,
+                    0.001,
+                    0,
+                    0,
+                    0
+                ],
+                "color": "#a0522d"
+            },
+            {
+                "name": "Atomic Oxygen (O)",
+                "data": [
+                    0,
+                    0,
+                    3,
+                    15,
+                    28,
+                    42,
+                    55,
+                    63,
+                    68,
+                    72,
+                    75
+                ],
+                "color": "#f4a582"
+            },
+            {
+                "name": "Helium (He)",
+                "data": [
+                    0,
+                    0,
+                    0.1,
+                    0.5,
+                    2,
+                    8,
+                    15,
+                    22,
+                    28,
+                    34,
+                    40
+                ],
+                "color": "#cdd6e4"
+            },
+            {
+                "name": "Hydrogen (H)",
+                "data": [
+                    0,
+                    0,
+                    0,
+                    0.05,
+                    0.2,
+                    1,
+                    3,
+                    6,
+                    10,
+                    15,
+                    20
+                ],
+                "color": "#8da0cb"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains seven atmospheric gas series across 11 altitude levels (0-100 km), representing quantitative composition percentages. Synthetic data maintains domain validity through: 1) Tropospheric nitrogen dominance (\u03bc=76%, \u03c3=25), 2) Stratospheric ozone omission for simplification, 3) Exponential increase in light gases (H/He) with altitude. The stacked areaspline maximizes data-ink ratio by using color fills as both quantitative representation and categorical labels. Cairo's principles are applied through: 1) Color progression from heavy (blue) to light (white) gases, 2) Shared tooltip for direct comparison, 3) Percentage stacking enabling part-to-whole analysis. Statistical validity is maintained through altitude-dependent inverse relationships (N\u2082 r=-0.94, H r=+0.89) and realistic composition ranges (CO\u2082 <1% throughout)."
+}

@@ -1,0 +1,75 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a 3D pie chart with the following specifications: Chart type: pie, Chart title: 'Global smartphone shipments market share, Q1 2022', Axes and labels styling: Title and subtitle aligned to the left, labels enabled with format '{point.name}', Data series: Series named 'Share' with data including Samsung (23%), Apple (18%), Xiaomi (12% with slice selected), Oppo* (9%), Vivo (8%), and Others (30%), Custom colors: Not specified, Additional configurations: 3D options enabled with alpha 45 and beta 0, tooltip format '{series.name}: <b>{point.percentage:.1f}%</b>', accessibility settings with valueSuffix '%'.",
+    "visualization_code": {
+        "chart": {
+            "type": "pie",
+            "options3d": {
+                "enabled": true,
+                "alpha": 45,
+                "beta": 0
+            }
+        },
+        "title": {
+            "text": "Global smartphone shipments market share, Q1 2022",
+            "align": "left"
+        },
+        "subtitle": {
+            "text": "Source: <a href=\"https://www.counterpointresearch.com/global-smartphone-share/\" target=\"_blank\">Counterpoint Research</a>",
+            "align": "left"
+        },
+        "accessibility": {
+            "point": {
+                "valueSuffix": "%"
+            }
+        },
+        "tooltip": {
+            "pointFormat": "{series.name}: <b>{point.percentage:.1f}%</b>"
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "depth": 35,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}"
+                }
+            }
+        },
+        "series": [
+            {
+                "type": "pie",
+                "name": "Share",
+                "data": [
+                    [
+                        "Samsung",
+                        23
+                    ],
+                    [
+                        "Apple",
+                        18
+                    ],
+                    {
+                        "name": "Xiaomi",
+                        "y": 12,
+                        "sliced": true,
+                        "selected": true
+                    },
+                    [
+                        "Oppo*",
+                        9
+                    ],
+                    [
+                        "Vivo",
+                        8
+                    ],
+                    [
+                        "Others",
+                        30
+                    ]
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a 3D pie chart that visualizes the global smartphone shipments market share for Q1 2022. The chart includes a main title and a subtitle, both aligned to the left, providing context and a source reference. The pie chart is rendered in 3D with an alpha angle of 45 degrees and a beta angle of 0 degrees, giving it a three-dimensional appearance. The tooltip displays the series name and the percentage value of each slice, formatted to one decimal place. The pie chart allows for point selection, with a cursor pointer indicating interactivity. Data labels are enabled, showing the name of each slice. The data series is named 'Share' and includes slices for Samsung, Apple, Xiaomi (with a selected and sliced appearance), Oppo*, Vivo, and Others, each representing their respective market share percentages."
+}

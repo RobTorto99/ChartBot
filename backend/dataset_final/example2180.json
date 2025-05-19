@@ -1,0 +1,188 @@
+{
+    "visualization_prompt": "Generate an organization chart showing corporate hierarchy using Highcharts' drilldown capability with inverted layout",
+    "visualization_code": {
+        "chart": {
+            "type": "organization",
+            "inverted": true,
+            "height": 600,
+            "width": 800,
+            "backgroundColor": "#f8f9fa",
+            "margin": [
+                40,
+                20,
+                40,
+                60
+            ]
+        },
+        "title": {
+            "text": "Highcharts Organization Chart",
+            "style": {
+                "fontSize": "20px",
+                "color": "#2c3e50",
+                "fontWeight": "bold"
+            }
+        },
+        "series": [
+            {
+                "name": "Executive Structure",
+                "keys": [
+                    "from",
+                    "to"
+                ],
+                "data": [
+                    [
+                        "CO",
+                        "DIV01"
+                    ],
+                    [
+                        "CO",
+                        "DIV02"
+                    ],
+                    [
+                        "CO",
+                        "DIV03"
+                    ],
+                    [
+                        "CO",
+                        "DIV04"
+                    ],
+                    [
+                        "CO",
+                        "DIV05"
+                    ],
+                    [
+                        "CO",
+                        "DIV06"
+                    ]
+                ],
+                "nodes": [
+                    {
+                        "id": "CO",
+                        "title": "Chief Officer",
+                        "name": "CEO",
+                        "color": "#2c3e50"
+                    },
+                    {
+                        "id": "DIV01",
+                        "title": "Technology",
+                        "name": "R&D",
+                        "drilldown": "DIV01",
+                        "color": "#3498db"
+                    },
+                    {
+                        "id": "DIV02",
+                        "title": "Operations",
+                        "name": "Ops",
+                        "drilldown": "DIV02",
+                        "color": "#e74c3c"
+                    },
+                    {
+                        "id": "DIV03",
+                        "title": "Finance",
+                        "name": "CFO",
+                        "drilldown": "DIV03",
+                        "color": "#2ecc71"
+                    },
+                    {
+                        "id": "DIV04",
+                        "title": "Marketing",
+                        "name": "CMO",
+                        "drilldown": "DIV04",
+                        "color": "#9b59b6"
+                    },
+                    {
+                        "id": "DIV05",
+                        "title": "Sales",
+                        "name": "CSO",
+                        "drilldown": "DIV05",
+                        "color": "#f1c40f"
+                    },
+                    {
+                        "id": "DIV06",
+                        "title": "HR",
+                        "name": "CHRO",
+                        "drilldown": "DIV06",
+                        "color": "#e67e22"
+                    }
+                ],
+                "dataLabels": {
+                    "style": {
+                        "fontSize": "14px",
+                        "color": "#ffffff",
+                        "textOutline": "none"
+                    }
+                },
+                "link": {
+                    "type": "curved",
+                    "color": "#95a5a6",
+                    "width": 2
+                }
+            }
+        ],
+        "drilldown": {
+            "series": [
+                {
+                    "id": "DIV01",
+                    "data": [
+                        [
+                            "DIV01",
+                            "DEV"
+                        ],
+                        [
+                            "DIV01",
+                            "QA"
+                        ]
+                    ],
+                    "nodes": [
+                        {
+                            "id": "DEV",
+                            "name": "Development",
+                            "color": "#2980b9"
+                        },
+                        {
+                            "id": "QA",
+                            "name": "Quality Assurance",
+                            "color": "#3498db"
+                        }
+                    ]
+                },
+                {
+                    "id": "DIV02",
+                    "data": [
+                        [
+                            "DIV02",
+                            "LOG"
+                        ],
+                        [
+                            "DIV02",
+                            "SUP"
+                        ]
+                    ],
+                    "nodes": [
+                        {
+                            "id": "LOG",
+                            "name": "Logistics",
+                            "color": "#c0392b"
+                        },
+                        {
+                            "id": "SUP",
+                            "name": "Support",
+                            "color": "#e74c3c"
+                        }
+                    ]
+                }
+            ]
+        },
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle"
+        },
+        "tooltip": {
+            "outside": true,
+            "headerFormat": "<b>{point.key}</b><br>",
+            "pointFormat": "Role: {point.title}"
+        }
+    },
+    "visualization_explanation": "This organization chart uses a two-level hierarchical structure with synthetic executive roles and departments. The primary series establishes C-level to division relationships using curved links and distinct node colors. Drilldown series reveal department-level structures with color variants maintaining parent-child visual relationships. Synthetic data follows corporate hierarchy patterns with 1:2 branching ratio in drilldown levels. The inverted layout optimizes horizontal space usage while maintaining top-down reading direction. Color choices follow Cairo's principles of discriminability with sufficient luminance contrast (\u0394L > 15). Node spacing adheres to Highcharts' organization chart algorithms for collision avoidance. Drilldown interactions preserve context through persistent parent nodes and breadcrumb navigation."
+}

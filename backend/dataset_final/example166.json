@@ -1,0 +1,161 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart titled 'Solar Employment Growth by Sector, 2010-2016'. The chart should have styled axes and labels with specific colors and font sizes. The data series should include 'Installation', 'Manufacturing', 'Sales & Distribution', 'Project Development', and 'Other' with their respective data points. Custom colors should be used for each series. Additional configurations should include responsive settings for the legend and chart margins.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "styledMode": true
+        },
+        "title": {
+            "text": "Solar Employment Growth by Sector, 2010-2016",
+            "style": {
+                "color": "#333",
+                "fontSize": "18px"
+            }
+        },
+        "subtitle": {
+            "text": "Source: thesolarfoundation.com",
+            "style": {
+                "color": "#666",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                2010,
+                2011,
+                2012,
+                2013,
+                2014,
+                2015,
+                2016
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Number of Employees",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "legend": {
+            "layout": "vertical",
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#444",
+                "fontSize": "12px"
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "label": {
+                    "connectorAllowed": false
+                },
+                "pointStart": 2010
+            }
+        },
+        "series": [
+            {
+                "name": "Installation",
+                "data": [
+                    43934,
+                    52503,
+                    57177,
+                    69658,
+                    97031,
+                    119931,
+                    137133,
+                    154175
+                ],
+                "color": "#7cb5ec"
+            },
+            {
+                "name": "Manufacturing",
+                "data": [
+                    24916,
+                    24064,
+                    29742,
+                    29851,
+                    32490,
+                    30282,
+                    38121,
+                    40434
+                ],
+                "color": "#434348"
+            },
+            {
+                "name": "Sales & Distribution",
+                "data": [
+                    11744,
+                    17722,
+                    16005,
+                    19771,
+                    20185,
+                    24377,
+                    32147,
+                    39387
+                ],
+                "color": "#90ed7d"
+            },
+            {
+                "name": "Project Development",
+                "data": [
+                    null,
+                    null,
+                    7988,
+                    12169,
+                    15112,
+                    22452,
+                    34400,
+                    34227
+                ],
+                "color": "#f7a35c"
+            },
+            {
+                "name": "Other",
+                "data": [
+                    12908,
+                    5948,
+                    8105,
+                    11248,
+                    8989,
+                    11816,
+                    18274,
+                    18111
+                ],
+                "color": "#8085e9"
+            }
+        ],
+        "responsive": {
+            "rules": [
+                {
+                    "condition": {
+                        "maxWidth": 500
+                    },
+                    "chartOptions": {
+                        "legend": {
+                            "layout": "horizontal",
+                            "align": "center",
+                            "verticalAlign": "bottom"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart titled 'Solar Employment Growth by Sector, 2010-2016'. The chart includes styled axes and labels with specific colors and font sizes for better readability. The data series consists of five categories: 'Installation', 'Manufacturing', 'Sales & Distribution', 'Project Development', and 'Other', each with its own set of data points and custom color. The legend is positioned vertically on the right side of the chart, and the chart includes responsive settings to adjust the legend layout when the chart width is less than or equal to 500 pixels. This configuration ensures that the chart is both visually appealing and functional across different screen sizes."
+}

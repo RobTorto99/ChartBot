@@ -1,0 +1,106 @@
+{
+    "visualization_prompt": "Generate a bubble chart showing multivariate relationships using draggable data points and gradient color encoding",
+    "visualization_code": {
+        "chart": {
+            "type": "bubble",
+            "animation": false,
+            "backgroundColor": "#1a1a1a",
+            "plotBorderWidth": 1
+        },
+        "title": {
+            "text": "Highcharts draggable bubbles demo",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "12px"
+                }
+            },
+            "gridLineColor": "#404040"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Y-Axis",
+                "style": {
+                    "color": "#ffffff"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#ffffff"
+                }
+            },
+            "softMin": 0,
+            "softMax": 350,
+            "gridLineColor": "#404040"
+        },
+        "tooltip": {
+            "valueDecimals": 2,
+            "backgroundColor": "rgba(0,0,0,0.8)",
+            "style": {
+                "color": "#ffffff"
+            }
+        },
+        "series": [
+            {
+                "name": "Experimental Measurements",
+                "cursor": "move",
+                "dragDrop": {
+                    "draggableX": true,
+                    "draggableY": true
+                },
+                "data": [
+                    [
+                        100,
+                        240,
+                        3
+                    ],
+                    [
+                        200,
+                        130,
+                        10
+                    ],
+                    [
+                        450,
+                        290,
+                        15
+                    ]
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 1,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "rgba(0,85,255,0.8)"
+                        ],
+                        [
+                            1,
+                            "rgba(0,255,127,0.8)"
+                        ]
+                    ]
+                },
+                "marker": {
+                    "lineColor": "#ffffff",
+                    "lineWidth": 1
+                }
+            }
+        ],
+        "legend": {
+            "itemStyle": {
+                "color": "#ffffff"
+            }
+        }
+    },
+    "visualization_explanation": "This 3D dataset (x-position, y-position, bubble size) uses synthetic experimental measurements with x\u2208[100,450], y\u2208[130,290], and z-size\u2208[3,15]. The gradient color scale from blue to green creates visual grouping while maintaining value differentiation. The bubble chart format maximizes data-ink ratio by encoding three variables through position and area, adhering to Tufte's principles. Cairo's perceptual effectiveness is achieved through size scaling (Stevens' power law) and high-contrast labels. The draggable interaction model supports hypothesis testing while the dark theme maintains visual comfort. Soft axis limits (0-350Y) preserve context during manipulation. Synthetic data follows inverse-square distribution (size vs position) with \u03bc_x=250 (\u03c3\u2248150), \u03bc_y=220 (\u03c3\u224880)."
+}

@@ -1,0 +1,95 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a line chart with the following specifications: Chart type: line, Chart title: Monthly Average Temperature, Axes and labels styling: Use a dark blue color for the title, a medium blue color for the axis labels, and a light blue color for the data labels. Font size for the title should be 20px, for axis labels 14px, and for data labels 12px. Data series: The series should represent the monthly average temperature with data points for each month from January to December. Custom colors: Use a gradient from light blue to dark blue for the line. Additional configurations: Set the chart background to a light gray color, enable y-axis zooming, and display a legend with the series name 'Temperature'.",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "zoomType": "y",
+            "backgroundColor": "#f0f0f0"
+        },
+        "title": {
+            "text": "Monthly Average Temperature",
+            "style": {
+                "color": "#00008B",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#1E90FF",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#1E90FF",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#1E90FF",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Temperature",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "x2": 0,
+                        "y1": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#ADD8E6"
+                        ],
+                        [
+                            1,
+                            "#00008B"
+                        ]
+                    ]
+                }
+            }
+        ],
+        "legend": {
+            "enabled": true
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a line chart displaying the monthly average temperature. The chart type is set to 'line' with y-axis zooming enabled. The chart title is styled with a dark blue color and a font size of 20px, while the axis labels and titles are styled with a medium blue color and a font size of 14px. The data labels are styled with a light blue color and a font size of 12px. The data series represents the monthly average temperature from January to December, with a gradient color from light blue to dark blue for the line. The chart background is set to a light gray color, and the legend is enabled with the series name 'Temperature'. This configuration ensures a visually appealing and informative chart that meets the specified requirements."
+}

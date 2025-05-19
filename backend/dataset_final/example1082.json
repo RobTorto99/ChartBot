@@ -1,0 +1,109 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly visitor numbers with significant value gaps using axis breaks and custom line rendering",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "zooming": {
+                "type": "xy"
+            }
+        },
+        "title": {
+            "text": "Visualized axis break"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "lineColor": "black",
+            "lineWidth": 2,
+            "title": false,
+            "tickInterval": 100,
+            "breaks": [
+                {
+                    "from": 500,
+                    "to": 3000
+                }
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontWeight": "bold"
+                },
+                "format": "{value:+,f}"
+            }
+        },
+        "series": [
+            {
+                "name": "Urban Museum",
+                "data": [
+                    44,
+                    128,
+                    180,
+                    345,
+                    3050,
+                    3590,
+                    3840,
+                    3630,
+                    3120,
+                    420,
+                    240,
+                    80
+                ],
+                "color": "#5F98CF",
+                "borderColor": "#2A4E6E"
+            },
+            {
+                "name": "Nature Reserve",
+                "data": [
+                    64,
+                    138,
+                    164,
+                    408,
+                    3120,
+                    3540,
+                    3875,
+                    3420,
+                    720,
+                    320,
+                    160,
+                    20
+                ],
+                "color": "#90BE6D",
+                "borderColor": "#4A634E"
+            }
+        ],
+        "plotOptions": {
+            "column": {
+                "borderWidth": 1,
+                "groupPadding": 0.15
+            }
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "fontSize": "13px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 12-month categorical temporal data with quantitative visitor counts (\u03bc\u2081=1523, \u03c3\u2081=1482 for Urban Museum; \u03bc\u2082=1277, \u03c3\u2082=1431 for Nature Reserve). Synthetic values exhibit bimodal distribution with summer peaks (May-Sep) exceeding 3000 visitors, requiring axis break implementation. Data follows realistic tourism patterns with winter lows (<500 visitors) and 15-20% inter-attraction variance. The column chart maximizes data-ink ratio by using direct value encoding and minimal gridlines. Cairo's perceptual principles are applied through position-aligned quantitative scales and hue differentiation for series. Axis break visualization with slanted lines maintains data continuity perception while accommodating extreme value ranges. Zigzag column top markers provide local discontinuity cues without distorting relative bar heights."
+}

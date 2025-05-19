@@ -1,0 +1,132 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Monthly Sales Data'. The chart should have axes and labels styled with specific colors and font sizes. The data series should include monthly sales data with the name 'Sales' and specific data points. Custom colors should be applied to the series. Additional configurations should include chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 50,
+            "marginBottom": 70
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Months",
+                "style": {
+                    "color": "#444444",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales",
+                "style": {
+                    "color": "#444444",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    [
+                        "January",
+                        29.9
+                    ],
+                    [
+                        "February",
+                        71.5
+                    ],
+                    [
+                        "March",
+                        106.4
+                    ],
+                    [
+                        "April",
+                        129.2
+                    ],
+                    [
+                        "May",
+                        144.0
+                    ],
+                    [
+                        "June",
+                        176.0
+                    ],
+                    [
+                        "July",
+                        135.6
+                    ],
+                    [
+                        "August",
+                        148.5
+                    ],
+                    {
+                        "name": "September",
+                        "y": 216.4,
+                        "selected": true,
+                        "sliced": true
+                    },
+                    [
+                        "October",
+                        194.1
+                    ],
+                    [
+                        "November",
+                        95.6
+                    ],
+                    [
+                        "December",
+                        54.4
+                    ]
+                ],
+                "color": "#008080",
+                "marker": {
+                    "enabled": false
+                },
+                "showInLegend": true
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#555555",
+                "fontSize": "12px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart titled 'Monthly Sales Data'. The chart includes specific styling for axes and labels, with defined colors and font sizes. The data series, named 'Sales', contains monthly sales data with custom colors applied. Additional configurations include settings for chart margins, background color, and legend. The legend is enabled and styled with a specific font size and color. This setup ensures a visually appealing and informative chart that meets the specified requirements."
+}

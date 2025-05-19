@@ -1,0 +1,82 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the following specifications: Chart type: spline, Chart title: 'Temperature Variation', Axes and labels styling: Use a dark gray color (#333) for the title and labels, with a font size of 14px for the title and 12px for the labels, Data series: The data series should include a single series named 'Temperature' with the data points [-10, -5, 0, 5, 10, 15, 10, 10, 5, 0, -5], Custom colors: Use the colors #f7a35c for values below 0, #7cb5ec for values between 0 and 10, and #90ed7d for values above 10, Additional configurations: Set the chart background to a light gray color (#f0f0f0), add a legend with the title 'Legend', and set the chart margins to 50 pixels on all sides.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f0f0f0",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Temperature Variation",
+            "style": {
+                "color": "#333",
+                "fontSize": "14px"
+            }
+        },
+        "legend": {
+            "title": {
+                "text": "Legend"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Temperature",
+                "data": [
+                    -10,
+                    -5,
+                    0,
+                    5,
+                    10,
+                    15,
+                    10,
+                    10,
+                    5,
+                    0,
+                    -5
+                ],
+                "zones": [
+                    {
+                        "value": 0,
+                        "color": "#f7a35c"
+                    },
+                    {
+                        "value": 10,
+                        "color": "#7cb5ec"
+                    },
+                    {
+                        "color": "#90ed7d"
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a spline chart with a title 'Temperature Variation'. The chart type is set to 'spline', and the background color is light gray (#f0f0f0) with margins of 50 pixels on all sides. The title and axis labels are styled with a dark gray color (#333) and specific font sizes. The data series includes a single series named 'Temperature' with data points ranging from -10 to 15. The series uses custom colors to differentiate zones: values below 0 are colored #f7a35c, values between 0 and 10 are colored #7cb5ec, and values above 10 are colored #90ed7d. Additionally, a legend with the title 'Legend' is included to provide context for the data series."
+}

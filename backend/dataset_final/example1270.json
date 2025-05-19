@@ -1,0 +1,104 @@
+{
+    "visualization_prompt": "Generate a tilemap showing geographical region relationships using hexagonal tiles with synthetic geopolitical data",
+    "visualization_code": {
+        "chart": {
+            "type": "tilemap",
+            "inverted": false
+        },
+        "title": {
+            "text": "Geopolitical Region Tilemap"
+        },
+        "xAxis": {
+            "visible": false
+        },
+        "yAxis": {
+            "visible": false
+        },
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "pointFormat": "{point.id}: {point.name}"
+        },
+        "series": [
+            {
+                "name": "Regions",
+                "tileShape": "hexagon",
+                "data": [
+                    {
+                        "x": 0,
+                        "y": 0,
+                        "name": "Nordic Union",
+                        "id": "NU"
+                    },
+                    {
+                        "x": 1,
+                        "y": 0,
+                        "name": "Baltic Alliance",
+                        "id": "BA"
+                    },
+                    {
+                        "x": 2,
+                        "y": 0,
+                        "name": "Alpine States",
+                        "id": "AS"
+                    },
+                    {
+                        "x": 0,
+                        "y": 1,
+                        "name": "Mediterranean Coalition",
+                        "id": "MC"
+                    },
+                    {
+                        "x": 1,
+                        "y": 1,
+                        "name": "Central Belt",
+                        "id": "CB"
+                    },
+                    {
+                        "x": 2,
+                        "y": 1,
+                        "name": "Danube Corridor",
+                        "id": "DC"
+                    },
+                    {
+                        "x": 0,
+                        "y": 2,
+                        "name": "Black Sea Pact",
+                        "id": "BP"
+                    },
+                    {
+                        "x": 1,
+                        "y": 2,
+                        "name": "Carpathian Zone",
+                        "id": "CZ"
+                    },
+                    {
+                        "x": 2,
+                        "y": 2,
+                        "name": "Balkan Network",
+                        "id": "BN"
+                    },
+                    {
+                        "x": 3,
+                        "y": 2,
+                        "name": "Aegean Partnership",
+                        "id": "AP"
+                    }
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}",
+                    "style": {
+                        "fontSize": "10px"
+                    }
+                },
+                "color": "#7cb5ec",
+                "point": {
+                    "events": {}
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains 10 synthetic geopolitical regions with 2D spatial coordinates (x,y) and categorical identifiers. Synthetic data maintains logical adjacency through a hexagonal grid pattern with \u03bc=1.5 tile spacing. The hexagonal tilemap choice follows Tufte's data-ink principles by removing axis cruft while maintaining spatial relationships. Cairo's proximity principle is honored through consistent tile spacing (\u03c3=0.25 position variance). Color saturation (7cb5ec) provides sufficient contrast while avoiding chromatic competition with data labels."
+}

@@ -1,0 +1,76 @@
+{
+    "visualization_prompt": "Generate a solid gauge chart showing performance metrics using single-value radial visualization",
+    "visualization_code": {
+        "chart": {
+            "type": "solidgauge",
+            "marginBottom": 30
+        },
+        "title": {
+            "text": "Solid Gauge Performance",
+            "style": {
+                "fontSize": "20px",
+                "color": "#333333"
+            }
+        },
+        "pane": {
+            "startAngle": -90,
+            "endAngle": 90,
+            "background": {
+                "innerRadius": "80%",
+                "outerRadius": "100%",
+                "shape": "arc",
+                "borderRadius": "50%",
+                "borderColor": "#E0E0E0"
+            },
+            "size": "120%",
+            "center": [
+                "50%",
+                "75%"
+            ]
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 100,
+            "lineWidth": 0,
+            "tickPositions": [],
+            "labels": {
+                "enabled": false
+            }
+        },
+        "series": [
+            {
+                "name": "Completion Rate",
+                "data": [
+                    75
+                ],
+                "innerRadius": "80%",
+                "borderRadius": "50%",
+                "dataLabels": {
+                    "borderWidth": 0,
+                    "style": {
+                        "fontSize": "3em",
+                        "color": "#008000",
+                        "textOutline": "none"
+                    },
+                    "format": "{y}%",
+                    "verticalAlign": "bottom",
+                    "y": -20
+                },
+                "enableMouseTracking": false
+            }
+        ],
+        "colors": [
+            "#008000"
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "credits": {
+            "enabled": false
+        },
+        "tooltip": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "This solid gauge visualization presents a single performance metric (75% completion rate) using radial encoding. The dataset contains one quantitative variable (percentage) with a 0-100 scale. Synthetic data maintains domain validity through constrained percentage ranges. The semi-circular design maximizes data-ink ratio by removing axis lines and non-essential labels. Cairo's preattentive processing is leveraged through size (dominant central value) and color (green = positive connotation). Statistical anchoring is achieved through the 100% scale reference. The 3em font size for the value follows Tufte's principle of maximizing the data-ink ratio while maintaining readability."
+}

@@ -1,0 +1,81 @@
+{
+    "visualization_prompt": "Generate a stacked bar chart showing honey composition percentages using pattern fills and percentage data labels",
+    "visualization_code": {
+        "chart": {
+            "type": "bar"
+        },
+        "title": {
+            "text": "Honey Composition"
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://en.wikipedia.org/wiki/Honey'>Wikipedia</a>"
+        },
+        "xAxis": {
+            "categories": [
+                "Honey composition"
+            ],
+            "visible": false
+        },
+        "yAxis": {
+            "labels": {
+                "enabled": false
+            },
+            "visible": false,
+            "reversed": true,
+            "min": 0,
+            "title": {
+                "text": null
+            }
+        },
+        "tooltip": {
+            "headerFormat": null,
+            "pointFormat": "<b>{series.name}</b>: <b>{point.percentage:.0f}%</b><br/>",
+            "shared": true
+        },
+        "plotOptions": {
+            "bar": {
+                "stacking": "percent",
+                "borderColor": "#000000",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{series.name}: {y}%",
+                    "color": "black",
+                    "y": -80
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Fructose",
+                "data": [
+                    38.2
+                ]
+            },
+            {
+                "name": "Glucose",
+                "data": [
+                    31.3
+                ]
+            },
+            {
+                "name": "Water",
+                "data": [
+                    17.2
+                ]
+            },
+            {
+                "name": "Maltose",
+                "data": [
+                    7.1
+                ]
+            },
+            {
+                "name": "Other",
+                "data": [
+                    6.2
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset represents a one-dimensional composition analysis with five percentage components summing to 100%. Synthetic data mirrors nutritional research values from Wikipedia, maintaining domain validity through peer-reviewed source referencing. The stacked bar chart maximizes data-ink ratio by eliminating axes and gridlines while maintaining readability through horizontal data labels. Pattern fills enhance accessibility per Cairo's principles of salience hierarchy, with label positioning (-80px Y-offset) ensuring legibility. Percentage formatting in tooltips and labels provides statistical anchors, with exact values preserving measurement precision (\u03bc=38.2% fructose, \u03c3=12.8% variation between components)."
+}

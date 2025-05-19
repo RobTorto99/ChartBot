@@ -1,0 +1,57 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Monthly Sales Data'. The x-axis should have categories 'Jan', 'Feb', 'Mar' and the y-axis should represent sales data. The data series should include one series named 'Sales' with data points [29.9, 71.5, 106.4]. The chart should have custom colors for the series, with a background color of #f9f9f9 and a legend positioned at the bottom of the chart. The axes labels should be styled with a font size of 12px and a color of #333333.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9"
+        },
+        "title": {
+            "text": "Monthly Sales Data"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar"
+            ],
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#333333"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales",
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#333333"
+                }
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#333333"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4
+                ],
+                "color": "#008000"
+            }
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart with a title 'Monthly Sales Data'. The x-axis categories are set to 'Jan', 'Feb', and 'Mar', representing the months. The y-axis is titled 'Sales' and displays the sales data. The data series includes one series named 'Sales' with data points [29.9, 71.5, 106.4]. The chart has a custom background color of #f9f9f9 and uses a custom color (#008000) for the series. The axes labels and titles are styled with a font size of 12px and a color of #333333. The legend is positioned at the bottom of the chart, centered horizontally."
+}

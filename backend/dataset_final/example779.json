@@ -1,0 +1,96 @@
+{
+    "visualization_prompt": "Create a Highcharts column chart with the following specifications: Chart type: column, Chart title: 'Generate a Histogram', Axes and labels styling: Define colors, font sizes, or styles for labels, axes, and titles, Data series: Provide the data for each series, including the name of each series and its data, formatted appropriately for Highcharts, Custom colors: Specific list of colors, if desired, Additional configurations: Other settings, such as chart margins, background, legend, etc.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "margin": [
+                100,
+                25,
+                100,
+                50
+            ],
+            "style": {
+                "fontFamily": "Abel,serif"
+            },
+            "events": {
+                "load": "function () { this.credits.element.onclick = function () { window.open('https://stackoverflow.com/users/1011544/jlbriggs?tab=profile'); }; }"
+            }
+        },
+        "credits": {
+            "text": "https://stackoverflow.com/users/1011544/jlbriggs",
+            "href": "https://stackoverflow.com/users/1011544/jlbriggs?tab=profile"
+        },
+        "title": {
+            "text": "Generate a Histogram",
+            "align": "left",
+            "margin": 10,
+            "x": 50,
+            "style": {
+                "fontWeight": "bold",
+                "color": "rgba(0,0,0,.9)"
+            }
+        },
+        "subtitle": {
+            "text": "From raw data array",
+            "align": "left",
+            "x": 52
+        },
+        "legend": {
+            "enabled": true
+        },
+        "plotOptions": {
+            "series": {
+                "pointPadding": 0,
+                "groupPadding": 0,
+                "borderWidth": 0.5,
+                "borderColor": "rgba(255,255,255,0.5)"
+            }
+        },
+        "xAxis": [
+            {
+                "title": {
+                    "text": "Range"
+                }
+            },
+            {
+                "linkedTo": 0,
+                "opposite": true,
+                "gridLineWidth": 0.5,
+                "gridLineColor": "rgba(0,0,0,0.25)",
+                "gridZIndex": 8,
+                "tickPositions": [
+                    "mad.median - (mad.mad * 3)",
+                    "mad.median - (mad.mad * 2)",
+                    "mad.median - mad.mad",
+                    "mad.median",
+                    "mad.median + mad.mad",
+                    "mad.median + (mad.mad * 2)",
+                    "mad.median + (mad.mad * 3)"
+                ],
+                "title": {
+                    "text": "Median and MAD"
+                },
+                "labels": {
+                    "style": {
+                        "color": "rgba(0,0,0,1)",
+                        "fontWeight": "bold"
+                    },
+                    "format": "{value:.2f}"
+                }
+            }
+        ],
+        "yAxis": {
+            "title": {
+                "text": "Frequency"
+            },
+            "min": 0
+        },
+        "series": [
+            {
+                "name": "Distribution",
+                "data": "binnedData"
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration object is designed to render a column chart with specific styling and data series. The chart type is set to 'column', and the title is 'Generate a Histogram'. The axes and labels are styled with defined colors and font sizes. The data series includes a name 'Distribution' and its data is provided as 'binnedData'. Custom colors are not explicitly defined in this configuration, but the global settings include a list of colors. Additional configurations include chart margins, background, and legend settings. The x-axis has two configurations: one for the range and another linked to the first one for displaying the median and MAD values. The y-axis is configured to display the frequency with a minimum value of 0. The chart also includes a plot line for the median value."
+}

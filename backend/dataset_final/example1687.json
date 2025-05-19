@@ -1,0 +1,113 @@
+{
+    "visualization_prompt": "Generate a line chart showing real-time submersible sensor depth correlations using static vertical axis scaling",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "backgroundColor": "#efe",
+            "inverted": true
+        },
+        "title": {
+            "text": "Real-Time Submersible Sensor Readings by Depth",
+            "style": {
+                "color": "#1a3353",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "staticScale": 24,
+            "title": {
+                "text": "Depth (m)",
+                "align": "high",
+                "style": {
+                    "color": "#1a3353"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sensor Value (V)",
+                "style": {
+                    "color": "#1a3353"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            },
+            "min": 0,
+            "max": 1
+        },
+        "series": [
+            {
+                "name": "Pressure Sensor",
+                "data": [
+                    [
+                        0,
+                        0.32
+                    ],
+                    [
+                        1,
+                        0.37
+                    ],
+                    [
+                        2,
+                        0.39
+                    ],
+                    [
+                        3,
+                        0.44
+                    ],
+                    [
+                        4,
+                        0.52
+                    ],
+                    [
+                        5,
+                        0.57
+                    ],
+                    [
+                        6,
+                        0.61
+                    ],
+                    [
+                        7,
+                        0.63
+                    ],
+                    [
+                        8,
+                        0.71
+                    ],
+                    [
+                        9,
+                        0.74
+                    ]
+                ],
+                "color": "#2c5fa8",
+                "marker": {
+                    "radius": 4
+                }
+            }
+        ],
+        "plotOptions": {
+            "series": {
+                "animation": {
+                    "duration": 300
+                },
+                "states": {
+                    "hover": {
+                        "haloSize": 10
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 10 depth-pressure pairs representing submersible sensor readings. Depth (quantitative interval scale) ranges 0-9 meters, sensor values (continuous ratio scale) show \u03bc=0.55 with \u03c3=0.15 variation. Synthetic data follows engineering specifications for underwater pressure sensors, simulating 0.05V/m linear trend with \u00b10.03V noise. The inverted line chart optimizes vertical space for depth representation while maintaining Tufte's data-ink ratio through minimal gridlines. Cairo's perceptual principles are applied through position > length encoding and sequential color coding. Static vertical scaling maintains spatial orientation during real-time updates, with sensor values anchored to expected 0-1V operational range. Trend line slope (\u03940.047V/m) provides immediate visual confirmation of depth-pressure relationship."
+}

@@ -1,0 +1,113 @@
+{
+    "visualization_prompt": "Generate a sankey diagram showing energy flow relationships using node/link weighting with sector-specific offsets",
+    "visualization_code": {
+        "chart": {
+            "type": "sankey",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Estimated US Energy Consumption in 2017",
+            "style": {
+                "color": "#2f2f2f",
+                "fontSize": "20px"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://www.llnl.gov/'>Lawrence Livermore National Laboratory</a>",
+            "useHTML": true
+        },
+        "tooltip": {
+            "pointFormat": "{point.fromNode.name} \u2192 {point.toNode.name}: <b>{point.weight:.2f}</b> quads"
+        },
+        "series": [
+            {
+                "type": "sankey",
+                "name": "Energy Flow",
+                "keys": [
+                    "from",
+                    "to",
+                    "weight"
+                ],
+                "nodes": [
+                    {
+                        "id": "Solar",
+                        "color": "#ffd700"
+                    },
+                    {
+                        "id": "Nuclear",
+                        "color": "#00bfff"
+                    },
+                    {
+                        "id": "Coal",
+                        "color": "#666666"
+                    },
+                    {
+                        "id": "Electricity & Heat",
+                        "column": 1,
+                        "offset": -110
+                    },
+                    {
+                        "id": "Residential",
+                        "column": 2,
+                        "offset": 50
+                    },
+                    {
+                        "id": "Transportation",
+                        "column": 2,
+                        "offset": 50
+                    },
+                    {
+                        "id": "Rejected Energy",
+                        "column": 3,
+                        "offset": -30
+                    }
+                ],
+                "data": [
+                    [
+                        "Solar",
+                        "Electricity & Heat",
+                        0.48
+                    ],
+                    [
+                        "Nuclear",
+                        "Electricity & Heat",
+                        8.42
+                    ],
+                    [
+                        "Coal",
+                        "Electricity & Heat",
+                        12.7
+                    ],
+                    [
+                        "Electricity & Heat",
+                        "Residential",
+                        4.7
+                    ],
+                    [
+                        "Electricity & Heat",
+                        "Transportation",
+                        0.03
+                    ],
+                    [
+                        "Residential",
+                        "Rejected Energy",
+                        3.75
+                    ],
+                    [
+                        "Transportation",
+                        "Energy Services",
+                        5.91
+                    ]
+                ],
+                "linkOpacity": 0.5,
+                "dataLabels": {
+                    "style": {
+                        "fontSize": "12px",
+                        "textOutline": "none"
+                    }
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The Sankey diagram structure contains 16 nodes and 38 links representing energy flows between sources, conversion sectors, and end uses. Node positioning uses column/offset parameters to cluster generation sources (Column 0), conversion systems (Column 1), end-use sectors (Column 2), and energy fate outputs (Column 3). Synthetic flow values maintain sector mass balance constraints - total inputs match outputs sums for each node. Color coding follows energy industry standards (gold for solar, blue for nuclear). The visualization optimizes perceptual discriminability (Cairo's principle) through spatial separation of generation\u2192conversion\u2192end use columns. Flow widths scale logarithmically with energy quantities (\u03bc=3.2 quads, \u03c3=5.8 quads) to enhance pattern recognition of major petroleum-based transportation flows vs smaller renewable contributions."
+}

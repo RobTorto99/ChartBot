@@ -37,7 +37,7 @@ def formatting_prompts_func(examples, tokenizer):
     return {"text": texts}
 
 def obtener_dataset(tokenizer):
-    dataset_path = "dataset_test_2/*.json"
+    dataset_path = "dataset_final/*.json"
     data = []
     json_files = glob.glob(dataset_path)
 

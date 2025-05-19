@@ -1,0 +1,93 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a 3D column chart with the title 'Fruit Consumption'. The chart should display the consumption of various fruits by two individuals, Jane and John. The x-axis should list the fruits, and the y-axis should represent the quantity of fruit eaten. The chart should have custom colors for the series and styled axes and labels.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "options3d": {
+                "enabled": true,
+                "alpha": 15,
+                "beta": 15
+            }
+        },
+        "title": {
+            "text": "Fruit Consumption"
+        },
+        "xAxis": {
+            "categories": [
+                "Apples",
+                "Bananas",
+                "Oranges",
+                "Pears",
+                "Kiwis",
+                "Grapes",
+                "Dates"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Fruit eaten",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "depth": 40,
+                "grouping": false,
+                "groupZPadding": 10
+            }
+        },
+        "series": [
+            {
+                "name": "Jane",
+                "data": [
+                    1,
+                    0,
+                    4,
+                    5,
+                    2,
+                    3,
+                    1
+                ],
+                "color": "#7cb5ec"
+            },
+            {
+                "name": "John",
+                "data": [
+                    5,
+                    7,
+                    3,
+                    6,
+                    4,
+                    2,
+                    1
+                ],
+                "color": "#434348"
+            }
+        ],
+        "legend": {
+            "itemStyle": {
+                "color": "#333",
+                "fontSize": "14px"
+            }
+        },
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a 3D column chart titled 'Fruit Consumption'. The chart displays the consumption of various fruits by two individuals, Jane and John. The x-axis lists the fruits, and the y-axis represents the quantity of fruit eaten. The chart includes 3D effects with an alpha and beta angle of 15 degrees. The axes and labels are styled with a dark color and a font size of 14px for labels and 16px for the y-axis title. The series data for Jane and John is provided, each with a custom color. The legend is also styled with a dark color and a font size of 14px. The chart does not display Highcharts credits."
+}

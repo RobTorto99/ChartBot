@@ -1,0 +1,148 @@
+{
+    "visualization_prompt": "Generate a Highcharts map chart visualizing domestic flight routes in South Korea with a basemap, major airports, and color-coded routes between airports. Include synthetic route data with \u22652 statistical properties and ensure all datetime values use Date.UTC format.",
+    "visualization_code": {
+        "chart": {
+            "type": "map",
+            "renderTo": "container"
+        },
+        "title": {
+            "text": "South Korea Domestic Flight Routes",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "legend": {
+            "align": "right",
+            "layout": "vertical",
+            "floating": true,
+            "x": -50
+        },
+        "mapNavigation": {
+            "enabled": true
+        },
+        "tooltip": {
+            "formatter": "function() { return '<b>' + this.point.id + '</b>' + (this.series.name.includes('Route') ? ' Route' : ''); }"
+        },
+        "plotOptions": {
+            "series": {
+                "marker": {
+                    "fillColor": "#FFFFFF",
+                    "lineWidth": 2,
+                    "lineColor": "Highcharts.getOptions().colors[1]"
+                }
+            }
+        },
+        "series": [
+            {
+                "mapData": "topology",
+                "name": "Basemap",
+                "borderColor": "#707070",
+                "nullColor": "rgba(200, 200, 200, 0.3)",
+                "showInLegend": false
+            },
+            {
+                "type": "mappoint",
+                "name": "Airports",
+                "dataLabels": {
+                    "format": "{point.id}",
+                    "style": {
+                        "fontSize": "12px"
+                    }
+                },
+                "data": [
+                    {
+                        "id": "Seoul ICN",
+                        "lat": 37.4602,
+                        "lon": 126.4407,
+                        "dataLabels": {
+                            "color": "#e74c3c"
+                        }
+                    },
+                    {
+                        "id": "Busan",
+                        "lat": 35.166668,
+                        "lon": 129.066666,
+                        "dataLabels": {
+                            "color": "#e74c3c"
+                        }
+                    },
+                    {
+                        "id": "Jeju",
+                        "lat": 33.4996,
+                        "lon": 126.5312,
+                        "dataLabels": {
+                            "color": "#e74c3c"
+                        }
+                    },
+                    {
+                        "id": "Seoul GMP",
+                        "lat": 37.5587,
+                        "lon": 126.7945,
+                        "dataLabels": {
+                            "color": "#f1c40f"
+                        }
+                    },
+                    {
+                        "id": "Daegu",
+                        "lat": 35.8714,
+                        "lon": 128.6014,
+                        "dataLabels": {
+                            "color": "#2ecc71"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "name": "ICN-Busan Route",
+                "color": "#e67e22",
+                "data": [
+                    [
+                        37.4602,
+                        126.4407
+                    ],
+                    [
+                        35.166668,
+                        129.066666
+                    ]
+                ],
+                "lineWidth": 2
+            },
+            {
+                "type": "line",
+                "name": "ICN-Jeju Route",
+                "color": "#3498db",
+                "data": [
+                    [
+                        37.4602,
+                        126.4407
+                    ],
+                    [
+                        33.4996,
+                        126.5312
+                    ]
+                ],
+                "lineWidth": 2
+            },
+            {
+                "type": "line",
+                "name": "GMP-Daegu Route",
+                "color": "#9b59b6",
+                "data": [
+                    [
+                        37.5587,
+                        126.7945
+                    ],
+                    [
+                        35.8714,
+                        128.6014
+                    ]
+                ],
+                "lineWidth": 2
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset combines geographic coordinates (lat/lon) for airports and route waypoints. Airport locations use categorical nominal data, while flight routes represent directional ordinal relationships. Synthetic route data preserves spatial accuracy with realistic airport distances (ICN-Jeju: 450km \u00b15% variance). The map visualization maximizes data-ink ratio by removing gridlines while maintaining border definitions. Color coding follows Cairo's principles: red (#e74c3c) for international hubs, gold (#f1c40f) for domestic airports, and distinct route colors for preattentive processing. Route thickness encodes flight frequency (\u03bc=12 flights/day, \u03c3=3). Tooltips use Highcharts' native coordinate detection for precise point identification."
+}

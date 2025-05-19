@@ -1,0 +1,105 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the following specifications: Chart type: spline, Chart title: Monthly Average Temperature, Axes and labels styling: Use a dark blue color for the title, axis labels, and tick marks, with a font size of 14px for the title and 12px for the axis labels, Data series: Provide the data for a single series named 'Temperature' with the given monthly average temperatures, Custom colors: Use a gradient from light blue to dark blue for the series, Additional configurations: Set the chart margins to 50px on all sides, add a light gray background to the chart, and include a legend with the series name.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "borderWidth": 1,
+            "plotBorderWidth": 1,
+            "spacingTop": 100,
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ],
+            "backgroundColor": "#f0f0f0"
+        },
+        "title": {
+            "text": "Monthly Average Temperature",
+            "style": {
+                "color": "#00008B",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#00008B",
+                    "fontSize": "12px"
+                }
+            },
+            "tickColor": "#00008B"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#00008B",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#00008B",
+                    "fontSize": "12px"
+                }
+            },
+            "tickColor": "#00008B"
+        },
+        "series": [
+            {
+                "name": "Temperature",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "x2": 0,
+                        "y1": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#ADD8E6"
+                        ],
+                        [
+                            1,
+                            "#00008B"
+                        ]
+                    ]
+                }
+            }
+        ],
+        "legend": {
+            "enabled": true
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart titled 'Monthly Average Temperature'. The chart type is set to 'spline', and the title is styled with a dark blue color and a font size of 14px. The x-axis and y-axis labels are styled with the same dark blue color and a font size of 12px. The x-axis categories represent the months of the year, and the y-axis title indicates the temperature in degrees Celsius. The data series named 'Temperature' contains the monthly average temperatures, and the series color is a gradient from light blue to dark blue. Additional configurations include setting the chart margins to 50px on all sides, adding a light gray background, and enabling the legend to display the series name."
+}

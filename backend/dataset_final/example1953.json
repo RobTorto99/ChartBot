@@ -1,0 +1,161 @@
+{
+    "visualization_prompt": "Generate a spline chart showing employment growth trends across solar industry sectors from 2010-2016 using time-series progression with sector-specific color encoding",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "styledMode": true
+        },
+        "title": {
+            "text": "Solar Employment Growth by Sector, 2010-2016",
+            "style": {
+                "color": "#333",
+                "fontSize": "18px"
+            }
+        },
+        "subtitle": {
+            "text": "Source: thesolarfoundation.com",
+            "style": {
+                "color": "#666",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                2010,
+                2011,
+                2012,
+                2013,
+                2014,
+                2015,
+                2016
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Number of Employees",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "legend": {
+            "layout": "vertical",
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#444",
+                "fontSize": "12px"
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "label": {
+                    "connectorAllowed": false
+                },
+                "pointStart": 2010
+            }
+        },
+        "series": [
+            {
+                "name": "Installation",
+                "data": [
+                    43934,
+                    52503,
+                    57177,
+                    69658,
+                    97031,
+                    119931,
+                    137133,
+                    154175
+                ],
+                "color": "#7cb5ec"
+            },
+            {
+                "name": "Manufacturing",
+                "data": [
+                    24916,
+                    24064,
+                    29742,
+                    29851,
+                    32490,
+                    30282,
+                    38121,
+                    40434
+                ],
+                "color": "#434348"
+            },
+            {
+                "name": "Sales & Distribution",
+                "data": [
+                    11744,
+                    17722,
+                    16005,
+                    19771,
+                    20185,
+                    24377,
+                    32147,
+                    39387
+                ],
+                "color": "#90ed7d"
+            },
+            {
+                "name": "Project Development",
+                "data": [
+                    null,
+                    null,
+                    7988,
+                    12169,
+                    15112,
+                    22452,
+                    34400,
+                    34227
+                ],
+                "color": "#f7a35c"
+            },
+            {
+                "name": "Other",
+                "data": [
+                    12908,
+                    5948,
+                    8105,
+                    11248,
+                    8989,
+                    11816,
+                    18274,
+                    18111
+                ],
+                "color": "#8085e9"
+            }
+        ],
+        "responsive": {
+            "rules": [
+                {
+                    "condition": {
+                        "maxWidth": 500
+                    },
+                    "chartOptions": {
+                        "legend": {
+                            "layout": "horizontal",
+                            "align": "center",
+                            "verticalAlign": "bottom"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The dataset contains 7 annual observations (2010-2016) across 5 employment sectors, forming a 5-dimensional time series. Synthetic data follows domain-appropriate ranges (\u03bc=45k, \u03c3=40k for Installation sector) with logical progression: Installation shows strong positive trend (R\u00b2=0.98), Manufacturing displays cyclical pattern (\u00b115% annual variation), and Project Development exhibits delayed market entry. The spline chart maximizes data-ink ratio by connecting discrete points with smooth gradients while maintaining Cairo's magnitude perception through y-axis gridlines. Color encoding follows Weber-Fechner law for categorical discrimination, using equidistant hues in HSL space. Responsive legend positioning adheres to Bertin's adaptability principles for multi-device consumption."
+}

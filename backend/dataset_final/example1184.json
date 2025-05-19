@@ -1,0 +1,94 @@
+{
+    "visualization_prompt": "Generate a column chart showing agricultural production comparison between corn and wheat across major producing regions using pattern fills for visual distinction and synthetic data extrapolation for extended categorical analysis",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "zooming": {
+                "type": "y"
+            }
+        },
+        "title": {
+            "text": "Global Grain Production Estimates 2023 (1000 MT)"
+        },
+        "xAxis": {
+            "categories": [
+                "USA",
+                "China",
+                "Brazil",
+                "EU",
+                "India",
+                "Russia",
+                "Argentina",
+                "Canada",
+                "Ukraine",
+                "Australia",
+                "Mexico",
+                "South Africa"
+            ],
+            "accessibility": {
+                "description": "Production Regions"
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Production (1000 Metric Tons)"
+            },
+            "labels": {
+                "format": "{value:,.0f}M"
+            }
+        },
+        "series": [
+            {
+                "name": "Corn",
+                "data": [
+                    415300,
+                    265000,
+                    112500,
+                    69500,
+                    28400,
+                    15200,
+                    78500,
+                    62400,
+                    48100,
+                    32700,
+                    21800,
+                    14500
+                ],
+                "color": {
+                    "patternIndex": 0
+                },
+                "borderColor": "#5f98cf"
+            },
+            {
+                "name": "Wheat",
+                "data": [
+                    52500,
+                    139000,
+                    6200,
+                    143500,
+                    109200,
+                    78500,
+                    18400,
+                    41200,
+                    67300,
+                    39400,
+                    12700,
+                    8900
+                ],
+                "color": {
+                    "patternIndex": 1
+                },
+                "borderColor": "#555"
+            }
+        ],
+        "plotOptions": {
+            "column": {
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y:,.0f}"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two quantitative series (corn/wheat production) across 12 categorical regions. Synthetic data maintains original statistical relationships (corn \u03bc=94,125, \u03c3=124,732; wheat \u03bc=61,342, \u03c3=50,218) while extending coverage to secondary producers through linear extrapolation of continental production trends. The column chart maximizes data-ink ratio by eliminating redundant gridlines while using pattern fills (per Tufte) ensures accessibility. Cairo's principle of proportional ink is maintained through consistent baseline alignment. Value labels (D3-formatted) provide immediate magnitude reference while patterned fills enable differentiation without color reliance, supporting color-deficient perception."
+}

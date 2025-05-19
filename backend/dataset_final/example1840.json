@@ -1,0 +1,121 @@
+{
+    "visualization_prompt": "Generate a bar chart showing gender distribution percentages in Swedish professions using percentage stacking",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Swedish top 10 professions dominated by women (16-64 years) in 2017",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Preschool teacher",
+                "Home care nurse",
+                "Nurse",
+                "Nanny",
+                "Nurse practitioner",
+                "Finance Assistant",
+                "Accountant",
+                "Nurse assistant",
+                "Office assistant/secretary"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            },
+            "accessibility": {
+                "description": "Profession categories"
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": null
+            },
+            "min": 0,
+            "max": 100,
+            "accessibility": {
+                "description": "Percentage distribution"
+            }
+        },
+        "colors": [
+            "#b9d4f8",
+            "#f8b9d4"
+        ],
+        "plotOptions": {
+            "bar": {
+                "stacking": "percent",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.percentage:.0f}%",
+                    "color": "#333333"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Men",
+                "data": [
+                    4,
+                    8,
+                    9,
+                    11,
+                    11,
+                    13,
+                    21,
+                    22,
+                    22
+                ],
+                "borderColor": "#8294C9"
+            },
+            {
+                "name": "Women",
+                "data": [
+                    96,
+                    92,
+                    91,
+                    89,
+                    89,
+                    87,
+                    79,
+                    78,
+                    78
+                ],
+                "borderColor": "#C67BC4"
+            }
+        ],
+        "tooltip": {
+            "shared": true,
+            "headerFormat": "<b>{point.key}</b><br>",
+            "pointFormat": "<span style='color:{point.color}'>\u25cf</span> {series.name}: <b>{point.percentage:.0f}%</b>"
+        },
+        "accessibility": {
+            "enabled": true,
+            "description": "Stacked bar chart showing gender distribution across professions in Sweden",
+            "point": {
+                "valueSuffix": "%"
+            }
+        },
+        "legend": {
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 9 professional categories with paired percentage values for male/female distribution. Synthetic data maintains perfect 100% stack totals (\u03bc=100% per category, \u03c3=0%) to emphasize complementary gender proportions. The stacked bar chart maximizes data-ink ratio by eliminating gridlines while maintaining clear percentage labels. Cairo's principles are applied through: 1) Pre-attentive color coding (blue/pink stereotype association) 2) Position-aligned labeling 3) Immediate proportion comparison through stacking. Color choices (#b9d4f8 blue with #8294C9 border for males, #f8b9d4 pink with #C67BC4 border for females) ensure 4.5:1 contrast ratio for accessibility. Tooltip reinforcement of exact percentages complements the visual encoding."
+}

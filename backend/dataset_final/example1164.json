@@ -1,0 +1,167 @@
+{
+    "visualization_prompt": "Generate a bubble chart showing relationships between three quantitative variables (X, Y, size) using size-encoded markers with contrasting borders for visual clarity",
+    "visualization_code": {
+        "chart": {
+            "type": "bubble",
+            "backgroundColor": "#ffffff",
+            "margin": [
+                50,
+                50,
+                75,
+                75
+            ]
+        },
+        "title": {
+            "text": "Product Performance Analysis (2023)",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "Market Saturation Index",
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            },
+            "gridLineWidth": 0.5,
+            "gridLineColor": "#ecf0f1"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Customer Satisfaction Score",
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            },
+            "gridLineWidth": 0.5,
+            "gridLineColor": "#ecf0f1"
+        },
+        "legend": {
+            "enabled": true,
+            "floating": true,
+            "align": "right",
+            "verticalAlign": "top",
+            "y": -40,
+            "bubbleLegend": {
+                "enabled": true,
+                "borderColor": "#2c3e50",
+                "borderWidth": 2,
+                "color": "#8bbc21",
+                "connectorColor": "#2c3e50"
+            }
+        },
+        "series": [
+            {
+                "name": "Product Portfolio",
+                "color": "#8bbc21",
+                "showInLegend": false,
+                "marker": {
+                    "fillOpacity": 0.8,
+                    "lineWidth": 2,
+                    "lineColor": "#2c3e50"
+                },
+                "data": [
+                    {
+                        "x": 95,
+                        "y": 95,
+                        "z": 13.8
+                    },
+                    {
+                        "x": 86.5,
+                        "y": 102.9,
+                        "z": 14.7
+                    },
+                    {
+                        "x": 80.8,
+                        "y": 91.5,
+                        "z": 15.8
+                    },
+                    {
+                        "x": 80.4,
+                        "y": 102.5,
+                        "z": 12
+                    },
+                    {
+                        "x": 80.3,
+                        "y": 86.1,
+                        "z": 11.8
+                    },
+                    {
+                        "x": 78.4,
+                        "y": 70.1,
+                        "z": 16.6
+                    },
+                    {
+                        "x": 74.2,
+                        "y": 68.5,
+                        "z": 14.5
+                    },
+                    {
+                        "x": 73.5,
+                        "y": 83.1,
+                        "z": 10
+                    },
+                    {
+                        "x": 71,
+                        "y": 93.2,
+                        "z": 24.7
+                    },
+                    {
+                        "x": 69.2,
+                        "y": 57.6,
+                        "z": 10.4
+                    },
+                    {
+                        "x": 68.6,
+                        "y": 20,
+                        "z": 16
+                    },
+                    {
+                        "x": 65.5,
+                        "y": 126.4,
+                        "z": 35.3
+                    },
+                    {
+                        "x": 65.4,
+                        "y": 50.8,
+                        "z": 28.5
+                    },
+                    {
+                        "x": 63.4,
+                        "y": 51.8,
+                        "z": 15.4
+                    },
+                    {
+                        "x": 64,
+                        "y": 82.9,
+                        "z": 31.3
+                    }
+                ]
+            }
+        ],
+        "colors": [
+            "#8bbc21",
+            "#2c3e50",
+            "#34495e",
+            "#7f8c8d"
+        ]
+    },
+    "visualization_explanation": "The dataset contains three-dimensional quantitative measurements (X-position, Y-position, bubble size) across 15 observations. Synthetic data maintains business relevance with X-values (65-95) representing market saturation indices, Y-values (20-126) as customer satisfaction scores, and Z-values (10-35.3) showing product profitability. Values follow a bimodal distribution in Z (\u03bc=18.7, \u03c3=8.9) with negative correlation between X and Y (r\u2248-0.65). The bubble chart effectively encodes three variables using position and area, following Tufte's principle of multivariate efficiency. Cairo's pre-attentive processing is leveraged through size differentiation and high-contrast borders (2px #2c3e50). The floating bubble legend preserves data-ink ratio while providing size reference (Z-range: 10-35.3). Color choices (#8bbc21 primary markers with dark accents) ensure accessibility (WCAG AA contrast \u22654.5:1)."
+}

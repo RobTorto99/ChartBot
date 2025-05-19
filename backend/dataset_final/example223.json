@@ -1,0 +1,68 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a pie chart with a pattern fill. The chart should have a title 'Pattern Fill Example' and a subtitle 'With Pattern Transform'. The pie chart should have one series with a single data point. The data point should have a custom pattern fill with a specific path, width, height, color, and pattern transform. The chart should also have custom styling for the axes and labels, including specific colors and font sizes. Additionally, the chart should have a white background and a legend positioned at the bottom.",
+    "visualization_code": {
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Pattern Fill Example",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px"
+            }
+        },
+        "subtitle": {
+            "text": "With Pattern Transform",
+            "style": {
+                "color": "#666666",
+                "fontSize": "16px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "legend": {
+            "layout": "vertical",
+            "align": "right",
+            "verticalAlign": "bottom"
+        },
+        "series": [
+            {
+                "type": "pie",
+                "borderColor": "#6070a0",
+                "data": [
+                    {
+                        "y": 1,
+                        "color": {
+                            "pattern": {
+                                "path": "M 0 0 L 5 10 L 10 0",
+                                "width": 10,
+                                "height": 10,
+                                "color": "#6070a0",
+                                "patternTransform": "scale(3) rotate(30)"
+                            }
+                        }
+                    }
+                ],
+                "dataLabels": {
+                    "enabled": false
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a pie chart with a custom pattern fill. The chart has a title 'Pattern Fill Example' and a subtitle 'With Pattern Transform', both styled with specific colors and font sizes. The pie chart contains one series with a single data point, which is filled with a custom pattern defined by a path, width, height, color, and pattern transform. The axes and labels are styled with specific colors and font sizes for better readability. The chart background is set to white, and the legend is positioned at the bottom right of the chart. This configuration ensures a visually appealing and informative pie chart with a unique pattern fill effect."
+}

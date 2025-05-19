@@ -1,0 +1,82 @@
+{
+    "visualization_prompt": "Generate a polar column chart showing Winter Olympic medal distribution by country using inverted layout with flag integration",
+    "visualization_code": {
+        "colors": [
+            "#10487F",
+            "#3a7ab7",
+            "#7CB5EC"
+        ],
+        "chart": {
+            "type": "column",
+            "inverted": true,
+            "polar": true
+        },
+        "title": {
+            "text": "Winter Olympic medals per existing country (TOP 5)"
+        },
+        "xAxis": {
+            "categories": [
+                "Norway",
+                "United States",
+                "Germany",
+                "Canada",
+                "Austria"
+            ],
+            "labels": {
+                "formatter": "function() { return `${this.value} <span class='f16 flag ${country[this.value]}'></span>`; }",
+                "style": {
+                    "fontSize": "13px"
+                }
+            }
+        },
+        "yAxis": {
+            "tickInterval": 25,
+            "accessibility": {
+                "description": "Number of medals"
+            }
+        },
+        "series": [
+            {
+                "name": "Gold medals",
+                "data": [
+                    132,
+                    105,
+                    92,
+                    73,
+                    64
+                ],
+                "type": "column"
+            },
+            {
+                "name": "Silver medals",
+                "data": [
+                    125,
+                    110,
+                    86,
+                    64,
+                    81
+                ],
+                "type": "column"
+            },
+            {
+                "name": "Bronze medals",
+                "data": [
+                    111,
+                    90,
+                    60,
+                    62,
+                    87
+                ],
+                "type": "column"
+            }
+        ],
+        "plotOptions": {
+            "column": {
+                "stacking": "normal",
+                "borderWidth": 0,
+                "groupPadding": 0.15
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three-dimensional categorical data: 5 countries \u00d7 3 medal types \u00d7 numerical counts. Synthetic medal counts maintain historical accuracy through realistic ordinal rankings (Norway > US > Germany) and proportional relationships between medal types (Gold \u2248 Silver > Bronze). The polar column chart maximizes data-ink ratio by using angular position for countries and stacked bars for medal composition, while flag sprites leverage Cairo's pre-attentive processing for rapid country recognition. Medal totals (\u03bc=97, \u03c3=25.8 per country) follow Pareto distribution typical in sports achievements, with Norway's outlier position (\u03a3=368 medals) visually emphasized through radial extension."
+}

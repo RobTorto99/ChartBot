@@ -1,0 +1,103 @@
+{
+    "visualization_prompt": "Create a Highcharts area chart with high contrast mode enabled and custom colors defined. The chart should have a title 'High contrast mode with custom colors'. The axes and labels should be styled with specific colors and font sizes. The data series should include three series with the given data points. Additionally, configure the chart with custom colors and other settings such as chart margins, background, and legend.",
+    "visualization_code": {
+        "chart": {
+            "type": "area"
+        },
+        "title": {
+            "text": "High contrast mode with custom colors",
+            "style": {
+                "color": "#000000",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#000000",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#000000",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#000000",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "accessibility": {
+            "highContrastMode": true,
+            "highContrastTheme": {
+                "colors": [
+                    "#FFFFFF",
+                    "#f9455a",
+                    "#041867"
+                ]
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    5,
+                    5,
+                    5,
+                    5,
+                    5,
+                    5
+                ]
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ]
+            },
+            {
+                "name": "Series 3",
+                "data": [
+                    5,
+                    4,
+                    3,
+                    2,
+                    1,
+                    0
+                ]
+            }
+        ],
+        "colors": [
+            "#FFFFFF",
+            "#f9455a",
+            "#041867"
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#000000",
+                "fontSize": "12px"
+            }
+        },
+        "plotOptions": {
+            "area": {
+                "marker": {
+                    "enabled": false
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts configuration object is designed to render an area chart with high contrast mode enabled and custom colors defined. The chart title is set to 'High contrast mode with custom colors', and the axes and labels are styled with specific colors and font sizes to ensure readability. The data series includes three series, each with its own set of data points, and custom colors are applied to the series. Additional configurations include enabling the legend and setting the chart type to 'area'. The high contrast mode is enforced using the 'highContrastMode' option, and custom colors are defined within the 'highContrastTheme' object. This setup ensures that the chart is accessible and visually appealing with the specified customizations."
+}

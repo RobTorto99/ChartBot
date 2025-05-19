@@ -1,0 +1,102 @@
+{
+    "visualization_prompt": "Generate a dot plot showing political party seat distribution in a parliament using color-coded categorical positioning",
+    "visualization_code": {
+        "chart": {
+            "type": "dotplot",
+            "margin": [
+                20,
+                20,
+                40,
+                20
+            ],
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Stortinget Seat Distribution",
+            "style": {
+                "color": "#2f2f2f",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "type": "category",
+            "offset": 5,
+            "labels": {
+                "style": {
+                    "color": "#444",
+                    "fontSize": "12px",
+                    "fontFamily": "Arial"
+                }
+            }
+        },
+        "yAxis": {
+            "visible": false
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "name": "Seats",
+                "colorByPoint": true,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.y:+}",
+                    "style": {
+                        "fontSize": "14px",
+                        "textOutline": "none"
+                    }
+                },
+                "data": [
+                    {
+                        "name": "R",
+                        "y": 1,
+                        "color": "#9c0014"
+                    },
+                    {
+                        "name": "SV",
+                        "y": 11,
+                        "color": "#da47bb"
+                    },
+                    {
+                        "name": "AP",
+                        "y": 49,
+                        "color": "#e90031"
+                    },
+                    {
+                        "name": "SP",
+                        "y": -19,
+                        "color": "#a8cd4d"
+                    },
+                    {
+                        "name": "MDG",
+                        "y": 1,
+                        "color": "#3e8720"
+                    },
+                    {
+                        "name": "KrF",
+                        "y": -8,
+                        "color": "#f4b436"
+                    },
+                    {
+                        "name": "V",
+                        "y": 8,
+                        "color": "#14b48f"
+                    },
+                    {
+                        "name": "H",
+                        "y": 45,
+                        "color": "#00bbef"
+                    },
+                    {
+                        "name": "FrP",
+                        "y": 27,
+                        "color": "#005996"
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains univariate categorical data with party abbreviations (nominal scale) and seat counts (ratio scale). Synthetic data preserves real-world political party color codes while seat counts show bipolar distribution (\u03bc=12.89, \u03c3=23.37), reflecting coalition dynamics. The dot plot maximizes data-ink ratio by eliminating gridlines and axes while maintaining Cairo's principle of proportional ink through position-encoded quantities. Color saturation maintains categorical distinction (\u0394E > 20 between adjacent hues). Negative values indicate seat losses, with formatting using D3's +- prefix for rapid magnitude comparison."
+}

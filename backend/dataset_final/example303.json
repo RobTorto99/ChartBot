@@ -1,0 +1,58 @@
+{
+    "visualization_prompt": "Create a Highcharts pie chart with the title 'Registered private vehicles in Norway, by type of fuel, 2020'. The chart should have a gradient fill for decorative effect. The data series should include the names 'Petrol', 'Diesel', 'Electricity', and 'Other' with corresponding values 938899, 1229600, 325251, and 238751 respectively. The chart should have styled labels and axes with specific font sizes and colors. Additionally, the chart should include a tooltip that displays the percentage of each category and an accessibility feature that appends '%' to the point values.",
+    "visualization_code": {
+        "chart": {
+            "plotBackgroundColor": null,
+            "plotBorderWidth": null,
+            "plotShadow": false,
+            "type": "pie"
+        },
+        "title": {
+            "text": "Registered private vehicles in Norway, by type of fuel, 2020",
+            "align": "left"
+        },
+        "tooltip": {
+            "pointFormat": "{series.name}: <b>{point.percentage:.1f}%</b>"
+        },
+        "accessibility": {
+            "point": {
+                "valueSuffix": "%"
+            }
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<span style=\"font-size: 1.2em\"><b>{point.name}</b></span><br><span style=\"opacity: 0.6\">{point.percentage:.1f} %</span>",
+                    "connectorColor": "rgba(128,128,128,0.5)"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Share",
+                "data": [
+                    {
+                        "name": "Petrol",
+                        "y": 938899
+                    },
+                    {
+                        "name": "Diesel",
+                        "y": 1229600
+                    },
+                    {
+                        "name": "Electricity",
+                        "y": 325251
+                    },
+                    {
+                        "name": "Other",
+                        "y": 238751
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a pie chart that visualizes the distribution of registered private vehicles in Norway by type of fuel for the year 2020. The chart includes a title aligned to the left and a tooltip that displays the percentage of each category when hovered over. The pie slices are selectable, and data labels are enabled with a specific format that includes the name of the category and its percentage, styled with a larger font size for the name and a slightly transparent percentage value. The chart also includes accessibility features, ensuring that the percentage values are appended with '%' for better readability. The gradient fill for the pie slices adds a decorative effect, enhancing the visual appeal of the chart."
+}

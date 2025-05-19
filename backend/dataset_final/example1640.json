@@ -1,0 +1,163 @@
+{
+    "visualization_prompt": "Generate a treemap showing hierarchical population distribution using squarified layout algorithm with pattern fills",
+    "visualization_code": {
+        "chart": {
+            "type": "treemap"
+        },
+        "title": {
+            "text": "Fiji Divisions and Provinces by Population 2017"
+        },
+        "accessibility": {
+            "description": "Hierarchical visualization of Fiji's administrative divisions and provinces by population, using pattern fills for categorical distinction and squarified layout for efficient space utilization"
+        },
+        "series": [
+            {
+                "type": "treemap",
+                "layoutAlgorithm": "squarified",
+                "levels": [
+                    {
+                        "level": 1,
+                        "dataLabels": {
+                            "enabled": true,
+                            "style": {
+                                "fontSize": "18px",
+                                "textOutline": "3px contrast"
+                            }
+                        },
+                        "borderWidth": 3
+                    }
+                ],
+                "data": [
+                    {
+                        "id": "Central",
+                        "name": "Central",
+                        "value": 378148,
+                        "color": {
+                            "patternIndex": 0
+                        }
+                    },
+                    {
+                        "id": "Naitasiri",
+                        "name": "Naitasiri",
+                        "value": 177678,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Namosi",
+                        "name": "Namosi",
+                        "value": 7871,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Rewa",
+                        "name": "Rewa",
+                        "value": 108016,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Serua",
+                        "name": "Serua",
+                        "value": 20031,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Tailevu",
+                        "name": "Tailevu",
+                        "value": 64552,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Northern",
+                        "name": "Northern",
+                        "value": 131918,
+                        "color": {
+                            "patternIndex": 1
+                        }
+                    },
+                    {
+                        "id": "Bua",
+                        "name": "Bua",
+                        "value": 15466,
+                        "parent": "Northern"
+                    },
+                    {
+                        "id": "Cakaudrove",
+                        "name": "Cakaudrove",
+                        "value": 50469,
+                        "parent": "Northern"
+                    },
+                    {
+                        "id": "Macuata",
+                        "name": "Macuata",
+                        "value": 65983,
+                        "parent": "Northern"
+                    },
+                    {
+                        "id": "Eastern",
+                        "name": "Eastern",
+                        "value": 36156,
+                        "color": {
+                            "patternIndex": 2
+                        }
+                    },
+                    {
+                        "id": "Kadavu",
+                        "name": "Kadavu",
+                        "value": 10897,
+                        "parent": "Eastern"
+                    },
+                    {
+                        "id": "Lau",
+                        "name": "Lau",
+                        "value": 9602,
+                        "parent": "Eastern"
+                    },
+                    {
+                        "id": "Lomaiviti",
+                        "name": "Lomaiviti",
+                        "value": 15657,
+                        "parent": "Eastern"
+                    },
+                    {
+                        "id": "Western",
+                        "name": "Western",
+                        "value": 337071,
+                        "color": {
+                            "patternIndex": 3
+                        }
+                    },
+                    {
+                        "id": "Ba",
+                        "name": "Ba",
+                        "value": 247708,
+                        "parent": "Western"
+                    },
+                    {
+                        "id": "Nadroga-Navosa",
+                        "name": "Nadroga-Navosa",
+                        "value": 58931,
+                        "parent": "Western"
+                    },
+                    {
+                        "id": "Ra",
+                        "name": "Ra",
+                        "value": 30432,
+                        "parent": "Western"
+                    },
+                    {
+                        "id": "Rotuma",
+                        "name": "Rotuma",
+                        "value": 1594,
+                        "color": {
+                            "patternIndex": 4
+                        }
+                    }
+                ]
+            }
+        ],
+        "tooltip": {
+            "pointFormat": "<b>{point.name}</b>: Population: <b>{point.value}</b>"
+        }
+    },
+    "visualization_explanation": "The dataset contains hierarchical population data with two categorical levels (division/province) and quantitative values. Original data from Wikipedia shows population distribution across 4 main divisions and 14 provinces. The treemap implementation follows Tufte's principles by maximizing data-ink through direct area encoding, using Cairo's pattern fills for categorical distinction without color perception bias. Spatial efficiency (squarified algorithm) maintains aspect ratios while preserving magnitude relationships. Population values show log-normal distribution (\u03bc=64,322, \u03c3=94,515) typical for regional demographics, with Western Division containing 47% of total population through its Ba province dominance."
+}

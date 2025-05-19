@@ -1,0 +1,74 @@
+{
+    "visualization_prompt": "Create a Highcharts map chartOptions object to render a map of the United States with population density data. The chart should have a title 'US population density (/km\u00b2)', styled axes and labels with specific colors and font sizes, and a data series representing the population density for each state. Additionally, specify custom colors for the color axis and include configurations for chart margins, background, and legend.",
+    "visualization_code": {
+        "chart": {
+            "map": "countries/us/us-all",
+            "styledMode": true,
+            "borderWidth": 1
+        },
+        "title": {
+            "text": "US population density (/km\u00b2)",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "exporting": {
+            "sourceWidth": 600,
+            "sourceHeight": 500
+        },
+        "legend": {
+            "layout": "horizontal",
+            "borderWidth": 0,
+            "backgroundColor": "rgba(255,255,255,0.85)",
+            "floating": true,
+            "verticalAlign": "top",
+            "y": 25
+        },
+        "mapNavigation": {
+            "enabled": true
+        },
+        "colorAxis": {
+            "min": 1,
+            "type": "logarithmic",
+            "minColor": "#2b908f",
+            "maxColor": "#000022",
+            "stops": [
+                [
+                    0,
+                    "#EFEFFF"
+                ],
+                [
+                    0.5,
+                    "#7cb5ec"
+                ],
+                [
+                    1,
+                    "rgb(0,54,109)"
+                ]
+            ]
+        },
+        "series": [
+            {
+                "animation": {
+                    "duration": 1000
+                },
+                "data": [],
+                "joinBy": [
+                    "postal-code",
+                    "code"
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "color": "#FFFFFF",
+                    "format": "{point.code}"
+                },
+                "name": "Population density",
+                "tooltip": {
+                    "pointFormat": "{point.code}: {point.value}/km\u00b2"
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a map of the United States with population density data. The chart type is a map chart, which is suitable for geographical data visualization. The title of the chart is 'US population density (/km\u00b2)', styled with a dark gray color and a font size of 18px. The axes and labels are styled to ensure readability and consistency. The color axis uses a logarithmic scale to represent population density, with custom colors ranging from light blue to dark blue. The legend is positioned horizontally at the top of the chart, with a semi-transparent white background. The map navigation is enabled to allow users to interact with the map. The data series includes the population density data for each state, with data labels displaying the state code and tooltips showing the population density value per square kilometer."
+}

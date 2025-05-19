@@ -1,0 +1,82 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a 3D area chart with the following specifications: Chart type: area, Chart title: '3D Area Chart Example', Axes and labels styling: Use a dark theme with white text for labels and titles, Data series: Include one series with the name 'Sales' and data [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 20], Custom colors: Use a gradient from blue to green, Additional configurations: Enable 3D options with alpha 15, beta 15, and depth 50, set chart margins to 75, and use a dark background.",
+    "visualization_code": {
+        "chart": {
+            "type": "area",
+            "margin": 75,
+            "options3d": {
+                "enabled": true,
+                "alpha": 15,
+                "beta": 15,
+                "depth": 50
+            },
+            "backgroundColor": "#1a1a1a"
+        },
+        "title": {
+            "text": "3D Area Chart Example",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#ffffff"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales",
+                "style": {
+                    "color": "#ffffff"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#ffffff"
+                }
+            }
+        },
+        "plotOptions": {
+            "area": {
+                "depth": 25,
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#0000ff"
+                        ],
+                        [
+                            1,
+                            "#00ff00"
+                        ]
+                    ]
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    20
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a 3D area chart with a dark theme. The chart type is set to 'area', and 3D options are enabled with specific angles (alpha and beta) and depth. The chart title is '3D Area Chart Example' with white text styled to be easily readable on a dark background. The axes labels and titles are also styled in white to contrast with the dark background. The data series includes one series named 'Sales' with the provided data points. The area color is set to a gradient from blue to green, enhancing the visual appeal of the chart. Additional configurations include setting the chart margins to 75 and using a dark background color for the chart area."
+}

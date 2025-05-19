@@ -1,0 +1,105 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Operating Systems Trends'. The chart should have axes and labels styled with specific colors and font sizes. The data series should include the names of operating systems and their respective trend data. Custom colors should be applied to each series. Additional configurations should include chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline"
+        },
+        "title": {
+            "text": "Operating Systems Trends",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href=\"https://trends.google.com/trends/explore?date=all&q=%2Fm%2F02wxtgw,%2Fm%2F03wbl14,%2Fm%2F04r_8,%2Fm%2F0fpzzp,%2Fm%2F055yr\">Google Trends </a>",
+            "style": {
+                "color": "#666666",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "max": 100,
+            "title": {
+                "enabled": false
+            },
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "tooltip": {
+            "split": true,
+            "xDateFormat": "%B %Y",
+            "crosshairs": true
+        },
+        "data": {
+            "csvURL": "https://www.highcharts.com/samples/data/operating-systems-trends.csv"
+        },
+        "series": [
+            {
+                "name": "Windows",
+                "dashStyle": "ShortDashDot",
+                "color": "#0073e6"
+            },
+            {
+                "name": "macOS",
+                "dashStyle": "ShortDash",
+                "color": "#ff6600"
+            },
+            {
+                "name": "Linux",
+                "dashStyle": "Dash",
+                "color": "#33cc33"
+            },
+            {
+                "name": "Android",
+                "dashStyle": "ShortDot",
+                "color": "#9900cc"
+            },
+            {
+                "name": "iOS",
+                "dashStyle": "ShortDash",
+                "color": "#ffcc00"
+            }
+        ],
+        "colors": [
+            "#0073e6",
+            "#ff6600",
+            "#33cc33",
+            "#9900cc",
+            "#ffcc00"
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#555555",
+                "fontSize": "12px"
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "marker": {
+                    "enabled": false
+                }
+            }
+        },
+        "credits": {
+            "enabled": false
+        },
+        "exporting": {
+            "enabled": true
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart titled 'Operating Systems Trends'. The chart includes a subtitle with a link to the data source. The x-axis and y-axis labels are styled with a specific color and font size. The y-axis is set to a maximum value of 100, and the title is disabled. The tooltip is configured to split and display the date format in a readable format. The data is sourced from a CSV file, and each series is named after an operating system with a specific dash style and color. Custom colors are applied to each series, and the legend is enabled with specific styling. Additional configurations include disabling chart credits and enabling exporting options."
+}

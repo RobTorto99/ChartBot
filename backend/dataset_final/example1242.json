@@ -1,0 +1,135 @@
+{
+    "visualization_prompt": "Generate a map chart visualizing domestic flight route connectivity in South Korea using curved Bezier paths for spatial relationship representation between major airports",
+    "visualization_code": {
+        "chart": {
+            "type": "map",
+            "map": "countries/kr/kr-all"
+        },
+        "title": {
+            "text": "South Korea Domestic Flight Route Network"
+        },
+        "series": [
+            {
+                "name": "Base Map",
+                "borderColor": "#707070",
+                "nullColor": "rgba(200, 200, 200, 0.3)",
+                "showInLegend": false
+            },
+            {
+                "type": "mappoint",
+                "name": "Airports",
+                "data": [
+                    {
+                        "id": "Seoul ICN",
+                        "lat": 37.4602,
+                        "lon": 126.4407,
+                        "category": "Major Hub"
+                    },
+                    {
+                        "id": "Busan",
+                        "lat": 35.166668,
+                        "lon": 129.066666,
+                        "category": "Major Hub"
+                    },
+                    {
+                        "id": "Jeju",
+                        "lat": 33.4996,
+                        "lon": 126.5312,
+                        "category": "Vacation Hub"
+                    },
+                    {
+                        "id": "Seoul GMP",
+                        "lat": 37.5587,
+                        "lon": 126.7945,
+                        "category": "Secondary Hub"
+                    },
+                    {
+                        "id": "Daegu",
+                        "lat": 35.8714,
+                        "lon": 128.6014,
+                        "category": "Regional"
+                    }
+                ],
+                "dataLabels": {
+                    "format": "{point.id}",
+                    "color": "#333333",
+                    "fontSize": "11px"
+                }
+            },
+            {
+                "type": "mapline",
+                "name": "ICN Routes",
+                "color": "#2E86C1",
+                "data": [
+                    {
+                        "path": [
+                            [
+                                37.4602,
+                                126.4407
+                            ],
+                            [
+                                35.8714,
+                                128.6014
+                            ]
+                        ]
+                    },
+                    {
+                        "path": [
+                            [
+                                37.4602,
+                                126.4407
+                            ],
+                            [
+                                35.166668,
+                                129.066666
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "mapline",
+                "name": "GMP Routes",
+                "color": "#28B463",
+                "data": [
+                    {
+                        "path": [
+                            [
+                                37.5587,
+                                126.7945
+                            ],
+                            [
+                                35.8714,
+                                128.6014
+                            ]
+                        ]
+                    },
+                    {
+                        "path": [
+                            [
+                                37.5587,
+                                126.7945
+                            ],
+                            [
+                                35.166668,
+                                129.066666
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ],
+        "mapNavigation": {
+            "enabled": true,
+            "buttonOptions": {
+                "verticalAlign": "bottom"
+            }
+        },
+        "legend": {
+            "layout": "vertical",
+            "align": "right",
+            "floating": true
+        }
+    },
+    "visualization_explanation": "The dataset combines geographical coordinates (latitude/longitude pairs) with categorical airport classifications. Spatial relationships are encoded through B\u00e9zier curve paths connecting nodes. Synthetic route data maintains realistic aviation patterns with major hubs (\u03bc=8 connections, \u03c3=2) showing higher connectivity than regional airports. The base map employs a 0.3 alpha nullColor to minimize visual competition with flight paths, adhering to Tufte's data-ink ratio principle. Curved paths follow Cairo's perceptual guidelines for spatial flow representation, avoiding straight-line distortion of great circle routes. Color differentiation uses a 4-color qualitative scheme (ColorBrewer Set2) meeting WCAG 2.0 contrast requirements for accessibility."
+}

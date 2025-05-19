@@ -1,0 +1,58 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Monthly Average Temperature'. The x-axis should have labels aligned to the left, and the y-axis should have labels in a larger font size. The chart should display a single series named 'Temperature' with the provided data. The chart should have a white background, and the legend should be positioned at the bottom of the chart.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Monthly Average Temperature"
+        },
+        "xAxis": {
+            "labels": {
+                "align": "left",
+                "style": {
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)"
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        },
+        "series": [
+            {
+                "name": "Temperature",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ]
+            }
+        ],
+        "colors": [
+            "#008000"
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a spline chart with a title 'Monthly Average Temperature'. The x-axis labels are aligned to the left and styled with a larger font size, while the y-axis labels are also styled with a larger font size. The chart displays a single series named 'Temperature' with the given data. The chart background is set to white, and the legend is positioned at the bottom of the chart, centered horizontally. The series is colored green to provide a consistent visual theme."
+}

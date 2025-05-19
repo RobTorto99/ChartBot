@@ -1,0 +1,88 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the following specifications: Chart title: 'Monthly Average Rainfall'; Axes and labels styling: Use a dark blue color for the title, and set the font size of the x-axis labels to 12px; Data series: The series should be named 'Rainfall' and contain the provided data; Custom colors: Use a gradient from light blue to dark blue for the series; Additional configurations: Set the chart background to a light gray color, and include a legend with the series name.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f0f0f0"
+        },
+        "title": {
+            "text": "Monthly Average Rainfall",
+            "style": {
+                "color": "#00008B",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Rainfall (mm)"
+            }
+        },
+        "series": [
+            {
+                "name": "Rainfall",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "x2": 0,
+                        "y1": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#ADD8E6"
+                        ],
+                        [
+                            1,
+                            "#00008B"
+                        ]
+                    ]
+                }
+            }
+        ],
+        "legend": {
+            "enabled": true
+        },
+        "navigation": {
+            "buttonOptions": {
+                "symbolStroke": "blue"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart titled 'Monthly Average Rainfall'. The chart's background is set to a light gray color, and the title is styled with a dark blue color and a font size of 18px. The x-axis labels are styled with a font size of 12px. The data series is named 'Rainfall' and includes the monthly rainfall data. The series color is a gradient from light blue to dark blue. The chart also includes a legend that displays the series name. Additionally, the navigation buttons are styled with a blue stroke color."
+}

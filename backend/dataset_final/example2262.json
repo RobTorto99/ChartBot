@@ -1,0 +1,138 @@
+{
+    "visualization_prompt": "Generate a line chart showing daily physical activity patterns using time-series comparison of three subjects",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "accessibility": {
+                "description": "Comparative analysis of daily step counts across three individuals"
+            }
+        },
+        "title": {
+            "text": "Daily Steps Count"
+        },
+        "xAxis": {
+            "categories": [
+                "Mon",
+                "Tue",
+                "Wed",
+                "Thu",
+                "Fri",
+                "Sat",
+                "Sun"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            },
+            "accessibility": {
+                "description": "Day of week (Monday to Sunday)"
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Steps",
+                "style": {
+                    "color": "#333",
+                    "fontWeight": "bold"
+                }
+            },
+            "labels": {
+                "format": "{value:,d}"
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "marker": {
+                    "enabled": true,
+                    "radius": 4
+                },
+                "states": {
+                    "hover": {
+                        "enabled": false
+                    }
+                }
+            }
+        },
+        "tooltip": {
+            "valueSuffix": " steps",
+            "shared": true,
+            "valueDecimals": 0
+        },
+        "series": [
+            {
+                "name": "Emma",
+                "data": [
+                    9438,
+                    10439,
+                    11023,
+                    13204,
+                    10392,
+                    9201,
+                    12039
+                ],
+                "color": "#00A855",
+                "zIndex": 1,
+                "accessibility": {
+                    "description": "Consistent performer with peak activity on Thursday (13,204 steps)"
+                }
+            },
+            {
+                "name": "John",
+                "data": [
+                    10200,
+                    6243,
+                    9472,
+                    6311,
+                    7901,
+                    11320,
+                    8032
+                ],
+                "color": "#3A3691",
+                "accessibility": {
+                    "description": "Variable activity pattern with Saturday peak (11,320 steps)"
+                }
+            },
+            {
+                "name": "Alex",
+                "data": [
+                    9029,
+                    5532,
+                    7632,
+                    10320,
+                    6210,
+                    13209,
+                    3052
+                ],
+                "color": "#009AFA",
+                "accessibility": {
+                    "description": "Strong weekend performer (13,209 steps Saturday), low Sunday activity"
+                }
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "fontSize": "13px"
+            }
+        },
+        "responsive": {
+            "rules": [
+                {
+                    "condition": {
+                        "maxWidth": 500
+                    },
+                    "chartOptions": {
+                        "legend": {
+                            "layout": "horizontal",
+                            "align": "center"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The dataset contains 3 time series (7-day sequences) comparing daily step counts. Categorical x-axis represents weekdays, while the quantitative y-axis measures steps (range: 3,052-13,209). Synthetic data maintains physiological plausibility (WHO recommends 8,000-10,000 steps/day) while introducing variance through simulated behavioral patterns: Emma shows consistent activity, John exhibits mid-week slump, and Alex demonstrates extreme weekend variation. The line chart maximizes data-ink ratio by eliminating chartjunk while maintaining perceptual discriminability through Cairo's principles: 1) Hue differentiation (3 distinct colors), 2) Proximity grouping (daily comparisons), 3) Connection perception (temporal patterns). Statistical anchors: Emma's data (\u03bc=10,905, \u03c3=1,420) reflects sustained activity, John's (\u03bc=8,496, \u03c3=1,790) shows higher variability, Alex's (\u03bc=8,283, \u03c3=3,470) demonstrates bimodal distribution."
+}

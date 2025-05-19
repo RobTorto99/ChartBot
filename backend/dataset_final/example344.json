@@ -1,0 +1,68 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the title 'Live births in Norway'. The chart should use data from an HTML table with the id 'datatable'. The x-axis should be of type 'category' and should represent the years from 2018 to 2023. The y-axis should not allow decimals and should be titled 'Amount'. The chart should have two series: 'Boys' and 'Girls', each with corresponding data from the table. The chart should also include a subtitle with a source link to 'https://www.ssb.no/en/statbank/table/04231'. The chart should be styled with specific colors for the axes and labels, and should have a custom background color.",
+    "visualization_code": {
+        "data": {
+            "table": "datatable"
+        },
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#f9f9f9"
+        },
+        "title": {
+            "text": "Live births in Norway",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href=\"https://www.ssb.no/en/statbank/table/04231\" target=\"_blank\">SSB</a>",
+            "style": {
+                "color": "#666666",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "type": "category",
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "allowDecimals": false,
+            "title": {
+                "text": "Amount",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Boys",
+                "color": "#7cb5ec"
+            },
+            {
+                "name": "Girls",
+                "color": "#f7a35c"
+            }
+        ],
+        "legend": {
+            "itemStyle": {
+                "color": "#555555",
+                "fontSize": "12px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart with the title 'Live births in Norway'. The chart uses data from an HTML table with the id 'datatable', which contains data for the years 2018 to 2023, divided into two series: 'Boys' and 'Girls'. The x-axis is of type 'category' and represents the years, while the y-axis does not allow decimals and is titled 'Amount'. The chart includes a subtitle with a link to the source data. The styling includes specific colors for the chart background, title, subtitle, axes labels, and series colors. The legend is also styled with a consistent font size and color. This configuration ensures that the chart is visually appealing and informative, with clear and readable labels and titles."
+}

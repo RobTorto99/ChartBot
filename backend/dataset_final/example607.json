@@ -1,0 +1,70 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a gauge chart with a logarithmic axis. The chart should have a title 'Gauge with log axis', and the gauge should display a speed value with a suffix ' km/h'. The gauge should have three plot bands representing different speed ranges: green for 1-120 km/h, yellow for 120-160 km/h, and red for 160-200 km/h. The axes and labels should be styled with specific colors and font sizes. Additionally, the chart should have a custom button for rotating the gauge.",
+    "visualization_code": {
+        "chart": {
+            "type": "gauge",
+            "plotBackgroundColor": null,
+            "plotBackgroundImage": null,
+            "plotBorderWidth": 0,
+            "plotShadow": false
+        },
+        "title": {
+            "text": "Gauge with log axis"
+        },
+        "pane": {
+            "startAngle": -150,
+            "endAngle": 150
+        },
+        "yAxis": {
+            "min": 1,
+            "max": 200,
+            "type": "logarithmic",
+            "minorTickInterval": "auto",
+            "minorTickWidth": 1,
+            "minorTickLength": 10,
+            "minorTickPosition": "inside",
+            "minorTickColor": "#666",
+            "tickPixelInterval": 30,
+            "tickWidth": 2,
+            "tickPosition": "inside",
+            "tickLength": 10,
+            "tickColor": "#666",
+            "labels": {
+                "step": 2,
+                "rotation": "auto"
+            },
+            "title": {
+                "text": "km/h"
+            },
+            "plotBands": [
+                {
+                    "from": 1,
+                    "to": 120,
+                    "color": "#55BF3B"
+                },
+                {
+                    "from": 120,
+                    "to": 160,
+                    "color": "#DDDF0D"
+                },
+                {
+                    "from": 160,
+                    "to": 200,
+                    "color": "#DF5353"
+                }
+            ]
+        },
+        "series": [
+            {
+                "name": "Speed",
+                "data": [
+                    80
+                ],
+                "tooltip": {
+                    "valueSuffix": " km/h"
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a gauge chart with a logarithmic y-axis, which is suitable for displaying a range of values with a non-linear scale. The chart title is set to 'Gauge with log axis', and the gauge is styled with three plot bands to represent different speed ranges: green for 1-120 km/h, yellow for 120-160 km/h, and red for 160-200 km/h. The y-axis labels and ticks are styled with specific colors and sizes, ensuring clarity and readability. The series data includes a single value of 80 km/h, and the tooltip displays this value with a suffix ' km/h'. The chart is designed to be interactive, with a custom button for rotating the gauge, enhancing user experience."
+}

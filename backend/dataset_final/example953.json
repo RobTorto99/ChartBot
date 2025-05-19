@@ -1,0 +1,147 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Solar Employment Growth by Sector, 2010-2016'. The chart should have styled axes and labels with specific colors and font sizes. The data series should include 'Installation', 'Manufacturing', 'Sales & Distribution', 'Project Development', and 'Other' with their respective data points. Custom colors should be applied to the series, and additional configurations such as chart margins, background, and legend should be set.",
+    "visualization_code": {
+        "chart": {
+            "backgroundColor": "#f9f9f9",
+            "margin": [
+                50,
+                100,
+                80,
+                80
+            ]
+        },
+        "title": {
+            "text": "Solar Employment Growth by Sector, 2010-2016",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "subtitle": {
+            "text": "Source: thesolarfoundation.com",
+            "style": {
+                "color": "#666666",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "Year",
+                "style": {
+                    "color": "#444444",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Number of Employees",
+                "style": {
+                    "color": "#444444",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "legend": {
+            "layout": "proximate",
+            "align": "right",
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "14px"
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "pointStart": 2010,
+                "colorByPoint": false,
+                "colors": [
+                    "#7cb5ec",
+                    "#434348",
+                    "#90ed7d",
+                    "#f7a35c",
+                    "#8085e9"
+                ]
+            }
+        },
+        "series": [
+            {
+                "name": "Installation",
+                "data": [
+                    43934,
+                    52503,
+                    57177,
+                    69658,
+                    97031,
+                    119931,
+                    137133,
+                    null
+                ]
+            },
+            {
+                "name": "Manufacturing",
+                "data": [
+                    24916,
+                    24064,
+                    29742,
+                    29851,
+                    32490,
+                    30282,
+                    38121,
+                    40434
+                ]
+            },
+            {
+                "name": "Sales & Distribution",
+                "data": [
+                    11744,
+                    17722,
+                    16005,
+                    19771,
+                    20185,
+                    24377,
+                    32147,
+                    39387
+                ]
+            },
+            {
+                "name": "Project Development",
+                "data": [
+                    null,
+                    null,
+                    7988,
+                    12169,
+                    15112,
+                    22452,
+                    34400,
+                    34227
+                ]
+            },
+            {
+                "name": "Other",
+                "data": [
+                    12908,
+                    5948,
+                    8105,
+                    11248,
+                    8989,
+                    11816,
+                    18274,
+                    18111
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart with the specified title and subtitle. The chart includes five data series: 'Installation', 'Manufacturing', 'Sales & Distribution', 'Project Development', and 'Other', each with their respective data points. The axes and labels are styled with specific colors and font sizes to enhance readability. Custom colors are applied to the series to differentiate them visually. Additional configurations include setting the chart background color to a light gray and adjusting the chart margins to provide ample space around the chart elements. The legend is positioned to the right and styled to match the overall theme of the chart."
+}

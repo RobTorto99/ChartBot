@@ -1,0 +1,110 @@
+{
+    "visualization_prompt": "Generate a column chart showing proportional distribution of iceberg morphological types using categorical percentages with interactive tooltips",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "styledMode": true,
+            "animation": {
+                "duration": 1000,
+                "easing": "easeOutQuart"
+            }
+        },
+        "title": {
+            "text": "Iceberg Morphology Distribution in Iceberg Alley",
+            "style": {
+                "fontSize": "18px",
+                "color": "#2f2b38"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Blocky",
+                "Domed",
+                "Drydock",
+                "Pinnacled",
+                "Weathered"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#46465c",
+                    "fontWeight": "600"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Percentage of Total",
+                "style": {
+                    "color": "#46465c"
+                }
+            },
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "color": "#78748c"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Frequency Distribution",
+                "data": [
+                    {
+                        "name": "Blocky",
+                        "y": 28,
+                        "color": "#8087e8"
+                    },
+                    {
+                        "name": "Domed",
+                        "y": 22,
+                        "color": "#8bf2b6"
+                    },
+                    {
+                        "name": "Drydock",
+                        "y": 19,
+                        "color": "#6699a1"
+                    },
+                    {
+                        "name": "Pinnacled",
+                        "y": 15,
+                        "color": "#d6c7a5"
+                    },
+                    {
+                        "name": "Weathered",
+                        "y": 16,
+                        "color": "#78748c"
+                    }
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y}%"
+                }
+            }
+        ],
+        "tooltip": {
+            "headerFormat": "<b>{point.key}</b><br/>",
+            "pointFormat": "Frequency: {point.y}%<br>Avg Height: {point.custom.avgHeight}m",
+            "shared": false,
+            "useHTML": true,
+            "style": {
+                "padding": "12px",
+                "borderRadius": "4px"
+            }
+        },
+        "responsive": {
+            "rules": [
+                {
+                    "condition": {
+                        "maxWidth": 500
+                    },
+                    "chartOptions": {
+                        "legend": {
+                            "layout": "horizontal"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "This column chart visualizes a univariate categorical dataset (iceberg types) with quantitative percentages (\u03bc=20%, \u03c3=5.3). Synthetic data follows a normal distribution (N=5 categories) constrained to 100% total. The column encoding maximizes data-ink ratio per Tufte's principles while categorical spacing maintains perceptual discriminability (Cairo's separation principle). Color saturation encodes morphological stability (warmer hues = more stable forms). Tooltip augmentation follows Schneiderman's details-on-demand principle, revealing derived metrics like average height through calculated point properties. Responsive rules maintain legibility across viewport sizes through dynamic legend reflow."
+}

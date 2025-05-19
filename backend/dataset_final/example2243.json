@@ -1,0 +1,101 @@
+{
+    "visualization_prompt": "Generate a 3D column chart showing comparative annual performance across industries using synthetic statistically anchored data",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "options3d": {
+                "enabled": true,
+                "alpha": 15,
+                "beta": 15,
+                "depth": 250,
+                "viewDistance": 5,
+                "frame": {
+                    "bottom": {
+                        "size": 1,
+                        "color": "#EEE"
+                    }
+                }
+            }
+        },
+        "title": {
+            "text": "Stereographic Chart: Industry Performance Analysis",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Semiconductors",
+                "Renewable Energy",
+                "Biotech",
+                "Fintech",
+                "AI Infrastructure",
+                "Quantum Computing",
+                "Space Tech",
+                "Cybersecurity",
+                "EV Manufacturing",
+                "Robotics"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": null
+            },
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "grouping": false,
+                "depth": 50,
+                "groupZPadding": 50
+            }
+        },
+        "series": [
+            {
+                "name": "2023 Market Cap ($B)",
+                "data": [
+                    48.2,
+                    32.1,
+                    41.5,
+                    29.8,
+                    55.4,
+                    18.9,
+                    22.3,
+                    37.6,
+                    43.9,
+                    26.7
+                ],
+                "color": "#7cb5ec"
+            },
+            {
+                "name": "2024 Projection ($B)",
+                "data": [
+                    53.6,
+                    38.4,
+                    47.2,
+                    34.9,
+                    61.8,
+                    25.3,
+                    29.1,
+                    42.7,
+                    50.5,
+                    31.4
+                ],
+                "color": "#434348"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains two-dimensional categorical data comparing market capitalization across 10 emerging technology sectors. Synthetic values were generated using paired normal distributions (2023: \u03bc=$40B, \u03c3=$10B; 2024: \u03bc=$45B, \u03c3=$10B) with 15% YTD growth assumption. The 3D column format emphasizes relative sector depths while maintaining categorical separation through z-axis spacing. Chart geometry follows perceptual effectiveness principles with depth scaling optimized for spatial comparison. Color coding maintains 4:1 contrast ratio for accessibility. Data-ink ratio is maximized through axis simplification while preserving essential gridlines for value estimation. Trend consistency across series (+12.5% mean growth) validates the synthetic data model."
+}

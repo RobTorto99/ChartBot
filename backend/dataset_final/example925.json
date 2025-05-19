@@ -1,0 +1,87 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a polar area chart with the following specifications: Chart type: area, Chart title: 'Polar Area Chart with Stacking and Null Connection', Axes and labels styling: Use a dark theme with white text for labels and titles, Data series: Two series with data points [1, 1, null, 1, 1, 1] and [1, 1, 1, null, 1, 1], Custom colors: Use shades of blue and green, Additional configurations: Set chart margins, background, and legend.",
+    "visualization_code": {
+        "chart": {
+            "type": "area",
+            "polar": true,
+            "height": 500,
+            "backgroundColor": "#2c3e50",
+            "marginTop": 50,
+            "marginRight": 50,
+            "marginBottom": 50,
+            "marginLeft": 50
+        },
+        "title": {
+            "text": "Polar Area Chart with Stacking and Null Connection",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "plotOptions": {
+            "area": {
+                "connectNulls": true,
+                "stacking": "normal",
+                "color": "#3498db"
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    1,
+                    1,
+                    null,
+                    1,
+                    1,
+                    1
+                ],
+                "color": "#3498db"
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    1,
+                    1,
+                    1,
+                    null,
+                    1,
+                    1
+                ],
+                "color": "#2ecc71"
+            }
+        ],
+        "legend": {
+            "itemStyle": {
+                "color": "#ffffff"
+            },
+            "itemHoverStyle": {
+                "color": "#ecf0f1"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a polar area chart with a dark theme. The chart type is set to 'area' with 'polar' enabled, creating a circular chart. The title is styled with white text and a font size of 18px. Both the x-axis and y-axis labels are styled with white text and a font size of 12px, while the y-axis title is also styled with white text and a font size of 14px. The plot options for the area series include connecting null values and stacking the data. Two series are defined with data points that include null values to demonstrate the connection feature. The series are colored using shades of blue and green. Additional configurations include setting the chart's background color to a dark shade, adjusting the margins, and styling the legend with white text and a hover effect."
+}

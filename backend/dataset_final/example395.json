@@ -1,0 +1,116 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a Pyramid chart. The chart should have the title 'Sales Pyramid'. The axes and labels should be styled with specific colors and font sizes. The data series should include the name 'Unique users' with specific data points. Custom colors should be applied to the chart. Additional configurations should include chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "backgroundColor": "#f8f8f8",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "Sales Pyramid",
+            "x": -50
+        },
+        "plotOptions": {
+            "series": {
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<b>{point.name}</b> ({point.y:,.0f})",
+                    "softConnector": true
+                },
+                "center": [
+                    "40%",
+                    "50%"
+                ],
+                "width": "80%"
+            }
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "name": "Unique users",
+                "data": [
+                    [
+                        "Website visits",
+                        15654
+                    ],
+                    [
+                        "Downloads",
+                        4064
+                    ],
+                    [
+                        "Requested price list",
+                        1987
+                    ],
+                    [
+                        "Invoice sent",
+                        976
+                    ],
+                    [
+                        "Finalized",
+                        846
+                    ]
+                ]
+            }
+        ],
+        "responsive": {
+            "rules": [
+                {
+                    "condition": {
+                        "maxWidth": 500
+                    },
+                    "chartOptions": {
+                        "plotOptions": {
+                            "series": {
+                                "dataLabels": {
+                                    "inside": true
+                                },
+                                "center": [
+                                    "50%",
+                                    "50%"
+                                ],
+                                "width": "100%"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Number of Users",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "colors": [
+            "#007BFF",
+            "#28A745",
+            "#DC3545",
+            "#FFC107",
+            "#17A2B8"
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a Pyramid chart with the title 'Sales Pyramid'. The chart type is set to 'pyramid', and the title is positioned slightly to the left. The plotOptions define the series' data labels to be enabled, formatted, and centered within the chart. The legend is disabled, and the data series 'Unique users' is populated with specific data points. The responsive rules adjust the chart's layout for screens with a maximum width of 500 pixels. Additionally, the axes and labels are styled with specific colors and font sizes. Custom colors are applied to the chart series, and the chart's background and margins are configured for better visual appeal."
+}

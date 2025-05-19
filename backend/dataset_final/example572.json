@@ -1,0 +1,49 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with inverted polar coordinates. The chart should have a custom title, styled axes and labels, and a single data series. The chart should also have specific margins, background, and legend configurations.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "inverted": true,
+            "polar": true,
+            "marginTop": 25
+        },
+        "title": {
+            "text": "Custom xAxis' angle on inverted polar chart"
+        },
+        "xAxis": {
+            "angle": 324,
+            "tickInterval": 1,
+            "lineWidth": 2,
+            "lineColor": "#7cb5ec",
+            "labels": {
+                "zIndex": 10,
+                "x": 5,
+                "y": -5,
+                "style": {
+                    "color": "#7cb5ec"
+                }
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 10
+        },
+        "series": [
+            {
+                "borderWidth": 0,
+                "data": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a column chart with inverted polar coordinates. The chart is titled 'Custom xAxis' angle on inverted polar chart'. The x-axis is customized with an angle of 324 degrees, a tick interval of 1, and a line width of 2 with a specific color. The x-axis labels are styled with a z-index of 10, an x-offset of 5, and a y-offset of -5, all with the same color as the axis line. The y-axis is set to range from 0 to 10. The chart includes a single data series with no border and data points ranging from 1 to 9. The chart has a top margin of 25 pixels, ensuring proper spacing from the top of the container."
+}

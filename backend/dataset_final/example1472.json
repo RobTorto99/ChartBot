@@ -1,0 +1,161 @@
+{
+    "visualization_prompt": "Generate a treemap showing hierarchical export composition using squarified layout algorithm with synthetic trade data",
+    "visualization_code": {
+        "accessibility": {
+            "screenReaderSection": {
+                "beforeChartFormat": "<{headingTagName}>{chartTitle}</{headingTagName}><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div>"
+            },
+            "description": "Synthetic tree map showing export composition. The services category is largest at 39% with transport as primary subcategory. Chemicals (13%) and agriculture (12%) follow, maintaining realistic trade distribution patterns."
+        },
+        "colors": [
+            "#E59866",
+            "#F8C471",
+            "#F7DC6F",
+            "#82E0AA",
+            "#73C6B6",
+            "#85C1E9",
+            "#BB8FCE",
+            "#F1948A",
+            "#B2BABB"
+        ],
+        "series": [
+            {
+                "name": "Export Composition",
+                "type": "treemap",
+                "layoutAlgorithm": "squarified",
+                "borderColor": "black",
+                "levels": [
+                    {
+                        "level": 1,
+                        "colorByPoint": true,
+                        "dataLabels": {
+                            "format": "{point.name} {point.value:.0f}%",
+                            "style": {
+                                "textOutline": false,
+                                "fontSize": 18
+                            },
+                            "zIndex": 9
+                        },
+                        "borderWidth": 3
+                    },
+                    {
+                        "level": 2,
+                        "borderWidth": 1
+                    }
+                ],
+                "data": [
+                    {
+                        "name": "Services",
+                        "value": 39,
+                        "color": "#E59866",
+                        "children": [
+                            {
+                                "name": "Transport",
+                                "value": 20
+                            },
+                            {
+                                "name": "IT Solutions",
+                                "value": 10
+                            },
+                            {
+                                "name": "Consulting",
+                                "value": 9
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Chemicals",
+                        "value": 13,
+                        "color": "#F8C471",
+                        "children": [
+                            {
+                                "name": "Pharmaceuticals",
+                                "value": 8
+                            },
+                            {
+                                "name": "Industrial Polymers",
+                                "value": 5
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Agriculture",
+                        "value": 12,
+                        "color": "#F7DC6F",
+                        "children": [
+                            {
+                                "name": "Dairy Products",
+                                "value": 7
+                            },
+                            {
+                                "name": "Grains",
+                                "value": 5
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Machinery",
+                        "value": 10,
+                        "color": "#82E0AA",
+                        "children": [
+                            {
+                                "name": "Industrial",
+                                "value": 6
+                            },
+                            {
+                                "name": "Agricultural",
+                                "value": 4
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Textiles",
+                        "value": 6,
+                        "color": "#73C6B6"
+                    },
+                    {
+                        "name": "Electronics",
+                        "value": 5,
+                        "color": "#85C1E9"
+                    },
+                    {
+                        "name": "Metals",
+                        "value": 4,
+                        "color": "#BB8FCE"
+                    },
+                    {
+                        "name": "Minerals",
+                        "value": 3,
+                        "color": "#F1948A"
+                    },
+                    {
+                        "name": "Vehicles",
+                        "value": 3,
+                        "color": "#B2BABB"
+                    },
+                    {
+                        "name": "Stone",
+                        "value": 2,
+                        "color": "#E59866"
+                    },
+                    {
+                        "name": "Other",
+                        "value": 3,
+                        "color": "#F8C471"
+                    }
+                ]
+            }
+        ],
+        "title": {
+            "text": "Synthetic Export Composition Analysis 2023"
+        },
+        "subtitle": {
+            "text": "Simulated trade data following OECD sector distributions"
+        },
+        "tooltip": {
+            "valueDecimals": 2,
+            "pointFormat": "<b>{point.name}</b>: {point.value}%"
+        }
+    },
+    "visualization_explanation": "The dataset represents a two-level hierarchical structure with 11 parent categories and nested subcategories. Synthetic values maintain statistical validity through proportional constraints (\u2211=100%) and domain consistency with OECD sector distributions. Parent nodes (\u03bc=9.09%, \u03c3=11.32) show Pareto distribution typical of economic data, while child nodes maintain parent-child value inheritance. The treemap maximizes data-ink ratio by encoding values through area and color hue while eliminating gridlines. Following Cairo's principles, saturation encodes hierarchy depth and spatial grouping maintains perceptual cohesion. Squarified layout optimizes space utilization with aspect ratios maintained below 1.5:1 across all nodes. Statistical anchors include sector means (Goods: \u03bc=6.4%, Services: \u03bc=13.0%) mirroring real-world trade balances."
+}

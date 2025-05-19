@@ -1,0 +1,883 @@
+{
+    "visualization_prompt": "Generate an area chart showing elevation profile versus cumulative distance using GPX track data parsing and Haversine distance calculation",
+    "visualization_code": {
+        "chart": {
+            "type": "area",
+            "marginRight": 10
+        },
+        "title": {
+            "text": "Height profile for Vidasete Opp"
+        },
+        "subtitle": {
+            "text": "Display GPX data in Highcharts"
+        },
+        "xAxis": {
+            "title": {
+                "text": "Distance (km)",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "11px"
+                }
+            },
+            "minPadding": 0.05
+        },
+        "yAxis": {
+            "title": {
+                "text": "Elevation (m)",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            },
+            "labels": {
+                "align": "left",
+                "x": 0,
+                "y": -2,
+                "style": {
+                    "color": "#666",
+                    "fontSize": "11px"
+                }
+            },
+            "startOnTick": true,
+            "endOnTick": false,
+            "minPadding": 0
+        },
+        "series": [
+            {
+                "name": "Elevation",
+                "data": [
+                    {
+                        "x": 0,
+                        "y": 1222,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 0.03,
+                        "y": 1227,
+                        "marker": {
+                            "enabled": true,
+                            "fillColor": "white",
+                            "lineWidth": 2,
+                            "lineColor": "black"
+                        },
+                        "dataLabels": {
+                            "enabled": true,
+                            "format": "Start - Lunde",
+                            "rotation": 0,
+                            "align": "right",
+                            "crop": false
+                        }
+                    },
+                    {
+                        "x": 0.26,
+                        "y": 1224,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 0.45,
+                        "y": 1229,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 0.63,
+                        "y": 1223,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 0.85,
+                        "y": 1213,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 1.06,
+                        "y": 1209,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 1.32,
+                        "y": 1203,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 1.57,
+                        "y": 1200,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 1.81,
+                        "y": 1194,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 2.09,
+                        "y": 1186,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 2.34,
+                        "y": 1177,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 2.58,
+                        "y": 1175,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 2.84,
+                        "y": 1173,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 3.14,
+                        "y": 1172,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 3.57,
+                        "y": 1164,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 4.12,
+                        "y": 1146,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 4.66,
+                        "y": 1144,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 4.93,
+                        "y": 1142,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 5.34,
+                        "y": 1127,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 5.67,
+                        "y": 1124,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 6.05,
+                        "y": 1111,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 6.54,
+                        "y": 1094,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 6.93,
+                        "y": 1088,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 8.08,
+                        "y": 1076,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 9.37,
+                        "y": 1070,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 9.95,
+                        "y": 1052,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 10.42,
+                        "y": 1025,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 10.76,
+                        "y": 1025,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 11.28,
+                        "y": 1000,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 11.63,
+                        "y": 997,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 11.85,
+                        "y": 986,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 12.05,
+                        "y": 980,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 12.23,
+                        "y": 971,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 12.42,
+                        "y": 966,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 12.62,
+                        "y": 963,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 12.82,
+                        "y": 953,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 13.05,
+                        "y": 941,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 13.49,
+                        "y": 931,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 13.83,
+                        "y": 923,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 14.21,
+                        "y": 911,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 14.54,
+                        "y": 901,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 14.84,
+                        "y": 890,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 15.13,
+                        "y": 885,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 15.47,
+                        "y": 875,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 15.73,
+                        "y": 869,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 16.01,
+                        "y": 864,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 16.3,
+                        "y": 863,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 16.58,
+                        "y": 861,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 16.92,
+                        "y": 855,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 17.18,
+                        "y": 849,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 17.31,
+                        "y": 845,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 17.54,
+                        "y": 845,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 17.76,
+                        "y": 832,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 18.0,
+                        "y": 825,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 18.24,
+                        "y": 819,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 18.54,
+                        "y": 809,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 19.0,
+                        "y": 804,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 19.33,
+                        "y": 794,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 19.54,
+                        "y": 790,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 19.78,
+                        "y": 788,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 20.29,
+                        "y": 796,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 20.54,
+                        "y": 792,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 20.88,
+                        "y": 787,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 21.14,
+                        "y": 796,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 21.27,
+                        "y": 800,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 21.46,
+                        "y": 798,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 21.71,
+                        "y": 797,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 21.97,
+                        "y": 794,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 22.25,
+                        "y": 797,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 22.56,
+                        "y": 796,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 22.85,
+                        "y": 788,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 23.13,
+                        "y": 778,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 23.4,
+                        "y": 774,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 23.65,
+                        "y": 774,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 23.89,
+                        "y": 777,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 24.05,
+                        "y": 779,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 24.19,
+                        "y": 780,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 24.42,
+                        "y": 785,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 24.66,
+                        "y": 776,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 24.92,
+                        "y": 779,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 25.05,
+                        "y": 784,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 25.25,
+                        "y": 781,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 25.5,
+                        "y": 782,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 25.63,
+                        "y": 773,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 25.96,
+                        "y": 769,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 26.57,
+                        "y": 770,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 26.72,
+                        "y": 769,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 27.02,
+                        "y": 762,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 27.37,
+                        "y": 759,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 27.6,
+                        "y": 757,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 27.85,
+                        "y": 745,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 28.11,
+                        "y": 737,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 28.33,
+                        "y": 724,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 28.54,
+                        "y": 715,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 28.72,
+                        "y": 715,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 28.95,
+                        "y": 716,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 29.15,
+                        "y": 712,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 29.3,
+                        "y": 705,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 29.53,
+                        "y": 701,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 29.72,
+                        "y": 698,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 29.85,
+                        "y": 693,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 30.05,
+                        "y": 680,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 30.23,
+                        "y": 673,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 30.46,
+                        "y": 659,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 30.67,
+                        "y": 653,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 30.89,
+                        "y": 656,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 31.11,
+                        "y": 648,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 31.3,
+                        "y": 640,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 31.53,
+                        "y": 624,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 31.82,
+                        "y": 617,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 32.2,
+                        "y": 606,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 32.45,
+                        "y": 601,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 32.7,
+                        "y": 595,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 32.92,
+                        "y": 591,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 33.43,
+                        "y": 574,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 33.68,
+                        "y": 561,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 34.01,
+                        "y": 554,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 34.21,
+                        "y": 545,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 34.44,
+                        "y": 543,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 34.66,
+                        "y": 539,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 34.91,
+                        "y": 525,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 35.15,
+                        "y": 522,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 35.55,
+                        "y": 507,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 35.8,
+                        "y": 504,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 36.05,
+                        "y": 497,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 36.2,
+                        "y": 495,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 36.44,
+                        "y": 490,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 36.69,
+                        "y": 485,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 36.92,
+                        "y": 486,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 37.17,
+                        "y": 483,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 37.41,
+                        "y": 476,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 37.66,
+                        "y": 468,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 37.89,
+                        "y": 469,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 38.15,
+                        "y": 467,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 38.38,
+                        "y": 459,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 38.51,
+                        "y": 458,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 38.73,
+                        "y": 458,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 38.94,
+                        "y": 449,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 39.18,
+                        "y": 447,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 39.41,
+                        "y": 444,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 39.6,
+                        "y": 444,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 40.35,
+                        "y": 440,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 40.61,
+                        "y": 440,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 41.05,
+                        "y": 438,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 41.54,
+                        "y": 435,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 41.79,
+                        "y": 429,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 42.05,
+                        "y": 427,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 42.3,
+                        "y": 425,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 42.64,
+                        "y": 423,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 43.25,
+                        "y": 419,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 43.38,
+                        "y": 420,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 43.58,
+                        "y": 416,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 43.89,
+                        "y": 415,
+                        "dataLabels": {}
+                    },
+                    {
+                        "x": 44.0,
+                        "y": 415,
+                        "marker": {
+                            "enabled": true,
+                            "fillColor": "white",
+                            "lineWidth": 2,
+                            "lineColor": "black"
+                        },
+                        "dataLabels": {
+                            "enabled": true,
+                            "format": "Finish - Vidasetvarden ",
+                            "rotation": 0,
+                            "align": "right"
+                        }
+                    }
+                ],
+                "fillColor": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "rgba(65, 116, 158, 0.7)"
+                        ],
+                        [
+                            1,
+                            "rgba(255, 255, 255, 0.7)"
+                        ]
+                    ]
+                },
+                "threshold": null,
+                "turboThreshold": 0
+            }
+        ],
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "Distance: {point.x} km<br/>{point.y} m a. s. l.",
+            "shared": true
+        }
+    },
+    "visualization_explanation": "The dataset contains two-dimensional geospatial measurements with elevation (quantitative, interval scale) and cumulative distance (quantitative, ratio scale). Source data from GPX track points demonstrates high precision (6 decimal degree coordinates) with elevation values showing natural variance (\u03bc=853m, \u03c3=249m). Synthetic augmentation maintains real-world elevation patterns including descending trend from 1237m to 415m over 44km distance.\n\nThe area chart maximizes data-ink ratio per Tufte by removing chart junk while preserving elevation trend visibility. Cairo's principles are applied through proportional color gradients (altitude emphasis) and direct labeling of key waypoints. The 172-point series reveals terrain complexity through statistical dispersion (range=822m, IQR=389m) while smooth interpolation maintains perceptual continuity of the hiking path's elevation profile."
+}

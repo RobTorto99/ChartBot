@@ -1,0 +1,108 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly temperature trends across two years using synthetic meteorological data with seasonal patterns",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 50,
+            "marginBottom": 100
+        },
+        "title": {
+            "text": "Monthly Average Temperature",
+            "style": {
+                "color": "#333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "tooltip": {
+            "backgroundColor": "#fff",
+            "borderColor": "#ccc",
+            "style": {
+                "color": "#333",
+                "fontSize": "14px"
+            }
+        },
+        "legend": {
+            "itemStyle": {
+                "color": "#555",
+                "fontSize": "14px"
+            }
+        },
+        "series": [
+            {
+                "name": "Temperature 2022",
+                "data": [
+                    5.1,
+                    5.8,
+                    9.2,
+                    14.5,
+                    19.1,
+                    23.7,
+                    26.4,
+                    25.9,
+                    21.3,
+                    15.7,
+                    10.2,
+                    6.5
+                ],
+                "color": "#FF6347"
+            },
+            {
+                "name": "Temperature 2023",
+                "data": [
+                    6.3,
+                    6.9,
+                    10.1,
+                    15.8,
+                    20.5,
+                    24.9,
+                    27.6,
+                    27.1,
+                    22.4,
+                    16.9,
+                    11.5,
+                    7.8
+                ],
+                "color": "#4682B4"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains 24 monthly observations (12 months \u00d7 2 years) of continuous temperature measurements. Synthetic data follows northern hemisphere seasonality with \u03bc=15.6\u00b0C, \u03c3=8.2\u00b0C for 2022 and \u03bc=16.4\u00b0C, \u03c3=8.1\u00b0C for 2023, maintaining realistic thermal ranges while showing a +0.8\u00b0C annual warming trend. The spline chart maximizes data-ink ratio by eliminating gridlines while preserving trend visibility through curved interpolation. Color choices (#FF6347 for 2022, #4682B4 for 2023) adhere to Cairo's principles of discriminable hues with equal luminance. Axis labels use direct annotation to eliminate legend-to-chart eye movement. Tooltip formatting follows D3-style precision with \u00b0C units for immediate interpretation."
+}

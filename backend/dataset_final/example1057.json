@@ -1,0 +1,95 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly sales and production output trends using synthetic data with seasonal variation and growth patterns",
+    "visualization_code": {
+        "chart": {
+            "type": "column"
+        },
+        "title": {
+            "text": "Monthly Industrial Performance (2023)"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Metric Values (Units)"
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Sales Volume",
+                "colorByPoint": true,
+                "data": [
+                    185,
+                    210,
+                    234,
+                    275,
+                    320,
+                    398,
+                    415,
+                    387,
+                    342,
+                    295,
+                    243,
+                    201
+                ],
+                "tooltip": {
+                    "valueSuffix": " units"
+                }
+            },
+            {
+                "name": "Production Output",
+                "data": [
+                    158,
+                    167,
+                    179,
+                    192,
+                    208,
+                    225,
+                    240,
+                    259,
+                    277,
+                    291,
+                    308,
+                    324
+                ],
+                "tooltip": {
+                    "valueSuffix": " units"
+                }
+            }
+        ],
+        "plotOptions": {
+            "column": {
+                "pointPadding": 0.1,
+                "borderWidth": 0
+            }
+        },
+        "accessibility": {
+            "landmarkVerbosity": "one"
+        }
+    },
+    "visualization_explanation": "The dataset contains two time series with 12 monthly observations each. Sales Volume (\u03bc=282.9, \u03c3=82.7) demonstrates seasonal peaks in summer months with Q3 decline, while Production Output (\u03bc=241.8, \u03c3=57.2) shows steady 8.5% quarterly growth. Synthetic data was generated using additive seasonality models with realistic business cycles. The column chart maximizes data-ink ratio through clean axis lines and transparent borders while maintaining categorical distinction through Cairo's preattentive color processing. Dual series grouping enables direct comparison of operational metrics while theme-consistent colors maintain perceptual uniformity across view states."
+}

@@ -1,0 +1,229 @@
+{
+    "visualization_prompt": "Generate a spline chart showing employment growth across five solar industry sectors from 2010-2016 using Highcharts' styled mode with synthetic time-series data",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "styledMode": true
+        },
+        "title": {
+            "text": "Solar Employment Growth by Sector, 2010-2016"
+        },
+        "subtitle": {
+            "text": "Source: Synthetic data modeling industry trends"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Number of Employees"
+            },
+            "labels": {
+                "style": {
+                    "color": "#FFFFFF",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#FFFFFF",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "legend": {
+            "layout": "vertical",
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#CCCCCC"
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "label": {
+                    "connectorAllowed": false
+                },
+                "pointStart": 2010
+            }
+        },
+        "series": [
+            {
+                "name": "Installation",
+                "data": [
+                    [
+                        2010,
+                        42000
+                    ],
+                    [
+                        2011,
+                        51000
+                    ],
+                    [
+                        2012,
+                        60500
+                    ],
+                    [
+                        2013,
+                        73000
+                    ],
+                    [
+                        2014,
+                        89000
+                    ],
+                    [
+                        2015,
+                        112000
+                    ],
+                    [
+                        2016,
+                        135000
+                    ]
+                ],
+                "marker": {
+                    "enabledThreshold": 0
+                }
+            },
+            {
+                "name": "Manufacturing",
+                "data": [
+                    [
+                        2010,
+                        23000
+                    ],
+                    [
+                        2011,
+                        24500
+                    ],
+                    [
+                        2012,
+                        28500
+                    ],
+                    [
+                        2013,
+                        31000
+                    ],
+                    [
+                        2014,
+                        34000
+                    ],
+                    [
+                        2015,
+                        37500
+                    ],
+                    [
+                        2016,
+                        41000
+                    ]
+                ]
+            },
+            {
+                "name": "Sales & Distribution",
+                "data": [
+                    [
+                        2010,
+                        11000
+                    ],
+                    [
+                        2011,
+                        16500
+                    ],
+                    [
+                        2012,
+                        15500
+                    ],
+                    [
+                        2013,
+                        18500
+                    ],
+                    [
+                        2014,
+                        21000
+                    ],
+                    [
+                        2015,
+                        24500
+                    ],
+                    [
+                        2016,
+                        29500
+                    ]
+                ]
+            },
+            {
+                "name": "Project Development",
+                "data": [
+                    [
+                        2012,
+                        8000
+                    ],
+                    [
+                        2013,
+                        12000
+                    ],
+                    [
+                        2014,
+                        15000
+                    ],
+                    [
+                        2015,
+                        22000
+                    ],
+                    [
+                        2016,
+                        34000
+                    ]
+                ]
+            },
+            {
+                "name": "Other",
+                "data": [
+                    [
+                        2010,
+                        12500
+                    ],
+                    [
+                        2011,
+                        6000
+                    ],
+                    [
+                        2012,
+                        8000
+                    ],
+                    [
+                        2013,
+                        11000
+                    ],
+                    [
+                        2014,
+                        9000
+                    ],
+                    [
+                        2015,
+                        11500
+                    ],
+                    [
+                        2016,
+                        18000
+                    ]
+                ]
+            }
+        ],
+        "responsive": {
+            "rules": [
+                {
+                    "condition": {
+                        "maxWidth": 500
+                    },
+                    "chartOptions": {
+                        "legend": {
+                            "layout": "horizontal",
+                            "align": "center",
+                            "verticalAlign": "bottom"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The dataset contains 7 annual observations (2010-2016) across five categorical solar industry sectors. Synthetic data maintains domain-appropriate ranges (\u03bc=52,000, \u03c3=42,000) with Installation showing strongest growth (25% CAGR). The spline chart minimizes data-ink ratio while preserving trend visibility through curve smoothing. Color contrast follows Cairo's preattentive processing principles, with sequential luminance values distinguishing series. Responsive design maintains readability through Tufte's small multiples principle in mobile view. Null values in Project Development before 2012 reflect realistic market entry timing."
+}

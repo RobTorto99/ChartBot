@@ -1,0 +1,125 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Measure advanced annotation'. The chart should have styled axes and labels with specific colors and font sizes. The data series should include a single series with the provided data. Custom colors should be applied to the chart, and additional configurations should include chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "events": {
+                "load": "function () { this.annotations.forEach(function (annotation) { annotation.setControlPointsVisibility(true); annotation.cpVisibility = true; }); }"
+            }
+        },
+        "title": {
+            "text": "Measure advanced annotation",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "annotations": [
+            {
+                "type": "measure",
+                "typeOptions": {
+                    "point": {
+                        "x": 0,
+                        "y": 6
+                    },
+                    "label": {
+                        "enabled": true
+                    },
+                    "background": {
+                        "width": "300px",
+                        "height": "150px"
+                    }
+                }
+            }
+        ],
+        "series": [
+            {
+                "name": "Data Series",
+                "data": [
+                    1,
+                    2,
+                    3,
+                    {
+                        "y": 4,
+                        "id": "s"
+                    },
+                    5,
+                    {
+                        "y": 6,
+                        "id": "m"
+                    },
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    3,
+                    2,
+                    4,
+                    4,
+                    4,
+                    4,
+                    3
+                ],
+                "color": "#008080"
+            }
+        ],
+        "colors": [
+            "#008080",
+            "#FF6347",
+            "#9ACD32",
+            "#4682B4",
+            "#FFD700"
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "14px"
+            }
+        },
+        "plotOptions": {
+            "spline": {
+                "marker": {
+                    "enabled": true,
+                    "radius": 4,
+                    "lineColor": "#666666",
+                    "lineWidth": 1,
+                    "fillColor": "#FFFFFF"
+                }
+            }
+        },
+        "credits": {
+            "enabled": false
+        },
+        "exporting": {
+            "enabled": true
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a spline chart with the title 'Measure advanced annotation'. The chart includes styled axes and labels with specific colors and font sizes. The data series consists of a single series with the provided data, and custom colors are applied to the chart. Additional configurations include settings for chart margins, background, and legend. The chart also includes an annotation with specific options for background and label visibility. The chart is designed to be visually appealing and informative, with clear labels and a well-defined legend."
+}

@@ -1,0 +1,94 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a chart with the following specifications: Chart type: areaspline, Chart title: 'Filled color zones', Axes and labels styling: Define colors, font sizes, or styles for labels, axes, and titles, Data series: Provide the data for each series, including the name of each series and its data, formatted appropriately for Highcharts, Custom colors: Specific list of colors, if desired, Additional configurations: Other settings, such as chart margins, background, legend, etc.",
+    "visualization_code": {
+        "chart": {
+            "type": "areaspline"
+        },
+        "title": {
+            "text": "Filled color zones"
+        },
+        "yAxis": {
+            "min": -10,
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "Index",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "type": "areaspline",
+                "name": "Data Series",
+                "data": [
+                    -10,
+                    -5,
+                    0,
+                    5,
+                    10,
+                    15,
+                    10,
+                    10,
+                    5,
+                    0,
+                    -5
+                ],
+                "threshold": -10,
+                "zones": [
+                    {
+                        "value": 0,
+                        "color": "#f7a35c",
+                        "fillColor": "#f15c80"
+                    },
+                    {
+                        "value": 10,
+                        "color": "#7cb5ec"
+                    },
+                    {
+                        "color": "#90ed7d"
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333",
+                "fontSize": "12px"
+            }
+        },
+        "plotOptions": {
+            "areaspline": {
+                "marker": {
+                    "enabled": false
+                }
+            }
+        },
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render an areaspline chart with a title 'Filled color zones'. The y-axis is set to have a minimum value of -10, and both the x and y axes have styled titles and labels with specific colors and font sizes. The data series includes a single series with the name 'Data Series' and data points ranging from -10 to 15. The series also includes zones with specific colors and fill colors to differentiate between different value ranges. The legend is enabled and styled with a specific font size and color. Additionally, the chart's plot options disable markers on the data points, and credits are disabled to clean up the chart appearance."
+}

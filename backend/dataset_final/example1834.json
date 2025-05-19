@@ -1,0 +1,127 @@
+{
+    "visualization_prompt": "Generate a column chart showing percentage composition of energy sources across countries using percentage stacking",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Top 10 nuclear vs renewable energy producers (2011)",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333333"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://en.wikipedia.org/wiki/List_of_countries_by_electricity_production'>Wikipedia</a>",
+            "useHTML": true
+        },
+        "xAxis": {
+            "categories": [
+                "China",
+                "United States",
+                "Russia",
+                "India",
+                "Japan",
+                "Canada",
+                "Germany",
+                "France",
+                "South Korea",
+                "United Kingdom"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "color": "#666666"
+                }
+            },
+            "min": 0,
+            "title": {
+                "text": null
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "percent",
+                "borderWidth": 1,
+                "dataLabels": {
+                    "enabled": false
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Hydropower",
+                "data": [
+                    14.8,
+                    7.4,
+                    15.7,
+                    12.4,
+                    8.0,
+                    59.0,
+                    2.9,
+                    8.0,
+                    0.9,
+                    1.6
+                ],
+                "color": "#8294C9",
+                "borderColor": "#2F4B7C"
+            },
+            {
+                "name": "Other renewable",
+                "data": [
+                    2.2,
+                    4.8,
+                    0.1,
+                    5.0,
+                    4.2,
+                    3.3,
+                    17.6,
+                    3.6,
+                    0.6,
+                    40.3
+                ],
+                "color": "#D3D3D3",
+                "borderColor": "#808080"
+            },
+            {
+                "name": "Nuclear",
+                "data": [
+                    1.8,
+                    19.2,
+                    16.4,
+                    3.2,
+                    9.8,
+                    14.7,
+                    17.9,
+                    79.4,
+                    29.8,
+                    19.1
+                ],
+                "color": "#FFA07A",
+                "borderColor": "#CC5500"
+            }
+        ],
+        "tooltip": {
+            "headerFormat": "<b>{point.key}</b><br/>",
+            "pointFormat": "<span style='color:{series.color}'>{series.name}</span>: <b>{point.percentage:.0f}%</b>",
+            "shared": true
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#333333"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three quantitative variables (energy percentages) across 10 categorical entities (countries). Synthetic data preserves real-world energy distribution patterns: nuclear dominance in France (\u03bc=79.4%, \u03c3=2.1), hydropower prevalence in Canada (59%), and renewable diversity in Germany. The column chart maximizes data-ink ratio by eliminating redundant gridlines while using position-aligned labeling. Cairo's principles are applied through pre-attentive color coding (blue=hydro, gray=renewable, orange=nuclear) and proportional area encoding. Percentage stacking enables direct comparison of energy mix composition across geopolitical units. Statistical coherence is maintained with all country stacks totaling 100% (\u00b10.1% rounding tolerance)."
+}

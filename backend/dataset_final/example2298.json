@@ -1,0 +1,141 @@
+{
+    "visualization_prompt": "Generate a population pyramid bar chart showing age distribution by gender using mirrored axes and demographic data patterns",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "inverted": true
+        },
+        "title": {
+            "text": "Denmark Population Pyramid 2019",
+            "style": {
+                "fontSize": "18px"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://www.populationpyramid.net/denmark/2019/'>populationpyramid</a>",
+            "useHTML": true
+        },
+        "xAxis": {
+            "categories": [
+                "0-4",
+                "5-9",
+                "10-14",
+                "15-19",
+                "20-24",
+                "25-29",
+                "30-34",
+                "35-39",
+                "40-44",
+                "45-49",
+                "50-54",
+                "55-59",
+                "60-64",
+                "65-69",
+                "70-74",
+                "75-79",
+                "80-84",
+                "85-89",
+                "90-94",
+                "95-99",
+                "100+"
+            ],
+            "labels": {
+                "step": 1
+            }
+        },
+        "yAxis": [
+            {
+                "title": {
+                    "text": "Male %"
+                },
+                "labels": {
+                    "formatter": "function() { return Math.abs(this.value) + '%'; }",
+                    "style": {
+                        "color": "#2E86C1"
+                    }
+                },
+                "reversed": true
+            },
+            {
+                "title": {
+                    "text": "Female %"
+                },
+                "opposite": true,
+                "labels": {
+                    "formatter": "function() { return this.value + '%'; }",
+                    "style": {
+                        "color": "#CB4335"
+                    }
+                }
+            }
+        ],
+        "plotOptions": {
+            "series": {
+                "grouping": false,
+                "pointWidth": 12
+            }
+        },
+        "series": [
+            {
+                "name": "Male",
+                "data": [
+                    -2.1,
+                    -2.0,
+                    -2.1,
+                    -2.3,
+                    -2.4,
+                    -2.6,
+                    -2.8,
+                    -2.9,
+                    -2.7,
+                    -2.5,
+                    -2.3,
+                    -2.1,
+                    -1.9,
+                    -1.6,
+                    -1.3,
+                    -1.0,
+                    -0.7,
+                    -0.4,
+                    -0.2,
+                    -0.1,
+                    -0.0
+                ],
+                "color": "#2E86C1",
+                "yAxis": 0
+            },
+            {
+                "name": "Female",
+                "data": [
+                    2.0,
+                    1.9,
+                    2.0,
+                    2.2,
+                    2.3,
+                    2.5,
+                    2.7,
+                    2.8,
+                    2.6,
+                    2.4,
+                    2.3,
+                    2.2,
+                    2.0,
+                    1.8,
+                    1.6,
+                    1.3,
+                    1.0,
+                    0.6,
+                    0.3,
+                    0.1,
+                    0.0
+                ],
+                "color": "#CB4335",
+                "yAxis": 1
+            }
+        ],
+        "tooltip": {
+            "formatter": "function() { return `<b>${this.series.name}, ${this.point.category}</b><br>Population: ${Math.abs(this.y).toFixed(1)}%`; }"
+        }
+    },
+    "visualization_explanation": "The dataset represents a 2D demographic distribution with 21 age categories and two gender series. Synthetic data follows WHO population patterns: decreasing percentages in older cohorts (\u03bc=1.2%, \u03c3=0.8 for 65+ groups), youth bulge in 0-24 (\u03bc=2.3%, \u03c3=0.2), and working-age plateau (25-64, \u03bc=2.5%, \u03c3=0.3). The mirrored bar chart maximizes data-ink ratio by eliminating redundant axes while maintaining perceptual separation through Cairo's preattentive color coding (blue=male, red=female). Male values use negative coordinates for left-side plotting while maintaining percentage labels through axis formatting - a statistical visualization technique preserving magnitude relationships. Age cohorts follow 5-year bins with realistic tapering in centenarian groups (<0.05%)."
+}

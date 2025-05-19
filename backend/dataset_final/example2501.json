@@ -1,0 +1,140 @@
+{
+    "visualization_prompt": "Generate a drilldown column chart showing hierarchical category relationships using synthetic data generation with \u226510 total data points across parent/child categories and statistical distribution patterns",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "marginTop": 50
+            },
+            "title": {
+                "text": "Category Composition Analysis",
+                "style": {
+                    "fontSize": "18px",
+                    "color": "#2c3e50"
+                }
+            },
+            "xAxis": {
+                "type": "category",
+                "labels": {
+                    "style": {
+                        "fontSize": "14px",
+                        "color": "#7f8c8d"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Metric Value",
+                    "style": {
+                        "color": "#7f8c8d",
+                        "fontStyle": "italic"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Main Categories",
+                    "colorByPoint": true,
+                    "data": [
+                        {
+                            "name": "Fauna",
+                            "y": 18,
+                            "drilldown": "fauna"
+                        },
+                        {
+                            "name": "Flora",
+                            "y": 12,
+                            "drilldown": "flora"
+                        },
+                        {
+                            "name": "Machinery",
+                            "y": 15,
+                            "drilldown": "machinery"
+                        }
+                    ]
+                }
+            ],
+            "drilldown": {
+                "activeAxisLabelStyle": {
+                    "textDecoration": "none",
+                    "fontStyle": "italic",
+                    "color": "#e74c3c"
+                },
+                "activeDataLabelStyle": {
+                    "textDecoration": "none",
+                    "fontStyle": "italic",
+                    "color": "#2ecc71"
+                },
+                "series": [
+                    {
+                        "id": "fauna",
+                        "data": [
+                            {
+                                "name": "Apex Predators",
+                                "y": 7
+                            },
+                            {
+                                "name": "Herbivores",
+                                "y": 6
+                            },
+                            {
+                                "name": "Avian Species",
+                                "y": 5
+                            }
+                        ]
+                    },
+                    {
+                        "id": "flora",
+                        "data": [
+                            {
+                                "name": "Deciduous Trees",
+                                "y": 5
+                            },
+                            {
+                                "name": "Flowering Plants",
+                                "y": 4
+                            },
+                            {
+                                "name": "Fungal Organisms",
+                                "y": 3
+                            }
+                        ]
+                    },
+                    {
+                        "id": "machinery",
+                        "data": [
+                            {
+                                "name": "Construction",
+                                "y": 8
+                            },
+                            {
+                                "name": "Agricultural",
+                                "y": 5
+                            },
+                            {
+                                "name": "Transportation",
+                                "y": 2
+                            }
+                        ]
+                    }
+                ]
+            },
+            "plotOptions": {
+                "series": {
+                    "dataLabels": {
+                        "format": "{point.y:.1f}",
+                        "style": {
+                            "textOutline": "none"
+                        }
+                    }
+                }
+            },
+            "colors": [
+                "#3498db",
+                "#9b59b6",
+                "#1abc9c"
+            ]
+        }
+    },
+    "visualization_explanation": "The dataset contains hierarchical categorical data with three parent categories (Fauna, Flora, Machinery) and three child subcategories each. Synthetic data follows binomial distribution (parent total = sum of children) with \u03bc=15\u00b13 for parents and \u03bc=5\u00b12 for children. The column chart maximizes data-ink ratio by removing redundant borders and using direct labeling. Color differentiation follows Cairo's preattentive processing principles with distinct hue variations. Drilldown interactions maintain visual continuity through consistent italic labeling (no underline) while updating statistical anchors (parent \u03bc=15 vs child \u03bc=5)."
+}

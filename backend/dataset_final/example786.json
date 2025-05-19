@@ -1,0 +1,181 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a chart with the following specifications: Chart type: area. Chart title: 'IoT devices sales and shipment information'. Axes and labels styling: Define colors, font sizes, or styles for labels, axes, and titles. Data series: Provide the data for each series, including the name of each series and its data, formatted appropriately for Highcharts. Custom colors: Specific list of colors, if desired. Additional configurations: Other settings, such as chart margins, background, legend, etc.",
+    "visualization_code": {
+        "chart": {
+            "renderTo": "chartspace",
+            "type": "area"
+        },
+        "title": {
+            "text": "IoT devices sales and shipment information",
+            "style": {
+                "color": "#000000",
+                "fontFamily": "Helvetica,Arial,sans-serif",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                {
+                    "name": "Bluetooth Headset",
+                    "categories": [
+                        "",
+                        "`13",
+                        "`14",
+                        "`15",
+                        "`16"
+                    ]
+                },
+                {
+                    "name": "Body Camera",
+                    "categories": [
+                        "",
+                        "`13",
+                        "`14",
+                        "`15",
+                        "`16"
+                    ]
+                },
+                {
+                    "name": "Chest Strap",
+                    "categories": [
+                        "",
+                        "`13",
+                        "`14",
+                        "`15",
+                        "`16"
+                    ]
+                },
+                {
+                    "name": "Head Mounted Display",
+                    "categories": [
+                        "",
+                        "`13",
+                        "`14",
+                        "`15",
+                        "`16"
+                    ]
+                },
+                {
+                    "name": "Other",
+                    "categories": [
+                        "",
+                        "`13",
+                        "`14",
+                        "`15",
+                        "`16"
+                    ]
+                },
+                {
+                    "name": "Smart Glasses",
+                    "categories": [
+                        "",
+                        "`13",
+                        "`14",
+                        "`15",
+                        "`16"
+                    ]
+                },
+                {
+                    "name": "Smart Watch",
+                    "categories": [
+                        "",
+                        "`13",
+                        "`14",
+                        "`15",
+                        "`16"
+                    ]
+                },
+                {
+                    "name": "Sports Watch",
+                    "categories": [
+                        "",
+                        "`13",
+                        "`14",
+                        "`15",
+                        "`16"
+                    ]
+                },
+                {
+                    "name": "Wristband",
+                    "categories": [
+                        "",
+                        "`13",
+                        "`14",
+                        "`15",
+                        "`16"
+                    ]
+                }
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333333",
+                    "fontFamily": "Helvetica,Arial,sans-serif",
+                    "fontSize": 8
+                },
+                "rotation": 0
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#333333",
+                    "fontFamily": "Helvetica,Arial,sans-serif"
+                }
+            },
+            "min": 0,
+            "plotLines": [
+                {
+                    "value": 0,
+                    "width": 1,
+                    "color": "#808080"
+                }
+            ],
+            "title": {
+                "style": {
+                    "color": "#333333",
+                    "fontFamily": "Helvetica,Arial,sans-serif"
+                },
+                "text": "Total number of devices"
+            }
+        },
+        "plotOptions": {
+            "area": {
+                "marker": {
+                    "enabled": false,
+                    "symbol": "circle",
+                    "radius": 2,
+                    "states": {
+                        "hover": {
+                            "enabled": true
+                        }
+                    }
+                }
+            }
+        },
+        "legend": {
+            "borderRadius": 0,
+            "layout": "vertical",
+            "align": "left",
+            "x": 30,
+            "y": 50,
+            "verticalAlign": "top",
+            "floating": true,
+            "itemStyle": {
+                "color": "#000000",
+                "fontFamily": "Helvetica,Arial,sans-serif"
+            }
+        },
+        "series": [
+            {
+                "name": "total devices sold",
+                "data": []
+            },
+            {
+                "name": "devices returned",
+                "data": []
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render an area chart titled 'IoT devices sales and shipment information'. The chart is set to render within the 'chartspace' div element. The x-axis categories are grouped by device types and years, with labels styled in a specific font and color. The y-axis is styled similarly, with a title indicating the total number of devices. The plot options for the area chart include settings for markers, which are disabled but configured for hover states. The legend is positioned and styled according to the provided specifications. The series data is left empty, as it will be populated dynamically from the fetched CSV data."
+}

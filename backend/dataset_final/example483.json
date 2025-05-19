@@ -1,0 +1,126 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Sonify series in order'. The chart should have three data series with specific data points. The axes and labels should be styled with specific colors and font sizes. Additionally, the chart should include custom colors for the series and other configurations such as chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline"
+        },
+        "title": {
+            "text": "Sonify series in order",
+            "align": "left",
+            "margin": 25,
+            "style": {
+                "color": "#25386f",
+                "fontSize": "18px"
+            }
+        },
+        "subtitle": {
+            "text": "Earcons/announcements played on begin/end events",
+            "align": "left",
+            "style": {
+                "color": "#666",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    1,
+                    2,
+                    4,
+                    6,
+                    9,
+                    12,
+                    15,
+                    16
+                ],
+                "color": "#25386f"
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    12,
+                    10,
+                    9,
+                    5,
+                    2,
+                    1,
+                    2,
+                    3
+                ],
+                "color": "#6f42c1"
+            },
+            {
+                "name": "Series 3",
+                "data": [
+                    2,
+                    2,
+                    2,
+                    7,
+                    16,
+                    6,
+                    2,
+                    1
+                ],
+                "color": "#d63384"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#333",
+                "fontSize": "12px"
+            }
+        },
+        "plotOptions": {
+            "spline": {
+                "marker": {
+                    "enabled": true
+                }
+            }
+        },
+        "credits": {
+            "enabled": false
+        },
+        "sonification": {
+            "duration": 7500,
+            "events": {
+                "onSeriesStart": {
+                    "callback": "function (e) { e.series.chart.sonification.speak(e.series.name, { rate: 2.5, volume: 0.3 }); }"
+                },
+                "onSeriesEnd": {
+                    "callback": "function (e) { e.series.chart.sonification.playNote('chop', { note: 0, pan: 1, volume: 1.2 }, 80); }"
+                },
+                "onEnd": {
+                    "callback": "function (e) { const playNote = function (note, time) { e.chart.sonification.playNote('vibraphone', { note: note, noteDuration: 400, pan: 0, volume: 0.4 }, time); }; playNote('c6', 40); playNote('g6', 200); e.chart.sonification.speak('End', { rate: 2, volume: 0.3 }, 400); }"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart with a title 'Sonify series in order'. The chart includes three data series, each with specific data points and custom colors. The axes and labels are styled with specific colors and font sizes to enhance readability. The chart also includes a legend with custom styling and positioning. Additionally, the chart is configured with sonification settings that allow for auditory feedback when interacting with the chart, such as playing notes and announcing series names on specific events. The sonification settings are defined to play different sounds and announcements when series start, end, or the chart ends, enhancing the user experience."
+}

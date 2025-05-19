@@ -1,0 +1,154 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart titled 'Message Success By Attractiveness (Male Senders)'. The chart should have custom colors for each series and styled axes and labels. The data series should include the message success percentages for different levels of male attractiveness when sending messages to female recipients of varying attractiveness levels. The chart should also include a subtitle with a link to the source data and a tooltip that displays the message success percentage for each data point.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline"
+        },
+        "title": {
+            "text": "Message Success By Attractiveness (Male Senders)"
+        },
+        "subtitle": {
+            "useHTML": true,
+            "text": "Source: <a href=\"https://theblog.okcupid.com/your-looks-and-your-inbox-8715c0f1561e\">theblog.okcupid</a>"
+        },
+        "xAxis": {
+            "categories": [
+                "Least attractive female recipients",
+                "",
+                "",
+                "Medium female recipients",
+                "",
+                "",
+                "Most attractive female recipients"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Message reply %",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "tooltip": {
+            "formatter": "function () { return 'Category: <b>' + this.point.series.name + '</b><br>Message success percentage is <b>' + this.y + '</b>%'; }"
+        },
+        "legend": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "series": {
+                "marker": {
+                    "enabled": false
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Most attractive male senders",
+                "color": "#63BE7B",
+                "data": [
+                    43,
+                    48,
+                    80,
+                    65,
+                    62,
+                    50,
+                    44
+                ]
+            },
+            {
+                "name": "-",
+                "color": "#99CF81",
+                "data": [
+                    50,
+                    67,
+                    61,
+                    63,
+                    53,
+                    45,
+                    38
+                ]
+            },
+            {
+                "name": "-",
+                "color": "#CCDD82",
+                "data": [
+                    67,
+                    63,
+                    60,
+                    55,
+                    49,
+                    40,
+                    32
+                ]
+            },
+            {
+                "name": "Medium male senders",
+                "color": "#FFEB84",
+                "data": [
+                    67,
+                    60,
+                    58,
+                    50,
+                    41,
+                    33,
+                    28
+                ]
+            },
+            {
+                "name": "-",
+                "color": "#FDCA7D",
+                "data": [
+                    59,
+                    60,
+                    50,
+                    42,
+                    35,
+                    28,
+                    23
+                ]
+            },
+            {
+                "name": "-",
+                "color": "#FBA977",
+                "data": [
+                    58,
+                    50,
+                    40,
+                    32,
+                    26,
+                    20,
+                    18
+                ]
+            },
+            {
+                "name": "Least attractive male senders",
+                "color": "#F8696B",
+                "data": [
+                    56,
+                    40,
+                    30,
+                    25,
+                    20,
+                    15,
+                    12
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart that visualizes the message success percentages for male senders of varying attractiveness levels when sending messages to female recipients of different attractiveness levels. The chart includes a title and a subtitle with a link to the source data. The x-axis categories represent the attractiveness levels of female recipients, while the y-axis represents the message reply percentage. Each series in the chart corresponds to a different level of male attractiveness, and custom colors are applied to each series to differentiate them visually. The tooltip displays detailed information about each data point, including the category and the message success percentage. The legend is disabled, and markers are turned off for the series to maintain a clean visual appearance."
+}

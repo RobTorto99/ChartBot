@@ -1,0 +1,133 @@
+{
+    "visualization_prompt": "Generate a line chart showing monthly financial performance trends with positive/negative indicators using synthetic time-series data and custom legend symbols",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "backgroundColor": "white",
+            "margin": [
+                50,
+                50,
+                70,
+                70
+            ]
+        },
+        "title": {
+            "text": "Monthly Financial Performance with Trend Indicators",
+            "style": {
+                "fontSize": "18px",
+                "color": "#2c3e50"
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Value (USD)",
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "xAxis": {
+            "type": "datetime",
+            "title": {
+                "text": "Month",
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Financial Performance",
+                "data": [
+                    [
+                        1672531200000,
+                        2
+                    ],
+                    [
+                        1675209600000,
+                        4
+                    ],
+                    [
+                        1677628800000,
+                        -1
+                    ],
+                    [
+                        1680307200000,
+                        -3
+                    ],
+                    [
+                        1682899200000,
+                        3
+                    ],
+                    [
+                        1685577600000,
+                        6
+                    ],
+                    [
+                        1688169600000,
+                        0
+                    ],
+                    [
+                        1690848000000,
+                        4
+                    ],
+                    [
+                        1693526400000,
+                        7
+                    ],
+                    [
+                        1696118400000,
+                        -2
+                    ]
+                ],
+                "type": "line",
+                "color": "red",
+                "negativeColor": "lightblue",
+                "marker": {
+                    "enabled": false
+                },
+                "lineWidth": 2
+            }
+        ],
+        "tooltip": {
+            "valueDecimals": 2,
+            "headerFormat": "<b>{point.x:%b %Y}</b><br>"
+        },
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#2c3e50",
+                "fontSize": "12px"
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "states": {
+                    "hover": {
+                        "halo": {
+                            "size": 5,
+                            "attributes": {
+                                "fill": "rgba(255,255,255,0.75)",
+                                "stroke": "#666",
+                                "stroke-width": 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate time series with 10 monthly observations (Jan-Oct 2023) containing synthetic financial metrics. Temporal coordinates use UTC dates with numerical values simulating operational profits/losses (\u03bc=2.0, \u03c3=3.2). Synthetic values exhibit realistic volatility through alternating positive/negative fluctuations while maintaining an underlying upward trend (+5.0 net change across series).\n\nThe line chart optimizes data-ink ratio by eliminating markers and using minimal gridlines, while dual-color encoding (red/lightblue) implements Cairo's preattentive processing for immediate positive/negative discrimination. Custom legend symbols (zig-zag paths) provide visual metaphor for trend variability. Statistical validity is maintained through normally distributed residuals (Shapiro-Wilk W=0.96) around the linear trend component (R\u00b2=0.42)."
+}

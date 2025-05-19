@@ -1,0 +1,130 @@
+{
+    "visualization_prompt": "Generate a column chart showing comparison of agricultural production volumes between corn and wheat across 12 major producing countries using categorical columns with differentiated colors and synthetic data expansion",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Global Corn vs Wheat Production (2020)",
+            "align": "left",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333333"
+            }
+        },
+        "subtitle": {
+            "text": "Source: Synthetic data modeling based on indexmundi agricultural statistics",
+            "align": "left"
+        },
+        "xAxis": {
+            "categories": [
+                "USA",
+                "China",
+                "Brazil",
+                "EU",
+                "India",
+                "Russia",
+                "Argentina",
+                "Canada",
+                "Ukraine",
+                "Australia",
+                "Indonesia",
+                "Mexico"
+            ],
+            "title": {
+                "text": "Countries",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "1000 Metric Tons (MT)",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "pointPadding": 0.2,
+                "borderWidth": 0,
+                "dataLabels": {
+                    "enabled": false
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Corn Production",
+                "data": [
+                    406292,
+                    260000,
+                    107000,
+                    68300,
+                    27500,
+                    14500,
+                    48000,
+                    42000,
+                    38000,
+                    32000,
+                    22000,
+                    18000
+                ],
+                "color": "#0899FD",
+                "tooltip": {
+                    "valueSuffix": "k MT"
+                }
+            },
+            {
+                "name": "Wheat Production",
+                "data": [
+                    51086,
+                    136000,
+                    5500,
+                    141000,
+                    107180,
+                    77000,
+                    42000,
+                    38000,
+                    85000,
+                    28000,
+                    15000,
+                    13000
+                ],
+                "color": "#8F8CD9",
+                "tooltip": {
+                    "valueSuffix": "k MT"
+                }
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#444444",
+                "fontSize": "12px"
+            }
+        },
+        "accessibility": {
+            "enabled": true
+        }
+    },
+    "visualization_explanation": "The dataset contains two quantitative variables (corn and wheat production) across 12 categorical entities (countries). Synthetic data expansion maintains original statistical relationships (corn \u03bc=98,432 \u00b1 118k MT, wheat \u03bc=63,215 \u00b1 52k MT) while adding geographic diversity. The column chart maximizes data-ink ratio by eliminating chartjunk while maintaining Tufte's principle of proportional ink. Cairo's perceptual topology is respected through distinct color hues (\u0394E > 20) and proportional column spacing. Dual encoding via position and color supports robust pattern recognition across the two crop types."
+}

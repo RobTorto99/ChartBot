@@ -1,0 +1,103 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a lollipop chart with the title 'Top 10 Countries by Population'. The chart should be inverted, with a subtitle '2018'. The x-axis should be of type 'category', and the y-axis should have a title 'Population'. The data series should include the population data for the top 10 countries. The legend should be disabled, and the tooltip should be shared. The chart should have a white background and a margin of 50 pixels on all sides.",
+    "visualization_code": {
+        "chart": {
+            "type": "lollipop",
+            "inverted": true,
+            "backgroundColor": "#ffffff",
+            "margin": 50
+        },
+        "title": {
+            "text": "Top 10 Countries by Population",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "subtitle": {
+            "text": "2018",
+            "style": {
+                "color": "#666666",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "type": "category",
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Population",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "shared": true
+        },
+        "series": [
+            {
+                "name": "Population",
+                "data": [
+                    {
+                        "name": "China",
+                        "y": 1427647786
+                    },
+                    {
+                        "name": "India",
+                        "y": 1352642280
+                    },
+                    {
+                        "name": "United States",
+                        "y": 327096265
+                    },
+                    {
+                        "name": "Indonesia",
+                        "y": 267670543
+                    },
+                    {
+                        "name": "Pakistan",
+                        "y": 212228286
+                    },
+                    {
+                        "name": "Brazil",
+                        "y": 209469323
+                    },
+                    {
+                        "name": "Nigeria",
+                        "y": 195874683
+                    },
+                    {
+                        "name": "Bangladesh",
+                        "y": 161376708
+                    },
+                    {
+                        "name": "Russia",
+                        "y": 145734038
+                    },
+                    {
+                        "name": "Mexico",
+                        "y": 126190788
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a lollipop chart that displays the population data of the top 10 countries. The chart is inverted, meaning the x-axis is vertical and the y-axis is horizontal. The title of the chart is 'Top 10 Countries by Population', and it includes a subtitle '2018'. The x-axis is of type 'category', which is suitable for displaying country names, and the y-axis is labeled 'Population'. The data series includes the population figures for each country, formatted as an array of objects with 'name' and 'y' properties. The legend is disabled, and the tooltip is set to be shared, which means hovering over any data point will show the tooltip for all related data points. The chart has a white background and a margin of 50 pixels on all sides to ensure the chart elements are not too close to the edges. The labels and titles are styled with specific colors and font sizes for better readability."
+}

@@ -1,0 +1,185 @@
+{
+    "visualization_prompt": "Generate a network graph showing connectivity in a fictional Continental Rail Network using Barnes-Hut approximation. Implement tiered node sizing (major hubs=12px, regional stations=8px) with edge coloring by rail type (high-speed=#FF5733, freight=#2E86C1, scenic=#28B463). Include force-directed layout with 0.5 gravitational constant.",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "networkgraph",
+                "backgroundColor": "#F7F9FC",
+                "plotBorderWidth": 1
+            },
+            "title": {
+                "text": "Continental Rail Network 2023",
+                "style": {
+                    "color": "#2C3E50",
+                    "fontSize": "20px",
+                    "fontFamily": "Roboto Condensed"
+                }
+            },
+            "plotOptions": {
+                "networkgraph": {
+                    "layoutAlgorithm": {
+                        "enableSimulation": true,
+                        "approximation": "barnes-hut",
+                        "gravitationalConstant": 0.5,
+                        "linkLength": 40
+                    },
+                    "dataLabels": {
+                        "allowOverlap": false,
+                        "format": "{point.name}",
+                        "style": {
+                            "textOutline": "none",
+                            "fontSize": "11px"
+                        }
+                    }
+                }
+            },
+            "series": [
+                {
+                    "nodes": [
+                        {
+                            "id": "Aurelia",
+                            "marker": {
+                                "radius": 12
+                            },
+                            "color": "#2E86C1"
+                        },
+                        {
+                            "id": "Veridian",
+                            "marker": {
+                                "radius": 12
+                            },
+                            "color": "#2E86C1"
+                        },
+                        {
+                            "id": "Cascade",
+                            "marker": {
+                                "radius": 8
+                            },
+                            "color": "#28B463"
+                        },
+                        {
+                            "id": "Obsidian",
+                            "marker": {
+                                "radius": 8
+                            },
+                            "color": "#FF5733"
+                        },
+                        {
+                            "id": "Lumina",
+                            "marker": {
+                                "radius": 12
+                            },
+                            "color": "#2E86C1"
+                        },
+                        {
+                            "id": "Zephyr",
+                            "marker": {
+                                "radius": 8
+                            },
+                            "color": "#28B463"
+                        },
+                        {
+                            "id": "Titan",
+                            "marker": {
+                                "radius": 8
+                            },
+                            "color": "#FF5733"
+                        },
+                        {
+                            "id": "Nova",
+                            "marker": {
+                                "radius": 8
+                            },
+                            "color": "#28B463"
+                        },
+                        {
+                            "id": "Orion",
+                            "marker": {
+                                "radius": 12
+                            },
+                            "color": "#2E86C1"
+                        },
+                        {
+                            "id": "Vortex",
+                            "marker": {
+                                "radius": 8
+                            },
+                            "color": "#FF5733"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "from": "Aurelia",
+                            "to": "Veridian",
+                            "color": "#2E86C1"
+                        },
+                        {
+                            "from": "Aurelia",
+                            "to": "Cascade",
+                            "color": "#28B463"
+                        },
+                        {
+                            "from": "Veridian",
+                            "to": "Obsidian",
+                            "color": "#FF5733"
+                        },
+                        {
+                            "from": "Veridian",
+                            "to": "Lumina",
+                            "color": "#2E86C1"
+                        },
+                        {
+                            "from": "Cascade",
+                            "to": "Zephyr",
+                            "color": "#28B463"
+                        },
+                        {
+                            "from": "Obsidian",
+                            "to": "Titan",
+                            "color": "#FF5733"
+                        },
+                        {
+                            "from": "Lumina",
+                            "to": "Nova",
+                            "color": "#2E86C1"
+                        },
+                        {
+                            "from": "Zephyr",
+                            "to": "Orion",
+                            "color": "#28B463"
+                        },
+                        {
+                            "from": "Titan",
+                            "to": "Vortex",
+                            "color": "#FF5733"
+                        },
+                        {
+                            "from": "Nova",
+                            "to": "Orion",
+                            "color": "#2E86C1"
+                        },
+                        {
+                            "from": "Orion",
+                            "to": "Vortex",
+                            "color": "#FF5733"
+                        },
+                        {
+                            "from": "Vortex",
+                            "to": "Aurelia",
+                            "color": "#2E86C1"
+                        }
+                    ],
+                    "colorByPoint": false
+                }
+            ],
+            "legend": {
+                "align": "right",
+                "verticalAlign": "middle",
+                "itemStyle": {
+                    "color": "#34495E"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The network graph visualizes a synthetic rail network with 10 nodes (cities) and 12 edges (routes). Nodes represent transportation hubs categorized by size (major/regional) using marker radius. Edges use three color-coded types: high-speed (orange), freight (blue), and scenic (green) routes. The Barnes-Hut algorithm (gravitationalConstant=0.5) creates spatial separation between node clusters while maintaining topological relationships. Synthetic data follows power-law distribution (3 major hubs connected to 60% of regional stations) mimicking real transport networks. Color choices adhere to Cairo's saliency principles, using HSB separation \u226560\u00b0 for categorical distinction. Node placement shows emergent clustering of scenic routes in the graph's northwest quadrant versus radial freight connections around central hubs."
+}

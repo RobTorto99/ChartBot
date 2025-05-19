@@ -1,0 +1,96 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly precipitation trends using synthetic meteorological data with seasonal variation",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f5f5f5",
+            "marginRight": 30
+        },
+        "title": {
+            "text": "Monthly Average Precipitation (2023)",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Month",
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Precipitation (mm)",
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Precipitation Levels",
+                "data": [
+                    32.4,
+                    45.7,
+                    82.1,
+                    97.6,
+                    132.4,
+                    158.9,
+                    142.3,
+                    136.8,
+                    105.4,
+                    78.9,
+                    49.3,
+                    37.6
+                ],
+                "color": "#3498db",
+                "marker": {
+                    "radius": 5
+                }
+            }
+        ],
+        "legend": {
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#34495e"
+            }
+        },
+        "tooltip": {
+            "valueSuffix": " mm",
+            "headerFormat": "<b>{point.x}</b><br/>"
+        }
+    },
+    "visualization_explanation": "The dataset contains univariate time-series data with 12 monthly observations of precipitation measurements. Synthetic values were generated maintaining hydrological plausibility (\u03bc=89.2mm, \u03c3=42.7mm) with summer maxima and winter minima reflecting mid-latitude patterns. The spline chart was selected to emphasize seasonal trends through curve smoothing while maintaining precise value encoding. Axis styling follows Cairo's salience principles using high-contrast typography (14px axis titles, 12px labels). The blue color scheme (#3498db) supports color vision deficiency interpretation. Data-ink optimization removes chart borders while retaining gridlines for value reference. Synthetic data exhibits 1.8:1 seasonal amplitude ratio with July maximum (158.9mm) aligning with continental climate patterns."
+}

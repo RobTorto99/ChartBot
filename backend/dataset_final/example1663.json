@@ -1,0 +1,169 @@
+{
+    "visualization_prompt": "Generate a treemap showing hierarchical composition of export categories using a squarified layout algorithm",
+    "visualization_code": {
+        "accessibility": {
+            "screenReaderSection": {
+                "beforeChartFormat": "<{headingTagName}>{chartTitle}</{headingTagName}><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div>"
+            },
+            "description": "Tree map detailing synthetic export data. Services category is largest at 36%. Contains 2 hierarchical levels with chemical and agricultural subcategories."
+        },
+        "colors": [
+            "#E59866",
+            "#F8C471",
+            "#F7DC6F",
+            "#82E0AA",
+            "#73C6B6",
+            "#85C1E9",
+            "#BB8FCE",
+            "#F1948A",
+            "#B2BABB"
+        ],
+        "series": [
+            {
+                "name": "Export",
+                "type": "treemap",
+                "layoutAlgorithm": "squarified",
+                "allowDrillToNode": true,
+                "dataLabels": {
+                    "enabled": false,
+                    "crop": true
+                },
+                "borderColor": "black",
+                "levels": [
+                    {
+                        "level": 1,
+                        "colorByPoint": true,
+                        "dataLabels": {
+                            "format": "{point.name} {point.value:.0f}%",
+                            "style": {
+                                "fontSize": 18
+                            }
+                        },
+                        "borderWidth": 3
+                    },
+                    {
+                        "level": 2,
+                        "borderWidth": 1
+                    },
+                    {
+                        "level": 1,
+                        "levelIsConstant": false,
+                        "dataLabels": {
+                            "enabled": true
+                        }
+                    }
+                ],
+                "data": [
+                    {
+                        "id": "services",
+                        "name": "Services",
+                        "value": 36
+                    },
+                    {
+                        "id": "transport",
+                        "name": "Transport",
+                        "parent": "services",
+                        "value": 20
+                    },
+                    {
+                        "id": "it",
+                        "name": "IT Services",
+                        "parent": "services",
+                        "value": 10
+                    },
+                    {
+                        "id": "other_serv",
+                        "name": "Other Services",
+                        "parent": "services",
+                        "value": 6
+                    },
+                    {
+                        "id": "chemicals",
+                        "name": "Chemicals",
+                        "value": 13
+                    },
+                    {
+                        "id": "pharma",
+                        "name": "Pharmaceuticals",
+                        "parent": "chemicals",
+                        "value": 8
+                    },
+                    {
+                        "id": "industrial",
+                        "name": "Industrial",
+                        "parent": "chemicals",
+                        "value": 5
+                    },
+                    {
+                        "id": "agriculture",
+                        "name": "Agriculture",
+                        "value": 11
+                    },
+                    {
+                        "id": "crops",
+                        "name": "Crops",
+                        "parent": "agriculture",
+                        "value": 7
+                    },
+                    {
+                        "id": "livestock",
+                        "name": "Livestock",
+                        "parent": "agriculture",
+                        "value": 4
+                    },
+                    {
+                        "id": "machinery",
+                        "name": "Machinery",
+                        "value": 10
+                    },
+                    {
+                        "id": "textiles",
+                        "name": "Textiles",
+                        "value": 7
+                    },
+                    {
+                        "id": "electronics",
+                        "name": "Electronics",
+                        "value": 6
+                    },
+                    {
+                        "id": "metals",
+                        "name": "Metals",
+                        "value": 5
+                    },
+                    {
+                        "id": "minerals",
+                        "name": "Minerals",
+                        "value": 4
+                    },
+                    {
+                        "id": "vehicles",
+                        "name": "Vehicles",
+                        "value": 3
+                    },
+                    {
+                        "id": "stone",
+                        "name": "Stone",
+                        "value": 2
+                    },
+                    {
+                        "id": "other",
+                        "name": "Other",
+                        "value": 3
+                    }
+                ]
+            }
+        ],
+        "title": {
+            "text": "Synthetic Export Composition 2023"
+        },
+        "subtitle": {
+            "text": "Demonstration Dataset"
+        },
+        "tooltip": {
+            "valueDecimals": 2,
+            "pointFormat": "<b>{point.name}</b>: <b>{point.value}%"
+        }
+    },
+    "visualization_explanation": "The dataset contains hierarchical categorical data with two organizational levels. Parent categories (Services, Chemicals, Agriculture) represent major economic sectors, while child nodes detail subspecialties. Synthetic values maintain domain consistency through percentage-based weights summing to 100% across top-level categories. Values follow Pareto distribution (\u03bc=12.7, \u03c3=11.2) reflecting typical economic concentration patterns. The treemap was selected for efficient part-to-whole representation of hierarchical data. Color-by-point encoding leverages Cairo's preattentive processing for category discrimination. Layout algorithm preserves aspect ratios to maintain accurate area perception. Annotations use D3-inspired percentage formatting while maintaining WCAG 2.1 contrast ratios \u22654.5:1 for accessibility."
+}

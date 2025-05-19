@@ -1,0 +1,80 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Monthly Average Temperature'. The chart should have styled axes and labels with specific colors and font sizes. The data series should represent the monthly average temperature for a year, with the series name 'Temperature'. Additionally, the chart should have custom colors for the series and a legend with a rounded border.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline"
+        },
+        "title": {
+            "text": "Monthly Average Temperature",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "legend": {
+            "borderRadius": 5,
+            "borderWidth": 1
+        },
+        "series": [
+            {
+                "name": "Temperature",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#FF6347"
+            }
+        ],
+        "colors": [
+            "#FF6347"
+        ]
+    },
+    "visualization_explanation": "The Highcharts chartOptions object is configured to render a spline chart titled 'Monthly Average Temperature'. The x-axis represents the months of the year with styled labels in a specific color and font size. The y-axis is labeled 'Temperature (\u00b0C)' with its own styling. The data series, named 'Temperature', contains the monthly average temperature data for a year, with a custom color applied. The legend has a rounded border, enhancing the visual appeal of the chart. Overall, the chart is designed to be visually appealing and informative, with attention to detail in styling and data presentation."
+}

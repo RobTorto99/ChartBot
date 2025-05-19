@@ -1,0 +1,103 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart titled 'Musical Scales'. The chart should have a custom scale for sonification, with a dropdown to select different scales. The axes and labels should be styled with specific colors and font sizes. The data series should include a single series with the provided data. Additionally, the chart should have a custom background color and specific margins.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f0f0f0",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "Musical Scales",
+            "align": "left",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px"
+            }
+        },
+        "legend": {
+            "enabled": false
+        },
+        "accessibility": {
+            "landmarkVerbosity": "one"
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Value",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "sonification": {
+            "duration": 3500,
+            "defaultInstrumentOptions": {
+                "mapping": {
+                    "noteDuration": 300,
+                    "pitch": {
+                        "min": "c4",
+                        "max": "c6",
+                        "scale": "minor"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Data Series",
+                "data": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                ],
+                "color": "#25386f"
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a spline chart titled 'Musical Scales'. The chart includes a custom background color and specific margins for better visualization. The title and axes labels are styled with specific colors and font sizes to enhance readability. The sonification feature is enabled with a predefined duration and pitch mapping using a minor scale. The data series contains a single series with the provided data, styled with a custom color. The chart also includes accessibility settings to ensure it is usable by a wider audience. The dropdown for selecting different scales is handled dynamically in the JavaScript code, allowing users to change the sonification scale on the fly."
+}

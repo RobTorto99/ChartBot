@@ -1,0 +1,93 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a stacked area chart with percentage stacking. The chart should have a title 'Percentage stacking with missing values (#1991)'. The axes and labels should be styled with specific colors and font sizes. The data series should include three series with the given data points. Additionally, specify custom colors for the series and configure the chart with appropriate margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 40,
+            "marginRight": 40,
+            "marginBottom": 80,
+            "marginLeft": 80
+        },
+        "title": {
+            "text": "Percentage stacking with missing values (#1991)",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Percentage",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "plotOptions": {
+            "area": {
+                "stacking": "percent",
+                "lineColor": "#ffffff",
+                "lineWidth": 1,
+                "marker": {
+                    "lineWidth": 1,
+                    "lineColor": "#ffffff"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "color": "#7cb5ec"
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    2,
+                    2
+                ],
+                "color": "#434348"
+            },
+            {
+                "name": "Series 3",
+                "data": [
+                    3,
+                    3,
+                    3,
+                    3
+                ],
+                "color": "#90ed7d"
+            }
+        ],
+        "legend": {
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "12px"
+            }
+        },
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a stacked area chart with percentage stacking. The chart title is set to 'Percentage stacking with missing values (#1991)' with a specific font size and color. The axes and labels are styled with custom colors and font sizes to ensure readability. The data series includes three series with distinct names and data points, each assigned a custom color. The plot options for the area series include stacking in percentage mode and styling for the lines and markers. Additional configurations include settings for the chart's background color, margins, and legend styling to enhance the overall presentation and readability of the chart."
+}

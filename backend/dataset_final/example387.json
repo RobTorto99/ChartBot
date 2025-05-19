@@ -1,0 +1,98 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart titled 'Growth of Internet Users Worldwide (logarithmic scale)'. The chart should have a logarithmic y-axis labeled 'Number of Internet Users (in millions)' and a linear x-axis labeled 'Year'. The x-axis should have categories from 1995 to 2023. The data series should be named 'Internet Users' and contain data points with values and specific colors. The chart should have a custom gradient color for the series, a tooltip displaying the series name and the value in millions, and accessibility settings for point descriptions.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline"
+        },
+        "title": {
+            "text": "Growth of Internet Users Worldwide (logarithmic scale)"
+        },
+        "accessibility": {
+            "point": {
+                "valueDescriptionFormat": "{xDescription}{separator}{value} million(s)"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "Year"
+            },
+            "categories": [
+                1995,
+                2000,
+                2005,
+                2010,
+                2015,
+                2020,
+                2023
+            ]
+        },
+        "yAxis": {
+            "type": "logarithmic",
+            "title": {
+                "text": "Number of Internet Users (in millions)"
+            }
+        },
+        "tooltip": {
+            "headerFormat": "<b>{series.name}</b><br />",
+            "pointFormat": "{point.y} million(s)"
+        },
+        "series": [
+            {
+                "name": "Internet Users",
+                "keys": [
+                    "y",
+                    "color"
+                ],
+                "data": [
+                    [
+                        16,
+                        "#0000ff"
+                    ],
+                    [
+                        361,
+                        "#8d0073"
+                    ],
+                    [
+                        1018,
+                        "#ba0046"
+                    ],
+                    [
+                        2025,
+                        "#d60028"
+                    ],
+                    [
+                        3192,
+                        "#eb0014"
+                    ],
+                    [
+                        4673,
+                        "#fb0004"
+                    ],
+                    [
+                        5200,
+                        "#ff0000"
+                    ]
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "x2": 0,
+                        "y1": 1,
+                        "y2": 0
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#0000ff"
+                        ],
+                        [
+                            1,
+                            "#ff0000"
+                        ]
+                    ]
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart titled 'Growth of Internet Users Worldwide (logarithmic scale)'. The x-axis is labeled 'Year' and contains categories from 1995 to 2023. The y-axis is logarithmic and labeled 'Number of Internet Users (in millions)'. The data series is named 'Internet Users' and includes specific data points with values and colors. The chart also includes a custom gradient color for the series, a tooltip that displays the series name and the value in millions, and accessibility settings for point descriptions. This setup ensures that the chart is visually appealing and accessible, with a focus on highlighting the growth of internet users over time using a logarithmic scale to better visualize large value gaps."
+}

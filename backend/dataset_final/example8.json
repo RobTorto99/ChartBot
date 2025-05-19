@@ -1,0 +1,89 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a Sankey diagram. The chart should display the distribution of Apple Inc.'s total assets as of 9/29/2020. The chart should have a title 'Apple Inc. Total Assets 9/29/2020' and a subtitle with a source link to Yahoo Finance. The Sankey diagram should show the flow of assets from 'Total Assets' to 'Current Assets' and 'Non-Current Assets', and further breakdowns within these categories. The tooltip should display the flow details in millions of USD. The chart should use a custom color for the nodes and links, with specific styling for the data labels and borders.",
+    "visualization_code": {
+        "chart": {
+            "type": "sankey"
+        },
+        "title": {
+            "text": "Apple Inc. Total Assets 9/29/2020"
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://finance.yahoo.com/quote/AAPL/balance-sheet/'>Yahoo Finance</a>"
+        },
+        "tooltip": {
+            "headerFormat": null,
+            "pointFormat": "{point.fromNode.name} \u2192 {point.toNode.name}: {point.weight} million USD",
+            "nodeFormat": "{point.name}: {point.sum} million USD"
+        },
+        "series": [
+            {
+                "borderColor": "#1a1a1a",
+                "borderWidth": 1,
+                "keys": [
+                    "from",
+                    "to",
+                    "weight"
+                ],
+                "data": [
+                    [
+                        "Total Assets",
+                        "Current-Assets",
+                        143.71
+                    ],
+                    [
+                        "Total Assets",
+                        "Non-Current Assets",
+                        180.17
+                    ],
+                    [
+                        "Current-Assets",
+                        "Cash",
+                        90.94
+                    ],
+                    [
+                        "Current-Assets",
+                        "Receivables",
+                        37.44
+                    ],
+                    [
+                        "Current-Assets",
+                        "Inventory",
+                        4.06
+                    ],
+                    [
+                        "Current-Assets",
+                        "Other CA",
+                        11.26
+                    ],
+                    [
+                        "Non-Current Assets",
+                        "Net PPE",
+                        36.76
+                    ],
+                    [
+                        "Non-Current Assets",
+                        "Investments",
+                        100.88
+                    ],
+                    [
+                        "Non-Current Assets",
+                        "Other NCA",
+                        42.52
+                    ]
+                ],
+                "type": "sankey",
+                "name": "Apple Assets",
+                "dataLabels": {
+                    "style": {
+                        "color": "#1a1a1a",
+                        "textOutline": false
+                    }
+                }
+            }
+        ],
+        "colors": [
+            "#A8A8A8"
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a Sankey diagram, which is suitable for visualizing the flow of assets within Apple Inc. as of a specific date. The chart is titled 'Apple Inc. Total Assets 9/29/2020' and includes a subtitle with a link to the source data on Yahoo Finance. The Sankey diagram is populated with data that represents the distribution of assets from 'Total Assets' to 'Current Assets' and 'Non-Current Assets', and further breakdowns within these categories. The tooltip is customized to display the flow details in millions of USD, providing a clear understanding of the data. The chart uses a custom color for the nodes and links, specified in the 'colors' array, and includes styling for the data labels and borders to ensure readability and consistency. This configuration ensures that the chart is both informative and visually appealing."
+}

@@ -1,0 +1,41 @@
+{
+    "visualization_prompt": "Create a Highcharts map visualization that displays traffic accidents in Norway during July 2015, categorized by speed limits. The map should include a basemap of Norway, markers for each accident location, and a timeline control to filter accidents by speed limit. The visualization should also display the number of accidents for the selected speed limit.",
+    "visualization_code": {
+        "chart": {
+            "map": "countries/no/no-all",
+            "type": "map"
+        },
+        "title": {
+            "text": "Traffic Accidents July 2015 by Speed Limit"
+        },
+        "subtitle": {
+            "text": "Source: <a href=\"https://www.vegvesen.no/nvdb/api/dokumentasjon\">Statens Vegvesen</a>. Map: <a href=\"https://code.highcharts.com/mapdata/countries/no/no-all.js\">Norway</a>"
+        },
+        "mapNavigation": {
+            "enabled": true,
+            "buttonOptions": {
+                "verticalAlign": "bottom"
+            }
+        },
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "<b>Accident</b><br>Date: {point.date}"
+        },
+        "series": [
+            {
+                "name": "Basemap",
+                "borderColor": "#A0A0A0",
+                "nullColor": "rgba(200, 200, 200, 0.3)",
+                "showInLegend": false
+            },
+            {
+                "type": "mappoint",
+                "name": "Accident",
+                "color": "#FF0000",
+                "showInLegend": false,
+                "data": []
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration sets up a map visualization of Norway with traffic accident data for July 2015, categorized by speed limits. The map includes a basemap of Norway and a series of markers representing accident locations. The visualization allows users to filter accidents by speed limit using a timeline control. The number of accidents for the selected speed limit is displayed dynamically. The map navigation is enabled for user interaction, and tooltips provide additional information about each accident when hovered over."
+}

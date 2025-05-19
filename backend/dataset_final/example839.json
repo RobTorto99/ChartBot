@@ -1,0 +1,95 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Sample Spline Chart'. The chart should have styled axes and labels with specific colors and font sizes. The data series should include points from (-3, 3) to (3, 3). Custom colors should be used for the series, and additional configurations should include chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "marginTop": 50,
+            "marginBottom": 50,
+            "marginLeft": 50,
+            "marginRight": 50,
+            "backgroundColor": "#f9f9f9"
+        },
+        "title": {
+            "text": "Sample Spline Chart",
+            "style": {
+                "color": "#333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "gridLineWidth": 1,
+            "min": -5,
+            "max": 5,
+            "tickInterval": 1,
+            "lineColor": "black",
+            "offset": -150,
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "min": -5,
+            "max": 5,
+            "tickInterval": 1,
+            "lineWidth": 1,
+            "lineColor": "black",
+            "offset": -150,
+            "title": {
+                "text": null
+            },
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Sample Data",
+                "data": [
+                    [
+                        -3,
+                        3
+                    ],
+                    [
+                        -2,
+                        2
+                    ],
+                    [
+                        -1,
+                        1
+                    ],
+                    [
+                        0,
+                        0
+                    ],
+                    [
+                        1,
+                        1
+                    ],
+                    [
+                        2,
+                        2
+                    ],
+                    [
+                        3,
+                        3
+                    ]
+                ],
+                "color": "#0073e6"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333",
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart titled 'Sample Spline Chart'. The chart type is specified as 'spline', and the title is styled with a dark gray color and a font size of 18px. The x and y axes are styled with black lines and labeled with a font size of 12px and a color of #555. The data series includes points from (-3, 3) to (3, 3) with a custom color of #0073e6. Additional configurations include setting the chart margins to 50 pixels on all sides and a light gray background color. The legend is enabled and styled with a font size of 14px and a dark gray color."
+}

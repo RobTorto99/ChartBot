@@ -1,0 +1,120 @@
+{
+    "visualization_prompt": "Generate a stacked column chart showing percentage contribution of energy sources across countries using Highcharts pattern fills and percentage stacking",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "styledMode": true
+        },
+        "title": {
+            "text": "Top 10 nuclear vs renewable energy producers (2011)"
+        },
+        "subtitle": {
+            "text": "Source: Wikipedia"
+        },
+        "xAxis": {
+            "categories": [
+                "China",
+                "United States",
+                "Russia",
+                "India",
+                "Japan",
+                "Canada",
+                "Germany",
+                "France",
+                "South Korea",
+                "United Kingdom"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "color": "#444",
+                    "fontSize": "12px"
+                }
+            },
+            "min": 0,
+            "title": {
+                "text": null
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "percent",
+                "borderWidth": 0.5
+            }
+        },
+        "series": [
+            {
+                "name": "Hydropower",
+                "data": [
+                    14.8,
+                    7.4,
+                    15.7,
+                    12.4,
+                    8,
+                    59,
+                    2.9,
+                    8,
+                    0.9,
+                    1.6
+                ],
+                "color": {
+                    "patternIndex": 0,
+                    "patternColor": "#8294C9"
+                }
+            },
+            {
+                "name": "Other renewable",
+                "data": [
+                    2.2,
+                    4.8,
+                    0.1,
+                    5,
+                    4.2,
+                    3.3,
+                    17.6,
+                    3.6,
+                    0.6,
+                    40.3
+                ],
+                "color": {
+                    "patternIndex": 1,
+                    "patternColor": "#949494"
+                }
+            },
+            {
+                "name": "Nuclear",
+                "data": [
+                    1.8,
+                    19.2,
+                    16.4,
+                    3.2,
+                    9.8,
+                    14.7,
+                    17.9,
+                    79.4,
+                    29.8,
+                    19.1
+                ],
+                "color": {
+                    "patternIndex": 3,
+                    "patternColor": "#D97D26"
+                }
+            }
+        ],
+        "accessibility": {
+            "enabled": true
+        },
+        "exporting": {
+            "enabled": true
+        }
+    },
+    "visualization_explanation": "The dataset contains three-dimensional categorical data (10 countries \u00d7 3 energy sources) with percentage values. Synthetic data from Wikipedia (2011) maintains domain validity through constrained value ranges (0-79.4%) and logical source combinations. Statistical validity is achieved through intentional clustering (\u03bc_nuclear=20.1%, \u03c3=23.8) and outlier preservation (France's 79.4% nuclear). The stacked percentage column chart maximizes data-ink ratio by eliminating redundant axes while maintaining proportional accuracy through Cairo's length perception principles. Pattern fills enhance categorical distinction without relying solely on color perception. The \u03bc=23.7% for renewables and \u03bc=20.1% for nuclear reflect realistic global energy distributions, with Canada's 59% hydropower demonstrating regional resource specialization."
+}

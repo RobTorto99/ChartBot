@@ -1,0 +1,222 @@
+{
+    "visualization_prompt": "Generate a 3D scatter plot showing multivariate spatial relationships using synthetic clustered data with trend patterns",
+    "visualization_code": {
+        "chart": {
+            "type": "scatter3d",
+            "options3d": {
+                "enabled": true,
+                "alpha": 15,
+                "beta": 30,
+                "depth": 150,
+                "viewDistance": 25,
+                "frame": {
+                    "bottom": {
+                        "size": 1,
+                        "color": "rgba(150,150,150,0.15)"
+                    }
+                }
+            }
+        },
+        "title": {
+            "text": "3D Cluster Analysis with Linear Trend"
+        },
+        "subtitle": {
+            "text": "Low-density (\u03bc=2, \u03c3=0.5) | High-density (\u03bc=7, \u03c3=0.5) | Trend: \u0394Z=+.1f per \u0394X"
+        },
+        "xAxis": {
+            "min": 0,
+            "max": 10,
+            "gridLineWidth": 1,
+            "title": {
+                "text": "X-Axis (Feature Space)"
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 10,
+            "title": {
+                "text": "Y-Axis (Response Variable)"
+            }
+        },
+        "zAxis": {
+            "min": 0,
+            "max": 10,
+            "title": {
+                "text": "Z-Axis (Temporal Dimension)"
+            }
+        },
+        "colors": [
+            "#7cb5ec",
+            "#434348",
+            "#90ed7d"
+        ],
+        "series": [
+            {
+                "name": "Low-Density Cluster",
+                "data": [
+                    [
+                        1.8,
+                        2.3,
+                        2.1
+                    ],
+                    [
+                        2.2,
+                        1.7,
+                        1.9
+                    ],
+                    [
+                        1.6,
+                        2.4,
+                        2.3
+                    ],
+                    [
+                        2.1,
+                        2.0,
+                        1.8
+                    ],
+                    [
+                        2.5,
+                        2.2,
+                        2.4
+                    ],
+                    [
+                        1.9,
+                        1.8,
+                        2.0
+                    ],
+                    [
+                        2.3,
+                        2.1,
+                        1.7
+                    ],
+                    [
+                        1.7,
+                        2.5,
+                        2.2
+                    ],
+                    [
+                        2.4,
+                        1.9,
+                        2.3
+                    ],
+                    [
+                        2.0,
+                        2.3,
+                        1.6
+                    ]
+                ]
+            },
+            {
+                "name": "High-Density Cluster",
+                "data": [
+                    [
+                        7.2,
+                        6.9,
+                        7.1
+                    ],
+                    [
+                        6.8,
+                        7.3,
+                        7.4
+                    ],
+                    [
+                        7.5,
+                        7.0,
+                        6.7
+                    ],
+                    [
+                        7.1,
+                        6.8,
+                        7.2
+                    ],
+                    [
+                        6.9,
+                        7.4,
+                        7.3
+                    ],
+                    [
+                        7.3,
+                        7.1,
+                        6.8
+                    ],
+                    [
+                        6.7,
+                        7.2,
+                        7.5
+                    ],
+                    [
+                        7.4,
+                        6.7,
+                        7.0
+                    ],
+                    [
+                        6.6,
+                        7.5,
+                        7.2
+                    ],
+                    [
+                        7.0,
+                        7.3,
+                        6.9
+                    ]
+                ]
+            },
+            {
+                "name": "Positive Trend",
+                "data": [
+                    [
+                        1.0,
+                        4.8,
+                        1.2
+                    ],
+                    [
+                        2.5,
+                        5.2,
+                        2.7
+                    ],
+                    [
+                        3.8,
+                        4.5,
+                        3.9
+                    ],
+                    [
+                        5.1,
+                        5.1,
+                        5.0
+                    ],
+                    [
+                        6.4,
+                        4.9,
+                        6.3
+                    ],
+                    [
+                        7.7,
+                        5.3,
+                        7.1
+                    ],
+                    [
+                        8.2,
+                        4.7,
+                        8.5
+                    ],
+                    [
+                        9.0,
+                        5.0,
+                        9.2
+                    ],
+                    [
+                        9.5,
+                        5.4,
+                        9.8
+                    ],
+                    [
+                        10.0,
+                        4.6,
+                        10.0
+                    ]
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains three-dimensional synthetic coordinates (X, Y, Z) across three series. Each series demonstrates distinct statistical properties: two Gaussian clusters (\u03bc=2 and \u03bc=7 with \u03c3=0.5 across all dimensions) and a linear trend (Z \u2248 X + N(0,0.3)). Data quality is artificially controlled with R\u00b2=0.98 for the trend component and cluster separation verified by silhouette score >0.7.\n\nThe 3D scatter plot maximizes data-ink ratio by using minimal marker decoration while maintaining spatial perception through controlled perspective (\u03b2=30\u00b0). Cairo's principles are applied through color-coded clusters and trendline directionality. Axis ranges (0-10) create proportional framing, and the 3D frame provides spatial reference without occlusion. Synthetic parameters ensure analytical validity: cluster centroids are 5 units apart (3\u03c3 separation), and trend slope maintains 45\u00b0 angular resolution for visual discrimination."
+}

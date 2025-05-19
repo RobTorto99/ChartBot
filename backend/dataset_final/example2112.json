@@ -1,0 +1,118 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly sales trends for three products using categorical x-axis and sequential value progression",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#f7f7f7",
+            "margin": 50
+        },
+        "title": {
+            "text": "Monthly Sales Data"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales Figures",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "pointPadding": 0.2,
+                "borderWidth": 0
+            }
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical"
+        },
+        "series": [
+            {
+                "name": "Product A",
+                "data": [
+                    5000,
+                    6000,
+                    7000,
+                    8000,
+                    9000,
+                    10000,
+                    11000,
+                    12000,
+                    13000,
+                    14000,
+                    15000,
+                    16000
+                ],
+                "color": "#7cb5ec"
+            },
+            {
+                "name": "Product B",
+                "data": [
+                    4000,
+                    5000,
+                    6000,
+                    7000,
+                    8000,
+                    9000,
+                    10000,
+                    11000,
+                    12000,
+                    13000,
+                    14000,
+                    15000
+                ],
+                "color": "#434348"
+            },
+            {
+                "name": "Product C",
+                "data": [
+                    3000,
+                    4000,
+                    5000,
+                    6000,
+                    7000,
+                    8000,
+                    9000,
+                    10000,
+                    11000,
+                    12000,
+                    13000,
+                    14000
+                ],
+                "color": "#90ed7d"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations (categorical ordinal scale) for three product series (nominal categorical variables). Synthetic sales data follows arithmetic progression (\u03bc\u0394=+1000/month) with Product A maintaining market leadership. Column chart maximizes data-ink ratio by eliminating redundant gridlines while maintaining Cairo's proportional ink principle. Sequential color palette (#7cb5ec, #434348, #90ed7d) ensures perceptual distinction without luminance conflict. Trend alignment across series (R\u00b2=1.0 linear fit) intentionally simplifies pattern recognition for non-technical audiences."
+}

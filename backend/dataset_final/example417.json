@@ -1,0 +1,81 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a 3D column chart with the following specifications: Chart type: column, Chart title: Monthly Sales Data, Axes and labels styling: X-axis labels should be bold and black, Y-axis labels should be italic and blue, Data series: Monthly sales data for a year, Custom colors: Use Highcharts default colors, Additional configurations: Enable 3D options with specific angles and depth, set chart margins, and include a bottom frame with a specific color.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "margin": 75,
+            "options3d": {
+                "enabled": true,
+                "alpha": 15,
+                "beta": 15,
+                "depth": 50,
+                "frame": {
+                    "bottom": {
+                        "size": 2,
+                        "color": "#000000"
+                    }
+                }
+            }
+        },
+        "title": {
+            "text": "Monthly Sales Data"
+        },
+        "xAxis": {
+            "gridLineWidth": 0,
+            "type": "category",
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "black",
+                    "fontWeight": "bold"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "blue",
+                    "fontStyle": "italic"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "depth": 25
+            }
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a 3D column chart titled 'Monthly Sales Data'. The chart type is set to 'column', and 3D options are enabled with specific angles (alpha and beta set to 15 degrees) and depth (50 units). The chart includes a bottom frame with a size of 2 units and a black color. The X-axis is configured with categories representing months, and its labels are styled with bold black text. The Y-axis labels are styled with italic blue text. The data series represents monthly sales data for a year, with the series named 'Sales'. The chart has a margin of 75 units around its edges, ensuring it is visually balanced."
+}

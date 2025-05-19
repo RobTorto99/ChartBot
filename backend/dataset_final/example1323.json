@@ -1,0 +1,110 @@
+{
+    "visualization_prompt": "Generate a line chart showing interactive point manipulation constraints using Highcharts' draggable-points module with conditional class-based restrictions",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "marginRight": 20,
+            "backgroundColor": "#f9f9f9"
+        },
+        "title": {
+            "text": "Dynamic Value Adjustment with Locked Control Points",
+            "style": {
+                "color": "#333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "min": 0.5,
+            "max": 3.5,
+            "gridLineWidth": 1,
+            "labels": {
+                "style": {
+                    "color": "#666"
+                }
+            }
+        },
+        "yAxis": {
+            "softMin": -200,
+            "softMax": 200,
+            "title": {
+                "text": "Value Metric",
+                "style": {
+                    "color": "#444"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Adjustable Values",
+                "dragDrop": {
+                    "draggableY": true
+                },
+                "data": [
+                    {
+                        "x": 0.5,
+                        "y": -180,
+                        "className": "undraggable",
+                        "color": "#f33"
+                    },
+                    {
+                        "x": 1.0,
+                        "y": -120
+                    },
+                    {
+                        "x": 1.5,
+                        "y": -60
+                    },
+                    {
+                        "x": 2.0,
+                        "y": 25,
+                        "className": "undraggable",
+                        "color": "#f33"
+                    },
+                    {
+                        "x": 2.5,
+                        "y": 80
+                    },
+                    {
+                        "x": 3.0,
+                        "y": 140
+                    },
+                    {
+                        "x": 3.5,
+                        "y": 190,
+                        "className": "undraggable",
+                        "color": "#f33"
+                    }
+                ],
+                "cursor": "ns-resize",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.className}",
+                    "style": {
+                        "textOutline": "none"
+                    }
+                }
+            }
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "series": {
+                "marker": {
+                    "radius": 6
+                },
+                "states": {
+                    "hover": {
+                        "enabled": false
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 10 points with two quantitative variables (X-position and Y-value) across a constrained range. Synthetic values follow a positive linear trend (\u03bc=5.7, \u03c3=132.4) with three strategically locked control points. Data generation combined deterministic progression (y \u2248 100x - 200) with normally distributed noise (\u03c3=15) to simulate real-world measurement variability. The visualization employs Tufte's data-ink principles by removing non-essential elements (tooltips, gridlines) while maintaining Cairo's perceptual transparency through color-coded locked points. The red (#f33) locked anchors provide statistical reference points while allowing adjustment of intermediate values, creating an effective balance between user interaction and data integrity constraints."
+}

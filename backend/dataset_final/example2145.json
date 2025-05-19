@@ -1,0 +1,115 @@
+{
+    "visualization_prompt": "Generate a bar chart showing gender distribution percentages across professions using percentage stacking",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Swedish top 10 professions dominated by women (16-64 years) in 2017",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333333"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Preschool teacher",
+                "Home care nurse",
+                "Nurse",
+                "Nanny",
+                "Nurse practitioner",
+                "Finance Assistant",
+                "Accountant",
+                "Nurse assistant",
+                "Office assistant/secretary"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            },
+            "accessibility": {
+                "description": "Profession categories"
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            },
+            "min": 0,
+            "title": {
+                "text": null
+            }
+        },
+        "plotOptions": {
+            "bar": {
+                "stacking": "percent",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.percentage:.0f}%",
+                    "color": "#333333"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Women",
+                "data": [
+                    96,
+                    92,
+                    91,
+                    89,
+                    89,
+                    87,
+                    79,
+                    78,
+                    78
+                ],
+                "color": "#f8b9d4",
+                "borderColor": "#C67BC4",
+                "accessibility": {
+                    "description": "Female workforce percentage"
+                }
+            },
+            {
+                "name": "Men",
+                "data": [
+                    4,
+                    8,
+                    9,
+                    11,
+                    11,
+                    13,
+                    21,
+                    22,
+                    22
+                ],
+                "color": "#b9d4f8",
+                "borderColor": "#8294C9",
+                "accessibility": {
+                    "description": "Male workforce percentage"
+                }
+            }
+        ],
+        "tooltip": {
+            "shared": true,
+            "headerFormat": "<b>{point.key}</b><br>",
+            "pointFormat": "<span style='color:{point.color}'>\u25cf</span> {series.name}: <b>{point.percentage:.0f}%</b>"
+        },
+        "accessibility": {
+            "enabled": true,
+            "description": "Gender distribution across professions in Sweden",
+            "point": {
+                "valueSuffix": "%",
+                "descriptionFormatter": "Profession {point.name}: {series.name} {point.y}%"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 9 categorical professions with two numerical variables (male/female percentages) summing to 100% per category. Synthetic data follows Swedish labor statistics patterns with inverse correlation between gender groups (r = -1.0). The bar chart maximizes data-ink ratio by eliminating gridlines while maintaining perceptual grouping through Cairo's proximity principle. Stacked percentages enable direct comparison of gender proportions across professions. Color choices (#f8b9d4 for women, #b9d4f8 for men) follow cultural conventions while maintaining 3:1 contrast ratio for accessibility. Data labels provide redundant encoding with the y-axis to support both absolute position and numeric value perception."
+}

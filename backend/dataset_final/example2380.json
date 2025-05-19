@@ -1,0 +1,154 @@
+{
+    "visualization_prompt": "Generate a spline chart showing trend analysis of two synthetic datasets using dual-series comparison with sign-encoded color differentiation",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#333",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Sample Spline Chart",
+            "style": {
+                "color": "#fff"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#fff"
+                }
+            },
+            "tickInterval": 1
+        },
+        "yAxis": {
+            "title": {
+                "text": null,
+                "style": {
+                    "color": "#fff"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#fff"
+                }
+            }
+        },
+        "legend": {
+            "enabled": true,
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#fff"
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "marker": {
+                    "enabled": false
+                },
+                "lineWidth": 5,
+                "color": "lightgreen",
+                "negativeColor": "red"
+            }
+        },
+        "series": [
+            {
+                "name": "Volatile Metric",
+                "data": [
+                    [
+                        0,
+                        1.2
+                    ],
+                    [
+                        1,
+                        2.5
+                    ],
+                    [
+                        2,
+                        -0.5
+                    ],
+                    [
+                        3,
+                        3.1
+                    ],
+                    [
+                        4,
+                        1.8
+                    ],
+                    [
+                        5,
+                        -0.2
+                    ],
+                    [
+                        6,
+                        2.9
+                    ],
+                    [
+                        7,
+                        1.5
+                    ],
+                    [
+                        8,
+                        3.2
+                    ],
+                    [
+                        9,
+                        0.8
+                    ]
+                ]
+            },
+            {
+                "name": "Growth Trend",
+                "data": [
+                    [
+                        0,
+                        10
+                    ],
+                    [
+                        1,
+                        15
+                    ],
+                    [
+                        2,
+                        20
+                    ],
+                    [
+                        3,
+                        25
+                    ],
+                    [
+                        4,
+                        30
+                    ],
+                    [
+                        5,
+                        25
+                    ],
+                    [
+                        6,
+                        35
+                    ],
+                    [
+                        7,
+                        40
+                    ],
+                    [
+                        8,
+                        45
+                    ],
+                    [
+                        9,
+                        50
+                    ]
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains two numerical series (10 points each) with explicit x-y pairing. Series 1 (\u03bc=1.63, \u03c3=1.32) demonstrates bimodal distribution with negative excursions, while Series 2 (\u03bc=29.5, \u03c3=12.6) shows strong positive trend. Synthetic data maintains domain consistency through logical value ranges and temporal progression. The spline chart maximizes data-ink ratio by eliminating markers while preserving trend visibility. Color encoding (Tufte's principle of within-field invariance) immediately communicates value polarity. Dark theme follows Cairo's contrast sensitivity guidelines, with positionally encoded legend maintaining chart focus. Statistical anchors ensure synthetic data plausibility: Series 1's negative values trigger red encoding, while Series 2 maintains monotonic growth in lightgreen."
+}

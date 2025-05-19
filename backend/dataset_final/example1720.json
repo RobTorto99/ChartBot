@@ -1,0 +1,119 @@
+{
+    "visualization_prompt": "Generate a 3D pie chart showing proportional market share distribution using synthetic categorical data with depth-enhanced sector differentiation",
+    "visualization_code": {
+        "chart": {
+            "type": "pie",
+            "options3d": {
+                "enabled": true,
+                "alpha": 45,
+                "beta": 0
+            },
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Monthly Sales Distribution",
+            "style": {
+                "color": "#2E4053",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "depth": 35,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<b>{point.name}</b>: {point.percentage:.1f}%",
+                    "style": {
+                        "color": "#34495E",
+                        "fontSize": "12px",
+                        "textOutline": "none"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Market Share",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Electronics",
+                        "y": 22,
+                        "color": "#3498DB"
+                    },
+                    {
+                        "name": "Furniture",
+                        "y": 18,
+                        "color": "#2ECC71"
+                    },
+                    {
+                        "name": "Apparel",
+                        "y": 15,
+                        "color": "#F1C40F"
+                    },
+                    {
+                        "name": "Groceries",
+                        "y": 12,
+                        "color": "#E74C3C"
+                    },
+                    {
+                        "name": "Sports Equipment",
+                        "y": 10,
+                        "color": "#9B59B6"
+                    },
+                    {
+                        "name": "Beauty Products",
+                        "y": 8,
+                        "color": "#1ABC9C"
+                    },
+                    {
+                        "name": "Books",
+                        "y": 6,
+                        "color": "#E67E22"
+                    },
+                    {
+                        "name": "Toys",
+                        "y": 5,
+                        "color": "#E91E63"
+                    },
+                    {
+                        "name": "Automotive",
+                        "y": 3,
+                        "color": "#95A5A6"
+                    },
+                    {
+                        "name": "Pet Supplies",
+                        "y": 1,
+                        "color": "#8E44AD"
+                    }
+                ]
+            }
+        ],
+        "colors": [
+            "#3498DB",
+            "#2ECC71",
+            "#F1C40F",
+            "#E74C3C",
+            "#9B59B6",
+            "#1ABC9C",
+            "#E67E22",
+            "#E91E63",
+            "#95A5A6",
+            "#8E44AD"
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#2C3E50"
+            },
+            "itemHoverStyle": {
+                "color": "#3498DB"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate categorical distribution across 10 retail sectors. Synthetic percentages were generated using a Pareto-like distribution (\u03b1=1.5) with \u03bc=10% average share and \u03c3=6.8% standard deviation, creating realistic market concentration patterns while maintaining exact 100% summation. Outliers at both ends (Electronics 22% vs Pet Supplies 1%) simulate typical market leadership dynamics. The 3D pie visualization was selected to emphasize volumetric comparisons while maintaining categorical distinctness through Cairo's principle of color separability. Depth encoding enhances sector differentiation without violating Tufte's data-ink ratio, as the third dimension is purely decorative. Strategic color assignment follows Kelly's 22-color criteria for maximum perceptual distance, with sector ordering by descending value to facilitate pattern recognition."
+}

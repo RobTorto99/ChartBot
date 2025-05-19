@@ -1,0 +1,105 @@
+{
+    "visualization_prompt": "Generate a bar chart showing monthly sales performance across fiscal quarters using synthetic data generation with trend modeling",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "backgroundColor": "#f9f9f9",
+            "marginRight": 30
+        },
+        "title": {
+            "text": "2024 Enterprise Software Sales",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px"
+            }
+        },
+        "subtitle": {
+            "text": "Quarterly progression with seasonal adjustment (USD thousands)",
+            "style": {
+                "color": "#7f8c8d"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495e",
+                    "fontWeight": "bold"
+                }
+            },
+            "gridLineWidth": 0
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (USD thousands)",
+                "style": {
+                    "color": "#34495e"
+                }
+            },
+            "labels": {
+                "format": "${value}K",
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Subscription Revenue",
+                "data": [
+                    214,
+                    238,
+                    275,
+                    291,
+                    312,
+                    334,
+                    287,
+                    302,
+                    328,
+                    357,
+                    382,
+                    405
+                ],
+                "color": "#2980b9",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "+{point.y:.0f}K",
+                    "color": "#2c3e50"
+                }
+            }
+        ],
+        "exporting": {
+            "width": 200,
+            "chartOptions": {
+                "chart": {
+                    "backgroundColor": "#ffffff"
+                },
+                "title": {
+                    "style": {
+                        "fontSize": "16px"
+                    }
+                }
+            }
+        },
+        "plotOptions": {
+            "bar": {
+                "borderRadius": 3,
+                "pointPadding": 0.15
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents 12 monthly observations of subscription revenue (ratio data) with synthetic values constructed using three components: 1) Base growth trend (3.5% MoM), 2) Seasonal multipliers (Q4 peak = \u00d71.15), 3) Random noise (\u03c3=12.8). Synthetic values maintain financial plausibility with \u03bc=$316K, \u03c3=$58.2K. The bar chart maximizes data-ink ratio through direct value labels and eliminated gridlines while maintaining Cairo's proportional ink principle through consistent bar widths. Color contrast (#2980b9 vs #f9f9f9) ensures immediate visual parsing of quantitative relationships. Export configuration preserves analytical utility in compact format through constrained width and adjusted typography hierarchy."
+}

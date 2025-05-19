@@ -1,0 +1,112 @@
+{
+    "visualization_prompt": "Generate a sankey diagram showing hierarchical allocation of Apple's total assets using flow volume relationships between accounting categories",
+    "visualization_code": {
+        "chart": {
+            "type": "sankey",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Apple Inc. Total Assets Composition (2020)",
+            "style": {
+                "color": "#1a1a1a",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Source: Yahoo Finance (September 29, 2020)",
+            "useHTML": true,
+            "style": {
+                "color": "#666666"
+            }
+        },
+        "series": [
+            {
+                "keys": [
+                    "from",
+                    "to",
+                    "weight"
+                ],
+                "dataLabels": {
+                    "style": {
+                        "color": "#404040",
+                        "fontSize": "12px",
+                        "textOutline": "none"
+                    }
+                },
+                "data": [
+                    [
+                        "Total Assets",
+                        "Current Assets",
+                        143.71
+                    ],
+                    [
+                        "Total Assets",
+                        "Non-Current Assets",
+                        180.17
+                    ],
+                    [
+                        "Current Assets",
+                        "Cash",
+                        90.94
+                    ],
+                    [
+                        "Current Assets",
+                        "Receivables",
+                        37.44
+                    ],
+                    [
+                        "Current Assets",
+                        "Inventory",
+                        4.06
+                    ],
+                    [
+                        "Current Assets",
+                        "Other CA",
+                        11.26
+                    ],
+                    [
+                        "Non-Current Assets",
+                        "Net PPE",
+                        36.76
+                    ],
+                    [
+                        "Non-Current Assets",
+                        "Investments",
+                        100.88
+                    ],
+                    [
+                        "Non-Current Assets",
+                        "Other NCA",
+                        42.52
+                    ]
+                ],
+                "type": "sankey",
+                "name": "Asset Allocation",
+                "colorByPoint": false,
+                "colors": [
+                    "#2caffe",
+                    "#544fc5",
+                    "#00e272",
+                    "#fe6a35",
+                    "#6b8abc",
+                    "#d568fb",
+                    "#2ee0ca",
+                    "#fa4b42",
+                    "#feb56a"
+                ]
+            }
+        ],
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "<b>{point.fromNode.name}</b> \u2192 {point.toNode.name}: <b>{point.weight}</b> million USD"
+        },
+        "plotOptions": {
+            "sankey": {
+                "nodeWidth": 15,
+                "linkOpacity": 0.6
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a hierarchical financial structure with 9 nodes and 8 links, using ratio-scale measurements in millions USD. As primary data source, Yahoo Finance provides verified balance sheet figures demonstrating exact monetary allocations. The sankey diagram effectively visualizes proportional asset distribution through flow width encoding, adhering to Tufte's principle of maximizing data-ink ratio by eliminating non-essential chart elements. Cairo's perceptual principles manifest in color contrast between asset types and pre-attentive processing of flow magnitudes. Node sums maintain strict accounting validity (Current Assets: 143.71M = \u03a3 90.94+37.44+4.06+11.26, Non-Current Assets: 180.17M = \u03a3 36.76+100.88+42.52) ensuring numerical integrity. Gradient link coloring enhances depth perception while maintaining categorical distinction."
+}

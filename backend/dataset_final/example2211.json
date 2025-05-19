@@ -1,0 +1,65 @@
+{
+    "visualization_prompt": "Generate a spline chart showing temporal trends of Google searches for vitamin D using CSV data from 2004-2022 with datetime axis formatting",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Google searches for vitamin D 2004 - 2022",
+            "style": {
+                "fontSize": "18px",
+                "color": "#2c3e50"
+            }
+        },
+        "subtitle": {
+            "text": "Source: Google trends",
+            "style": {
+                "color": "#7f8c8d"
+            }
+        },
+        "xAxis": {
+            "type": "datetime",
+            "labels": {
+                "format": "{value:%Y}",
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 100,
+            "title": {
+                "text": null
+            },
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            }
+        },
+        "tooltip": {
+            "xDateFormat": "%Y-%m",
+            "headerFormat": "<b>{point.key}</b><br/>",
+            "pointFormat": "Search interest: <b>{point.y}</b>"
+        },
+        "legend": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "spline": {
+                "color": "#3498db",
+                "marker": {
+                    "enabled": false
+                }
+            }
+        },
+        "data": {
+            "csvURL": "https://www.highcharts.com/samples/data/google-trends-vitamin-d.csv",
+            "enablePolling": true
+        }
+    },
+    "visualization_explanation": "The dataset contains two-dimensional time series data with a datetime index (2004-2022) and normalized search interest values (0-100 scale). Using direct CSV sourcing ensures data integrity from Google Trends' official methodology. The spline chart's curved interpolation effectively reveals multi-year seasonal patterns while maintaining temporal precision. Disabled markers and a single line color maximize data-ink ratio per Tufte's principles. The 0-100 anchored scale enables direct interpretation of relative popularity, while %Y axis labeling and YYYY-MM tooltips create temporal orientation through Cairo's perceptual salience. Formatting choices like muted axis colors and removed legend focus attention on the primary trend line."
+}

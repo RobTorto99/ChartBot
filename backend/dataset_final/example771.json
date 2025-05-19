@@ -1,0 +1,119 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Monthly Sales Data'. The chart should have styled axes and labels with specific colors and font sizes. The data series should include two series: 'Sales' and 'Expenses', each with corresponding data points. Custom colors should be applied to the series, and additional configurations such as chart margins, background, and legend should be set.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline"
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "fontSize": "24px",
+                "color": "#2c3e50"
+            }
+        },
+        "xAxis": {
+            "type": "datetime",
+            "labels": {
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#7f8c8d"
+                }
+            },
+            "dateTimeLabelFormats": {
+                "month": "%b %Y"
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Amount",
+                "style": {
+                    "fontSize": "16px",
+                    "color": "#2c3e50"
+                }
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#7f8c8d"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    [
+                        1609459200000,
+                        12000
+                    ],
+                    [
+                        1612137600000,
+                        15000
+                    ],
+                    [
+                        1614556800000,
+                        18000
+                    ],
+                    [
+                        1617235200000,
+                        21000
+                    ],
+                    [
+                        1619827200000,
+                        24000
+                    ]
+                ],
+                "color": "#d35400"
+            },
+            {
+                "name": "Expenses",
+                "data": [
+                    [
+                        1609459200000,
+                        8000
+                    ],
+                    [
+                        1612137600000,
+                        10000
+                    ],
+                    [
+                        1614556800000,
+                        12000
+                    ],
+                    [
+                        1617235200000,
+                        14000
+                    ],
+                    [
+                        1619827200000,
+                        16000
+                    ]
+                ],
+                "color": "#2980b9"
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "bottom"
+        },
+        "plotOptions": {
+            "series": {
+                "turboThreshold": 0,
+                "borderWidth": 0,
+                "pointWidth": 4
+            }
+        },
+        "tooltip": {
+            "shared": true,
+            "useHTML": true,
+            "headerFormat": "<small>{point.x:%b %Y}</small><br/>"
+        },
+        "credits": {
+            "enabled": false
+        },
+        "exporting": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a spline chart titled 'Monthly Sales Data'. The chart includes two data series: 'Sales' and 'Expenses', each with specific data points representing monthly amounts. The x-axis is formatted as a datetime type, displaying month and year labels, while the y-axis is labeled 'Amount'. Both axes have styled labels with defined font sizes and colors. The chart uses custom colors for the series and includes additional configurations such as disabling credits and exporting options, setting the legend alignment, and configuring the tooltip to display shared and formatted HTML content. The overall design aligns with the theme defined in the JavaScript section, ensuring a consistent and visually appealing chart."
+}

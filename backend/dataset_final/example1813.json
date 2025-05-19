@@ -1,0 +1,127 @@
+{
+    "visualization_prompt": "Generate a pie chart showing proportional distribution of fruit consumption using synthetic market survey data",
+    "visualization_code": {
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#f7f7f7",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Fruit Distribution",
+            "style": {
+                "fontSize": "20px",
+                "color": "#333333"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#666666"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#666666"
+                }
+            },
+            "title": {
+                "text": "Market Share (%)",
+                "style": {
+                    "fontSize": "16px",
+                    "color": "#333333"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Fruit Consumption",
+                "data": [
+                    {
+                        "name": "Apples",
+                        "y": 15,
+                        "color": "#FF6B6B"
+                    },
+                    {
+                        "name": "Bananas",
+                        "y": 20,
+                        "color": "#FFEE58"
+                    },
+                    {
+                        "name": "Oranges",
+                        "y": 12,
+                        "color": "#FFA726"
+                    },
+                    {
+                        "name": "Grapes",
+                        "y": 8,
+                        "color": "#AB47BC"
+                    },
+                    {
+                        "name": "Strawberries",
+                        "y": 5,
+                        "color": "#EF5350"
+                    },
+                    {
+                        "name": "Pears",
+                        "y": 10,
+                        "color": "#66BB6A"
+                    },
+                    {
+                        "name": "Pineapples",
+                        "y": 7,
+                        "color": "#D4E157"
+                    },
+                    {
+                        "name": "Mangoes",
+                        "y": 6,
+                        "color": "#FF7043"
+                    },
+                    {
+                        "name": "Blueberries",
+                        "y": 4,
+                        "color": "#5C6BC0"
+                    },
+                    {
+                        "name": "Watermelons",
+                        "y": 13,
+                        "color": "#81C784"
+                    }
+                ]
+            }
+        ],
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<b>{point.name}</b>: {point.percentage:.1f}%",
+                    "style": {
+                        "color": "#333333",
+                        "fontSize": "14px"
+                    }
+                }
+            }
+        },
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical",
+            "itemStyle": {
+                "fontSize": "14px",
+                "color": "#333333"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 10 categorical entries representing fruit types with percentage market share values (summing to 100%). Synthetic data follows proportional distribution requirements with realistic fruit varieties and color associations. The pie chart maximizes data-ink ratio by removing unnecessary gridlines while maintaining color contrast per Cairo's principles. Axes configurations are included for library compatibility but remain visually hidden. Data labels provide immediate percentage recognition (\u03bc=10%, \u03c3=5.1) while the legend offers redundant encoding through color symbolism. The monochromatic background (#f7f7f7) ensures optimal figure-ground contrast as recommended in perceptual psychology studies."
+}

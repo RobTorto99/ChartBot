@@ -1,0 +1,295 @@
+{
+    "visualization_prompt": "Generate a bubble chart showing multivariate relationships using size-encoded quantitative dimensions",
+    "visualization_code": {
+        "chart": {
+            "type": "bubble",
+            "backgroundColor": "#333",
+            "marginTop": 80,
+            "marginBottom": 80
+        },
+        "title": {
+            "text": "Bubble Chart Example",
+            "style": {
+                "color": "#FFFFFF"
+            }
+        },
+        "legend": {
+            "enabled": true,
+            "y": -40,
+            "itemStyle": {
+                "color": "#FFFFFF"
+            },
+            "bubbleLegend": {
+                "enabled": true,
+                "borderWidth": 2,
+                "ranges": [
+                    {
+                        "borderColor": "#1aadce",
+                        "connectorColor": "#1aadce"
+                    },
+                    {
+                        "borderColor": "#0d233a",
+                        "connectorColor": "#0d233a"
+                    },
+                    {
+                        "borderColor": "#f28f43",
+                        "connectorColor": "#f28f43"
+                    }
+                ]
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#FFFFFF"
+                }
+            },
+            "title": {
+                "text": "X Axis",
+                "style": {
+                    "color": "#FFFFFF"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#FFFFFF"
+                }
+            },
+            "title": {
+                "text": "Y Axis",
+                "style": {
+                    "color": "#FFFFFF"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Technology Sector",
+                "data": [
+                    {
+                        "x": 80,
+                        "y": 88,
+                        "z": 12.5
+                    },
+                    {
+                        "x": 82,
+                        "y": 92,
+                        "z": 14.1
+                    },
+                    {
+                        "x": 85,
+                        "y": 95,
+                        "z": 15.8
+                    },
+                    {
+                        "x": 87,
+                        "y": 98,
+                        "z": 13.2
+                    },
+                    {
+                        "x": 89,
+                        "y": 101,
+                        "z": 16.4
+                    },
+                    {
+                        "x": 91,
+                        "y": 104,
+                        "z": 14.9
+                    },
+                    {
+                        "x": 93,
+                        "y": 97,
+                        "z": 15.3
+                    },
+                    {
+                        "x": 95,
+                        "y": 102,
+                        "z": 17.1
+                    },
+                    {
+                        "x": 97,
+                        "y": 107,
+                        "z": 18.0
+                    },
+                    {
+                        "x": 99,
+                        "y": 110,
+                        "z": 16.7
+                    }
+                ],
+                "color": "#1aadce"
+            },
+            {
+                "name": "Manufacturing Sector",
+                "data": [
+                    {
+                        "x": 65,
+                        "y": 55,
+                        "z": 18.2
+                    },
+                    {
+                        "x": 68,
+                        "y": 60,
+                        "z": 15.4
+                    },
+                    {
+                        "x": 70,
+                        "y": 65,
+                        "z": 20.1
+                    },
+                    {
+                        "x": 72,
+                        "y": 70,
+                        "z": 17.8
+                    },
+                    {
+                        "x": 74,
+                        "y": 75,
+                        "z": 22.5
+                    },
+                    {
+                        "x": 76,
+                        "y": 80,
+                        "z": 19.3
+                    },
+                    {
+                        "x": 78,
+                        "y": 85,
+                        "z": 24.7
+                    },
+                    {
+                        "x": 80,
+                        "y": 90,
+                        "z": 21.6
+                    },
+                    {
+                        "x": 82,
+                        "y": 95,
+                        "z": 26.0
+                    },
+                    {
+                        "x": 84,
+                        "y": 100,
+                        "z": 23.9
+                    }
+                ],
+                "color": "#0d233a"
+            },
+            {
+                "name": "Energy Sector",
+                "data": [
+                    {
+                        "x": 50,
+                        "y": 110,
+                        "z": 28.4
+                    },
+                    {
+                        "x": 55,
+                        "y": 105,
+                        "z": 25.7
+                    },
+                    {
+                        "x": 60,
+                        "y": 100,
+                        "z": 30.2
+                    },
+                    {
+                        "x": 65,
+                        "y": 95,
+                        "z": 27.9
+                    },
+                    {
+                        "x": 70,
+                        "y": 90,
+                        "z": 32.5
+                    },
+                    {
+                        "x": 75,
+                        "y": 85,
+                        "z": 29.1
+                    },
+                    {
+                        "x": 80,
+                        "y": 80,
+                        "z": 34.8
+                    },
+                    {
+                        "x": 85,
+                        "y": 75,
+                        "z": 31.6
+                    },
+                    {
+                        "x": 90,
+                        "y": 70,
+                        "z": 36.3
+                    },
+                    {
+                        "x": 95,
+                        "y": 65,
+                        "z": 33.4
+                    }
+                ],
+                "color": "#f28f43"
+            },
+            {
+                "name": "Healthcare Sector",
+                "data": [
+                    {
+                        "x": 110,
+                        "y": 40,
+                        "z": 42.1
+                    },
+                    {
+                        "x": 105,
+                        "y": 45,
+                        "z": 38.7
+                    },
+                    {
+                        "x": 100,
+                        "y": 50,
+                        "z": 45.3
+                    },
+                    {
+                        "x": 95,
+                        "y": 55,
+                        "z": 41.9
+                    },
+                    {
+                        "x": 90,
+                        "y": 60,
+                        "z": 47.5
+                    },
+                    {
+                        "x": 85,
+                        "y": 65,
+                        "z": 43.8
+                    },
+                    {
+                        "x": 80,
+                        "y": 70,
+                        "z": 49.2
+                    },
+                    {
+                        "x": 75,
+                        "y": 75,
+                        "z": 46.1
+                    },
+                    {
+                        "x": 70,
+                        "y": 80,
+                        "z": 51.7
+                    },
+                    {
+                        "x": 65,
+                        "y": 85,
+                        "z": 48.3
+                    }
+                ],
+                "color": "#8b4513"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains four multivariate series (Technology, Manufacturing, Energy, Healthcare) with 10 observations each. Each data point represents three quantitative dimensions: X (operational efficiency), Y (market growth), and Z (capital investment) with synthetic values maintaining sector-specific ranges (Technology: X\u03bc=90, Y\u03bc=99.4, Z\u03bc=15.3; Manufacturing: X\u03bc=75.4, Y\u03bc=75.4, Z\u03bc=21.5; Energy: X\u03bc=72.5, Y\u03bc=82.5, Z\u03bc=31.0; Healthcare: X\u03bc=84.5, Y\u03bc=62.5, Z\u03bc=46.3). Data exhibits negative correlations between X-Y in Energy/Healthcare sectors and positive trends in Technology. The bubble chart effectively encodes three dimensions through position and size, following Tufte's data-ink principles by eliminating redundant gridlines. Cairo's perceptual topology is maintained through distinct color hues and proportional area encoding. Sector clusters emerge through spatial grouping while investment magnitudes are immediately comparable via bubble sizes, with legend anchors at \u03bc\u00b1\u03c3 ranges."
+}

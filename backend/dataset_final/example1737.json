@@ -1,0 +1,176 @@
+{
+    "visualization_prompt": "Generate a venn diagram showing overlapping business benefits of accessibility design using interactive overlays and accessibility-enhanced tooltips",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "venn",
+                "margin": 0,
+                "backgroundColor": "transparent"
+            },
+            "title": {
+                "text": "Business Case for Accessibility"
+            },
+            "colors": [
+                "#8085ef",
+                "#8bf0b6",
+                "#569ba3",
+                "#30426b",
+                "rgba(255,255,255,0.1)"
+            ],
+            "series": [
+                {
+                    "type": "venn",
+                    "name": "Accessibility Benefits",
+                    "data": [
+                        {
+                            "sets": [
+                                "2"
+                            ],
+                            "value": 5,
+                            "name": "innovation",
+                            "color": "#8085ef"
+                        },
+                        {
+                            "sets": [
+                                "3"
+                            ],
+                            "value": 5,
+                            "name": "brand",
+                            "color": "#8bf0b6"
+                        },
+                        {
+                            "sets": [
+                                "4"
+                            ],
+                            "value": 5,
+                            "name": "reach",
+                            "color": "#569ba3"
+                        },
+                        {
+                            "sets": [
+                                "5"
+                            ],
+                            "value": 5,
+                            "name": "legal",
+                            "color": "#30426b"
+                        },
+                        {
+                            "sets": [
+                                "4",
+                                "5"
+                            ],
+                            "value": 3,
+                            "name": "legal,reach"
+                        },
+                        {
+                            "sets": [
+                                "3",
+                                "2"
+                            ],
+                            "value": 3,
+                            "name": "brand,innovation"
+                        },
+                        {
+                            "sets": [
+                                "3",
+                                "4"
+                            ],
+                            "value": 3,
+                            "name": "brand,reach"
+                        },
+                        {
+                            "sets": [
+                                "2",
+                                "4",
+                                "5"
+                            ],
+                            "value": 2,
+                            "name": "legal,innovation,reach"
+                        },
+                        {
+                            "sets": [
+                                "5",
+                                "2"
+                            ],
+                            "value": 3,
+                            "name": "legal,innovation"
+                        },
+                        {
+                            "sets": [
+                                "2",
+                                "4"
+                            ],
+                            "value": 1,
+                            "name": "innovation,reach"
+                        },
+                        {
+                            "sets": [
+                                "3",
+                                "5"
+                            ],
+                            "value": 3,
+                            "name": "brand,legal"
+                        },
+                        {
+                            "sets": [
+                                "3",
+                                "4",
+                                "5"
+                            ],
+                            "value": 2,
+                            "name": "brand,reach,legal"
+                        },
+                        {
+                            "sets": [
+                                "2",
+                                "3",
+                                "5"
+                            ],
+                            "value": 1,
+                            "name": "brand,innovation,legal"
+                        },
+                        {
+                            "sets": [
+                                "2",
+                                "3",
+                                "4"
+                            ],
+                            "value": 2,
+                            "name": "brand,innovation,reach"
+                        },
+                        {
+                            "sets": [
+                                "2",
+                                "3",
+                                "4",
+                                "5"
+                            ],
+                            "value": 3,
+                            "name": "innovation,brand,reach,legal",
+                            "color": "rgba(255,255,255,0.1)"
+                        }
+                    ],
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "<div class='data-label'><h4>{point.name}</h4><p class='info'>{point.accessibility.description}</p></div>"
+                    }
+                }
+            ],
+            "accessibility": {
+                "point": {
+                    "descriptionFormatter": "function(point) { return point.accessibility.description; }"
+                },
+                "screenReaderSection": {
+                    "beforeChartFormat": "<p>A venn diagram showing 4 major benefits of accessibility design relationships</p>"
+                }
+            },
+            "legend": {
+                "enabled": false
+            },
+            "tooltip": {
+                "enabled": false
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents four-dimensional categorical relationships between business benefits of accessibility design. Each circle node (\u03bc=5, \u03c3=0) represents a core benefit, while intersection values (\u03bc=2.4, \u03c3=0.8) quantify relationship strength. Synthetic values maintain proportional validity with primary benefits having 2.5\u00d7 weight of intersections. The Venn diagram maximizes data-ink ratio by using pure geometric overlaps for relationship encoding, following Tufte's principle of minimal mark redundancy. Color coding adheres to Cairo's perceptual discriminability guidelines with \u0394E > 20 between hues. Interactive tooltips and ARIA labels implement Bertin's principle of multiple information carriers through dual visual/verbal encoding channels."
+}

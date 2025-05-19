@@ -1,0 +1,85 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a line chart with the following specifications: Chart type is 'line', chart title is 'Monthly Average Rainfall', axes and labels should have specific colors and font sizes, data series includes monthly rainfall data, custom colors are provided, and additional configurations include chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "plotBorderColor": "#346691",
+            "plotBorderWidth": 2,
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 50,
+            "marginBottom": 70
+        },
+        "title": {
+            "text": "Monthly Average Rainfall",
+            "style": {
+                "color": "#333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Rainfall (mm)",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Rainfall",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#008000"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333",
+                "fontSize": "12px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a line chart with a title 'Monthly Average Rainfall'. The chart type is specified as 'line', and it includes a border with a specific color and width. The x-axis represents months with styled labels, and the y-axis represents rainfall in millimeters with a title and styled labels. The data series includes monthly rainfall data with a custom color. Additional configurations include a background color, margins for better spacing, and a legend with specific styling. This setup ensures a visually appealing and informative chart."
+}

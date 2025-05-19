@@ -1,0 +1,92 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart comparing the purchase of vitamins between men and women by age in Australia from January 2018 to December 2018. The chart should have a title 'Vitamins purchased by men vs. women', with axes and labels styled with specific colors and font sizes. The data series should include the names 'Men' and 'Women' with corresponding data points. Custom colors should be applied to the series, and additional configurations such as chart margins, background, and legend should be included.",
+    "visualization_code": {
+        "data": {
+            "table": "datatable"
+        },
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#f9f9f9",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "Vitamins purchased by men vs. women",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333333"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='http://www.roymorgan.com/findings/7956-australian-vitamin-market-december-2018-201904260734' target='_blank'>Roy Morgan</a>",
+            "style": {
+                "fontSize": "14px",
+                "color": "#666666"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "Age Groups",
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#555555"
+                }
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#777777"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Percentage",
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#555555"
+                }
+            },
+            "labels": {
+                "format": "{text}%",
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#777777"
+                }
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y} %",
+                    "style": {
+                        "fontSize": "12px",
+                        "color": "#ffffff"
+                    }
+                }
+            }
+        },
+        "colors": [
+            "#058DC7",
+            "#c7058d"
+        ],
+        "tooltip": {
+            "valueSuffix": " %"
+        },
+        "legend": {
+            "enabled": true,
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "fontSize": "12px",
+                "color": "#333333"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart that compares the purchase of vitamins between men and women by age groups in Australia. The chart includes a title and subtitle with specific font sizes and colors. The x-axis represents the age groups, and the y-axis represents the percentage of vitamins purchased. The data series includes two categories: 'Men' and 'Women', each with corresponding data points. Custom colors are applied to the series to differentiate between men and women. The chart also includes data labels within the columns to display the exact percentage values. Additional configurations such as chart background, margins, and legend styling are included to enhance the visual appeal and readability of the chart."
+}

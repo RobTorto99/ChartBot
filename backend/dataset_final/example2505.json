@@ -1,0 +1,105 @@
+{
+    "visualization_prompt": "Generate an item chart showing parliamentary seat distribution across political parties using semi-transparent legend annotations and synthetic proportional data",
+    "visualization_code": {
+        "chart": {
+            "type": "item",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "2023 Parliamentary Seat Allocation",
+            "style": {
+                "fontSize": "20px",
+                "color": "#2E3440"
+            }
+        },
+        "subtitle": {
+            "text": "Proportional representation with party affiliation",
+            "style": {
+                "color": "#4C566A"
+            }
+        },
+        "colors": [
+            "#5C85FF",
+            "#FF6B6B",
+            "#8CE580",
+            "#FFD700",
+            "#FF8C42",
+            "#A05195",
+            "#D45087",
+            "#F95D6A",
+            "#FF7C43",
+            "#665191"
+        ],
+        "legend": {
+            "labelFormat": "{name} <span style=\"opacity: 0.5\">{y}</span>",
+            "itemStyle": {
+                "fontSize": "14px"
+            }
+        },
+        "series": [
+            {
+                "name": "Seats",
+                "keys": [
+                    "name",
+                    "y"
+                ],
+                "data": [
+                    [
+                        "Progressive Alliance",
+                        320
+                    ],
+                    [
+                        "National Front",
+                        270
+                    ],
+                    [
+                        "Unity Coalition",
+                        100
+                    ],
+                    [
+                        "Green Future",
+                        50
+                    ],
+                    [
+                        "Liberty Party",
+                        40
+                    ],
+                    [
+                        "Centrist Union",
+                        35
+                    ],
+                    [
+                        "Socialist Front",
+                        20
+                    ],
+                    [
+                        "Reform Party",
+                        15
+                    ],
+                    [
+                        "Independent Bloc",
+                        10
+                    ],
+                    [
+                        "New Horizon",
+                        5
+                    ]
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}",
+                    "style": {
+                        "textOutline": "none"
+                    }
+                }
+            }
+        ],
+        "plotOptions": {
+            "item": {
+                "borderRadius": 3,
+                "borderWidth": 0
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains categorical (political parties) and quantitative (seat counts) variables, structured as nominal and ratio data respectively. Synthetic seat allocations follow a power-law distribution (\u03bc=86.5, \u03c3=116.7) reflecting typical parliamentary systems where major parties dominate. Data validity is maintained through proportional constraints (\u2211=865 seats matching legislative body size) and ordinal ranking by seat count. The item chart maximizes data-ink ratio by directly encoding quantities through rectangle areas while eliminating gridlines. Cairo's preattentive attributes are applied through categorical color differentiation and positional grouping. Semi-transparent legend annotations maintain visual hierarchy while providing exact values, balancing Tufte's principle of minimal markup with necessary contextual information. Synthetic distribution exhibits strong positive skewness (\u03b31=1.78) characteristic of multiparty systems."
+}

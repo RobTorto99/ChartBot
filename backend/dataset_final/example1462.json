@@ -1,0 +1,91 @@
+{
+    "visualization_prompt": "Generate a polar column chart showing Winter Olympic medal distribution by country using pattern fills and flag sprites for categorical differentiation",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "inverted": true,
+            "polar": true
+        },
+        "title": {
+            "text": "Winter Olympic Medals per Country (Top 5)"
+        },
+        "xAxis": {
+            "categories": [
+                "Norway",
+                "United States",
+                "Germany",
+                "Canada",
+                "Austria"
+            ],
+            "labels": {
+                "formatter": "function() { return `${this.value} <span class='f16'><span class='flag ${country[this.value]}'></span></span>`; }",
+                "style": {
+                    "fontSize": "13px"
+                }
+            }
+        },
+        "yAxis": {
+            "tickInterval": 25,
+            "title": {
+                "text": "Medal Count"
+            }
+        },
+        "series": [
+            {
+                "name": "Gold Medals",
+                "data": [
+                    132,
+                    105,
+                    92,
+                    73,
+                    64
+                ],
+                "type": "column",
+                "color": {
+                    "patternIndex": 0
+                }
+            },
+            {
+                "name": "Silver Medals",
+                "data": [
+                    125,
+                    110,
+                    86,
+                    64,
+                    81
+                ],
+                "type": "column",
+                "color": {
+                    "patternIndex": 1
+                }
+            },
+            {
+                "name": "Bronze Medals",
+                "data": [
+                    111,
+                    90,
+                    60,
+                    62,
+                    87
+                ],
+                "type": "column",
+                "color": {
+                    "patternIndex": 2
+                }
+            }
+        ],
+        "colors": [
+            "#FFD700",
+            "#C0C0C0",
+            "#CD7F32"
+        ],
+        "plotOptions": {
+            "column": {
+                "stacking": "normal",
+                "borderWidth": 1,
+                "groupPadding": 0.15
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 3-dimensional categorical data: 5 countries \u00d7 3 medal types \u00d7 total medal counts. Synthetic medal counts maintain historical dominance patterns (\u03bc_gold=93.2, \u03c3_gold=27.4) while preserving realistic country rankings. The polar coordinate system maximizes data-ink ratio by encoding values through angular position and column height. Pattern fills with flag sprites implement Cairo's cross-cultural recognition principle, while sequential color saturation (gold\u2192bronze) creates perceptual ordering. Stacked columns emphasize both individual category contributions and total medal counts through Tufte's layering principle."
+}

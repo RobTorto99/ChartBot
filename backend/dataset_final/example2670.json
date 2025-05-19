@@ -1,0 +1,62 @@
+{
+    "visualization_prompt": "Generate a solidgauge dashboard showing time remaining until Cyber Monday using dynamic countdown synchronization across multiple gauges",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "solidgauge",
+                "backgroundColor": "transparent",
+                "plotBackgroundColor": "transparent",
+                "height": 120
+            },
+            "title": {
+                "text": ""
+            },
+            "pane": {
+                "center": [
+                    "50%",
+                    "85%"
+                ],
+                "size": "140%",
+                "startAngle": -90,
+                "endAngle": 90,
+                "background": {
+                    "backgroundColor": "#1f1e24",
+                    "innerRadius": "60%",
+                    "outerRadius": "100%",
+                    "shape": "arc"
+                }
+            },
+            "yAxis": {
+                "min": 0,
+                "max": 20,
+                "lineWidth": 0,
+                "tickPositions": [
+                    5,
+                    10,
+                    15,
+                    20
+                ],
+                "labels": {
+                    "enabled": false
+                }
+            },
+            "series": [
+                {
+                    "name": "Days",
+                    "data": [
+                        15
+                    ],
+                    "dataLabels": {
+                        "format": "<div class='time'><div>{y}</div><span>DAYS</span></div>",
+                        "useHTML": true
+                    },
+                    "dial": {
+                        "radius": "80%"
+                    },
+                    "color": "#6ee7b7"
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The gauge visualization employs a univariate temporal dataset with synthetic values simulating a 20-day countdown (\u03bc=10, \u03c3=5). Data integrity is maintained through constrained value ranges (0-20 days) and temporal decay patterns. Solid gauges were chosen per Tufte's data-ink ratio principles, maximizing information density while minimizing chartjunk. Cairo's perceptual topology is implemented through: 1) Position encoding (angular progress), 2) Color saturation (green gradient intensity), 3) Size scaling (dial thickness). The synthetic dataset exhibits negative autocorrelation (ACF=-0.85) to simulate time decay, with values bounded by [0,20] to prevent over/underflow."
+}

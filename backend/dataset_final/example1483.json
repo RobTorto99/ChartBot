@@ -1,0 +1,112 @@
+{
+    "visualization_prompt": "Generate a pie chart showing hierarchical relationships between primary and secondary data categories using drilldown connectors with dynamic path animation",
+    "visualization_code": {
+        "title": {
+            "text": "Drilldown Connector Analysis"
+        },
+        "subtitle": {
+            "text": "Hierarchical Data Relationship Study"
+        },
+        "plotOptions": {
+            "pie": {
+                "dataLabels": {
+                    "distance": -30,
+                    "style": {
+                        "color": "#333333",
+                        "fontSize": "12px"
+                    }
+                },
+                "borderColor": "#ffffff",
+                "borderWidth": 2
+            }
+        },
+        "series": [
+            {
+                "name": "Primary Categories",
+                "data": [
+                    {
+                        "name": "Group A",
+                        "y": 22
+                    },
+                    {
+                        "name": "Group B",
+                        "y": 19,
+                        "drilldownConnector": {
+                            "seriesId": "secondary"
+                        }
+                    },
+                    {
+                        "name": "Group C",
+                        "y": 24
+                    },
+                    {
+                        "name": "Group D",
+                        "y": 18
+                    },
+                    {
+                        "name": "Group E",
+                        "y": 17
+                    }
+                ],
+                "type": "pie",
+                "center": [
+                    "25%",
+                    "50%"
+                ],
+                "colors": [
+                    "#7cb5ec",
+                    "#434348",
+                    "#90ed7d",
+                    "#f7a35c",
+                    "#8085e9"
+                ]
+            },
+            {
+                "name": "Subcategories",
+                "data": [
+                    {
+                        "name": "B1",
+                        "y": 6
+                    },
+                    {
+                        "name": "B2",
+                        "y": 8
+                    },
+                    {
+                        "name": "B3",
+                        "y": 3
+                    },
+                    {
+                        "name": "B4",
+                        "y": 2
+                    }
+                ],
+                "type": "pie",
+                "center": [
+                    "75%",
+                    "50%"
+                ],
+                "id": "secondary",
+                "colors": [
+                    "#a6c9f1",
+                    "#7a7a7f",
+                    "#b4f0a2",
+                    "#f9b58d"
+                ]
+            }
+        ],
+        "chart": {
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 40
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#666666",
+                "fontFamily": "Arial"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two hierarchical levels: 5 primary categories (nominal data) and 4 subcategories (ordinal breakdown). Synthetic data maintains proportional relationships (\u2211primary=100%, \u2211secondary=19%) with realistic variance (\u03c3\u22483.2). The pie chart format maximizes data-ink ratio by directly encoding proportions through arc angles, while Cairo's principles are applied through: 1) Position encoding for category hierarchy, 2) Color luminance gradients showing parent-child relationships, 3) Connector lines maintaining perceptual grouping. Statistical anchors: Primary distribution \u03bc=20, \u03c3=2.8; Secondary \u03bc=4.75, \u03c3=2.6. Animated connectors enhance temporal understanding of category relationships without occluding data."
+}

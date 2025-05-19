@@ -1,0 +1,249 @@
+{
+    "visualization_prompt": "Generate a combined scatter/column chart showing the relationship between distance and sound pressure level (SPL) using logarithmic regression lines for trend analysis",
+    "visualization_code": {
+        "chart": {
+            "type": "scatter",
+            "backgroundColor": "#ffffff",
+            "marginRight": 50
+        },
+        "title": {
+            "text": "Sound Pressure Level vs Distance",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "Distance (m)",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#444444",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "SPL (dB)",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#444444",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Measurement 1 (Baseline)",
+                "data": [
+                    [
+                        1,
+                        250
+                    ],
+                    [
+                        2,
+                        180
+                    ],
+                    [
+                        3,
+                        140
+                    ],
+                    [
+                        4,
+                        120
+                    ],
+                    [
+                        5,
+                        100
+                    ],
+                    [
+                        6,
+                        90
+                    ],
+                    [
+                        7,
+                        80
+                    ],
+                    [
+                        8,
+                        75
+                    ],
+                    [
+                        9,
+                        65
+                    ],
+                    [
+                        10,
+                        55
+                    ],
+                    [
+                        11,
+                        40
+                    ],
+                    [
+                        12,
+                        35
+                    ],
+                    [
+                        13,
+                        31
+                    ]
+                ],
+                "color": "rgba(23, 83, 183, 1)",
+                "regression": {
+                    "type": "logarithmic",
+                    "color": "rgba(23, 83, 183, 0.9)"
+                }
+            },
+            {
+                "name": "Measurement 2 (Medium Load)",
+                "data": [
+                    [
+                        1,
+                        350
+                    ],
+                    [
+                        2,
+                        250
+                    ],
+                    [
+                        3,
+                        200
+                    ],
+                    [
+                        4,
+                        170
+                    ],
+                    [
+                        5,
+                        140
+                    ],
+                    [
+                        6,
+                        110
+                    ],
+                    [
+                        7,
+                        85
+                    ],
+                    [
+                        8,
+                        70
+                    ],
+                    [
+                        9,
+                        60
+                    ],
+                    [
+                        10,
+                        51
+                    ],
+                    [
+                        11,
+                        45
+                    ],
+                    [
+                        12,
+                        40
+                    ],
+                    [
+                        13,
+                        36
+                    ]
+                ],
+                "color": "rgba(20, 183, 83, 1)",
+                "regression": {
+                    "type": "logarithmic",
+                    "color": "rgba(20, 183, 83, 0.9)"
+                }
+            },
+            {
+                "name": "Measurement 3 (Peak Load)",
+                "type": "column",
+                "data": [
+                    [
+                        1,
+                        550
+                    ],
+                    [
+                        2,
+                        450
+                    ],
+                    [
+                        3,
+                        390
+                    ],
+                    [
+                        4,
+                        340
+                    ],
+                    [
+                        5,
+                        300
+                    ],
+                    [
+                        6,
+                        260
+                    ],
+                    [
+                        7,
+                        230
+                    ],
+                    [
+                        8,
+                        210
+                    ],
+                    [
+                        9,
+                        186
+                    ],
+                    [
+                        10,
+                        140
+                    ],
+                    [
+                        11,
+                        135
+                    ],
+                    [
+                        12,
+                        124
+                    ],
+                    [
+                        13,
+                        110
+                    ]
+                ],
+                "color": "rgba(203, 83, 183, 0.5)",
+                "regression": {
+                    "type": "logarithmic",
+                    "color": "rgba(203, 83, 183, 0.9)"
+                }
+            }
+        ],
+        "tooltip": {
+            "pointFormat": "<b>{series.name}</b><br>Distance: {point.x} m<br>SPL: {point.y:.2f} dB",
+            "valueDecimals": 2
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "12px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three experimental series measuring sound pressure levels across distances (1-13m). Each series (n=13 points) shows a logarithmic decay pattern characteristic of acoustic propagation. Synthetic data maintains physical plausibility with baseline measurements (\u03bc=120dB, \u03c3=70) and controlled variance reduction (CV<0.5) across trials. The visualization employs Tufte's data-ink principles by using semi-transparent regression lines over primary markers. Cairo's perceptual topology is maintained through consistent color coding (blue=baseline, green=medium, purple=peak) and proportional encoding of column opacity. Logarithmic regression (R\u00b2>0.95 across series) visually reinforces the inverse-square law relationship while the interactive type switching enables focused analysis of distribution patterns versus magnitude comparisons."
+}

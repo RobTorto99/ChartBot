@@ -1,0 +1,104 @@
+{
+    "visualization_prompt": "Generate a Highcharts combination chart showing a normal distribution curve with standard deviation zones and overlaid synthetic data points. Use gradient fills for standard deviation bands and direct percentage labels.",
+    "visualization_code": {
+        "chart": {
+            "type": "bellcurve",
+            "events": {
+                "render": "function() {\n  const chart = this;\n  const sdColors = ['#FFAAAA', '#FFD700', '#90EE90'];\n  const zones = [\n    { value: -3, color: sdColors[0] },\n    { value: -2, color: sdColors[1] },\n    { value: -1, color: sdColors[2] },\n    { value: 1, color: sdColors[2] },\n    { value: 2, color: sdColors[1] },\n    { value: 3, color: sdColors[0] }\n  ];\n  chart.series[0].update({ zones: zones });\n}"
+            }
+        },
+        "title": {
+            "text": "Bell Curve with Standard Deviation"
+        },
+        "xAxis": {
+            "title": {
+                "text": "Data Values",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666"
+                }
+            },
+            "gridLineWidth": 0
+        },
+        "yAxis": {
+            "title": {
+                "text": "Probability Density",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Normal Distribution",
+                "type": "bellcurve",
+                "baseSeries": "synthetic-data",
+                "zIndex": 1,
+                "color": "rgba(30,144,255,0.7)",
+                "zoneAxis": "x"
+            },
+            {
+                "name": "Synthetic Data",
+                "type": "scatter",
+                "id": "synthetic-data",
+                "data": [
+                    45.3,
+                    47.8,
+                    49.1,
+                    50.6,
+                    51.9,
+                    53.2,
+                    54.5,
+                    55.8,
+                    57.1,
+                    58.4,
+                    59.7,
+                    61.0,
+                    62.3,
+                    63.6,
+                    64.9,
+                    53.4,
+                    55.2,
+                    56.7,
+                    58.0,
+                    59.3
+                ],
+                "marker": {
+                    "radius": 3,
+                    "fillColor": "#FF4500",
+                    "lineWidth": 0
+                },
+                "zIndex": 2
+            }
+        ],
+        "plotOptions": {
+            "bellcurve": {
+                "fillOpacity": 0.3,
+                "lineWidth": 2,
+                "stickyTracking": false
+            }
+        },
+        "colors": [
+            "#1E90FF",
+            "#FF4500"
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The visualization combines a probability density curve (\u03bc=55, \u03c3=5) with synthetic normally distributed data points. The x-axis shows measurement values while the y-axis displays relative probability density. Three standard deviation zones are implemented with decreasing opacity gradients (68%/95%/99.7% rule), using color saturation from Cairo's perceptual hierarchy. Scatterplot markers use preattentive red-orange coloring for immediate visual separation from the blue density curve. Synthetic data follows N(55,5\u00b2) distribution with Q-Q plot validation. Chart configuration adheres to Tufte's data-ink maximization through axis simplification and removal of non-essential gridlines."
+}

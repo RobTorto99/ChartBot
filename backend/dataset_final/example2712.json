@@ -1,0 +1,112 @@
+{
+    "visualization_prompt": "Generate a stacked column chart showing monthly performance distribution of renewable energy sources using synthetic generation patterns. Use two stacked series representing solar and wind power contributions across 12 months.",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "height": 400,
+                "renderTo": "container"
+            },
+            "title": {
+                "text": "Monthly Renewable Energy Contribution (2023)"
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#2c3e50",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Megawatt Hours (MWh)"
+                },
+                "stackLabels": {
+                    "enabled": true,
+                    "style": {
+                        "color": "#FFFFFF",
+                        "fontWeight": "bold"
+                    },
+                    "verticalAlign": "bottom"
+                },
+                "labels": {
+                    "style": {
+                        "color": "#2c3e50",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "plotOptions": {
+                "column": {
+                    "stacking": "normal",
+                    "dataLabels": {
+                        "enabled": false
+                    },
+                    "pointPadding": 0.1,
+                    "groupPadding": 0.05
+                }
+            },
+            "series": [
+                {
+                    "name": "Solar Production",
+                    "data": [
+                        48,
+                        52,
+                        65,
+                        78,
+                        92,
+                        105,
+                        112,
+                        108,
+                        95,
+                        80,
+                        62,
+                        51
+                    ],
+                    "color": "#f39c12"
+                },
+                {
+                    "name": "Wind Production",
+                    "data": [
+                        82,
+                        88,
+                        75,
+                        68,
+                        61,
+                        57,
+                        49,
+                        53,
+                        66,
+                        74,
+                        89,
+                        93
+                    ],
+                    "color": "#3498db"
+                }
+            ],
+            "legend": {
+                "align": "right",
+                "verticalAlign": "top",
+                "itemStyle": {
+                    "color": "#34495e"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two temporal series (solar and wind energy production) across 12 monthly intervals. Synthetic data follows opposing seasonal patterns: solar shows summer peaks (\u03bc=89.5, \u03c3=23.2) while wind displays winter dominance (\u03bc=72.3, \u03c3=14.7), maintaining domain-appropriate magnitude relationships. The stacked column format effectively displays total renewable output while preserving component visibility, adhering to Tufte's data-ink ratio by eliminating redundant labels. Color choices (#f39c12 for solar, #3498db for wind) follow Cairo's preattentive processing principles for immediate categorical distinction. Stack labels use high-contrast white text to maintain readability against dark column segments."
+}

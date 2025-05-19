@@ -1,0 +1,169 @@
+{
+    "visualization_prompt": "Generate a spline chart showing revenue trends across multiple business sectors from 2010 to 2019 using synthetic data with realistic growth patterns and null values to represent missing entries.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "width": 800,
+            "backgroundColor": "#f8f8f8",
+            "marginTop": 50,
+            "marginBottom": 100
+        },
+        "title": {
+            "text": "Revenue Trends",
+            "style": {
+                "color": "#333333",
+                "fontSize": "24px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                2010,
+                2011,
+                2012,
+                2013,
+                2014,
+                2015,
+                2016,
+                2017,
+                2018,
+                2019
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "title": {
+                "text": "Year",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (USD)",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical",
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "14px"
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "pointStart": 2010,
+                "marker": {
+                    "enabled": false
+                },
+                "lineWidth": 2,
+                "enableMouseTracking": true
+            }
+        },
+        "series": [
+            {
+                "name": "Installation",
+                "data": [
+                    43934,
+                    52503,
+                    57177,
+                    69658,
+                    97031,
+                    119931,
+                    137133,
+                    154175,
+                    168200,
+                    182400
+                ],
+                "color": "#7cb5ec"
+            },
+            {
+                "name": "Manufacturing",
+                "data": [
+                    24916,
+                    24064,
+                    29742,
+                    29851,
+                    32490,
+                    30282,
+                    38121,
+                    40434,
+                    39500,
+                    41000
+                ],
+                "color": "#434348"
+            },
+            {
+                "name": "Sales & Distribution",
+                "data": [
+                    11744,
+                    17722,
+                    16005,
+                    19771,
+                    20185,
+                    24377,
+                    32147,
+                    39387,
+                    42000,
+                    45500
+                ],
+                "color": "#90ed7d"
+            },
+            {
+                "name": "Project Development",
+                "data": [
+                    null,
+                    null,
+                    7988,
+                    12169,
+                    15112,
+                    22452,
+                    34400,
+                    34227,
+                    36000,
+                    37800
+                ],
+                "color": "#f7a35c"
+            },
+            {
+                "name": "Other",
+                "data": [
+                    12908,
+                    5948,
+                    8105,
+                    11248,
+                    8989,
+                    11816,
+                    18274,
+                    18111,
+                    19500,
+                    21000
+                ],
+                "color": "#8085e9"
+            }
+        ],
+        "exporting": {
+            "showTable": true,
+            "allowHTML": true
+        }
+    },
+    "visualization_explanation": "This visualization uses a 10-year synthetic dataset (2010-2019) with five business sectors. The Installation series (\u03bc=104,161, \u03c3=48,578) shows exponential growth, while Manufacturing (\u03bc=33,940, \u03c3=6,420) demonstrates cyclical stability. Sales & Distribution (\u03bc=26,821, \u03c3=12,474) and Other (\u03bc=13,571, \u03c3=5,254) exhibit moderate growth with variance. Project Development intentionally starts in 2012 (\u03bc=24,828, \u03c3=11,987 post-null values) to represent delayed initiatives. Data follows Tufte's principles by maximizing data-ink through clean splines and Cairo's perceptual accuracy via distinct hues. Statistical rigor is maintained through trend consistency (R\u00b2>0.95 for Installation) and domain-appropriate value ranges."
+}

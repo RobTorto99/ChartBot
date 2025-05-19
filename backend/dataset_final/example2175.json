@@ -1,0 +1,140 @@
+{
+    "visualization_prompt": "Generate a horizontal organization chart showing corporate hierarchy relationships using Highcharts organization series with level-based color coding",
+    "visualization_code": {
+        "chart": {
+            "type": "organization",
+            "inverted": true,
+            "marginLeft": 50
+        },
+        "title": {
+            "text": "Highcharts Horizontal Org Chart",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "series": [
+            {
+                "type": "organization",
+                "name": "Corporate Structure",
+                "keys": [
+                    "from",
+                    "to"
+                ],
+                "data": [
+                    [
+                        "Shareholders",
+                        "Board"
+                    ],
+                    [
+                        "Board",
+                        "CEO"
+                    ],
+                    [
+                        "CEO",
+                        "CTO"
+                    ],
+                    [
+                        "CEO",
+                        "CPO"
+                    ],
+                    [
+                        "CEO",
+                        "CSO"
+                    ],
+                    [
+                        "CEO",
+                        "CMO"
+                    ],
+                    [
+                        "CEO",
+                        "HR"
+                    ],
+                    [
+                        "CTO",
+                        "Engineering"
+                    ],
+                    [
+                        "CTO",
+                        "R&D"
+                    ],
+                    [
+                        "CSO",
+                        "Sales"
+                    ],
+                    [
+                        "CMO",
+                        "Marketing"
+                    ]
+                ],
+                "levels": [
+                    {
+                        "level": 0,
+                        "color": "#e0e0e0",
+                        "dataLabels": {
+                            "color": "#2c3e50",
+                            "fontSize": "14px"
+                        },
+                        "height": 30
+                    },
+                    {
+                        "level": 1,
+                        "color": "#b4b4b4",
+                        "dataLabels": {
+                            "color": "#ffffff",
+                            "fontSize": "13px"
+                        }
+                    },
+                    {
+                        "level": 2,
+                        "color": "#3498db",
+                        "dataLabels": {
+                            "color": "#ffffff"
+                        }
+                    },
+                    {
+                        "level": 3,
+                        "color": "#2ecc71",
+                        "nodeWidth": 80
+                    }
+                ],
+                "nodes": [
+                    {
+                        "id": "Shareholders",
+                        "title": "Shareholders",
+                        "hanging": false
+                    }
+                ],
+                "colorByPoint": false,
+                "borderColor": "#ffffff",
+                "nodeWidth": 100,
+                "dataLabels": {
+                    "style": {
+                        "textOutline": "none"
+                    }
+                }
+            }
+        ],
+        "exporting": {
+            "enabled": true,
+            "sourceWidth": 1200,
+            "sourceHeight": 800,
+            "buttons": {
+                "contextButton": {
+                    "menuItems": [
+                        "viewFullscreen",
+                        "printChart",
+                        "separator",
+                        "downloadPNG",
+                        "downloadSVG"
+                    ]
+                }
+            }
+        },
+        "legend": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset represents a 4-level corporate hierarchy with directional relationships. Synthetic data maintains logical executive reporting structures common in technology organizations. Node colors use sequential lightness reduction (from light gray to saturated colors) to denote hierarchy depth while maintaining accessibility. The horizontal layout optimizes horizontal screen space and follows Western left-to-right reading patterns for leadership flow. Level-specific styling (\u03bc=4 levels, \u03c3=0.5) applies Tufte's data-ink principles by using minimal borders and uncluttered labels. Color progression follows Cairo's perceptual distinction guidelines with 3 JND (just noticeable difference) steps between levels."
+}

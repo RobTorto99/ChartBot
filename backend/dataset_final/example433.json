@@ -1,0 +1,52 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a pie chart displaying the composition of air. The chart should have a title 'Air composition', with data series representing the percentage of Nitrogen, Oxygen, and Other gases. The chart should use specific colors for each segment, allow point selection, display data labels in the format '{point.name}: {y} %', and show the legend. The chart should also have a donut-like appearance with an inner size of 75%.",
+    "visualization_code": {
+        "colors": [
+            "#bfdbf6",
+            "#92c2ef",
+            "#10487F"
+        ],
+        "chart": {
+            "type": "pie"
+        },
+        "title": {
+            "text": "Air composition"
+        },
+        "tooltip": {
+            "valueSuffix": "%"
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}: {y} %"
+                },
+                "showInLegend": true
+            }
+        },
+        "series": [
+            {
+                "name": "Percentage",
+                "colorByPoint": true,
+                "innerSize": "75%",
+                "data": [
+                    {
+                        "name": "Nitrogen",
+                        "y": 78
+                    },
+                    {
+                        "name": "Oxygen",
+                        "y": 20.9
+                    },
+                    {
+                        "name": "Other gases",
+                        "y": 1.1
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a pie chart to display the composition of air. The chart is titled 'Air composition' and uses a pie chart type with a donut-like appearance due to the 'innerSize' property set to '75%'. The chart includes three data series representing Nitrogen, Oxygen, and Other gases, each with their respective percentages. The colors for each segment are specified using the 'colors' array. The chart allows users to select individual segments, as indicated by 'allowPointSelect: true', and displays data labels in the format '{point.name}: {y} %'. Additionally, the legend is enabled to provide a key for the chart segments. The tooltip displays the percentage value with a '%' suffix. Overall, this configuration effectively visualizes the air composition data in a clear and interactive manner."
+}

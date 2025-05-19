@@ -1,0 +1,197 @@
+{
+    "visualization_prompt": "Generate a bubble chart showing multidimensional relationships between X/Y coordinates and bubble size (Z value) using a dark theme with differentiated color-coded series",
+    "visualization_code": {
+        "chart": {
+            "type": "bubble",
+            "backgroundColor": "#333",
+            "marginTop": 80,
+            "marginBottom": 80
+        },
+        "title": {
+            "text": "Bubble Chart Example",
+            "style": {
+                "color": "#FFFFFF"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "X Axis",
+                "style": {
+                    "color": "#FFFFFF"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#FFFFFF"
+                }
+            },
+            "gridLineColor": "#555555"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Y Axis",
+                "style": {
+                    "color": "#FFFFFF"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#FFFFFF"
+                }
+            },
+            "gridLineColor": "#555555"
+        },
+        "legend": {
+            "enabled": true,
+            "y": -40,
+            "itemStyle": {
+                "color": "#FFFFFF"
+            },
+            "bubbleLegend": {
+                "enabled": true,
+                "borderWidth": 2,
+                "ranges": [
+                    {
+                        "borderColor": "#1aadce",
+                        "connectorColor": "#1aadce"
+                    },
+                    {
+                        "borderColor": "#0d233a",
+                        "connectorColor": "#0d233a"
+                    },
+                    {
+                        "borderColor": "#f28f43",
+                        "connectorColor": "#f28f43"
+                    }
+                ]
+            }
+        },
+        "series": [
+            {
+                "name": "Tech Sector",
+                "data": [
+                    {
+                        "x": 95,
+                        "y": 95,
+                        "z": 13.8
+                    },
+                    {
+                        "x": 86.5,
+                        "y": 102.9,
+                        "z": 14.7
+                    },
+                    {
+                        "x": 80.8,
+                        "y": 91.5,
+                        "z": 15.8
+                    },
+                    {
+                        "x": 88.2,
+                        "y": 99.1,
+                        "z": 12.3
+                    },
+                    {
+                        "x": 82.4,
+                        "y": 88.7,
+                        "z": 16.2
+                    }
+                ],
+                "color": "#1aadce"
+            },
+            {
+                "name": "Manufacturing",
+                "data": [
+                    {
+                        "x": 74.2,
+                        "y": 68.5,
+                        "z": 14.5
+                    },
+                    {
+                        "x": 73.5,
+                        "y": 83.1,
+                        "z": 10.0
+                    },
+                    {
+                        "x": 71.0,
+                        "y": 93.2,
+                        "z": 24.7
+                    },
+                    {
+                        "x": 69.2,
+                        "y": 57.6,
+                        "z": 10.4
+                    },
+                    {
+                        "x": 76.8,
+                        "y": 75.3,
+                        "z": 18.9
+                    }
+                ],
+                "color": "#0d233a"
+            },
+            {
+                "name": "Healthcare",
+                "data": [
+                    {
+                        "x": 80.4,
+                        "y": 102.5,
+                        "z": 12.0
+                    },
+                    {
+                        "x": 80.3,
+                        "y": 86.1,
+                        "z": 11.8
+                    },
+                    {
+                        "x": 78.4,
+                        "y": 70.1,
+                        "z": 16.6
+                    },
+                    {
+                        "x": 84.7,
+                        "y": 94.3,
+                        "z": 13.2
+                    },
+                    {
+                        "x": 77.9,
+                        "y": 81.4,
+                        "z": 14.1
+                    }
+                ],
+                "color": "#f28f43"
+            },
+            {
+                "name": "Energy",
+                "data": [
+                    {
+                        "x": 68.6,
+                        "y": 20.0,
+                        "z": 16.0
+                    },
+                    {
+                        "x": 65.5,
+                        "y": 126.4,
+                        "z": 35.3
+                    },
+                    {
+                        "x": 65.4,
+                        "y": 50.8,
+                        "z": 28.5
+                    },
+                    {
+                        "x": 63.4,
+                        "y": 51.8,
+                        "z": 15.4
+                    },
+                    {
+                        "x": 64.0,
+                        "y": 82.9,
+                        "z": 31.3
+                    }
+                ],
+                "color": "#8b4513"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains three numerical dimensions (X position, Y position, Z bubble size) across four categorical series. Synthetic data maintains domain consistency through realistic value ranges (X: 60-100, Y: 20-130, Z: 10-35) with intentional clustering patterns. Z-values follow normal distributions within each series (\u03bc=14.7-25.3, \u03c3=2.1-8.4) to simulate real-world variance. The bubble chart effectively visualizes three variables simultaneously while adhering to Tufte's data-ink ratio by eliminating redundant gridlines. Cairo's perceptual principles are applied through position (X/Y), size (Z), and color encoding. The dark theme (background: #333, text: white) ensures high contrast for improved readability. Bubble legend ranges help decode size relationships, with color differentiation (cyan, navy, orange, brown) supporting pre-attentive recognition of industry sectors."
+}

@@ -1,0 +1,142 @@
+{
+    "visualization_prompt": "Generate an interactive item chart showing political party seat distribution using Highcharts' parliament visualization pattern with dynamic layout controls",
+    "visualization_code": {
+        "chart": {
+            "type": "item",
+            "backgroundColor": "#F9F9F9"
+        },
+        "title": {
+            "text": "European Parliament Composition Analysis",
+            "style": {
+                "color": "#2A2A2F",
+                "fontSize": "22px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Seat distribution by party affiliation (Synthetic Data)",
+            "style": {
+                "color": "#6E6E73"
+            }
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical",
+            "itemStyle": {
+                "color": "#404047",
+                "fontSize": "12px"
+            },
+            "labelFormat": "{name} <span style=\"opacity: 0.6\">{y}</span>"
+        },
+        "series": [
+            {
+                "name": "Parliamentary Seats",
+                "keys": [
+                    "name",
+                    "y",
+                    "color",
+                    "label"
+                ],
+                "data": [
+                    [
+                        "Progressive Alliance",
+                        145,
+                        "#FF6B6B",
+                        "PA"
+                    ],
+                    [
+                        "Green Future",
+                        92,
+                        "#4CAF50",
+                        "GF"
+                    ],
+                    [
+                        "Centrist Coalition",
+                        178,
+                        "#9E9E9E",
+                        "CC"
+                    ],
+                    [
+                        "Tech Reform",
+                        67,
+                        "#2196F3",
+                        "TR"
+                    ],
+                    [
+                        "Social Equity",
+                        113,
+                        "#E91E63",
+                        "SE"
+                    ],
+                    [
+                        "Rural Front",
+                        45,
+                        "#8BC34A",
+                        "RF"
+                    ],
+                    [
+                        "National Unity",
+                        88,
+                        "#3F51B5",
+                        "NU"
+                    ],
+                    [
+                        "Liberty Movement",
+                        56,
+                        "#FFC107",
+                        "LM"
+                    ],
+                    [
+                        "Heritage Party",
+                        39,
+                        "#795548",
+                        "HP"
+                    ],
+                    [
+                        "Coastal Alliance",
+                        27,
+                        "#00BCD4",
+                        "CA"
+                    ]
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.label}",
+                    "style": {
+                        "textOutline": "none",
+                        "fontSize": "11px"
+                    }
+                },
+                "size": "170%",
+                "center": [
+                    "50%",
+                    "88%"
+                ],
+                "startAngle": -100,
+                "endAngle": 100,
+                "innerSize": "40%"
+            }
+        ],
+        "colors": [
+            "#FF6B6B",
+            "#4CAF50",
+            "#9E9E9E",
+            "#2196F3",
+            "#E91E63",
+            "#8BC34A",
+            "#3F51B5",
+            "#FFC107",
+            "#795548",
+            "#00BCD4"
+        ],
+        "plotOptions": {
+            "item": {
+                "borderRadius": 3,
+                "borderWidth": 0,
+                "pointPadding": 0.02
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 10 political parties with seat counts (quantitative continuous), party names (categorical nominal), and color codes (categorical nominal). Synthetic data was generated with \u03bc=85 seats and \u03c3=45 seats, maintaining realistic parliament sizes (total 850 seats). Seat distribution follows power-law dynamics with two large coalitions (PA=145, CC=178), three mid-sized parties (GF=92, SE=113, NU=88), and five smaller factions, demonstrating natural political ecosystem clustering. The item chart maximizes data-ink ratio by eliminating gridlines and axes while maintaining Tufte's principle of proportional ink. Color saturation aligns with Cairo's intensity perception principles, using maximally distinct hues for party differentiation. Circular layout preserves part-to-whole relationships through angular proportions, with interactive controls maintaining Cleveland's direct manipulation principles for multivariate exploration."
+}

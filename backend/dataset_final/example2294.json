@@ -1,0 +1,83 @@
+{
+    "visualization_prompt": "Generate a solid gauge chart showing performance metrics using quantitative encoding with radial positioning",
+    "visualization_code": {
+        "chart": {
+            "type": "solidgauge",
+            "backgroundColor": "#f7f7f7",
+            "marginTop": 50,
+            "marginBottom": 50
+        },
+        "title": {
+            "text": "Performance Gauge",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px"
+            }
+        },
+        "pane": {
+            "center": [
+                "50%",
+                "80%"
+            ],
+            "size": "130%",
+            "startAngle": -90,
+            "endAngle": 90,
+            "background": {
+                "innerRadius": "50%",
+                "outerRadius": "100%",
+                "shape": "arc"
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 100,
+            "lineWidth": 0,
+            "tickWidth": 0,
+            "minorTickWidth": 0,
+            "tickAmount": 2,
+            "labels": {
+                "distance": "75%",
+                "y": 25,
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "series": [
+            {
+                "type": "solidgauge",
+                "innerRadius": "50%",
+                "radius": "100%",
+                "data": [
+                    54.4
+                ],
+                "name": "Performance",
+                "dataLabels": {
+                    "format": "{y}%",
+                    "style": {
+                        "fontSize": "18px",
+                        "color": "#333333"
+                    }
+                }
+            }
+        ],
+        "plotOptions": {
+            "solidgauge": {
+                "dataLabels": {
+                    "y": -20
+                },
+                "linecap": "round",
+                "stickyTracking": false,
+                "rounded": true
+            }
+        },
+        "legend": {
+            "enabled": false
+        },
+        "colors": [
+            "#00a1e4"
+        ]
+    },
+    "visualization_explanation": "The dataset represents a single quantitative metric (performance score) in a 0-100 scale. Synthetic value 54.4 was generated as a plausible midpoint value with potential normal distribution characteristics (\u03bc=50, \u03c3=15). The solid gauge maximizes data-ink ratio by removing non-essential elements while maintaining clear value encoding through radial position and percentage annotation. Cairo's principles are applied through color contrast (blue arc vs gray background) and preattentive processing of the angular measure. Temporal stability is shown through fixed min/max boundaries, enabling period-over-period comparison when refreshed with new data."
+}

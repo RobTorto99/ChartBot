@@ -1,0 +1,66 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a candlestick chart with the title 'USD to EUR Exchange Rate'. The chart should have styled axes and labels with specific colors and font sizes. The data series should include the name 'USD to EUR' and use the provided 'ohlcdata'. Additionally, specify custom colors for the candlestick series and include configurations for chart margins, background, and legend.",
+    "visualization_code": {
+        "chart": {
+            "type": "candlestick",
+            "styledMode": true,
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 50,
+            "marginBottom": 70
+        },
+        "title": {
+            "text": "USD to EUR Exchange Rate",
+            "style": {
+                "color": "#333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Time",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Exchange Rate",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333",
+                "fontSize": "14px"
+            }
+        },
+        "series": [
+            {
+                "type": "candlestick",
+                "name": "USD to EUR",
+                "data": "ohlcdata",
+                "color": "#2f7ed8",
+                "upColor": "silver"
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a candlestick chart with the title 'USD to EUR Exchange Rate'. The chart type is set to 'candlestick', and the data series includes the name 'USD to EUR' with the provided 'ohlcdata'. The axes and labels are styled with specific colors and font sizes to enhance readability. Custom colors are applied to the candlestick series, with '#2f7ed8' for the stroke and 'silver' for the up points. Additional configurations include settings for chart margins, background color, and legend to ensure a well-organized and visually appealing chart layout."
+}

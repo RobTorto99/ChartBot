@@ -1,0 +1,78 @@
+{
+    "visualization_prompt": "Create a Highcharts network graph visualization that represents connected cuboids using Verlet integration with custom forces. The chart should have a title 'Verlet integration with custom forces', with axes and labels styled with specific colors and font sizes. The data series should include the generated connected cuboids, and the chart should have custom colors and additional configurations such as chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "networkgraph",
+            "plotBorderWidth": 1
+        },
+        "title": {
+            "text": "Verlet integration with custom forces",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "plotOptions": {
+            "networkgraph": {
+                "layoutAlgorithm": {
+                    "enableSimulation": true,
+                    "linkLength": 3,
+                    "integration": "verlet",
+                    "attractiveForce": "function (d, k) { return Math.max(-(d * d) / (k * 300), -100); }",
+                    "repulsiveForce": "function (d, k) { return Math.min((k * k) / (d), 100); }"
+                },
+                "keys": [
+                    "from",
+                    "to"
+                ]
+            }
+        },
+        "series": [
+            {
+                "data": "generateConnectedCuboids(7)"
+            }
+        ],
+        "colors": [
+            "#0071A7",
+            "#FF6600",
+            "#28A745",
+            "#DC3545",
+            "#6F42C1",
+            "#FD7E14",
+            "#17A2B8"
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "14px"
+            }
+        },
+        "chartBackground": {
+            "backgroundColor": "#F9F9F9"
+        },
+        "margin": [
+            50,
+            50,
+            50,
+            50
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration sets up a network graph visualization that represents connected cuboids using Verlet integration with custom forces. The chart type is specified as 'networkgraph', and the title is set to 'Verlet integration with custom forces'. The axes and labels are styled with specific colors and font sizes to enhance readability. The data series includes the generated connected cuboids, which are created using the 'generateConnectedCuboids' function with a level of 7. Custom colors are applied to the series, and additional configurations such as chart margins, background color, and legend settings are included to improve the overall appearance and functionality of the chart."
+}

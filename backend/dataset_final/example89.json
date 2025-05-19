@@ -1,0 +1,95 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the title 'Browser Market Share'. The chart should have styled axes and labels with specific colors and font sizes. The data series should represent the browser market share with custom colors for each column. Additionally, configure the chart with a legend, custom margins, and a background color.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#f4f4f4",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "Browser Market Share",
+            "style": {
+                "color": "#333333",
+                "fontSize": "24px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Firefox",
+                "IE",
+                "Chrome",
+                "Safari",
+                "Opera",
+                "Others"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            },
+            "title": {
+                "text": "Browsers",
+                "style": {
+                    "color": "#777777",
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "yAxis": {
+            "max": 100,
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            },
+            "title": {
+                "text": "Market Share (%)",
+                "style": {
+                    "color": "#777777",
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "tooltip": {
+            "pointFormat": "{series.name}: <b>{point.y:.1f}%</b>"
+        },
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#444444",
+                "fontSize": "12px"
+            }
+        },
+        "series": [
+            {
+                "name": "Browser share",
+                "data": [
+                    45.0,
+                    26.8,
+                    12.8,
+                    8.5,
+                    6.2,
+                    0.7
+                ],
+                "colorByPoint": true,
+                "colors": [
+                    "#FF5733",
+                    "#33FF57",
+                    "#3357FF",
+                    "#FF33A1",
+                    "#33FFF5",
+                    "#A133FF"
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a column chart titled 'Browser Market Share'. The chart includes styled axes and labels with specified colors and font sizes. The x-axis represents different browsers, while the y-axis represents their market share in percentage. The data series is configured to display the browser market share with custom colors for each column. The chart also includes a legend, custom margins, and a background color to enhance readability and visual appeal."
+}

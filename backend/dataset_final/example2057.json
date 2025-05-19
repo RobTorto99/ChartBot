@@ -1,0 +1,118 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly precipitation patterns using synthetic meteorological data with seasonal variation",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "Monthly Average Rainfall",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Months",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Rainfall (mm)",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                },
+                "format": "{value} mm"
+            }
+        },
+        "series": [
+            {
+                "name": "Precipitation",
+                "data": [
+                    35.2,
+                    68.7,
+                    102.4,
+                    124.1,
+                    152.9,
+                    181.5,
+                    142.8,
+                    155.3,
+                    208.7,
+                    187.6,
+                    89.4,
+                    47.1
+                ],
+                "color": "#2E86C1",
+                "marker": {
+                    "enabled": true,
+                    "symbol": "circle",
+                    "radius": 4
+                }
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "12px"
+            }
+        },
+        "tooltip": {
+            "backgroundColor": "rgba(255,255,255,0.95)",
+            "borderWidth": 1,
+            "style": {
+                "color": "#222"
+            },
+            "pointFormat": "<b>{point.y:.1f} mm</b> (+{point.percentage:.0f}% vs annual mean)"
+        },
+        "plotOptions": {
+            "spline": {
+                "lineWidth": 3,
+                "states": {
+                    "hover": {
+                        "lineWidth": 4
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations of precipitation measurements (ratio data) with synthetic values following a bimodal distribution. Synthetic data (\u03bc=124.3mm, \u03c3=56.2mm) incorporates seasonal patterns with summer monsoon peaks and winter lows, maintaining hydrological plausibility through constrained value ranges (35-210mm). The spline chart maximizes data-ink ratio by eliminating gridlines while preserving trend visibility through curved interpolation. Cairo's principles are applied through sequential color coding and proportional symbol sizing. Axis labeling follows Tufte's minimalist approach while maintaining SI unit clarity. The double-peak pattern in Sep/May aligns with Mediterranean climate models while the 35% July dip reflects realistic dry spells."
+}

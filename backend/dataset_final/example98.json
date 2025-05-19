@@ -1,0 +1,100 @@
+{
+    "visualization_prompt": "Create a Highcharts chart with the following specifications: Chart type: spline, Chart title: 'Drag & Drop Disabled for Specific Points', Axes and labels styling: Use a dark theme with white text for labels and titles, Data series: Include one series with data points at (1, -25), (2, 1) with a red color and 'undraggable' class, and (3, 25), Custom colors: Use a specific color palette of #f33 (red) for the undraggable point, Additional configurations: Set chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#2c3e50",
+            "marginTop": 60,
+            "marginBottom": 80,
+            "marginLeft": 80,
+            "marginRight": 80
+        },
+        "title": {
+            "text": "Drag & Drop Disabled for Specific Points",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "min": 0.5,
+            "max": 3.5,
+            "labels": {
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "14px"
+                }
+            },
+            "title": {
+                "text": "X Axis",
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "yAxis": {
+            "softMin": -200,
+            "softMax": 200,
+            "labels": {
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "14px"
+                }
+            },
+            "title": {
+                "text": "Y Axis",
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "tooltip": {
+            "enabled": false
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "dragDrop": {
+                    "draggableY": true
+                },
+                "point": {
+                    "events": {
+                        "drag": "function () { return this.className !== 'undraggable'; }",
+                        "drop": "function () { return this.className !== 'undraggable'; }"
+                    }
+                },
+                "dataLabels": {
+                    "enabled": true,
+                    "y": -6,
+                    "format": "{point.className}",
+                    "style": {
+                        "color": "#ffffff",
+                        "fontSize": "12px"
+                    }
+                },
+                "cursor": "ns-resize",
+                "data": [
+                    {
+                        "x": 1,
+                        "y": -25
+                    },
+                    {
+                        "x": 2,
+                        "y": 1,
+                        "color": "#f33",
+                        "className": "undraggable"
+                    },
+                    {
+                        "x": 3,
+                        "y": 25
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a spline chart with a dark theme, featuring a title and axis labels styled in white to contrast with the dark background. The chart includes a single series with three data points, where the middle point is colored red and marked as 'undraggable'. This point's drag and drop functionality is disabled through custom event handlers. The chart also includes specific margins for better visual spacing and disables the tooltip and legend for a cleaner appearance. The overall design aims to create an interactive yet visually appealing chart suitable for scenarios where specific data points need to be protected from user interaction."
+}

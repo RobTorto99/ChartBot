@@ -1,0 +1,89 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Monthly Average Temperature'. The chart should have styled mode enabled and use the a11y module. The x-axis should display categories for each month from January to December. The y-axis should represent temperature data in degrees Celsius. The data series should include monthly average temperatures for a year, with a specific marker enabled only for the month of April. The chart should have custom colors for the series and axes labels, with a light gray background and a legend positioned at the bottom of the chart.",
+    "visualization_code": {
+        "chart": {
+            "backgroundColor": "#F5F5F5"
+        },
+        "title": {
+            "text": "Monthly Average Temperature"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Temperature",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    {
+                        "y": 129.2,
+                        "marker": {
+                            "enabled": true
+                        }
+                    },
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#FF6384",
+                "marker": {
+                    "enabled": false
+                }
+            }
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        },
+        "plotOptions": {
+            "series": {
+                "marker": {
+                    "enabled": false
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a spline chart with the title 'Monthly Average Temperature'. The chart is set to use styled mode and includes the a11y module for accessibility. The x-axis displays categories for each month from January to December, with labels styled in a dark gray color and a font size of 12px. The y-axis represents temperature data in degrees Celsius, with a title styled in dark gray and a font size of 14px, and labels also styled in dark gray with a font size of 12px. The data series includes monthly average temperatures for a year, with a specific marker enabled only for the month of April. The series color is set to a custom pink shade (#FF6384), and markers are generally disabled except for the specified point. The chart background is set to a light gray color (#F5F5F5), and the legend is positioned at the bottom of the chart, centered horizontally."
+}

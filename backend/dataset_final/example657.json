@@ -1,0 +1,99 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Monthly Average Temperature'. The chart should have styled axes and labels with specific colors and font sizes. The data series should represent monthly temperature data with a custom color scheme. Additionally, the chart should include a custom easing function for animations and a button to update the first data point on click.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "animation": {
+                "duration": 1500,
+                "easing": "easeOutBounce"
+            }
+        },
+        "title": {
+            "text": "Monthly Average Temperature"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Months",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Temperature",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#FF6347"
+            }
+        ],
+        "colors": [
+            "#FF6347",
+            "#4682B4",
+            "#2E8B57"
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "12px"
+            }
+        },
+        "plotOptions": {
+            "spline": {
+                "marker": {
+                    "enabled": true
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a spline chart with a custom easing function for animations, which creates a bouncing effect. The chart is titled 'Monthly Average Temperature' and includes a data series representing monthly temperature data. The axes and labels are styled with specific colors and font sizes to enhance readability. The chart also includes a custom color scheme for the data series and a legend. Additionally, the chart is set up to allow updating the first data point on a button click, demonstrating interactivity."
+}

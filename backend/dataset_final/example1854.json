@@ -1,0 +1,107 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly sales trends using synthetic business data with seasonal patterns",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 50,
+            "marginRight": 30,
+            "marginBottom": 70,
+            "marginLeft": 60
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#333",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Month",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales (in thousands)",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "2023 Sales",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#4CAF50",
+                "marker": {
+                    "enabled": true,
+                    "radius": 4
+                }
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333",
+                "fontSize": "12px"
+            }
+        },
+        "plotOptions": {
+            "spline": {
+                "lineWidth": 3,
+                "states": {
+                    "hover": {
+                        "lineWidth": 4
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two dimensions: temporal (monthly categories) and quantitative (sales figures). Synthetic data follows a seasonal retail pattern with \u03bc=120.5 and \u03c3=56.2, peaking in mid-year and holiday seasons. The spline chart was chosen to emphasize trend continuity while minimizing visual clutter, adhering to Tufte's data-ink ratio. Color choices (#4CAF50 series on #f9f9f9 background) follow Cairo's preattentive processing principles for quick pattern recognition. Annotated markers maintain data legibility while the 3px line width optimizes for both screen and print rendering. The parabolic sales curve with Q2-Q3 peak (June: 176k) and December dip (54.4k) realistically mimics consumer spending patterns."
+}

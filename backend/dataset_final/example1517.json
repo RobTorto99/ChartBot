@@ -1,0 +1,117 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly sales trends for two product lines using synthetic data with seasonal variation and contrasting growth trajectories",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Monthly Sales Performance (2023)",
+            "style": {
+                "color": "#2C3E50",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7F8C8D",
+                    "fontWeight": "bold"
+                }
+            },
+            "title": {
+                "text": "Month",
+                "style": {
+                    "color": "#34495E"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue ($K)",
+                "style": {
+                    "color": "#34495E"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7F8C8D"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Product A (Next-Gen)",
+                "data": [
+                    82,
+                    88,
+                    95,
+                    112,
+                    125,
+                    143,
+                    138,
+                    147,
+                    158,
+                    142,
+                    130,
+                    118
+                ],
+                "color": "#2980B9",
+                "marker": {
+                    "radius": 5
+                }
+            },
+            {
+                "name": "Product B (Legacy)",
+                "data": [
+                    145,
+                    132,
+                    128,
+                    115,
+                    107,
+                    98,
+                    102,
+                    95,
+                    88,
+                    82,
+                    78,
+                    70
+                ],
+                "color": "#E67E22",
+                "marker": {
+                    "radius": 5
+                }
+            }
+        ],
+        "tooltip": {
+            "valuePrefix": "$",
+            "valueDecimals": 1,
+            "valueSuffix": "K"
+        },
+        "plotOptions": {
+            "spline": {
+                "lineWidth": 3,
+                "states": {
+                    "hover": {
+                        "lineWidth": 4
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two 12-month time series representing synthetic sales figures. Product A shows \u03bc=123.8K, \u03c3=25.3K with 8.7% monthly growth, featuring summer demand peaks and holiday season decline. Product B demonstrates \u03bc=101.8K, \u03c3=24.9K with strategic phase-out trend (-6.5% monthly). The spline chart maximizes data-ink ratio through clean connecting curves while maintaining Tufte's graphical integrity. Cairo's principles are applied through: 1) Pre-attentive color coding (blue=growth, orange=decline), 2) Proportional marker sizing for visual weight balance, 3) Dual-axis comparison through overlaid series. The synthetic data incorporates realistic financial variance (CV=0.20-0.24) and anti-correlated trends (r=-0.89) for scenario modeling."
+}

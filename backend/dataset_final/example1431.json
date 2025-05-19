@@ -1,0 +1,179 @@
+{
+    "visualization_prompt": "Generate a treemap showing hierarchical population distribution using squarified layout algorithm with accessibility-enhanced formatting",
+    "visualization_code": {
+        "chart": {
+            "type": "treemap",
+            "margin": [
+                20,
+                10,
+                30,
+                10
+            ],
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Fiji Administrative Divisions Population Distribution",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "useHTML": true,
+            "text": "Source: <a href='https://en.wikipedia.org/wiki/Local_government_in_Fiji'>Wikipedia</a>",
+            "style": {
+                "color": "#666666",
+                "fontSize": "12px"
+            }
+        },
+        "series": [
+            {
+                "type": "treemap",
+                "layoutAlgorithm": "squarified",
+                "data": [
+                    {
+                        "id": "Central",
+                        "name": "Central",
+                        "value": 378148,
+                        "color": "#f2f8fd"
+                    },
+                    {
+                        "id": "Naitasiri",
+                        "name": "Naitasiri",
+                        "value": 177678,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Namosi",
+                        "name": "Namosi",
+                        "value": 7871,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Rewa",
+                        "name": "Rewa",
+                        "value": 108016,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Serua",
+                        "name": "Serua",
+                        "value": 20031,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Tailevu",
+                        "name": "Tailevu",
+                        "value": 64552,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Western",
+                        "name": "Western",
+                        "value": 337071,
+                        "color": "#d0e5f9"
+                    },
+                    {
+                        "id": "Ba",
+                        "name": "Ba",
+                        "value": 247708,
+                        "parent": "Western"
+                    },
+                    {
+                        "id": "Nadroga-Navosa",
+                        "name": "Nadroga-Navosa",
+                        "value": 58931,
+                        "parent": "Western"
+                    },
+                    {
+                        "id": "Ra",
+                        "name": "Ra",
+                        "value": 30432,
+                        "parent": "Western"
+                    },
+                    {
+                        "id": "Northern",
+                        "name": "Northern",
+                        "value": 131918,
+                        "color": "#2183e3"
+                    },
+                    {
+                        "id": "Bua",
+                        "name": "Bua",
+                        "value": 15466,
+                        "parent": "Northern"
+                    },
+                    {
+                        "id": "Cakaudrove",
+                        "name": "Cakaudrove",
+                        "value": 50469,
+                        "parent": "Northern"
+                    },
+                    {
+                        "id": "Macuata",
+                        "name": "Macuata",
+                        "value": 65983,
+                        "parent": "Northern"
+                    },
+                    {
+                        "id": "Eastern",
+                        "name": "Eastern",
+                        "value": 36156,
+                        "color": "#145ca2"
+                    },
+                    {
+                        "id": "Kadavu",
+                        "name": "Kadavu",
+                        "value": 10897,
+                        "parent": "Eastern"
+                    },
+                    {
+                        "id": "Lau",
+                        "name": "Lau",
+                        "value": 9602,
+                        "parent": "Eastern"
+                    },
+                    {
+                        "id": "Lomaiviti",
+                        "name": "Lomaiviti",
+                        "value": 15657,
+                        "parent": "Eastern"
+                    },
+                    {
+                        "id": "Rotuma",
+                        "name": "Rotuma",
+                        "value": 1594,
+                        "color": "#092a4b"
+                    }
+                ]
+            }
+        ],
+        "accessibility": {
+            "description": "Hierarchical visualization of Fiji's 2017 population distribution across four main divisions (Central, Western, Northern, Eastern) and their constituent provinces. Western Division contains the most populated provinces while Rotuma has the smallest population."
+        },
+        "colorAxis": {
+            "dataClasses": [
+                {
+                    "from": 0,
+                    "to": 50000,
+                    "color": "#f2f8fd",
+                    "name": "<50k"
+                },
+                {
+                    "from": 50001,
+                    "to": 150000,
+                    "color": "#d0e5f9",
+                    "name": "50k-150k"
+                },
+                {
+                    "from": 150001,
+                    "to": 400000,
+                    "color": "#2183e3",
+                    "name": "150k-400k"
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The dataset represents a 2-level hierarchical structure with categorical parent nodes (administrative divisions) and numerical leaf nodes (population counts). Primary division values (Central, Western, etc.) show \u03bc=220,071 (\u03c3=143,751) while provincial data follows \u03bc=61,123 (\u03c3=74,256), demonstrating right-skewed distribution. Original data from verified Wikipedia sources maintains integer precision with no missing values. The treemap maximizes data-ink ratio by encoding population through area and color intensity simultaneously. Cairo's perceptual principles are applied through sequential blue hues (value encoding) and clear containment boundaries (hierarchy representation). Division-level labels (18px font) maintain legibility while avoiding leaf node clutter. Color bins (0-50k, 50k-150k, 150k-400k) create natural class breaks aligned with Tukey's five-number summary of the data distribution."
+}

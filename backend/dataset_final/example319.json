@@ -1,0 +1,104 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a 3D pie chart with an inner radius, often referred to as a donut chart. The chart should display the gold medals won by different countries in the Beijing 2022 Olympics. The chart should have a title and subtitle aligned to the left, with specific styling for the axes and labels. The data series should include the name of each country and the number of gold medals they won. Additionally, the chart should have custom colors and other configurations such as chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "pie",
+            "options3d": {
+                "enabled": true,
+                "alpha": 45
+            }
+        },
+        "title": {
+            "text": "Beijing 2022 gold medals by country",
+            "align": "left",
+            "style": {
+                "color": "#333",
+                "fontSize": "18px"
+            }
+        },
+        "subtitle": {
+            "text": "3D donut in Highcharts",
+            "align": "left",
+            "style": {
+                "color": "#666",
+                "fontSize": "14px"
+            }
+        },
+        "plotOptions": {
+            "pie": {
+                "innerSize": 100,
+                "depth": 45,
+                "colors": [
+                    "#FFD700",
+                    "#C0C0C0",
+                    "#CD7F32",
+                    "#FFC107",
+                    "#4CAF50",
+                    "#2196F3",
+                    "#9C27B0",
+                    "#FF5722",
+                    "#607D8B"
+                ]
+            }
+        },
+        "series": [
+            {
+                "name": "Medals",
+                "data": [
+                    [
+                        "Norway",
+                        16
+                    ],
+                    [
+                        "Germany",
+                        12
+                    ],
+                    [
+                        "USA",
+                        8
+                    ],
+                    [
+                        "Sweden",
+                        8
+                    ],
+                    [
+                        "Netherlands",
+                        8
+                    ],
+                    [
+                        "ROC",
+                        6
+                    ],
+                    [
+                        "Austria",
+                        7
+                    ],
+                    [
+                        "Canada",
+                        4
+                    ],
+                    [
+                        "Japan",
+                        3
+                    ]
+                ]
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical"
+        },
+        "credits": {
+            "enabled": false
+        },
+        "exporting": {
+            "enabled": true
+        },
+        "accessibility": {
+            "enabled": true
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a 3D pie chart with an inner radius, creating a donut chart. The chart displays the gold medals won by various countries in the Beijing 2022 Olympics. The title and subtitle are aligned to the left, with specific styling applied to their text color and font size. The plot options for the pie chart include an inner size of 100 and a depth of 45, along with custom colors for each segment of the pie. The data series includes the name of each country and the corresponding number of gold medals. Additional configurations include enabling the legend, disabling credits, enabling exporting options, and ensuring accessibility features are enabled."
+}

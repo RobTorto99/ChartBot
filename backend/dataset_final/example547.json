@@ -1,0 +1,97 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the title 'Auto rotation limit'. The chart should have a subtitle 'Short words means word-wrap makes sense'. The x-axis should be of type 'category' with labels that have an auto rotation limit of 40. The chart should display a single series with data points representing various food items and their corresponding values. The series should not be shown in the legend. The chart should be styled with specific colors, font sizes, and other configurations as specified.",
+    "visualization_code": {
+        "chart": {
+            "type": "column"
+        },
+        "title": {
+            "text": "Auto rotation limit"
+        },
+        "subtitle": {
+            "text": "Short words means word-wrap makes sense"
+        },
+        "xAxis": {
+            "type": "category",
+            "labels": {
+                "autoRotationLimit": 40,
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Food Items",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "showInLegend": false,
+                "data": [
+                    {
+                        "name": "Pasta (no gluten)",
+                        "y": 77
+                    },
+                    {
+                        "name": "Rice (white & brown)",
+                        "y": 50
+                    },
+                    {
+                        "name": "Bread (white & brown)",
+                        "y": 20
+                    },
+                    {
+                        "name": "Eggs (chicken, duck & goose)",
+                        "y": 48
+                    },
+                    {
+                        "name": "Meat (cattle, fowl & fish)",
+                        "y": 36
+                    },
+                    {
+                        "name": "Vegetables",
+                        "y": 15
+                    },
+                    {
+                        "name": "Fruits",
+                        "y": 57
+                    }
+                ],
+                "color": "#008080"
+            }
+        ],
+        "colors": [
+            "#008080"
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "credits": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "column": {
+                "borderWidth": 0
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a column chart with a title 'Auto rotation limit' and a subtitle 'Short words means word-wrap makes sense'. The x-axis is set to be of type 'category' with labels that have an auto rotation limit of 40, styled with a dark gray color and a font size of 12px. The x-axis title is styled similarly with a slightly larger font size. The y-axis is configured with a title 'Values' and labels styled similarly to the x-axis. The chart displays a single series of data points representing various food items and their corresponding values, with the series color set to a teal shade. The series is not shown in the legend, and the chart does not display credits. The column plot options include removing the border width for a cleaner look."
+}

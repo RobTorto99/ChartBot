@@ -1,0 +1,283 @@
+{
+    "visualization_prompt": "Create a Highcharts column chart with the title 'Multi-Modal Distribution' and subtitle 'Fisher's Iris Data: Petal Width'. The chart should display binned data from the raw data array, with the x-axis labeled 'Petal Width (cm)' and the y-axis without a title. The chart should have a custom color scheme and specific styling for axes, labels, and titles.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "margin": [
+                60,
+                10,
+                40,
+                40
+            ]
+        },
+        "title": {
+            "text": "Multi-Modal Distribution",
+            "x": 25
+        },
+        "subtitle": {
+            "text": "Fisher's Iris Data: Petal Width",
+            "x": 25
+        },
+        "legend": {
+            "enabled": false
+        },
+        "credits": {
+            "enabled": false
+        },
+        "exporting": {
+            "enabled": false
+        },
+        "tooltip": {},
+        "plotOptions": {
+            "series": {
+                "pointPadding": 0,
+                "groupPadding": 0,
+                "borderWidth": 0.5,
+                "borderColor": "rgba(255,255,255,0.5)",
+                "color": "rgba(253, 99, 0, 0.9)"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "Petal Width (cm)"
+            },
+            "labels": {
+                "style": {
+                    "color": "rgba(0,0,0,.9)",
+                    "fontSize": "9px"
+                }
+            },
+            "lineWidth": 0.5,
+            "lineColor": "rgba(0,0,0,.5)",
+            "tickWidth": 0.5,
+            "tickLength": 3,
+            "tickColor": "rgba(0,0,0,.75)"
+        },
+        "yAxis": {
+            "title": {
+                "text": ""
+            },
+            "labels": {
+                "style": {
+                    "color": "rgba(0,0,0,.9)",
+                    "fontSize": "9px"
+                }
+            },
+            "lineWidth": 0.5,
+            "lineColor": "rgba(0,0,0,.5)",
+            "tickWidth": 0.5,
+            "tickLength": 3,
+            "tickColor": "rgba(0,0,0,.75)",
+            "maxPadding": 0,
+            "endOnTick": false
+        },
+        "series": [
+            {
+                "name": "Distribution",
+                "data": [
+                    [
+                        0.15,
+                        1
+                    ],
+                    [
+                        0.35,
+                        10
+                    ],
+                    [
+                        0.55,
+                        10
+                    ],
+                    [
+                        0.75,
+                        10
+                    ],
+                    [
+                        0.95,
+                        10
+                    ],
+                    [
+                        1.15,
+                        10
+                    ],
+                    [
+                        1.35,
+                        10
+                    ],
+                    [
+                        1.55,
+                        10
+                    ],
+                    [
+                        1.75,
+                        10
+                    ],
+                    [
+                        1.95,
+                        10
+                    ],
+                    [
+                        2.15,
+                        10
+                    ],
+                    [
+                        2.35,
+                        10
+                    ],
+                    [
+                        2.55,
+                        10
+                    ],
+                    [
+                        2.75,
+                        10
+                    ],
+                    [
+                        2.95,
+                        10
+                    ],
+                    [
+                        3.15,
+                        10
+                    ],
+                    [
+                        3.35,
+                        10
+                    ],
+                    [
+                        3.55,
+                        10
+                    ],
+                    [
+                        3.75,
+                        10
+                    ],
+                    [
+                        3.95,
+                        10
+                    ],
+                    [
+                        4.15,
+                        10
+                    ],
+                    [
+                        4.35,
+                        10
+                    ],
+                    [
+                        4.55,
+                        10
+                    ],
+                    [
+                        4.75,
+                        10
+                    ],
+                    [
+                        4.95,
+                        10
+                    ],
+                    [
+                        5.15,
+                        10
+                    ],
+                    [
+                        5.35,
+                        10
+                    ],
+                    [
+                        5.55,
+                        10
+                    ],
+                    [
+                        5.75,
+                        10
+                    ],
+                    [
+                        5.95,
+                        10
+                    ],
+                    [
+                        6.15,
+                        10
+                    ],
+                    [
+                        6.35,
+                        10
+                    ],
+                    [
+                        6.55,
+                        10
+                    ],
+                    [
+                        6.75,
+                        10
+                    ],
+                    [
+                        6.95,
+                        10
+                    ],
+                    [
+                        7.15,
+                        10
+                    ],
+                    [
+                        7.35,
+                        10
+                    ],
+                    [
+                        7.55,
+                        10
+                    ],
+                    [
+                        7.75,
+                        10
+                    ],
+                    [
+                        7.95,
+                        10
+                    ],
+                    [
+                        8.15,
+                        10
+                    ],
+                    [
+                        8.35,
+                        10
+                    ],
+                    [
+                        8.55,
+                        10
+                    ],
+                    [
+                        8.75,
+                        10
+                    ],
+                    [
+                        8.95,
+                        10
+                    ],
+                    [
+                        9.15,
+                        10
+                    ],
+                    [
+                        9.35,
+                        10
+                    ],
+                    [
+                        9.55,
+                        10
+                    ],
+                    [
+                        9.75,
+                        10
+                    ],
+                    [
+                        9.95,
+                        10
+                    ]
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration object is designed to render a column chart with specific styling and data presentation. The chart type is set to 'column', and it includes a title and subtitle aligned to the left. The x-axis is labeled 'Petal Width (cm)', and the y-axis is left without a title. The chart uses a custom color scheme, with the primary color for the columns set to a bright orange. The plot options include padding adjustments and border settings to ensure the columns are tightly grouped and have a subtle border. The data series is binned from the raw data array, with each bin representing a range of petal widths and the count of data points within that range. The chart is configured to disable the legend, credits, and exporting options, focusing solely on the visualization of the data."
+}

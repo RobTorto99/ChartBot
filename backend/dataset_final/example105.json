@@ -1,0 +1,87 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Age vs Weight'. The chart should have styled axes and labels with specific colors and font sizes. The data series should include 'Age' and 'Weight' with corresponding data from the provided JavaScript code. Custom colors should be used for the series, and additional configurations should include chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 60,
+            "marginBottom": 80
+        },
+        "title": {
+            "text": "Age vs Weight",
+            "style": {
+                "color": "#333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "John",
+                "Jane",
+                "Joe",
+                "Jack"
+            ],
+            "title": {
+                "text": "Names",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#777",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#777",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Age",
+                "data": [
+                    23,
+                    25,
+                    21,
+                    26
+                ],
+                "color": "#FF5733"
+            },
+            {
+                "name": "Weight",
+                "data": [
+                    70,
+                    65,
+                    68,
+                    72
+                ],
+                "color": "#33FF57"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "top",
+            "layout": "vertical",
+            "itemStyle": {
+                "color": "#444",
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart with the title 'Age vs Weight'. The chart type is set to 'spline', and the background color is light gray with specific margins for top and bottom. The title and axes labels are styled with defined colors and font sizes. The data series include 'Age' and 'Weight' with corresponding data points from the provided JavaScript code. Custom colors are applied to each series for better visualization. The legend is enabled and positioned to the right, with vertical alignment at the top, and styled with a specific font size and color. This configuration ensures a clear and visually appealing chart presentation."
+}

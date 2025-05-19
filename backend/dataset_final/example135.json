@@ -1,0 +1,59 @@
+{
+    "visualization_prompt": "Create a Highcharts map chart with the following specifications: Chart type: map, Chart title: 'Population Density by Country', Axes and labels styling: Use custom colors defined in CSS, Data series: Population density data from a Google Spreadsheet, Custom colors: Use the colors defined in CSS, Additional configurations: Enable map navigation, customize legend, and set up color axis with data classes.",
+    "visualization_code": {
+        "chart": {
+            "styledMode": true
+        },
+        "title": {
+            "text": "Population Density by Country"
+        },
+        "mapNavigation": {
+            "enabled": true
+        },
+        "legend": {
+            "title": {
+                "text": "Population density"
+            },
+            "align": "left",
+            "verticalAlign": "bottom",
+            "floating": true,
+            "layout": "vertical",
+            "valueDecimals": 0,
+            "symbolRadius": 0,
+            "symbolHeight": 14
+        },
+        "colorAxis": {
+            "dataClassColor": "category",
+            "dataClasses": [
+                {
+                    "to": 20,
+                    "name": "Sparse (<20)"
+                },
+                {
+                    "from": 20,
+                    "to": 200,
+                    "name": "Moderate (2 - 200)"
+                },
+                {
+                    "from": 200,
+                    "name": "Dense (>200)"
+                }
+            ]
+        },
+        "series": [
+            {
+                "data": [],
+                "mapData": null,
+                "joinBy": [
+                    "iso-a2",
+                    "code"
+                ],
+                "name": "Population density",
+                "tooltip": {
+                    "valueSuffix": "/km\u00b2"
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a map chart displaying population density by country. The chart title is set to 'Population Density by Country', and the map navigation is enabled for user interaction. The legend is customized to display population density categories, aligned to the left and positioned at the bottom of the chart. The color axis is set up with three data classes to categorize population density into 'Sparse', 'Moderate', and 'Dense'. The series data is expected to be populated from a Google Spreadsheet, with the data joined to the map data using the 'iso-a2' and 'code' keys. The tooltip for each data point displays the population density per square kilometer. The chart is styled using CSS, with custom colors defined for different data classes."
+}

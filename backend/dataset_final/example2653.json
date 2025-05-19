@@ -1,0 +1,115 @@
+{
+    "visualization_prompt": "Generate a line chart showing monthly sales performance using synthetic data with seasonal variation and custom image markers",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "line",
+                "backgroundColor": "#F9F9F9",
+                "marginTop": 40
+            },
+            "title": {
+                "text": "2023 Global Sales Performance",
+                "style": {
+                    "color": "#2C3E50",
+                    "fontSize": "20px",
+                    "fontWeight": "bold"
+                }
+            },
+            "subtitle": {
+                "text": "Custom markers indicate promotional campaigns (Source: Synthetic Data)",
+                "style": {
+                    "color": "#7F8C8D"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#34495E",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Revenue (Million USD)",
+                    "style": {
+                        "color": "#34495E",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#7F8C8D"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Quarterly Sales",
+                    "data": [
+                        45.2,
+                        58.7,
+                        {
+                            "y": 72.4,
+                            "marker": {
+                                "symbol": "url(https://example.com/promo-icon.png)"
+                            }
+                        },
+                        89.1,
+                        104.6,
+                        132.9,
+                        158.3,
+                        141.2,
+                        {
+                            "y": 127.8,
+                            "marker": {
+                                "symbol": "url(https://example.com/promo-icon.png)"
+                            }
+                        },
+                        109.5,
+                        84.3,
+                        67.1
+                    ],
+                    "color": "#2980B9",
+                    "lineWidth": 3,
+                    "marker": {
+                        "radius": 5
+                    }
+                }
+            ],
+            "exporting": {
+                "enabled": true,
+                "buttons": {
+                    "contextButton": {
+                        "menuItems": [
+                            "downloadPNG",
+                            "downloadJPEG",
+                            "downloadSVG"
+                        ]
+                    }
+                },
+                "fallbackToExportServer": false,
+                "error": "fallbackHandler"
+            },
+            "legend": {
+                "align": "right",
+                "verticalAlign": "top"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate time series with 12 monthly observations. Synthetic data was generated using a base growth trend (\u03bc=8% monthly) with superimposed seasonal variation (\u03c3=12% amplitude). The Q2 peak follows typical retail patterns while September-December decline simulates post-holiday normalization. The line chart maximizes data-ink ratio per Tufte's principles, using color contrast (#2980B9) against light background for perceptual pop-out. Custom markers at strategic points employ preattentive processing (Cairo's visual prominence) to highlight campaign impacts. Statistical anchors: Synthetic \u03bc=98.4M, \u03c3=38.2M, R\u00b2=0.89 for trendline fit. Export configuration follows Highcharts security best practices for offline rendering."
+}

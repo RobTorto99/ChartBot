@@ -1,0 +1,67 @@
+{
+    "visualization_prompt": "Generate a pie chart showing Earth's water distribution using pattern fills for enhanced accessibility",
+    "visualization_code": {
+        "chart": {
+            "type": "pie",
+            "colors": [
+                {
+                    "pattern": {
+                        "id": 1,
+                        "color": "#1493ff"
+                    }
+                },
+                {
+                    "pattern": {
+                        "id": 5,
+                        "color": "#71BF45"
+                    }
+                },
+                "#FFA500"
+            ],
+            "accessibility": {
+                "point": {
+                    "valueSuffix": "%"
+                }
+            },
+            "title": {
+                "text": "Earth's Water Supply"
+            },
+            "tooltip": {
+                "pointFormat": "{series.name}: <b>{point.percentage:.0f}%</b>"
+            },
+            "plotOptions": {
+                "pie": {
+                    "allowPointSelect": true,
+                    "cursor": "pointer",
+                    "dataLabels": {
+                        "enabled": true
+                    },
+                    "showInLegend": true
+                }
+            },
+            "series": [
+                {
+                    "name": "Water Composition",
+                    "colorByPoint": true,
+                    "data": [
+                        {
+                            "name": "Salt water",
+                            "y": 97
+                        },
+                        {
+                            "name": "Ice",
+                            "y": 2
+                        },
+                        {
+                            "name": "Fresh water",
+                            "y": 1,
+                            "sliced": true,
+                            "selected": true
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The dataset contains three categorical variables representing Earth's hydrospheric composition. Percentage values show saltwater dominance (97%) versus limited freshwater resources. Synthetic data follows established scientific consensus with exact percentages summing to 100%. The pie chart maximizes data-ink ratio by eliminating redundant gridlines while maintaining proportional accuracy through angular encoding. Pattern fills implement Cairo's distinguishable\u6027\u539f\u5219 for color vision deficiency support. Absolute percentage values (\u03bc=33.3, \u03c3=45.6) highlight distribution skewness, with interactive slicing emphasizing the critical 1% freshwater portion through Cairo's emphasis principle."
+}

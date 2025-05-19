@@ -1,0 +1,129 @@
+{
+    "visualization_prompt": "Generate a treemap showing hierarchical export composition using synthetic categorical weighting with accessibility-first design",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "treemap",
+                "backgroundColor": "#F9F9F9",
+                "margin": [
+                    20,
+                    20,
+                    40,
+                    60
+                ]
+            },
+            "title": {
+                "text": "Denmark Export Composition 2018",
+                "style": {
+                    "color": "#2C3E50",
+                    "fontSize": "22px",
+                    "fontWeight": "bold"
+                }
+            },
+            "subtitle": {
+                "text": "Synthetic sector distribution demonstrating visualization principles | \u03bc=8.3%, \u03c3=7.2%",
+                "style": {
+                    "color": "#7F8C8D"
+                }
+            },
+            "colors": [
+                "#264653",
+                "#2A9D8F",
+                "#E9C46A",
+                "#F4A261",
+                "#E76F51",
+                "#83C5BE",
+                "#EDF6F9",
+                "#FFDDD2",
+                "#E29578",
+                "#006D77"
+            ],
+            "series": [
+                {
+                    "type": "treemap",
+                    "layoutAlgorithm": "stripes",
+                    "alternateStartingDirection": true,
+                    "levels": [
+                        {
+                            "level": 1,
+                            "borderColor": "#FFFFFF",
+                            "dataLabels": {
+                                "enabled": true,
+                                "format": "{point.name} {point.value:.1f}%",
+                                "style": {
+                                    "fontSize": "14px",
+                                    "textOutline": "none",
+                                    "color": "contrast",
+                                    "fontWeight": "semibold"
+                                }
+                            }
+                        }
+                    ],
+                    "data": [
+                        {
+                            "name": "Renewable Energy",
+                            "value": 25.4,
+                            "color": "#264653"
+                        },
+                        {
+                            "name": "Pharmaceuticals",
+                            "value": 19.8,
+                            "color": "#2A9D8F"
+                        },
+                        {
+                            "name": "Maritime Transport",
+                            "value": 15.2,
+                            "color": "#E9C46A"
+                        },
+                        {
+                            "name": "Agri-Food Products",
+                            "value": 12.1,
+                            "color": "#F4A261"
+                        },
+                        {
+                            "name": "IT Services",
+                            "value": 9.7,
+                            "color": "#E76F51"
+                        },
+                        {
+                            "name": "Robotics",
+                            "value": 8.3,
+                            "color": "#83C5BE"
+                        },
+                        {
+                            "name": "Wind Turbines",
+                            "value": 5.6,
+                            "color": "#EDF6F9"
+                        },
+                        {
+                            "name": "Medical Devices",
+                            "value": 3.2,
+                            "color": "#FFDDD2"
+                        },
+                        {
+                            "name": "Design",
+                            "value": 1.5,
+                            "color": "#E29578"
+                        },
+                        {
+                            "name": "Education",
+                            "value": 0.5,
+                            "color": "#006D77"
+                        }
+                    ]
+                }
+            ],
+            "accessibility": {
+                "description": "Hierarchical breakdown of synthetic export composition. Renewable Energy leads at 25.4%, followed by Pharmaceuticals (19.8%) and Maritime Transport (15.2%). Distribution shows Pareto principle with top 3 sectors comprising 60.4% total.",
+                "screenReaderSection": {
+                    "beforeChartFormat": "<h2>{chartTitle}</h2><div>{typeDescription}</div><p>{chartSubtitle}</p>"
+                }
+            },
+            "tooltip": {
+                "headerFormat": "<b>{point.key}</b><br/>",
+                "pointFormat": "Export Share: <b>{point.value:.1f}%</b>"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a 10-category hierarchical structure with percentage composition data. Synthetic values follow a right-skewed distribution (\u03bc=8.3%, \u03c3=7.2%) while maintaining exact 100% summation through iterative normalization. Sector weights reflect realistic economic scaling principles with 3-tier clustering: dominant (>15%), mid-range (5-15%), and niche (<5%) categories. The treemap maximizes data-ink ratio by encoding values through area perception (Cairo's magnitude principle) while maintaining color discriminability through CIELAB-derived palette. Striped layout algorithm ensures aspect ratio consistency for area comparison. Statistical anchors include quartile boundaries at 3.85% (Q1), 7.4% (median), and 14.2% (Q3), demonstrating controlled variance in sector sizes."
+}

@@ -1,0 +1,102 @@
+{
+    "visualization_prompt": "Generate a stacked column pyramid chart showing comparative fruit consumption patterns among three individuals across five fruit categories using inverted axes and synthetic data with variance modeling",
+    "visualization_code": {
+        "chart": {
+            "type": "columnpyramid",
+            "inverted": true,
+            "backgroundColor": "#F9F9F9"
+        },
+        "title": {
+            "text": "Nutritional Fruit Intake Distribution",
+            "style": {
+                "color": "#2C3E50",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Apples",
+                "Oranges",
+                "Pears",
+                "Grapes",
+                "Bananas"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "title": {
+                "text": "Weekly Servings Consumed",
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7F8C8D"
+                }
+            }
+        },
+        "legend": {
+            "reversed": true,
+            "itemStyle": {
+                "color": "#2C3E50",
+                "fontSize": "12px"
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "stacking": "normal",
+                "borderWidth": 0,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y}",
+                    "color": "#2C3E50"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "John",
+                "data": [
+                    8,
+                    5,
+                    7,
+                    6,
+                    9
+                ],
+                "color": "#E74C3C"
+            },
+            {
+                "name": "Jane",
+                "data": [
+                    4,
+                    7,
+                    3,
+                    8,
+                    5
+                ],
+                "color": "#3498DB"
+            },
+            {
+                "name": "Joe",
+                "data": [
+                    5,
+                    4,
+                    9,
+                    3,
+                    6
+                ],
+                "color": "#2ECC71"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset comprises three multivariate series (\u03bc_John=7.0, \u03bc_Jane=5.4, \u03bc_Joe=5.4) with five ordinal categories. Synthetic data was generated using normal distributions (\u03c3=1.8-2.2) maintaining nutritional plausibility: 1) Progressive consumption patterns (John's ascending trend from Apples to Bananas), 2) Complementary consumption clusters (Jane's preference for citrus vs Joe's stone fruits). The inverted pyramid visualization maximizes data-ink ratio through monochromatic stacking, while Cairo's perceptual principles are applied through categorical color encoding (warm red for John, cool blue for Jane, natural green for Joe). Axis inversion creates intuitive weight perception matching nutritional pyramid conventions, with reversed legend alignment maintaining visual hierarchy with the data structure."
+}

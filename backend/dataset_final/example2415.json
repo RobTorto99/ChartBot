@@ -1,0 +1,95 @@
+{
+    "visualization_prompt": "Generate a network graph showing circular node connections using Highcharts' force-directed layout algorithm",
+    "visualization_code": {
+        "chart": {
+            "type": "networkgraph",
+            "backgroundColor": "#ffffff",
+            "margin": 50
+        },
+        "title": {
+            "text": "Network Graph Example",
+            "style": {
+                "fontSize": "16px",
+                "color": "#444444"
+            }
+        },
+        "plotOptions": {
+            "networkgraph": {
+                "layoutAlgorithm": {
+                    "enableSimulation": true,
+                    "friction": -0.9,
+                    "integration": "verlet"
+                },
+                "dataLabels": {
+                    "enabled": true,
+                    "linkFormat": "{point.fromNode.name} \u2192 {point.toNode.name",
+                    "format": "Node: {point.name}",
+                    "style": {
+                        "fontSize": "12px",
+                        "color": "#333333"
+                    }
+                },
+                "marker": {
+                    "radius": 35
+                }
+            }
+        },
+        "series": [
+            {
+                "data": [
+                    {
+                        "id": "n1",
+                        "name": "Node 1"
+                    },
+                    {
+                        "id": "n2",
+                        "name": "Node 2"
+                    },
+                    {
+                        "id": "n3",
+                        "name": "Node 3"
+                    },
+                    {
+                        "id": "n4",
+                        "name": "Node 4"
+                    },
+                    {
+                        "id": "n5",
+                        "name": "Node 5"
+                    },
+                    {
+                        "from": "n1",
+                        "to": "n2"
+                    },
+                    {
+                        "from": "n2",
+                        "to": "n3"
+                    },
+                    {
+                        "from": "n3",
+                        "to": "n4"
+                    },
+                    {
+                        "from": "n4",
+                        "to": "n5"
+                    },
+                    {
+                        "from": "n5",
+                        "to": "n1"
+                    }
+                ],
+                "nodes": [
+                    "n1",
+                    "n2",
+                    "n3",
+                    "n4",
+                    "n5"
+                ]
+            }
+        ],
+        "legend": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The network graph visualization presents a 5-node circular system with bidirectional connections. The dataset contains two distinct data types: node definitions (with IDs and names) and link definitions (with from/to relationships). Synthetic node positions are generated through force-directed layout algorithms, maintaining equal angular distribution (72\u00b0 between nodes) and radial equilibrium. The visualization employs Tufte's data-ink principles through minimalist node design (single-color circles with clean typography) and Cairo's perceptual effectiveness through spatial grouping and directional link labels. Force simulation parameters (friction: -0.9, verlet integration) ensure stable node positioning while maintaining readable connection angles. Label formatting follows D3-inspired patterns with explicit relationship notation in links (\u2192 symbol) and node identification through centered textPath elements."
+}

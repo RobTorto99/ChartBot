@@ -1,0 +1,145 @@
+{
+    "visualization_prompt": "Generate a treemap showing hierarchical proportional contributions of export categories using squarified layout algorithm",
+    "visualization_code": {
+        "colors": [
+            "#E59866",
+            "#F8C471",
+            "#F7DC6F",
+            "#82E0AA",
+            "#73C6B6",
+            "#85C1E9",
+            "#BB8FCE",
+            "#F1948A",
+            "#B2BABB"
+        ],
+        "series": [
+            {
+                "name": "Export Composition",
+                "type": "treemap",
+                "layoutAlgorithm": "squarified",
+                "data": [
+                    {
+                        "name": "Services",
+                        "value": 39,
+                        "color": "#E59866",
+                        "subcategories": [
+                            {
+                                "name": "Transport",
+                                "value": 15
+                            },
+                            {
+                                "name": "IT",
+                                "value": 10
+                            },
+                            {
+                                "name": "Financial",
+                                "value": 8
+                            },
+                            {
+                                "name": "Tourism",
+                                "value": 6
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Chemicals",
+                        "value": 13,
+                        "color": "#F8C471",
+                        "subcategories": [
+                            {
+                                "name": "Pharmaceuticals",
+                                "value": 7
+                            },
+                            {
+                                "name": "Plastics",
+                                "value": 4
+                            },
+                            {
+                                "name": "Fertilizers",
+                                "value": 2
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Agriculture",
+                        "value": 12,
+                        "color": "#F7DC6F",
+                        "subcategories": [
+                            {
+                                "name": "Dairy",
+                                "value": 5
+                            },
+                            {
+                                "name": "Pork",
+                                "value": 4
+                            },
+                            {
+                                "name": "Grains",
+                                "value": 3
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Machinery",
+                        "value": 10,
+                        "color": "#82E0AA"
+                    },
+                    {
+                        "name": "Textiles",
+                        "value": 7,
+                        "color": "#73C6B6"
+                    },
+                    {
+                        "name": "Electronics",
+                        "value": 6,
+                        "color": "#85C1E9"
+                    },
+                    {
+                        "name": "Metals",
+                        "value": 5,
+                        "color": "#BB8FCE"
+                    },
+                    {
+                        "name": "Minerals",
+                        "value": 4,
+                        "color": "#F1948A"
+                    },
+                    {
+                        "name": "Vehicles",
+                        "value": 3,
+                        "color": "#B2BABB"
+                    },
+                    {
+                        "name": "Other",
+                        "value": 1,
+                        "color": "#FFFFFF"
+                    }
+                ],
+                "levels": [
+                    {
+                        "level": 1,
+                        "dataLabels": {
+                            "format": "{point.name} {point.value:.0f}%",
+                            "fontSize": "14px"
+                        },
+                        "borderWidth": 2
+                    },
+                    {
+                        "level": 2,
+                        "dataLabels": {
+                            "enabled": true,
+                            "format": "{point.name} (+{point.value:.0f}%)"
+                        }
+                    }
+                ]
+            }
+        ],
+        "title": {
+            "text": "Synthetic Denmark Export Composition Analysis"
+        },
+        "tooltip": {
+            "pointFormat": "<b>{point.name}</b>: {point.value}% market share"
+        }
+    },
+    "visualization_explanation": "The dataset represents a two-level hierarchical structure with 10 primary export categories and nested subcategories. Nominal variables categorize trade sectors while ratio-scale variables quantify percentage contributions. Synthetic data maintains proportional validity (\u2211=100%) with realistic sector distributions mimicking EU trade patterns. The treemap maximizes data-ink ratio through direct area encoding of percentages, applying Cairo's preattentive processing principles through categorical color distinctions. Sector sizes follow a Pareto distribution (\u03bc=12.3%, \u03c3=11.8) with subcategory allocations using normal distributions (\u03c3=2.5). Interactive drill-down supports exploration of category-subcategory relationships while maintaining visual hierarchy through border width differentiation."
+}

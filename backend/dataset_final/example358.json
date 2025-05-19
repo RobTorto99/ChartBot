@@ -1,0 +1,81 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a pie chart displaying nuclear energy production from 1965 to 2021 for the US, UK, France, Germany, and Japan. The chart should have a title, a dynamic subtitle showing the selected year and total production, and custom colors for each country. The chart should also include play and pause controls to animate through the years.",
+    "visualization_code": {
+        "chart": {
+            "type": "pie"
+        },
+        "title": {
+            "text": "Nuclear energy production from 1965 to 2021 in US, UK, France, Germany, and Japan",
+            "align": "center"
+        },
+        "subtitle": {
+            "useHTML": true,
+            "text": "<span style=\"font-size: 80px\">1965</span><br><span style=\"font-size: 22px\">Total: <b>0.00</b> TWh</span>",
+            "floating": true,
+            "verticalAlign": "middle",
+            "y": 30
+        },
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "valueDecimals": 2,
+            "valueSuffix": " TWh"
+        },
+        "plotOptions": {
+            "series": {
+                "borderWidth": 0,
+                "colorByPoint": true,
+                "type": "pie",
+                "size": "100%",
+                "innerSize": "80%",
+                "dataLabels": {
+                    "enabled": true,
+                    "crop": false,
+                    "distance": "-10%",
+                    "style": {
+                        "fontWeight": "bold",
+                        "fontSize": "16px"
+                    },
+                    "connectorWidth": 0
+                }
+            }
+        },
+        "colors": [
+            "#FCE700",
+            "#F8C4B4",
+            "#f6e1ea",
+            "#B8E8FC",
+            "#BCE29E"
+        ],
+        "series": [
+            {
+                "type": "pie",
+                "name": "1965",
+                "data": [
+                    [
+                        "US",
+                        0
+                    ],
+                    [
+                        "UK",
+                        0
+                    ],
+                    [
+                        "France",
+                        0
+                    ],
+                    [
+                        "Germany",
+                        0
+                    ],
+                    [
+                        "Japan",
+                        0
+                    ]
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a pie chart that visualizes nuclear energy production data from 1965 to 2021 for the US, UK, France, Germany, and Japan. The chart includes a title aligned to the center and a dynamic subtitle that displays the selected year and the total energy production in TWh. The subtitle uses HTML for styling, making it visually prominent. The chart's legend is disabled, and the tooltip displays values with two decimal places and a 'TWh' suffix. The pie chart is styled with custom colors for each country, and the data labels are formatted to be bold and larger for better readability. The chart also includes interactive controls to play and pause the animation through the years, updating the subtitle and pie chart data dynamically."
+}

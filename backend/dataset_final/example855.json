@@ -1,0 +1,159 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a bar chart displaying the Denmark Population Pyramid for the year 2019. The chart should have a title 'Denmark Population Pyramid 2019' and a subtitle with a source link. The x-axis should represent age categories, and there should be two y-axes, one for male and one for female populations, each showing percentages. The chart should use specific colors for male and female bars, and the tooltip should display detailed information about each data point.",
+    "visualization_code": {
+        "chart": {
+            "type": "bar"
+        },
+        "title": {
+            "text": "Denmark Population Pyramid 2019"
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://www.populationpyramid.net/denmark/2019/'>populationpyramid</a>"
+        },
+        "accessibility": {
+            "point": {
+                "valueDescriptionFormat": "{index}. Age {xDescription}, {value}%."
+            }
+        },
+        "xAxis": [
+            {
+                "categories": [
+                    "0-14",
+                    "15-24",
+                    "25-44",
+                    "45-64",
+                    "65-84",
+                    "85+",
+                    "30-34",
+                    "35-39",
+                    "40-44",
+                    "45-49",
+                    "50-54",
+                    "55-59",
+                    "60-64",
+                    "65-69",
+                    "70-74",
+                    "75-79",
+                    "80-84",
+                    "85-89",
+                    "90-94",
+                    "95-99",
+                    "100 + "
+                ],
+                "reversed": false,
+                "labels": {
+                    "step": 1
+                },
+                "accessibility": {
+                    "description": "Age (male)"
+                }
+            },
+            {
+                "opposite": true,
+                "reversed": false,
+                "categories": [
+                    "0-14",
+                    "15-24",
+                    "25-44",
+                    "45-64",
+                    "65-84",
+                    "85+",
+                    "30-34",
+                    "35-39",
+                    "40-44",
+                    "45-49",
+                    "50-54",
+                    "55-59",
+                    "60-64",
+                    "65-69",
+                    "70-74",
+                    "75-79",
+                    "80-84",
+                    "85-89",
+                    "90-94",
+                    "95-99",
+                    "100 + "
+                ],
+                "linkedTo": 0,
+                "labels": {
+                    "step": 1
+                },
+                "accessibility": {
+                    "description": "Age (female)"
+                }
+            }
+        ],
+        "yAxis": [
+            {
+                "title": {
+                    "text": null
+                },
+                "labels": {
+                    "format": "{value}%"
+                },
+                "accessibility": {
+                    "description": "Percentage population",
+                    "rangeDescription": "Range: 0 to 5%"
+                },
+                "width": "50%",
+                "reversed": true
+            },
+            {
+                "title": {
+                    "text": null
+                },
+                "labels": {
+                    "format": "{value}%"
+                },
+                "accessibility": {
+                    "description": "Percentage population",
+                    "rangeDescription": "Range: 0 to 5%"
+                },
+                "offset": 0,
+                "left": "50%",
+                "width": "50%"
+            }
+        ],
+        "plotOptions": {
+            "series": {
+                "stacking": "normal",
+                "groupPadding": 0,
+                "pointPadding": 0
+            }
+        },
+        "tooltip": {
+            "headerFormat": "<b>{series.name}, age {point.key}</b><br>",
+            "pointFormat": "Population: {point.y:.1f} %"
+        },
+        "series": [
+            {
+                "name": "Male",
+                "color": "#0C090A",
+                "borderColor": "#ffffff",
+                "data": [
+                    8.42,
+                    6.39,
+                    12.47,
+                    13.23,
+                    8.44,
+                    0.77
+                ]
+            },
+            {
+                "name": "Female",
+                "color": "#C0C0C0",
+                "borderColor": "#000000",
+                "data": [
+                    7.98,
+                    6.1,
+                    12.21,
+                    13.25,
+                    9.34,
+                    1.41
+                ],
+                "yAxis": 1
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a bar chart representing the Denmark Population Pyramid for the year 2019. The chart type is set to 'bar', and it includes a title and subtitle with a source link. The x-axis is configured to display age categories, and there are two y-axes, one for male and one for female populations, each showing percentages. The male bars are colored '#0C090A' with white borders, and the female bars are colored '#C0C0C0' with black borders. The tooltip provides detailed information about each data point, including the series name, age category, and population percentage. Additional configurations include stacking the bars normally, setting group and point padding to zero, and ensuring accessibility features are enabled for better usability."
+}

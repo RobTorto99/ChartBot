@@ -1,0 +1,137 @@
+{
+    "visualization_prompt": "Generate a dual-type (pie and column) chart showing fruit consumption distribution and comparative quantities using Highcharts' combined series configuration.",
+    "visualization_code": {
+        "chart": {
+            "styledMode": true,
+            "marginRight": 50,
+            "marginLeft": 50
+        },
+        "title": {
+            "text": "Fruit Consumption",
+            "style": {
+                "color": "var(--chart-title-color)",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "type": "category",
+            "width": "40%",
+            "labels": {
+                "style": {
+                    "color": "var(--axis-label-color)"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "kg",
+                "style": {
+                    "color": "var(--axis-label-color)"
+                }
+            },
+            "width": "40%",
+            "labels": {
+                "style": {
+                    "color": "var(--axis-label-color)"
+                }
+            }
+        },
+        "series": [
+            {
+                "type": "pie",
+                "name": "Percentage Share",
+                "allowPointSelect": true,
+                "data": [
+                    {
+                        "name": "Apples",
+                        "y": 29.9
+                    },
+                    {
+                        "name": "Pears",
+                        "y": 71.5
+                    },
+                    {
+                        "name": "Oranges",
+                        "y": 106.4
+                    },
+                    {
+                        "name": "Plums",
+                        "y": 129.2,
+                        "sliced": true
+                    },
+                    {
+                        "name": "Bananas",
+                        "y": 144.0
+                    },
+                    {
+                        "name": "Peaches",
+                        "y": 176.0
+                    },
+                    {
+                        "name": "Prunes",
+                        "y": 135.6,
+                        "selected": true
+                    },
+                    {
+                        "name": "Avocados",
+                        "y": 148.5
+                    }
+                ],
+                "center": [
+                    "75%",
+                    "50%"
+                ],
+                "showInLegend": true
+            },
+            {
+                "type": "column",
+                "name": "Consumption (kg)",
+                "colorByPoint": true,
+                "data": [
+                    [
+                        "Apples",
+                        29.9
+                    ],
+                    [
+                        "Pears",
+                        71.5
+                    ],
+                    [
+                        "Oranges",
+                        106.4
+                    ],
+                    [
+                        "Plums",
+                        129.2
+                    ],
+                    [
+                        "Bananas",
+                        144.0
+                    ],
+                    [
+                        "Peaches",
+                        176.0
+                    ],
+                    [
+                        "Prunes",
+                        135.6
+                    ],
+                    [
+                        "Avocados",
+                        148.5
+                    ]
+                ],
+                "showInLegend": false
+            }
+        ],
+        "legend": {
+            "align": "left",
+            "verticalAlign": "middle",
+            "layout": "vertical",
+            "itemStyle": {
+                "color": "var(--legend-text-color)"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains categorical (fruit types) and quantitative (kg values) dimensions, with synthetic data simulating real-world consumption patterns (\u03bc=113.5kg, \u03c3=50.2kg). Values maintain proportional relationships while including intentional outliers (Peaches at 176kg) and clustered mid-range values (100-150kg). The dual-chart approach optimizes data-ink ratio by using column charts for precise quantity comparison and pie segments for relative proportions. Perceptual grouping is enhanced through positional encoding (columns left, pie right) and color-by-point synchronization. Theme-aware CSS variables ensure visual accessibility in both light/dark modes while maintaining color discriminability for 8 categories."
+}

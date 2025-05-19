@@ -1,0 +1,119 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly sales comparison between Product A and Product B using synthetic sales data with seasonal trends",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "plotBackgroundColor": "transparent",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "14px",
+                    "fontFamily": "Arial"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales (USD thousands)",
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Product A",
+                "data": [
+                    42,
+                    68,
+                    110,
+                    125,
+                    139,
+                    168,
+                    128,
+                    142,
+                    208,
+                    187,
+                    89,
+                    50
+                ],
+                "color": "#3498db",
+                "type": "column"
+            },
+            {
+                "name": "Product B",
+                "data": [
+                    80,
+                    75,
+                    95,
+                    90,
+                    102,
+                    82,
+                    100,
+                    98,
+                    88,
+                    80,
+                    102,
+                    89
+                ],
+                "color": "#e74c3c",
+                "type": "column"
+            }
+        ],
+        "plotOptions": {
+            "column": {
+                "pointPadding": 0.15,
+                "borderWidth": 0,
+                "groupPadding": 0.1
+            }
+        },
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#34495e",
+                "fontSize": "14px"
+            }
+        },
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset represents a bivariate time series with monthly temporal resolution (categorical x-axis) and continuous sales metrics (quantitative y-axis). Synthetic data was generated with Product A showing strong seasonality (\u03bc=115.8, \u03c3=54.7) and Product B demonstrating stable performance (\u03bc=89.3, \u03c3=9.8), maintaining domain-appropriate ranges for business metrics. The column chart maximizes data-ink ratio by eliminating unnecessary gridlines while maintaining perceptual discriminability through complementary colors. Cairo's principles are applied through proportional width encoding and immediate color recognition. Statistical validity is maintained through realistic variance modeling - Product A's Q4 decline (-57% from peak) mirrors typical consumer product cycles, while Product B's \u00b112% variation reflects stable B2B sales patterns."
+}

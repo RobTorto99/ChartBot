@@ -1,0 +1,55 @@
+{
+    "visualization_prompt": "Create a Highcharts column chart with the title 'X axis uniqueNames = true'. The chart should have a category x-axis and a single series of data points named 'Q1', 'Q2', 'Q3', and 'Q4' with corresponding y-values. The series should use different colors for each data point and should not show in the legend. The chart should have a height of 400px.",
+    "visualization_code": {
+        "chart": {
+            "type": "column"
+        },
+        "title": {
+            "text": "X axis uniqueNames = true"
+        },
+        "xAxis": {
+            "type": "category"
+        },
+        "series": [
+            {
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Q1",
+                        "y": 3
+                    },
+                    {
+                        "name": "Q2",
+                        "y": 6
+                    },
+                    {
+                        "name": "Q3",
+                        "y": 9
+                    },
+                    {
+                        "name": "Q4",
+                        "y": 2
+                    },
+                    {
+                        "name": "Q1",
+                        "y": 2
+                    },
+                    {
+                        "name": "Q2",
+                        "y": 3
+                    },
+                    {
+                        "name": "Q3",
+                        "y": 6
+                    },
+                    {
+                        "name": "Q4",
+                        "y": 7
+                    }
+                ],
+                "showInLegend": false
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration sets up a column chart with the specified title 'X axis uniqueNames = true'. The x-axis is configured as a category axis, which is suitable for displaying discrete categories like 'Q1', 'Q2', 'Q3', and 'Q4'. The data series includes multiple data points for each category, and the 'colorByPoint' option ensures that each data point is rendered with a unique color. The 'showInLegend' property is set to false to hide the series from the legend, which is useful when there is only one series and the legend is not necessary. The chart's height is set to 400px via CSS, ensuring the chart is displayed with the appropriate dimensions."
+}

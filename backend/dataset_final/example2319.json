@@ -1,0 +1,104 @@
+{
+    "visualization_prompt": "Generate a column chart showing stacked fruit consumption comparisons using categorical stacking with styled stack labels",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#f7f7f7",
+            "marginTop": 50,
+            "marginRight": 100,
+            "marginBottom": 70,
+            "marginLeft": 80
+        },
+        "title": {
+            "text": "Stack labels box options",
+            "style": {
+                "fontSize": "20px",
+                "color": "#333"
+            }
+        },
+        "subtitle": {
+            "text": "backgroundColor, borderColor, borderRadius, borderWidth",
+            "style": {
+                "color": "#666"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Apples",
+                "Oranges",
+                "Pears",
+                "Grapes",
+                "Bananas"
+            ],
+            "labels": {
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#444"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Total fruit consumption",
+                "style": {
+                    "fontSize": "16px",
+                    "color": "#444"
+                }
+            },
+            "stackLabels": {
+                "enabled": true,
+                "borderRadius": 5,
+                "backgroundColor": "rgba(252, 255, 197, 0.7)",
+                "borderWidth": 1,
+                "borderColor": "#AAA",
+                "style": {
+                    "fontWeight": "bold",
+                    "color": "#555"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "normal",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y}"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    50,
+                    32,
+                    47,
+                    51,
+                    25
+                ],
+                "color": "#7cb5ec"
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    21,
+                    28,
+                    34,
+                    22,
+                    11
+                ],
+                "color": "#434348"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical",
+            "itemStyle": {
+                "color": "#333"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two 5-element series (\u03bc\u2081=41.0, \u03c3\u2081\u224812.7; \u03bc\u2082=23.2, \u03c3\u2082\u22489.3) across categorical fruit dimensions. Synthetic data preserves proportional relationships (Series 1 averages 1.77\u00d7 Series 2) while maintaining domain-appropriate ranges (0-60 units). The column chart maximizes data-ink ratio through direct value labels and Tufte-inspired minimal gridlines. Stack label styling (rgba(252,255,197,0.7) background) follows Cairo's preattentive processing principles for quick total comparisons. Margin adjustments (left:80px, right:100px) create balanced negative space for vertical legend integration."
+}

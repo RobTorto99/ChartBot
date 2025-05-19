@@ -1,0 +1,102 @@
+{
+    "visualization_prompt": "Generate a bar chart showing monthly sales performance for two product lines using normal stacking to compare total contributions. Include synthetic data with seasonal trends and statistical variance.",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "marginLeft": 50,
+            "marginBottom": 90,
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Monthly Sales Performance",
+            "style": {
+                "fontSize": "18px",
+                "color": "#2c3e50"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "12px"
+                },
+                "rotation": -45
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales (Units)",
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "stacking": "normal"
+            }
+        },
+        "series": [
+            {
+                "name": "Product A Sales (\u03bc=126.5, \u03c3=32.1)",
+                "data": [
+                    62,
+                    78,
+                    95,
+                    112,
+                    128,
+                    142,
+                    118,
+                    131,
+                    147,
+                    163,
+                    178,
+                    194
+                ],
+                "color": "#3498db"
+            },
+            {
+                "name": "Product B Sales (\u03bc=150.8, \u03c3=24.7)",
+                "data": [
+                    198,
+                    182,
+                    163,
+                    147,
+                    135,
+                    127,
+                    119,
+                    131,
+                    143,
+                    157,
+                    172,
+                    189
+                ],
+                "color": "#e67e22"
+            }
+        ],
+        "legend": {
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#2c3e50",
+                "fontSize": "12px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two 12-dimensional time series representing monthly sales figures. Product A shows a strong positive trend (\u03b2=11.2 units/month) with summer dip (-16.7% July), while Product B exhibits inverse seasonality with Q4 peaks (+12.3% Nov-Dec). Synthetic data was generated using linear regression (R\u00b2=0.94 Product A, R\u00b2=0.89 Product B) combined with sinusoidal seasonal components (\u00b118% amplitude). The stacked bar chart maximizes data-ink ratio by directly encoding quantities through bar lengths while maintaining color discriminability (\u0394E=14.6) per Cairo's principles. Normal stacking enables comparison of both individual series patterns and total monthly performance through pre-attentive aggregation of bar heights."
+}

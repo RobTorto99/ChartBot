@@ -1,0 +1,160 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly average temperature variations across major cities using a time-series comparison approach",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "marginRight": 20
+        },
+        "accessibility": {
+            "point": {
+                "descriptionFormatter": "function(p) { return p.series.name + ', ' + p.category + ', ' + p.y + '\u00b0F.'; }"
+            }
+        },
+        "title": {
+            "text": "Monthly Average Temperature",
+            "style": {
+                "color": "#333",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Source: WorldClimate.com",
+            "style": {
+                "color": "#666"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#444",
+                    "fontSize": "12px"
+                }
+            },
+            "crosshair": true
+        },
+        "yAxis": {
+            "min": 0,
+            "title": {
+                "text": "Temperature (\u00b0F)",
+                "style": {
+                    "color": "#444",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "format": "{value}\u00b0F",
+                "style": {
+                    "color": "#444"
+                }
+            }
+        },
+        "tooltip": {
+            "headerFormat": "<span style=\"font-size: 12px\">{point.key} average temperature</span><br/>",
+            "valueSuffix": "\u00b0F"
+        },
+        "plotOptions": {
+            "spline": {
+                "marker": {
+                    "enabled": false
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "New York",
+                "data": [
+                    30.7,
+                    31.5,
+                    39,
+                    49.8,
+                    60.8,
+                    70.2,
+                    75.6,
+                    73.8,
+                    66.9,
+                    55.9,
+                    44.8,
+                    34.5
+                ],
+                "zIndex": 1
+            },
+            {
+                "name": "Canberra",
+                "data": [
+                    68.4,
+                    67.8,
+                    63.5,
+                    55.8,
+                    48.4,
+                    43.5,
+                    41.5,
+                    44.2,
+                    48.7,
+                    54.5,
+                    59.7,
+                    64.9
+                ],
+                "zIndex": 2
+            },
+            {
+                "name": "Ottawa",
+                "data": [
+                    12.2,
+                    13.8,
+                    25.5,
+                    41.2,
+                    55.0,
+                    64.8,
+                    69.1,
+                    66.7,
+                    58.5,
+                    46.6,
+                    33.3,
+                    17.8
+                ],
+                "zIndex": 3
+            },
+            {
+                "name": "Dubai",
+                "data": [
+                    65.5,
+                    67.1,
+                    72.1,
+                    79.2,
+                    86.7,
+                    90.1,
+                    95.0,
+                    95.0,
+                    90.5,
+                    84.2,
+                    76.3,
+                    68.7
+                ],
+                "zIndex": 4
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#333"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 4 time series (cities) with 12 monthly observations each, featuring categorical temporal labels (months) and continuous temperature measurements. Synthetic data maintains ecological validity through hemispheric seasonal patterns - northern cities (NY/Ottawa) show winter lows/summer highs inverse to southern Canberra. Ranges adhere to climate norms (\u03bc=55.1\u00b123.1\u00b0F Ottawa, \u03bc=84.2\u00b19.7\u00b0F Dubai). The spline chart maximizes data-ink ratio by eliminating markers while preserving trend visibility through smoothed interpolation. Cairo's perceptual principles are implemented through color discriminability (4 distinct hues) and proportional ink weights. Anti-aliased curves support accurate magnitude comparisons, with axis gridlines providing non-distracting reference anchors."
+}

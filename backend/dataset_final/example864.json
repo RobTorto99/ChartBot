@@ -1,0 +1,109 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the following specifications: The chart should display monthly rainfall data for two different years. The chart title should be 'Monthly Rainfall Comparison'. The x-axis should have labels for each month from January to December. The y-axis should display the total rainfall in millimeters with a black-colored label. The chart should use stacking to show the cumulative rainfall for each month. The data series should include two series, each representing rainfall data for a different year. The chart should have a white background and a legend positioned at the top right corner.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Monthly Rainfall Comparison",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Rainfall (mm)",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "stackLabels": {
+                "enabled": true,
+                "style": {
+                    "color": "black",
+                    "fontSize": "12px"
+                },
+                "formatter": "function () { return this.total + ' mm'; }"
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "normal",
+                "pointPadding": 0,
+                "groupPadding": 0,
+                "dataLabels": {
+                    "enabled": false
+                }
+            }
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "layout": "vertical",
+            "x": 0,
+            "y": 100
+        },
+        "series": [
+            {
+                "name": "Year 1",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ]
+            },
+            {
+                "name": "Year 2",
+                "data": [
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4,
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart that compares monthly rainfall data for two different years. The chart is titled 'Monthly Rainfall Comparison' and has a white background. The x-axis displays labels for each month from January to December, styled with a dark gray color and a font size of 12px. The y-axis is labeled 'Rainfall (mm)' with a dark gray color and a font size of 14px. The y-axis also includes stack labels that show the total rainfall in millimeters, styled in black with a font size of 12px. The chart uses stacking to show the cumulative rainfall for each month. The data series includes two sets of monthly rainfall data, each representing a different year. The legend is positioned at the top right corner of the chart, providing a clear distinction between the two data series."
+}

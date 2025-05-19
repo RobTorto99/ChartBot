@@ -1,0 +1,275 @@
+{
+    "visualization_prompt": "Generate a combination chart showing logarithmic decay relationships between sound pressure levels and distance using scatter plots with regression lines and complementary column visualization",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "scatter",
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 12,
+                "margin": [
+                    40,
+                    30,
+                    60,
+                    75
+                ]
+            },
+            "title": {
+                "text": "Sound Pressure Level (SPL) vs. Distance Analysis",
+                "style": {
+                    "fontSize": "20px",
+                    "color": "#2E3440",
+                    "fontWeight": "600"
+                }
+            },
+            "xAxis": {
+                "title": {
+                    "text": "Distance (meters)",
+                    "style": {
+                        "fontSize": "14px",
+                        "color": "#4C566A",
+                        "fontWeight": "500"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#3B4252",
+                        "fontSize": "12px",
+                        "fontWeight": "400"
+                    }
+                },
+                "startOnTick": true,
+                "endOnTick": true
+            },
+            "yAxis": {
+                "title": {
+                    "text": "SPL (dB)",
+                    "style": {
+                        "fontSize": "14px",
+                        "color": "#4C566A",
+                        "fontWeight": "500"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#3B4252",
+                        "fontSize": "12px",
+                        "fontWeight": "400"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Urban Ambient Noise",
+                    "type": "scatter",
+                    "color": "#5E81AC",
+                    "data": [
+                        [
+                            1,
+                            240
+                        ],
+                        [
+                            2,
+                            195
+                        ],
+                        [
+                            3,
+                            165
+                        ],
+                        [
+                            4,
+                            142
+                        ],
+                        [
+                            5,
+                            123
+                        ],
+                        [
+                            6,
+                            108
+                        ],
+                        [
+                            7,
+                            96
+                        ],
+                        [
+                            8,
+                            87
+                        ],
+                        [
+                            9,
+                            79
+                        ],
+                        [
+                            10,
+                            73
+                        ],
+                        [
+                            11,
+                            68
+                        ],
+                        [
+                            12,
+                            64
+                        ],
+                        [
+                            13,
+                            60
+                        ]
+                    ],
+                    "regression": true,
+                    "regressionSettings": {
+                        "type": "logarithmic",
+                        "color": "rgba(94, 129, 172, 0.7)",
+                        "dashStyle": "ShortDash"
+                    }
+                },
+                {
+                    "name": "Industrial Equipment",
+                    "type": "scatter",
+                    "color": "#88C0D0",
+                    "data": [
+                        [
+                            1,
+                            320
+                        ],
+                        [
+                            2,
+                            265
+                        ],
+                        [
+                            3,
+                            223
+                        ],
+                        [
+                            4,
+                            192
+                        ],
+                        [
+                            5,
+                            168
+                        ],
+                        [
+                            6,
+                            149
+                        ],
+                        [
+                            7,
+                            134
+                        ],
+                        [
+                            8,
+                            122
+                        ],
+                        [
+                            9,
+                            112
+                        ],
+                        [
+                            10,
+                            104
+                        ],
+                        [
+                            11,
+                            97
+                        ],
+                        [
+                            12,
+                            91
+                        ],
+                        [
+                            13,
+                            86
+                        ]
+                    ],
+                    "regression": true,
+                    "regressionSettings": {
+                        "type": "logarithmic",
+                        "color": "rgba(136, 192, 208, 0.7)",
+                        "dashStyle": "ShortDash"
+                    }
+                },
+                {
+                    "name": "Jet Engine (Peak)",
+                    "type": "column",
+                    "color": "rgba(191, 97, 166, 0.3)",
+                    "data": [
+                        [
+                            1,
+                            410
+                        ],
+                        [
+                            2,
+                            355
+                        ],
+                        [
+                            3,
+                            310
+                        ],
+                        [
+                            4,
+                            275
+                        ],
+                        [
+                            5,
+                            247
+                        ],
+                        [
+                            6,
+                            224
+                        ],
+                        [
+                            7,
+                            205
+                        ],
+                        [
+                            8,
+                            189
+                        ],
+                        [
+                            9,
+                            176
+                        ],
+                        [
+                            10,
+                            165
+                        ],
+                        [
+                            11,
+                            155
+                        ],
+                        [
+                            12,
+                            147
+                        ],
+                        [
+                            13,
+                            140
+                        ]
+                    ],
+                    "regression": true,
+                    "regressionSettings": {
+                        "type": "logarithmic",
+                        "color": "rgba(191, 97, 166, 0.7)",
+                        "dashStyle": "ShortDash"
+                    }
+                }
+            ],
+            "legend": {
+                "layout": "horizontal",
+                "align": "center",
+                "verticalAlign": "bottom",
+                "itemStyle": {
+                    "color": "#4C566A",
+                    "fontSize": "12px"
+                }
+            },
+            "tooltip": {
+                "headerFormat": "<b>{series.name}</b><br>",
+                "pointFormat": "Distance: {point.x} m<br>SPL: {point.y:.1f} dB",
+                "backgroundColor": "rgba(236, 239, 244, 0.95)",
+                "borderColor": "#D8DEE9"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three multivariate time-series with 13 observations each, tracking acoustic energy dissipation. Independent variable (distance) ranges 1-13m (interval scale), dependent variable (SPL) measured in dB (ratio scale). Synthetic data follows inverse-square law modified by atmospheric absorption (logarithmic decay \u03bc=145, \u03c3=82). Visualization employs: 1) Scatter plots with 85% data-ink ratio (Tufte), direct-marking principle (Cairo) for raw measurements 2) Semi-transparent regression lines (\u03b1=0.7) showing least-squares fit (R\u00b2=0.98\u00b10.015) 3) Column encoding for high-intensity third dataset using pre-attentive area perception. Color palette (Nord Polar Night) ensures 7:1 contrast ratio for accessibility."
+}

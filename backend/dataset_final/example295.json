@@ -1,0 +1,206 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a chart with the following specifications: Chart type: lowmedhigh (a custom series type based on boxplot), Chart title: 'Monthly earnings, by level of education in Norway', Axes and labels styling: Title font size: 18px, Axis labels font size: 14px, Axis title font size: 16px, Data series: Three series with names 'Scientific research and development', 'Hospital activities', and 'Fire service activities', each containing data points with low, median, and high values, Custom colors: ['#7cb5ec', '#434348', '#90ed7d'], Additional configurations: Chart background color: '#f8f8f8', Legend position: bottom, Tooltip shared and sticky.",
+    "visualization_code": {
+        "chart": {
+            "type": "lowmedhigh",
+            "backgroundColor": "#f8f8f8"
+        },
+        "title": {
+            "text": "Monthly earnings, by level of education in Norway",
+            "align": "left",
+            "style": {
+                "fontSize": "18px"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://www.ssb.no/en/statbank/table/11420/' target='_blank'>SSB</a>",
+            "align": "left"
+        },
+        "accessibility": {
+            "point": {
+                "descriptionFormat": "{#unless isNull}{category}, low {low}, median {median}, high {high}{/unless}"
+            },
+            "series": {
+                "descriptionFormat": "{series.name}, series {seriesNumber} of {chart.series.length} with {series.points.length} data points."
+            },
+            "typeDescription": "Low, median, high. Each data point has a low, median and high value, depicted vertically as small ticks."
+        },
+        "xAxis": [
+            {
+                "accessibility": {
+                    "description": "Year"
+                },
+                "crosshair": true,
+                "categories": [
+                    2017,
+                    2018,
+                    2019,
+                    2020,
+                    2021,
+                    2022,
+                    2023
+                ],
+                "labels": {
+                    "style": {
+                        "fontSize": "14px"
+                    }
+                }
+            }
+        ],
+        "yAxis": {
+            "title": {
+                "text": "Monthly earnings (NOK)",
+                "style": {
+                    "fontSize": "16px"
+                }
+            },
+            "min": 0,
+            "labels": {
+                "style": {
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "tooltip": {
+            "shared": true,
+            "stickOnContact": true
+        },
+        "plotOptions": {
+            "series": {
+                "stickyTracking": true,
+                "whiskerWidth": 5
+            }
+        },
+        "series": [
+            {
+                "name": "Scientific research and development",
+                "data": [
+                    [
+                        48230,
+                        57210,
+                        71900
+                    ],
+                    [
+                        49360,
+                        58450,
+                        73490
+                    ],
+                    [
+                        50610,
+                        60240,
+                        75770
+                    ],
+                    [
+                        51150,
+                        60600,
+                        75950
+                    ],
+                    [
+                        53060,
+                        63080,
+                        79130
+                    ],
+                    [
+                        55480,
+                        66210,
+                        82020
+                    ],
+                    [
+                        58740,
+                        69870,
+                        86360
+                    ]
+                ],
+                "color": "#7cb5ec"
+            },
+            {
+                "name": "Hospital activities",
+                "data": [
+                    [
+                        50830,
+                        66240,
+                        87490
+                    ],
+                    [
+                        52490,
+                        67620,
+                        89250
+                    ],
+                    [
+                        53690,
+                        69430,
+                        91790
+                    ],
+                    [
+                        53720,
+                        69210,
+                        92380
+                    ],
+                    [
+                        56510,
+                        72640,
+                        97000
+                    ],
+                    [
+                        58840,
+                        75490,
+                        100400
+                    ],
+                    [
+                        62280,
+                        79790,
+                        107100
+                    ]
+                ],
+                "color": "#434348"
+            },
+            {
+                "name": "Fire service activities",
+                "data": [
+                    [
+                        46760,
+                        52350,
+                        61050
+                    ],
+                    [
+                        47920,
+                        53860,
+                        62090
+                    ],
+                    [
+                        47900,
+                        51830,
+                        64170
+                    ],
+                    [
+                        48820,
+                        53330,
+                        64500
+                    ],
+                    [
+                        50980,
+                        56090,
+                        67870
+                    ],
+                    [
+                        52870,
+                        58330,
+                        72250
+                    ],
+                    [
+                        56670,
+                        61110,
+                        79620
+                    ]
+                ],
+                "color": "#90ed7d"
+            }
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a custom 'lowmedhigh' chart type, which is based on the boxplot series. The chart displays monthly earnings data categorized by level of education in Norway. The title and subtitle are aligned to the left, with specific font sizes for titles and axis labels to enhance readability. The x-axis represents years from 2017 to 2023, while the y-axis represents monthly earnings in NOK. The chart includes three data series: 'Scientific research and development', 'Hospital activities', and 'Fire service activities', each with low, median, and high values. Custom colors are applied to each series for better differentiation. The chart background is set to a light gray color, and the legend is positioned at the bottom of the chart. The tooltip is configured to be shared and sticky for better user interaction. Accessibility features are also included to ensure the chart is usable by screen readers."
+}

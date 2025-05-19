@@ -1,0 +1,88 @@
+{
+    "visualization_prompt": "Generate a polar area chart showing seasonal activity data with synthetic monthly values, null gaps, and non-stacked areas using Highcharts' polar coordinate system.",
+    "visualization_code": {
+        "chart": {
+            "type": "area",
+            "polar": true,
+            "height": 500,
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Polar Area Chart: Unconnected Null Values with Non-Stacked Series",
+            "style": {
+                "fontSize": "16px",
+                "color": "#333333"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "plotOptions": {
+            "area": {
+                "connectNulls": false,
+                "stacking": false,
+                "fillOpacity": 0.5
+            }
+        },
+        "series": [
+            {
+                "name": "Seasonal Activity Index",
+                "data": [
+                    32,
+                    45,
+                    58,
+                    null,
+                    72,
+                    89,
+                    84,
+                    76,
+                    63,
+                    null,
+                    41,
+                    37
+                ],
+                "type": "area",
+                "color": "rgba(63, 81, 181, 0.8)",
+                "lineWidth": 2
+            }
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "headerFormat": "<b>{point.key}</b><br/>",
+            "pointFormat": "Activity: {point.y:.1f}",
+            "style": {
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations with two intentional null values (April and November), creating data gaps. Synthetic values follow a seasonal pattern (\u03bc=60, \u03c3=18) with summer peak and winter decline, simulating real-world phenomena like tourism activity. The polar coordinate system emphasizes cyclical patterns while missing data gaps preserve truthfulness. The semi-transparent blue (#3F51B5) area encoding respects Cairo's perceptual principles for continuous data, while disabling stacking and null connections adheres to Tufte's data-ink maximization. Angular axis labels use month abbreviations for immediate recognition, and radial gridlines provide quantitative reference without visual clutter."
+}

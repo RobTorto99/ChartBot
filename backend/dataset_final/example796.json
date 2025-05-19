@@ -1,0 +1,127 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a financial line chart showing AAPL stock prices. The chart should have a title 'AAPL Stock Price', styled axes and labels with specific colors and font sizes, and a data series named 'AAPL' with the fetched data. Additionally, the chart should include custom colors, a navigator for overview, and range selector buttons for different time periods. The chart should also support language switching with Norwegian and German translations for accessibility and labels.",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "style": {
+                "fontFamily": "Arial"
+            }
+        },
+        "title": {
+            "text": "AAPL Stock Price",
+            "style": {
+                "color": "#000",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "fontWeight": "bold",
+                    "color": "#000",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Price",
+                "style": {
+                    "color": "#000",
+                    "fontSize": "14px",
+                    "fontWeight": "bold"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#000",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "navigator": {
+            "xAxis": {
+                "labels": {
+                    "style": {
+                        "color": "#000"
+                    }
+                }
+            }
+        },
+        "rangeSelector": {
+            "selected": 1,
+            "labelStyle": {
+                "fontWeight": "bold",
+                "color": "#000",
+                "fontSize": "14px",
+                "padding": "10px"
+            },
+            "buttons": [
+                {
+                    "type": "month",
+                    "count": 1,
+                    "text": "1m",
+                    "title": "View 1 month"
+                },
+                {
+                    "type": "month",
+                    "count": 3,
+                    "text": "3m",
+                    "title": "View 3 months"
+                },
+                {
+                    "type": "month",
+                    "count": 6,
+                    "text": "6m",
+                    "title": "View 6 months"
+                },
+                {
+                    "type": "ytd",
+                    "text": "YTD",
+                    "title": "View year to date"
+                },
+                {
+                    "type": "year",
+                    "count": 1,
+                    "text": "1y",
+                    "title": "View 1 year"
+                },
+                {
+                    "type": "all",
+                    "text": "All",
+                    "title": "View all"
+                }
+            ]
+        },
+        "series": [
+            {
+                "name": "AAPL",
+                "data": [],
+                "tooltip": {
+                    "valueDecimals": 2
+                }
+            }
+        ],
+        "colors": [
+            "#007BFF",
+            "#28A745",
+            "#DC3545",
+            "#FFC107",
+            "#17A2B8"
+        ],
+        "credits": {
+            "enabled": false
+        },
+        "accessibility": {
+            "landmarkVerbosity": "one",
+            "screenReaderSection": {
+                "beforeChartFormat": "<p>The chart is demonstrating that you can switch between multiple languages in the same chart.</p><p>Financial line chart showing AAPL stock prices, with an additional navigator series showing an overview of the stock.</p>"
+            },
+            "series": {
+                "pointDescriptionEnabledThreshold": 30
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a financial line chart displaying AAPL stock prices. The chart includes a title 'AAPL Stock Price' with specific styling for better readability. The axes and labels are styled with bold text, black color, and appropriate font sizes to ensure clarity. The data series is named 'AAPL' and is expected to be populated with the fetched data. Custom colors are defined to enhance the visual appeal of the chart. Additionally, a navigator is included for an overview of the stock, and range selector buttons allow users to view different time periods. The chart also supports language switching, with Norwegian and German translations provided for accessibility and labels, enhancing the user experience for international audiences."
+}

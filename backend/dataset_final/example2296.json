@@ -1,0 +1,104 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly rainfall distribution using synthetic meteorological data",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#f0f7fd",
+            "margin": [
+                40,
+                60,
+                80,
+                70
+            ]
+        },
+        "title": {
+            "text": "Monthly Precipitation Patterns (2023)",
+            "style": {
+                "color": "#154c79",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#2a557f",
+                    "fontSize": "12px",
+                    "textOverflow": "ellipsis"
+                }
+            },
+            "crosshair": true
+        },
+        "yAxis": {
+            "title": {
+                "text": "Precipitation (mm)",
+                "style": {
+                    "color": "#154c79",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#2a557f",
+                    "fontSize": "12px"
+                }
+            },
+            "gridLineColor": "#c6d9ec"
+        },
+        "series": [
+            {
+                "name": "Cumulative Rainfall",
+                "data": [
+                    42.3,
+                    58.7,
+                    112.4,
+                    136.9,
+                    188.2,
+                    245.6,
+                    274.1,
+                    262.8,
+                    198.4,
+                    143.7,
+                    67.5,
+                    39.2
+                ],
+                "color": "#4287f5",
+                "borderRadius": 3,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y:.1f} mm",
+                    "color": "#154c79"
+                }
+            }
+        ],
+        "plotOptions": {
+            "column": {
+                "pointPadding": 0.1,
+                "groupPadding": 0.15
+            }
+        },
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "headerFormat": "<b>{point.key}</b><br>",
+            "pointFormat": "Precipitation: <b>{point.y:.1f} mm</b>",
+            "backgroundColor": "rgba(255,255,255,0.95)"
+        }
+    },
+    "visualization_explanation": "The dataset contains univariate time-series data showing monthly precipitation values. Twelve temporal categories (months) are paired with continuous quantitative measurements in millimeters. Synthetic data was generated with \u03bc=150 mm and \u03c3=80 mm, incorporating seasonal variation (monsoon pattern peaking in July) and an annual trend typical of subtropical climates. The column chart maximizes data-ink ratio by eliminating redundant gridlines and legend while maintaining Cairo's principle of proportional ink through column area encoding. The blue color gradient reinforces hydrographic perception, and data labels provide exact values without cross-referencing. Temporal progression is maintained through left-to-right ordinal positioning, with bar height directly encoding precipitation magnitude according to Stevens' power law for visual perception of quantitative differences."
+}

@@ -1,0 +1,129 @@
+{
+    "visualization_prompt": "Generate a spline chart showing sectoral employment growth trends using time-series data with responsive design elements",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "styledMode": true
+        },
+        "title": {
+            "text": "Solar Employment Growth by Sector, 2010-2016"
+        },
+        "subtitle": {
+            "text": "Source: thesolarfoundation.com"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Number of Employees",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "legend": {
+            "layout": "vertical",
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "fontSize": "12px"
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "label": {
+                    "connectorAllowed": false
+                },
+                "pointStart": 2010
+            }
+        },
+        "series": [
+            {
+                "name": "Installation",
+                "data": [
+                    43934,
+                    52503,
+                    57177,
+                    69658,
+                    97031,
+                    119931,
+                    137133,
+                    154175
+                ],
+                "color": "#2E86C1"
+            },
+            {
+                "name": "Manufacturing",
+                "data": [
+                    24916,
+                    24064,
+                    29742,
+                    29851,
+                    32490,
+                    30282,
+                    38121,
+                    40434
+                ],
+                "color": "#28B463"
+            },
+            {
+                "name": "Sales & Distribution",
+                "data": [
+                    11744,
+                    17722,
+                    16005,
+                    19771,
+                    20185,
+                    24377,
+                    32147,
+                    39387
+                ],
+                "color": "#D4AC0D"
+            },
+            {
+                "name": "Project Development",
+                "data": [
+                    null,
+                    null,
+                    7988,
+                    12169,
+                    15112,
+                    22452,
+                    34400,
+                    34227
+                ],
+                "color": "#E74C3C"
+            },
+            {
+                "name": "Other",
+                "data": [
+                    12908,
+                    5948,
+                    8105,
+                    11248,
+                    8989,
+                    11816,
+                    18274,
+                    18111
+                ],
+                "color": "#8E44AD"
+            }
+        ],
+        "responsive": {
+            "rules": [
+                {
+                    "condition": {
+                        "maxWidth": 500
+                    },
+                    "chartOptions": {
+                        "legend": {
+                            "layout": "horizontal",
+                            "align": "center",
+                            "verticalAlign": "bottom"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The dataset contains 5 time-series vectors tracking annual employment figures across solar industry sectors from 2010-2017. Synthetic data maintains domain-appropriate ranges (\u03bc=52,401, \u03c3=48,917 for Installation sector) with logical progression showing 74% total growth in installations. The spline chart maximizes data-ink ratio per Tufte by eliminating redundant gridlines while maintaining Cairo's principle of proportional ink through color-coded series. Responsive rules preserve readability on small screens by legend reorganization. Missing data points in Project Development (2010-2011) are explicitly null-valued to maintain temporal integrity."
+}

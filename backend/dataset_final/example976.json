@@ -1,0 +1,93 @@
+{
+    "visualization_prompt": "Create a Highcharts network graph with the following specifications: Chart type: networkgraph, Chart title: 'Geographical Connections', Axes and labels styling: Use a dark background with white text for labels and titles, Data series: Include connections from Europe to various countries and cities, Custom colors: Use specific colors for nodes and links, Additional configurations: Enable simulation for layout algorithm, set link width, and enable data labels.",
+    "visualization_code": {
+        "chart": {
+            "type": "networkgraph",
+            "backgroundColor": "#2c3e50"
+        },
+        "title": {
+            "text": "Geographical Connections",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": "18px"
+            }
+        },
+        "plotOptions": {
+            "networkgraph": {
+                "layoutAlgorithm": {
+                    "enableSimulation": true
+                }
+            }
+        },
+        "series": [
+            {
+                "link": {
+                    "width": 2
+                },
+                "dataLabels": {
+                    "enabled": true,
+                    "style": {
+                        "color": "#ffffff"
+                    }
+                },
+                "data": [
+                    {
+                        "from": "Europe",
+                        "to": "UK"
+                    },
+                    {
+                        "from": "Europe",
+                        "to": "Poland",
+                        "color": "red",
+                        "width": 4,
+                        "dashStyle": "dot"
+                    },
+                    {
+                        "from": "Europe",
+                        "to": "Italy"
+                    },
+                    {
+                        "from": "UK",
+                        "to": "London"
+                    },
+                    {
+                        "from": "UK",
+                        "to": "Bristol"
+                    },
+                    {
+                        "from": "London",
+                        "to": "London Centre"
+                    },
+                    {
+                        "from": "Poland",
+                        "to": "Warsaw"
+                    },
+                    {
+                        "from": "Poland",
+                        "to": "Krakow",
+                        "color": "green"
+                    },
+                    {
+                        "from": "Italy",
+                        "to": "Roma"
+                    },
+                    {
+                        "from": "Italy",
+                        "to": "Piza"
+                    }
+                ],
+                "nodes": [
+                    {
+                        "id": "Krakow",
+                        "color": "orange"
+                    },
+                    {
+                        "id": "Italy",
+                        "color": "black"
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": null
+}

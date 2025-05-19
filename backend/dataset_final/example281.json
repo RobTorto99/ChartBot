@@ -1,0 +1,99 @@
+{
+    "visualization_prompt": "Create a Highcharts bar chart that displays the world population by countries from 1960 to 2022. The chart should have a title 'World population by country', styled axes and labels, and a data series for each year. The chart should also include custom colors, additional configurations such as chart margins, background, and legend settings, and an interactive feature where users can play and pause the timeline to view population data for different years.",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "animation": {
+                "duration": 500
+            },
+            "marginRight": 50
+        },
+        "title": {
+            "text": "World population by country",
+            "align": "left"
+        },
+        "subtitle": {
+            "useHTML": true,
+            "text": "getSubtitle()",
+            "floating": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "y": -80,
+            "x": -100
+        },
+        "legend": {
+            "enabled": false
+        },
+        "xAxis": {
+            "type": "category"
+        },
+        "yAxis": {
+            "opposite": true,
+            "tickPixelInterval": 150,
+            "title": {
+                "text": null
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "animation": false,
+                "groupPadding": 0,
+                "pointPadding": 0.1,
+                "borderWidth": 0,
+                "colorByPoint": true,
+                "dataSorting": {
+                    "enabled": true,
+                    "matchByName": true
+                },
+                "type": "bar",
+                "dataLabels": {
+                    "enabled": true
+                }
+            }
+        },
+        "series": [
+            {
+                "type": "bar",
+                "name": "1960",
+                "data": "getData(1960)[1]"
+            }
+        ],
+        "responsive": {
+            "rules": [
+                {
+                    "condition": {
+                        "maxWidth": 550
+                    },
+                    "chartOptions": {
+                        "xAxis": {
+                            "visible": false
+                        },
+                        "subtitle": {
+                            "x": 0
+                        },
+                        "plotOptions": {
+                            "series": {
+                                "dataLabels": [
+                                    {
+                                        "enabled": true,
+                                        "y": 8
+                                    },
+                                    {
+                                        "enabled": true,
+                                        "format": "{point.name}",
+                                        "y": -8,
+                                        "style": {
+                                            "fontWeight": "normal",
+                                            "opacity": 0.7
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a bar chart that visualizes the world population by country from 1960 to 2022. The chart includes a title 'World population by country' aligned to the left, and a subtitle that dynamically updates based on the selected year, displaying the total population in billions. The x-axis is categorical, representing countries, while the y-axis, placed on the opposite side, represents population numbers. The chart is configured to disable the legend and enable data labels for better readability. The series data is dynamically fetched and sorted based on the population for the selected year. The chart also includes responsive rules to adjust its layout for smaller screens, hiding the x-axis and modifying data label positions. Additionally, the chart integrates an interactive timeline feature, allowing users to play and pause the animation to view population data for different years."
+}

@@ -1,0 +1,303 @@
+{
+    "visualization_prompt": "Generate a boxplot variant showing monthly fruit consumption distribution using a custom low-median-high whisker structure",
+    "visualization_code": {
+        "chart": {
+            "type": "boxplot",
+            "styledMode": true,
+            "width": 550
+        },
+        "title": {
+            "text": "Daily company fruit consumption 2019",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#666"
+                }
+            },
+            "accessibility": {
+                "description": "Months of the year"
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Fruits consumed",
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#444"
+                }
+            },
+            "min": 0,
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#666"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Plums",
+                "data": [
+                    [
+                        5,
+                        12,
+                        18
+                    ],
+                    [
+                        7,
+                        14,
+                        22
+                    ],
+                    [
+                        9,
+                        16,
+                        25
+                    ],
+                    [
+                        11,
+                        18,
+                        27
+                    ],
+                    [
+                        13,
+                        20,
+                        29
+                    ],
+                    [
+                        15,
+                        22,
+                        31
+                    ],
+                    [
+                        8,
+                        15,
+                        23
+                    ],
+                    [
+                        6,
+                        13,
+                        20
+                    ],
+                    [
+                        4,
+                        11,
+                        18
+                    ],
+                    [
+                        3,
+                        9,
+                        16
+                    ],
+                    [
+                        2,
+                        8,
+                        14
+                    ],
+                    [
+                        1,
+                        7,
+                        12
+                    ]
+                ],
+                "tooltip": {
+                    "headerFormat": "<b>{series.name}</b><br/>",
+                    "pointFormat": "Low: {point.low}<br/>Median: {point.median}<br/>High: {point.high}"
+                }
+            },
+            {
+                "name": "Bananas",
+                "data": [
+                    [
+                        2,
+                        5,
+                        8
+                    ],
+                    [
+                        3,
+                        6,
+                        9
+                    ],
+                    [
+                        4,
+                        7,
+                        10
+                    ],
+                    [
+                        5,
+                        8,
+                        11
+                    ],
+                    [
+                        6,
+                        9,
+                        12
+                    ],
+                    [
+                        7,
+                        10,
+                        13
+                    ],
+                    [
+                        5,
+                        8,
+                        11
+                    ],
+                    [
+                        4,
+                        7,
+                        10
+                    ],
+                    [
+                        3,
+                        6,
+                        9
+                    ],
+                    [
+                        2,
+                        5,
+                        8
+                    ],
+                    [
+                        1,
+                        4,
+                        7
+                    ],
+                    [
+                        0,
+                        3,
+                        6
+                    ]
+                ],
+                "tooltip": {
+                    "headerFormat": "<b>{series.name}</b><br/>",
+                    "pointFormat": "Low: {point.low}<br/>Median: {point.median}<br/>High: {point.high}"
+                }
+            },
+            {
+                "name": "Apples",
+                "data": [
+                    [
+                        10,
+                        15,
+                        20
+                    ],
+                    [
+                        12,
+                        17,
+                        22
+                    ],
+                    [
+                        14,
+                        19,
+                        24
+                    ],
+                    [
+                        16,
+                        21,
+                        26
+                    ],
+                    [
+                        18,
+                        23,
+                        28
+                    ],
+                    [
+                        20,
+                        25,
+                        30
+                    ],
+                    [
+                        15,
+                        20,
+                        25
+                    ],
+                    [
+                        13,
+                        18,
+                        23
+                    ],
+                    [
+                        11,
+                        16,
+                        21
+                    ],
+                    [
+                        9,
+                        14,
+                        19
+                    ],
+                    [
+                        7,
+                        12,
+                        17
+                    ],
+                    [
+                        5,
+                        10,
+                        15
+                    ]
+                ],
+                "tooltip": {
+                    "headerFormat": "<b>{series.name}</b><br/>",
+                    "pointFormat": "Low: {point.low}<br/>Median: {point.median}<br/>High: {point.high}"
+                }
+            }
+        ],
+        "responsive": {
+            "rules": [
+                {
+                    "condition": {
+                        "maxWidth": 550
+                    },
+                    "chartOptions": {
+                        "legend": {
+                            "enabled": false
+                        },
+                        "xAxis": {
+                            "labels": {
+                                "rotation": -45
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "plotOptions": {
+            "series": {
+                "boxDashStyle": "Dash",
+                "fillColor": "#F0F0F0",
+                "lineWidth": 2,
+                "medianColor": "#444",
+                "medianDashStyle": "Solid",
+                "medianWidth": 3,
+                "stemColor": "#666",
+                "stemDashStyle": "Dot",
+                "stemWidth": 1,
+                "whiskerColor": "#999",
+                "whiskerLength": "50%",
+                "whiskerWidth": 2
+            }
+        }
+    },
+    "visualization_explanation": "This visualization uses a modified boxplot structure to display three key statistics (low/median/high) across monthly fruit consumption data. The dataset contains 3 series \u00d7 12 months \u00d7 3 statistical measures, with synthetic values maintaining seasonal patterns: summer months show increased variance (\u03bc=18\u00b15 for plums in June vs \u03bc=8\u00b13 in December). The boxplot variant maximizes data-ink ratio by removing traditional box elements while preserving distribution through whiskers and median markers. Cairo's principles are applied through position encoding on common scales (months ordinal, counts linear) and redundant color/text encodings. Responsive design maintains readability on mobile through label rotation and legend simplification."
+}

@@ -1,0 +1,170 @@
+{
+    "visualization_prompt": "Generate a treemap showing hierarchical relationships of Norwegian administrative divisions using parent-child nesting with area values",
+    "visualization_code": {
+        "chart": {
+            "type": "treemap",
+            "margin": [
+                20,
+                20,
+                20,
+                20
+            ],
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Norwegian regions and counties",
+            "align": "left",
+            "style": {
+                "color": "#2E3440",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://snl.no/Norge' target='_blank'>SNL</a>",
+            "align": "left",
+            "style": {
+                "color": "#4C566A",
+                "fontSize": "12px"
+            }
+        },
+        "plotOptions": {
+            "treemap": {
+                "layoutAlgorithm": "stripes",
+                "alternateStartingDirection": true,
+                "dataLabels": {
+                    "style": {
+                        "textOutline": "none",
+                        "color": "#2E3440"
+                    }
+                },
+                "levels": [
+                    {
+                        "level": 1,
+                        "layoutAlgorithm": "sliceAndDice",
+                        "dataLabels": {
+                            "enabled": true,
+                            "align": "left",
+                            "verticalAlign": "top",
+                            "style": {
+                                "fontSize": "15px",
+                                "fontWeight": "bold"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "series": [
+            {
+                "name": "Administrative divisions",
+                "data": [
+                    {
+                        "id": "root",
+                        "name": "Norway",
+                        "color": "#ECEFF4"
+                    },
+                    {
+                        "id": "A",
+                        "name": "Nord-Norge",
+                        "parent": "root",
+                        "color": "#50FFB1"
+                    },
+                    {
+                        "id": "B",
+                        "name": "Tr\u00f8ndelag",
+                        "parent": "root",
+                        "color": "#F5FBEF"
+                    },
+                    {
+                        "id": "C",
+                        "name": "Vestlandet",
+                        "parent": "root",
+                        "color": "#A09FA8"
+                    },
+                    {
+                        "id": "D",
+                        "name": "\u00d8stlandet",
+                        "parent": "root",
+                        "color": "#E7ECEF"
+                    },
+                    {
+                        "id": "E",
+                        "name": "S\u00f8rlandet",
+                        "parent": "root",
+                        "color": "#A9B4C2"
+                    },
+                    {
+                        "name": "Troms og Finnmark",
+                        "parent": "A",
+                        "value": 70923
+                    },
+                    {
+                        "name": "Nordland",
+                        "parent": "A",
+                        "value": 35759
+                    },
+                    {
+                        "name": "Tr\u00f8ndelag",
+                        "parent": "B",
+                        "value": 39494
+                    },
+                    {
+                        "name": "M\u00f8re og Romsdal",
+                        "parent": "C",
+                        "value": 13840
+                    },
+                    {
+                        "name": "Vestland",
+                        "parent": "C",
+                        "value": 31969
+                    },
+                    {
+                        "name": "Rogaland",
+                        "parent": "C",
+                        "value": 8576
+                    },
+                    {
+                        "name": "Viken",
+                        "parent": "D",
+                        "value": 22768
+                    },
+                    {
+                        "name": "Innlandet",
+                        "parent": "D",
+                        "value": 49391
+                    },
+                    {
+                        "name": "Oslo",
+                        "parent": "D",
+                        "value": 454
+                    },
+                    {
+                        "name": "Vestfold og Telemark",
+                        "parent": "D",
+                        "value": 15925
+                    },
+                    {
+                        "name": "Agder",
+                        "parent": "E",
+                        "value": 14981
+                    }
+                ]
+            }
+        ],
+        "tooltip": {
+            "useHTML": true,
+            "pointFormat": "The area of <b>{point.name}</b> is <b>{point.value} km<sup>2</sup></b>"
+        },
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#4C566A",
+                "fontSize": "12px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a hierarchical structure with two levels: 5 regions (parent nodes) and 11 counties (leaf nodes). Value encoding uses actual land area measurements (km\u00b2) following Norway's administrative division statistics. Synthetic data maintains real-world magnitude relationships (\u03bc=28,342 km\u00b2, \u03c3=21,906 km\u00b2) with extreme values matching Oslo's urban density and Troms og Finnmark's Arctic expanse. The treemap maximizes data-ink ratio by using spatial encoding for quantitative values and color hues for categorical regions. Cairo's perceptual principles are applied through size-based comparisons and distinct color boundaries. Striped layout algorithm ensures efficient space utilization while maintaining parent-child relationships through nested rectangles."
+}

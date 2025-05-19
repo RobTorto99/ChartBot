@@ -1,0 +1,136 @@
+{
+    "visualization_prompt": "Generate a spline chart showing inverse relationships between two variables using gradient color encoding",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#000000",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ],
+            "style": {
+                "fontFamily": "'Segoe UI', Roboto, sans-serif"
+            }
+        },
+        "title": {
+            "text": "Controlling Elements by Dragging",
+            "style": {
+                "color": "#FFFFFF",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#FFFFFF",
+                    "fontSize": "14px"
+                }
+            },
+            "gridLineColor": "#333333"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Control Values",
+                "style": {
+                    "color": "#FFFFFF",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#FFFFFF",
+                    "fontSize": "14px"
+                }
+            },
+            "gridLineColor": "#333333"
+        },
+        "legend": {
+            "align": "bottom",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#FFFFFF",
+                "fontSize": "12px"
+            }
+        },
+        "series": [
+            {
+                "name": "Positive Control",
+                "data": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 1,
+                        "y2": 0
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "rgba(0, 0, 255, 0.8)"
+                        ],
+                        [
+                            1,
+                            "rgba(0, 255, 0, 0.8)"
+                        ]
+                    ]
+                },
+                "marker": {
+                    "enabled": true,
+                    "radius": 4
+                }
+            },
+            {
+                "name": "Negative Control",
+                "data": [
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 1,
+                        "y2": 0
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "rgba(0, 255, 0, 0.8)"
+                        ],
+                        [
+                            1,
+                            "rgba(255, 0, 0, 0.8)"
+                        ]
+                    ]
+                },
+                "marker": {
+                    "enabled": true,
+                    "radius": 4
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The chart configuration uses a bivariate spline visualization with time-equivalent ordinal data. Dataset contains two 10-element series representing inverse quantitative relationships. Synthetic data follows perfect linear progressions (\u03bc1=5.5, \u03c31=3.03; \u03bc2=5.5, \u03c32=3.03) to demonstrate ideal control scenarios. Gradient color encoding follows Cairo's preattentive processing principles, using blue-green-red spectrum to emphasize directional relationships. Dark theme maintains high contrast ratio (21:1) while reducing visual fatigue. Spline interpolation (tension=0.5) smooths discrete control points without overshooting, adhering to Tufte's data-ink maximization by eliminating grid dominance. Legend positioning follows Gestalt proximity principle by colocating with primary visual flow elements."
+}

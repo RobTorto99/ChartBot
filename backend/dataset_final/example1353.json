@@ -1,0 +1,207 @@
+{
+    "visualization_prompt": "Generate a scatter plot showing height-weight distribution of Olympic athletes across sports using semi-transparent markers for overlap analysis",
+    "visualization_code": {
+        "chart": {
+            "type": "scatter",
+            "zooming": {
+                "type": "xy"
+            }
+        },
+        "colors": [
+            "#058DC755",
+            "#50B43255",
+            "#ED561B55"
+        ],
+        "title": {
+            "text": "Athlete Anthropometric Analysis - 2012 Olympics"
+        },
+        "subtitle": {
+            "text": "Synthetic data demonstrating expected height-weight distributions"
+        },
+        "xAxis": {
+            "title": {
+                "text": "Height (meters)",
+                "style": {
+                    "color": "#2e2e2e",
+                    "fontSize": "12px"
+                }
+            },
+            "labels": {
+                "format": "{value} m",
+                "style": {
+                    "color": "#4a4a4a"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Weight (kilograms)",
+                "style": {
+                    "color": "#2e2e2e",
+                    "fontSize": "12px"
+                }
+            },
+            "labels": {
+                "format": "{value} kg",
+                "style": {
+                    "color": "#4a4a4a"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Basketball",
+                "data": [
+                    [
+                        2.08,
+                        102
+                    ],
+                    [
+                        2.05,
+                        98
+                    ],
+                    [
+                        2.12,
+                        105
+                    ],
+                    [
+                        1.99,
+                        95
+                    ],
+                    [
+                        2.1,
+                        101
+                    ],
+                    [
+                        2.03,
+                        99
+                    ],
+                    [
+                        2.07,
+                        100
+                    ],
+                    [
+                        2.01,
+                        96
+                    ],
+                    [
+                        2.09,
+                        103
+                    ],
+                    [
+                        2.06,
+                        97
+                    ]
+                ],
+                "marker": {
+                    "radius": 4
+                }
+            },
+            {
+                "name": "Triathlon",
+                "data": [
+                    [
+                        1.78,
+                        68
+                    ],
+                    [
+                        1.82,
+                        72
+                    ],
+                    [
+                        1.75,
+                        65
+                    ],
+                    [
+                        1.8,
+                        70
+                    ],
+                    [
+                        1.77,
+                        67
+                    ],
+                    [
+                        1.73,
+                        63
+                    ],
+                    [
+                        1.79,
+                        69
+                    ],
+                    [
+                        1.81,
+                        71
+                    ],
+                    [
+                        1.76,
+                        66
+                    ],
+                    [
+                        1.74,
+                        64
+                    ]
+                ],
+                "marker": {
+                    "radius": 4
+                }
+            },
+            {
+                "name": "Volleyball",
+                "data": [
+                    [
+                        1.92,
+                        84
+                    ],
+                    [
+                        1.88,
+                        80
+                    ],
+                    [
+                        1.95,
+                        88
+                    ],
+                    [
+                        1.9,
+                        82
+                    ],
+                    [
+                        1.93,
+                        85
+                    ],
+                    [
+                        1.87,
+                        79
+                    ],
+                    [
+                        1.91,
+                        83
+                    ],
+                    [
+                        1.89,
+                        81
+                    ],
+                    [
+                        1.94,
+                        86
+                    ],
+                    [
+                        1.96,
+                        87
+                    ]
+                ],
+                "marker": {
+                    "radius": 4
+                }
+            }
+        ],
+        "plotOptions": {
+            "scatter": {
+                "tooltip": {
+                    "headerFormat": "<b>{series.name}</b><br>",
+                    "pointFormat": "Height: {point.x:.2f} m<br>Weight: {point.y} kg"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three multivariate series with 2D numerical measurements (height-weight pairs) across categorical sport groups. Synthetic data was generated with sport-specific normal distributions: Basketball (\u03bc_height=2.06m, \u03c3=0.05; \u03bc_weight=99.6kg, \u03c3=3.2), Triathlon (\u03bc_height=1.77m, \u03c3=0.03; \u03bc_weight=67.5kg, \u03c3=2.8), Volleyball (\u03bc_height=1.91m, \u03c3=0.04; \u03bc_weight=83.5kg, \u03c3=2.9), maintaining realistic anthropometric ranges from Olympic athlete studies. The scatter plot maximizes data-ink ratio by eliminating chartjunk while preserving precision through direct coordinate labeling, aligning with Tufte's principles. Cairo's perceptual topology is maintained through consistent spatial encoding and color differentiation. Semi-transparent markers (\u03b1=0.33) enable density estimation in overlapping regions, with cluster centroids visually confirming expected sport-specific biometric profiles."
+}

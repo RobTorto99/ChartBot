@@ -1,0 +1,134 @@
+{
+    "visualization_prompt": "Generate a column chart showing percentage contributions of hydropower, nuclear, and other renewable energy sources in national electricity production using stacked percentage columns with categorical country labels",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#FFFFFF",
+            "margin": [
+                50,
+                50,
+                75,
+                75
+            ]
+        },
+        "title": {
+            "text": "Top 10 nuclear vs renewable energy producers (2011)",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333333",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://en.wikipedia.org/wiki/List_of_countries_by_electricity_production'>Wikipedia</a>",
+            "useHTML": true
+        },
+        "xAxis": {
+            "categories": [
+                "China",
+                "United States",
+                "Russia",
+                "India",
+                "Japan",
+                "Canada",
+                "Germany",
+                "France",
+                "South Korea",
+                "United Kingdom"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            },
+            "min": 0,
+            "title": {
+                "text": null
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "percent",
+                "borderWidth": 0,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.percentage:.0f}%",
+                    "color": "#FFFFFF"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Hydropower",
+                "data": [
+                    14.8,
+                    7.4,
+                    15.7,
+                    12.4,
+                    8,
+                    59,
+                    2.9,
+                    8,
+                    0.9,
+                    1.6
+                ],
+                "color": "#01BAF2"
+            },
+            {
+                "name": "Other renewable",
+                "data": [
+                    2.2,
+                    4.8,
+                    0.1,
+                    5,
+                    4.2,
+                    3.3,
+                    17.6,
+                    3.6,
+                    0.6,
+                    40.3
+                ],
+                "color": "#71BF45"
+            },
+            {
+                "name": "Nuclear",
+                "data": [
+                    1.8,
+                    19.2,
+                    16.4,
+                    3.2,
+                    9.8,
+                    14.7,
+                    17.9,
+                    79.4,
+                    29.8,
+                    19.1
+                ],
+                "color": "#FFA500"
+            }
+        ],
+        "legend": {
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "12px"
+            }
+        },
+        "tooltip": {
+            "pointFormat": "<b>{series.name}</b>: {point.percentage:.0f}%<br/>",
+            "shared": true
+        }
+    },
+    "visualization_explanation": "The dataset contains three-dimensional categorical data: 10 countries (nominal) \u00d7 3 energy types (nominal) \u00d7 percentage values (ratio). Original Wikipedia data shows strong ecological validity with clear outliers (France's 79.4% nuclear). The stacked percentage column chart maximizes data-ink ratio by directly encoding proportions through colored segment lengths. Cairo's principle of perceptual transparency is maintained through distinct hue differentiation (blue=hydro, green=renewable, orange=nuclear). Proportional stacking enables immediate cross-country comparison of energy mix composition. Value labels use Tufte's principle of direct annotation by displaying percentages in the data columns themselves."
+}

@@ -1,0 +1,105 @@
+{
+    "visualization_prompt": "Generate a pie chart showing nutritional composition relationships using categorical percentage allocation",
+    "visualization_code": {
+        "colors": [
+            "#FFD700",
+            "#FFA500",
+            "#8B4513",
+            "#D2691E",
+            "#6495ED"
+        ],
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#f8f9fa"
+        },
+        "title": {
+            "text": "Egg Yolk Composition",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://www.mdpi.com/2072-6643/11/3/684/htm' style='color: #3498db'>MDPI Nutrients 2019</a>",
+            "useHTML": true
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<b>{point.name}</b>: {point.percentage:.1f}%",
+                    "distance": 20,
+                    "style": {
+                        "textOutline": "none",
+                        "fontSize": "14px"
+                    }
+                },
+                "showInLegend": true,
+                "borderColor": "#2c3e50"
+            }
+        },
+        "tooltip": {
+            "pointFormat": "{point.y:.1f}%",
+            "borderColor": "#95a5a6",
+            "backgroundColor": "rgba(236, 240, 241, 0.95)",
+            "style": {
+                "fontSize": "14px"
+            }
+        },
+        "series": [
+            {
+                "name": "Composition",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Water",
+                        "y": 55.02,
+                        "color": {
+                            "patternIndex": 0
+                        }
+                    },
+                    {
+                        "name": "Fat",
+                        "y": 26.71,
+                        "sliced": true,
+                        "selected": true,
+                        "color": {
+                            "patternIndex": 1
+                        }
+                    },
+                    {
+                        "name": "Carbohydrates",
+                        "y": 1.09,
+                        "color": {
+                            "patternIndex": 2
+                        }
+                    },
+                    {
+                        "name": "Protein",
+                        "y": 15.5,
+                        "color": {
+                            "patternIndex": 3
+                        }
+                    },
+                    {
+                        "name": "Ash",
+                        "y": 1.68,
+                        "color": "blue"
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "fontSize": "14px",
+                "color": "#34495e"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains categorical nutritional components (Water, Fat, Carbohydrates, Protein, Ash) with percentage values summing to 100%. Synthetic data replicates published nutritional studies (\u03bc=20.0, \u03c3=19.8) while maintaining domain-specific constraints. The pie chart maximizes data-ink ratio by removing unnecessary gridlines while maintaining Cairo's principles through color contrast and proportional area encoding. Pattern variations enhance categorical distinction while maintaining grayscale readability. Data labels use position and connector lines to maintain visual-linguistic correspondence, with tooltip reinforcement providing exact values on interaction."
+}

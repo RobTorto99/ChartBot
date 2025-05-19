@@ -1,0 +1,126 @@
+{
+    "visualization_prompt": "Generate a column chart showing revenue distribution across industries using synthetic data with statistical validity and categorical labeling",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "animation": {
+                "duration": 1000
+            },
+            "polar": false,
+            "inverted": false
+        },
+        "title": {
+            "text": "Industry Revenue Distribution"
+        },
+        "xAxis": {
+            "categories": [
+                "Technology",
+                "Healthcare",
+                "Finance",
+                "Energy",
+                "Retail",
+                "Automotive",
+                "Telecom",
+                "Manufacturing",
+                "Pharma",
+                "Aerospace"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#354f52",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Industry",
+                "style": {
+                    "color": "#52796f",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (Billion USD)",
+                "style": {
+                    "color": "#52796f",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#354f52",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Q1 Revenue",
+                "data": [
+                    {
+                        "name": "Technology",
+                        "y": 55
+                    },
+                    {
+                        "name": "Healthcare",
+                        "y": 48
+                    },
+                    {
+                        "name": "Finance",
+                        "y": 62
+                    },
+                    {
+                        "name": "Energy",
+                        "y": 43
+                    },
+                    {
+                        "name": "Retail",
+                        "y": 57
+                    },
+                    {
+                        "name": "Automotive",
+                        "y": 39
+                    },
+                    {
+                        "name": "Telecom",
+                        "y": 50
+                    },
+                    {
+                        "name": "Manufacturing",
+                        "y": 53
+                    },
+                    {
+                        "name": "Pharma",
+                        "y": 47
+                    },
+                    {
+                        "name": "Aerospace",
+                        "y": 60
+                    }
+                ],
+                "colorByPoint": true
+            }
+        ],
+        "colors": [
+            "#cad2c5",
+            "#84a98c",
+            "#52796f",
+            "#354f52"
+        ],
+        "accessibility": {
+            "enabled": false
+        },
+        "legend": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "column": {
+                "borderRadius": 3,
+                "pointPadding": 0.1,
+                "groupPadding": 0.15
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains univariate categorical data with 10 industry categories and corresponding revenue values. Synthetic data was generated using a normal distribution (\u03bc=50, \u03c3=15) with manual adjustments to ensure domain validity for business contexts. Values range from $39B to $62B, reflecting realistic Fortune 500 company revenues. The column chart was chosen to enable direct comparison between discrete categories while maintaining Tufte's data-ink ratio through minimal gridlines and clean typography. Color application follows Cairo's perceptual principles using a muted sequential palette that maintains contrast while avoiding chromatic vibration. Statistical anchors include cluster patterns (3 sectors above $55B) and controlled variance (\u03c3=15 preserves \u00b13\u03c3 within 5-95 range)."
+}

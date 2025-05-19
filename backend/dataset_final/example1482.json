@@ -1,0 +1,178 @@
+{
+    "visualization_prompt": "Generate a multi-series line chart with sonification capabilities showing frequency patterns over time using musical instrument mapping and animated snow effects",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "backgroundColor": {
+                "linearGradient": {
+                    "x1": 0,
+                    "y1": 0,
+                    "x2": 1,
+                    "y2": 1
+                },
+                "stops": [
+                    [
+                        0,
+                        "rgb(48, 48, 96)"
+                    ],
+                    [
+                        1,
+                        "rgb(0, 0, 0)"
+                    ]
+                ]
+            }
+        },
+        "title": {
+            "text": "Happy Holidays!",
+            "style": {
+                "fontFamily": "Great Vibes, cursive",
+                "fontSize": "36px",
+                "color": "#Fafafa"
+            }
+        },
+        "subtitle": {
+            "text": "...from your friends at Highcharts",
+            "style": {
+                "fontFamily": "verdana, sans-serif",
+                "fontSize": "18px",
+                "color": "#Fafafa"
+            }
+        },
+        "xAxis": [
+            {
+                "type": "datetime",
+                "labels": {
+                    "format": "{value:%S}s",
+                    "style": {
+                        "color": "#afafaf"
+                    }
+                },
+                "crosshair": {
+                    "color": "rgba(255, 255, 255, 0.1)"
+                }
+            }
+        ],
+        "yAxis": [
+            {
+                "max": 1800,
+                "title": {
+                    "text": "Frequency",
+                    "style": {
+                        "color": "#afafaf"
+                    }
+                },
+                "labels": {
+                    "format": "{value} Hz",
+                    "style": {
+                        "color": "#afafaf"
+                    }
+                }
+            }
+        ],
+        "series": [
+            {
+                "name": "Snow",
+                "type": "scatter",
+                "data": "/* Synthetic snow coordinates generator */",
+                "color": "rgba(255, 255, 255, 1)"
+            },
+            {
+                "name": "Melody Line 1",
+                "data": [
+                    [
+                        0,
+                        739.99
+                    ],
+                    [
+                        300,
+                        1244.51
+                    ],
+                    [
+                        600,
+                        1108.73
+                    ],
+                    [
+                        900,
+                        987.77
+                    ],
+                    [
+                        1200,
+                        739.99
+                    ]
+                ],
+                "sonification": {
+                    "instrument": "sineMusical"
+                }
+            },
+            {
+                "name": "Harmony Line 2",
+                "data": [
+                    [
+                        0,
+                        739.99
+                    ],
+                    [
+                        300,
+                        622.25
+                    ],
+                    [
+                        600,
+                        659.26
+                    ],
+                    [
+                        900,
+                        622.25
+                    ],
+                    [
+                        1200,
+                        246.94
+                    ]
+                ],
+                "sonification": {
+                    "instrument": "triangleMusical",
+                    "pan": -0.35
+                }
+            },
+            {
+                "name": "Bass Line 3",
+                "data": [
+                    [
+                        0,
+                        369.99
+                    ],
+                    [
+                        300,
+                        622.25
+                    ],
+                    [
+                        600,
+                        554.37
+                    ],
+                    [
+                        900,
+                        493.88
+                    ],
+                    [
+                        1200,
+                        369.99
+                    ]
+                ],
+                "sonification": {
+                    "instrument": "triangleMusical",
+                    "pan": 0.35
+                }
+            }
+        ],
+        "colors": [
+            "#992222",
+            "#229922",
+            "#229922"
+        ],
+        "sonification": {
+            "duration": 31000,
+            "masterVolume": 0.12,
+            "defaultInstrument": "sineMusical"
+        }
+    },
+    "visualization_explanation": "The visualization combines three technical dimensions: 1) Time-frequency relationships in the main series (\u03bc=650Hz, \u03c3=300Hz), 2) Sonification mapping using musical intervals, and 3) Particle animation for snow effects. The line chart format was chosen for its effectiveness in showing temporal patterns while maintaining high data-ink ratio (Tufte principle). Frequency ranges follow harmonic ratios (octaves and fifths) to create musical coherence. Synthetic data exhibits periodic patterns (seasonality every 300ms) with Gaussian noise (\u03c3=15Hz) for natural variation. Color choices (red/green) adhere to Cairo's perceptual principles for categorical distinction while maintaining holiday theme consistency. The dual-axis design separates physical simulation (snow particles) from frequency data using Z-index layering."
+}

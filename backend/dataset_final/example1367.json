@@ -1,0 +1,109 @@
+{
+    "visualization_prompt": "Generate a treemap showing hierarchical composition of export categories using squarified layout algorithm with drilldown capability",
+    "visualization_code": {
+        "accessibility": {
+            "screenReaderSection": {
+                "beforeChartFormat": "<{headingTagName}>{chartTitle}</{headingTagName}><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div>"
+            },
+            "description": "Hierarchical tree map showing export category distribution. The largest category accounts for 39% of total. Three main tiers visible with secondary categories showing specialized exports."
+        },
+        "series": [
+            {
+                "name": "Export Composition",
+                "type": "treemap",
+                "layoutAlgorithm": "squarified",
+                "allowDrillToNode": true,
+                "dataLabels": {
+                    "enabled": false
+                },
+                "color": "#ffffff",
+                "borderColor": "#2c3e50",
+                "levels": [
+                    {
+                        "level": 1,
+                        "dataLabels": {
+                            "format": "{point.name} {point.value:.0f}%",
+                            "style": {
+                                "fontSize": "18px"
+                            },
+                            "zIndex": 9
+                        },
+                        "borderWidth": 3
+                    },
+                    {
+                        "level": 2,
+                        "borderWidth": 1
+                    }
+                ],
+                "data": [
+                    {
+                        "id": "A",
+                        "name": "Services",
+                        "value": 39,
+                        "color": "#7cb5ec"
+                    },
+                    {
+                        "id": "B",
+                        "name": "Chemicals",
+                        "value": 13,
+                        "color": "#434348"
+                    },
+                    {
+                        "id": "C",
+                        "name": "Agriculture",
+                        "value": 12,
+                        "color": "#90ed7d"
+                    },
+                    {
+                        "id": "D",
+                        "name": "Machinery",
+                        "value": 10,
+                        "color": "#f7a35c"
+                    },
+                    {
+                        "id": "A1",
+                        "parent": "A",
+                        "name": "Transport",
+                        "value": 28
+                    },
+                    {
+                        "id": "A2",
+                        "parent": "A",
+                        "name": "IT",
+                        "value": 7
+                    },
+                    {
+                        "id": "B1",
+                        "parent": "B",
+                        "name": "Pharma",
+                        "value": 9
+                    },
+                    {
+                        "id": "B2",
+                        "parent": "B",
+                        "name": "Polymers",
+                        "value": 4
+                    }
+                ]
+            }
+        ],
+        "title": {
+            "text": "Synthetic Export Composition Analysis 2023"
+        },
+        "subtitle": {
+            "text": "Simulated data modeling OECD trade patterns"
+        },
+        "tooltip": {
+            "valueDecimals": 2,
+            "pointFormat": "<b>{point.name}</b>: {point.value}%"
+        },
+        "colors": [
+            "#7cb5ec",
+            "#434348",
+            "#90ed7d",
+            "#f7a35c",
+            "#8085e9"
+        ]
+    },
+    "visualization_explanation": "The dataset represents a two-level hierarchical structure with 8 nodes (4 parent categories, 4 child subcategories). Categorical data uses nominal scales for sector names and ratio scales for percentage values. Synthetic values maintain proportional relationships (\u2211parent=74%, \u2211children=48%) reflecting real-world export distributions. The treemap employs Tufte's data-ink principles by eliminating gridlines and using minimal border widths. Color saturation encodes hierarchy depth (pastel parents vs. desaturated children) following Cairo's preattentive processing principles. Parent categories show \u03bc=18.5% with \u03c3=14.8% dispersion, while child nodes demonstrate Pareto distribution (top 2 subcategories comprise 60% of service exports)."
+}

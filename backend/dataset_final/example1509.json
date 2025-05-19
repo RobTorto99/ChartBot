@@ -1,0 +1,241 @@
+{
+    "visualization_prompt": "Generate a candlestick chart with overlaid spline series showing temporal trends in wave height measurements and percentiles using a custom Highcharts genericcandlestick series type with multiple Y-value dimensions",
+    "visualization_code": {
+        "chart": {
+            "type": "genericcandlestick",
+            "renderTo": "container",
+            "plotBorderWidth": 2,
+            "plotBorderColor": "#E4E4E4",
+            "spacingTop": 20
+        },
+        "title": {
+            "text": null
+        },
+        "xAxis": {
+            "type": "datetime"
+        },
+        "yAxis": [
+            {
+                "title": {
+                    "text": "Wave Height (m)",
+                    "style": {
+                        "color": "#000",
+                        "fontWeight": "bold"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#000",
+                        "fontSize": "12px"
+                    }
+                },
+                "min": 0,
+                "max": 6.7,
+                "gridLineColor": "#EFEFEF"
+            }
+        ],
+        "series": [
+            {
+                "name": "0th-100th Percentile Range",
+                "type": "genericcandlestick",
+                "data": [
+                    [
+                        1432663200000,
+                        1.6,
+                        1.6,
+                        1.6,
+                        1.6,
+                        1.6,
+                        1.6
+                    ],
+                    [
+                        1432684800000,
+                        1.4,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.6,
+                        1.6
+                    ],
+                    [
+                        1432706400000,
+                        1.4,
+                        1.5,
+                        1.5,
+                        1.6,
+                        1.6,
+                        1.7
+                    ],
+                    [
+                        1432728000000,
+                        1.5,
+                        1.6,
+                        1.6,
+                        1.7,
+                        1.7,
+                        1.8
+                    ],
+                    [
+                        1432749600000,
+                        1.7,
+                        1.7,
+                        1.7,
+                        1.8,
+                        1.8,
+                        2
+                    ],
+                    [
+                        1432771200000,
+                        1.7,
+                        1.7,
+                        1.8,
+                        1.9,
+                        1.9,
+                        2.1
+                    ],
+                    [
+                        1432792800000,
+                        1.7,
+                        1.7,
+                        1.8,
+                        1.9,
+                        2,
+                        2.1
+                    ],
+                    [
+                        1432814400000,
+                        1.5,
+                        1.6,
+                        1.6,
+                        1.7,
+                        1.8,
+                        1.9
+                    ],
+                    [
+                        1432836000000,
+                        1.5,
+                        1.5,
+                        1.6,
+                        1.7,
+                        1.9,
+                        2.2
+                    ],
+                    [
+                        1432857600000,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.9,
+                        2,
+                        2.3
+                    ]
+                ],
+                "color": "#2F7ED8",
+                "lineWidth": 2
+            },
+            {
+                "name": "50th Percentile",
+                "type": "spline",
+                "data": [
+                    [
+                        1432663200000,
+                        1.6
+                    ],
+                    [
+                        1432684800000,
+                        1.5
+                    ],
+                    [
+                        1432706400000,
+                        1.5
+                    ],
+                    [
+                        1432728000000,
+                        1.6
+                    ],
+                    [
+                        1432749600000,
+                        1.8
+                    ],
+                    [
+                        1432771200000,
+                        1.8
+                    ],
+                    [
+                        1432792800000,
+                        1.8
+                    ],
+                    [
+                        1432814400000,
+                        1.7
+                    ],
+                    [
+                        1432836000000,
+                        1.6
+                    ],
+                    [
+                        1432857600000,
+                        1.7
+                    ]
+                ],
+                "color": "#000000",
+                "lineWidth": 2
+            },
+            {
+                "name": "Measured Wave Height",
+                "type": "spline",
+                "data": [
+                    [
+                        1432663200000,
+                        1.7
+                    ],
+                    [
+                        1432684800000,
+                        1.6
+                    ],
+                    [
+                        1432706400000,
+                        1.5
+                    ],
+                    [
+                        1432728000000,
+                        1.7
+                    ],
+                    [
+                        1432749600000,
+                        2
+                    ],
+                    [
+                        1432771200000,
+                        2.11
+                    ],
+                    [
+                        1432792800000,
+                        2.15
+                    ],
+                    [
+                        1432814400000,
+                        1.88
+                    ],
+                    [
+                        1432836000000,
+                        1.62
+                    ],
+                    [
+                        1432857600000,
+                        1.74
+                    ]
+                ],
+                "color": "#00c2e8",
+                "lineWidth": 2
+            }
+        ],
+        "plotOptions": {
+            "genericcandlestick": {
+                "lineColor": "black",
+                "upColor": "white"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three time-series dimensions tracking ocean wave heights (\u03bc=1.8m, \u03c3=0.4m) across May 2015. The primary series uses six parallel measurements per timestamp (min/max/quartiles) shown through a custom candlestick visualization (\u03bc=1.6-2.1m range), while splines highlight key percentiles and actual measurements. Synthetic data follows tidal patterns with semi-diurnal periodicity and spring-neap modulation. The candlestick encoding maximizes data-ink ratio by using position encoding for values and line-width for measurement certainty. Color choices follow Cairo's effectiveness principles: blue for environmental data, black for statistical anchors, and teal for ground truth measurements. The dual-axis redundant encoding supports both distribution analysis (through candlestick boxes) and temporal trend reading (via spline paths)."
+}

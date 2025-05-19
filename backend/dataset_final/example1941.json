@@ -1,0 +1,118 @@
+{
+    "visualization_prompt": "Generate a combination chart showing value fluctuations using styled color zones and dual series encoding",
+    "visualization_code": {
+        "chart": {
+            "styledMode": true,
+            "marginRight": 20,
+            "backgroundColor": "#f8f9fa"
+        },
+        "title": {
+            "text": "Styled color zones",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "1.2em",
+                "fontWeight": "bold"
+            }
+        },
+        "yAxis": {
+            "min": -10,
+            "title": {
+                "text": "Value Index",
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#95a5a6"
+                }
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Q1-23",
+                "Q2-23",
+                "Q3-23",
+                "Q4-23",
+                "Q1-24",
+                "Q2-24",
+                "Q3-24",
+                "Q4-24",
+                "Q1-25",
+                "Q2-25",
+                "Q3-25"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#95a5a6"
+                }
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "zones": [
+                    {
+                        "value": 0,
+                        "className": "zone-negative"
+                    },
+                    {
+                        "value": 10,
+                        "className": "zone-neutral"
+                    },
+                    {
+                        "className": "zone-positive"
+                    }
+                ],
+                "threshold": -10
+            }
+        },
+        "series": [
+            {
+                "type": "areaspline",
+                "name": "Market Sentiment",
+                "data": [
+                    -10,
+                    -5,
+                    0,
+                    5,
+                    10,
+                    15,
+                    10,
+                    10,
+                    5,
+                    0,
+                    -5
+                ],
+                "marker": {
+                    "enabledThreshold": 5
+                }
+            },
+            {
+                "type": "column",
+                "name": "Transaction Volume",
+                "data": [
+                    1,
+                    13,
+                    2,
+                    -4,
+                    6,
+                    7,
+                    5,
+                    3,
+                    2,
+                    -1,
+                    2
+                ],
+                "colorAxis": 1
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#34495e"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two time-series dimensions tracking 11 quarterly observations. The areaspline series represents continuous market sentiment (-10 to +15 scale) with synthetic data showing seasonal fluctuation (\u03bc=3.6, \u03c3=7.8). The column series models transaction volume (-4 to +13 range) with random walk pattern (\u03c3\u00b2=28.9). Color zones implement Cairo's preattentive processing: red (negative), yellow (neutral), green (positive) using CSS classes. The dual encoding (area+columns) follows Tufte's principle of multivariate data display, while zone thresholds at 0 and 10 create statistically meaningful categories. Styled mode ensures visual consistency across elements through centralized CSS definitions."
+}

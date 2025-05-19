@@ -1,0 +1,113 @@
+{
+    "visualization_prompt": "Generate a line chart showing seasonal renewable energy production trends using synthetic meteorological patterns",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "backgroundColor": "#f8f9fa"
+        },
+        "title": {
+            "text": "Monthly Renewable Energy Production (2023)",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            },
+            "title": {
+                "text": "Month",
+                "style": {
+                    "color": "#34495e"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "MWh Generated",
+                "style": {
+                    "color": "#34495e"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            }
+        },
+        "tooltip": {
+            "borderRadius": 0,
+            "headerFormat": "<b>{point.key}</b><br>",
+            "pointFormat": "{series.name}: {point.y:.1f} MWh"
+        },
+        "series": [
+            {
+                "name": "Solar Production",
+                "data": [
+                    148,
+                    165,
+                    192,
+                    234,
+                    287,
+                    315,
+                    302,
+                    278,
+                    241,
+                    199,
+                    162,
+                    138
+                ],
+                "color": "#e67e22",
+                "marker": {
+                    "symbol": "circle"
+                }
+            },
+            {
+                "name": "Wind Production",
+                "data": [
+                    282,
+                    268,
+                    245,
+                    218,
+                    191,
+                    175,
+                    163,
+                    182,
+                    207,
+                    234,
+                    257,
+                    274
+                ],
+                "color": "#2980b9",
+                "marker": {
+                    "symbol": "diamond"
+                }
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#2c3e50"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two temporal series (24 total observations) tracking monthly energy output. Synthetic data follows inverse seasonal patterns: solar production (\u03bc=223, \u03c3=63) peaks in June demonstrating positive skew, while wind production (\u03bc=229, \u03c3=44) shows winter dominance with normal distribution. The line chart maximizes data-ink ratio through minimal gridlines and direct labeling. Complementary orange/blue coloring adheres to Cairo's principles of perceptual discriminability. Trend lines reveal domain-appropriate negative correlation (r\u2248-0.89) between energy sources, with tooltip formatting providing exact values without visual clutter. Axis styling uses desaturated colors to maintain figure-ground contrast while avoiding attention competition with primary data elements."
+}

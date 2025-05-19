@@ -1,0 +1,110 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly sales trends for two products over 12 months using synthetic data with seasonal patterns and contrasting color encoding.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 80,
+            "marginRight": 80,
+            "marginBottom": 100,
+            "marginLeft": 80
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#333",
+                "fontSize": "20px",
+                "fontFamily": "Verdana, sans-serif"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px",
+                    "fontFamily": "Verdana, sans-serif"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales (in units)",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px",
+                    "fontFamily": "Verdana, sans-serif"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px",
+                    "fontFamily": "Verdana, sans-serif"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Product A",
+                "data": [
+                    82,
+                    78,
+                    85,
+                    88,
+                    92,
+                    95,
+                    89,
+                    84,
+                    80,
+                    76,
+                    72,
+                    68
+                ],
+                "color": "#7cb5ec"
+            },
+            {
+                "name": "Product B",
+                "data": [
+                    48,
+                    52,
+                    58,
+                    63,
+                    67,
+                    71,
+                    75,
+                    79,
+                    82,
+                    85,
+                    88,
+                    92
+                ],
+                "color": "#434348"
+            }
+        ],
+        "legend": {
+            "useHTML": true,
+            "layout": "proximate",
+            "align": "right",
+            "itemStyle": {
+                "color": "#555",
+                "fontSize": "14px",
+                "fontFamily": "Verdana, sans-serif"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two temporal series (Product A/B sales) across 12 monthly intervals. Synthetic data was generated with opposing linear trends (Product A: \u03bc=81.5, \u03c3=9.6 declining; Product B: \u03bc=71.3, \u03c3=14.7 rising) and seasonal modulation (\u00b115% variance). The column chart maximizes data-ink ratio by eliminating redundant gridlines while maintaining clear value comparisons. Cairo's perceptual principles are applied through: 1) Color contrast (blue vs charcoal) for categorical distinction 2) Proximate legend placement reducing eye travel 3) Identical axis/text styling maintaining visual rhythm. Temporal patterns are emphasized through adjacent monthly columns, revealing Product B's growth trajectory overcoming Product A's decline."
+}

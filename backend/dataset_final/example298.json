@@ -1,0 +1,202 @@
+{
+    "visualization_prompt": "Create a Highcharts Venn diagram to visualize the relationships and intersections between various Highsoft products, including Highcharts Core, Stock, Maps, Gantt, and Dashboards. Each set and intersection should represent the shared features among these products, highlighting how they overlap and integrate with each other. The chart should have a title and subtitle, custom colors for the sets, and styled data labels with specific font sizes. Additionally, the tooltip should provide detailed information about the products and shared components when hovering over the sets.",
+    "visualization_code": {
+        "chart": {
+            "type": "venn"
+        },
+        "title": {
+            "text": "Highsoft products relationships"
+        },
+        "subtitle": {
+            "text": "Highcharts Core, Stock, Maps, Gantt, and Dashboards"
+        },
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "{#if (eq 1 point.sets.length)}Product:<br><b>Highcharts {point.sets.0}</b>{else}Products:<br>{#each point.sets}Highcharts <b>{this}</b>{#unless @last} and {/unless}{/each}<br><br>Shared components:<br><b>{point.name}</b><br>{/if}"
+        },
+        "series": [
+            {
+                "type": "venn",
+                "colors": [
+                    "rgb(180, 210, 255)",
+                    "rgb(180, 255, 210)",
+                    "rgb(180, 235, 235)",
+                    "rgb(200, 200, 200)",
+                    "rgb(170, 230, 250)",
+                    "rgb(170, 250, 230)",
+                    "rgb(170, 240, 240)",
+                    "rgb(190, 190, 190)",
+                    "rgb(160, 220, 245)",
+                    "rgb(160, 245, 220)"
+                ],
+                "data": [
+                    {
+                        "sets": [
+                            "Core"
+                        ],
+                        "value": 10,
+                        "name": "Highcharts Core",
+                        "dataLabels": {
+                            "style": {
+                                "fontSize": 15
+                            }
+                        }
+                    },
+                    {
+                        "sets": [
+                            "Stock"
+                        ],
+                        "value": 3,
+                        "dataLabels": {
+                            "style": {
+                                "fontSize": 13
+                            }
+                        }
+                    },
+                    {
+                        "sets": [
+                            "Dashboards"
+                        ],
+                        "value": 3,
+                        "dataLabels": {
+                            "style": {
+                                "fontSize": 13
+                            }
+                        }
+                    },
+                    {
+                        "sets": [
+                            "Gantt"
+                        ],
+                        "value": 2.5,
+                        "dataLabels": {
+                            "style": {
+                                "fontSize": 13
+                            }
+                        }
+                    },
+                    {
+                        "sets": [
+                            "Maps"
+                        ],
+                        "value": 3,
+                        "dataLabels": {
+                            "style": {
+                                "fontSize": 13
+                            }
+                        }
+                    },
+                    {
+                        "sets": [
+                            "Gantt",
+                            "Maps",
+                            "Stock"
+                        ],
+                        "value": 1,
+                        "name": "Core"
+                    },
+                    {
+                        "sets": [
+                            "Stock",
+                            "Core"
+                        ],
+                        "value": 1,
+                        "name": "DateTime Series and Axis"
+                    },
+                    {
+                        "sets": [
+                            "Gantt",
+                            "Core"
+                        ],
+                        "value": 1,
+                        "name": "X-range Series and DateTime Axis"
+                    },
+                    {
+                        "sets": [
+                            "Maps",
+                            "Core"
+                        ],
+                        "value": 1,
+                        "name": "Heatmap and ColorAxis"
+                    },
+                    {
+                        "sets": [
+                            "Stock",
+                            "Gantt"
+                        ],
+                        "value": 0.25,
+                        "name": "Navigator & RangeSelector"
+                    },
+                    {
+                        "sets": [
+                            "Dashboards",
+                            "Core"
+                        ],
+                        "value": 1,
+                        "name": "Data Layer"
+                    },
+                    {
+                        "sets": [
+                            "Dashboards",
+                            "DataGrid"
+                        ],
+                        "value": 0.5,
+                        "name": "DataGrid"
+                    },
+                    {
+                        "sets": [
+                            "Dashboards",
+                            "KPI"
+                        ],
+                        "value": 0.5,
+                        "name": "KPI"
+                    },
+                    {
+                        "sets": [
+                            "DataGrid"
+                        ],
+                        "value": 0.5,
+                        "name": ""
+                    },
+                    {
+                        "sets": [
+                            "KPI"
+                        ],
+                        "value": 0.2,
+                        "name": "KPI"
+                    },
+                    {
+                        "sets": [
+                            "Custom"
+                        ],
+                        "value": 2,
+                        "name": "Custom component"
+                    },
+                    {
+                        "sets": [
+                            "Custom",
+                            "Dashboards"
+                        ],
+                        "value": 0.3,
+                        "name": "Sync API"
+                    }
+                ],
+                "dataLabels": {
+                    "style": {
+                        "textOutline": "none"
+                    }
+                }
+            }
+        ],
+        "accessibility": {
+            "point": {
+                "valueDescriptionFormat": "{#if (eq 1 point.sets.length)}Product: Highcharts {point.sets.0}{else}Products: {#each point.sets}Highcharts {this}{#unless @last} and {/unless}{/each}, Shared components: {point.name}{/if}"
+            },
+            "series": {
+                "describeSingleSeries": true,
+                "descriptionFormat": "Venn diagram with {series.points.length} relations."
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a Venn diagram that visually represents the relationships and intersections between various Highsoft products, including Highcharts Core, Stock, Maps, Gantt, and Dashboards. The chart is titled 'Highsoft products relationships' with a subtitle specifying the products involved. The Venn diagram uses custom colors for each set and intersection, and the data labels are styled with specific font sizes to enhance readability. The tooltip provides detailed information about the products and shared components when hovering over the sets, making it interactive and informative. Accessibility features are also included to ensure the chart is accessible to all users, with descriptions for points and series that describe the relationships in text format."
+}

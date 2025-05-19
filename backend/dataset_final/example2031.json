@@ -1,0 +1,165 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly temperature variations across four major cities using seasonal climate patterns",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "margin": [
+                50,
+                100,
+                80,
+                100
+            ]
+        },
+        "title": {
+            "text": "Average Monthly Temperatures",
+            "style": {
+                "fontSize": "22px",
+                "color": "#2c3e50",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#7f8c8d"
+                }
+            },
+            "gridLineWidth": 1,
+            "gridLineColor": "#ecf0f1"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "fontSize": "16px",
+                    "color": "#2c3e50"
+                }
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#7f8c8d"
+                },
+                "format": "{value}\u00b0"
+            },
+            "gridLineColor": "#ecf0f1"
+        },
+        "series": [
+            {
+                "name": "Tokyo",
+                "data": [
+                    7.1,
+                    7.3,
+                    10.2,
+                    15.0,
+                    19.1,
+                    22.4,
+                    26.0,
+                    27.3,
+                    24.1,
+                    18.5,
+                    13.7,
+                    9.5
+                ],
+                "color": "#e74c3c",
+                "marker": {
+                    "radius": 5
+                }
+            },
+            {
+                "name": "New York",
+                "data": [
+                    -0.5,
+                    0.7,
+                    5.2,
+                    11.5,
+                    17.3,
+                    22.1,
+                    25.0,
+                    24.3,
+                    20.2,
+                    14.0,
+                    8.3,
+                    2.1
+                ],
+                "color": "#2980b9",
+                "marker": {
+                    "radius": 5
+                }
+            },
+            {
+                "name": "Berlin",
+                "data": [
+                    -1.2,
+                    0.3,
+                    3.8,
+                    8.7,
+                    14.0,
+                    17.5,
+                    19.2,
+                    18.5,
+                    14.7,
+                    9.5,
+                    4.1,
+                    0.8
+                ],
+                "color": "#27ae60",
+                "marker": {
+                    "radius": 5
+                }
+            },
+            {
+                "name": "London",
+                "data": [
+                    4.2,
+                    4.5,
+                    6.1,
+                    8.9,
+                    12.3,
+                    15.7,
+                    17.5,
+                    17.1,
+                    14.6,
+                    10.8,
+                    7.1,
+                    5.0
+                ],
+                "color": "#8e44ad",
+                "marker": {
+                    "radius": 5
+                }
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical",
+            "itemStyle": {
+                "color": "#34495e",
+                "fontSize": "14px"
+            }
+        },
+        "tooltip": {
+            "shared": true,
+            "valueSuffix": "\u00b0C",
+            "headerFormat": "<b>{point.x}</b><br>"
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations (time-series) across four categorical locations. Synthetic temperature data maintains northern hemisphere seasonality (summer peaks, winter troughs) with realistic ranges: Tokyo (\u03bc=15.3\u00b0C, \u03c3=8.1), New York (\u03bc=12.4\u00b0C, \u03c3=9.8), Berlin (\u03bc=9.1\u00b0C, \u03c3=7.3), London (\u03bc=10.2\u00b0C, \u03c3=5.4). Spline charts effectively show smooth temperature transitions while maintaining data-ink ratio through clean gridlines. Color choices follow Cairo's principles of discriminability (4 distinct hues) and semantic consistency (warm colors for hotter cities). Vertical legend placement and shared tooltips reduce visual clutter while maintaining data accessibility."
+}

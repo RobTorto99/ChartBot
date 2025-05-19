@@ -1,0 +1,134 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Monthly Average Temperature'. The chart should have styled axes and labels with specific colors and font sizes. The data series should include three series with the names 'Series 1', 'Series 2', and 'Series 3' with their respective data. Custom colors should be used for the series, and additional configurations should include chart margins, background, and a legend with specific layout and styling.",
+    "visualization_code": {
+        "chart": {
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 50,
+            "marginRight": 50,
+            "marginBottom": 50,
+            "marginLeft": 50
+        },
+        "title": {
+            "text": "Monthly Average Temperature",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#FF6384"
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    95.6,
+                    54.4,
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1
+                ],
+                "color": "#36A2EB"
+            },
+            {
+                "name": "Series 3",
+                "data": [
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4,
+                    29.9
+                ],
+                "color": "#FFCE56"
+            }
+        ],
+        "legend": {
+            "layout": "vertical",
+            "align": "right",
+            "verticalAlign": "top",
+            "y": 50,
+            "padding": 3,
+            "itemMarginTop": 5,
+            "itemMarginBottom": 5,
+            "itemStyle": {
+                "lineHeight": "14px",
+                "color": "#666666",
+                "fontSize": "12px"
+            }
+        },
+        "plotOptions": {
+            "spline": {
+                "marker": {
+                    "enabled": true
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart with the title 'Monthly Average Temperature'. The chart includes three data series named 'Series 1', 'Series 2', and 'Series 3', each with their respective data points. The x-axis represents the months of the year, while the y-axis represents the temperature in degrees Celsius. The axes and labels are styled with specific colors and font sizes to enhance readability. Custom colors are applied to each series, and the legend is positioned vertically on the right side of the chart with specific padding and item margins. Additional configurations include setting the chart's background color and margins to ensure proper spacing and alignment."
+}

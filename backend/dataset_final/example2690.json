@@ -1,0 +1,146 @@
+{
+    "visualization_prompt": "Generate a treegraph showing hierarchical node relationships using Highcharts' fillSpace toggle capability",
+    "visualization_code": {
+        "chartOptions1": {
+            "chart": {
+                "type": "treegraph",
+                "fillSpace": true
+            },
+            "title": {
+                "text": "Organizational Hierarchy (fillSpace: true)"
+            },
+            "series": [
+                {
+                    "name": "Management Structure",
+                    "data": [
+                        {
+                            "id": "CEO",
+                            "collapsed": false
+                        },
+                        {
+                            "id": "CTO",
+                            "parent": "CEO",
+                            "collapsed": true
+                        },
+                        {
+                            "id": "CFO",
+                            "parent": "CEO"
+                        },
+                        {
+                            "id": "Engineering",
+                            "parent": "CTO"
+                        },
+                        {
+                            "id": "R&D",
+                            "parent": "CTO"
+                        },
+                        {
+                            "id": "Accounting",
+                            "parent": "CFO"
+                        },
+                        {
+                            "id": "Frontend",
+                            "parent": "Engineering"
+                        },
+                        {
+                            "id": "Backend",
+                            "parent": "Engineering"
+                        },
+                        {
+                            "id": "AI Lab",
+                            "parent": "R&D"
+                        },
+                        {
+                            "id": "Budget",
+                            "parent": "Accounting"
+                        }
+                    ],
+                    "marker": {
+                        "radius": 25
+                    },
+                    "dataLabels": {
+                        "format": "{point.id}"
+                    }
+                }
+            ]
+        },
+        "chartOptions2": {
+            "chart": {
+                "type": "treegraph",
+                "fillSpace": false
+            },
+            "title": {
+                "text": "Project Breakdown (fillSpace: false)"
+            },
+            "series": [
+                {
+                    "name": "Development Teams",
+                    "data": [
+                        {
+                            "id": "ProjectX",
+                            "collapsed": false
+                        },
+                        {
+                            "id": "UI/UX",
+                            "parent": "ProjectX",
+                            "collapsed": true
+                        },
+                        {
+                            "id": "API",
+                            "parent": "ProjectX"
+                        },
+                        {
+                            "id": "Wireframes",
+                            "parent": "UI/UX"
+                        },
+                        {
+                            "id": "Prototyping",
+                            "parent": "UI/UX"
+                        },
+                        {
+                            "id": "Endpoints",
+                            "parent": "API"
+                        },
+                        {
+                            "id": "Database",
+                            "parent": "API"
+                        },
+                        {
+                            "id": "Testing",
+                            "parent": "Endpoints"
+                        },
+                        {
+                            "id": "Cloud",
+                            "parent": "Database"
+                        },
+                        {
+                            "id": "Security",
+                            "parent": "Database"
+                        }
+                    ],
+                    "marker": {
+                        "radius": 25
+                    },
+                    "dataLabels": {
+                        "format": "{point.id}"
+                    }
+                }
+            ]
+        },
+        "controls": {
+            "buttons": [
+                {
+                    "action": "toggleCollapse",
+                    "target": "CTO",
+                    "label": "Toggle Tech Leadership"
+                },
+                {
+                    "action": "toggleCollapse",
+                    "target": "UI/UX",
+                    "label": "Toggle Design Teams"
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The treegraph visualization presents two hierarchical structures using synthetic organizational data. The first chart demonstrates space-optimized layout (fillSpace: true) with 10 nodes showing executive leadership structure, while the second (fillSpace: false) displays project team composition. Synthetic data maintains domain validity through realistic corporate hierarchies and technical team structures. Both implementations feature initial collapsed states for mid-level nodes (CTO/UI/UX) to enable user exploration. The treegraph format was selected for its ability to show parent-child relationships while conserving horizontal space through vertical depth. Color-free node markers and direct labeling adhere to Tufte's data-ink principles, while consistent marker sizes (radius=25) maintain Cairo's proportionality guidelines. The synthetic hierarchy contains 3 depth levels with 2-4 children per parent node, simulating real-world organizational spans of control."
+}

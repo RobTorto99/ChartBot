@@ -1,0 +1,130 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly data series comparisons using legend index reordering and synthetic trend-based datasets",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#f8f9fa",
+            "marginTop": 30
+        },
+        "title": {
+            "text": "Quarterly Sales Performance (2021-2023)",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (USD thousands)",
+                "style": {
+                    "color": "#34495e"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "12px"
+                },
+                "format": "{value:,.0f}"
+            }
+        },
+        "series": [
+            {
+                "name": "2021 Baseline",
+                "data": [
+                    85,
+                    78,
+                    92,
+                    105,
+                    118,
+                    132,
+                    127,
+                    140,
+                    155,
+                    148,
+                    136,
+                    120
+                ],
+                "color": "#7cb5ec",
+                "legendIndex": 3
+            },
+            {
+                "name": "2022 Growth",
+                "data": [
+                    95,
+                    89,
+                    108,
+                    122,
+                    138,
+                    157,
+                    145,
+                    162,
+                    178,
+                    165,
+                    151,
+                    135
+                ],
+                "color": "#434348",
+                "legendIndex": 2
+            },
+            {
+                "name": "2023 Forecast",
+                "data": [
+                    110,
+                    105,
+                    128,
+                    142,
+                    160,
+                    185,
+                    170,
+                    190,
+                    205,
+                    195,
+                    180,
+                    165
+                ],
+                "color": "#90ed7d",
+                "legendIndex": 1
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#2c3e50",
+                "fontSize": "12px"
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "grouping": false,
+                "pointPadding": 0.25,
+                "borderRadius": 3
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three temporal series (2021-2023) with 12 monthly observations each. Synthetic data maintains domain consistency through progressive annual growth (\u03bc2021=118.5k, \u03c3=25.4; \u03bc2022=138.3k, \u03c3=27.1; \u03bc2023=168.3k, \u03c3=32.6) with seasonal patterns showing Q2 peaks and Q4 declines. Column chart selection maximizes data-ink ratio by emphasizing quantitative comparisons through clear vertical encoding. Legend ordering (reverse chronological) follows Cairo's perceptual sequence principles. Color choices maintain 3:1 contrast ratio while avoiding spectral gradients. Trend lines maintain 15-20% YoY growth with realistic variance (\u00b18-12%), anchored to financial reporting standards."
+}

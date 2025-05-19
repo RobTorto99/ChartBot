@@ -1,0 +1,139 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Change mapping.pitch.within'. The chart should have two y-axes, each with a height of 40% and positioned at the top and bottom of the chart. The x-axis should have a crosshair enabled. The chart should include three data series: the first series should be mapped to the first y-axis, and the second and third series should be mapped to the second y-axis. The chart should also include sonification options with a duration of 7000 milliseconds. The chart should have a subtitle explaining the mapping within the chart, y-axis, or series. The chart should have custom styling for the axes and labels, including specific colors and font sizes. Additionally, the chart should have buttons to change the pitch mapping within the chart, y-axis, or series.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline"
+        },
+        "title": {
+            "text": "Change mapping.pitch.within",
+            "style": {
+                "color": "#333",
+                "fontSize": "20px"
+            }
+        },
+        "subtitle": {
+            "text": "Are we mapping within the chart, the yAxis, or each series?",
+            "style": {
+                "color": "#666",
+                "fontSize": "16px"
+            }
+        },
+        "sonification": {
+            "duration": 7000
+        },
+        "plotOptions": {
+            "series": {
+                "marker": {
+                    "enabled": false
+                }
+            }
+        },
+        "yAxis": [
+            {
+                "height": "40%",
+                "top": "0%",
+                "offset": 0,
+                "tickAmount": 2,
+                "lineWidth": 2,
+                "title": {
+                    "text": "Axis 1",
+                    "style": {
+                        "color": "#008000",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#008000",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            {
+                "height": "40%",
+                "top": "60%",
+                "offset": 0,
+                "tickAmount": 2,
+                "lineWidth": 2,
+                "title": {
+                    "text": "Axis 2",
+                    "style": {
+                        "color": "#FF0000",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#FF0000",
+                        "fontSize": "12px"
+                    }
+                }
+            }
+        ],
+        "xAxis": {
+            "crosshair": {
+                "enabled": true
+            },
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    50,
+                    55,
+                    60,
+                    65,
+                    80,
+                    85,
+                    90
+                ],
+                "color": "#008000"
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    8,
+                    9,
+                    10,
+                    13,
+                    15,
+                    16,
+                    17
+                ],
+                "yAxis": 1,
+                "color": "#FF0000"
+            },
+            {
+                "name": "Series 3",
+                "data": [
+                    2,
+                    3,
+                    4,
+                    4,
+                    4,
+                    5,
+                    5
+                ],
+                "yAxis": 1,
+                "color": "#FFA500"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333",
+                "fontSize": "12px"
+            }
+        },
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart with a title 'Change mapping.pitch.within' and a subtitle explaining the mapping within the chart, y-axis, or series. The chart includes two y-axes, each with a height of 40% and positioned at the top and bottom of the chart. The x-axis has a crosshair enabled. The chart contains three data series: 'Series 1' mapped to the first y-axis and 'Series 2' and 'Series 3' mapped to the second y-axis. Each series has a custom color assigned. The chart also includes sonification options with a duration of 7000 milliseconds. The axes and labels have custom styling with specific colors and font sizes. The legend is enabled with custom styling for the items. Additionally, the chart has buttons to change the pitch mapping within the chart, y-axis, or series, which are handled by the JavaScript function 'within'."
+}

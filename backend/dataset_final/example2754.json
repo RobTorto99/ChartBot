@@ -1,0 +1,132 @@
+{
+    "visualization_prompt": "Generate a dual-axis line chart showing monthly correlation between average temperature (\u00b0C) and precipitation (mm) using contrasting color encoding and temporal alignment",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "line",
+                "marginRight": 80,
+                "renderTo": "container"
+            },
+            "title": {
+                "text": "2023 Climate Patterns - Temperature vs Precipitation",
+                "style": {
+                    "fontSize": "18px",
+                    "color": "#2d3436"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#636e72",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "yAxis": [
+                {
+                    "title": {
+                        "text": "Temperature (\u00b0C)",
+                        "style": {
+                            "color": "#2c5c94",
+                            "fontWeight": "bold"
+                        }
+                    },
+                    "labels": {
+                        "style": {
+                            "color": "#2c5c94",
+                            "fontSize": "12px"
+                        }
+                    }
+                },
+                {
+                    "opposite": true,
+                    "title": {
+                        "text": "Precipitation (mm)",
+                        "style": {
+                            "color": "#4a9d4a",
+                            "fontWeight": "bold"
+                        }
+                    },
+                    "labels": {
+                        "style": {
+                            "color": "#4a9d4a",
+                            "fontSize": "12px"
+                        }
+                    }
+                }
+            ],
+            "series": [
+                {
+                    "name": "Avg Temperature",
+                    "data": [
+                        5.2,
+                        6.8,
+                        11.4,
+                        16.1,
+                        20.5,
+                        25.3,
+                        28.9,
+                        28.4,
+                        23.7,
+                        18.2,
+                        12.5,
+                        7.1
+                    ],
+                    "color": "#2c5c94",
+                    "yAxis": 0,
+                    "marker": {
+                        "symbol": "circle",
+                        "radius": 4
+                    }
+                },
+                {
+                    "name": "Precipitation",
+                    "data": [
+                        45,
+                        42,
+                        55,
+                        68,
+                        72,
+                        85,
+                        92,
+                        88,
+                        75,
+                        63,
+                        58,
+                        49
+                    ],
+                    "color": "#4a9d4a",
+                    "yAxis": 1,
+                    "dashStyle": "ShortDot",
+                    "marker": {
+                        "symbol": "diamond",
+                        "radius": 5
+                    }
+                }
+            ],
+            "legend": {
+                "align": "center",
+                "verticalAlign": "bottom",
+                "itemStyle": {
+                    "color": "#2d3436",
+                    "fontSize": "14px"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two quantitative variables (temperature in \u00b0C and precipitation in mm) measured over a categorical temporal axis (months). Synthetic temperature data follows a sinusoidal pattern (\u03bc=16.5\u00b0C, \u03c3=8.2\u00b0C) mimicking mid-latitude seasonality, while precipitation exhibits bimodal distribution (\u03bc=65.8mm, \u03c3=16.3mm) with spring/autumn peaks. The dual-axis line chart maximizes data-ink ratio by eliminating gridlines while maintaining Tufte's principle of proportional ink. Cairo's perceptual principles are applied through position encoding for temporal data, length encoding for quantitative values, and hue differentiation (blue=thermal, green=hydrological) for immediate axis association. Secondary axis alignment preserves relational context between climate variables while respecting scale independence. Temperature trend shows expected summer peak (JUL:28.9\u00b0C) while precipitation demonstrates realistic autumn persistence (OCT:63mm)."
+}

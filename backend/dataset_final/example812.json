@@ -1,0 +1,121 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart titled 'Daily Steps Count'. The x-axis should represent the days of the week, and the y-axis should represent the number of steps. There should be two series: one for Emma's daily steps and another as an xRange series showing her total steps for the week. The chart should have custom colors for each series and styled axes and labels.",
+    "visualization_code": {
+        "chart": {
+            "type": "column"
+        },
+        "title": {
+            "text": "Daily Steps Count"
+        },
+        "xAxis": {
+            "categories": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+            ],
+            "accessibility": {
+                "description": "Day of the week"
+            },
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px",
+                    "fontFamily": "Verdana, sans-serif"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Steps",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px",
+                    "fontFamily": "Verdana, sans-serif"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px",
+                    "fontFamily": "Verdana, sans-serif"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Emma",
+                "data": [
+                    9438,
+                    4201,
+                    10023,
+                    9204,
+                    10392,
+                    7201,
+                    8039
+                ],
+                "color": "#3A3691",
+                "dataLabels": {
+                    "enabled": true,
+                    "style": {
+                        "color": "#ffffff",
+                        "fontSize": "12px",
+                        "fontWeight": "bold"
+                    }
+                }
+            },
+            {
+                "type": "xrange",
+                "showInLegend": false,
+                "accessibility": {
+                    "exposeAsGroupOnly": true,
+                    "descriptionFormat": "Emma did not reach her step goal which was 70000 steps in one week. She walked {sum} steps."
+                },
+                "name": "Total step count",
+                "color": "#009AFA",
+                "data": [
+                    {
+                        "x": 0,
+                        "x2": 6,
+                        "y": 17000,
+                        "partialFill": 0.83
+                    }
+                ],
+                "tooltip": {
+                    "headerFormat": "",
+                    "pointFormat": "<b>Steps walked this week:</b> {sum}/70000"
+                },
+                "dataLabels": {
+                    "color": "#ffffff",
+                    "enabled": true,
+                    "format": "{sum} / 70000 steps this week.",
+                    "verticalAlign": "top",
+                    "style": {
+                        "fontSize": "12px",
+                        "fontWeight": "bold"
+                    }
+                }
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#555",
+                "fontSize": "12px",
+                "fontFamily": "Verdana, sans-serif"
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "borderWidth": 0
+            }
+        },
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a column chart titled 'Daily Steps Count'. The x-axis represents the days of the week with custom styled labels, and the y-axis represents the number of steps with a styled title and labels. There are two series: one for Emma's daily steps, represented by a column chart with a custom color, and another as an xRange series showing her total steps for the week, which is styled with a different color. The xRange series is configured to be accessible, with a description format that includes the total steps walked. Both series have data labels enabled with custom styles. The legend is also styled with a custom font and color. Additional configurations include disabling the credits and setting the series border width to zero."
+}

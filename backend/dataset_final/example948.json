@@ -1,0 +1,155 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart displaying the monthly average temperature for four cities: Tokyo, New York, Berlin, and London. The chart should have a title 'Monthly Average Temperature' and a subtitle 'Source: WorldClimate.com'. The x-axis should represent the months from January to December, and the y-axis should represent the temperature in degrees Celsius. The chart should include custom colors for each series, and the legend should be styled with a title and a note about hiding series on click. Additionally, the chart should have a tooltip displaying the temperature value with the suffix '\u00b0C'.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline"
+        },
+        "title": {
+            "text": "Monthly Average Temperature"
+        },
+        "subtitle": {
+            "text": "Source: WorldClimate.com"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "plotLines": [
+                {
+                    "value": 0,
+                    "width": 1,
+                    "color": "#808080"
+                }
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "tooltip": {
+            "valueSuffix": "\u00b0C"
+        },
+        "legend": {
+            "title": {
+                "text": "City<br/><span style=\"font-size: 9px; color: #666; font-weight: normal\">(Click to hide)</span>",
+                "style": {
+                    "fontStyle": "italic"
+                }
+            },
+            "layout": "vertical",
+            "align": "right",
+            "verticalAlign": "top",
+            "x": -10,
+            "y": 100
+        },
+        "series": [
+            {
+                "name": "Tokyo",
+                "data": [
+                    7.0,
+                    6.9,
+                    9.5,
+                    14.5,
+                    18.2,
+                    21.5,
+                    25.2,
+                    26.5,
+                    23.3,
+                    18.3,
+                    13.9,
+                    9.6
+                ],
+                "color": "#FF7F50"
+            },
+            {
+                "name": "New York",
+                "data": [
+                    -0.2,
+                    0.8,
+                    5.7,
+                    11.3,
+                    17.0,
+                    22.0,
+                    24.8,
+                    24.1,
+                    20.1,
+                    14.1,
+                    8.6,
+                    2.5
+                ],
+                "color": "#6495ED"
+            },
+            {
+                "name": "Berlin",
+                "data": [
+                    -0.9,
+                    0.6,
+                    3.5,
+                    8.4,
+                    13.5,
+                    17.0,
+                    18.6,
+                    17.9,
+                    14.3,
+                    9.0,
+                    3.9,
+                    1.0
+                ],
+                "color": "#9ACD32"
+            },
+            {
+                "name": "London",
+                "data": [
+                    3.9,
+                    4.2,
+                    5.7,
+                    8.5,
+                    11.9,
+                    15.2,
+                    17.0,
+                    16.6,
+                    14.2,
+                    10.3,
+                    6.6,
+                    4.8
+                ],
+                "color": "#FF69B4"
+            }
+        ],
+        "colors": [
+            "#FF7F50",
+            "#6495ED",
+            "#9ACD32",
+            "#FF69B4"
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart that visualizes the monthly average temperature for four cities: Tokyo, New York, Berlin, and London. The chart includes a title and subtitle, with the x-axis representing the months and the y-axis representing the temperature in degrees Celsius. The x-axis and y-axis labels are styled with a dark color and a specific font size. The y-axis also includes a plot line at 0\u00b0C. The tooltip displays the temperature value with the suffix '\u00b0C'. The legend is styled with a title and a note about hiding series on click, and it is positioned vertically on the right side of the chart. Each series in the chart is assigned a custom color, and the colors are also specified in the 'colors' array to ensure consistency. This configuration ensures a clear and informative visualization of the temperature data across the specified cities and months."
+}

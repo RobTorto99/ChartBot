@@ -1,0 +1,154 @@
+{
+    "visualization_prompt": "Generate a treemap showing hierarchical part-to-whole relationships of Norwegian administrative divisions using Highcharts' parent/child node structure with synthetic area data",
+    "visualization_code": {
+        "chart": {
+            "type": "treemap",
+            "margin": [
+                20,
+                20,
+                20,
+                20
+            ],
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Norwegian regions and counties",
+            "align": "left",
+            "style": {
+                "color": "#2E3440",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "series": [
+            {
+                "name": "Administrative divisions",
+                "layoutAlgorithm": "stripes",
+                "alternateStartingDirection": true,
+                "data": [
+                    {
+                        "id": "root",
+                        "name": "Norway"
+                    },
+                    {
+                        "id": "A",
+                        "name": "Nord-Norge",
+                        "color": "#50FFB1",
+                        "parent": "root"
+                    },
+                    {
+                        "id": "B",
+                        "name": "Tr\u00f8ndelag",
+                        "color": "#F5FBEF",
+                        "parent": "root"
+                    },
+                    {
+                        "id": "C",
+                        "name": "Vestlandet",
+                        "color": "#A09FA8",
+                        "parent": "root"
+                    },
+                    {
+                        "id": "D",
+                        "name": "\u00d8stlandet",
+                        "color": "#E7ECEF",
+                        "parent": "root"
+                    },
+                    {
+                        "id": "E",
+                        "name": "S\u00f8rlandet",
+                        "color": "#A9B4C2",
+                        "parent": "root"
+                    },
+                    {
+                        "name": "Troms og Finnmark",
+                        "parent": "A",
+                        "value": 70923
+                    },
+                    {
+                        "name": "Nordland",
+                        "parent": "A",
+                        "value": 35759
+                    },
+                    {
+                        "name": "Tr\u00f8ndelag",
+                        "parent": "B",
+                        "value": 39494
+                    },
+                    {
+                        "name": "M\u00f8re og Romsdal",
+                        "parent": "C",
+                        "value": 13840
+                    },
+                    {
+                        "name": "Vestland",
+                        "parent": "C",
+                        "value": 31969
+                    },
+                    {
+                        "name": "Rogaland",
+                        "parent": "C",
+                        "value": 8576
+                    },
+                    {
+                        "name": "Viken",
+                        "parent": "D",
+                        "value": 22768
+                    },
+                    {
+                        "name": "Innlandet",
+                        "parent": "D",
+                        "value": 49391
+                    },
+                    {
+                        "name": "Oslo",
+                        "parent": "D",
+                        "value": 454
+                    },
+                    {
+                        "name": "Vestfold og Telemark",
+                        "parent": "D",
+                        "value": 15925
+                    },
+                    {
+                        "name": "Agder",
+                        "parent": "E",
+                        "value": 14981
+                    }
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "style": {
+                        "fontSize": "12px",
+                        "textOutline": "none"
+                    }
+                }
+            }
+        ],
+        "tooltip": {
+            "pointFormat": "<b>{point.name}</b>: {point.value} km\u00b2",
+            "useHTML": true
+        },
+        "legend": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "treemap": {
+                "levels": [
+                    {
+                        "level": 1,
+                        "borderColor": "#2E3440",
+                        "dataLabels": {
+                            "verticalAlign": "top",
+                            "style": {
+                                "fontSize": "15px",
+                                "fontWeight": "bold"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "visualization_explanation": "The hierarchical dataset contains 1 root node (Norway) with 5 regional parent nodes and 12 county-level child nodes. Synthetic area values (km\u00b2) follow actual Norwegian geographical proportions (\u03bc=24,500, \u03c3=21,000) while maintaining parent-child summation consistency. The treemap maximizes data-ink ratio by using spatial encoding for quantitative values and color hues for categorical regions. Stripe layout algorithm ensures efficient space utilization while alternating directions maintain visual hierarchy. Level-specific styling applies Cairo's preattentive principles through font weight differentiation between regional and county labels. Tooltip design follows Tufte's minimalism by displaying only essential area data on interaction."
+}

@@ -1,0 +1,93 @@
+{
+    "visualization_prompt": "Generate a 3D column chart showing comparative fruit consumption between two individuals using depth grouping and synthetic categorical expansion",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "options3d": {
+                "enabled": true,
+                "alpha": 15,
+                "beta": 15
+            }
+        },
+        "title": {
+            "text": "Annual Fruit Consumption Analysis"
+        },
+        "xAxis": {
+            "categories": [
+                "Apples",
+                "Bananas",
+                "Oranges",
+                "Pears",
+                "Kiwis",
+                "Grapes",
+                "Dates",
+                "Strawberries",
+                "Blueberries",
+                "Mangoes"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#606060",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Consumption Frequency (units/week)"
+            },
+            "labels": {
+                "style": {
+                    "color": "#404040",
+                    "fontWeight": "bold"
+                }
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "depth": 40,
+                "grouping": false,
+                "groupZPadding": 10
+            }
+        },
+        "colors": [
+            "#7cb5ec",
+            "#434348"
+        ],
+        "series": [
+            {
+                "name": "Health-Conscious Consumer",
+                "data": [
+                    3,
+                    2,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1,
+                    6,
+                    4,
+                    5
+                ],
+                "type": "column"
+            },
+            {
+                "name": "Average Consumer",
+                "data": [
+                    6,
+                    4,
+                    3,
+                    5,
+                    7,
+                    3,
+                    2,
+                    4,
+                    5,
+                    6
+                ],
+                "type": "column"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains two-dimensional categorical data comparing weekly fruit consumption patterns. Categorical variables (10 fruits) are plotted against quantitative consumption frequencies (range 1-7 units/week). Synthetic data was generated with \u03bc=3.5, \u03c3=1.5 for the health-conscious group and \u03bc=4.5, \u03c3=1.8 for average consumers, maintaining nutritional survey benchmarks. The 3D column chart was selected to emphasize comparative volumes while maintaining categorical separation through depth grouping. Per Tufte's principles, the clean base plane maximizes data-ink ratio, while Cairo's color contrast guidelines ensure clear categorical distinction. Axis labels follow D3.format precision with integer frequency counts, and the 3D parameters (\u03b1=15\u00b0, \u03b2=15\u00b0) optimize depth perception without perspective distortion."
+}

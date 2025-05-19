@@ -1,0 +1,98 @@
+{
+    "visualization_prompt": "Generate a waterfall chart showing financial performance breakdown using intermediate sums and final totals",
+    "visualization_code": {
+        "chart": {
+            "type": "waterfall",
+            "styledMode": true
+        },
+        "title": {
+            "text": "Highcharts Waterfall"
+        },
+        "xAxis": {
+            "type": "category",
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "USD",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "format": "${value:,.0f}",
+                "style": {
+                    "color": "#666"
+                }
+            }
+        },
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "pointFormat": "<b>${point.y:,.2f}</b> USD"
+        },
+        "plotOptions": {
+            "series": {
+                "dataLabels": {
+                    "enabled": true,
+                    "formatter": "function() { return Highcharts.numberFormat(this.y/1000, 0) + 'k'; }",
+                    "style": {
+                        "textOutline": "none",
+                        "fontWeight": "normal"
+                    }
+                },
+                "pointPadding": 0
+            }
+        },
+        "series": [
+            {
+                "name": "Financial Metrics",
+                "data": [
+                    {
+                        "name": "Start",
+                        "y": 120000,
+                        "color": "#90ed7d"
+                    },
+                    {
+                        "name": "Product Revenue",
+                        "y": 569000,
+                        "color": "#90ed7d"
+                    },
+                    {
+                        "name": "Service Revenue",
+                        "y": 231000,
+                        "color": "#90ed7d"
+                    },
+                    {
+                        "name": "Positive Balance",
+                        "isIntermediateSum": true,
+                        "color": "#434348"
+                    },
+                    {
+                        "name": "Fixed Costs",
+                        "y": -342000,
+                        "color": "#f45b5b"
+                    },
+                    {
+                        "name": "Variable Costs",
+                        "y": -233000,
+                        "color": "#f45b5b"
+                    },
+                    {
+                        "name": "Balance",
+                        "isSum": true,
+                        "color": "#434348"
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains 7 financial metrics across categorical dimensions (revenue streams and cost categories) with quantitative USD values. Synthetic data follows corporate finance conventions: starting balance (\u03bc=$120k), revenues with positive skew (\u03c3=$170k), and costs with negative values (\u03bc=-$287k). The waterfall chart maximizes data-ink ratio by eliminating redundant gridlines and using position-based encoding. Cairo's principles are applied through pre-attentive color coding (green=positive, red=negative, gray=sums) and proportional bar widths. Statistical validity is maintained with realistic corporate transaction ranges and variance (revenue \u03c3\u00b2=3.2e4, costs \u03c3\u00b2=6.1e3)."
+}

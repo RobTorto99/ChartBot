@@ -1,0 +1,109 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the following specifications: Chart type: spline, Chart title: Monthly Average Temperature, Axes and labels styling: Use a dark gray color (#333333) for axis labels and titles, with a font size of 12px. The title should be bold and have a font size of 16px. Data series: The series should be named 'Temperature' and contain the data provided. Custom colors: Use a gradient from blue to green for the series. Additional configurations: Set the chart background to light gray (#f0f0f0), add a legend at the bottom of the chart, and set the chart margins to 50px on all sides.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "borderWidth": 1,
+            "plotBorderWidth": 1,
+            "backgroundColor": "#f0f0f0",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Monthly Average Temperature",
+            "style": {
+                "fontSize": "16px",
+                "fontWeight": "bold",
+                "color": "#333333"
+            },
+            "floating": true,
+            "align": "left",
+            "x": 80,
+            "y": 30
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "12px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Temperature",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "x2": 0,
+                        "y1": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#0000FF"
+                        ],
+                        [
+                            1,
+                            "#00FF00"
+                        ]
+                    ]
+                }
+            }
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart displaying the 'Monthly Average Temperature'. The chart type is set to 'spline', and the title is styled with a bold font and positioned slightly offset from the top-left corner. The x-axis represents the months of the year, while the y-axis represents the temperature in degrees Celsius. Both axes are styled with dark gray labels and titles, each set to a font size of 12px. The data series is named 'Temperature' and includes the given temperature data points, with a custom color gradient from blue to green applied to the series. The chart background is set to light gray, and the legend is positioned at the bottom center of the chart. Additionally, the chart margins are set to 50px on all sides to provide ample space around the chart area."
+}

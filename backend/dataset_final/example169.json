@@ -1,0 +1,76 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the following specifications: Chart type: column, Chart title: Monthly Sales Data, Axes and labels styling: Title color: #434348, Title font size: 3em, Title font weight: bold, Title letter spacing: 0.3em, Subtitle font family: Courier New, Subtitle font style: italic, Subtitle color: #7cb5ec, Caption font family: Courier New, Caption font style: italic, Caption color: green, Data series: Series name: Sales, Data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4], Custom colors: Not specified, Additional configurations: Chart margins: top: 80, bottom: 80, background: white, legend: enabled with default settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "styledMode": true,
+            "marginTop": 80,
+            "marginBottom": 80,
+            "backgroundColor": "white"
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#434348",
+                "fontSize": "3em",
+                "fontWeight": "bold",
+                "letterSpacing": "0.3em"
+            }
+        },
+        "subtitle": {
+            "text": "... and subtitle styles ...",
+            "style": {
+                "fontFamily": "Courier New, monospace",
+                "fontStyle": "italic",
+                "color": "#7cb5ec"
+            }
+        },
+        "caption": {
+            "text": "... and this is the green caption text",
+            "style": {
+                "fontFamily": "Courier New, monospace",
+                "fontStyle": "italic",
+                "color": "green"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ]
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ]
+            }
+        ],
+        "legend": {
+            "enabled": true
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart with specific styling for the title, subtitle, and caption. The chart title is styled with a bold font, increased size, and a unique letter spacing to make it stand out. The subtitle and caption are styled with a monospace font and italicized, with different colors to differentiate them. The x-axis categories represent the months of the year, and the data series named 'Sales' contains monthly sales figures. The chart includes additional configurations such as margins to provide space around the chart and a white background for better readability. The legend is enabled to provide context for the data series."
+}

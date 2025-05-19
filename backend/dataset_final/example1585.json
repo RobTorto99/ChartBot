@@ -1,0 +1,102 @@
+{
+    "visualization_prompt": "Generate a column chart showing atmospheric layer composition using percentage stacking with annotated height ranges and interactive tooltips",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "white"
+        },
+        "title": {
+            "text": "Earth's Atmospheric Composition",
+            "style": {
+                "fontSize": "20px",
+                "color": "#265670"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Atmospheric Layers"
+            ],
+            "visible": false
+        },
+        "yAxis": {
+            "visible": false,
+            "min": 0
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "percent",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{series.name}: {point.series.userOptions.height}",
+                    "color": "black",
+                    "style": {
+                        "textOutline": "none"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Exosphere",
+                "data": [
+                    1
+                ],
+                "height": "up to 10,000km",
+                "info": "Upper atmospheric boundary extending to space vacuum<br>Temperature range: 0\u00b0C to 1,700\u00b0C"
+            },
+            {
+                "name": "Ionosphere",
+                "data": [
+                    1
+                ],
+                "height": "48-965km",
+                "info": "Electron-rich layer enabling radio communications<br>Contains auroras and spacecraft orbits"
+            },
+            {
+                "name": "Thermosphere",
+                "data": [
+                    1
+                ],
+                "height": "85-600km",
+                "info": "Absorbs high-energy solar radiation<br>Temperatures reach 2,500\u00b0C"
+            },
+            {
+                "name": "Mesosphere",
+                "data": [
+                    1
+                ],
+                "height": "50-85km",
+                "info": "Meteor ablation layer<br>Temperature decreases with altitude"
+            },
+            {
+                "name": "Stratosphere",
+                "data": [
+                    1
+                ],
+                "height": "14.8-64.8km",
+                "info": "Contains ozone layer<br>Temperature inversion layer"
+            },
+            {
+                "name": "Troposphere",
+                "data": [
+                    1
+                ],
+                "height": "0-14.5km",
+                "info": "Weather layer containing 75-80% atmospheric mass<br>Temperature decreases with altitude"
+            }
+        ],
+        "colors": [
+            "#265670",
+            "#4d7086",
+            "#708b9d",
+            "#93a6b5",
+            "#b6c3cd",
+            "#dae1e6"
+        ],
+        "tooltip": {
+            "headerFormat": null,
+            "pointFormat": "{point.series.userOptions.info}"
+        }
+    },
+    "visualization_explanation": "The dataset represents a one-dimensional composition of atmospheric layers with ordinal height data. Each layer's proportional representation uses synthetic unity values (all 1) to enable percentage stacking visualization, while height ranges and thermal properties derive from NASA's atmospheric models. The categorical ordering follows atmospheric stratification from space downward. Chart design employs Tufte's data-ink principles by eliminating non-essential axes and gridlines, focusing attention on the labeled composition bands. Cairo's perceptual principles manifest through color progression from dark (space-facing layers) to light (Earth-surface layers), creating intuitive depth perception. The 6-color palette maintains discriminability while ensuring print grayscale viability. Interactive tooltips provide supplemental physics data without visual clutter, adhering to Shneiderman's visual information-seeking mantra."
+}

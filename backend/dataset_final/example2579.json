@@ -1,0 +1,98 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly sales performance trends using synthetic data with seasonal variation and year-end surge patterns",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "spline",
+                "marginRight": 20,
+                "backgroundColor": "#f8f9fa"
+            },
+            "title": {
+                "text": "Monthly Sales Performance (2023)",
+                "style": {
+                    "fontSize": "18px",
+                    "color": "#2c3e50"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#34495e",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Revenue (USD thousands)",
+                    "style": {
+                        "color": "#2980b9",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "format": "${value}K",
+                    "style": {
+                        "color": "#2c3e50"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Enterprise Sales",
+                    "data": [
+                        85,
+                        92,
+                        115,
+                        124,
+                        158,
+                        172,
+                        165,
+                        188,
+                        210,
+                        195,
+                        230,
+                        275
+                    ],
+                    "color": "#3498db",
+                    "allowPointSelect": true
+                }
+            ],
+            "plotOptions": {
+                "series": {
+                    "marker": {
+                        "radius": 4
+                    },
+                    "point": {
+                        "events": {
+                            "unselect": "function() {\n  const chart = this.series.chart,\n        text = `<strong>${this.category}</strong>: $${this.y}K`;\n  \n  if (!chart.unselectLabel) {\n    chart.unselectLabel = chart.renderer.label(text, 100, 70)\n      .attr({\n        padding: 12,\n        r: 8,\n        fill: '#e74c3c',\n        zIndex: 5\n      })\n      .css({\n        color: 'white',\n        fontWeight: 'bold'\n      })\n      .add();\n  } else {\n    chart.unselectLabel.attr({ text: text });\n  }\n}"
+                        }
+                    }
+                }
+            },
+            "legend": {
+                "align": "right",
+                "verticalAlign": "top"
+            },
+            "tooltip": {
+                "valuePrefix": "$",
+                "valueSuffix": "K"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate time series with 12 monthly observations of synthetic sales data. Temporal variables use ordinal month categories with ratio-scale monetary values. Synthetic data (\u03bc=166.9K, \u03c3=57.2K) demonstrates 15% YTD growth with Q4 holiday surge (+19% Nov-Dec) and summer seasonality. The spline chart maximizes data-ink ratio per Tufte by eliminating gridlines while maintaining Cairo's proportional ink principle through area-under-curve encoding. The red annotation label employs pre-attentive color coding (\u0394E > 20 from background) for quick visual\u5b9a\u4f4d of deselected points. Interactive elements follow Nielsen's usability heuristics with immediate feedback on point selection states."
+}

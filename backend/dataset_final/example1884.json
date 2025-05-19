@@ -1,0 +1,163 @@
+{
+    "visualization_prompt": "Generate a treemap showing hierarchical administrative divisions of Norway using Highcharts' parent-child node structure with striped layout algorithm",
+    "visualization_code": {
+        "chart": {
+            "type": "treemap",
+            "backgroundColor": "#FFFFFF",
+            "margin": [
+                20,
+                20,
+                20,
+                20
+            ]
+        },
+        "title": {
+            "text": "Norwegian regions and counties",
+            "align": "left",
+            "style": {
+                "color": "#2A3439",
+                "fontSize": "20px",
+                "fontFamily": "Liberation Sans"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://snl.no/Norge' target='_blank'>SNL</a>",
+            "align": "left",
+            "style": {
+                "color": "#5A646A"
+            }
+        },
+        "series": [
+            {
+                "data": [
+                    {
+                        "id": "root",
+                        "name": "Norway",
+                        "value": 385207
+                    },
+                    {
+                        "id": "A",
+                        "name": "Nord-Norge",
+                        "parent": "root",
+                        "color": "#50FFB1"
+                    },
+                    {
+                        "id": "B",
+                        "name": "Tr\u00f8ndelag",
+                        "parent": "root",
+                        "color": "#F5FBEF"
+                    },
+                    {
+                        "id": "C",
+                        "name": "Vestlandet",
+                        "parent": "root",
+                        "color": "#A09FA8"
+                    },
+                    {
+                        "id": "D",
+                        "name": "\u00d8stlandet",
+                        "parent": "root",
+                        "color": "#E7ECEF"
+                    },
+                    {
+                        "id": "E",
+                        "name": "S\u00f8rlandet",
+                        "parent": "root",
+                        "color": "#A9B4C2"
+                    },
+                    {
+                        "name": "Troms og Finnmark",
+                        "parent": "A",
+                        "value": 70923
+                    },
+                    {
+                        "name": "Nordland",
+                        "parent": "A",
+                        "value": 35759
+                    },
+                    {
+                        "name": "Tr\u00f8ndelag",
+                        "parent": "B",
+                        "value": 39494
+                    },
+                    {
+                        "name": "M\u00f8re og Romsdal",
+                        "parent": "C",
+                        "value": 13840
+                    },
+                    {
+                        "name": "Vestland",
+                        "parent": "C",
+                        "value": 31969
+                    },
+                    {
+                        "name": "Rogaland",
+                        "parent": "C",
+                        "value": 8576
+                    },
+                    {
+                        "name": "Viken",
+                        "parent": "D",
+                        "value": 22768
+                    },
+                    {
+                        "name": "Innlandet",
+                        "parent": "D",
+                        "value": 49391
+                    },
+                    {
+                        "name": "Oslo",
+                        "parent": "D",
+                        "value": 454
+                    },
+                    {
+                        "name": "Vestfold og Telemark",
+                        "parent": "D",
+                        "value": 15925
+                    },
+                    {
+                        "name": "Agder",
+                        "parent": "E",
+                        "value": 14981
+                    }
+                ],
+                "dataLabels": {
+                    "style": {
+                        "color": "#2A2A2A",
+                        "textOutline": "none",
+                        "fontSize": "13px"
+                    }
+                }
+            }
+        ],
+        "plotOptions": {
+            "treemap": {
+                "layoutAlgorithm": "stripes",
+                "alternateStartingDirection": true,
+                "levels": [
+                    {
+                        "level": 1,
+                        "layoutAlgorithm": "sliceAndDice",
+                        "dataLabels": {
+                            "enabled": true,
+                            "align": "left",
+                            "verticalAlign": "top",
+                            "style": {
+                                "fontSize": "15px",
+                                "fontWeight": "bold"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "tooltip": {
+            "useHTML": true,
+            "pointFormat": "The area of <b>{point.name}</b> is <b>{point.value} km<sup>2</sup></b>"
+        },
+        "legend": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "This hierarchical treemap visualizes Norway's administrative structure through two data dimensions: categorical regions (level 1) and numerical area values (counties). Synthetic data preserves real-world geographic proportions (total area 385,207 km\u00b2) with regional distributions following official statistics (\u00b15% variance). The treemap maximizes data-ink ratio by eliminating legend (direct labels) and using Cairo's preattentive color principles for regional distinction. Striped layout maintains proportional relationships while slice-and-dice labeling ensures parent-level visibility. Value ranges (454-70,923 km\u00b2) reflect actual county sizes, with Oslo's outlier status preserved for visual contrast. Tooltip reinforcement follows Tufte's principle of redundant data encoding."
+}

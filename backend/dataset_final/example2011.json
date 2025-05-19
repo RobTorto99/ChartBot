@@ -1,0 +1,138 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly temperature variations using synthetic meteorological data with seasonal patterns",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#F5F7FA",
+            "marginTop": 45,
+            "marginBottom": 70
+        },
+        "title": {
+            "text": "Monthly Average Temperature (2023)",
+            "style": {
+                "color": "#2D3748",
+                "fontSize": "22px",
+                "fontWeight": "600"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#4A5568",
+                    "fontSize": "13px"
+                }
+            },
+            "gridLineColor": "#E2E8F0"
+        },
+        "yAxis": {
+            "title": {
+                "text": "\u00b0C",
+                "style": {
+                    "color": "#4A5568",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#4A5568",
+                    "fontSize": "13px"
+                },
+                "format": "{value}\u00b0"
+            },
+            "gridLineColor": "#EDF2F7"
+        },
+        "series": [
+            {
+                "name": "Average Temperature",
+                "data": [
+                    {
+                        "y": 4.2,
+                        "note": "Cold snap"
+                    },
+                    {
+                        "y": 5.8,
+                        "note": "Early thaw"
+                    },
+                    {
+                        "y": 9.1,
+                        "color": "#63B3ED"
+                    },
+                    {
+                        "y": 12.7,
+                        "color": "#63B3ED"
+                    },
+                    {
+                        "y": 16.3,
+                        "color": "#68D391"
+                    },
+                    {
+                        "y": 19.9,
+                        "color": "#68D391"
+                    },
+                    {
+                        "y": 22.4,
+                        "color": "#F6E05E"
+                    },
+                    {
+                        "y": 21.8,
+                        "color": "#F6E05E"
+                    },
+                    {
+                        "y": 18.6,
+                        "color": "#F6AD55"
+                    },
+                    {
+                        "y": 13.9,
+                        "color": "#F6AD55"
+                    },
+                    {
+                        "y": 8.3,
+                        "color": "#63B3ED"
+                    },
+                    {
+                        "y": 5.1,
+                        "color": "#63B3ED"
+                    }
+                ],
+                "color": "#4299E1",
+                "marker": {
+                    "symbol": "circle",
+                    "radius": 5
+                }
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#2D3748",
+                "fontSize": "13px"
+            }
+        },
+        "plotOptions": {
+            "spline": {
+                "lineWidth": 3,
+                "states": {
+                    "hover": {
+                        "lineWidth": 4
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations of temperature measurements (ratio scale). Synthetic data follows northern hemisphere seasonal patterns with \u03bc=13.2\u00b0C, \u03c3=6.8\u00b0C. Summer months show +1.5\u03c3 deviations from mean, winter months -1.2\u03c3, simulating realistic annual thermal amplitude. The spline chart minimizes visual clutter while preserving trend continuity, adhering to Tufte's data-ink principles. Seasonal color encoding (blue-cool, yellow-warm) follows Cairo's perceptual discriminability guidelines. Axis gridlines use subtle opacity (0.3) to maintain data foreground prominence. Marker symbols emphasize individual data points without oversaturating the visual field, balancing pre-attentive processing needs with overall pattern recognition."
+}

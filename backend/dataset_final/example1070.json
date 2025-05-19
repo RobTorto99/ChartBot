@@ -1,0 +1,100 @@
+{
+    "visualization_prompt": "Generate a line chart showing numerical trends with interactive annotations using Highcharts' annotation module and zoom capabilities",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "zooming": {
+                "type": "x"
+            }
+        },
+        "title": {
+            "text": "Highcharts Annotations",
+            "style": {
+                "color": "#2f4f4f",
+                "fontSize": "20px"
+            }
+        },
+        "subtitle": {
+            "text": "Annotations connected to coordinates without data points",
+            "style": {
+                "color": "#696969"
+            }
+        },
+        "xAxis": {
+            "tickInterval": 0.5,
+            "gridLineWidth": 1,
+            "labels": {
+                "style": {
+                    "color": "#708090"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#708090"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Operational Metric",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#4682b4",
+                "marker": {
+                    "radius": 4
+                }
+            }
+        ],
+        "annotations": [
+            {
+                "labels": [
+                    {
+                        "point": {
+                            "x": 3,
+                            "y": 129.2,
+                            "xAxis": 0,
+                            "yAxis": 0
+                        },
+                        "text": "Q1 Peak: {y:.1f}",
+                        "backgroundColor": "#fffacd"
+                    },
+                    {
+                        "point": {
+                            "x": 8,
+                            "y": 216.4,
+                            "xAxis": 0
+                        },
+                        "text": "Max: {y:.1f} (+47% YTD)",
+                        "shape": "callout",
+                        "align": "right"
+                    }
+                ],
+                "labelOptions": {
+                    "style": {
+                        "fontSize": "12px",
+                        "color": "#2f4f4f"
+                    }
+                }
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top"
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 sequential measurements of an operational metric, representing univariate time-series data with implicit temporal ordering. Synthetic values demonstrate realistic variance (\u03bc=125.1, \u03c3=55.9) with intentional peaks at strategic intervals, simulating quarterly business patterns. The line chart was selected to emphasize trend continuity while minimizing visual clutter, aligning with Tufte's data-ink ratio principles. Annotations employ Cairo's perceptual principles through contrasting colors and positional grouping, creating clear focal points without obstructing data flow. Interactive zoom maintains Cleveland's hierarchy of visual tasks by preserving both macro-trend visibility and micro-detail accessibility."
+}

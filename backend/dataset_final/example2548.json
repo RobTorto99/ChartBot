@@ -1,0 +1,126 @@
+{
+    "visualization_prompt": "Generate a grouped column chart showing year-over-year comparison of renewable energy production using trend-enhanced synthetic data with seasonal variation",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "backgroundColor": "#F9F9F9",
+                "marginTop": 40
+            },
+            "title": {
+                "text": "Renewable Energy Production (GWh)",
+                "style": {
+                    "fontSize": "20px",
+                    "color": "#2C3E50",
+                    "fontWeight": "bold"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#34495E",
+                        "fontSize": "12px"
+                    }
+                },
+                "title": {
+                    "text": "2023 vs 2024 Projections",
+                    "style": {
+                        "color": "#7F8C8D",
+                        "fontSize": "14px"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Gigawatt Hours (GWh)",
+                    "style": {
+                        "color": "#7F8C8D",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#34495E",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "2023 Actual",
+                    "data": [
+                        185,
+                        198,
+                        210,
+                        225,
+                        240,
+                        255,
+                        245,
+                        260,
+                        275,
+                        290,
+                        265,
+                        235
+                    ],
+                    "color": "#3498DB",
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "{y:.0f}"
+                    }
+                },
+                {
+                    "name": "2024 Projected",
+                    "data": [
+                        204,
+                        218,
+                        231,
+                        248,
+                        264,
+                        280,
+                        270,
+                        286,
+                        303,
+                        319,
+                        292,
+                        259
+                    ],
+                    "color": "#E67E22",
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "{y:.0f} (+10% YOY)"
+                    }
+                }
+            ],
+            "legend": {
+                "align": "right",
+                "verticalAlign": "top",
+                "itemStyle": {
+                    "color": "#2C3E50"
+                }
+            },
+            "plotOptions": {
+                "column": {
+                    "grouping": true,
+                    "borderRadius": 3,
+                    "pointPadding": 0.2,
+                    "groupPadding": 0.1
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two 12-point time series comparing annual energy production. Synthetic data was generated with \u03bc=245 GWh (\u03c3=35) for 2023 and \u03bc=269.5 GWh (\u03c3=35.5) for 2024, maintaining a consistent 10% YOY growth pattern with summer production peaks. The grouped column format effectively compares monthly performance while preserving individual data points, following Tufte's principle of maximizing data-ink ratio through clean gridlines and direct labeling. Color choices (#3498DB for historical, #E67E22 for projections) follow Cairo's preattentive processing principles, leveraging hue and luminance contrast for immediate categorical distinction. Annotations use D3-style formatting for concise percentage context, while the \u00b13% monthly variation in projections simulates realistic forecasting uncertainty."
+}

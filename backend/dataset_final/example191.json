@@ -1,0 +1,114 @@
+{
+    "visualization_prompt": "Create a Highcharts chart with the following specifications: Chart type: spline, Chart title: Tunnel Annotation, Axes and labels styling: Use 'IBM Plex Sans' font for all text elements with a font size of 14px for labels and 18px for titles, Colors for axes and labels should be dark gray (#333), Data series: Include one series with the name 'Data Points' and data [1, 2, 3, { y: 4, id: 's' }, 5, { y: 6, id: 'm' }, 2, 3, 4, 5, 6, 7, 8, 3, 2, 4, 4, 4, 4, 3], Custom colors: Use 'rgb(255, 69, 221)' for the annotation line and 'rgba(255, 69, 221, 0.4)' for the annotation background, Additional configurations: Set chart margins to 50px on all sides, background color to white, and include a legend with a dark gray (#333) border.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ],
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Tunnel Annotation",
+            "style": {
+                "fontFamily": "'IBM Plex Sans', sans-serif",
+                "fontSize": "18px",
+                "color": "#333"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "fontFamily": "'IBM Plex Sans', sans-serif",
+                    "fontSize": "14px",
+                    "color": "#333"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "fontFamily": "'IBM Plex Sans', sans-serif",
+                    "fontSize": "14px",
+                    "color": "#333"
+                }
+            }
+        },
+        "annotations": [
+            {
+                "type": "tunnel",
+                "controlPointOptions": {
+                    "style": {
+                        "fill": "rgb(255, 69, 221)"
+                    },
+                    "visible": true
+                },
+                "typeOptions": {
+                    "points": [
+                        {
+                            "x": 4,
+                            "y": 4,
+                            "controlPoint": {
+                                "style": {
+                                    "fill": "#d5ff4c"
+                                }
+                            }
+                        },
+                        {
+                            "x": 10,
+                            "y": 5
+                        }
+                    ],
+                    "line": {
+                        "stroke": "rgb(255, 69, 221)",
+                        "strokeWidth": 4
+                    },
+                    "background": {
+                        "fill": "rgba(255, 69, 221, 0.4)"
+                    }
+                }
+            }
+        ],
+        "series": [
+            {
+                "name": "Data Points",
+                "data": [
+                    1,
+                    2,
+                    3,
+                    {
+                        "y": 4,
+                        "id": "s"
+                    },
+                    5,
+                    {
+                        "y": 6,
+                        "id": "m"
+                    },
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    3,
+                    2,
+                    4,
+                    4,
+                    4,
+                    4,
+                    3
+                ]
+            }
+        ],
+        "legend": {
+            "borderColor": "#333",
+            "borderWidth": 1
+        }
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a spline chart titled 'Tunnel Annotation'. The chart uses the 'IBM Plex Sans' font for all text elements, with specific font sizes and colors for titles and labels. The data series 'Data Points' is plotted with the given data points, including specific points with IDs for annotation purposes. The chart includes a tunnel annotation with custom colors for the line and background, which can be dynamically updated via a button click. Additional configurations include setting the chart margins, background color, and a legend with a dark gray border."
+}

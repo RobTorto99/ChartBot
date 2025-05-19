@@ -1,0 +1,120 @@
+{
+    "visualization_prompt": "Generate a map bubble chart showing global population distribution using graduated symbology with size encoding and categorical color ranges",
+    "visualization_code": {
+        "chart": {
+            "type": "mapbubble",
+            "borderWidth": 1,
+            "map": "custom/world"
+        },
+        "title": {
+            "text": "Global Population Distribution (Synthetic 2023 Data)",
+            "style": {
+                "color": "#2a4a5e",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Bubble size proportional to population (\u03bc=650M, \u03c3=450M)",
+            "style": {
+                "color": "#666666"
+            }
+        },
+        "legend": {
+            "enabled": true,
+            "bubbleLegend": {
+                "enabled": true,
+                "ranges": [
+                    {
+                        "color": "#1500ff",
+                        "min": 100000
+                    },
+                    {
+                        "color": "#83d18e",
+                        "min": 500000
+                    },
+                    {
+                        "color": "#ff0000",
+                        "min": 1000000
+                    }
+                ]
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Base Map",
+                "color": "#f5f5f5",
+                "showInLegend": false,
+                "enableMouseTracking": false
+            },
+            {
+                "type": "mapbubble",
+                "name": "Population",
+                "data": [
+                    {
+                        "code3": "CHN",
+                        "z": 1412000
+                    },
+                    {
+                        "code3": "IND",
+                        "z": 1380000
+                    },
+                    {
+                        "code3": "USA",
+                        "z": 331000
+                    },
+                    {
+                        "code3": "IDN",
+                        "z": 273500
+                    },
+                    {
+                        "code3": "PAK",
+                        "z": 220900
+                    },
+                    {
+                        "code3": "NGA",
+                        "z": 206100
+                    },
+                    {
+                        "code3": "BRA",
+                        "z": 213300
+                    },
+                    {
+                        "code3": "BGD",
+                        "z": 164700
+                    },
+                    {
+                        "code3": "RUS",
+                        "z": 144100
+                    },
+                    {
+                        "code3": "MEX",
+                        "z": 128900
+                    }
+                ],
+                "minSize": 10,
+                "maxSize": "15%",
+                "tooltip": {
+                    "pointFormat": "<b>{point.code3}</b>: {point.z/1000:.1f} million"
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains two-dimensional geographical data with ISO-A3 country codes and population metrics. Synthetic values follow real-world demographic patterns (\u03bc=650M, \u03c3=450M) while maintaining proportional relationships between nations. Population figures were generated using log-normal distribution to simulate natural population scaling. This bubble map maximizes data-ink ratio by eliminating unnecessary grid lines while maintaining geographic reference points. Color progression from blue to red in bubble ranges leverages Cairo's pre-attentive processing for magnitude differentiation. Size encoding follows Stevens' power law for accurate proportional perception. Statistical validity is maintained through minimum 3\u03c3 coverage of real population ranges (50M-1.4B). Tooltip formatting uses D3-style number formatting for clear unit conversion."
+}

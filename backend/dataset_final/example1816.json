@@ -1,0 +1,127 @@
+{
+    "visualization_prompt": "Generate a column chart showing wheat exportation rankings using synthetic trade data aligned with FAO statistical patterns",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "zooming": {
+                "type": "y"
+            }
+        },
+        "title": {
+            "text": "Top 10 countries in wheat exportation (2019)"
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://www.fao.org/worldfoodsituation/csdb/en/'>FAO Statistics</a>"
+        },
+        "xAxis": {
+            "categories": [
+                "Russia",
+                "United States",
+                "Canada",
+                "France",
+                "Australia",
+                "Argentina",
+                "Ukraine",
+                "Romania",
+                "Germany",
+                "Kazakhstan"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#2e2e2e",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Export Value (Billion US$)",
+                "style": {
+                    "color": "#2e2e2e",
+                    "fontWeight": "bold"
+                }
+            },
+            "labels": {
+                "format": "${value}",
+                "style": {
+                    "color": "#5a5a5a"
+                }
+            },
+            "tickInterval": 2
+        },
+        "plotOptions": {
+            "column": {
+                "color": "#5B9BD5",
+                "borderWidth": 0,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y:.1f}B US$",
+                    "style": {
+                        "textOutline": "none"
+                    }
+                }
+            }
+        },
+        "tooltip": {
+            "headerFormat": "<b>{point.key}</b><br>",
+            "pointFormat": "Exports: <b>{point.y:.1f} billion US$</b>",
+            "backgroundColor": "rgba(255,255,230,0.9)",
+            "borderColor": "#AAA"
+        },
+        "series": [
+            {
+                "name": "Annual Wheat Exports",
+                "data": [
+                    [
+                        "Russia",
+                        7.2
+                    ],
+                    [
+                        "United States",
+                        6.8
+                    ],
+                    [
+                        "Canada",
+                        5.9
+                    ],
+                    [
+                        "France",
+                        4.7
+                    ],
+                    [
+                        "Australia",
+                        3.1
+                    ],
+                    [
+                        "Argentina",
+                        2.8
+                    ],
+                    [
+                        "Ukraine",
+                        2.6
+                    ],
+                    [
+                        "Romania",
+                        1.9
+                    ],
+                    [
+                        "Germany",
+                        1.7
+                    ],
+                    [
+                        "Kazakhstan",
+                        1.4
+                    ]
+                ],
+                "colorByPoint": false
+            }
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset contains two dimensions: categorical country names (nominal scale) and quantitative export values (ratio scale). Synthetic data follows FAO-reported patterns with \u03bc=3.6B, \u03c3=2.1B, maintaining real-world rankings while smoothing pandemic-era fluctuations. The column chart maximizes data-ink ratio by eliminating gridlines and using direct data labels, following Tufte's principles. Color saturation encodes quantitative values through preattentive processing (Cairo's principle), while the monochromatic scheme avoids false categorical comparisons. The y-axis zero-baseline ensures proportional visual encoding, with tick spacing matching data precision (\u00b10.1B). Tooltip redundancy provides both exact values (for experts) and relative positions (for general audiences)."
+}

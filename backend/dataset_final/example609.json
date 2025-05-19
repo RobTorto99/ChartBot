@@ -1,0 +1,72 @@
+{
+    "visualization_prompt": "Create a Highcharts Arc Diagram with the following specifications: Chart type: Arc Diagram, Chart title: 'Highcharts Arc Diagram', Axes and labels styling: Labels and titles should be in black color with a font size of 12px, Data series: Data includes connections between countries with weights, Custom colors: Use default colors, Additional configurations: Include a subtitle 'Arc Diagram with linkTextPath', enable linkTextPath for data labels, and ensure links are centered.",
+    "visualization_code": {
+        "title": {
+            "text": "Highcharts Arc Diagram"
+        },
+        "subtitle": {
+            "text": "Arc Diagram with linkTextPath"
+        },
+        "series": [
+            {
+                "linkWeight": 1,
+                "keys": [
+                    "from",
+                    "to",
+                    "weight"
+                ],
+                "type": "arcdiagram",
+                "centeredLinks": true,
+                "dataLabels": {
+                    "format": "{point.fromNode.name} \u2192 {point.toNode.name}",
+                    "nodeFormat": "{point.name}",
+                    "color": "black",
+                    "style": {
+                        "fontSize": "12px"
+                    },
+                    "linkTextPath": {
+                        "enabled": true
+                    }
+                },
+                "data": [
+                    [
+                        "Brazil",
+                        "Portugal",
+                        5
+                    ],
+                    [
+                        "Brazil",
+                        "France",
+                        1
+                    ],
+                    [
+                        "Brazil",
+                        "Spain",
+                        1
+                    ],
+                    [
+                        "Brazil",
+                        "England",
+                        1
+                    ],
+                    [
+                        "Canada",
+                        "Portugal",
+                        1
+                    ],
+                    [
+                        "Canada",
+                        "France",
+                        5
+                    ],
+                    [
+                        "Canada",
+                        "England",
+                        1
+                    ]
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render an Arc Diagram with specific visual and functional attributes. The chart title is set to 'Highcharts Arc Diagram' and includes a subtitle 'Arc Diagram with linkTextPath'. The data series is configured to display connections between countries, with each connection having a weight. The data labels are formatted to show the connection between nodes and are styled in black with a font size of 12px. The 'linkTextPath' feature is enabled to display the path of the links, and 'centeredLinks' ensures that the links are centered in the diagram. This configuration effectively visualizes the relationships between countries based on the provided data."
+}

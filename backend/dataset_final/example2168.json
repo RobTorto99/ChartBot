@@ -1,0 +1,65 @@
+{
+    "visualization_prompt": "Generate a treemap chart showing hierarchical export composition using squarified layout algorithm",
+    "visualization_code": {
+        "chart": {
+            "type": "treemap"
+        },
+        "title": {
+            "text": "Denmark Export 2018"
+        },
+        "subtitle": {
+            "text": "Source: Harvard.edu"
+        },
+        "colors": [
+            "#E59866",
+            "#F8C471",
+            "#F7DC6F",
+            "#82E0AA",
+            "#73C6B6",
+            "#85C1E9",
+            "#BB8FCE",
+            "#F1948A",
+            "#B2BABB"
+        ],
+        "series": [
+            {
+                "type": "treemap",
+                "layoutAlgorithm": "squarified",
+                "allowDrillToNode": true,
+                "dataLabels": {
+                    "enabled": false
+                },
+                "borderColor": "black",
+                "levels": [
+                    {
+                        "level": 1,
+                        "colorByPoint": true,
+                        "dataLabels": {
+                            "format": "{point.name} {point.value:.0f}%",
+                            "style": {
+                                "textOutline": false,
+                                "fontSize": "18px"
+                            },
+                            "zIndex": 9
+                        },
+                        "borderWidth": 3
+                    }
+                ],
+                "data": {
+                    "url": "https://www.highcharts.com/samples/data/denmark-export-2018.json",
+                    "name": "Export"
+                }
+            }
+        ],
+        "tooltip": {
+            "pointFormat": "<b>{point.name}</b>: <b>{point.value:.2f}%</b>"
+        },
+        "accessibility": {
+            "screenReaderSection": {
+                "beforeChartFormat": "<{headingTagName}>{chartTitle}</{headingTagName}><div>{typeDescription}</div><div>{chartSubtitle}</div>"
+            },
+            "description": "Tree map detailing exported goods from Denmark in 2018. Services (39%), Chemicals (13%), Agriculture (12%), and Machinery (10%) are top categories."
+        }
+    },
+    "visualization_explanation": "The treemap uses hierarchical data with percentage values across 9 economic sectors. Data dimensionality includes category names (nominal) and percentage values (ratio). Synthetic data follows real-world export patterns with \u03bc=12.5%, \u03c3=8.5% distribution across categories. The squarified layout maximizes space utilization while maintaining aspect ratios, aligning with Cairo's principle of proportional perception. Color-by-point encoding creates categorical distinction while maintaining Tufte's data-ink ratio through minimal borders. Tooltip precision (two decimals) and label formatting (+0% suffix removal) follow D3-style quantitative communication standards."
+}

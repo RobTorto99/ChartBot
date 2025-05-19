@@ -1,0 +1,121 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a chart with the following specifications: Chart type: column, Chart title: Monthly Sales Data, Axes and labels styling: Use a dark background with light text, font size for labels and titles should be 14px, Data series: Two series - 'Sales' with data [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4] and 'Expenses' with data [148.5, 216.4, 194.1, 95.6, 54.4, 29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6], Custom colors: Use a gradient for the 'Sales' series and a solid color for the 'Expenses' series, Additional configurations: Set chart margins to 50px, enable legend, and add a background color to the chart.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#2c3e50",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#ecf0f1",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#ecf0f1",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Amount",
+                "style": {
+                    "color": "#ecf0f1",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#ecf0f1",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#ecf0f1"
+            }
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#3498db"
+                        ],
+                        [
+                            1,
+                            "#2980b9"
+                        ]
+                    ]
+                }
+            },
+            {
+                "name": "Expenses",
+                "data": [
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4,
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6
+                ],
+                "color": "#e74c3c"
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart titled 'Monthly Sales Data'. The chart features a dark background with light text styling for labels and titles, ensuring readability. The x-axis represents the months from January to December, while the y-axis represents the amount in a monetary unit. The chart includes two data series: 'Sales' and 'Expenses'. The 'Sales' series uses a gradient color from blue to a darker blue, while the 'Expenses' series uses a solid red color. The chart also includes a legend to differentiate between the two series. Additional configurations include setting the chart margins to 50px on all sides and enabling the legend for better user interaction."
+}

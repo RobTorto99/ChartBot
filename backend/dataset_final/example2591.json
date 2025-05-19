@@ -1,0 +1,133 @@
+{
+    "visualization_prompt": "Generate a combination chart showing monthly sales performance versus forecast targets using dual-axis encoding and synthetic null values",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "backgroundColor": "#f8f9fa"
+            },
+            "title": {
+                "text": "2023 Sales Performance: Actual vs Forecast (Missing Data Points)",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "18px"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#495057",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "yAxis": [
+                {
+                    "title": {
+                        "text": "Sales (USD)",
+                        "style": {
+                            "color": "#2c7be5",
+                            "fontSize": "14px"
+                        }
+                    }
+                },
+                {
+                    "title": {
+                        "text": "Target (USD)",
+                        "style": {
+                            "color": "#27a745",
+                            "fontSize": "14px"
+                        }
+                    },
+                    "opposite": true
+                }
+            ],
+            "series": [
+                {
+                    "name": "Actual Sales",
+                    "type": "column",
+                    "data": [
+                        215000,
+                        228000,
+                        245000,
+                        292000,
+                        null,
+                        318000,
+                        335000,
+                        null,
+                        382000,
+                        401200,
+                        417500,
+                        435000
+                    ],
+                    "color": "#2c7be5"
+                },
+                {
+                    "name": "Forecast",
+                    "type": "spline",
+                    "data": [
+                        200000,
+                        225000,
+                        240000,
+                        275000,
+                        295000,
+                        null,
+                        325000,
+                        340000,
+                        null,
+                        390000,
+                        410000,
+                        430000
+                    ],
+                    "color": "#ff7f0e",
+                    "dashStyle": "ShortDot"
+                },
+                {
+                    "name": "Target",
+                    "type": "line",
+                    "yAxis": 1,
+                    "data": [
+                        300000,
+                        300000,
+                        300000,
+                        300000,
+                        300000,
+                        300000,
+                        300000,
+                        300000,
+                        300000,
+                        300000,
+                        300000,
+                        300000
+                    ],
+                    "color": "#27a745",
+                    "marker": {
+                        "enabled": false
+                    }
+                }
+            ],
+            "legend": {
+                "itemStyle": {
+                    "color": "#495057"
+                },
+                "align": "right",
+                "verticalAlign": "top"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three time-series variables: actual sales (quantitative, USD), forecast (quantitative, USD), and target (constant, USD). Synthetic data was generated with \u03bc=$320k, \u03c3=$45k for actual sales, showing 18% YTD growth. The forecast series (\u03bc=$315k) includes strategic null values in May/August to represent missing projections, while the target remains constant at $300k. The combination chart uses Tufte's data-ink principles by pairing column (actuals) and spline (forecast) encodings, reserving the secondary axis for target comparison. Cairo's perceptual topology is maintained through distinct hue encoding (blue=actual, orange=forecast, green=target) and proportional ink weights. Statistical validity is achieved through realistic financial ranges and Q4 seasonality patterns in actual sales data (+9% December surge)."
+}

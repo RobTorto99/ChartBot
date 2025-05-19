@@ -1,0 +1,130 @@
+{
+    "visualization_prompt": "Create a Highcharts Venn diagram with the following specifications: Chart type: Venn diagram, Chart title: 'Character Traits and Overlaps', Axes and labels styling: Labels and titles should have a font size of 24px and color #808080, Data series: Include data for three sets ('Knows If You Have Been Naughty Or Nice', 'Great Power Great Responsibility', 'Wears Red Suit') and their overlaps, Custom colors: Use specific colors for each set and overlap (e.g., #b3e5fc, #bee175, #ff3232), Additional configurations: Set the chart background to #f2f2f2, disable tooltips, and make the chart responsive with reduced label size for screens with a max width of 650px.",
+    "visualization_code": {
+        "chart": {
+            "type": "venn",
+            "backgroundColor": "#f2f2f2",
+            "height": "100%"
+        },
+        "title": {
+            "text": "Character Traits and Overlaps",
+            "style": {
+                "color": "#808080",
+                "fontSize": "24px"
+            }
+        },
+        "plotOptions": {
+            "venn": {
+                "dataLabels": {
+                    "enabled": true,
+                    "style": {
+                        "textOutline": false,
+                        "width": 175,
+                        "fontSize": "24px",
+                        "color": "#808080"
+                    }
+                }
+            }
+        },
+        "tooltip": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "type": "venn",
+                "opacity": 0.4,
+                "borderWidth": 0,
+                "data": [
+                    {
+                        "sets": [
+                            "Knows If You Have Been Naughty Or Nice"
+                        ],
+                        "value": 4,
+                        "color": "#b3e5fc"
+                    },
+                    {
+                        "sets": [
+                            "Great Power Great Responsibility"
+                        ],
+                        "value": 4,
+                        "color": "#bee175"
+                    },
+                    {
+                        "sets": [
+                            "Wears Red Suit"
+                        ],
+                        "value": 4,
+                        "color": "#ff3232"
+                    },
+                    {
+                        "sets": [
+                            "Great Power Great Responsibility",
+                            "Wears Red Suit"
+                        ],
+                        "value": 1,
+                        "name": "Spider Man",
+                        "dataLabels": {
+                            "color": "white"
+                        }
+                    },
+                    {
+                        "sets": [
+                            "Great Power Great Responsibility",
+                            "Knows If You Have Been Naughty Or Nice"
+                        ],
+                        "value": 1,
+                        "name": "GOD",
+                        "dataLabels": {
+                            "color": "white"
+                        }
+                    },
+                    {
+                        "sets": [
+                            "Wears Red Suit",
+                            "Knows If You Have Been Naughty Or Nice"
+                        ],
+                        "value": 1,
+                        "name": "Spanish Inquisition",
+                        "dataLabels": {
+                            "color": "white"
+                        }
+                    },
+                    {
+                        "sets": [
+                            "Great Power Great Responsibility",
+                            "Wears Red Suit",
+                            "Knows If You Have Been Naughty Or Nice"
+                        ],
+                        "value": 1,
+                        "name": "Santa",
+                        "dataLabels": {
+                            "color": "white"
+                        }
+                    }
+                ]
+            }
+        ],
+        "responsive": {
+            "rules": [
+                {
+                    "condition": {
+                        "maxWidth": 650
+                    },
+                    "chartOptions": {
+                        "plotOptions": {
+                            "venn": {
+                                "dataLabels": {
+                                    "style": {
+                                        "fontSize": "14px",
+                                        "width": "100px"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The Venn diagram configuration uses three primary sets with distinct colors (#b3e5fc, #bee175, #ff3232) to represent unique character traits. Overlapping regions demonstrate conceptual intersections with blended opacity, while named overlaps (Spider Man, GOD, Spanish Inquisition, Santa) use white labels for contrast. Synthetic values (4 for individual sets, 1 for overlaps) create proportional areas while maintaining combinatorial logic (sum of all partitions = 15). The chart employs Tufte's data-ink principles through minimal borders and Cairo's perceptual effectiveness via color differentiation and label positioning. Responsive rules adapt label sizes to maintain readability on mobile devices, and the light gray background (#f2f2f2) ensures neutral visual context for the semantic overlaps."
+}

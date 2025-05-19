@@ -1,0 +1,87 @@
+{
+    "visualization_prompt": "Create a Highcharts pie chart to visualize the seats won per party in the Canadian federal election of 2015. The chart should have a title 'Seats won per party in the Canadian federal election, 2015'. The axes and labels should be styled with specific colors and font sizes. The data series should include the names of the parties and their respective seat counts. Custom colors should be used for each party as specified. Additional configurations should include settings for chart margins, background, and legend.",
+    "visualization_code": {
+        "title": {
+            "text": "Seats won per party in the Canadian federal election, 2015",
+            "style": {
+                "fontSize": "16px",
+                "fontWeight": "bold"
+            }
+        },
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#f9f9f9",
+            "margin": [
+                20,
+                20,
+                20,
+                20
+            ]
+        },
+        "credits": {
+            "enabled": false
+        },
+        "tooltip": {
+            "headerFormat": "<b>{point.key}</b><br/>",
+            "pointFormat": "{point.y} seats"
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<b>{point.name}</b>: {point.y}",
+                    "style": {
+                        "color": "#333",
+                        "fontSize": "12px"
+                    }
+                },
+                "showInLegend": true
+            }
+        },
+        "legend": {
+            "layout": "vertical",
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "fontSize": "12px",
+                "color": "#333"
+            }
+        },
+        "series": [
+            {
+                "name": "Seats",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Liberal",
+                        "color": "#EE696B",
+                        "y": 80
+                    },
+                    {
+                        "name": "Conservative",
+                        "color": "#5A98EA",
+                        "y": 33
+                    },
+                    {
+                        "name": "New Democratic",
+                        "color": "#F8A166",
+                        "y": 8
+                    },
+                    {
+                        "name": "Bloc Qu\u00e9b\u00e9cois",
+                        "color": "#80D0F8",
+                        "y": 0
+                    },
+                    {
+                        "name": "Green",
+                        "color": "#99C85F",
+                        "y": 0
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The Highcharts pie chart is configured to display the seats won by each party in the Canadian federal election of 2015. The chart title is set to 'Seats won per party in the Canadian federal election, 2015' with a bold font size of 16px. The pie chart type is used to represent the data, with each slice of the pie representing a party and its seat count. The chart background is set to a light gray color (#f9f9f9) with margins of 20 pixels around the chart. The tooltip provides additional information when hovering over a slice, displaying the party name and the number of seats. Data labels are enabled to show the party name and seat count directly on the chart, styled with a font size of 12px and a dark color (#333). The legend is positioned vertically on the right side of the chart, with items styled to match the chart's font size and color. The data series includes the names of the parties and their respective seat counts, each with a custom color as specified."
+}

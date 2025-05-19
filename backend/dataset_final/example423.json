@@ -1,0 +1,109 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a 3D column chart with the following specifications: Chart type: column, Chart title: 'Monthly Average Rainfall', Axes and labels styling: Use a dark gray color (#333) for axis labels and titles, with a font size of 14px. Data series: Two series with the same data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]. Custom colors: Use a gradient from blue to green for the columns. Additional configurations: Enable 3D options with alpha: 15, beta: 25, depth: 50, and viewDistance: 25. Set the chart margin to 75 pixels.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "margin": 75,
+            "options3d": {
+                "enabled": true,
+                "alpha": 15,
+                "beta": 25,
+                "depth": 50,
+                "viewDistance": 25
+            }
+        },
+        "title": {
+            "text": "Monthly Average Rainfall",
+            "style": {
+                "color": "#333",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Rainfall (mm)",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "depth": 25,
+                "colorByPoint": true,
+                "colors": [
+                    {
+                        "linearGradient": {
+                            "x1": 0,
+                            "x2": 0,
+                            "y1": 0,
+                            "y2": 1
+                        },
+                        "stops": [
+                            [
+                                0,
+                                "#0000FF"
+                            ],
+                            [
+                                1,
+                                "#00FF00"
+                            ]
+                        ]
+                    }
+                ]
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    49.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ]
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    49.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a 3D column chart titled 'Monthly Average Rainfall'. The chart includes two data series with identical data points, each representing monthly rainfall values. The axes and titles are styled with a dark gray color and a font size of 14px for readability. The columns are colored using a gradient from blue to green, enhancing visual appeal. The 3D options are enabled with specific angles and depth settings to give the chart a three-dimensional appearance. The chart's margin is set to 75 pixels to ensure sufficient spacing around the plot area."
+}

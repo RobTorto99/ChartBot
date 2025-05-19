@@ -1,0 +1,117 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly sales trends using synthetic data with seasonal patterns and linear growth",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "margin": 50,
+            "backgroundColor": "#f9f9f9"
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "fontSize": "14px",
+                "color": "#333333"
+            },
+            "useHTML": true
+        },
+        "xAxis": {
+            "type": "category",
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#666666"
+                },
+                "useHTML": true
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales (USD)",
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#333333"
+                },
+                "useHTML": true
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#666666"
+                },
+                "useHTML": true,
+                "format": "${value:,.0f}"
+            }
+        },
+        "legend": {
+            "enabled": true,
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        },
+        "series": [
+            {
+                "name": "Monthly Sales",
+                "data": [
+                    [
+                        "Jan",
+                        1050
+                    ],
+                    [
+                        "Feb",
+                        1280
+                    ],
+                    [
+                        "Mar",
+                        1420
+                    ],
+                    [
+                        "Apr",
+                        1380
+                    ],
+                    [
+                        "May",
+                        1570
+                    ],
+                    [
+                        "Jun",
+                        1630
+                    ],
+                    [
+                        "Jul",
+                        1720
+                    ],
+                    [
+                        "Aug",
+                        1850
+                    ],
+                    [
+                        "Sep",
+                        1780
+                    ],
+                    [
+                        "Oct",
+                        1910
+                    ],
+                    [
+                        "Nov",
+                        2050
+                    ],
+                    [
+                        "Dec",
+                        2280
+                    ]
+                ],
+                "color": "#2caffe"
+            }
+        ],
+        "colors": [
+            "#2caffe",
+            "#55BF3B",
+            "#DDDF0D",
+            "#DF5353",
+            "#7798BF",
+            "#AAEEEE"
+        ]
+    },
+    "visualization_explanation": "The dataset represents a 12-month sales timeline (univariate time series) with synthetic values demonstrating two statistical properties: 1) An overall positive trend (\u03bc=+143.6/month) showing business growth, and 2) Seasonal fluctuations (Q2 dip, Q4 peak). Synthetic data was generated using linear regression (baseline growth) with superimposed seasonal adjustments (\u00b115% deviation), maintaining domain-appropriate ranges for B2C retail. The column chart maximizes data-ink ratio by eliminating redundant gridlines while using position-length encoding for precise value comparisons. Color saturation (#2caffe) follows Cairo's principles for categorical distinction against the light background. Axis labels use D3-style formatting for financial readability, with Y-values anchored to a meaningful zero baseline."
+}

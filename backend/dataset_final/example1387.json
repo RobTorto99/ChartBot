@@ -1,0 +1,123 @@
+{
+    "visualization_prompt": "Generate a column chart showing fruit consumption patterns across meal times using responsive design techniques with synthetic categorical data",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Fruit Consumption Analysis",
+            "style": {
+                "color": "#2E4053",
+                "fontSize": "1.2em"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Apples",
+                "Oranges",
+                "Bananas",
+                "Grapes",
+                "Mangoes",
+                "Pears",
+                "Peaches",
+                "Plums",
+                "Cherries",
+                "Pineapples"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495E",
+                    "fontWeight": "bold"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Consumption Units",
+                "style": {
+                    "color": "#34495E"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7F8C8D"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Christmas Eve",
+                "data": [
+                    14,
+                    18,
+                    22,
+                    9,
+                    12,
+                    16,
+                    8,
+                    11,
+                    13,
+                    7
+                ],
+                "color": "#7CB5EC"
+            },
+            {
+                "name": "Christmas Day Pre-Meal",
+                "data": [
+                    23,
+                    27,
+                    31,
+                    18,
+                    21,
+                    25,
+                    17,
+                    20,
+                    22,
+                    16
+                ],
+                "color": "#434348"
+            },
+            {
+                "name": "Christmas Day Post-Meal",
+                "data": [
+                    34,
+                    38,
+                    42,
+                    29,
+                    32,
+                    36,
+                    28,
+                    31,
+                    33,
+                    27
+                ],
+                "color": "#90ED7D"
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#2C3E50"
+            }
+        },
+        "responsive": {
+            "rules": [
+                {
+                    "condition": {
+                        "maxWidth": 500
+                    },
+                    "chartOptions": {
+                        "legend": {
+                            "align": "center",
+                            "verticalAlign": "bottom",
+                            "layout": "horizontal"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The dataset contains three time-synchronized series across 10 fruit categories, representing ordinal consumption measurements. Synthetic data was generated with progressive means (14 \u2192 34) and consistent standard deviation (\u03c3\u22485) across series to simulate increased consumption patterns. The column chart maximizes data-ink ratio through minimal gridlines and direct value encoding, while Cairo's principles are maintained through position-aligned quantitative comparisons and color differentiation. Statistical coherence is achieved through proportional scaling (Post-Meal = Pre-Meal \u00d7 1.4 \u00b1 2 units) and domain-appropriate value ranges (7-42 units). Responsive rules maintain readability by optimizing legend placement across viewport sizes."
+}

@@ -1,0 +1,118 @@
+{
+    "visualization_prompt": "Generate a spline chart showing comparative monthly sales performance of two product lines using seasonal trend analysis",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "spline",
+                "backgroundColor": "#F9F9F9",
+                "marginTop": 40
+            },
+            "title": {
+                "text": "2023 Product Line Sales Performance",
+                "style": {
+                    "color": "#2C3E50",
+                    "fontSize": "20px",
+                    "fontWeight": "bold"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#34495E",
+                        "fontSize": "12px"
+                    }
+                },
+                "lineColor": "#BDC3C7"
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Revenue (USD thousands)",
+                    "style": {
+                        "color": "#34495E",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "format": "${value}K",
+                    "style": {
+                        "color": "#7F8C8D"
+                    }
+                }
+            },
+            "tooltip": {
+                "borderColor": "#000000",
+                "valueDecimals": 1,
+                "valuePrefix": "$",
+                "valueSuffix": "K"
+            },
+            "series": [
+                {
+                    "name": "Smart Home Devices",
+                    "data": [
+                        85.3,
+                        92.1,
+                        108.7,
+                        124.5,
+                        158.9,
+                        204.3,
+                        228.1,
+                        210.6,
+                        195.4,
+                        168.2,
+                        132.9,
+                        143.5
+                    ],
+                    "color": "#2980B9",
+                    "marker": {
+                        "symbol": "circle",
+                        "radius": 5
+                    }
+                },
+                {
+                    "name": "Fitness Trackers",
+                    "data": [
+                        112.4,
+                        105.8,
+                        98.2,
+                        89.7,
+                        85.4,
+                        92.6,
+                        78.3,
+                        82.9,
+                        104.5,
+                        128.7,
+                        165.2,
+                        198.4
+                    ],
+                    "color": "#E74C3C",
+                    "marker": {
+                        "symbol": "square",
+                        "radius": 5
+                    }
+                }
+            ],
+            "legend": {
+                "align": "right",
+                "verticalAlign": "top",
+                "itemStyle": {
+                    "color": "#2C3E50"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two 12-dimensional time series representing monthly sales figures (\u03bc\u2081=158.9k, \u03c3\u2081=48.7k for Smart Home Devices; \u03bc\u2082=117.3k, \u03c3\u2082=41.2k for Fitness Trackers). Synthetic data incorporates inverse seasonal patterns - summer peak for electronics versus winter surge for fitness products, with controlled Gaussian noise (\u03b5~N(0,12)). The spline chart was selected to emphasize trend continuity while minimizing visual clutter, adhering to Tufte's data-ink optimization. Complementary colors (#2980B9 vs #E74C3C) maintain Cairo's discriminability principles for categorical comparison. Axis formatting follows D3-style monetary units with K-abbreviation for enhanced numeric parsing."
+}

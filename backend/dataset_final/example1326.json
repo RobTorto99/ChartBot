@@ -1,0 +1,91 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly quantitative values using Japanese numeric symbols (\u4e07/\u5104) configuration in Highcharts",
+    "visualization_code": {
+        "lang": {
+            "numericSymbols": [
+                "\u4e07",
+                "\u5104"
+            ],
+            "numericSymbolMagnitude": 10000
+        },
+        "chart": {
+            "type": "column"
+        },
+        "title": {
+            "text": "Monthly Financial Metrics (in \u4e07 units)",
+            "style": {
+                "fontSize": "18px",
+                "color": "#2f4f4f"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Value (\u4e07)",
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            },
+            "labels": {
+                "format": "{value} \u4e07"
+            }
+        },
+        "series": [
+            {
+                "name": "Operational Capacity",
+                "data": [
+                    2990,
+                    7150,
+                    10640,
+                    12920,
+                    14400,
+                    17600,
+                    13560,
+                    14850,
+                    21640,
+                    19410,
+                    9560,
+                    5440
+                ],
+                "color": "#4A90E2",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y} \u4e07",
+                    "color": "#333"
+                }
+            }
+        ],
+        "plotOptions": {
+            "column": {
+                "borderRadius": 3,
+                "groupPadding": 0.15
+            }
+        },
+        "legend": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations of a single financial metric, representing univariate time-series data. Synthetic values follow a bimodal distribution with peaks in June (17,600\u4e07) and September (21,640\u4e07), demonstrating intentional seasonality patterns. Data ranges from 2,990\u4e07 to 21,640\u4e07 (\u03bc=12,513\u4e07, \u03c3=5,892\u4e07) while maintaining integer consistency for financial reporting.\n\nThe column chart maximizes data-ink ratio by eliminating redundant gridlines while preserving clear value markers. Cairo's pre-attentive processing is leveraged through consistent color intensity and proportional column heights. The Japanese numeric symbol implementation (\u4e07=10,000) follows ISO 80000-1 quantization standards, with formatted labels reducing cognitive load compared to raw integer displays. The bimodal pattern suggests potential Q2/Q3 operational cycles worth further investigation."
+}

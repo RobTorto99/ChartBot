@@ -1,0 +1,80 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart. The chart should display the revenue growth over the past 10 months. The title of the chart should be 'Social Media Marketing has grown revenue by 27% in past 3 months'. The x-axis should show the months from January to October, and the y-axis should display the revenue in thousands of dollars. The chart should have a single series named 'Revenue' with corresponding data points. The chart should have a white background, and the legend should be hidden. The labels on the y-axis should be formatted to show the value in thousands of dollars.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Social Media Marketing has grown revenue by 27% in past 3 months",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333333"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct"
+            ],
+            "labels": {
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#666666"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "",
+                "style": {
+                    "fontSize": "16px",
+                    "color": "#444444"
+                }
+            },
+            "labels": {
+                "format": "{value}k $",
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#666666"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Revenue",
+                "data": [
+                    21,
+                    23,
+                    25,
+                    28,
+                    24,
+                    22,
+                    22,
+                    24,
+                    26,
+                    28
+                ],
+                "color": "#008080"
+            }
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "column": {
+                "pointPadding": 0.2,
+                "borderWidth": 0
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart displaying revenue growth over the past 10 months. The chart title is set to 'Social Media Marketing has grown revenue by 27% in past 3 months', styled with a font size of 18px and a dark gray color. The x-axis categories represent the months from January to October, with labels styled in a slightly smaller font size and a lighter gray color. The y-axis is configured to display the revenue in thousands of dollars, with labels formatted to show the value followed by 'k $'. The y-axis title is intentionally left blank. The chart includes a single series named 'Revenue' with data points corresponding to the revenue each month, styled with a teal color. The chart background is set to white, and the legend is disabled to keep the focus on the data. Additional configurations include padding and border settings for the columns to ensure a clean and uncluttered appearance."
+}

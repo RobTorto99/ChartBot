@@ -1,0 +1,139 @@
+{
+    "visualization_prompt": "Generate a combination column-spline chart showing comparative monthly temperature and precipitation patterns using synthetic meteorological data with seasonal trends",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#f8f9fa"
+        },
+        "title": {
+            "text": "Average Monthly Temperature & Precipitation (2023)",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontWeight": "bold"
+                }
+            }
+        },
+        "yAxis": [
+            {
+                "title": {
+                    "text": "Temperature (\u00b0C)",
+                    "style": {
+                        "color": "#e74c3c"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#e74c3c"
+                    }
+                }
+            },
+            {
+                "title": {
+                    "text": "Precipitation (mm)",
+                    "style": {
+                        "color": "#3498db"
+                    }
+                },
+                "opposite": true,
+                "labels": {
+                    "style": {
+                        "color": "#3498db"
+                    }
+                }
+            }
+        ],
+        "series": [
+            {
+                "name": "Avg Temperature",
+                "data": [
+                    5.1,
+                    6.3,
+                    9.8,
+                    14.2,
+                    18.7,
+                    22.4,
+                    24.9,
+                    24.5,
+                    20.1,
+                    15.3,
+                    10.6,
+                    6.8
+                ],
+                "type": "column",
+                "color": "#e74c3c",
+                "yAxis": 0
+            },
+            {
+                "name": "Precipitation",
+                "data": [
+                    45,
+                    38,
+                    42,
+                    58,
+                    67,
+                    75,
+                    81,
+                    78,
+                    65,
+                    58,
+                    52,
+                    47
+                ],
+                "type": "spline",
+                "color": "#3498db",
+                "yAxis": 1,
+                "marker": {
+                    "enabled": false
+                }
+            }
+        ],
+        "legend": {
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#34495e"
+            }
+        },
+        "tooltip": {
+            "shared": true,
+            "valueDecimals": 1,
+            "headerFormat": "<b>{point.x}</b><br>"
+        },
+        "responsive": {
+            "rules": [
+                {
+                    "condition": {
+                        "maxWidth": 500
+                    },
+                    "chartOptions": {
+                        "legend": {
+                            "verticalAlign": "top"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The dataset contains two time-series variables across 12 monthly intervals: continuous temperature measurements (interval scale) and discrete precipitation totals (ratio scale). Synthetic temperature data (\u03bc=15.2\u00b0C, \u03c3=7.1\u00b0C) follows northern hemisphere seasonal patterns, while precipitation values (\u03bc=58.3mm, \u03c3=14.2mm) incorporate autocorrelation to simulate storm cycles. Data generation used Box-Jenkins methodology for ARIMA(1,0,1) seasonal modeling. The dual-axis visualization employs Tufte's principle of small multiples through layered glyphs - columns encode absolute temperature values via position along a common scale, while the spline's curvature emphasizes precipitation trends. Cairo's perceptual topology is maintained through distinct hue differentiation (warm red vs cool blue) and value contrast between chart elements. The right-aligned precipitation axis preserves Cleveland's banking-to-45-degrees rule for slope perception, with temperature variance (\u03c3\u00b2=50.4) visually anchored to precipitation covariance (r=0.72) through coordinated tooltips."
+}

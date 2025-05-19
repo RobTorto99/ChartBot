@@ -1,0 +1,157 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly temperature trends across four cities using synthetic climate data with inverse hemispheric seasonality",
+    "visualization_code": {
+        "chartOptions": {
+            "chartConfig": {
+                "type": "spline",
+                "title": {
+                    "text": "Monthly Average Temperature Comparison (2023)",
+                    "style": {
+                        "color": "#2c3e50",
+                        "fontSize": "20px",
+                        "fontWeight": "bold"
+                    }
+                },
+                "axes": {
+                    "xAxis": {
+                        "categories": [
+                            "Jan",
+                            "Feb",
+                            "Mar",
+                            "Apr",
+                            "May",
+                            "Jun",
+                            "Jul",
+                            "Aug",
+                            "Sep",
+                            "Oct",
+                            "Nov",
+                            "Dec"
+                        ],
+                        "labels": {
+                            "style": {
+                                "color": "#7f8c8d",
+                                "fontSize": "12px"
+                            }
+                        }
+                    },
+                    "yAxis": {
+                        "title": {
+                            "text": "Temperature (\u00b0F)",
+                            "style": {
+                                "color": "#7f8c8d",
+                                "fontSize": "14px"
+                            }
+                        },
+                        "labels": {
+                            "style": {
+                                "color": "#7f8c8d",
+                                "fontSize": "12px"
+                            }
+                        }
+                    }
+                }
+            },
+            "seriesData": [
+                {
+                    "name": "New York",
+                    "data": [
+                        28.3,
+                        30.1,
+                        38.9,
+                        52.4,
+                        63.7,
+                        72.8,
+                        77.5,
+                        75.2,
+                        67.4,
+                        56.1,
+                        45.6,
+                        33.8
+                    ],
+                    "color": "#3498db"
+                },
+                {
+                    "name": "Canberra",
+                    "data": [
+                        71.6,
+                        70.2,
+                        65.4,
+                        58.1,
+                        51.3,
+                        45.8,
+                        43.1,
+                        46.7,
+                        52.9,
+                        59.3,
+                        64.2,
+                        68.7
+                    ],
+                    "color": "#e74c3c"
+                },
+                {
+                    "name": "Ottawa",
+                    "data": [
+                        10.4,
+                        12.9,
+                        24.3,
+                        39.7,
+                        53.6,
+                        65.2,
+                        70.8,
+                        68.3,
+                        59.1,
+                        47.8,
+                        34.6,
+                        16.2
+                    ],
+                    "color": "#2ecc71"
+                },
+                {
+                    "name": "Dubai",
+                    "data": [
+                        67.1,
+                        69.3,
+                        74.8,
+                        81.6,
+                        89.2,
+                        93.7,
+                        97.4,
+                        97.1,
+                        92.8,
+                        86.5,
+                        78.9,
+                        70.4
+                    ],
+                    "color": "#f1c40f"
+                }
+            ],
+            "additionalConfig": {
+                "tooltip": {
+                    "valueDecimals": 1,
+                    "valueSuffix": "\u00b0F",
+                    "headerFormat": "<b>{point.key}</b><br/>"
+                },
+                "legend": {
+                    "align": "right",
+                    "verticalAlign": "middle",
+                    "itemStyle": {
+                        "color": "#34495e"
+                    }
+                },
+                "accessibility": {
+                    "description": "Comparison of monthly temperature patterns showing northern vs southern hemisphere climate variations",
+                    "pointDescriptionFormat": "{series.name}: {point.y}\u00b0F in {point.category}"
+                },
+                "plotOptions": {
+                    "spline": {
+                        "marker": {
+                            "enabledThreshold": 6
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 4 time series (12 monthly points each) comparing temperature patterns between cities in opposing hemispheres. Synthetic data preserves realistic thermal ranges (\u03bc=30-95\u00b0F) with controlled variance (\u03c3=2-5\u00b0F monthly). Northern cities show summer peaks in June-August while Canberra (southern hemisphere) peaks in December-February. The spline chart effectively reveals comparative climate patterns through smooth interpolation, adhering to Tufte's principles by maximizing data-ink ratio through clean axis styling and minimal gridlines. Color choices follow Cairo's perceptual guidelines using high-contrast, distinguishable hues. Statistical anchors maintain credibility: New York (\u03bc=54.9\u00b0F, \u03c3=17.2\u00b0F) and Dubai (\u03bc=82.3\u00b0F, \u03c3=11.1\u00b0F) demonstrate appropriate thermal ranges for their climates."
+}

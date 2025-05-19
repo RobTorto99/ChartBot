@@ -1,0 +1,150 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a sociogram chart. The chart should have a polar layout, with a title 'Highcharts Sociogram Study'. The x-axis should be hidden, and the y-axis should have reversed labels and plot bands with a specific color. The data series should include multiple nodes with connections between them, each node having a unique ID, name, and color. The chart should also include custom arrow markers for the start and end of the connections.",
+    "visualization_code": {
+        "chart": {
+            "height": "100%",
+            "polar": true
+        },
+        "defs": [
+            {
+                "id": "arrow-start",
+                "path": "M 0 0 L 10 5 L 0 10 z",
+                "fill": "gray"
+            },
+            {
+                "id": "arrow-end",
+                "path": "M 0 0 L 10 5 L 0 10 z",
+                "fill": "gray"
+            }
+        ],
+        "title": {
+            "text": "Highcharts Sociogram Study"
+        },
+        "xAxis": {
+            "visible": false
+        },
+        "yAxis": {
+            "labels": {
+                "enabled": false
+            },
+            "reversed": true,
+            "plotBands": [
+                {
+                    "from": 0,
+                    "to": Infinity,
+                    "color": "rgba(0, 255, 96, 0.1)"
+                },
+                {
+                    "from": 1,
+                    "to": Infinity,
+                    "color": "rgba(0, 255, 96, 0.1)"
+                },
+                {
+                    "from": 2,
+                    "to": Infinity,
+                    "color": "rgba(0, 255, 96, 0.1)"
+                },
+                {
+                    "from": 3,
+                    "to": Infinity,
+                    "color": "rgba(0, 255, 96, 0.1)"
+                },
+                {
+                    "from": 4,
+                    "to": Infinity,
+                    "color": "rgba(0, 255, 96, 0.1)"
+                }
+            ],
+            "gridLineColor": "white"
+        },
+        "series": [
+            {
+                "data": [
+                    {
+                        "id": "MarcusID",
+                        "name": "Marcus",
+                        "connections": [
+                            "TomID",
+                            "AnnID",
+                            "JulieID",
+                            "MartinID"
+                        ],
+                        "y": 4,
+                        "color": "red"
+                    },
+                    {
+                        "id": "TomID",
+                        "name": "Tom",
+                        "connections": [
+                            "AnnID",
+                            "JulieID"
+                        ],
+                        "y": 2,
+                        "color": "blue"
+                    },
+                    {
+                        "id": "AnnID",
+                        "name": "Ann",
+                        "connections": [
+                            "TomID",
+                            "MartinID"
+                        ],
+                        "y": 2,
+                        "color": "red"
+                    },
+                    {
+                        "id": "JulieID",
+                        "name": "Julie",
+                        "connections": [
+                            "TomID",
+                            "AnnID",
+                            "MartinID"
+                        ],
+                        "y": 3,
+                        "color": "red"
+                    },
+                    {
+                        "id": "MartinID",
+                        "name": "Martin",
+                        "connections": [
+                            "MarcusID"
+                        ],
+                        "y": 1,
+                        "color": "red"
+                    },
+                    {
+                        "id": "JohnID",
+                        "name": "John",
+                        "connections": [
+                            "NoraID",
+                            "MonicaID"
+                        ],
+                        "color": "red",
+                        "y": 2
+                    },
+                    {
+                        "id": "MonicaID",
+                        "name": "Monica",
+                        "connections": [
+                            "NoraID"
+                        ],
+                        "y": 1,
+                        "color": "red"
+                    },
+                    {
+                        "id": "NoraID",
+                        "name": "Nora",
+                        "connections": [
+                            "MonicaID"
+                        ],
+                        "y": 1,
+                        "color": "red"
+                    }
+                ],
+                "type": "sociogram",
+                "name": "Positive relations"
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is designed to render a sociogram chart with a polar layout. The chart includes a title 'Highcharts Sociogram Study' and hides the x-axis. The y-axis is reversed and features plot bands with a specific color, enhancing the visual representation of the data. The data series consists of multiple nodes, each with a unique ID, name, and color, and connections between them. The connections are visualized using custom arrow markers at the start and end, which are defined in the 'defs' section. This configuration effectively visualizes the relationships between nodes in a sociogram format, making it suitable for social network analysis or similar applications."
+}

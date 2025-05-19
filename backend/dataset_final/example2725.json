@@ -1,0 +1,137 @@
+{
+    "visualization_prompt": "Generate a spline chart showing comparative monthly sales trends between two product lines using synthetic seasonal patterns and growth trajectories",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": {
+                "linearGradient": {
+                    "x1": 0,
+                    "y1": 0,
+                    "x2": 0,
+                    "y2": 1
+                },
+                "stops": [
+                    [
+                        0,
+                        "rgba(236, 240, 241, 1)"
+                    ],
+                    [
+                        1,
+                        "rgba(189, 195, 199, 0.2)"
+                    ]
+                ]
+            }
+        },
+        "title": {
+            "text": "Monthly Sales Performance Analysis (2023)",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495e",
+                    "fontWeight": "bold"
+                }
+            },
+            "title": {
+                "text": "Month",
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (USD thousands)",
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "tooltip": {
+            "borderWidth": 2,
+            "valueDecimals": 1,
+            "valuePrefix": "$",
+            "valueSuffix": "k"
+        },
+        "series": [
+            {
+                "name": "Product Line A (Seasonal)",
+                "data": [
+                    32.4,
+                    45.1,
+                    68.9,
+                    112.4,
+                    158.7,
+                    194.2,
+                    205.8,
+                    182.3,
+                    134.7,
+                    89.5,
+                    53.2,
+                    37.8
+                ],
+                "color": "#2ecc71",
+                "marker": {
+                    "symbol": "circle",
+                    "radius": 5
+                }
+            },
+            {
+                "name": "Product Line B (Growth)",
+                "data": [
+                    48.3,
+                    57.6,
+                    65.2,
+                    73.8,
+                    86.4,
+                    94.1,
+                    108.7,
+                    122.5,
+                    136.9,
+                    151.3,
+                    167.4,
+                    182.9
+                ],
+                "color": "#9b59b6",
+                "marker": {
+                    "symbol": "square",
+                    "radius": 5
+                }
+            }
+        ],
+        "legend": {
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#2c3e50"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two temporal series (12-month cycle) representing synthetic sales data. Product Line A demonstrates seasonal variation (\u03bc=115.3k, \u03c3=65.2k) with summer peak demand, while Product Line B shows steady growth (\u03bc=110.5k, \u03c3=45.8k) through strategic market expansion. The spline chart was chosen to emphasize smooth trend transitions while maintaining individual data point precision through circular/square markers. Color choices (teal for environmental products, purple for luxury goods) follow Cairo's principles of semantic discriminability. The gradient background reduces visual weight while maintaining gridline legibility, optimizing Tufte's data-ink ratio. Synthetic values were generated using trend+seasonality models: y\u2081(t) = 80 + 60sin(2\u03c0t/12) + \u03b5\u209c for Product A, y\u2082(t) = 45 + 11.5t + \u03b5\u209c for Product B, with \u03b5\u209c \u223c N(0,8)."
+}

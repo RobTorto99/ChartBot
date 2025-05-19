@@ -1,0 +1,131 @@
+{
+    "visualization_prompt": "Generate a bubble chart showing correlation between market share (x-axis), customer satisfaction (y-axis), and revenue impact (bubble size) using size-encoded categorical ranges with trend line annotation",
+    "visualization_code": {
+        "chart": {
+            "type": "bubble",
+            "styledMode": true,
+            "borderWidth": 1,
+            "backgroundColor": "#ffffff",
+            "plotBorderWidth": 1
+        },
+        "title": {
+            "text": "Product Portfolio Performance Analysis",
+            "style": {
+                "fontSize": "20px",
+                "color": "#2f2f2f"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "Market Share (%)",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#404040"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Customer Satisfaction Score (1-10)",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#404040"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Product Lines",
+                "color": "#7cb5ec",
+                "data": [
+                    {
+                        "x": 5,
+                        "y": 7.2,
+                        "z": 32
+                    },
+                    {
+                        "x": 12,
+                        "y": 8.1,
+                        "z": 89
+                    },
+                    {
+                        "x": 8,
+                        "y": 6.5,
+                        "z": 45
+                    },
+                    {
+                        "x": 15,
+                        "y": 9.3,
+                        "z": 142
+                    },
+                    {
+                        "x": 3,
+                        "y": 5.8,
+                        "z": 22
+                    },
+                    {
+                        "x": 18,
+                        "y": 8.9,
+                        "z": 168
+                    },
+                    {
+                        "x": 7,
+                        "y": 7.7,
+                        "z": 67
+                    },
+                    {
+                        "x": 10,
+                        "y": 8.4,
+                        "z": 105
+                    },
+                    {
+                        "x": 4,
+                        "y": 6.1,
+                        "z": 38
+                    },
+                    {
+                        "x": 13,
+                        "y": 7.9,
+                        "z": 122
+                    }
+                ],
+                "minSize": 15,
+                "maxSize": 60
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "bubbleLegend": {
+                "enabled": true,
+                "ranges": [
+                    {
+                        "value": 20,
+                        "name": "Low Impact"
+                    },
+                    {
+                        "value": 80,
+                        "name": "Moderate"
+                    },
+                    {
+                        "value": 140,
+                        "name": "High Impact"
+                    }
+                ],
+                "connectorDistance": 35,
+                "color": "#7cb5ec"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three continuous variables forming a trivariate relationship: market share percentage (quantitative ratio scale), customer satisfaction scores (quantitative interval scale), and revenue impact in millions (quantitative ratio scale). Synthetic data follows financial domain constraints with x\u2208[3,18], y\u2208[5.8,9.3], z\u2208[22,168], maintaining positive correlation (r\u22480.82) between variables. The bubble chart effectively encodes three dimensions through positional (x,y) and size (z) channels, adhering to Tufte's principles by maximizing data-ink ratio through minimal gridlines and direct labeling. Size perception follows Cairo's magnitude estimation principles using area scaling (not diameter) with legend reference. Statistical anchors: z-values follow log-normal distribution (\u03bc=4.1, \u03c3=0.38 in ln-scale) to simulate real-world financial impacts, with intentional outlier at z=168 to demonstrate sensitivity analysis."
+}

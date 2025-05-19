@@ -1,0 +1,72 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render an area chart with the following specifications: Chart type: area, Chart title: 'Area Chart Example', Axes and labels styling: Use a dark blue color for the title, a light gray color for the axis labels, and a larger font size for the title. Data series: Include one series named 'Data Series 1' with data points [1, 2, 3, 4, 5]. Custom colors: Use a gradient from light blue to dark blue for the area fill. Additional configurations: Set the chart background to a light gray color, add a legend at the bottom of the chart, and set the chart margins to 50 pixels on all sides.",
+    "visualization_code": {
+        "chart": {
+            "type": "area",
+            "backgroundColor": "#f0f0f0",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Area Chart Example",
+            "style": {
+                "color": "#00008B",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#D3D3D3"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#D3D3D3"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Data Series 1",
+                "data": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#ADD8E6"
+                        ],
+                        [
+                            1,
+                            "#00008B"
+                        ]
+                    ]
+                }
+            }
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render an area chart with a title 'Area Chart Example'. The chart type is set to 'area', and the background color is a light gray (#f0f0f0). The title is styled with a dark blue color (#00008B) and a larger font size (20px). The axis labels are styled with a light gray color (#D3D3D3). The data series 'Data Series 1' contains points [1, 2, 3, 4, 5], and the area fill uses a gradient from light blue (#ADD8E6) to dark blue (#00008B). The legend is positioned at the bottom of the chart, centered horizontally. The chart margins are set to 50 pixels on all sides to provide ample space around the chart."
+}

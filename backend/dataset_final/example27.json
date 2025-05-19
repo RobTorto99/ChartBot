@@ -1,0 +1,112 @@
+{
+    "visualization_prompt": "Create a Highcharts map chart with the following specifications: Chart type: map, Chart title: 'Cropped map', Axes and labels styling: Title and subtitle aligned to the left, Custom colors: Default colors for countries and bubbles, Additional configurations: Map navigation enabled, logarithmic color axis, and insets for Pacific islands.",
+    "visualization_code": {
+        "chart": {
+            "plotBorderWidth": 1,
+            "map": "https://code.highcharts.com/mapdata/custom/world.topo.json",
+            "height": "65%"
+        },
+        "title": {
+            "text": "Cropped map",
+            "align": "left"
+        },
+        "subtitle": {
+            "text": "Study for a separate map (world-cropped.topo.json) where Pacific islands are inset to allow a better fit for the continents",
+            "align": "left"
+        },
+        "accessibility": {
+            "description": "We see how China and India by far are the countries with the largest population."
+        },
+        "legend": {
+            "enabled": false
+        },
+        "mapNavigation": {
+            "enabled": true,
+            "buttonOptions": {
+                "verticalAlign": "bottom"
+            }
+        },
+        "mapView": {
+            "insets": [
+                {
+                    "borderWidth": 0,
+                    "padding": 0,
+                    "id": "AS",
+                    "field": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    99,
+                                    55
+                                ],
+                                [
+                                    100,
+                                    55
+                                ],
+                                [
+                                    100,
+                                    56
+                                ],
+                                [
+                                    99,
+                                    56
+                                ]
+                            ]
+                        ]
+                    },
+                    "geoBounds": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    180.1,
+                                    -0.1
+                                ],
+                                [
+                                    -180.1,
+                                    -0.1
+                                ],
+                                [
+                                    -180.1,
+                                    0.1
+                                ],
+                                [
+                                    180.1,
+                                    0.1
+                                ]
+                            ]
+                        ]
+                    }
+                }
+            ]
+        },
+        "colorAxis": {
+            "min": 1,
+            "max": 1000,
+            "type": "logarithmic"
+        },
+        "series": [
+            {
+                "name": "Countries",
+                "color": "#E0E0E0",
+                "enableMouseTracking": false
+            },
+            {
+                "type": "mapbubble",
+                "name": "Population 2016",
+                "joinBy": [
+                    "iso-a3",
+                    "code3"
+                ],
+                "data": "https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/world-population.json",
+                "minSize": 4,
+                "maxSize": "12%",
+                "tooltip": {
+                    "pointFormat": "{point.properties.name} ({point.properties.hc-a2}): {point.z} thousands"
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a map chart with specific customizations. The chart type is a map, and the title is set to 'Cropped map' with alignment to the left. The subtitle also aligns to the left and provides additional context about the map's purpose. The map includes custom insets for Pacific islands, which are defined in the 'mapView' section. The color axis is logarithmic, ranging from 1 to 1000, which is suitable for displaying population density data. The series includes two types of data: one for the countries with a default color and another for population data displayed as bubbles. The map navigation is enabled, allowing users to interact with the map. The legend is disabled, and accessibility features are included to describe the chart's content."
+}

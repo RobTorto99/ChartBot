@@ -1,0 +1,135 @@
+{
+    "visualization_prompt": "Generate a column chart showing branch efficiency optimization using dual-axis encoding. Display pre- and post-optimization employee counts (primary axis) and profit metrics (secondary axis) across three geographic categories.",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "backgroundColor": "#FFFFFF",
+                "marginTop": 25
+            },
+            "title": {
+                "text": "Workforce Optimization Impact Analysis",
+                "style": {
+                    "fontSize": "18px",
+                    "color": "#2E3440"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Seattle HQ",
+                    "San Francisco",
+                    "Tokyo"
+                ],
+                "labels": {
+                    "style": {
+                        "fontSize": "12px",
+                        "color": "#4C566A"
+                    }
+                }
+            },
+            "yAxis": [
+                {
+                    "title": {
+                        "text": "Full-Time Employees",
+                        "style": {
+                            "color": "#2E3440"
+                        }
+                    },
+                    "min": 0,
+                    "gridLineColor": "#D8DEE9"
+                },
+                {
+                    "title": {
+                        "text": "Annual Profit (USD)",
+                        "style": {
+                            "color": "#2E3440"
+                        }
+                    },
+                    "opposite": true,
+                    "labels": {
+                        "format": "${value}M"
+                    }
+                }
+            ],
+            "colors": [
+                "#4F98CA",
+                "#3B6978",
+                "#84A9AC",
+                "#3B7A57"
+            ],
+            "series": [
+                {
+                    "name": "Baseline Workforce",
+                    "data": [
+                        182,
+                        94,
+                        38
+                    ],
+                    "yAxis": 0,
+                    "pointPadding": 0.25,
+                    "pointPlacement": -0.2
+                },
+                {
+                    "name": "Optimized Workforce",
+                    "data": [
+                        165,
+                        110,
+                        52
+                    ],
+                    "yAxis": 0,
+                    "pointPadding": 0.35,
+                    "pointPlacement": -0.2
+                },
+                {
+                    "name": "Baseline Profit",
+                    "data": [
+                        208.9,
+                        192.4,
+                        221.7
+                    ],
+                    "yAxis": 1,
+                    "tooltip": {
+                        "valuePrefix": "$",
+                        "valueSuffix": "M"
+                    },
+                    "pointPadding": 0.25,
+                    "pointPlacement": 0.2
+                },
+                {
+                    "name": "Projected Profit",
+                    "data": [
+                        231.5,
+                        215.2,
+                        242.8
+                    ],
+                    "yAxis": 1,
+                    "tooltip": {
+                        "valuePrefix": "$",
+                        "valueSuffix": "M"
+                    },
+                    "pointPadding": 0.35,
+                    "pointPlacement": 0.2
+                }
+            ],
+            "plotOptions": {
+                "column": {
+                    "grouping": false,
+                    "borderWidth": 0,
+                    "shadow": false
+                }
+            },
+            "legend": {
+                "align": "right",
+                "verticalAlign": "middle",
+                "itemStyle": {
+                    "color": "#4C566A"
+                }
+            },
+            "tooltip": {
+                "shared": true,
+                "valueDecimals": 1
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 3 categorical entries (branches) with 4 quantitative variables: two employee count metrics (\u03bc=127\u00b163.5 baseline, \u03bc=109\u00b147.3 optimized) and two financial metrics (\u03bc=207.7\u00b112.1M baseline, \u03bc=229.8\u00b112.1M projected). Synthetic data was generated using constrained randomization: workforce numbers follow Poisson distributions (\u03bb=100-200 for HQ, \u03bb=30-100 for satellite offices), while profits use normal distributions with 8-12% optimization gains. The dual-axis column chart maximizes data-ink ratio by vertically aligning comparable metrics while maintaining clear perceptual separation through Cairo's color intensity principles - cool blues for human resources metrics versus natural greens for financials. Strategic column offsetting enables direct intra-branch comparison while preserving inter-branch relationships."
+}

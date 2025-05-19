@@ -1,0 +1,125 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a polar column chart displaying the number of Winter Olympic medals for the top 5 countries. The chart should have a title 'Winter Olympic medals per existing country (TOP 5)', with custom colors for each medal type. The x-axis should display country names with corresponding flags, and the y-axis should represent the number of medals. The chart should be inverted and have a polar layout with specific styling for labels, axes, and titles.",
+    "visualization_code": {
+        "colors": [
+            "#FFD700",
+            "#C0C0C0",
+            "#CD7F32"
+        ],
+        "chart": {
+            "type": "column",
+            "inverted": true,
+            "polar": true
+        },
+        "accessibility": {
+            "keyboardNavigation": {
+                "seriesNavigation": {
+                    "mode": "serialize"
+                }
+            }
+        },
+        "title": {
+            "text": "Winter Olympic medals per existing country (TOP 5)"
+        },
+        "tooltip": {
+            "outside": true
+        },
+        "pane": {
+            "size": "85%",
+            "innerSize": "20%",
+            "endAngle": 270
+        },
+        "xAxis": {
+            "tickInterval": 1,
+            "labels": {
+                "align": "right",
+                "useHTML": true,
+                "allowOverlap": true,
+                "step": 1,
+                "y": 3,
+                "style": {
+                    "fontSize": "13px"
+                },
+                "formatter": "function () { return `${this.value} <span class='f16'><span id='flag' class='flag ${country[this.value]}'></span></span>`; }"
+            },
+            "lineWidth": 0,
+            "categories": [
+                "Norway",
+                "United States",
+                "Germany",
+                "Canada",
+                "Austria"
+            ],
+            "accessibility": {
+                "description": "Countries"
+            }
+        },
+        "yAxis": {
+            "crosshair": {
+                "enabled": true,
+                "color": "#333"
+            },
+            "lineWidth": 0,
+            "tickInterval": 25,
+            "reversedStacks": false,
+            "endOnTick": true,
+            "showLastLabel": true,
+            "accessibility": {
+                "description": "Number of medals"
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "normal",
+                "borderWidth": 1,
+                "pointPadding": 0,
+                "groupPadding": 0.15
+            }
+        },
+        "series": [
+            {
+                "name": "Gold medals",
+                "data": [
+                    132,
+                    105,
+                    92,
+                    73,
+                    64
+                ],
+                "color": {
+                    "patternIndex": 0
+                },
+                "borderColor": "#668FF0"
+            },
+            {
+                "name": "Silver medals",
+                "data": [
+                    125,
+                    110,
+                    86,
+                    64,
+                    81
+                ],
+                "color": {
+                    "patternIndex": 1
+                },
+                "borderColor": "#888"
+            },
+            {
+                "name": "Bronze medals",
+                "data": [
+                    111,
+                    90,
+                    60,
+                    62,
+                    87
+                ],
+                "color": {
+                    "patternIndex": 2
+                },
+                "borderColor": "#31AC2F"
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a polar column chart to display the number of Winter Olympic medals for the top 5 countries. The chart is inverted and polar, with a title 'Winter Olympic medals per existing country (TOP 5)'. The x-axis labels are styled to include country names with corresponding flags, and the y-axis represents the number of medals. The chart uses custom colors for each medal type (gold, silver, bronze) and includes accessibility features for keyboard navigation. The plot options for columns include stacking and padding configurations to ensure the data is presented clearly. The series data includes the number of gold, silver, and bronze medals for each country, with specific border colors for each series."
+}

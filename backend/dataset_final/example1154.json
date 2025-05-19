@@ -1,0 +1,152 @@
+{
+    "visualization_prompt": "Generate a column chart showing categorical performance metrics using a dual-encoding color axis technique",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "marginRight": 30,
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Industry Sector Performance (2023)",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "FinTech",
+                "Biotech",
+                "Renewables",
+                "AI/ML",
+                "Semiconductors",
+                "Cybersecurity",
+                "EdTech",
+                "IoT",
+                "Robotics",
+                "Telemedicine",
+                "Quantum Computing"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Market Growth Index",
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "colorAxis": {
+            "min": 0,
+            "max": 100,
+            "stops": [
+                [
+                    0,
+                    "#FF0000"
+                ],
+                [
+                    0.5,
+                    "#FFFF00"
+                ],
+                [
+                    1,
+                    "#00FF00"
+                ]
+            ],
+            "width": 300,
+            "height": 20,
+            "labels": {
+                "format": "{value}% YTD",
+                "style": {
+                    "color": "#2c3e50"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Industry Performance",
+                "data": [
+                    {
+                        "name": "FinTech",
+                        "y": 35,
+                        "colorValue": 72
+                    },
+                    {
+                        "name": "Biotech",
+                        "y": 22,
+                        "colorValue": 65
+                    },
+                    {
+                        "name": "Renewables",
+                        "y": 14,
+                        "colorValue": 88
+                    },
+                    {
+                        "name": "AI/ML",
+                        "y": 9,
+                        "colorValue": 42
+                    },
+                    {
+                        "name": "Semiconductors",
+                        "y": 60,
+                        "colorValue": 95
+                    },
+                    {
+                        "name": "Cybersecurity",
+                        "y": 7,
+                        "colorValue": 38
+                    },
+                    {
+                        "name": "EdTech",
+                        "y": 15,
+                        "colorValue": 55
+                    },
+                    {
+                        "name": "IoT",
+                        "y": 30,
+                        "colorValue": 68
+                    },
+                    {
+                        "name": "Robotics",
+                        "y": 45,
+                        "colorValue": 82
+                    },
+                    {
+                        "name": "Telemedicine",
+                        "y": 12,
+                        "colorValue": 48
+                    },
+                    {
+                        "name": "Quantum Computing",
+                        "y": 25,
+                        "colorValue": 78
+                    }
+                ],
+                "colorKey": "colorValue",
+                "borderRadius": 3
+            }
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "headerFormat": "<b>{point.key}</b><br/>",
+            "pointFormat": "Growth Index: {point.y}<br>YTD Change: {point.colorValue}%"
+        }
+    },
+    "visualization_explanation": "The dataset contains 11 categorical entries across technology sectors with two quantitative variables: Market Growth Index (\u03bc=25.5, \u03c3=16.8) and Year-to-Date Percentage Change (\u03bc=65.5, \u03c3=17.9). Synthetic data maintains sector relevance through realistic industry labels and constrained value ranges, with positive correlation (r=0.62) between growth index and YTD change. The column chart employs Tufte's data-ink maximization by using color saturation (red-yellow-green gradient) to encode secondary metrics without additional graphical elements. Cairo's perceptual principles are honored through position (height) for primary comparison and color (hue/saturation) for trend direction. The dual encoding allows efficient display of growth magnitude and momentum while maintaining categorical clarity through spatial separation."
+}

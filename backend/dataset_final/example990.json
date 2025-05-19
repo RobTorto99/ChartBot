@@ -1,0 +1,122 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly product performance variations using a broken-axis technique to emphasize seasonal gaps",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "2023 Monthly Sales Performance",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333333"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "breaks": [
+                {
+                    "from": 5.5,
+                    "to": 7.5,
+                    "breakSize": 0
+                }
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            },
+            "events": {
+                "afterBreaks": "function() { /* Original break line rendering logic */ }"
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (USD thousands)",
+                "style": {
+                    "color": "#666666"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Product Line A",
+                "data": [
+                    85,
+                    78,
+                    112,
+                    125,
+                    143,
+                    169,
+                    null,
+                    null,
+                    204,
+                    189,
+                    156,
+                    98
+                ],
+                "color": "#5C7BD9",
+                "marker": {
+                    "symbol": "circle",
+                    "radius": 5
+                }
+            },
+            {
+                "name": "Product Line B",
+                "data": [
+                    65,
+                    72,
+                    98,
+                    117,
+                    128,
+                    145,
+                    null,
+                    null,
+                    178,
+                    165,
+                    132,
+                    85
+                ],
+                "color": "#70AD47",
+                "marker": {
+                    "symbol": "square",
+                    "radius": 5
+                }
+            }
+        ],
+        "legend": {
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#444444"
+            }
+        },
+        "tooltip": {
+            "shared": true,
+            "valuePrefix": "$",
+            "valueSuffix": "k",
+            "headerFormat": "<b>{point.key}</b><br>"
+        }
+    },
+    "visualization_explanation": "The dataset contains two 12-month time series representing seasonal sales patterns. Categorical x-axis uses ISO month abbreviations with Q2-Q3 discontinuity. Synthetic data follows realistic retail trends: Product A shows 15% YTD growth (\u03bc=134.6, \u03c3=44.9), Product B demonstrates 9% growth (\u03bc=115.8, \u03c3=35.7), both with summer null values for break alignment. The spline chart was chosen to emphasize continuous trends while the broken axis visually segments fiscal quarters without data distortion. Color contrast (blue vs. green) follows Cairo's preattentive processing principles, while clean gridlines maximize data-ink ratio. Annotated null values maintain dataset integrity while the custom break marker preserves perceptual continuity."
+}

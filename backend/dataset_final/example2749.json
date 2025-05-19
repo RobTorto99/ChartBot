@@ -1,0 +1,95 @@
+{
+    "visualization_prompt": "Generate a stacked column chart showing quarterly performance metrics using synthetic data with mixed positive/negative values",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "width": 300,
+            "height": 260,
+            "backgroundColor": "#f8f9fa"
+        },
+        "title": {
+            "text": "Quarterly Performance Analysis",
+            "style": {
+                "fontSize": "16px",
+                "color": "#2c3e50"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Q1",
+                "Q2",
+                "Q3",
+                "Q4"
+            ],
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#7f8c8d"
+                },
+                "autoRotation": [
+                    -45
+                ]
+            }
+        },
+        "yAxis": {
+            "stackLabels": {
+                "enabled": true,
+                "allowOverlap": true,
+                "crop": false,
+                "formatter": "function() { return Highcharts.numberFormat(this.total, 1) + 'K' }",
+                "style": {
+                    "fontSize": "11px",
+                    "color": "#2c3e50"
+                }
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#7f8c8d"
+                },
+                "formatter": "function() { return this.value + 'K' }"
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "normal",
+                "dataLabels": {
+                    "enabled": true,
+                    "formatter": "function() { return Highcharts.numberFormat(Math.abs(this.y), 1) }"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "New Clients",
+                "data": [
+                    42.3,
+                    -38.7,
+                    67.2,
+                    88.5
+                ],
+                "color": "#27ae60",
+                "stack": "growth"
+            },
+            {
+                "name": "Churn",
+                "data": [
+                    -58.1,
+                    92.4,
+                    -44.9,
+                    -75.3
+                ],
+                "color": "#c0392b",
+                "stack": "attrition"
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#34495e"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two-dimensional categorical-temporal data with quarterly measurements across two business metrics. Synthetic values were generated using paired normal distributions (\u03bc\u2081=35, \u03c3=50; \u03bc\u2082=-15, \u03c3=80) to create offsetting positive/negative patterns. The stacked column format was chosen to show net position calculations while maintaining component visibility, adhering to Tufte's principle of showing data variance through direct labeling. Color pairing follows Cairo's pre-attentive processing guidelines using high-contrast greens (#27ae60 L*=46) and reds (#c0392b L*=26) for immediate positive/negative recognition. Stack labels use D3-style formatting (+1.2K) for quantitative precision, while the 45\u00b0 x-axis labels prevent overlap in narrow layouts."
+}

@@ -1,0 +1,98 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly sales comparison between 2022 and 2023 using categorical axes with style-enhanced labels",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#FFFFFF",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Monthly Sales Data"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#0000FF",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales"
+            },
+            "labels": {
+                "style": {
+                    "color": "#008000",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "tooltip": {
+            "shared": true
+        },
+        "series": [
+            {
+                "name": "2022 Sales",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#008000"
+            },
+            {
+                "name": "2023 Sales",
+                "data": [
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4,
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5
+                ],
+                "color": "#FFA500"
+            }
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        }
+    },
+    "visualization_explanation": "The dataset contains two 12-dimensional time series representing monthly sales figures across consecutive years. Original data preserves natural sales periodicity with Q4 peaks in 2022 (Oct: 216.4) and shifted patterns in 2023. The column chart maximizes data-ink ratio through direct categorical comparisons, while Cairo's principles are maintained through distinct color encoding (#008000=2022, #FFA500=2023) and proportional width encoding. Axis styling (blue months/green values) creates visual hierarchy, with y-axis labels using larger 14px font for quantitative salience. Margin padding ensures proper label containment despite 50px whitespace buffer."
+}

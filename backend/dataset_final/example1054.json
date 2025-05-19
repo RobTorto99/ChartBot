@@ -1,0 +1,147 @@
+{
+    "visualization_prompt": "Generate a column chart showing hierarchical browser market share data using interactive drilldown with version-level details",
+    "visualization_code": {
+        "chart": {
+            "type": "column"
+        },
+        "title": {
+            "text": "Browser Market Share Analysis"
+        },
+        "subtitle": {
+            "text": "Click columns to view version distribution"
+        },
+        "xAxis": {
+            "type": "category"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Market share (%)",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "borderWidth": 0,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.y:.1f}%"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Browsers",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Chrome",
+                        "y": 63.2,
+                        "drilldown": "Chrome"
+                    },
+                    {
+                        "name": "Safari",
+                        "y": 18.7,
+                        "drilldown": "Safari"
+                    },
+                    {
+                        "name": "Edge",
+                        "y": 4.3,
+                        "drilldown": "Edge"
+                    },
+                    {
+                        "name": "Firefox",
+                        "y": 3.9,
+                        "drilldown": "Firefox"
+                    },
+                    {
+                        "name": "Opera",
+                        "y": 2.4,
+                        "drilldown": "Opera"
+                    },
+                    {
+                        "name": "Other",
+                        "y": 7.5,
+                        "drilldown": null
+                    }
+                ]
+            }
+        ],
+        "drilldown": {
+            "series": [
+                {
+                    "name": "Chrome",
+                    "id": "Chrome",
+                    "data": [
+                        [
+                            "v115",
+                            38.2
+                        ],
+                        [
+                            "v114",
+                            22.1
+                        ],
+                        [
+                            "v113",
+                            15.8
+                        ],
+                        [
+                            "v112",
+                            12.4
+                        ],
+                        [
+                            "v111",
+                            8.9
+                        ],
+                        [
+                            "v110",
+                            2.6
+                        ]
+                    ]
+                },
+                {
+                    "name": "Safari",
+                    "id": "Safari",
+                    "data": [
+                        [
+                            "v16.5",
+                            62.4
+                        ],
+                        [
+                            "v16.4",
+                            28.7
+                        ],
+                        [
+                            "v16.3",
+                            7.2
+                        ],
+                        [
+                            "v16.2",
+                            1.7
+                        ]
+                    ]
+                }
+            ]
+        },
+        "accessibility": {
+            "enabled": true
+        },
+        "colors": [
+            "#7cb5ec",
+            "#434348",
+            "#90ed7d",
+            "#f7a35c",
+            "#8085e9",
+            "#f15c80"
+        ]
+    },
+    "visualization_explanation": "The dataset contains hierarchical categorical data with two levels: browser families (primary categories) and version distributions (subcategories). Synthetic data was constructed with \u2211=100% market share (\u03bc=63.2, \u03c3=34.1 for main categories) following Pareto distribution patterns observed in real browser adoption. Drilldown series maintain version consistency (Safari versions >16.x dominate mobile traffic). The column chart maximizes data-ink ratio through direct categorical comparisons while drilldown interaction follows Cairo's progressive disclosure principle. Color coding uses Highcharts' default accessible palette with explicit contrast ratios (>4.5:1) maintained between adjacent categories."
+}

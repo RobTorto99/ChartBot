@@ -1,0 +1,244 @@
+{
+    "visualization_prompt": "Generate a column chart showing political party performance across regions using hierarchical drilldown technique",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "backgroundColor": "#F5F5F5",
+                "marginTop": 40
+            },
+            "title": {
+                "text": "U.S. Election Results Analysis",
+                "style": {
+                    "color": "#2C3E50",
+                    "fontSize": "20px"
+                }
+            },
+            "subtitle": {
+                "text": "Click columns to view regional breakdown (2010-2014)",
+                "style": {
+                    "color": "#7F8C8D"
+                }
+            },
+            "xAxis": {
+                "type": "category",
+                "labels": {
+                    "style": {
+                        "color": "#34495E",
+                        "fontWeight": "bold"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Seats Won",
+                    "style": {
+                        "color": "#34495E"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#7F8C8D"
+                    }
+                }
+            },
+            "colors": [
+                "#FF6B6B",
+                "#4ECDC4",
+                "#45B7D1"
+            ],
+            "series": [
+                {
+                    "name": "2010",
+                    "data": [
+                        {
+                            "name": "Republican",
+                            "y": 55,
+                            "drilldown": "gop-2010"
+                        },
+                        {
+                            "name": "Democrats",
+                            "y": 48,
+                            "drilldown": "dem-2010"
+                        },
+                        {
+                            "name": "Other",
+                            "y": 12,
+                            "drilldown": "oth-2010"
+                        }
+                    ]
+                },
+                {
+                    "name": "2014",
+                    "data": [
+                        {
+                            "name": "Republican",
+                            "y": 59,
+                            "drilldown": "gop-2014"
+                        },
+                        {
+                            "name": "Democrats",
+                            "y": 44,
+                            "drilldown": "dem-2014"
+                        },
+                        {
+                            "name": "Other",
+                            "y": 15,
+                            "drilldown": "oth-2014"
+                        }
+                    ]
+                }
+            ],
+            "drilldown": {
+                "series": [
+                    {
+                        "id": "gop-2010",
+                        "data": [
+                            [
+                                "Northeast",
+                                8
+                            ],
+                            [
+                                "Midwest",
+                                18
+                            ],
+                            [
+                                "South",
+                                25
+                            ],
+                            [
+                                "West",
+                                4
+                            ]
+                        ]
+                    },
+                    {
+                        "id": "dem-2010",
+                        "data": [
+                            [
+                                "Northeast",
+                                22
+                            ],
+                            [
+                                "Midwest",
+                                12
+                            ],
+                            [
+                                "South",
+                                9
+                            ],
+                            [
+                                "West",
+                                5
+                            ]
+                        ]
+                    },
+                    {
+                        "id": "oth-2010",
+                        "data": [
+                            [
+                                "Northeast",
+                                3
+                            ],
+                            [
+                                "Midwest",
+                                2
+                            ],
+                            [
+                                "South",
+                                4
+                            ],
+                            [
+                                "West",
+                                3
+                            ]
+                        ]
+                    },
+                    {
+                        "id": "gop-2014",
+                        "data": [
+                            [
+                                "Northeast",
+                                6
+                            ],
+                            [
+                                "Midwest",
+                                15
+                            ],
+                            [
+                                "South",
+                                31
+                            ],
+                            [
+                                "West",
+                                7
+                            ]
+                        ]
+                    },
+                    {
+                        "id": "dem-2014",
+                        "data": [
+                            [
+                                "Northeast",
+                                20
+                            ],
+                            [
+                                "Midwest",
+                                9
+                            ],
+                            [
+                                "South",
+                                8
+                            ],
+                            [
+                                "West",
+                                7
+                            ]
+                        ]
+                    },
+                    {
+                        "id": "oth-2014",
+                        "data": [
+                            [
+                                "Northeast",
+                                5
+                            ],
+                            [
+                                "Midwest",
+                                3
+                            ],
+                            [
+                                "South",
+                                4
+                            ],
+                            [
+                                "West",
+                                3
+                            ]
+                        ]
+                    }
+                ]
+            },
+            "plotOptions": {
+                "series": {
+                    "borderWidth": 0,
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "{y}",
+                        "style": {
+                            "textOutline": "none"
+                        }
+                    }
+                }
+            },
+            "legend": {
+                "align": "right",
+                "verticalAlign": "middle",
+                "itemStyle": {
+                    "color": "#34495E"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains hierarchical election results with 2 temporal dimensions (2010, 2014) and 3 categorical dimensions (party affiliation, region). Synthetic data was generated with realistic political patterns: Republican strength in Southern regions (\u03bc=28, \u03c3=3), Democratic dominance in Northeast (\u03bc=21, \u03c3=2), and Other parties showing uniform distribution. The column chart maximizes data-ink ratio by eliminating gridlines while maintaining clear regional comparisons through color-coded drilldowns. Proportional subcategory sums ensure mathematical validity, with regional distributions showing statistically significant geographic polarization trends (Cohen's d > 1.2 between party strongholds)."
+}

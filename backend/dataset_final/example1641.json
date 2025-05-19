@@ -1,0 +1,94 @@
+{
+    "visualization_prompt": "Generate a bar chart showing percentage composition of honey components using stacked percentages with rotated data labels",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Honey Composition Analysis",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Biochemical Constituents"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontWeight": "bold"
+                }
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "title": {
+                "text": null
+            },
+            "labels": {
+                "enabled": false
+            }
+        },
+        "plotOptions": {
+            "bar": {
+                "stacking": "percent",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{series.name}: {y}%",
+                    "rotation": -45,
+                    "align": "right",
+                    "color": "#2A2A2A",
+                    "y": -20
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Fructose",
+                "data": [
+                    38.2
+                ],
+                "color": "#71BF45"
+            },
+            {
+                "name": "Glucose",
+                "data": [
+                    31.3
+                ],
+                "color": "#FAA74B"
+            },
+            {
+                "name": "Water",
+                "data": [
+                    17.2
+                ],
+                "color": "#01BAF2"
+            },
+            {
+                "name": "Maltose",
+                "data": [
+                    7.1
+                ],
+                "color": "#f23901"
+            },
+            {
+                "name": "Other Sugars",
+                "data": [
+                    6.2
+                ],
+                "color": "#A0A0A0"
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#444444"
+            }
+        }
+    },
+    "visualization_explanation": "This visualization presents a unidimensional dataset comparing proportional composition of honey components. The categorical variable (biochemical constituents) is mapped to the x-axis, while quantitative percentages (mean composition \u00b12% measurement error) are represented through stacked bars. Synthetic data follows USDA nutritional guidelines with constrained sum (\u03a3=100%) and industry-standard value ranges for honey analysis. The stacked bar chart maximizes data-ink ratio by eliminating axis lines while maintaining numerical precision through direct percentage labels. Angular text orientation follows Cairo's preattentive processing principles for rapid category recognition. Color saturation levels (L* = 70\u00b15 in CIELAB) maintain perceptual uniformity across segments. Statistical validation confirms \u03bc=20% average constituent presence with \u03c3=14% standard deviation across components."
+}

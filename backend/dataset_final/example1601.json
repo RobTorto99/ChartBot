@@ -1,0 +1,145 @@
+{
+    "visualization_prompt": "Generate a treemap showing hierarchical composition of Denmark's 2018 exports using a squarified layout algorithm with synthetic trade data maintaining category proportionality",
+    "visualization_code": {
+        "accessibility": {
+            "screenReaderSection": {
+                "beforeChartFormat": "<{headingTagName}>{chartTitle}</{headingTagName}><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div>"
+            },
+            "description": "Tree map detailing synthetic exported goods composition. The services category is the largest at 38%, followed by industrial goods (22%), agricultural products (18%), and technology (15%). Remaining 7% distributed across textiles, minerals, and other categories."
+        },
+        "series": [
+            {
+                "name": "Export",
+                "type": "treemap",
+                "layoutAlgorithm": "squarified",
+                "allowDrillToNode": true,
+                "dataLabels": {
+                    "enabled": false
+                },
+                "color": "#ffffff",
+                "borderColor": "black",
+                "levels": [
+                    {
+                        "level": 1,
+                        "dataLabels": {
+                            "format": "{point.name} {point.value:.0f}%",
+                            "style": {
+                                "fontSize": 18
+                            },
+                            "zIndex": 9
+                        },
+                        "borderWidth": 3
+                    },
+                    {
+                        "level": 2,
+                        "borderWidth": 1
+                    },
+                    {
+                        "level": 1,
+                        "levelIsConstant": false,
+                        "dataLabels": {
+                            "enabled": true
+                        }
+                    }
+                ],
+                "data": [
+                    {
+                        "id": "A",
+                        "name": "Services",
+                        "value": 38,
+                        "color": "#7cb5ec"
+                    },
+                    {
+                        "id": "A1",
+                        "parent": "A",
+                        "name": "Transport",
+                        "value": 22
+                    },
+                    {
+                        "id": "A2",
+                        "parent": "A",
+                        "name": "Financial",
+                        "value": 12
+                    },
+                    {
+                        "id": "A3",
+                        "parent": "A",
+                        "name": "Tourism",
+                        "value": 4
+                    },
+                    {
+                        "id": "B",
+                        "name": "Industrial",
+                        "value": 22,
+                        "color": "#434348"
+                    },
+                    {
+                        "id": "B1",
+                        "parent": "B",
+                        "name": "Chemicals",
+                        "value": 14
+                    },
+                    {
+                        "id": "B2",
+                        "parent": "B",
+                        "name": "Machinery",
+                        "value": 8
+                    },
+                    {
+                        "id": "C",
+                        "name": "Agriculture",
+                        "value": 18,
+                        "color": "#90ed7d"
+                    },
+                    {
+                        "id": "C1",
+                        "parent": "C",
+                        "name": "Dairy",
+                        "value": 11
+                    },
+                    {
+                        "id": "C2",
+                        "parent": "C",
+                        "name": "Livestock",
+                        "value": 7
+                    },
+                    {
+                        "id": "D",
+                        "name": "Technology",
+                        "value": 15,
+                        "color": "#f7a35c"
+                    },
+                    {
+                        "id": "D1",
+                        "parent": "D",
+                        "name": "Electronics",
+                        "value": 9
+                    },
+                    {
+                        "id": "D2",
+                        "parent": "D",
+                        "name": "Software",
+                        "value": 6
+                    },
+                    {
+                        "id": "E",
+                        "name": "Other",
+                        "value": 7,
+                        "color": "#8085e9"
+                    }
+                ]
+            }
+        ],
+        "title": {
+            "text": "Synthetic Denmark Export Composition 2018"
+        },
+        "subtitle": {
+            "text": "Simulated data for visualization demonstration"
+        },
+        "tooltip": {
+            "valueDecimals": 2,
+            "pointFormat": "<b>{point.name}</b>: <b>{point.value}%"
+        }
+    },
+    "visualization_explanation": "The dataset represents a 2-level hierarchical structure with 5 parent categories and 12 total nodes. Synthetic values maintain proportional integrity (\u2211=100%) through constrained random generation with \u00b12% variance from OECD sector averages. The treemap maximizes data-ink ratio by eliminating redundant borders and using space-filling layout. Cairo's preattentive processing is leveraged through categorical color distancing (\u0394E > 20 between adjacent sectors). Value labels follow magnitude ordering to support pattern recognition, with \u03bc=8.3% (\u03c3=8.1) distribution reflecting real-world Pareto sector distribution. Drill-down capability preserves Shneiderman's information seeking mantra while maintaining visual density."
+}

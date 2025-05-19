@@ -1,0 +1,57 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render an organization chart with the following specifications: Chart type: organization. Chart title: 'Organization Chart with Link Labels'. Axes and labels styling: Use a dark background with light text, set the font size of labels to 12px. Data series: Include three data points: ['A', 'B'], ['A', 'C'], and ['C', 'D']. Custom colors: Use a dark background with light text. Additional configurations: Set the chart margins to 20px, enable the legend, and use a dark background for the chart.",
+    "visualization_code": {
+        "chart": {
+            "type": "organization",
+            "backgroundColor": "#333",
+            "margin": 20
+        },
+        "title": {
+            "text": "Organization Chart with Link Labels",
+            "style": {
+                "color": "#fff",
+                "fontSize": "16px"
+            }
+        },
+        "series": [
+            {
+                "type": "organization",
+                "keys": [
+                    "from",
+                    "to"
+                ],
+                "data": [
+                    [
+                        "A",
+                        "B"
+                    ],
+                    [
+                        "A",
+                        "C"
+                    ],
+                    [
+                        "C",
+                        "D"
+                    ]
+                ],
+                "dataLabels": {
+                    "linkFormat": "from {point.from} to {point.to}",
+                    "linkTextPath": {
+                        "enabled": true
+                    },
+                    "style": {
+                        "color": "#fff",
+                        "fontSize": "12px"
+                    }
+                }
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#fff"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render an organization chart with specific styling and data. The chart type is set to 'organization', and the title is 'Organization Chart with Link Labels'. The chart uses a dark background with light text for better contrast, and the font size for labels is set to 12px. The data series includes three data points: ['A', 'B'], ['A', 'C'], and ['C', 'D']. The chart's background color is dark, and the margins are set to 20px. The legend is enabled and styled to match the dark theme. This configuration ensures that the organization chart is visually appealing and easy to read."
+}

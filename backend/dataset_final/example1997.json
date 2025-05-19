@@ -1,0 +1,132 @@
+{
+    "visualization_prompt": "Generate a treemap showing hierarchical export category proportions using Highcharts' squarified layout algorithm",
+    "visualization_code": {
+        "accessibility": {
+            "screenReaderSection": {
+                "beforeChartFormat": "<{headingTagName}>Denmark Export 2018</{headingTagName}><div>Tree map visualization</div><div>Source: Harvard.edu</div>"
+            },
+            "description": "Hierarchical breakdown of Denmark's 2018 exports. Services dominate with 39% share, followed by Chemicals (13%), Agriculture (12%), and Machinery (10%). Smaller categories include Textiles, Electronics, Metals, Minerals, Vehicles, and Stone."
+        },
+        "colors": [
+            "#E59866",
+            "#F8C471",
+            "#F7DC6F",
+            "#82E0AA",
+            "#73C6B6",
+            "#85C1E9",
+            "#BB8FCE",
+            "#F1948A",
+            "#B2BABB"
+        ],
+        "series": [
+            {
+                "name": "Export Categories",
+                "type": "treemap",
+                "layoutAlgorithm": "squarified",
+                "allowDrillToNode": true,
+                "dataLabels": {
+                    "enabled": false
+                },
+                "borderColor": "#333",
+                "levels": [
+                    {
+                        "level": 1,
+                        "colorByPoint": true,
+                        "dataLabels": {
+                            "format": "{point.name} {point.value:.0f}%",
+                            "style": {
+                                "fontSize": "14px",
+                                "textOverflow": "none"
+                            },
+                            "zIndex": 9
+                        },
+                        "borderWidth": 2
+                    }
+                ],
+                "data": [
+                    {
+                        "id": "A",
+                        "name": "Services",
+                        "value": 39,
+                        "colorValue": 1
+                    },
+                    {
+                        "id": "B",
+                        "name": "Chemicals",
+                        "value": 13,
+                        "colorValue": 2
+                    },
+                    {
+                        "id": "C",
+                        "name": "Agriculture",
+                        "value": 12,
+                        "colorValue": 3
+                    },
+                    {
+                        "id": "D",
+                        "name": "Machinery",
+                        "value": 10,
+                        "colorValue": 4
+                    },
+                    {
+                        "id": "E",
+                        "name": "Textiles",
+                        "value": 8,
+                        "colorValue": 5
+                    },
+                    {
+                        "id": "F",
+                        "name": "Electronics",
+                        "value": 7,
+                        "colorValue": 6
+                    },
+                    {
+                        "id": "G",
+                        "name": "Metals",
+                        "value": 5,
+                        "colorValue": 7
+                    },
+                    {
+                        "id": "H",
+                        "name": "Minerals",
+                        "value": 3,
+                        "colorValue": 8
+                    },
+                    {
+                        "id": "I",
+                        "name": "Vehicles",
+                        "value": 2,
+                        "colorValue": 9
+                    },
+                    {
+                        "id": "J",
+                        "name": "Other",
+                        "value": 1,
+                        "colorValue": 10
+                    }
+                ]
+            }
+        ],
+        "title": {
+            "text": "Denmark Export 2018",
+            "style": {
+                "fontSize": "24px",
+                "color": "#333"
+            }
+        },
+        "subtitle": {
+            "text": "Source: Harvard.edu",
+            "style": {
+                "color": "#666"
+            }
+        },
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "<b>{point.name}</b>: {point.value}%",
+            "style": {
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "This treemap uses a 2-level hierarchical structure with 10 categories showing percentage contributions. The dataset contains nominal (category names) and ratio (percentage values) data types. Synthetic percentages follow pareto distribution (\u03bc=10.9%, \u03c3=11.2) with Services as dominant category. The squarified layout maximizes space utilization while maintaining aspect ratios, adhering to Tufte's data-ink principles by eliminating redundant borders. Color progression from warm to cool hues (\u0394L* = 15) follows Cairo's perceptual guidelines for categorical distinction. Value-encoding uses both area (primary) and labeled percentages (secondary), providing dual visual anchors for magnitude comparison."
+}

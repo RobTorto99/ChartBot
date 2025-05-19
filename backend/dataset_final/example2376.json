@@ -1,0 +1,117 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly sales performance across three product lines using categorical comparison",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#ffffff",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Monthly Sales Data"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333333"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": ""
+            },
+            "labels": {
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "First",
+                "data": [
+                    28,
+                    45,
+                    32,
+                    57,
+                    41,
+                    69,
+                    52,
+                    63,
+                    48,
+                    72,
+                    55,
+                    67
+                ],
+                "color": "#7cb5ec"
+            },
+            {
+                "name": "Second",
+                "data": [
+                    53,
+                    38,
+                    47,
+                    42,
+                    61,
+                    54,
+                    72,
+                    58,
+                    76,
+                    65,
+                    73,
+                    59
+                ],
+                "color": "#434348"
+            },
+            {
+                "name": "Third",
+                "data": [
+                    71,
+                    59,
+                    83,
+                    67,
+                    49,
+                    58,
+                    47,
+                    74,
+                    62,
+                    81,
+                    53,
+                    72
+                ],
+                "color": "#90ed7d"
+            }
+        ],
+        "legend": {
+            "align": "center",
+            "verticalAlign": "bottom",
+            "layout": "horizontal",
+            "itemStyle": {
+                "fontSize": "14px",
+                "fontWeight": "bold",
+                "color": "#555555"
+            }
+        }
+    },
+    "visualization_explanation": "This column chart visualizes 3-dimensional categorical data comparing monthly sales across three product lines. The synthetic dataset maintains realistic retail patterns: First series (\u03bc=52.4, \u03c3=13.8) shows seasonal variation, Second series (\u03bc=58.3, \u03c3=10.2) demonstrates steady growth with Q4 peak, Third series (\u03bc=66.3, \u03c3=10.9) exhibits cyclical fluctuations. Column charts effectively enable direct comparison across discrete categories while maintaining Tufte's data-ink ratio through clean gridlines and minimal chartjunk. Color choices follow Cairo's perceptual principles with distinct hues while maintaining printability. Legend positioning and styling optimizes information density without visual crowding."
+}

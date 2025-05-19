@@ -1,0 +1,122 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the following specifications: Chart type: column, Chart title: 'Monthly Revenue', Axes and labels styling: Use a dark theme with white text for labels and titles, Data series: Two series with the names 'Revenue 2022' and 'Revenue 2023', each containing the provided data, Custom colors: Use a gradient from blue to green for the columns, Additional configurations: Set chart margins, background color, and enable the legend.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "width": 300,
+            "height": 260,
+            "backgroundColor": "#2c3e50",
+            "marginTop": 20,
+            "marginBottom": 80,
+            "marginLeft": 60,
+            "marginRight": 60
+        },
+        "title": {
+            "text": "Monthly Revenue",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#ffffff"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue",
+                "style": {
+                    "color": "#ffffff"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#ffffff"
+                }
+            },
+            "stackLabels": {
+                "enabled": true,
+                "allowOverlap": true,
+                "overflow": "allow",
+                "crop": false,
+                "style": {
+                    "color": "#ffffff"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "normal",
+                "colorByPoint": true,
+                "colors": [
+                    {
+                        "linearGradient": {
+                            "x1": 0,
+                            "x2": 0,
+                            "y1": 0,
+                            "y2": 1
+                        },
+                        "stops": [
+                            [
+                                0,
+                                "#7cb5ec"
+                            ],
+                            [
+                                1,
+                                "#434348"
+                            ]
+                        ]
+                    },
+                    {
+                        "linearGradient": {
+                            "x1": 0,
+                            "x2": 0,
+                            "y1": 0,
+                            "y2": 1
+                        },
+                        "stops": [
+                            [
+                                0,
+                                "#90ed7d"
+                            ],
+                            [
+                                1,
+                                "#f7a35c"
+                            ]
+                        ]
+                    }
+                ]
+            }
+        },
+        "series": [
+            {
+                "name": "Revenue 2022",
+                "data": [
+                    29.9123464,
+                    -71.5123464,
+                    106.4123464,
+                    129.2123464
+                ]
+            },
+            {
+                "name": "Revenue 2023",
+                "data": [
+                    144.0123464,
+                    -176.0123464,
+                    135.6123464,
+                    148.5123464
+                ]
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#ffffff"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a column chart with a dark theme, featuring white text for labels and titles. The chart displays monthly revenue data for two series, 'Revenue 2022' and 'Revenue 2023', with each series containing specific data points. The columns are colored using a gradient from blue to green, enhancing visual distinction. Additional configurations include setting the chart's background color to a dark shade, adjusting the margins for better spacing, and enabling the legend with white text to improve readability. This setup ensures a clear and visually appealing representation of the revenue data over the specified time periods."
+}

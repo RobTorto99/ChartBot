@@ -1,0 +1,115 @@
+{
+    "visualization_prompt": "Generate a column chart showing fruit consumption comparison between three individuals using categorical grouping",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#f8f8f8",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "Total Fruit Consumption",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Apples",
+                "Oranges",
+                "Pears",
+                "Grapes",
+                "Bananas"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "title": {
+                "text": "Fruits",
+                "style": {
+                    "color": "#444444",
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "title": {
+                "text": "Total Fruit Consumption",
+                "style": {
+                    "color": "#444444",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "borderWidth": 2,
+                "borderColor": "#000000"
+            }
+        },
+        "series": [
+            {
+                "name": "John",
+                "data": [
+                    5,
+                    3,
+                    4,
+                    7,
+                    2
+                ],
+                "color": "#FF5733"
+            },
+            {
+                "name": "Jane",
+                "data": [
+                    2,
+                    2,
+                    3,
+                    2,
+                    1
+                ],
+                "color": "#33FF57"
+            },
+            {
+                "name": "Joe",
+                "data": [
+                    3,
+                    4,
+                    4,
+                    2,
+                    5
+                ],
+                "color": "#3357FF"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "14px"
+            }
+        },
+        "credits": {
+            "enabled": false
+        },
+        "exporting": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset contains categorical (fruit types) and quantitative (consumption counts) dimensions. Synthetic data follows uniform distribution with John (\u03bc=4.2, \u03c3=1.9), Jane (\u03bc=2.0, \u03c3=0.7), and Joe (\u03bc=3.6, \u03c3=1.1), maintaining realistic human consumption patterns. Column chart maximizes data-ink ratio by eliminating chartjunk while maintaining Cairo's principles of proportional ink and discriminable hues. Grouped columns enable direct comparison across categories, with black borders enhancing separation. Axis labels follow Tufte's minimum effective difference principle using #444 foreground on #f8f8 background for optimal contrast."
+}

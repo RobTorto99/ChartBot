@@ -1,0 +1,76 @@
+{
+    "visualization_prompt": "Create a Highcharts gauge chart with rounded plot bands. The chart should have a title 'Gauge with rounded plot bands'. The gauge should display a speedometer-like interface with three plot bands representing different speed ranges. The first band should be green for speeds from 1 to 70 km/h, the second band should be yellow for speeds from 50 to 90 km/h, and the third band should be red for speeds from 70 to 119 km/h. The gauge should have a single data series named 'Speed' with a current value of 80 km/h. The chart should have a transparent background and the plot bands should have rounded corners. The y-axis should be labeled 'km/h' and the tick marks should be styled with white color and a specific length and width.",
+    "visualization_code": {
+        "chart": {
+            "type": "gauge"
+        },
+        "title": {
+            "text": "Gauge with rounded plot bands"
+        },
+        "pane": {
+            "startAngle": -150,
+            "endAngle": 150,
+            "background": {
+                "backgroundColor": "transparent",
+                "borderWidth": 0
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 120,
+            "minorTickInterval": 0,
+            "tickColor": "#ffffff",
+            "tickLength": 40,
+            "tickPixelInterval": 40,
+            "tickWidth": 2,
+            "lineWidth": 0,
+            "title": {
+                "text": "km/h"
+            },
+            "labels": {
+                "distance": 15
+            },
+            "plotBands": [
+                {
+                    "from": 1,
+                    "to": 70,
+                    "color": "#55BF3B",
+                    "innerRadius": "82%",
+                    "borderRadius": "50%"
+                },
+                {
+                    "from": 50,
+                    "to": 90,
+                    "color": "#DDDF0D",
+                    "innerRadius": "82%",
+                    "zIndex": 1
+                },
+                {
+                    "from": 70,
+                    "to": 119,
+                    "color": "#DF5353",
+                    "innerRadius": "82%",
+                    "borderRadius": "50%"
+                }
+            ]
+        },
+        "series": [
+            {
+                "name": "Speed",
+                "data": [
+                    80
+                ],
+                "dataLabels": {
+                    "borderWidth": 0,
+                    "style": {
+                        "fontSize": "2em"
+                    }
+                },
+                "tooltip": {
+                    "valueSuffix": " km/h"
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a gauge chart that simulates a speedometer. The chart is titled 'Gauge with rounded plot bands' and features a single data series named 'Speed' with a current value of 80 km/h. The gauge is divided into three plot bands, each representing a different speed range: green for 1-70 km/h, yellow for 50-90 km/h, and red for 70-119 km/h. The plot bands have rounded corners, achieved by setting the 'borderRadius' property to '50%'. The middle band, which is yellow, has a higher 'zIndex' to ensure it appears above the other two bands, avoiding any visual conflicts in the transition areas. The y-axis is labeled 'km/h' and the tick marks are styled with white color, a specific length, and width. The chart has a transparent background, enhancing the visual appeal of the gauge."
+}

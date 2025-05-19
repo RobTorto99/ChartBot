@@ -1,0 +1,136 @@
+{
+    "visualization_prompt": "Generate a spline chart showing inverse seasonal temperature patterns using reversed chronological axis ordering",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "spline",
+                "backgroundColor": "#f9f9f9"
+            },
+            "title": {
+                "text": "Inverted Spline Trends",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "20px"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "reversed": true,
+                "labels": {
+                    "style": {
+                        "color": "#34495e",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "yAxis": {
+                "reversed": true,
+                "title": {
+                    "text": "Temperature (\u00b0C)",
+                    "style": {
+                        "color": "#34495e",
+                        "fontWeight": "bold"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Northern Hemisphere",
+                    "data": [
+                        {
+                            "y": 32.1,
+                            "note": "Winter low"
+                        },
+                        {
+                            "y": 34.5,
+                            "note": "+2.4\u00b0C"
+                        },
+                        {
+                            "y": 41.2,
+                            "note": "Spring onset"
+                        },
+                        {
+                            "y": 53.7,
+                            "note": "Frost-free"
+                        },
+                        {
+                            "y": 62.0,
+                            "note": "Planting"
+                        },
+                        {
+                            "y": 71.8,
+                            "note": "Peak growth"
+                        },
+                        {
+                            "y": 75.3,
+                            "note": "Summer max"
+                        },
+                        {
+                            "y": 69.9,
+                            "note": "-5.4\u00b0C"
+                        },
+                        {
+                            "y": 58.4,
+                            "note": "Harvest"
+                        },
+                        {
+                            "y": 47.6,
+                            "note": "First frost"
+                        },
+                        {
+                            "y": 39.8,
+                            "note": "Pre-winter"
+                        },
+                        {
+                            "y": 33.0,
+                            "note": "Season close"
+                        }
+                    ],
+                    "color": {
+                        "linearGradient": {
+                            "x1": 0,
+                            "x2": 0,
+                            "y1": 0,
+                            "y2": 1
+                        },
+                        "stops": [
+                            [
+                                0,
+                                "#2ecc71"
+                            ],
+                            [
+                                1,
+                                "#1abc9c"
+                            ]
+                        ]
+                    }
+                }
+            ],
+            "legend": {
+                "align": "right",
+                "verticalAlign": "bottom",
+                "itemStyle": {
+                    "color": "#7f8c8d"
+                }
+            },
+            "tooltip": {
+                "valueSuffix": "\u00b0C",
+                "headerFormat": "<b>{point.key}</b><br>"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a 12-dimensional time series with ordinal month labels and interval temperature measurements. Synthetic data follows a sinusoidal pattern (\u03bc=52.4\u00b0C, \u03c3=15.2\u00b0C) with seasonal noise (\u00b15\u00b0C), maintaining ecological validity for northern hemisphere climate zones. The spline chart was selected to emphasize smooth seasonal transitions while minimizing visual clutter through Tufte's data-ink principles. Axis reversal creates cognitive tension that directs attention to the inverse relationship between calendar progression and temperature trends. Color gradient encoding follows Cairo's preattentive processing guidelines, using a teal spectrum to represent environmental themes. Statistical anchors include Q2-Q4 interquartile range of 41.2-69.9\u00b0C and 7.8% coefficient of variation."
+}

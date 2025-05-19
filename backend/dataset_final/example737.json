@@ -1,0 +1,56 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart. The chart should have a title 'SEO has increased B2B sales by 30% in Aug'. The x-axis should display categories 'May', 'June', 'July', 'Aug'. The y-axis should have labels formatted as '{value}k $'. The chart should display a single series named 'Sales' with data [206, 216, 247, 330]. The chart should have a white background and a legend positioned at the bottom.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "SEO has increased B2B sales by 30% in Aug"
+        },
+        "xAxis": {
+            "categories": [
+                "May",
+                "June",
+                "July",
+                "Aug"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": ""
+            },
+            "labels": {
+                "format": "{value}k $",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    206,
+                    216,
+                    247,
+                    330
+                ],
+                "color": "#008000"
+            }
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a column chart with specific settings. The chart type is set to 'column', and it has a white background. The title of the chart is 'SEO has increased B2B sales by 30% in Aug'. The x-axis displays categories 'May', 'June', 'July', 'Aug' with labels styled in a dark gray color and a font size of 14px. The y-axis labels are formatted to show values in thousands of dollars ('{value}k $') and are also styled with a dark gray color and a font size of 14px. The chart includes one series named 'Sales' with data points [206, 216, 247, 330], and the series color is set to green (#008000). Additionally, the legend is positioned at the bottom of the chart, centered horizontally."
+}

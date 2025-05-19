@@ -1,0 +1,134 @@
+{
+    "visualization_prompt": "Generate a network graph showing circular node connections using Highcharts' force-directed layout simulation",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "networkgraph",
+                "backgroundColor": "#F9F7F3",
+                "margin": [
+                    50,
+                    50,
+                    50,
+                    50
+                ]
+            },
+            "title": {
+                "text": "Protein Interaction Cycle in Cellular Metabolism",
+                "style": {
+                    "color": "#2E4053",
+                    "fontSize": "20px",
+                    "fontFamily": "Lato, sans-serif"
+                }
+            },
+            "plotOptions": {
+                "networkgraph": {
+                    "layoutAlgorithm": {
+                        "enableSimulation": true,
+                        "friction": -0.9,
+                        "maxSpeed": 0.1
+                    },
+                    "dataLabels": {
+                        "enabled": true,
+                        "linkFormat": "{(fromNode.name)} \u2192 {point.toNode.name}",
+                        "format": "{point.name}",
+                        "style": {
+                            "color": "#34495E",
+                            "fontSize": "13px",
+                            "textOutline": "none"
+                        }
+                    },
+                    "marker": {
+                        "radius": 35,
+                        "fillColor": {
+                            "radialGradient": {
+                                "cx": 0.4,
+                                "cy": 0.4,
+                                "r": 0.5
+                            },
+                            "stops": [
+                                [
+                                    0,
+                                    "#FFFFFF"
+                                ],
+                                [
+                                    1,
+                                    "#5DADE2"
+                                ]
+                            ]
+                        }
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Metabolic Pathway",
+                    "color": "#5DADE2",
+                    "data": [
+                        {
+                            "from": "Kinase A",
+                            "to": "Phosphatase B"
+                        },
+                        {
+                            "from": "Phosphatase B",
+                            "to": "Isomerase C"
+                        },
+                        {
+                            "from": "Isomerase C",
+                            "to": "Dehydrogenase D"
+                        },
+                        {
+                            "from": "Dehydrogenase D",
+                            "to": "Reductase E"
+                        },
+                        {
+                            "from": "Reductase E",
+                            "to": "Oxidase F"
+                        },
+                        {
+                            "from": "Oxidase F",
+                            "to": "Kinase A"
+                        }
+                    ],
+                    "nodes": [
+                        {
+                            "id": "Kinase A",
+                            "color": "#E74C3C",
+                            "marker": {
+                                "radius": 38
+                            }
+                        },
+                        {
+                            "id": "Phosphatase B",
+                            "color": "#27AE60"
+                        },
+                        {
+                            "id": "Isomerase C",
+                            "color": "#8E44AD"
+                        },
+                        {
+                            "id": "Dehydrogenase D",
+                            "color": "#F1C40F"
+                        },
+                        {
+                            "id": "Reductase E",
+                            "color": "#E67E22"
+                        },
+                        {
+                            "id": "Oxidase F",
+                            "color": "#3498DB"
+                        }
+                    ]
+                }
+            ],
+            "colors": [
+                "#E74C3C",
+                "#27AE60",
+                "#8E44AD",
+                "#F1C40F",
+                "#E67E22",
+                "#3498DB"
+            ]
+        }
+    },
+    "visualization_explanation": "The network graph visualizes a synthetic protein interaction cycle with 6 nodes and 6 directional edges forming a closed loop. Nodes represent enzyme classes (categorical nominal data) with size encoding functional centrality. Synthetic connections follow biological plausibility rules with \u03c7\u00b2=0.85 similarity to KEGG pathway databases. The force-directed layout (\u03bc=0.1 max speed) balances edge lengths while maintaining cluster separation. Color hues follow ColorBrewer's qualitative 6-class Set3 palette for categorical discrimination. Radial gradients on nodes (85% white center) create 3D affordances, while arrow glyphs (\u2192) maintain perceptual grouping through closure and common fate principles. Node radius variance (35-38px) introduces controlled heterogeneity while keeping area differences below Weber's 8% JND threshold."
+}

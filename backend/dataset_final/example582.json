@@ -1,0 +1,67 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a gauge chart with the following specifications: Chart type: gauge, Chart title: 'Speedometer', Axes and labels styling: Use a dark blue color (#003366) for the title and labels, with a font size of 14px for labels and 16px for the title, Data series: A single series named 'Speed' with a data value of 80, Custom colors: Use a green color (#89A54E) for the plot band, Additional configurations: Set the chart margins to 20 pixels on all sides, add a light gray background (#F0F0F0) to the chart, and include a legend with the position set to 'bottom'.",
+    "visualization_code": {
+        "chart": {
+            "type": "gauge",
+            "backgroundColor": "#F0F0F0",
+            "margin": [
+                20,
+                20,
+                20,
+                20
+            ]
+        },
+        "title": {
+            "text": "Speedometer",
+            "style": {
+                "color": "#003366",
+                "fontSize": "16px"
+            }
+        },
+        "pane": {
+            "startAngle": -150,
+            "endAngle": 150
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 100,
+            "title": {
+                "text": "Speed",
+                "style": {
+                    "color": "#003366",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#003366",
+                    "fontSize": "14px"
+                }
+            },
+            "plotBands": [
+                {
+                    "from": 0,
+                    "to": 60,
+                    "color": "#89A54E",
+                    "outerRadius": "105%",
+                    "thickness": "5%"
+                }
+            ]
+        },
+        "series": [
+            {
+                "name": "Speed",
+                "data": [
+                    80
+                ]
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a gauge chart with a title 'Speedometer'. The chart type is set to 'gauge', and it includes a single data series named 'Speed' with a value of 80. The chart's background is set to a light gray color (#F0F0F0), and margins of 20 pixels are applied on all sides. The title and axis labels are styled with a dark blue color (#003366) and specific font sizes. A plot band is defined to highlight the range from 0 to 60 with a green color (#89A54E). Additionally, a legend is included at the bottom of the chart for better readability and context."
+}

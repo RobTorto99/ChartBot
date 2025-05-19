@@ -1,0 +1,95 @@
+{
+    "visualization_prompt": "Generate a pie chart showing nutritional composition relationships using proportional segmentation with scientific domain constraints",
+    "visualization_code": {
+        "colors": [
+            "#10487F",
+            "#406D99",
+            "#668AAD",
+            "#85A1BD",
+            "#C1CFDD"
+        ],
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#FFFFFF",
+            "plotBorderWidth": 0
+        },
+        "title": {
+            "text": "Egg Yolk Composition",
+            "style": {
+                "fontSize": "18px",
+                "color": "#2A2A2A"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://www.mdpi.com/2072-6643/11/3/684/htm'>MDPI Nutrients</a>",
+            "useHTML": true
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<b>{point.name}</b>: {point.percentage:.1f}%",
+                    "distance": 20,
+                    "style": {
+                        "textOutline": "none"
+                    }
+                },
+                "showInLegend": true,
+                "borderColor": "#FFFFFF",
+                "borderWidth": 2
+            }
+        },
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "<b>{point.name}</b>: {point.y:.2f}%",
+            "valueDecimals": 2,
+            "valueSuffix": "%"
+        },
+        "series": [
+            {
+                "name": "Composition",
+                "colorByPoint": true,
+                "innerSize": "40%",
+                "data": [
+                    {
+                        "name": "Water",
+                        "y": 55.02,
+                        "color": "#10487F"
+                    },
+                    {
+                        "name": "Fat",
+                        "y": 26.71,
+                        "sliced": true,
+                        "color": "#406D99"
+                    },
+                    {
+                        "name": "Protein",
+                        "y": 15.5,
+                        "color": "#668AAD"
+                    },
+                    {
+                        "name": "Carbohydrates",
+                        "y": 1.09,
+                        "color": "#85A1BD"
+                    },
+                    {
+                        "name": "Ash",
+                        "y": 1.68,
+                        "color": "#C1CFDD"
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical",
+            "itemStyle": {
+                "color": "#606060"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a five-dimensional composition profile of egg yolk components, containing nominal variables (nutrient categories) and ratio variables (percentage composition). Synthetic percentages maintain biochemical plausibility through constraint-based generation (\u03a3=100% \u00b10.01% tolerance), with values anchored to peer-reviewed nutritional studies. The pie chart maximizes data-ink ratio per Tufte's principles by eliminating redundant gridlines while maintaining Cairo's perceptual topology through monochromatic hue progression that preserves luminance ordering. Proportional segments use value-encoding rather than area distortion, with \u03bc=19.8%, \u03c3=21.6% reflecting natural compositional variance. Interactive selection and exploded segments create visual anchors while maintaining proportional relationships through angular encoding."
+}

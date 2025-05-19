@@ -1,0 +1,62 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a line chart with the following specifications: The chart should have a title 'Monthly Sales Data'. The x-axis should display months from January to December, and the y-axis should display sales data. The chart should have a custom color palette including '#7cb5ec', '#434348', and '#90ed7d'. The chart should have a white background with a 10px margin around the chart area. The legend should be positioned at the bottom of the chart. The chart should also include a button that, when clicked, adds a new series to the chart with the provided sales data.",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "backgroundColor": "#ffffff",
+            "margin": 10
+        },
+        "title": {
+            "text": "Monthly Sales Data"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#434348",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales",
+                "style": {
+                    "color": "#434348",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#434348",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [],
+        "colors": [
+            "#7cb5ec",
+            "#434348",
+            "#90ed7d"
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a line chart with a title 'Monthly Sales Data'. The x-axis is labeled with months from January to December, and the y-axis is labeled with 'Sales'. The chart uses a custom color palette for the series data. The background of the chart is set to white with a 10px margin around the chart area. The legend is positioned at the bottom of the chart, centered horizontally. The chart is designed to be interactive, with a button that, when clicked, adds a new series to the chart with the specified sales data. The styling for the axes and labels includes specific colors and font sizes to enhance readability."
+}

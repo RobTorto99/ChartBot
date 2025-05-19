@@ -1,0 +1,456 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a scatter plot with the title 'Select points by click-drag'. The chart should have a subtitle 'Points can also be selected and unselected individually'. The data series should include points with coordinates representing height and weight. The chart should allow point selection and unselection through click-drag functionality. The axes and labels should be styled with specific colors and font sizes. Additionally, the chart should have custom colors for the data points and a background color.",
+    "visualization_code": {
+        "chart": {
+            "type": "scatter",
+            "backgroundColor": "#f0f8ff"
+        },
+        "title": {
+            "text": "Select points by click-drag",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "subtitle": {
+            "text": "Points can also be selected and unselected individually",
+            "style": {
+                "color": "#666666",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "Height (cm)",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Weight (kg)",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "custom": {
+                    "lassoSelection": true
+                },
+                "data": [
+                    [
+                        161.2,
+                        51.6
+                    ],
+                    [
+                        167.5,
+                        59.0
+                    ],
+                    [
+                        159.5,
+                        49.2
+                    ],
+                    [
+                        157.0,
+                        63.0
+                    ],
+                    [
+                        155.8,
+                        53.6
+                    ],
+                    [
+                        170.0,
+                        59.0
+                    ],
+                    [
+                        159.1,
+                        47.6
+                    ],
+                    [
+                        166.0,
+                        69.8
+                    ],
+                    [
+                        176.2,
+                        66.8
+                    ],
+                    [
+                        160.2,
+                        75.2
+                    ],
+                    [
+                        172.5,
+                        55.2
+                    ],
+                    [
+                        170.9,
+                        54.2
+                    ],
+                    [
+                        172.9,
+                        62.5
+                    ],
+                    [
+                        153.4,
+                        42.0
+                    ],
+                    [
+                        160.0,
+                        50.0
+                    ],
+                    [
+                        147.2,
+                        49.8
+                    ],
+                    [
+                        168.2,
+                        49.2
+                    ],
+                    [
+                        175.0,
+                        73.2
+                    ],
+                    [
+                        157.0,
+                        47.8
+                    ],
+                    [
+                        167.6,
+                        68.8
+                    ],
+                    [
+                        159.5,
+                        50.6
+                    ],
+                    [
+                        175.0,
+                        82.5
+                    ],
+                    [
+                        166.8,
+                        57.2
+                    ],
+                    [
+                        176.5,
+                        87.8
+                    ],
+                    [
+                        170.2,
+                        72.8
+                    ],
+                    [
+                        174.0,
+                        54.5
+                    ],
+                    [
+                        173.0,
+                        59.8
+                    ],
+                    [
+                        179.9,
+                        67.3
+                    ],
+                    [
+                        170.5,
+                        67.8
+                    ],
+                    [
+                        160.0,
+                        47.0
+                    ],
+                    [
+                        154.4,
+                        46.2
+                    ],
+                    [
+                        162.0,
+                        55.0
+                    ],
+                    [
+                        176.5,
+                        83.0
+                    ],
+                    [
+                        160.0,
+                        54.4
+                    ],
+                    [
+                        152.0,
+                        45.8
+                    ],
+                    [
+                        162.1,
+                        53.6
+                    ],
+                    [
+                        170.0,
+                        73.2
+                    ],
+                    [
+                        160.2,
+                        52.1
+                    ],
+                    [
+                        161.3,
+                        67.9
+                    ],
+                    [
+                        166.4,
+                        56.6
+                    ],
+                    [
+                        168.9,
+                        62.3
+                    ],
+                    [
+                        163.8,
+                        58.5
+                    ],
+                    [
+                        167.6,
+                        54.5
+                    ],
+                    [
+                        160.0,
+                        50.2
+                    ],
+                    [
+                        161.3,
+                        60.3
+                    ],
+                    [
+                        167.6,
+                        58.3
+                    ],
+                    [
+                        165.1,
+                        56.2
+                    ],
+                    [
+                        160.0,
+                        50.2
+                    ],
+                    [
+                        170.0,
+                        72.9
+                    ],
+                    [
+                        157.5,
+                        59.8
+                    ],
+                    [
+                        167.6,
+                        61.0
+                    ],
+                    [
+                        160.7,
+                        69.1
+                    ],
+                    [
+                        163.2,
+                        55.9
+                    ],
+                    [
+                        152.4,
+                        46.5
+                    ],
+                    [
+                        157.5,
+                        54.3
+                    ],
+                    [
+                        168.3,
+                        54.8
+                    ],
+                    [
+                        180.3,
+                        60.7
+                    ],
+                    [
+                        165.5,
+                        60.0
+                    ],
+                    [
+                        165.0,
+                        62.0
+                    ],
+                    [
+                        164.5,
+                        60.3
+                    ],
+                    [
+                        156.0,
+                        52.7
+                    ],
+                    [
+                        160.0,
+                        74.3
+                    ],
+                    [
+                        163.0,
+                        62.0
+                    ],
+                    [
+                        165.7,
+                        73.1
+                    ],
+                    [
+                        161.0,
+                        80.0
+                    ],
+                    [
+                        162.0,
+                        54.7
+                    ],
+                    [
+                        166.0,
+                        53.2
+                    ],
+                    [
+                        174.0,
+                        75.7
+                    ],
+                    [
+                        172.7,
+                        61.1
+                    ],
+                    [
+                        167.6,
+                        55.7
+                    ],
+                    [
+                        151.1,
+                        48.7
+                    ],
+                    [
+                        164.5,
+                        52.3
+                    ],
+                    [
+                        163.5,
+                        50.0
+                    ],
+                    [
+                        152.0,
+                        59.3
+                    ],
+                    [
+                        169.0,
+                        62.5
+                    ],
+                    [
+                        164.0,
+                        55.7
+                    ],
+                    [
+                        161.2,
+                        54.8
+                    ],
+                    [
+                        155.0,
+                        45.9
+                    ],
+                    [
+                        170.0,
+                        70.6
+                    ],
+                    [
+                        176.2,
+                        67.2
+                    ],
+                    [
+                        170.0,
+                        69.4
+                    ],
+                    [
+                        162.5,
+                        58.2
+                    ],
+                    [
+                        170.3,
+                        64.8
+                    ],
+                    [
+                        164.1,
+                        71.6
+                    ],
+                    [
+                        169.5,
+                        52.8
+                    ],
+                    [
+                        163.2,
+                        59.8
+                    ],
+                    [
+                        154.5,
+                        49.0
+                    ],
+                    [
+                        159.8,
+                        50.0
+                    ],
+                    [
+                        173.2,
+                        69.2
+                    ],
+                    [
+                        170.0,
+                        55.9
+                    ],
+                    [
+                        161.4,
+                        63.4
+                    ],
+                    [
+                        169.0,
+                        58.2
+                    ],
+                    [
+                        166.2,
+                        58.6
+                    ],
+                    [
+                        159.4,
+                        45.7
+                    ],
+                    [
+                        162.5,
+                        52.2
+                    ]
+                ],
+                "color": "#008080",
+                "showInLegend": false,
+                "allowPointSelect": true
+            }
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "series": {
+                "marker": {
+                    "radius": 5
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a scatter plot with a specific title and subtitle. The chart's background color is set to a light blue shade (#f0f8ff), and the axes titles and labels are styled with dark and medium gray colors, respectively. The data series includes points representing height and weight, with each point colored in teal (#008080). The chart allows for point selection and unselection through a click-drag functionality, which is enabled by the 'lassoSelection' custom option. The legend is disabled, and the markers for the data points are given a radius of 5 pixels for better visibility. This configuration ensures a clear and interactive visualization of the data points."
+}

@@ -1,0 +1,102 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly product performance comparisons using trend-based synthetic data",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "backgroundColor": "#f9f9f9",
+                "marginTop": 25
+            },
+            "title": {
+                "text": "Round legend symbols",
+                "style": {
+                    "fontSize": "18px",
+                    "color": "#2c3e50"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#7f8c8d",
+                        "fontWeight": "bold"
+                    }
+                },
+                "lineColor": "#bdc3c7"
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Sales (Units)",
+                    "style": {
+                        "color": "#7f8c8d"
+                    }
+                },
+                "gridLineColor": "#ecf0f1"
+            },
+            "legend": {
+                "symbolHeight": 12,
+                "symbolWidth": 12,
+                "symbolRadius": 6,
+                "itemStyle": {
+                    "color": "#34495e"
+                }
+            },
+            "colors": [
+                "#2ecc71",
+                "#3498db",
+                "#9b59b6"
+            ],
+            "series": [
+                {
+                    "name": "Product A (Upward Trend)",
+                    "data": [
+                        5,
+                        7,
+                        9,
+                        11
+                    ],
+                    "marker": {
+                        "radius": 4
+                    }
+                },
+                {
+                    "name": "Product B (Downward Trend)",
+                    "data": [
+                        10,
+                        8,
+                        6,
+                        4
+                    ],
+                    "marker": {
+                        "radius": 4
+                    }
+                },
+                {
+                    "name": "Product C (Fluctuation)",
+                    "data": [
+                        3,
+                        8,
+                        5,
+                        7
+                    ],
+                    "marker": {
+                        "radius": 4
+                    }
+                }
+            ],
+            "plotOptions": {
+                "column": {
+                    "borderRadius": 3,
+                    "groupPadding": 0.15,
+                    "pointPadding": 0.05
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three 4-point series representing categorical monthly comparisons. Synthetic data was generated with Product A showing linear growth (\u03bc=8, \u03c3=2.94), Product B demonstrating decline (\u03bc=7, \u03c3=2.94), and Product C displaying volatility (\u03bc=5.75, \u03c3=2.06). Values maintain commercial plausibility with integer units and logical progression.\n\nColumn charts effectively compare discrete categories while maintaining temporal order. Circular legend symbols (radius=6px) improve scannability through Cairo's preattentive processing principles. The color palette (#2ecc71, #3498db, #9b59b6) provides 8:1 contrast ratios for accessibility. Trend annotations in series names guide interpretation while maintaining Tufte's data-ink ratio through minimalist styling."
+}

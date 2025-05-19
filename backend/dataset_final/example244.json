@@ -1,0 +1,108 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the following specifications: Chart type: spline, Chart title: Monthly Average Temperature, Axes and labels styling: Labels and titles should be in Arial font, size 12, and color #333333. Axes should have a grid line color of #CCCCCC. Data series: The series should be named 'Temperature' with data [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]. Custom colors: Use a gradient from #00bfff to #1e90ff for the series. Additional configurations: Set the chart background to #f9f9f9, add a legend at the bottom, and set the chart margins to 50 pixels on all sides.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Monthly Average Temperature",
+            "style": {
+                "fontFamily": "Arial",
+                "fontSize": "12px",
+                "color": "#333333"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "fontFamily": "Arial",
+                    "fontSize": "12px",
+                    "color": "#333333"
+                }
+            },
+            "gridLineColor": "#CCCCCC"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "fontFamily": "Arial",
+                    "fontSize": "12px",
+                    "color": "#333333"
+                }
+            },
+            "labels": {
+                "style": {
+                    "fontFamily": "Arial",
+                    "fontSize": "12px",
+                    "color": "#333333"
+                }
+            },
+            "gridLineColor": "#CCCCCC"
+        },
+        "series": [
+            {
+                "name": "Temperature",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "x2": 0,
+                        "y1": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#00bfff"
+                        ],
+                        [
+                            1,
+                            "#1e90ff"
+                        ]
+                    ]
+                }
+            }
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart with a title 'Monthly Average Temperature'. The chart type is set to 'spline', and the background color is set to a light gray (#f9f9f9). The chart margins are set to 50 pixels on all sides to provide ample space around the chart. The x-axis and y-axis labels and titles are styled with Arial font, size 12, and color #333333. The axes also have grid lines colored #CCCCCC. The data series is named 'Temperature' and includes monthly temperature data. The series color is a gradient from #00bfff to #1e90ff. Additionally, a legend is placed at the bottom of the chart for better readability."
+}

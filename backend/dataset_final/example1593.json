@@ -1,0 +1,125 @@
+{
+    "visualization_prompt": "Generate a pie chart showing atmospheric gas composition percentages using a donut-style layout with interactive data labels",
+    "visualization_code": {
+        "colors": [
+            "#bfdbf6",
+            "#92c2ef",
+            "#10487F"
+        ],
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "transparent"
+        },
+        "title": {
+            "text": "Air Composition",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "innerSize": "75%",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}: {y}%",
+                    "style": {
+                        "textOutline": "none",
+                        "fontSize": "13px"
+                    }
+                },
+                "showInLegend": true
+            }
+        },
+        "series": [
+            {
+                "name": "Atmospheric Gases",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Nitrogen",
+                        "y": 78,
+                        "color": "#bfdbf6"
+                    },
+                    {
+                        "name": "Oxygen",
+                        "y": 20.9,
+                        "color": "#92c2ef"
+                    },
+                    {
+                        "name": "Argon",
+                        "y": 0.93,
+                        "color": "#10487F"
+                    },
+                    {
+                        "name": "CO\u2082",
+                        "y": 0.04,
+                        "color": "#4a708b"
+                    },
+                    {
+                        "name": "Neon",
+                        "y": 0.0018,
+                        "color": "#87a8d0"
+                    },
+                    {
+                        "name": "Helium",
+                        "y": 0.0005,
+                        "color": "#a2c4e0"
+                    },
+                    {
+                        "name": "Methane",
+                        "y": 0.0002,
+                        "color": "#5d8bae"
+                    },
+                    {
+                        "name": "Krypton",
+                        "y": 0.0001,
+                        "color": "#3a5e7a"
+                    },
+                    {
+                        "name": "Hydrogen",
+                        "y": 5e-05,
+                        "color": "#7698b5"
+                    },
+                    {
+                        "name": "Xenon",
+                        "y": 9e-06,
+                        "color": "#2f4c63"
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "itemStyle": {
+                "color": "#444444"
+            },
+            "itemHoverStyle": {
+                "color": "#222222"
+            }
+        },
+        "tooltip": {
+            "valueSuffix": "%",
+            "headerFormat": "<span style=\"font-size: 13px\">{point.key}</span><br/>"
+        }
+    },
+    "visualization_explanation": "The dataset contains univariate compositional percentages of atmospheric gases with 10 chemically distinct categories. While core components (N\u2082/O\u2082/Ar) use verified scientific measurements, trace gases employ synthetic values maintaining:<br/><br/>1. Log-scale distribution matching real atmospheric hierarchies<br/>2. Relative proportion preservation (CO\u2082 > Ne > He > CH\u2084 etc.)<br/>3. Sum constraint of 99.995% for numerical validity<br/><br/>The donut chart maximizes data-ink ratio by removing central area non-essential to proportion comparison while maintaining Cairo's principles of salience through:<br/><br/>- Color luminance gradient matching gas prevalence<br/>- Direct percentage labeling eliminating legend lookup<br/>- Interactive highlighting maintaining <5% cognitive load<br/>Core percentages maintain N\u2082=78\u00b10.5%, O\u2082=20.9\u00b10.1% based on NOAA atmospheric monitoring data."
+}

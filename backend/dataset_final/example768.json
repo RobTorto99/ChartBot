@@ -1,0 +1,111 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Weekly Prices'. The chart should have two y-axes: one logarithmic and one linear, both labeled 'Price'. The x-axis should display days of the week. The chart should include two data series: 'Logarithmic' and 'Linear', each with specific data points. The chart should use custom colors for the series and have a white background with black text for labels and titles. The legend should be positioned at the bottom of the chart.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Weekly Prices",
+            "style": {
+                "color": "#000000",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#000000",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": [
+            {
+                "title": {
+                    "text": "Price",
+                    "style": {
+                        "color": "#000000",
+                        "fontSize": "14px"
+                    }
+                },
+                "type": "logarithmic",
+                "labels": {
+                    "format": "${text}",
+                    "style": {
+                        "color": "#000000",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            {
+                "opposite": true,
+                "title": {
+                    "text": "Price",
+                    "style": {
+                        "color": "#000000",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "format": "${text}",
+                    "style": {
+                        "color": "#000000",
+                        "fontSize": "12px"
+                    }
+                }
+            }
+        ],
+        "tooltip": {
+            "valuePrefix": "$"
+        },
+        "series": [
+            {
+                "data": [
+                    5,
+                    10,
+                    15,
+                    20,
+                    25,
+                    30,
+                    15
+                ],
+                "name": "Logarithmic",
+                "color": "#FF5733"
+            },
+            {
+                "data": [
+                    5,
+                    10,
+                    15,
+                    20,
+                    25,
+                    30,
+                    15
+                ],
+                "name": "Linear",
+                "yAxis": 1,
+                "color": "#33FF57"
+            }
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#000000",
+                "fontSize": "12px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart titled 'Weekly Prices'. The chart features two y-axes: a logarithmic axis on the left and a linear axis on the right, both labeled 'Price'. The x-axis displays the days of the week. The chart includes two data series: 'Logarithmic' and 'Linear', each with specific data points corresponding to the days of the week. The series are styled with custom colors (#FF5733 for 'Logarithmic' and #33FF57 for 'Linear'). The chart background is white, and all text elements (titles, labels, and legend) are styled in black with specific font sizes for readability. The legend is positioned at the bottom of the chart, centered horizontally."
+}

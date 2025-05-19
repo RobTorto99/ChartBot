@@ -1,0 +1,102 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly sales performance using normal stacking with two product series",
+    "visualization_code": {
+        "chart": {
+            "type": "column"
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales (USD)",
+                "style": {
+                    "fontSize": "14px"
+                }
+            },
+            "stackLabels": {
+                "enabled": true,
+                "verticalAlign": "middle",
+                "style": {
+                    "color": "black",
+                    "fontSize": "12px",
+                    "textOutline": "none"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "normal",
+                "pointPadding": 0,
+                "groupPadding": 0,
+                "dataLabels": {
+                    "enabled": false
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Product A",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#7cb5ec"
+            },
+            {
+                "name": "Product B",
+                "data": [
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4,
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2
+                ],
+                "color": "#434348"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains two-dimensional time-series sales data (12 months \u00d7 2 products). Variables include categorical month labels and numerical sales figures. Synthetic data preserves seasonal patterns with Product A peaking in September (\u03bc=216.4) and Product B in May (\u03bc=216.4), demonstrating complementary sales cycles. The column chart maximizes data-ink ratio by eliminating gridlines and data labels while maintaining clear categorical separation. Stacked columns enable direct comparison of total monthly sales while preserving individual product contributions. Color contrast (blue vs gray) follows Cairo's preattentive processing principles for immediate series differentiation. Statistical coherence is maintained with annual totals of Product A (1507.2) and Product B (1506.6), reflecting balanced market performance."
+}

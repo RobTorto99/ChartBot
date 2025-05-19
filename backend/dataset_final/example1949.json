@@ -1,0 +1,107 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly temperature variations using synthetic climate data with seasonal patterns",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "styledMode": true,
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ],
+            "backgroundColor": "#efffff",
+            "borderColor": "#7cb5ec",
+            "borderWidth": 2
+        },
+        "title": {
+            "text": "Monthly Average Temperature",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            },
+            "lineColor": "#cccccc"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                },
+                "format": "{value}\u00b0"
+            },
+            "gridLineColor": "#eeeeee"
+        },
+        "series": [
+            {
+                "name": "Average Temperature",
+                "data": [
+                    4.8,
+                    5.2,
+                    8.9,
+                    13.4,
+                    17.6,
+                    21.1,
+                    24.5,
+                    23.8,
+                    19.3,
+                    14.7,
+                    9.5,
+                    6.1
+                ],
+                "color": "#7cb5ec",
+                "marker": {
+                    "enabled": false
+                }
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#555555",
+                "fontSize": "14px"
+            }
+        },
+        "plotOptions": {
+            "spline": {
+                "lineWidth": 3,
+                "states": {
+                    "hover": {
+                        "lineWidth": 4
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate time series with 12 monthly observations of temperature measurements. Synthetic data was generated using a sinusoidal pattern (\u03bc=14.3\u00b0C, \u03c3=7.2) with added normal noise (\u03c3=1.5) to simulate natural variability, maintaining domain-appropriate ranges for temperate climates. The spline chart effectively emphasizes the seasonal trend while minimizing visual clutter through its continuous curve, adhering to Tufte's data-ink ratio principles. Color choices (#7cb5ec) follow Cairo's recommendations for perceptual salience against the light blue background (#efffff). Axis labels use Cairo's magnitude estimation principles with clear unit annotations, while the disabled markers and smoothed line weight maintain visual continuity across the temporal sequence."
+}

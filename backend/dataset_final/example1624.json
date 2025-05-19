@@ -1,0 +1,86 @@
+{
+    "visualization_prompt": "Generate a bar chart showing percentage composition of honey components using stacked proportional bars with pattern fills",
+    "visualization_code": {
+        "chart": {
+            "type": "bar"
+        },
+        "title": {
+            "text": "Honey Composition"
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://en.wikipedia.org/wiki/Honey'>Wikipedia</a>"
+        },
+        "xAxis": {
+            "categories": [
+                "Honey composition"
+            ],
+            "visible": false
+        },
+        "yAxis": {
+            "labels": {
+                "enabled": false
+            },
+            "visible": false,
+            "reversed": true,
+            "min": 0,
+            "title": {
+                "text": null
+            }
+        },
+        "tooltip": {
+            "headerFormat": null,
+            "pointFormat": "<b>{series.name}</b>: <b>{point.percentage:.0f}%</b><br/>",
+            "shared": true
+        },
+        "plotOptions": {
+            "bar": {
+                "stacking": "percent",
+                "borderColor": "#000000",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{series.name}: {y}%",
+                    "color": "black",
+                    "y": -80
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Fructose",
+                "data": [
+                    38.2
+                ],
+                "type": "bar"
+            },
+            {
+                "name": "Glucose",
+                "data": [
+                    31.3
+                ],
+                "type": "bar"
+            },
+            {
+                "name": "Water",
+                "data": [
+                    17.2
+                ],
+                "type": "bar"
+            },
+            {
+                "name": "Maltose",
+                "data": [
+                    7.1
+                ],
+                "type": "bar"
+            },
+            {
+                "name": "Other",
+                "data": [
+                    6.2
+                ],
+                "type": "bar"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains univariate compositional percentages across five honey components, representing quantitative ratio data. Original values from Wikipedia demonstrate internal validity (sum = 100% \u00b10.2% rounding tolerance). The stacked bar visualization maximizes data-ink ratio by eliminating axes and using direct percentage labels, following Tufte's principles. Pattern fills instead of color gradients accommodate potential grayscale reproduction needs per Cairo's accessibility guidelines. Proportional stacking provides immediate part-to-whole understanding, with component percentages maintaining real-world biochemical plausibility (\u03bc=20.0%, \u03c3=13.8% across series)."
+}

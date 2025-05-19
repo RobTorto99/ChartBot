@@ -1,0 +1,72 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a 3D column chart with the following specifications: Chart type should be 'column', with a 3D effect enabled. The chart title should be 'Monthly Sales Data'. The axes and labels should have specific styling: the x-axis labels should be in blue, the y-axis labels in green, and the title font size should be 18px. The data series should include two series: 'Product A' with data [10, 15, 13, 17, 20, 14] and 'Product B' with data [12, 9, 7, 15, 10, 18]. Custom colors for the series should be ['#FF5733', '#33FF57']. Additional configurations include setting the chart background to a light gray color, adding a legend at the bottom of the chart, and setting the chart margins to [50, 50, 100, 80].",
+    "visualization_code": {
+        "chart": {
+            "backgroundColor": "#F5F5F5",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "blue"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "green"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "depth": 50,
+                "groupZPadding": 100
+            }
+        },
+        "series": [
+            {
+                "name": "Product A",
+                "data": [
+                    10,
+                    15,
+                    13,
+                    17,
+                    20,
+                    14
+                ],
+                "color": "#FF5733"
+            },
+            {
+                "name": "Product B",
+                "data": [
+                    12,
+                    9,
+                    7,
+                    15,
+                    10,
+                    18
+                ],
+                "color": "#33FF57"
+            }
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a 3D column chart with specific visual and functional attributes. The chart type is set to 'column' with 3D effects enabled, including adjustments for alpha, beta, and depth angles, and a bottom frame with a specified size and color. The chart title is 'Monthly Sales Data' with a font size of 18px. The x-axis labels are styled in blue, and the y-axis labels in green. The data series includes two products: 'Product A' and 'Product B', each with their respective sales data and custom colors. The chart background is set to a light gray color, and the legend is positioned at the bottom center of the chart. Additional margins are set to ensure proper spacing around the chart."
+}

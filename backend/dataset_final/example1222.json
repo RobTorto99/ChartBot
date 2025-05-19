@@ -1,0 +1,89 @@
+{
+    "visualization_prompt": "Generate a bar chart showing the ranking of EU countries by organic farming area percentage using a horizontal categorical layout with value-annotated bars",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "zooming": {
+                "type": "y"
+            }
+        },
+        "title": {
+            "text": "Top 10 EU countries in organic farming area (2018)"
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://ec.europa.eu/eurostat/statistics-explained/index.php/Organic_farming_statistics'>Eurostat</a>"
+        },
+        "xAxis": {
+            "categories": [
+                "Austria",
+                "Estonia",
+                "Sweden",
+                "Italy",
+                "Czechia",
+                "Latvia",
+                "Finland",
+                "Slovenia",
+                "Slovakia",
+                "Denmark"
+            ],
+            "title": {
+                "text": null
+            },
+            "accessibility": {
+                "description": "Countries"
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 30,
+            "tickInterval": 10,
+            "title": {
+                "text": null
+            },
+            "accessibility": {
+                "description": "Organic farming area",
+                "rangeDescription": "Range: 0 to 30%"
+            },
+            "labels": {
+                "overflow": "justify",
+                "format": "{value}%"
+            }
+        },
+        "plotOptions": {
+            "bar": {
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y}%"
+                }
+            }
+        },
+        "tooltip": {
+            "valueSuffix": "%",
+            "stickOnContact": true,
+            "backgroundColor": "rgba(255, 255, 255, 0.93)"
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "name": "Organic farming area",
+                "color": "#a5d6a7",
+                "borderColor": "#60A465",
+                "data": [
+                    24.1,
+                    20.6,
+                    20.3,
+                    15.2,
+                    14.8,
+                    14.5,
+                    13.1,
+                    10.0,
+                    9.9,
+                    9.8
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains univariate agricultural metrics across 10 European countries, presenting percentage values of total farming area dedicated to organic practices. Original data from Eurostat ensures high validity through institutional collection standards, though synthetic replication would require maintaining ordinal ranking with percentages bounded 0-100% and mean ~15.3% (\u00b15.3% std dev). The horizontal bar chart maximizes data-ink ratio by eliminating gridlines while using position and length for efficient comparison. Cairo's perceptual principles are applied through descending value ordering and value-embedded labels that eliminate axis lookups. The tight distribution (range 9.8%-24.1%) uses proportional formatting for ratio interpretation, with color saturation reinforcing magnitude differences."
+}

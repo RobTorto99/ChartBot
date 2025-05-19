@@ -1,0 +1,106 @@
+{
+    "visualization_prompt": "Generate a column chart showing political party seat distribution in Stortinget using categorical dot-plot styling",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "transparent"
+        },
+        "title": {
+            "text": "Stortinget",
+            "style": {
+                "color": "#333333",
+                "fontSize": "1.2em",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "type": "category",
+            "offset": 5,
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "0.9em"
+                }
+            },
+            "lineColor": "#cccccc"
+        },
+        "yAxis": {
+            "visible": false
+        },
+        "legend": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "column": {
+                "pointWidth": 22,
+                "borderRadius": 11,
+                "groupPadding": 0,
+                "pointPadding": 0.2
+            }
+        },
+        "series": [
+            {
+                "name": "Seats",
+                "colorByPoint": true,
+                "dataLabels": {
+                    "enabled": true,
+                    "y": -12,
+                    "format": "{point.y}",
+                    "style": {
+                        "fontSize": "1em",
+                        "fontWeight": "normal",
+                        "textOutline": "none"
+                    }
+                },
+                "data": [
+                    {
+                        "name": "R",
+                        "y": 1,
+                        "color": "#9c0014"
+                    },
+                    {
+                        "name": "SV",
+                        "y": 11,
+                        "color": "#da47bb"
+                    },
+                    {
+                        "name": "AP",
+                        "y": 49,
+                        "color": "#e90031"
+                    },
+                    {
+                        "name": "SP",
+                        "y": 19,
+                        "color": "#a8cd4d"
+                    },
+                    {
+                        "name": "MDG",
+                        "y": 1,
+                        "color": "#3e8720"
+                    },
+                    {
+                        "name": "KrF",
+                        "y": 8,
+                        "color": "#f4b436"
+                    },
+                    {
+                        "name": "V",
+                        "y": 8,
+                        "color": "#14b48f"
+                    },
+                    {
+                        "name": "H",
+                        "y": 45,
+                        "color": "#00bbef"
+                    },
+                    {
+                        "name": "FrP",
+                        "y": 27,
+                        "color": "#005996"
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The visualization uses a column chart reconfigured as a dot plot through geometric styling (rounded full-width columns). Categorical x-axis displays political parties with label offset for clarity, while hidden y-axis focuses attention on direct value labels. Synthetic seat counts maintain real-world Norwegian parliamentary constraints (total 169 seats distributed across parties). Color coding follows official party branding with accessibility-conscious contrast ratios. Data labels use position encoding (+Y offset) rather than redundant axis marks, adhering to Tufte's data-ink principles. The circular markers (\u03bc diameter=22px, \u03c3=0) create pre-attentive grouping while maintaining Cairo's fundamental visual variables framework."
+}

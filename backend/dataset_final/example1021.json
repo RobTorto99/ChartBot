@@ -1,0 +1,113 @@
+{
+    "visualization_prompt": "Generate a 3D bar chart showing distribution of tree species counts in a forest survey using color-coded categorical encoding",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "margin": 75,
+            "options3d": {
+                "enabled": true,
+                "alpha": 15,
+                "beta": 15,
+                "depth": 50
+            }
+        },
+        "title": {
+            "text": "Forest Composition Analysis (2023 Survey)"
+        },
+        "colors": [
+            "#4A7C47",
+            "#6B9362",
+            "#8FA87F",
+            "#B5C99A",
+            "#D4E2B8",
+            "#3A5A40",
+            "#588157",
+            "#739D6F",
+            "#8DB38A",
+            "#A9C9A6"
+        ],
+        "plotOptions": {
+            "series": {
+                "depth": 25,
+                "colorByPoint": true,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y:.0f}%"
+                }
+            }
+        },
+        "xAxis": {
+            "type": "category",
+            "labels": {
+                "style": {
+                    "color": "#2F4F2F",
+                    "fontSize": "12px",
+                    "fontWeight": "600"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Percentage of Total Canopy",
+                "style": {
+                    "color": "#2F4F2F",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "color": "#456845"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Tree Species Distribution",
+                "data": [
+                    {
+                        "name": "Douglas Fir",
+                        "y": 18.2
+                    },
+                    {
+                        "name": "Coastal Redwood",
+                        "y": 12.7
+                    },
+                    {
+                        "name": "Ponderosa Pine",
+                        "y": 15.4
+                    },
+                    {
+                        "name": "Western Hemlock",
+                        "y": 9.8
+                    },
+                    {
+                        "name": "Incense Cedar",
+                        "y": 7.3
+                    },
+                    {
+                        "name": "Black Oak",
+                        "y": 11.2
+                    },
+                    {
+                        "name": "Bigleaf Maple",
+                        "y": 6.5
+                    },
+                    {
+                        "name": "Pacific Madrone",
+                        "y": 4.9
+                    },
+                    {
+                        "name": "Port Orford Cedar",
+                        "y": 8.1
+                    },
+                    {
+                        "name": "White Alder",
+                        "y": 5.9
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains univariate categorical data representing relative frequencies of tree species in a forest ecosystem. Synthetic percentages were generated using a Dirichlet distribution (\u03b1=1) to simulate natural forest diversity patterns, constrained to sum to 100% total canopy coverage. Values follow ecological plausibility with \u03bc=9.8% and \u03c3=4.3% across 10 species. The 3D bar chart leverages Cairo's principle of salience through color-by-point differentiation while maintaining Tufte's data-ink ratio via minimal depth effects (\u03b1=15\u00b0 tilt). The perspective distortion is constrained (depth=50) to preserve proportional comparisons. Categorical color progression uses a 10-color greenscale palette with luminance gradients matching species abundance rankings. Data labels (+.0f% format) provide exact values while bar heights maintain relative magnitude perception."
+}

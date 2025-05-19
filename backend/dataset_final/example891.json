@@ -1,0 +1,113 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the following specifications: Chart type: column, Chart title: Monthly Sales Data, Axes and labels styling: X-axis labels should be in Arial font, size 12, and color #333333. Y-axis labels should be in Arial font, size 12, and color #333333. Title should be in Arial font, size 16, and color #000000. Data series: Two series with data provided in the JavaScript code. Custom colors: Series 1 color: #7cb5ec, Series 2 color: #434348. Additional configurations: Chart background color should be #f7f7f7, legend should be enabled and positioned at the bottom of the chart, and chart margins should be set to 50 pixels on all sides.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#f7f7f7",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "fontFamily": "Arial",
+                "fontSize": "16px",
+                "color": "#000000"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "fontFamily": "Arial",
+                    "fontSize": "12px",
+                    "color": "#333333"
+                }
+            }
+        },
+        "yAxis": {
+            "stackLabels": {
+                "enabled": true,
+                "align": "left",
+                "style": {
+                    "fontFamily": "Arial",
+                    "fontSize": "12px",
+                    "color": "#333333"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "normal",
+                "pointPadding": 0,
+                "groupPadding": 0,
+                "dataLabels": {
+                    "enabled": true,
+                    "color": "#FFFFFF"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#7cb5ec"
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4,
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2
+                ],
+                "color": "#434348"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart with the specified title 'Monthly Sales Data'. The chart type is set to 'column', and the background color is set to a light gray (#f7f7f7) with margins of 50 pixels on all sides. The X-axis and Y-axis labels are styled with Arial font, size 12, and color #333333. The chart title is styled with Arial font, size 16, and color #000000. The data series includes two series, each with its own set of data points, and custom colors for each series. The legend is enabled and positioned at the bottom of the chart, centered horizontally."
+}

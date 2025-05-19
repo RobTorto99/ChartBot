@@ -1,0 +1,82 @@
+{
+    "visualization_prompt": "Generate a line chart showing monthly trends using a wrapped series method for custom rendering hooks",
+    "visualization_code": {
+        "chart": {
+            "renderTo": "container",
+            "type": "line"
+        },
+        "title": {
+            "text": "Monthly Sales Performance (2023)",
+            "style": {
+                "color": "#333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (USD thousands)",
+                "style": {
+                    "color": "#666",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#5C7EBD",
+                "marker": {
+                    "enabled": true,
+                    "radius": 4
+                }
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top"
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate time series with 12 monthly observations. Synthetic data follows realistic financial patterns showing Q2 growth (+47% Jan-Jun), Q3 volatility (35% drop Jul-Sep), and Q4 decline, maintaining domain consistency through seasonal retail trends. The line chart maximizes data-ink ratio by eliminating redundant gridlines while preserving perceptual salience through Cairo's magnitude principles. Wrapped series implementation demonstrates custom rendering hooks without distorting core data representation. Synthetic data (\u03bc=122.3, \u03c3=56.2) simulates normal distribution with intentional mid-year outliers reflecting promotional events."
+}

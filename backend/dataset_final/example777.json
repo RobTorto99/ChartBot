@@ -1,0 +1,89 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a chart with the following specifications: Chart type: column, Chart title: 'Monthly Sales Data', Axes and labels styling: Use a dark background with white text for labels and titles, Data series: Series 1 - 'Sales' with data [100, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220], Custom colors: Use a gradient from blue to green, Additional configurations: Set chart margins to 50px, add a legend at the bottom, and use a logarithmic color axis with custom conversion to allow negative values.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#2c3e50",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#ffffff"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#ffffff"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales",
+                "style": {
+                    "color": "#ffffff"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#ffffff"
+                }
+            }
+        },
+        "colorAxis": {
+            "type": "logarithmic",
+            "allowNegativeLog": true,
+            "minColor": "#0000ff",
+            "maxColor": "#00ff00"
+        },
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#ffffff"
+            }
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    100,
+                    120,
+                    130,
+                    140,
+                    150,
+                    160,
+                    170,
+                    180,
+                    190,
+                    200,
+                    210,
+                    220
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart with a dark background and white text for labels and titles. The chart displays monthly sales data with a series named 'Sales' and data points ranging from 100 to 220. The color axis is set to logarithmic with custom conversion to allow negative values, and a gradient from blue to green is applied. The chart includes a legend at the bottom and has margins set to 50px. This configuration ensures a visually appealing and informative chart that meets the specified requirements."
+}

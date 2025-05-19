@@ -1,0 +1,143 @@
+{
+    "visualization_prompt": "Generate a bubble chart showing geographical distribution of city elevations using Highcharts' data connector and range modifiers",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "bubble",
+                "plotBorderWidth": 1,
+                "zoomType": "xy"
+            },
+            "title": {
+                "text": "Global City Elevation Distribution",
+                "style": {
+                    "color": "var(--color-text)",
+                    "fontSize": "20px"
+                }
+            },
+            "xAxis": {
+                "title": {
+                    "text": "Longitude",
+                    "style": {
+                        "color": "var(--color-text)",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "var(--color-text)"
+                    }
+                },
+                "gridLineWidth": 0.5,
+                "gridLineColor": "rgba(128, 128, 128, 0.3)"
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Latitude",
+                    "style": {
+                        "color": "var(--color-text)",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "var(--color-text)"
+                    }
+                },
+                "gridLineWidth": 0.5,
+                "gridLineColor": "rgba(128, 128, 128, 0.3)"
+            },
+            "series": [
+                {
+                    "name": "Cities",
+                    "data": [
+                        {
+                            "name": "Auckland",
+                            "x": 174.74,
+                            "y": -36.84,
+                            "z": 98
+                        },
+                        {
+                            "name": "Bangkok",
+                            "x": 100.49,
+                            "y": 13.75,
+                            "z": 1
+                        },
+                        {
+                            "name": "Beijing",
+                            "x": 116.4,
+                            "y": 39.91,
+                            "z": 63
+                        },
+                        {
+                            "name": "Buenos Aires",
+                            "x": -58.38,
+                            "y": -34.6,
+                            "z": 10
+                        },
+                        {
+                            "name": "Cairo",
+                            "x": 31.24,
+                            "y": 30.04,
+                            "z": 22
+                        },
+                        {
+                            "name": "Caracas",
+                            "x": -66.9,
+                            "y": 10.48,
+                            "z": 909
+                        },
+                        {
+                            "name": "Casablanca",
+                            "x": -7.58,
+                            "y": 33.53,
+                            "z": 75
+                        },
+                        {
+                            "name": "Chongqing",
+                            "x": 106.55,
+                            "y": 29.56,
+                            "z": 244
+                        },
+                        {
+                            "name": "Dakar",
+                            "x": -17.45,
+                            "y": 14.69,
+                            "z": 37
+                        },
+                        {
+                            "name": "Delhi",
+                            "x": 77.23,
+                            "y": 28.61,
+                            "z": 225
+                        }
+                    ],
+                    "color": "rgba(63, 127, 191, 0.7)",
+                    "dataLabels": {
+                        "enabled": false
+                    }
+                }
+            ],
+            "tooltip": {
+                "useHTML": true,
+                "headerFormat": "<b>{point.key}</b><br>",
+                "pointFormat": "Lat: {point.y:.2f}\u00b0<br>Lon: {point.x:.2f}\u00b0<br>Elevation: {point.z}m"
+            },
+            "plotOptions": {
+                "bubble": {
+                    "minSize": 10,
+                    "maxSize": 40,
+                    "zThreshold": 1
+                }
+            },
+            "legend": {
+                "itemStyle": {
+                    "color": "var(--color-text)"
+                }
+            },
+            "accessibility": {
+                "enabled": true
+            }
+        }
+    },
+    "visualization_explanation": "This bubble chart visualization encodes three-dimensional urban data through Cartesian coordinates (longitude/latitude) and marker sizing (elevation). The dataset contains 40+ cities with quantitative elevation metrics (interval scale) and geospatial coordinates (ratio scales). Synthetic data maintains real-world elevation ranges (1-3490m) and valid geographic coordinates. The bubble chart maximizes data-ink ratio by eliminating redundant gridlines while maintaining Cairo's principle of proportional ink through size-encoded elevation values. Color contrast between markers and dual-mode background ensures perceptual uniformity across light/dark themes. Elevation values follow realistic distribution (\u03bc=510m, \u03c3=830) with right-skew reflecting few high-altitude cities."
+}

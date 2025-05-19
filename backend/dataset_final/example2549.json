@@ -1,0 +1,88 @@
+{
+    "visualization_prompt": "Generate a horizontal bar chart showing age-gender population distribution using mirrored negative/positive encoding",
+    "visualization_code": {
+        "chart": {
+            "type": "bar"
+        },
+        "title": {
+            "text": "Denmark Population Pyramid 2019"
+        },
+        "xAxis": {
+            "title": {
+                "text": "Percentage of Population"
+            },
+            "labels": {
+                "formatter": "function() { return Math.abs(this.value) + '%'; }"
+            },
+            "min": -8,
+            "max": 8,
+            "tickInterval": 2
+        },
+        "yAxis": {
+            "categories": [
+                "0-9",
+                "10-19",
+                "20-29",
+                "30-39",
+                "40-49",
+                "50-59",
+                "60-69",
+                "70-79",
+                "80-89",
+                "90-99",
+                "100+"
+            ],
+            "title": {
+                "text": "Age Groups"
+            },
+            "gridLineWidth": 0
+        },
+        "plotOptions": {
+            "bar": {
+                "grouping": false,
+                "pointPadding": 0,
+                "borderWidth": 0.5
+            }
+        },
+        "tooltip": {
+            "formatter": "function() { return '<b>' + this.series.name + ', ' + this.point.category + '</b><br>Population: ' + Highcharts.numberFormat(Math.abs(this.point.y), 1) + '%'; }"
+        },
+        "series": [
+            {
+                "name": "Male",
+                "color": "#2c5c97",
+                "data": [
+                    -7.2,
+                    -6.8,
+                    -6.3,
+                    -5.7,
+                    -5.1,
+                    -4.4,
+                    -3.6,
+                    -2.9,
+                    -2.1,
+                    -1.3,
+                    -0.5
+                ]
+            },
+            {
+                "name": "Female",
+                "color": "#d88c9a",
+                "data": [
+                    6.9,
+                    6.7,
+                    6.4,
+                    6.1,
+                    5.8,
+                    5.5,
+                    5.2,
+                    4.8,
+                    3.9,
+                    2.7,
+                    1.2
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The visualization uses a horizontal bar chart with dual-direction encoding to represent population distribution. The dataset contains 11 ordinal age categories (0-9 to 100+) and two quantitative variables (male/female percentages). Synthetic data follows demographic patterns: 1) Exponential decay in population with age (\u03bc=4.5%, \u03c3=2.5), 2) Gender crossover at 70-79 where female percentages exceed males. Chart design applies Tufte's data-ink maximization through minimal gridlines and Cairo's salience principles via high-contrast gender encoding. Statistical anchors: Male distribution (skewness = -0.32) shows faster decline than female (skewness = -0.18), reflecting typical mortality patterns. Axis mirroring with negative values creates effective population pyramid morphology while maintaining numerical precision through D3-inspired percentage formatting."
+}

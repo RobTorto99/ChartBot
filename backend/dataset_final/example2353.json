@@ -1,0 +1,98 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly sales comparison between 2022 and 2023 using stacked columns with white data labels",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#FFFFFF",
+            "margin": 50
+        },
+        "title": {
+            "text": "Monthly Sales Data"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#000000",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "stackLabels": {
+                "enabled": true,
+                "align": "center",
+                "style": {
+                    "color": "#000000",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": null
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "normal",
+                "pointPadding": 0,
+                "groupPadding": 0,
+                "dataLabels": {
+                    "enabled": true,
+                    "color": "#FFFFFF"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "2022 Sales",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#008000"
+            },
+            {
+                "name": "2023 Sales",
+                "data": [
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4,
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2
+                ],
+                "color": "#FFA500"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains two annual sales series across 12 monthly categories. Synthetic data maintains business context with values in plausible sales figures (\u03bc=125, \u03c3=55), showing seasonal patterns with Q4 declines. The column chart maximizes data-ink ratio by eliminating gridlines and axis titles while maintaining clarity through direct labeling. Color choices follow Cairo's salience principles with high contrast between years. Stacked columns enable direct comparison of annual performance while preserving monthly breakdown visibility. White data labels maintain legibility against dark colors, and centered stack labels provide immediate total sales reference."
+}

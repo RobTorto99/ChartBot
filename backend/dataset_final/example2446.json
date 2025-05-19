@@ -1,0 +1,108 @@
+{
+    "visualization_prompt": "Generate a polar area chart showing synthetic sensor measurements across 10 angular positions using null value interpolation",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "area",
+                "polar": true,
+                "height": 500,
+                "backgroundColor": "#f8f9fa"
+            },
+            "title": {
+                "text": "Radial Sensor Measurements (2023)",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "20px",
+                    "fontWeight": "bold"
+                }
+            },
+            "xAxis": {
+                "gridLineWidth": 0.5,
+                "labels": {
+                    "style": {
+                        "color": "#7f8c8d",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "yAxis": {
+                "gridLineColor": "#bdc3c7",
+                "labels": {
+                    "style": {
+                        "color": "#7f8c8d",
+                        "fontSize": "12px"
+                    },
+                    "format": "{value} dB"
+                }
+            },
+            "plotOptions": {
+                "area": {
+                    "connectNulls": true,
+                    "stacking": false,
+                    "fillOpacity": 0.4,
+                    "marker": {
+                        "enabled": false
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Signal Strength",
+                    "data": [
+                        [
+                            0,
+                            45
+                        ],
+                        [
+                            36,
+                            48
+                        ],
+                        [
+                            72,
+                            53
+                        ],
+                        [
+                            108,
+                            null
+                        ],
+                        [
+                            144,
+                            58
+                        ],
+                        [
+                            180,
+                            62
+                        ],
+                        [
+                            216,
+                            59
+                        ],
+                        [
+                            252,
+                            55
+                        ],
+                        [
+                            288,
+                            51
+                        ],
+                        [
+                            324,
+                            49
+                        ]
+                    ],
+                    "type": "area",
+                    "color": "rgba(52, 152, 219, 0.7)",
+                    "lineWidth": 2
+                }
+            ],
+            "legend": {
+                "align": "right",
+                "verticalAlign": "middle",
+                "itemStyle": {
+                    "color": "#34495e"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 10 angular measurements (0\u00b0-324\u00b0) with one missing value at 108\u00b0. Synthetic data follows a quadratic trend (\u03bc=53.5, \u03c3=6.2) with seasonal fluctuation, generated using: y = -0.015x\u00b2 + 1.2x + 45 + \u03b5 where \u03b5 \u223c N(0, 2). Polar coordinates effectively display cyclical patterns while connecting nulls maintains continuity. The semi-transparent fill (\u03b1=0.4) follows Cairo's layering principle, and the monochromatic scheme maximizes data-ink ratio. Axis labels use D3-style formatting for measurement units, and the quadratic trend is anchored in the synthetic data generation equation."
+}

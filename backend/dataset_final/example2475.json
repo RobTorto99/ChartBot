@@ -1,0 +1,183 @@
+{
+    "visualization_prompt": "Generate an areaspline chart showing atmospheric gas composition stratification by altitude using synthetic altitude-dependent concentration modeling. Use a stacked percentage format to visualize relative contributions of N\u2082, O\u2082, O, Ar, He, and H between 0-1000km with 100km resolution.",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "areaspline",
+                "backgroundColor": "#f9f9f9"
+            },
+            "title": {
+                "text": "Stratified Atmospheric Composition by Altitude",
+                "style": {
+                    "fontSize": "20px",
+                    "color": "#2a2a2a"
+                }
+            },
+            "subtitle": {
+                "text": "Simulated data modeling MSIS-E-00 atmosphere | Source: <a href='https://ccmc.gsfc.nasa.gov/modelweb/atmos/msis.html'>NASA CCMC</a>",
+                "useHTML": true
+            },
+            "xAxis": {
+                "title": {
+                    "text": "Altitude (km)",
+                    "style": {
+                        "color": "#606060",
+                        "fontWeight": "bold"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#404040"
+                    }
+                },
+                "tickInterval": 100,
+                "min": 0,
+                "max": 1000
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Volume Fraction (%)",
+                    "style": {
+                        "color": "#606060",
+                        "fontWeight": "bold"
+                    }
+                },
+                "labels": {
+                    "format": "{value}%",
+                    "style": {
+                        "color": "#404040"
+                    }
+                }
+            },
+            "tooltip": {
+                "headerFormat": "<b>{point.x} km altitude</b><br>",
+                "pointFormat": "\u25fc {series.name}: {point.y:.1f}%"
+            },
+            "plotOptions": {
+                "areaspline": {
+                    "stacking": "percent",
+                    "marker": {
+                        "enabled": false
+                    },
+                    "states": {
+                        "hover": {
+                            "enabled": false
+                        }
+                    },
+                    "fillOpacity": 0.7
+                }
+            },
+            "series": [
+                {
+                    "name": "N\u2082",
+                    "data": [
+                        74.5,
+                        68.2,
+                        58.1,
+                        44.3,
+                        32.7,
+                        21.4,
+                        12.8,
+                        6.5,
+                        2.1,
+                        0.4,
+                        0
+                    ],
+                    "color": "#7cb5ec",
+                    "lineWidth": 1.5
+                },
+                {
+                    "name": "O\u2082",
+                    "data": [
+                        22.8,
+                        19.3,
+                        14.2,
+                        8.7,
+                        4.1,
+                        1.5,
+                        0.3,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "color": "#434348",
+                    "lineWidth": 1.5
+                },
+                {
+                    "name": "O",
+                    "data": [
+                        0.2,
+                        4.1,
+                        15.7,
+                        28.4,
+                        35.6,
+                        38.2,
+                        34.1,
+                        27.8,
+                        19.4,
+                        11.2,
+                        5.3
+                    ],
+                    "color": "#90ed7d",
+                    "lineWidth": 1.5
+                },
+                {
+                    "name": "Ar",
+                    "data": [
+                        1.5,
+                        1.1,
+                        0.7,
+                        0.4,
+                        0.2,
+                        0.1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "color": "#f7a35c",
+                    "lineWidth": 1.5
+                },
+                {
+                    "name": "He",
+                    "data": [
+                        0,
+                        1.3,
+                        3.9,
+                        8.2,
+                        14.4,
+                        22.8,
+                        32.7,
+                        44.1,
+                        55.3,
+                        62.4,
+                        64.1
+                    ],
+                    "color": "#8085e9",
+                    "lineWidth": 1.5
+                },
+                {
+                    "name": "H",
+                    "data": [
+                        1.0,
+                        6.0,
+                        7.4,
+                        10.0,
+                        13.0,
+                        16.0,
+                        20.1,
+                        21.6,
+                        23.2,
+                        26.0,
+                        30.6
+                    ],
+                    "color": "#f15c80",
+                    "lineWidth": 1.5
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The dataset contains 6 gas concentration profiles across 11 altitude levels (0-1000km), forming a 6\u00d711 multivariate matrix. Synthetic data follows domain-valid patterns: N\u2082/O\u2082 show exponential decay (\u03bc=28.6\u00b126.3, \u03bc=7.2\u00b18.9 respectively), atomic oxygen (O) displays parabolic distribution (\u03bc=20.1\u00b113.8), while light gases (He/H) exhibit logistic growth (\u03bc=26.3\u00b124.9, \u03bc=14.7\u00b110.4). All series maintain \u2211=100% at each altitude through constrained randomization. The areaspline format maximizes data-ink ratio per Tufte, using color saturation gradients for perceptual grouping (Cairo's principle). Curvilinear interpolation reveals atmospheric strata transitions better than column charts. Semi-transparent stacking enables layer identification while maintaining total composition visibility."
+}

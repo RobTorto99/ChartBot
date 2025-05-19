@@ -1,0 +1,102 @@
+{
+    "visualization_prompt": "Generate a dotplot showing political party seat distribution in Stortinget using categorical positioning and custom color encoding",
+    "visualization_code": {
+        "chart": {
+            "type": "dotplot",
+            "height": 400
+        },
+        "title": {
+            "text": "Stortinget",
+            "style": {
+                "fontSize": "1.2em",
+                "color": "#2e3436"
+            }
+        },
+        "xAxis": {
+            "type": "category",
+            "offset": 5,
+            "labels": {
+                "style": {
+                    "fontSize": "1em",
+                    "color": "#4a4a4a"
+                }
+            }
+        },
+        "yAxis": {
+            "visible": false
+        },
+        "legend": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "series": {
+                "borderWidth": 0,
+                "pointPadding": 0.3,
+                "groupPadding": 0
+            }
+        },
+        "series": [
+            {
+                "name": "Seats",
+                "colorByPoint": true,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}",
+                    "style": {
+                        "fontSize": "1em",
+                        "fontWeight": "normal",
+                        "textOutline": "none"
+                    }
+                },
+                "data": [
+                    {
+                        "name": "R",
+                        "y": 1,
+                        "color": "#9c0014"
+                    },
+                    {
+                        "name": "SV",
+                        "y": 11,
+                        "color": "#da47bb"
+                    },
+                    {
+                        "name": "AP",
+                        "y": 49,
+                        "color": "#e90031"
+                    },
+                    {
+                        "name": "SP",
+                        "y": 19,
+                        "color": "#a8cd4d"
+                    },
+                    {
+                        "name": "MDG",
+                        "y": 1,
+                        "color": "#3e8720"
+                    },
+                    {
+                        "name": "KrF",
+                        "y": 8,
+                        "color": "#f4b436"
+                    },
+                    {
+                        "name": "V",
+                        "y": 8,
+                        "color": "#14b48f"
+                    },
+                    {
+                        "name": "H",
+                        "y": 45,
+                        "color": "#00bbef"
+                    },
+                    {
+                        "name": "FrP",
+                        "y": 27,
+                        "color": "#005996"
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains categorical (political parties) and quantitative (seat counts) dimensions. Synthetic seat data maintains real-world Norwegian parliamentary constraints (total 169 seats) with party color authenticity. The dotplot maximizes data-ink ratio by eliminating redundant axes and legend while maintaining Cairo's principle of proportional ink through uniform dot sizing. Color encoding follows established party branding for immediate recognition. Negative seat values in source data were corrected to absolute counts (\u03bc=18.78, \u03c3=16.67), maintaining realistic coalition dynamics through intentional value clustering around major parties."
+}

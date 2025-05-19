@@ -1,0 +1,71 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a horizontal linear gauge with the following specifications: Chart type should be 'lineargauge', chart title should be 'A Horizontal Linear Gauge', axes and labels should be styled with specific colors and font sizes, data series should include one series with a single data point set to 92, custom colors should be applied to the series and plot bands, and additional configurations should include chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "lineargauge",
+            "inverted": true,
+            "height": 100
+        },
+        "title": {
+            "text": "A Horizontal Linear Gauge"
+        },
+        "xAxis": {
+            "lineColor": "#C0C0C0",
+            "labels": {
+                "enabled": false
+            },
+            "tickLength": 0
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 100,
+            "tickLength": 5,
+            "tickWidth": 1,
+            "tickColor": "#C0C0C0",
+            "gridLineColor": "#C0C0C0",
+            "gridLineWidth": 1,
+            "minorTickInterval": 5,
+            "minorTickWidth": 1,
+            "minorTickLength": 5,
+            "minorGridLineWidth": 0,
+            "title": null,
+            "labels": {
+                "format": "{value}%"
+            },
+            "plotBands": [
+                {
+                    "from": 0,
+                    "to": 40,
+                    "color": "rgba(255,0,0,0.5)"
+                },
+                {
+                    "from": 40,
+                    "to": 80,
+                    "color": "rgba(255,255,0,0.5)"
+                },
+                {
+                    "from": 80,
+                    "to": 100,
+                    "color": "rgba(0,255,0,0.5)"
+                }
+            ]
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "data": [
+                    92
+                ],
+                "color": "#000000",
+                "dataLabels": {
+                    "enabled": true,
+                    "align": "center",
+                    "format": "{point.y}%"
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a horizontal linear gauge chart with a custom series type 'lineargauge'. The chart is inverted to display horizontally, with a height of 100 pixels. The title of the chart is set to 'A Horizontal Linear Gauge'. The x-axis is styled with a light gray line color and has its labels disabled, while the y-axis is configured with a range from 0 to 100, with labels formatted to display percentages. The y-axis also includes plot bands to visually represent different ranges with specific colors. The legend is disabled, and the series contains a single data point set to 92, with custom black color and data labels enabled to display the value as a percentage. Additional configurations include the chart's background and margins, which are not explicitly set in this configuration but can be adjusted as needed."
+}

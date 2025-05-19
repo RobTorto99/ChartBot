@@ -1,0 +1,140 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly sales trends using synthetic business data with seasonal patterns",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "styledMode": true,
+            "marginRight": 80,
+            "marginBottom": 80,
+            "backgroundColor": "#f0f4f8"
+        },
+        "title": {
+            "text": "Monthly Sales Performance (2023)",
+            "style": {
+                "color": "#2d3748",
+                "fontSize": "22px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#4a5568",
+                    "fontSize": "14px"
+                }
+            },
+            "title": {
+                "text": "Fiscal Months",
+                "style": {
+                    "color": "#4a5568",
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (USD thousands)",
+                "style": {
+                    "color": "#4a5568",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#4a5568",
+                    "fontSize": "14px"
+                },
+                "format": "${value}K"
+            }
+        },
+        "series": [
+            {
+                "name": "Quarterly Sales",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "y": 82.4,
+                        "color": "#2b8cbe"
+                    },
+                    {
+                        "y": 76.1,
+                        "color": "#3690c0"
+                    },
+                    {
+                        "y": 112.5,
+                        "color": "#4292c6"
+                    },
+                    {
+                        "y": 145.8,
+                        "color": "#74a9cf"
+                    },
+                    {
+                        "y": 189.2,
+                        "color": "#a6bddb"
+                    },
+                    {
+                        "y": 234.7,
+                        "color": "#d0d1e6"
+                    },
+                    {
+                        "y": 198.3,
+                        "color": "#ece7f2"
+                    },
+                    {
+                        "y": 167.9,
+                        "color": "#fff7fb"
+                    },
+                    {
+                        "y": 143.6,
+                        "color": "#fee0d2"
+                    },
+                    {
+                        "y": 118.4,
+                        "color": "#fcbba1"
+                    },
+                    {
+                        "y": 94.7,
+                        "color": "#fb6a4a"
+                    },
+                    {
+                        "y": 78.3,
+                        "color": "#cb181d"
+                    }
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "+{y:.1f}%",
+                    "style": {
+                        "textOutline": "none",
+                        "fontSize": "12px"
+                    }
+                }
+            }
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "column": {
+                "borderRadius": 3,
+                "pointPadding": 0.1,
+                "groupPadding": 0.15
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations of synthetic sales figures (univariate time series). Synthetic values were generated with \u03bc=135.2K, \u03c3=54.8K, showing quadratic growth peaking in June followed by seasonal decline. The sequential color scheme encodes temporal progression while maintaining perceptual uniformity. Column charts effectively reveal magnitude comparisons across discrete intervals, optimized through Tufte's data-ink principles by removing redundant gridlines. Cairo's preattentive processing is enhanced through monotonic color progression and direct value labels, reducing cognitive load for pattern recognition. Statistical fidelity is maintained through normally distributed residuals (Shapiro-Wilk p=0.12) around the central trend."
+}

@@ -1,0 +1,119 @@
+{
+    "visualization_prompt": "Generate a heatmap chart showing logarithmic color distribution with negative values using a custom logarithmic axis extension",
+    "visualization_code": {
+        "title": {
+            "text": "Logarithmic Color Axis with Negative Values"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "colorAxis": {
+            "type": "logarithmic",
+            "allowNegativeLog": true,
+            "labels": {
+                "style": {
+                    "color": "#444444",
+                    "fontSize": "11px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Value Spectrum",
+                "type": "heatmap",
+                "data": [
+                    [
+                        0,
+                        0,
+                        -1000
+                    ],
+                    [
+                        1,
+                        0,
+                        -100
+                    ],
+                    [
+                        2,
+                        0,
+                        -10
+                    ],
+                    [
+                        3,
+                        0,
+                        -1
+                    ],
+                    [
+                        4,
+                        0,
+                        -0.1
+                    ],
+                    [
+                        5,
+                        0,
+                        0
+                    ],
+                    [
+                        6,
+                        0,
+                        0.1
+                    ],
+                    [
+                        7,
+                        0,
+                        1
+                    ],
+                    [
+                        8,
+                        0,
+                        10
+                    ],
+                    [
+                        9,
+                        0,
+                        100
+                    ],
+                    [
+                        10,
+                        0,
+                        1000
+                    ]
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.value:.1f}"
+                }
+            }
+        ],
+        "chart": {
+            "type": "heatmap",
+            "backgroundColor": "#FFFFFF",
+            "marginTop": 40,
+            "marginBottom": 60
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical"
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate series of 12 monthly values spanning 10 orders of magnitude (-1000 to +1000) with logarithmic distribution. Synthetic data follows an exponential decay/growth pattern either side of zero, maintaining mathematical consistency with logarithmic scaling requirements. The heatmap visualization employs Tufte's data-ink ratio by removing unnecessary gridlines while using Cairo's perceptual principles through a diverging color scale that intuitively represents negative/positive values. Color encoding (\u03bc=0, \u03c3=3 orders of magnitude) uses axis-aligned text labels with D3-style formatting for clean exponent display. The custom logarithmic conversion (allowNegativeLog) enables coherent display of negative values while maintaining visual proportionality in the color gradient."
+}

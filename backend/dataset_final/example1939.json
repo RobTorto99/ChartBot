@@ -1,0 +1,106 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly sales and production cost trends over 10 months using dual-axis encoding with synthetic business data",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "styledMode": true
+        },
+        "title": {
+            "text": "Styling Axes: Monthly Sales vs Production Costs (2023)"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": [
+            {
+                "title": {
+                    "text": "Sales (USD)",
+                    "style": {
+                        "color": "#2c7be5"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#2c7be5"
+                    }
+                }
+            },
+            {
+                "title": {
+                    "text": "Costs (USD)",
+                    "style": {
+                        "color": "#d4526e"
+                    }
+                },
+                "opposite": true,
+                "labels": {
+                    "style": {
+                        "color": "#d4526e"
+                    }
+                }
+            }
+        ],
+        "plotOptions": {
+            "column": {
+                "borderRadius": 5,
+                "grouping": false
+            }
+        },
+        "series": [
+            {
+                "name": "Monthly Sales",
+                "data": [
+                    120,
+                    135,
+                    158,
+                    172,
+                    185,
+                    203,
+                    220,
+                    208,
+                    192,
+                    175
+                ],
+                "yAxis": 0
+            },
+            {
+                "name": "Production Costs",
+                "data": [
+                    320,
+                    308,
+                    295,
+                    285,
+                    278,
+                    265,
+                    252,
+                    245,
+                    238,
+                    230
+                ],
+                "yAxis": 1
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top"
+        }
+    },
+    "visualization_explanation": "The dataset contains two time-series dimensions tracking monthly business metrics across 10 consecutive months. Synthetic sales data (\u03bc=178, \u03c3=34) follows a seasonal pattern with summer peak, while cost data (\u03bc=272, \u03c3=32) demonstrates controlled reduction. Both series maintain domain-appropriate ranges and temporal consistency. The dual-axis column chart effectively separates metric scales while maintaining temporal alignment, adhering to Tufte's principles by minimizing non-data ink through shared category labels. Cairo's perceptual principles are applied through color-coded axes (blue for sales, red for costs) and proportional column widths. The 5px borderRadius improves visual appeal without compromising data integrity, while ungrouped columns enable direct month-to-month comparison between metrics."
+}

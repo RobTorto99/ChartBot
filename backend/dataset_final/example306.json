@@ -1,0 +1,88 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Historical USD to EUR Exchange Rate'. The chart should have styled axes and labels with specific colors and font sizes. The data series should include the name 'USD to EUR' and the data should be fetched from 'https://www.highcharts.com/samples/data/usdeur.json'. Additionally, the chart should have custom colors and other configurations such as chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "marginBottom": 120,
+            "marginLeft": 50,
+            "marginRight": 20,
+            "backgroundColor": "#f9f9f9"
+        },
+        "title": {
+            "text": "Historical USD to EUR Exchange Rate",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "type": "datetime",
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Date",
+                "style": {
+                    "color": "#444444",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Exchange Rate",
+                "style": {
+                    "color": "#444444",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#555555",
+                "fontSize": "12px"
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "marker": {
+                    "enabled": false
+                },
+                "states": {
+                    "hover": {
+                        "enabled": true,
+                        "radius": 3
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "USD to EUR",
+                "data": []
+            }
+        ],
+        "colors": [
+            "#007bff",
+            "#28a745",
+            "#dc3545"
+        ],
+        "credits": {
+            "enabled": false
+        },
+        "exporting": {
+            "enabled": true
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart with a title 'Historical USD to EUR Exchange Rate'. The chart includes styled axes and labels with specific colors and font sizes for better readability. The data series is named 'USD to EUR' and is expected to be populated from the 'https://www.highcharts.com/samples/data/usdeur.json' endpoint. Custom colors are defined for the series, and additional configurations such as chart margins, background color, and legend settings are included to enhance the visual appeal and functionality of the chart. The chart also supports exporting options for users to download the chart as an image or PDF."
+}

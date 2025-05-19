@@ -1,0 +1,112 @@
+{
+    "visualization_prompt": "Generate a column chart showing browser market share distribution using categorical comparison with custom color encoding",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#f4f4f4",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "Browser Market Share",
+            "style": {
+                "color": "#333333",
+                "fontSize": "24px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Firefox",
+                "IE",
+                "Chrome",
+                "Safari",
+                "Opera",
+                "Others"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            },
+            "title": {
+                "text": "Browsers",
+                "style": {
+                    "color": "#777777",
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "yAxis": {
+            "max": 100,
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            },
+            "title": {
+                "text": "Market Share (%)",
+                "style": {
+                    "color": "#777777",
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "tooltip": {
+            "pointFormat": "{series.name}: <b>{point.y:.1f}%</b>"
+        },
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#444444",
+                "fontSize": "12px"
+            }
+        },
+        "series": [
+            {
+                "name": "Market Share",
+                "data": [
+                    {
+                        "y": 45.0,
+                        "color": "#FF5733"
+                    },
+                    {
+                        "y": 26.8,
+                        "color": "#33FF57"
+                    },
+                    {
+                        "y": 12.8,
+                        "color": "#3357FF"
+                    },
+                    {
+                        "y": 8.5,
+                        "color": "#FF33A1"
+                    },
+                    {
+                        "y": 6.2,
+                        "color": "#33FFF5"
+                    },
+                    {
+                        "y": 0.7,
+                        "color": "#A133FF"
+                    }
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y:.1f}%",
+                    "style": {
+                        "textShadow": "none",
+                        "fontSize": "12px"
+                    }
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains categorical data (browser names) paired with continuous percentage values. Synthetic market share percentages (\u03bc=16.67, \u03c3=16.3) follow a Pareto distribution typical of technology adoption patterns. The column chart maximizes data-ink ratio by eliminating unnecessary gridlines while maintaining clear value labels. Cairo's principles are applied through sequential color saturation that correlates with data values, enhancing pre-attentive processing. Categorical spacing follows Tukey's rule of thumb for bar gaps (15% of bar width), and the 100% anchored scale enables accurate relative comparisons. Percentage formatting (D3-style {value}% syntax) maintains quantitative clarity across all elements."
+}

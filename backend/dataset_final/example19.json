@@ -1,0 +1,76 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart. The chart should have the title 'Income Distribution and Intentional Homicide Rates, 1965-1994'. The x-axis should represent the Gini Coefficient with labels ranging from 20 to 60, and the y-axis should represent the Intentional Homicide Rates. The chart should include a single series named 'Income Distribution and Intentional Homicide Rates,' with data points corresponding to the given Gini Coefficients. The chart should have a white background, and the axes labels should be styled with a font size of 12px and a dark gray color. The chart should also include a subtitle indicating the source of the data, which is the World Bank.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Income Distribution and Intentional Homicide Rates, 1965-1994"
+        },
+        "subtitle": {
+            "text": "Source: <a href=\"https://web.worldbank.org/\" target=\"_blank\">Worldbank</a>"
+        },
+        "xAxis": {
+            "title": {
+                "text": "Gini Coefficient",
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#333333"
+                }
+            },
+            "categories": [
+                20,
+                25,
+                30,
+                35,
+                40,
+                45,
+                50,
+                55,
+                60
+            ],
+            "accessibility": {
+                "rangeDescription": "Range: 20 to 60"
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Intentional Homicide Rates",
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#333333"
+                }
+            }
+        },
+        "legend": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "series": {
+                "marker": {
+                    "enabled": false
+                },
+                "pointStart": 20,
+                "pointInterval": 5
+            }
+        },
+        "series": [
+            {
+                "name": "Income Distribution and Intentional Homicide Rates",
+                "data": [
+                    16.56,
+                    18.9,
+                    21.24,
+                    23.58,
+                    25.92,
+                    28.26,
+                    30.6,
+                    32.94,
+                    35.28
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart with a white background. The chart title is 'Income Distribution and Intentional Homicide Rates, 1965-1994', and it includes a subtitle indicating the data source as the World Bank. The x-axis represents the Gini Coefficient, ranging from 20 to 60, with labels styled in dark gray and a font size of 12px. The y-axis represents the Intentional Homicide Rates, also styled with the same font size and color. The chart includes a single series named 'Income Distribution and Intentional Homicide Rates', with data points corresponding to the given Gini Coefficients. The legend is disabled, and the series markers are not displayed. The chart is designed to be accessible, with a range description provided for the x-axis."
+}

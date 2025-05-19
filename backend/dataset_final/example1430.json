@@ -1,0 +1,81 @@
+{
+    "visualization_prompt": "Generate a bar chart showing percentage distribution of organic farming areas across EU countries using ranked categorical comparison with value annotations",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "zooming": {
+                "type": "y"
+            }
+        },
+        "title": {
+            "text": "Top 10 EU countries in organic farming area (2018)"
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://ec.europa.eu/eurostat/statistics-explained/index.php/Organic_farming_statistics'>Eurostat</a>"
+        },
+        "xAxis": {
+            "categories": [
+                "Austria",
+                "Estonia",
+                "Sweden",
+                "Italy",
+                "Czechia",
+                "Latvia",
+                "Finland",
+                "Slovenia",
+                "Slovakia",
+                "Denmark"
+            ],
+            "accessibility": {
+                "description": "Countries"
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 30,
+            "tickInterval": 10,
+            "labels": {
+                "format": "{value}%"
+            },
+            "accessibility": {
+                "description": "Organic farming area percentage"
+            }
+        },
+        "plotOptions": {
+            "bar": {
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y}%",
+                    "align": "right",
+                    "color": "#2c3e50"
+                }
+            }
+        },
+        "tooltip": {
+            "valueSuffix": "%",
+            "stickOnContact": true,
+            "backgroundColor": "rgba(255, 255, 255, 0.93)"
+        },
+        "series": [
+            {
+                "name": "Organic Farming Area",
+                "data": [
+                    24.1,
+                    20.6,
+                    20.3,
+                    15.2,
+                    14.8,
+                    14.5,
+                    13.1,
+                    10.0,
+                    9.9,
+                    9.8
+                ],
+                "color": "#a5d6a7",
+                "borderColor": "#60A465",
+                "borderWidth": 1
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains univariate categorical data with 10 ordered observations representing percentage values. Synthetic data preserves Eurostat's original country rankings while maintaining percentage distribution validity (\u2211=152.3% reflects multiple land use counting). Values follow plausible agricultural capacity constraints with Austria's 24.1% peak within EU sustainability targets. The horizontal bar chart maximizes data-ink ratio by eliminating redundant gridlines while using position-aligned data labels. Cairo's length perception principle enables accurate magnitude comparisons through aligned baselines. Color saturation (\u03bc=65% luminance in #a5d6a7) ensures accessibility while maintaining visual hierarchy. Rank ordering supports efficient pattern recognition of agricultural policy outcomes across member states."
+}

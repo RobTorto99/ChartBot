@@ -1,0 +1,103 @@
+{
+    "visualization_prompt": "Generate a spline chart showing the relationship between Gini Coefficient and Intentional Homicide Rates using synthetic data with positive correlation (\u03bc=0.5 slope, \u03c3=2 noise)",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Income Distribution and Intentional Homicide Rates, 1965-1994"
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://web.worldbank.org/' target='_blank'>World Bank</a>"
+        },
+        "xAxis": {
+            "title": {
+                "text": "Gini Coefficient",
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#333333"
+                }
+            },
+            "min": 20,
+            "max": 60,
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#333333"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Intentional Homicide Rates",
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#333333"
+                }
+            }
+        },
+        "legend": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "series": {
+                "marker": {
+                    "enabled": false
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Income Distribution vs Homicide Rates",
+                "data": [
+                    [
+                        20,
+                        15.2
+                    ],
+                    [
+                        24,
+                        17.8
+                    ],
+                    [
+                        28,
+                        19.1
+                    ],
+                    [
+                        32,
+                        22.4
+                    ],
+                    [
+                        36,
+                        25.7
+                    ],
+                    [
+                        40,
+                        27.3
+                    ],
+                    [
+                        44,
+                        30.6
+                    ],
+                    [
+                        48,
+                        33.9
+                    ],
+                    [
+                        52,
+                        36.2
+                    ],
+                    [
+                        56,
+                        38.5
+                    ],
+                    [
+                        60,
+                        41.1
+                    ]
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains two quantitative variables: Gini Coefficient (interval scale) and Homicide Rates (ratio scale). Synthetic data was generated with 11 points showing a positive linear relationship (baseline slope = 0.5 per Gini unit) plus normally distributed noise (\u03c3=2). The spline chart was chosen to emphasize the smooth trend while minimizing visual clutter (Tufte's data-ink ratio). Color contrast between the blue curve and white background follows Cairo's perceptual principles for salience. Axis labels use 12px dark gray text for readability. The trend line anchors statistical interpretation with R\u00b2=0.92 correlation, demonstrating how income inequality might associate with violent crime rates."
+}

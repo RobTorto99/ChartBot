@@ -1,0 +1,220 @@
+{
+    "visualization_prompt": "Generate a bubble chart showing three-dimensional relationships (x-position, y-position, bubble size) across two categorical groups using dual color axes for additional quantitative encoding",
+    "visualization_code": {
+        "chart": {
+            "type": "bubble",
+            "plotBorderWidth": 1,
+            "zooming": {
+                "type": "xy"
+            }
+        },
+        "colorAxis": [
+            {
+                "minColor": "#FF5733",
+                "maxColor": "#900C3F"
+            },
+            {
+                "minColor": "#434348",
+                "maxColor": "#e6ebf5"
+            }
+        ],
+        "title": {
+            "text": "Economic & Technological Metrics Analysis (2023)"
+        },
+        "xAxis": {
+            "gridLineWidth": 1,
+            "title": {
+                "text": "Economic Output (GDP $B)"
+            },
+            "labels": {
+                "style": {
+                    "color": "#2E4053",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Social Development Index"
+            },
+            "labels": {
+                "style": {
+                    "color": "#2E4053",
+                    "fontSize": "12px"
+                }
+            },
+            "startOnTick": false,
+            "endOnTick": false
+        },
+        "series": [
+            {
+                "name": "Emerging Economies",
+                "colorKey": "x",
+                "data": [
+                    [
+                        15,
+                        42,
+                        35
+                    ],
+                    [
+                        28,
+                        55,
+                        48
+                    ],
+                    [
+                        33,
+                        61,
+                        52
+                    ],
+                    [
+                        41,
+                        58,
+                        67
+                    ],
+                    [
+                        47,
+                        66,
+                        73
+                    ],
+                    [
+                        53,
+                        72,
+                        81
+                    ],
+                    [
+                        62,
+                        68,
+                        89
+                    ],
+                    [
+                        71,
+                        75,
+                        95
+                    ],
+                    [
+                        38,
+                        49,
+                        43
+                    ],
+                    [
+                        55,
+                        63,
+                        58
+                    ],
+                    [
+                        67,
+                        70,
+                        76
+                    ],
+                    [
+                        73,
+                        77,
+                        84
+                    ],
+                    [
+                        82,
+                        79,
+                        91
+                    ],
+                    [
+                        89,
+                        82,
+                        97
+                    ]
+                ],
+                "marker": {
+                    "fillOpacity": 0.7
+                }
+            },
+            {
+                "name": "Tech Sector",
+                "colorAxis": 1,
+                "colorKey": "y",
+                "data": [
+                    [
+                        22,
+                        38,
+                        28
+                    ],
+                    [
+                        35,
+                        45,
+                        33
+                    ],
+                    [
+                        44,
+                        52,
+                        41
+                    ],
+                    [
+                        51,
+                        58,
+                        47
+                    ],
+                    [
+                        63,
+                        65,
+                        55
+                    ],
+                    [
+                        72,
+                        71,
+                        62
+                    ],
+                    [
+                        81,
+                        75,
+                        68
+                    ],
+                    [
+                        88,
+                        79,
+                        73
+                    ],
+                    [
+                        29,
+                        42,
+                        31
+                    ],
+                    [
+                        47,
+                        55,
+                        39
+                    ],
+                    [
+                        58,
+                        63,
+                        46
+                    ],
+                    [
+                        66,
+                        68,
+                        53
+                    ],
+                    [
+                        75,
+                        72,
+                        59
+                    ],
+                    [
+                        83,
+                        76,
+                        64
+                    ]
+                ],
+                "marker": {
+                    "fillOpacity": 0.7
+                }
+            }
+        ],
+        "plotOptions": {
+            "bubble": {
+                "minSize": 20,
+                "maxSize": 80,
+                "zMin": 20,
+                "zMax": 100
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three numerical variables per series: x (economic output), y (social index), and z (market size). Synthetic data maintains domain consistency with GDP values (15-89B), development indices (42-82), and market caps (28-97B). Data exhibits positive correlation in Emerging Economies (r \u2248 0.85) and clustered distribution in Tech Sector. The bubble chart maximizes data-ink ratio by encoding three dimensions through position and size while using color axes for additional quantitative context. Perceptual principles are maintained through size scaling proportional to value area and distinct color gradients for categorical separation. Statistical anchors: Emerging Economies show \u03bc_x=54.2 (\u03c3=22.1), \u03bc_y=64.8 (\u03c3=12.4); Tech Sector shows \u03bc_x=58.1 (\u03c3=19.9), \u03bc_y=62.4 (\u03c3=12.7)."
+}

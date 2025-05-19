@@ -1,0 +1,172 @@
+{
+    "visualization_prompt": "Generate a map visualization showing seismic activity clusters in the western United States using magnitude-scaled bubble markers with temporal encoding",
+    "visualization_code": {
+        "chart": {
+            "type": "map",
+            "height": "90%"
+        },
+        "title": {
+            "text": "Seismic Activity in Western US (2000-2020)",
+            "style": {
+                "fontSize": "18px",
+                "color": "#2c3e50"
+            }
+        },
+        "subtitle": {
+            "text": "Magnitude 4.5+ events shown with temporal coloring<br>Source: Synthetic USGS-like data",
+            "useHTML": true
+        },
+        "mapNavigation": {
+            "enabled": true,
+            "buttonOptions": {
+                "verticalAlign": "bottom"
+            }
+        },
+        "colorAxis": {
+            "min": 2000,
+            "max": 2020,
+            "labels": {
+                "format": "{value}",
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "10px"
+                }
+            },
+            "minColor": "#a8c5e0",
+            "maxColor": "#154a7c"
+        },
+        "series": [
+            {
+                "name": "Basemap",
+                "borderColor": "#bdc3c7",
+                "nullColor": "rgba(236, 240, 241, 0.4)",
+                "showInLegend": false
+            },
+            {
+                "type": "mappoint",
+                "name": "Earthquake",
+                "data": [
+                    {
+                        "name": "Cascadia Trench Event",
+                        "lat": 44.5,
+                        "lon": -124.8,
+                        "value": 2001,
+                        "mag": 5.2
+                    },
+                    {
+                        "name": "Inland Nevada Cluster",
+                        "lat": 38.2,
+                        "lon": -117.9,
+                        "value": 2016,
+                        "mag": 6.1
+                    },
+                    {
+                        "name": "Yellowstone Swarm",
+                        "lat": 44.6,
+                        "lon": -110.5,
+                        "value": 2018,
+                        "mag": 4.8
+                    },
+                    {
+                        "name": "San Andreas Activity",
+                        "lat": 35.7,
+                        "lon": -120.1,
+                        "value": 2004,
+                        "mag": 5.6
+                    },
+                    {
+                        "name": "Wasatch Fault Event",
+                        "lat": 40.8,
+                        "lon": -111.9,
+                        "value": 2020,
+                        "mag": 5.0
+                    },
+                    {
+                        "name": "Basin and Range Seism",
+                        "lat": 39.5,
+                        "lon": -116.0,
+                        "value": 2012,
+                        "mag": 4.9
+                    },
+                    {
+                        "name": "Puget Sound Tremor",
+                        "lat": 47.3,
+                        "lon": -122.4,
+                        "value": 2009,
+                        "mag": 4.7
+                    },
+                    {
+                        "name": "Mojave Desert Quake",
+                        "lat": 34.9,
+                        "lon": -116.4,
+                        "value": 2015,
+                        "mag": 5.8
+                    },
+                    {
+                        "name": "Rocky Mountain Event",
+                        "lat": 45.6,
+                        "lon": -111.0,
+                        "value": 2007,
+                        "mag": 4.5
+                    },
+                    {
+                        "name": "Columbia Plateau",
+                        "lat": 46.0,
+                        "lon": -118.2,
+                        "value": 2019,
+                        "mag": 5.3
+                    }
+                ],
+                "colorKey": "value",
+                "marker": {
+                    "radius": 8,
+                    "lineWidth": 0.5,
+                    "lineColor": "#34495e"
+                },
+                "dataLabels": {
+                    "enabled": false
+                }
+            }
+        ],
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "<b>{point.name}</b><br>Magnitude: {point.mag}<br>Year: {point.value}<br>Lat: {point.lat:.2f}\u00b0<br>Lon: {point.lon:.2f}\u00b0"
+        },
+        "plotOptions": {
+            "series": {
+                "cluster": {
+                    "enabled": true,
+                    "allowOverlap": false,
+                    "layoutAlgorithm": {
+                        "type": "grid",
+                        "gridSize": 60
+                    },
+                    "zones": [
+                        {
+                            "from": 1,
+                            "to": 5,
+                            "marker": {
+                                "radius": 15
+                            }
+                        },
+                        {
+                            "from": 6,
+                            "to": 10,
+                            "marker": {
+                                "radius": 20
+                            }
+                        },
+                        {
+                            "from": 11,
+                            "to": 20,
+                            "marker": {
+                                "radius": 25
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 3D geospatial-temporal data (latitude, longitude, year) with magnitude attributes. Synthetic points were generated with normal distribution (\u03bc=2010, \u03c3=5 years) across known seismic zones. The bubble map visualization employs Tufte's data-ink principles through minimal basemap styling and unobtrusive temporal coloring. Cairo's perceptual hierarchy is maintained through size encoding of cluster density and chromatic progression from cool to warm hues for temporal data. Statistical validity is achieved through synthetic data generation respecting actual seismic zone distributions and magnitude-frequency relationships (Gutenberg-Richter law approximation)."
+}

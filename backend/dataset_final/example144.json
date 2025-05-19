@@ -1,0 +1,100 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Set dash style by CSS'. The chart should have two data series, each with specific dash styles defined by CSS. The axes and labels should be styled with specific colors and font sizes. The chart should also include custom colors and additional configurations such as chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "styledMode": true,
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ],
+            "backgroundColor": "#f9f9f9"
+        },
+        "title": {
+            "text": "Set dash style by CSS",
+            "style": {
+                "color": "#333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "X Axis",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#777",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Y Axis",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#777",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "legend": {
+            "symbolWidth": 80,
+            "itemStyle": {
+                "color": "#444",
+                "fontSize": "13px"
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    1,
+                    3,
+                    2,
+                    4,
+                    5,
+                    4,
+                    6,
+                    2,
+                    3,
+                    5,
+                    6
+                ]
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    2,
+                    4,
+                    1,
+                    3,
+                    4,
+                    2,
+                    9,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ]
+            }
+        ],
+        "colors": [
+            "#007BFF",
+            "#FF6347"
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a spline chart with a title 'Set dash style by CSS'. The chart includes two data series, 'Series 1' and 'Series 2', each with their respective data points. The chart is styled using CSS, with specific dash styles for each series defined in the CSS section. The axes and labels are styled with custom colors and font sizes to enhance readability. The chart also includes custom colors for the series and additional configurations such as chart margins, background color, and legend settings to improve the overall appearance and functionality of the chart."
+}

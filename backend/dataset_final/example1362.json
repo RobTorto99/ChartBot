@@ -1,0 +1,214 @@
+{
+    "visualization_prompt": "Generate a bubble chart showing three-dimensional relationships between variables using dual color axes for multivariate encoding",
+    "visualization_code": {
+        "chart": {
+            "type": "bubble",
+            "plotBorderWidth": 1,
+            "zooming": {
+                "type": "xy"
+            }
+        },
+        "colorAxis": [
+            {
+                "minColor": "#7cb5ec",
+                "maxColor": "#003399"
+            },
+            {
+                "minColor": "#434348",
+                "maxColor": "#e6ebf5"
+            }
+        ],
+        "title": {
+            "text": "Multivariate Environmental and Economic Indicators"
+        },
+        "xAxis": {
+            "title": {
+                "text": "Temperature Index (\u00b0C)"
+            },
+            "gridLineWidth": 1,
+            "labels": {
+                "style": {
+                    "color": "#2e2e2e",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "pH Level"
+            },
+            "startOnTick": false,
+            "endOnTick": false,
+            "labels": {
+                "style": {
+                    "color": "#2e2e2e",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Environmental Factors",
+                "colorKey": "x",
+                "data": [
+                    [
+                        9,
+                        81,
+                        63
+                    ],
+                    [
+                        98,
+                        5,
+                        89
+                    ],
+                    [
+                        51,
+                        50,
+                        73
+                    ],
+                    [
+                        41,
+                        22,
+                        14
+                    ],
+                    [
+                        58,
+                        24,
+                        20
+                    ],
+                    [
+                        78,
+                        37,
+                        34
+                    ],
+                    [
+                        55,
+                        56,
+                        53
+                    ],
+                    [
+                        18,
+                        45,
+                        70
+                    ],
+                    [
+                        42,
+                        44,
+                        28
+                    ],
+                    [
+                        3,
+                        52,
+                        59
+                    ],
+                    [
+                        31,
+                        18,
+                        97
+                    ],
+                    [
+                        79,
+                        91,
+                        63
+                    ],
+                    [
+                        93,
+                        23,
+                        23
+                    ],
+                    [
+                        44,
+                        83,
+                        22
+                    ]
+                ],
+                "marker": {
+                    "fillOpacity": 0.8,
+                    "lineWidth": 1
+                }
+            },
+            {
+                "name": "Economic Indicators",
+                "colorAxis": 1,
+                "colorKey": "x",
+                "data": [
+                    [
+                        42,
+                        38,
+                        20
+                    ],
+                    [
+                        6,
+                        18,
+                        1
+                    ],
+                    [
+                        1,
+                        93,
+                        55
+                    ],
+                    [
+                        57,
+                        2,
+                        90
+                    ],
+                    [
+                        80,
+                        76,
+                        22
+                    ],
+                    [
+                        11,
+                        74,
+                        96
+                    ],
+                    [
+                        88,
+                        56,
+                        10
+                    ],
+                    [
+                        30,
+                        47,
+                        49
+                    ],
+                    [
+                        57,
+                        62,
+                        98
+                    ],
+                    [
+                        4,
+                        16,
+                        16
+                    ],
+                    [
+                        46,
+                        10,
+                        11
+                    ],
+                    [
+                        22,
+                        87,
+                        89
+                    ],
+                    [
+                        57,
+                        91,
+                        82
+                    ],
+                    [
+                        45,
+                        15,
+                        98
+                    ]
+                ],
+                "marker": {
+                    "fillOpacity": 0.6,
+                    "lineWidth": 1
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains two multivariate series with three numerical dimensions each (x-position, y-position, bubble size). Synthetic data maintains domain consistency with environmental (\u03bc_x=45\u00b130, \u03bc_y=45\u00b125, \u03bc_z=45\u00b130) and economic (\u03bc_x=35\u00b130, \u03bc_y=45\u00b135, \u03bc_z=45\u00b135) metrics, exhibiting negative correlation in Series 1 (r\u2248-0.4) and random distribution in Series 2. The bubble chart maximizes data-ink ratio by encoding three variables per marker while maintaining perceptual discriminability through separate color axes. Cairo's principles are applied through size-based quantity perception and position-based relationships. Dual color scales (blue for environmental, gray for economic) create categorical separation without adding chart elements, preserving Tufte's lie factor integrity through proportional scaling."
+}

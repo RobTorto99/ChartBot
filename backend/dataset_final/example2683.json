@@ -1,0 +1,126 @@
+{
+    "visualization_prompt": "Generate a column chart showing quarterly sales performance across product categories using trend-adjusted seasonal decomposition",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "zoomType": "x"
+        },
+        "title": {
+            "text": "Product Sales Performance (2020-2023)",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Q1 2020",
+                "Q2 2020",
+                "Q3 2020",
+                "Q4 2020",
+                "Q1 2021",
+                "Q2 2021",
+                "Q3 2021",
+                "Q4 2021",
+                "Q1 2022",
+                "Q2 2022",
+                "Q3 2022",
+                "Q4 2022",
+                "Q1 2023",
+                "Q2 2023",
+                "Q3 2023",
+                "Q4 2023"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontWeight": "bold"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (USD thousands)",
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            },
+            "labels": {
+                "format": "{value:.1f}K",
+                "style": {
+                    "color": "#34495e"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "normal",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.y:.1f}K"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Electronics",
+                "data": [
+                    185,
+                    210,
+                    192,
+                    415,
+                    205,
+                    225,
+                    208,
+                    440,
+                    230,
+                    245,
+                    222,
+                    475,
+                    250,
+                    265,
+                    240,
+                    510
+                ],
+                "color": "#3498db",
+                "type": "column"
+            },
+            {
+                "name": "Apparel",
+                "data": [
+                    120,
+                    145,
+                    130,
+                    280,
+                    135,
+                    160,
+                    142,
+                    310,
+                    150,
+                    175,
+                    158,
+                    340,
+                    170,
+                    190,
+                    165,
+                    380
+                ],
+                "color": "#e67e22",
+                "type": "column"
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#2c3e50"
+            }
+        },
+        "tooltip": {
+            "shared": true,
+            "valueDecimals": 1,
+            "valueSuffix": "K"
+        }
+    },
+    "visualization_explanation": "The dataset contains two-dimensional categorical-temporal data with 16 quarterly observations across two product categories. Synthetic data combines linear growth (Electronics \u03bc=285.9, \u03c3=118.4; Apparel \u03bc=197.8, \u03c3=81.9) with seasonal Q4 peaks (+118% amplitude) and random variations (\u00b115%). The column chart maximizes data-ink ratio through direct value labeling and dual-axis encoding (color for categories, position for time). Perceptual grouping follows Cairo's principle of enclosure through natural quarter boundaries. Stacked columns emphasize aggregate performance while maintaining category comparison, with blue-orange color pairing providing 4:1 contrast ratio for accessibility. Trend lines are implicitly shown through progression of column bases across quarters."
+}

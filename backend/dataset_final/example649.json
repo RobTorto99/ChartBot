@@ -1,0 +1,74 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a line chart with the following specifications: Chart type: line, Chart title: Monthly Sales Data, Axes and labels styling: X-axis labels should be in Arial font, size 12, and color #333333; Y-axis labels should be in Arial font, size 12, and color #333333; Data series: Series 1 should have the name '2022 Sales' and data [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]; Custom colors: Use #0073e6 for the line color; Additional configurations: Set the chart background to #f9f9f9, add a legend with the title 'Sales Data', and set the chart margins to 50px top, 100px right, 50px bottom, and 100px left.",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 50,
+            "marginRight": 100,
+            "marginBottom": 50,
+            "marginLeft": 100
+        },
+        "title": {
+            "text": "Monthly Sales Data"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "fontFamily": "Arial",
+                    "fontSize": "12px",
+                    "color": "#333333"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "fontFamily": "Arial",
+                    "fontSize": "12px",
+                    "color": "#333333"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "2022 Sales",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#0073e6"
+            }
+        ],
+        "legend": {
+            "title": {
+                "text": "Sales Data"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a line chart titled 'Monthly Sales Data'. The chart type is set to 'line', and the background color is set to a light gray (#f9f9f9). The chart has custom margins to provide more space around the chart area. The X-axis and Y-axis labels are styled with Arial font, size 12, and color #333333. The data series includes one series named '2022 Sales' with the specified data points, and the line color is set to a custom blue (#0073e6). Additionally, a legend is included with the title 'Sales Data' to help identify the series on the chart."
+}

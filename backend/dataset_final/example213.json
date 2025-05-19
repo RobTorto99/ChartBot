@@ -1,0 +1,82 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Interactive Spline Chart'. The chart should have styled axes and labels with specific colors and font sizes. The data series should include two series: 'Series 1' with data [1, 3, 2, 4, 5] and 'Series 2' with data [5, 3, 4, 2, 1]. Custom colors for the series should be ['#00FF00', '#FF0000']. Additional configurations should include a white background, a legend positioned at the bottom, and margins set to [50, 50, 50, 50].",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#FFFFFF",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Interactive Spline Chart",
+            "style": {
+                "color": "#000000",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "X Axis",
+                "style": {
+                    "color": "#000000",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#000000",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Y Axis",
+                "style": {
+                    "color": "#000000",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#000000",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    1,
+                    3,
+                    2,
+                    4,
+                    5
+                ],
+                "color": "#00FF00"
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    5,
+                    3,
+                    4,
+                    2,
+                    1
+                ],
+                "color": "#FF0000"
+            }
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a spline chart with a white background and specific margins for better visualization. The chart title is 'Interactive Spline Chart' with a black color and a font size of 18px. The axes titles and labels are styled with black color and font sizes of 14px and 12px, respectively. The data series includes two series named 'Series 1' and 'Series 2', each with their respective data points and custom colors. The legend is positioned at the bottom of the chart for easy readability. This configuration ensures a clear and visually appealing chart presentation."
+}

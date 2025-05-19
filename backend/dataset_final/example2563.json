@@ -1,0 +1,158 @@
+{
+    "visualization_prompt": "Generate a column chart with error bars visualizing annual precipitation patterns using synthetic rainfall data with confidence intervals. Include monthly rainfall averages with \u00b12\u03c3 ranges, categorical month labels, and seasonal trend modeling.",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "zooming": {
+                    "type": "x"
+                },
+                "backgroundColor": "#F5F7FA"
+            },
+            "title": {
+                "text": "Annual Precipitation Patterns with Confidence Intervals (2023)",
+                "style": {
+                    "fontSize": "18px",
+                    "color": "#2E4053"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#34495E",
+                        "fontWeight": "bold"
+                    }
+                },
+                "crosshair": true
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Rainfall (mm)",
+                    "style": {
+                        "color": "#2E4053",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "format": "{value} mm",
+                    "style": {
+                        "color": "#7F8C8D"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Monthly Average",
+                    "type": "column",
+                    "data": [
+                        42,
+                        38,
+                        55,
+                        72,
+                        88,
+                        104,
+                        121,
+                        115,
+                        92,
+                        78,
+                        63,
+                        47
+                    ],
+                    "color": "#3498DB",
+                    "tooltip": {
+                        "valueSuffix": " mm"
+                    }
+                },
+                {
+                    "name": "95% Confidence Interval",
+                    "type": "errorbar",
+                    "data": [
+                        [
+                            35,
+                            49
+                        ],
+                        [
+                            32,
+                            44
+                        ],
+                        [
+                            47,
+                            63
+                        ],
+                        [
+                            65,
+                            79
+                        ],
+                        [
+                            82,
+                            94
+                        ],
+                        [
+                            97,
+                            111
+                        ],
+                        [
+                            114,
+                            128
+                        ],
+                        [
+                            108,
+                            122
+                        ],
+                        [
+                            85,
+                            99
+                        ],
+                        [
+                            70,
+                            86
+                        ],
+                        [
+                            55,
+                            71
+                        ],
+                        [
+                            40,
+                            54
+                        ]
+                    ],
+                    "color": "#8E44AD",
+                    "stemWidth": 2,
+                    "whiskerLength": 10,
+                    "tooltip": {
+                        "pointFormat": "Range: {point.low}-{point.high} mm"
+                    }
+                }
+            ],
+            "plotOptions": {
+                "column": {
+                    "pointPadding": 0.2,
+                    "borderWidth": 0
+                },
+                "errorbar": {
+                    "stemColor": "#8E44AD",
+                    "whiskerColor": "#8E44AD"
+                }
+            },
+            "legend": {
+                "align": "right",
+                "verticalAlign": "top"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two-dimensional monthly meteorological data (categorical months vs. continuous rainfall measurements). Synthetic precipitation values follow an asymmetric bimodal distribution (\u03bc=74.5mm, \u03c3\u00b2=784mm\u00b2) with seasonal progression and 10% interannual variability. Confidence intervals maintain constant 12-15% relative error. The column-errorbar combination maximizes data-ink ratio by directly encoding central tendency and dispersion measures. Cairo's principles are implemented through pre-attentive color coding (blue=primary data, purple=uncertainty) and proportional encoding of column widths. The upward summer trend (Jun-Aug peaks) aligns with northern hemisphere monsoon patterns while maintaining synthetic consistency through harmonic regression modeling."
+}

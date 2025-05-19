@@ -1,0 +1,95 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the following specifications: Chart type is 'column', chart title is 'Monthly Sales Data', axes and labels styling includes blue color for axis labels and titles, font size of 14px for all text, data series includes two series named 'Sales' and 'Expenses' with corresponding data, custom colors are blue and red for the series, additional configurations include setting chart margins to 50px, background color to light gray, and displaying a legend at the bottom of the chart.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "margin": 50,
+            "backgroundColor": "#f0f0f0"
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "blue",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May"
+            ],
+            "labels": {
+                "style": {
+                    "color": "blue",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": [
+            {
+                "title": {
+                    "text": "Sales",
+                    "style": {
+                        "color": "blue",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "blue",
+                        "fontSize": "14px"
+                    }
+                }
+            },
+            {
+                "title": {
+                    "text": "Expenses",
+                    "style": {
+                        "color": "blue",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "blue",
+                        "fontSize": "14px"
+                    }
+                },
+                "opposite": true
+            }
+        ],
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    1000,
+                    1001,
+                    1002,
+                    1004,
+                    1003
+                ],
+                "color": "blue"
+            },
+            {
+                "name": "Expenses",
+                "data": [
+                    500,
+                    501,
+                    502,
+                    504,
+                    503
+                ],
+                "color": "red"
+            }
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart with specific styling and data series. The chart type is set to 'column', and the title is 'Monthly Sales Data' with blue color and 14px font size. The x-axis categories are months from January to May, and the y-axes are titled 'Sales' and 'Expenses' with blue color and 14px font size. The data series include 'Sales' and 'Expenses' with corresponding data points, colored blue and red respectively. Additional configurations include setting the chart margins to 50px, background color to light gray, and displaying the legend at the bottom of the chart."
+}

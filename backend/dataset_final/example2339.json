@@ -1,0 +1,150 @@
+{
+    "visualization_prompt": "Generate a polar chart showing dual-pane grid interpolation patterns using Highcharts' pane configuration system",
+    "visualization_code": {
+        "chart": {
+            "polar": true,
+            "backgroundColor": "#F9F9F9",
+            "margin": [
+                50,
+                100,
+                50,
+                100
+            ]
+        },
+        "title": {
+            "text": "Polar Grid Interpolation Comparison",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px"
+            }
+        },
+        "subtitle": {
+            "text": "Circle vs. polygon grid line configurations",
+            "style": {
+                "color": "#666666"
+            }
+        },
+        "pane": [
+            {
+                "startAngle": 0,
+                "endAngle": 360,
+                "center": [
+                    "25%",
+                    "50%"
+                ],
+                "size": "60%",
+                "background": {
+                    "backgroundColor": "#FFFFFF"
+                }
+            },
+            {
+                "startAngle": 0,
+                "endAngle": 360,
+                "center": [
+                    "75%",
+                    "50%"
+                ],
+                "size": "60%",
+                "background": {
+                    "backgroundColor": "#FFFFFF"
+                }
+            }
+        ],
+        "xAxis": [
+            {
+                "tickInterval": 45,
+                "min": 0,
+                "max": 360,
+                "labels": {
+                    "style": {
+                        "color": "#FF5733"
+                    }
+                },
+                "pane": 0
+            },
+            {
+                "tickInterval": 45,
+                "min": 0,
+                "max": 360,
+                "labels": {
+                    "style": {
+                        "color": "#33FF57"
+                    }
+                },
+                "pane": 1
+            }
+        ],
+        "yAxis": [
+            {
+                "min": 0,
+                "max": 10,
+                "tickInterval": 2,
+                "gridLineInterpolation": "circle",
+                "labels": {
+                    "style": {
+                        "color": "#FF5733"
+                    }
+                },
+                "pane": 0
+            },
+            {
+                "min": 0,
+                "max": 10,
+                "tickInterval": 2.5,
+                "gridLineInterpolation": "polygon",
+                "labels": {
+                    "style": {
+                        "color": "#33FF57"
+                    }
+                },
+                "pane": 1
+            }
+        ],
+        "series": [
+            {
+                "type": "column",
+                "name": "Circular Grid (\u03bc=5.5, \u03c3=2.5)",
+                "data": [
+                    8.2,
+                    6.7,
+                    5.1,
+                    4.9,
+                    3.8,
+                    4.3,
+                    5.6,
+                    7.1
+                ],
+                "pointPlacement": "between",
+                "color": "#FF5733",
+                "yAxis": 0,
+                "xAxis": 0
+            },
+            {
+                "type": "area",
+                "name": "Polygonal Grid (\u03bc=5.2, \u03c3=1.8)",
+                "data": [
+                    2.4,
+                    7.8,
+                    3.1,
+                    6.9,
+                    4.2,
+                    5.7,
+                    4.9,
+                    6.3
+                ],
+                "color": "#33FF57",
+                "yAxis": 1,
+                "xAxis": 1
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#444444"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two synthetic series with 8 angular measurements each (45\u00b0 intervals), demonstrating normal distributions with controlled variance. Column series data (\u03bc=5.5, \u03c3=2.5) shows intentional asymmetry to test grid rendering, while area series (\u03bc=5.2, \u03c3=1.8) emphasizes smoother transitions. The polar coordinate system uses dual panes with white backgrounds for visual separation. Circle grid interpolation (left) maintains radial consistency, while polygon grid (right) creates angular connections, following Cairo's principle of functional harmony through complementary geometric representations. Color-coding (orange=circle, green=polygon) and right-aligned legend optimize Tufte's data-ink ratio by eliminating redundant axis labels while maintaining decodeability."
+}

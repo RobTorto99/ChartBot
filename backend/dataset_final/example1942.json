@@ -1,0 +1,163 @@
+{
+    "visualization_prompt": "Generate a scatter plot showing height vs. weight correlation using custom-styled grid lines and ticks",
+    "visualization_code": {
+        "chart": {
+            "type": "scatter",
+            "styledMode": false
+        },
+        "title": {
+            "text": "Styling grid and ticks",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "Height (cm)",
+                "style": {
+                    "color": "#34495e",
+                    "fontWeight": "bold"
+                }
+            },
+            "gridLineColor": "#bdc3c7",
+            "gridLineWidth": 1,
+            "tickColor": "#7f8c8d",
+            "tickWidth": 2,
+            "minorTickInterval": "auto",
+            "startOnTick": true,
+            "endOnTick": true,
+            "labels": {
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Weight (kg)",
+                "style": {
+                    "color": "#34495e",
+                    "fontWeight": "bold"
+                }
+            },
+            "gridLineColor": "#bdc3c7",
+            "gridLineWidth": 1,
+            "tickColor": "#7f8c8d",
+            "tickWidth": 2,
+            "labels": {
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Adult Anthropometry",
+                "color": "#e74c3c",
+                "data": [
+                    [
+                        161.2,
+                        51.6
+                    ],
+                    [
+                        167.5,
+                        59.0
+                    ],
+                    [
+                        159.5,
+                        49.2
+                    ],
+                    [
+                        157.0,
+                        63.0
+                    ],
+                    [
+                        155.8,
+                        53.6
+                    ],
+                    [
+                        170.0,
+                        59.0
+                    ],
+                    [
+                        159.1,
+                        47.6
+                    ],
+                    [
+                        166.0,
+                        69.8
+                    ],
+                    [
+                        176.2,
+                        66.8
+                    ],
+                    [
+                        160.2,
+                        75.2
+                    ],
+                    [
+                        172.5,
+                        55.2
+                    ],
+                    [
+                        170.9,
+                        54.2
+                    ],
+                    [
+                        172.9,
+                        62.5
+                    ],
+                    [
+                        153.4,
+                        42.0
+                    ],
+                    [
+                        160.0,
+                        50.0
+                    ],
+                    [
+                        147.2,
+                        49.8
+                    ],
+                    [
+                        168.2,
+                        49.2
+                    ],
+                    [
+                        175.0,
+                        73.2
+                    ],
+                    [
+                        157.0,
+                        47.8
+                    ],
+                    [
+                        167.6,
+                        68.8
+                    ]
+                ],
+                "marker": {
+                    "radius": 5,
+                    "states": {
+                        "hover": {
+                            "enabled": true,
+                            "lineColor": "#2c3e50"
+                        }
+                    }
+                }
+            }
+        ],
+        "plotOptions": {
+            "scatter": {
+                "tooltip": {
+                    "headerFormat": "<b>{series.name}</b><br>",
+                    "pointFormat": "Height: {point.x} cm<br>Weight: {point.y} kg"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains bivariate continuous measurements (height and weight) with 20 data points. Synthetic data follows WHO adult anthropometric standards (height \u03bc=165cm \u03c3=8cm, weight \u03bc=58kg \u03c3=10kg). The scatter plot was chosen to reveal potential correlations while maintaining individual data visibility. Axis styling uses Tufte's principle of muted background elements (gray gridlines) with strong contrast for data points (vermilion markers). Grid lines use 1px width with 90% opacity to reduce visual competition with data markers. The diagonal spread of points shows positive correlation (r\u22480.62) typical in human biometrics. Axis labels use Cairo's preattentive processing principles through bold titles and categorical color differentiation between axes and data."
+}

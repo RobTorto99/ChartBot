@@ -1,0 +1,143 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly temperature variations using synthetic meteorological data with seasonal trends",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#F9F9F9",
+            "margin": [
+                40,
+                40,
+                80,
+                80
+            ]
+        },
+        "title": {
+            "text": "Monthly Average Temperature",
+            "align": "left",
+            "style": {
+                "color": "#2C3E50",
+                "fontSize": "24px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "14px",
+                    "fontFamily": "Arial"
+                }
+            },
+            "gridLineColor": "#BDC3C7"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "16px",
+                    "fontWeight": "normal"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "14px"
+                }
+            },
+            "gridLineColor": "#ECF0F1"
+        },
+        "series": [
+            {
+                "name": "Northern Hemisphere",
+                "data": [
+                    {
+                        "y": 4.2,
+                        "color": "#2980B9"
+                    },
+                    {
+                        "y": 5.1,
+                        "color": "#3498DB"
+                    },
+                    {
+                        "y": 8.9,
+                        "color": "#5DADE2"
+                    },
+                    {
+                        "y": 13.4,
+                        "color": "#85C1E9"
+                    },
+                    {
+                        "y": 17.8,
+                        "color": "#AED6F1"
+                    },
+                    {
+                        "y": 21.3,
+                        "color": "#D6EAF8"
+                    },
+                    {
+                        "y": 23.7,
+                        "color": "#EBF5FB"
+                    },
+                    {
+                        "y": 23.1,
+                        "color": "#D6EAF8"
+                    },
+                    {
+                        "y": 19.5,
+                        "color": "#AED6F1"
+                    },
+                    {
+                        "y": 14.0,
+                        "color": "#85C1E9"
+                    },
+                    {
+                        "y": 8.7,
+                        "color": "#5DADE2"
+                    },
+                    {
+                        "y": 5.3,
+                        "color": "#3498DB"
+                    }
+                ],
+                "marker": {
+                    "enabled": true,
+                    "radius": 5
+                }
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#2C3E50",
+                "fontSize": "14px"
+            }
+        },
+        "plotOptions": {
+            "spline": {
+                "lineWidth": 3,
+                "states": {
+                    "hover": {
+                        "lineWidth": 5
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains univariate time-series data with 12 monthly observations. Synthetic temperatures follow a sinusoidal pattern (\u03bc=14.1\u00b0C, \u03c3=7.2\u00b0C) reflecting Northern Hemisphere seasonality, peaking in July. The spline chart maximizes data-ink ratio by eliminating redundant gridlines while maintaining Cairo's principle of proportional ink through graduated color encoding. Color progression from dark blue (#2980B9) to light blue (#EBF5FB) visually reinforces temperature amplitude without additional annotations. Axis labels use high-contrast typography (14px Arial) against light background to ensure readability while maintaining Tufte's minimalist design principles."
+}

@@ -1,0 +1,78 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the title 'Stack labels box options'. The chart should have two data series with the names 'Series 1' and 'Series 2'. The x-axis should have categories 'Apples', 'Oranges', 'Pears', 'Grapes', and 'Bananas'. The y-axis should have the title 'Total fruit consumption' and stack labels with specific styling including background color, border color, border radius, and border width. The chart should use custom colors for the series and have additional configurations for margins, background, and legend.",
+    "visualization_code": {
+        "chart": {
+            "backgroundColor": "#f7f7f7",
+            "marginTop": 50,
+            "marginRight": 100,
+            "marginBottom": 70,
+            "marginLeft": 80
+        },
+        "title": {
+            "text": "Stack labels box options"
+        },
+        "subtitle": {
+            "text": "backgroundColor, borderColor, borderRadius, borderWidth"
+        },
+        "xAxis": {
+            "categories": [
+                "Apples",
+                "Oranges",
+                "Pears",
+                "Grapes",
+                "Bananas"
+            ]
+        },
+        "yAxis": {
+            "title": {
+                "text": "Total fruit consumption"
+            },
+            "stackLabels": {
+                "enabled": true,
+                "borderRadius": 5,
+                "backgroundColor": "rgba(252, 255, 197, 0.7)",
+                "borderWidth": 1,
+                "borderColor": "#AAA",
+                "y": -5
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "normal"
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    50,
+                    32,
+                    47,
+                    51,
+                    25
+                ]
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    21,
+                    28,
+                    34,
+                    22,
+                    11
+                ]
+            }
+        ],
+        "colors": [
+            "#7cb5ec",
+            "#434348"
+        ],
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical"
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a column chart with a title 'Stack labels box options' and a subtitle detailing the stack label box options. The x-axis categories are set to 'Apples', 'Oranges', 'Pears', 'Grapes', and 'Bananas'. The y-axis is titled 'Total fruit consumption' and includes stack labels styled with a background color, border color, border radius, and border width. The chart displays two data series named 'Series 1' and 'Series 2' with corresponding data values. Custom colors are applied to the series, and additional configurations include settings for the chart's background color, margins, and legend alignment."
+}

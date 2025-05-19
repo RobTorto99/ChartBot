@@ -1,0 +1,162 @@
+{
+    "visualization_prompt": "Generate a 3D scatter chart showing three-dimensional data relationships using synthetic coordinates with statistical clusters",
+    "visualization_code": {
+        "chart": {
+            "type": "scatter3d",
+            "options3d": {
+                "enabled": true,
+                "alpha": 20,
+                "beta": 30,
+                "depth": 200,
+                "viewDistance": 10,
+                "frame": {
+                    "bottom": {
+                        "size": 1,
+                        "color": "rgba(0,0,0,0.05)"
+                    }
+                }
+            }
+        },
+        "title": {
+            "text": "3D Scatter Plot of Synthetic Data Clusters"
+        },
+        "xAxis": {
+            "min": 0,
+            "max": 10,
+            "title": {
+                "text": "X-Axis"
+            },
+            "gridLineWidth": 1
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 10,
+            "title": {
+                "text": "Y-Axis"
+            }
+        },
+        "zAxis": {
+            "min": 0,
+            "max": 10,
+            "title": {
+                "text": "Z-Axis"
+            },
+            "showFirstLabel": false
+        },
+        "series": [
+            {
+                "name": "Cluster 1 (\u03bc=2, \u03c3=1)",
+                "data": [
+                    [
+                        1.2,
+                        2.3,
+                        2.8
+                    ],
+                    [
+                        2.1,
+                        1.8,
+                        1.9
+                    ],
+                    [
+                        3.0,
+                        2.5,
+                        2.2
+                    ],
+                    [
+                        2.4,
+                        3.1,
+                        1.7
+                    ],
+                    [
+                        1.9,
+                        1.6,
+                        2.5
+                    ],
+                    [
+                        2.7,
+                        2.0,
+                        2.1
+                    ],
+                    [
+                        1.5,
+                        2.9,
+                        2.3
+                    ],
+                    [
+                        2.8,
+                        1.7,
+                        1.8
+                    ],
+                    [
+                        2.2,
+                        2.4,
+                        2.0
+                    ],
+                    [
+                        1.7,
+                        2.1,
+                        2.4
+                    ]
+                ],
+                "type": "scatter3d"
+            },
+            {
+                "name": "Cluster 2 (\u03bc=7, \u03c3=1)",
+                "data": [
+                    [
+                        6.8,
+                        7.2,
+                        7.5
+                    ],
+                    [
+                        7.5,
+                        6.9,
+                        6.7
+                    ],
+                    [
+                        8.1,
+                        7.4,
+                        7.8
+                    ],
+                    [
+                        6.7,
+                        8.0,
+                        7.1
+                    ],
+                    [
+                        7.9,
+                        7.3,
+                        6.9
+                    ],
+                    [
+                        7.2,
+                        6.5,
+                        7.4
+                    ],
+                    [
+                        8.0,
+                        7.6,
+                        7.3
+                    ],
+                    [
+                        6.9,
+                        7.8,
+                        7.0
+                    ],
+                    [
+                        7.4,
+                        6.8,
+                        7.6
+                    ],
+                    [
+                        7.1,
+                        7.5,
+                        6.8
+                    ]
+                ],
+                "type": "scatter3d"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains three numerical dimensions (X, Y, Z coordinates) with 20 synthetic data points across two clusters. Synthetic data was generated using normal distributions (Cluster 1: \u03bc=2, \u03c3=1; Cluster 2: \u03bc=7, \u03c3=1) to create statistically valid spatial groupings while maintaining domain-appropriate 0-10 value ranges. The 3D scatter plot was selected to preserve multivariate relationships through spatial encoding, adhering to Tufte's principles by maximizing data-ink ratio through minimal chart junk. Depth cues from Cairo's perceptual taxonomy are implemented through axis framing and interactive rotation. Cluster separation is visually emphasized through spatial proximity, with coordinate ranges anchored to \u03bc\u00b13\u03c3 statistical boundaries for each cluster."
+}

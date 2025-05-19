@@ -1,0 +1,69 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the following specifications: Chart type is column, chart title is 'Monthly Sales Data', axes and labels styling includes blue color for titles and labels, font size of 14px for titles and 12px for labels, data series includes two series named '2022 Sales' and '2023 Sales' with corresponding data, custom colors are ['#0073e6', '#ff6600'], additional configurations include setting chart margins to 50px, background color to light gray, and enabling the legend with a black border.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "margin": 50,
+            "backgroundColor": "#f0f0f0"
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "blue",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "type": "category",
+            "labels": {
+                "style": {
+                    "color": "blue",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales Amount",
+                "style": {
+                    "color": "blue",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "blue",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "legend": {
+            "enabled": true,
+            "borderColor": "black",
+            "borderWidth": 1
+        },
+        "series": [
+            {
+                "name": "2022 Sales",
+                "data": [
+                    1234,
+                    3456,
+                    2345,
+                    4567
+                ],
+                "color": "#0073e6"
+            },
+            {
+                "name": "2023 Sales",
+                "data": [
+                    1500,
+                    3800,
+                    2500,
+                    4700
+                ],
+                "color": "#ff6600"
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart with specific styling and data series. The chart type is set to 'column', and the title is 'Monthly Sales Data' with blue color and a font size of 14px. The x-axis and y-axis labels are styled with blue color and a font size of 12px, and the y-axis title is also styled with blue color and a font size of 14px. The data series includes two series named '2022 Sales' and '2023 Sales', each with corresponding sales data and custom colors '#0073e6' and '#ff6600'. Additional configurations include setting the chart margins to 50px, background color to light gray, and enabling the legend with a black border."
+}

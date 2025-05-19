@@ -1,0 +1,134 @@
+{
+    "visualization_prompt": "Generate a packedbubble chart showing the percentage daily value (DV) of Vitamin A across 12 food items using synthetic data with a bimodal distribution (\u03bc=220, \u03c3=80 and \u03bc=650, \u03c3=120) to reflect common and ultra-rich sources.",
+    "visualization_code": {
+        "chart": {
+            "type": "packedbubble",
+            "backgroundColor": "#2f2b38",
+            "margin": [
+                50,
+                20,
+                50,
+                20
+            ]
+        },
+        "title": {
+            "text": "Vitamin A Content in Global Superfoods",
+            "style": {
+                "color": "#fff",
+                "fontSize": "1.2em"
+            }
+        },
+        "subtitle": {
+            "text": "DV based on 900\u03bcg RAE (Retinol Activity Equivalents)",
+            "style": {
+                "color": "#78758c"
+            }
+        },
+        "plotOptions": {
+            "packedbubble": {
+                "minSize": "30%",
+                "maxSize": "150%",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}",
+                    "style": {
+                        "color": "#2f2b38",
+                        "fontSize": "0.8em"
+                    }
+                },
+                "colorByPoint": true
+            }
+        },
+        "tooltip": {
+            "headerFormat": "<b>{point.key}</b><br/>",
+            "pointFormat": "DV: <b>{point.y}%</b>"
+        },
+        "series": [
+            {
+                "name": "Vitamin A Sources",
+                "data": [
+                    {
+                        "name": "Cod Liver Oil",
+                        "y": 1340
+                    },
+                    {
+                        "name": "Sweet Potato",
+                        "y": 420
+                    },
+                    {
+                        "name": "Carrot Chips",
+                        "y": 380
+                    },
+                    {
+                        "name": "Kale Chips",
+                        "y": 210
+                    },
+                    {
+                        "name": "Butternut Squash",
+                        "y": 290
+                    },
+                    {
+                        "name": "Dried Apricots",
+                        "y": 95
+                    },
+                    {
+                        "name": "Turkey Liver",
+                        "y": 720
+                    },
+                    {
+                        "name": "Spinach Puree",
+                        "y": 180
+                    },
+                    {
+                        "name": "Papaya",
+                        "y": 65
+                    },
+                    {
+                        "name": "Red Bell Pepper",
+                        "y": 45
+                    },
+                    {
+                        "name": "Mango",
+                        "y": 25
+                    },
+                    {
+                        "name": "Goji Berries",
+                        "y": 150
+                    }
+                ]
+            }
+        ],
+        "colors": [
+            "#FF6B6B",
+            "#4ECDC4",
+            "#45B7D1",
+            "#96CEB4",
+            "#FFEEAD",
+            "#FF9999",
+            "#77DD77",
+            "#AEC6CF",
+            "#FDFD96",
+            "#B19CD9",
+            "#FF6961",
+            "#C5E1A5"
+        ],
+        "responsive": {
+            "rules": [
+                {
+                    "condition": {
+                        "maxWidth": 400
+                    },
+                    "chartOptions": {
+                        "plotOptions": {
+                            "packedbubble": {
+                                "minSize": "20%",
+                                "maxSize": "100%"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 categorical entries representing food items with their corresponding Vitamin A % DV values. Synthetic data was generated using two normal distributions (\u03bc\u2081=220\u00b180, \u03bc\u2082=650\u00b1120) to model common dietary sources and concentrated animal-based sources. The packed bubble chart maximizes data-ink ratio by encoding values through bubble area while maintaining color differentiation for quick categorical scanning. Perceptual principles are applied through position (cluster separation), size (magnitude encoding), and hue (categorical distinction). Responsive sizing rules maintain legibility across devices, while the dark theme enhances contrast for the bright color palette. Statistical anchors show 75% of values below 300% DV (plant sources) and 25% above 600% DV (animal organs/oils)."
+}

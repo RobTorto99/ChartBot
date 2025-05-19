@@ -1,0 +1,154 @@
+{
+    "visualization_prompt": "Generate a bubble chart showing multidimensional relationships between three quantitative variables using size-encoded data points with a dark theme",
+    "visualization_code": {
+        "chart": {
+            "type": "bubble",
+            "backgroundColor": "#2d2d2d",
+            "marginTop": 60
+        },
+        "title": {
+            "text": "Product Performance Metrics",
+            "style": {
+                "color": "#FFFFFF",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#FFFFFF",
+                    "fontSize": "14px"
+                }
+            },
+            "gridLineColor": "#555555",
+            "title": {
+                "text": "Customer Satisfaction (%)",
+                "style": {
+                    "color": "#FFFFFF"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#FFFFFF",
+                    "fontSize": "14px"
+                }
+            },
+            "gridLineColor": "#555555",
+            "title": {
+                "text": "Market Share (%)",
+                "style": {
+                    "color": "#FFFFFF"
+                }
+            }
+        },
+        "legend": {
+            "enabled": true,
+            "floating": true,
+            "align": "right",
+            "verticalAlign": "top",
+            "y": -40,
+            "itemStyle": {
+                "color": "#FFFFFF"
+            },
+            "bubbleLegend": {
+                "enabled": true,
+                "borderColor": "#FF5733",
+                "borderWidth": 2,
+                "color": "#40E0D0",
+                "connectorColor": "#FFFFFF"
+            }
+        },
+        "series": [
+            {
+                "name": "Product Portfolio",
+                "color": "#40E0D0",
+                "data": [
+                    {
+                        "x": 85,
+                        "y": 22,
+                        "z": 15
+                    },
+                    {
+                        "x": 78,
+                        "y": 18,
+                        "z": 28
+                    },
+                    {
+                        "x": 92,
+                        "y": 25,
+                        "z": 12
+                    },
+                    {
+                        "x": 64,
+                        "y": 14,
+                        "z": 35
+                    },
+                    {
+                        "x": 88,
+                        "y": 20,
+                        "z": 18
+                    },
+                    {
+                        "x": 71,
+                        "y": 16,
+                        "z": 42
+                    },
+                    {
+                        "x": 95,
+                        "y": 28,
+                        "z": 9
+                    },
+                    {
+                        "x": 82,
+                        "y": 19,
+                        "z": 23
+                    },
+                    {
+                        "x": 69,
+                        "y": 12,
+                        "z": 31
+                    },
+                    {
+                        "x": 89,
+                        "y": 24,
+                        "z": 14
+                    },
+                    {
+                        "x": 73,
+                        "y": 17,
+                        "z": 27
+                    },
+                    {
+                        "x": 91,
+                        "y": 26,
+                        "z": 11
+                    },
+                    {
+                        "x": 67,
+                        "y": 13,
+                        "z": 38
+                    },
+                    {
+                        "x": 84,
+                        "y": 21,
+                        "z": 19
+                    },
+                    {
+                        "x": 76,
+                        "y": 15,
+                        "z": 33
+                    }
+                ],
+                "marker": {
+                    "fillOpacity": 0.9,
+                    "lineWidth": 2,
+                    "lineColor": "#FF5733"
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains three-dimensional quantitative variables (customer satisfaction, market share, and R&D investment) across 15 products. Synthetic data maintains domain consistency with x/y values bounded 50-100% (satisfaction/share) and z-values $5M-$50M (R&D), using normal distributions (\u03bc=80, \u03c3=10 for x; \u03bc=20, \u03c3=5 for y; \u03bc=25, \u03c3=10 for z). The bubble chart maximizes data-ink ratio by encoding three variables through position and size while eliminating chartjunk. Cairo's principles guide size perception through proportional area scaling and high-contrast colors. The dark theme with cyan (#40E0D0) bubbles and coral (#FF5733) borders ensures perceptual discriminability, while floating legend prevents data occlusion."
+}

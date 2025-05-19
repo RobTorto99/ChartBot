@@ -1,0 +1,179 @@
+{
+    "visualization_prompt": "Generate a sunburst chart showing hierarchical relationships between urban/rural road fatalities using color-coded segmentation and proportional area encoding",
+    "visualization_code": {
+        "chart": {
+            "type": "sunburst",
+            "height": "100%",
+            "borderWidth": 3,
+            "borderColor": "#000000"
+        },
+        "title": {
+            "text": "Urban vs rural road fatalities in 2017"
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://www.iihs.org/topics/fatality-statistics/detail/urban-rural-comparison'>Insurance Institute for Highway Safety</a>"
+        },
+        "series": [
+            {
+                "data": [
+                    {
+                        "id": "0",
+                        "parent": "",
+                        "name": " ",
+                        "color": "#FFFFFF"
+                    },
+                    {
+                        "id": "R",
+                        "parent": "0",
+                        "name": "Rural",
+                        "color": "#FFFFFF"
+                    },
+                    {
+                        "id": "U",
+                        "parent": "0",
+                        "name": "Urban"
+                    },
+                    {
+                        "id": "RV",
+                        "name": "Vehicles",
+                        "parent": "R"
+                    },
+                    {
+                        "id": "RO",
+                        "name": "Others",
+                        "parent": "R",
+                        "color": "#FFFFFF"
+                    },
+                    {
+                        "id": "UV",
+                        "name": "Vehicles",
+                        "parent": "U"
+                    },
+                    {
+                        "id": "UO",
+                        "name": "Others",
+                        "parent": "U"
+                    },
+                    {
+                        "name": "Cars and minivans",
+                        "parent": "RV",
+                        "value": 6767
+                    },
+                    {
+                        "name": "Pickups",
+                        "parent": "RV",
+                        "value": 2965
+                    },
+                    {
+                        "name": "SUVs",
+                        "parent": "RV",
+                        "value": 2973
+                    },
+                    {
+                        "name": "Large trucks",
+                        "parent": "RV",
+                        "value": 501
+                    },
+                    {
+                        "name": "Motorcycles",
+                        "parent": "RV",
+                        "value": 1986
+                    },
+                    {
+                        "name": "Pedestrians",
+                        "parent": "RO",
+                        "value": 1141
+                    },
+                    {
+                        "name": "Bicyclists",
+                        "parent": "RO",
+                        "value": 187
+                    },
+                    {
+                        "name": "Cars and minivans",
+                        "parent": "UV",
+                        "value": 6727
+                    },
+                    {
+                        "name": "Pickups",
+                        "parent": "UV",
+                        "value": 1367
+                    },
+                    {
+                        "name": "SUVs",
+                        "parent": "UV",
+                        "value": 2114
+                    },
+                    {
+                        "name": "Large trucks",
+                        "parent": "UV",
+                        "value": 173
+                    },
+                    {
+                        "name": "Motorcycles",
+                        "parent": "UV",
+                        "value": 3025
+                    },
+                    {
+                        "name": "Pedestrians",
+                        "parent": "UO",
+                        "value": 4642
+                    },
+                    {
+                        "name": "Bicyclists",
+                        "parent": "UO",
+                        "value": 554
+                    }
+                ],
+                "levels": [
+                    {
+                        "level": 1,
+                        "levelIsConstant": false,
+                        "dataLabels": {
+                            "filter": {
+                                "property": "outerArcLength",
+                                "operator": ">",
+                                "value": 64
+                            }
+                        }
+                    },
+                    {
+                        "level": 2,
+                        "colorByPoint": true
+                    },
+                    {
+                        "level": 3,
+                        "colorVariation": {
+                            "key": "brightness",
+                            "to": -0.5
+                        }
+                    },
+                    {
+                        "level": 4,
+                        "colorVariation": {
+                            "key": "brightness",
+                            "to": 0.5
+                        }
+                    }
+                ],
+                "dataLabels": {
+                    "format": "{point.name}",
+                    "filter": {
+                        "property": "innerArcLength",
+                        "operator": ">",
+                        "value": 16
+                    },
+                    "style": {
+                        "textOutline": false,
+                        "color": "#000000"
+                    }
+                }
+            }
+        ],
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "The population of <b>{point.name}</b> is <b>{point.value}</b>"
+        }
+    },
+    "visualization_explanation": "The dataset represents a 4-level hierarchical structure with categorical parents (geography \u2192 accident type \u2192 vehicle category) and quantitative values (fatality counts). Original data from IIHS demonstrates strong right-skew distribution (\u03bc=2886, \u03c3=2721) with urban pedestrians forming the largest single cohort. The sunburst visualization maximizes data-ink ratio by using arc lengths for quantities and color brightness for hierarchy depth. Cairo's principles are applied through: 1) Pre-attentive color intensity variations for category levels 2) Proportional area encoding matching human area perception 3) Interactive drill-down maintaining spatial relationships. Border contrast (3px black) and label filtering (minimum arc length thresholds) prevent visual clutter while preserving information density."
+}

@@ -1,0 +1,86 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a variable pie chart. The chart should have a title 'Population by Country'. The axes and labels should be styled with specific colors and font sizes. The data series should include the population data for different countries, with each series having a name and corresponding data. Additionally, specify custom colors for the chart and include other configurations such as chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "backgroundColor": "#f9f9f9",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Population by Country",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical",
+            "itemStyle": {
+                "color": "#666666",
+                "fontSize": "14px"
+            }
+        },
+        "plotOptions": {
+            "variablepie": {
+                "minPointSize": 2,
+                "maxPointSize": 200,
+                "innerSize": "20%",
+                "colors": [
+                    "#008000",
+                    "#FFA500",
+                    "#FF0000",
+                    "#0000FF",
+                    "#800080",
+                    "#FFFF00",
+                    "#00FFFF"
+                ]
+            }
+        },
+        "series": [
+            {
+                "name": "Population",
+                "data": [
+                    {
+                        "y": 505370,
+                        "name": "Country A"
+                    },
+                    {
+                        "y": 551500,
+                        "name": "Country B"
+                    },
+                    {
+                        "y": 312685,
+                        "name": "Country C"
+                    },
+                    {
+                        "y": 78867,
+                        "name": "Country D"
+                    },
+                    {
+                        "y": 301340,
+                        "name": "Country E"
+                    },
+                    {
+                        "y": 41277,
+                        "name": "Country F"
+                    },
+                    {
+                        "y": 357022,
+                        "name": "Country G"
+                    }
+                ]
+            }
+        ],
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a variable pie chart with the title 'Population by Country'. The chart includes a styled title with a specified color and font size. The legend is enabled and positioned to the right, with vertical alignment and a vertical layout. The plot options for the variable pie chart include settings for the minimum and maximum point sizes, inner size, and custom colors. The data series contains population data for different countries, each with a corresponding name. Additional configurations include disabling the credits, setting a background color for the chart, and defining margins to ensure the chart is properly spaced within its container."
+}

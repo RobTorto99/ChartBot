@@ -1,0 +1,99 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a chart with the following specifications: Chart type: areaspline, Chart title: 'Highcharts with time control - weeks', Axes and labels styling: Define colors, font sizes, or styles for labels, axes, and titles, Data series: Provide the data for each series, including the name of each series and its data, formatted appropriately for Highcharts, Custom colors: Specific list of colors, if desired, Additional configurations: Other settings, such as chart margins, background, legend, etc.",
+    "visualization_code": {
+        "chart": {
+            "type": "areaspline"
+        },
+        "title": {
+            "text": "Highcharts with time control - weeks"
+        },
+        "subtitle": {
+            "text": "Fruit consumption during a week"
+        },
+        "legend": {
+            "layout": "vertical",
+            "align": "left",
+            "verticalAlign": "top",
+            "x": 50,
+            "y": 50,
+            "floating": true,
+            "borderWidth": 1,
+            "backgroundColor": "#FFFFFF"
+        },
+        "xAxis": {
+            "categories": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Fruit units",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "tooltip": {
+            "shared": true,
+            "valueSuffix": " units"
+        },
+        "credits": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "areaspline": {
+                "fillOpacity": 0.5
+            }
+        },
+        "series": [
+            {
+                "name": "By week",
+                "data": [
+                    1,
+                    2,
+                    2,
+                    1,
+                    1,
+                    2,
+                    2
+                ]
+            },
+            {
+                "name": "Average week",
+                "data": [
+                    6,
+                    8,
+                    6,
+                    7,
+                    7,
+                    7,
+                    6
+                ]
+            }
+        ],
+        "colors": [
+            "#7cb5ec",
+            "#434348"
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render an 'areaspline' chart with a title 'Highcharts with time control - weeks' and a subtitle 'Fruit consumption during a week'. The chart includes a legend positioned vertically at the top-left corner with a white background and a border. The x-axis represents days of the week with styled labels, and the y-axis represents 'Fruit units' with styled title and labels. The tooltip displays shared values with a 'units' suffix. The chart has two series: 'By week' and 'Average week', each with specific data points. The plot options for the areaspline include a fill opacity of 0.5. Custom colors are specified for the series, and credits are disabled."
+}

@@ -1,0 +1,120 @@
+{
+    "visualization_prompt": "Generate a line chart showing monthly temperature trends for two locations using synthetic meteorological data with realistic seasonal patterns",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "backgroundColor": "#ffffff",
+            "borderRadius": 8,
+            "marginTop": 30,
+            "marginBottom": 80
+        },
+        "title": {
+            "text": "Monthly Temperature Comparison",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Reggane (Desert Climate)",
+                "data": [
+                    16.0,
+                    18.2,
+                    23.1,
+                    27.9,
+                    32.2,
+                    36.4,
+                    39.8,
+                    38.4,
+                    35.5,
+                    29.2,
+                    22.0,
+                    17.8
+                ],
+                "color": "#e67e22",
+                "marker": {
+                    "radius": 5
+                }
+            },
+            {
+                "name": "Tallinn (Temperate Climate)",
+                "data": [
+                    -2.9,
+                    -3.6,
+                    -0.6,
+                    4.8,
+                    10.2,
+                    14.5,
+                    17.6,
+                    16.5,
+                    12.0,
+                    6.5,
+                    2.0,
+                    -0.9
+                ],
+                "color": "#2980b9",
+                "marker": {
+                    "radius": 5
+                }
+            }
+        ],
+        "legend": {
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#2c3e50"
+            },
+            "padding": 15
+        },
+        "plotOptions": {
+            "series": {
+                "animation": {
+                    "duration": 500
+                },
+                "dataLabels": {
+                    "enabled": false
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two time series (12 monthly observations each) comparing temperature patterns between desert and temperate climates. Categorical x-axis represents months, while continuous y-axis shows Celsius temperatures. Synthetic data maintains ecological validity: Reggane's data (\u03bc=27.4\u00b0C, \u03c3=9.2) follows Saharan patterns, while Tallinn's (\u03bc=6.8\u00b0C, \u03c3=9.1) reflects Baltic seasonality. The line chart maximizes data-ink ratio by eliminating chartjunk while preserving necessary gridlines for absolute value comparison. Color choices (#e67e22 for desert, #2980b9 for temperate) follow Cairo's principles of intuitive symbolic association. Marker sizing maintains visibility at standard display resolutions. Statistical coherence is achieved through sinusoidal base patterns \u00b1 realistic noise (\u03c3\u22481.5\u00b0C) mimicking natural variability."
+}

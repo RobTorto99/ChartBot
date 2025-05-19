@@ -1,0 +1,158 @@
+{
+    "visualization_prompt": "Generate a treegraph showing hierarchical relationships in Durin's lineage using Highcharts with inverted layout and semantic color encoding",
+    "visualization_code": {
+        "chart": {
+            "inverted": true,
+            "backgroundColor": "#1A1A1A"
+        },
+        "title": {
+            "text": "Durin Family Tree",
+            "style": {
+                "color": "#F5DEB3",
+                "fontSize": "24px",
+                "fontFamily": "Book Antiqua"
+            }
+        },
+        "subtitle": {
+            "text": "Quest participants: <span style='color:#071330'>\u25a0</span> Darker markers<br>Monarchs: <span style='color:#CF9700'>\u25a0</span> Gold borders",
+            "useHTML": true,
+            "style": {
+                "color": "#C3CEDA"
+            }
+        },
+        "plotOptions": {
+            "treegraph": {
+                "link": {
+                    "color": "#0C4160",
+                    "lineWidth": 4,
+                    "curvature": 0.5
+                },
+                "marker": {
+                    "symbol": "rect",
+                    "width": 50,
+                    "height": 30,
+                    "fillColor": "#0C4160",
+                    "lineColor": "#CF9700",
+                    "lineWidth": 0
+                },
+                "dataLabels": {
+                    "color": "#C3CEDA",
+                    "format": "{point.name||point.id}",
+                    "style": {
+                        "textOutline": "none",
+                        "fontSize": "12px"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "type": "treegraph",
+                "data": [
+                    {
+                        "id": "Durin the Deathless",
+                        "marker": {
+                            "lineWidth": 3
+                        }
+                    },
+                    {
+                        "id": "Thorin II Oakenshield",
+                        "parent": "Thrain II",
+                        "marker": {
+                            "fillColor": "#071330",
+                            "lineWidth": 3
+                        }
+                    },
+                    {
+                        "id": "Kili",
+                        "parent": "Dis",
+                        "marker": {
+                            "fillColor": "#071330"
+                        },
+                        "name": "Kili (Quest)"
+                    },
+                    {
+                        "id": "Gimli",
+                        "parent": "Gloin II",
+                        "marker": {
+                            "symbol": "circle",
+                            "fillColor": "#2A4D6E"
+                        }
+                    },
+                    {
+                        "id": "Dain II IronFoot",
+                        "parent": "Nain",
+                        "marker": {
+                            "lineWidth": 3
+                        }
+                    },
+                    {
+                        "id": "Durin VII",
+                        "parent": "Thorin Stonehelm",
+                        "marker": {
+                            "lineWidth": 3
+                        }
+                    },
+                    {
+                        "id": "Thrain II",
+                        "parent": "Thror",
+                        "marker": {
+                            "lineWidth": 3
+                        }
+                    },
+                    {
+                        "id": "Dis",
+                        "parent": "Thrain II"
+                    },
+                    {
+                        "id": "Fili",
+                        "parent": "Dis",
+                        "marker": {
+                            "fillColor": "#071330"
+                        },
+                        "name": "Fili (Quest)"
+                    },
+                    {
+                        "id": "Balin",
+                        "parent": "Fundin",
+                        "marker": {
+                            "fillColor": "#071330"
+                        },
+                        "name": "Balin (Quest)"
+                    },
+                    {
+                        "id": "Dwalin",
+                        "parent": "Fundin",
+                        "marker": {
+                            "fillColor": "#071330"
+                        },
+                        "name": "Dwalin (Quest)"
+                    }
+                ]
+            }
+        ],
+        "responsive": {
+            "rules": [
+                {
+                    "condition": {
+                        "maxWidth": 768
+                    },
+                    "chartOptions": {
+                        "plotOptions": {
+                            "treegraph": {
+                                "dataLabels": {
+                                    "fontSize": "10px"
+                                },
+                                "marker": {
+                                    "width": 40,
+                                    "height": 24
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The dataset represents a hierarchical structure with 21 nodes and parent-child relationships. Node properties include temporal data (birth/death years) and categorical roles (monarch/quest participant). Synthetic data maintains genealogical consistency with J.R.R. Tolkien's Middle-earth chronology. The inverted treegraph maximizes vertical space for mobile viewing while maintaining readability through color semantics: gold borders (\u03bc=5 nodes) denote royalty, darker fills (\u03c3=3 nodes) identify quest participants. Chart follows Tufte's data-ink ratio by removing gridlines while using Cairo's pre-attentive processing for role differentiation. Responsive rules maintain 1:1.6 marker aspect ratio across viewports. Color palette uses HSB gradients (H=210\u00b0\u00b115\u00b0) with luminance contrast \u22654:1 for accessibility."
+}

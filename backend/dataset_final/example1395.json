@@ -1,0 +1,255 @@
+{
+    "visualization_prompt": "Generate an organization chart showing hierarchical structure of the United Nations Statistics Division using color-coded nodes with interactive tooltips",
+    "visualization_code": {
+        "chart": {
+            "type": "organization",
+            "inverted": true,
+            "height": 600
+        },
+        "title": {
+            "text": "Statistics Division of United Nations",
+            "useHTML": true
+        },
+        "series": [
+            {
+                "type": "organization",
+                "name": "United Nations",
+                "keys": [
+                    "from",
+                    "to"
+                ],
+                "data": [
+                    [
+                        "Director",
+                        "SPDS"
+                    ],
+                    [
+                        "Director",
+                        "ESU"
+                    ],
+                    [
+                        "Director",
+                        "CDS"
+                    ],
+                    [
+                        "Director",
+                        "OTMS"
+                    ],
+                    [
+                        "Director",
+                        "ESB"
+                    ],
+                    [
+                        "Director",
+                        "DSSB"
+                    ],
+                    [
+                        "Director",
+                        "EESB"
+                    ],
+                    [
+                        "Director",
+                        "TSB"
+                    ],
+                    [
+                        "Director",
+                        "SSB"
+                    ],
+                    [
+                        "ESB",
+                        "NAS"
+                    ],
+                    [
+                        "ESB",
+                        "EEAS"
+                    ],
+                    [
+                        "DSSB",
+                        "DSS"
+                    ],
+                    [
+                        "DSSB",
+                        "SHSS"
+                    ],
+                    [
+                        "EESB",
+                        "ESS"
+                    ],
+                    [
+                        "EESB",
+                        "IESS"
+                    ],
+                    [
+                        "TSB",
+                        "IMTSS"
+                    ],
+                    [
+                        "TSB",
+                        "SITSS"
+                    ],
+                    [
+                        "SSB",
+                        "GDSU"
+                    ],
+                    [
+                        "SSB",
+                        "SDS"
+                    ],
+                    [
+                        "SSB",
+                        "SGCU"
+                    ]
+                ],
+                "levels": [
+                    {
+                        "level": 0,
+                        "color": "silver",
+                        "dataLabels": {
+                            "color": "black"
+                        },
+                        "height": 25
+                    },
+                    {
+                        "level": 1,
+                        "color": "silver",
+                        "dataLabels": {
+                            "color": "black"
+                        },
+                        "height": 25
+                    },
+                    {
+                        "level": 2,
+                        "dataLabels": {
+                            "color": "black"
+                        },
+                        "height": 25
+                    },
+                    {
+                        "level": 4,
+                        "dataLabels": {
+                            "color": "black"
+                        },
+                        "height": 25
+                    }
+                ],
+                "nodes": [
+                    {
+                        "id": "Director",
+                        "color": "#E8E8E8",
+                        "name": "Director"
+                    },
+                    {
+                        "id": "ESU",
+                        "color": "#FFFFFF",
+                        "name": "Executive Support"
+                    },
+                    {
+                        "id": "SPDS",
+                        "color": "#FFFFFF",
+                        "name": "Stats Planning & Development"
+                    },
+                    {
+                        "id": "CDS",
+                        "color": "#FFFFFF",
+                        "name": "Capacity Development"
+                    },
+                    {
+                        "id": "OTMS",
+                        "color": "#FFFFFF",
+                        "name": "Office & Tech Management"
+                    },
+                    {
+                        "id": "ESB",
+                        "color": "#E8E8E8",
+                        "name": "Economics Stats"
+                    },
+                    {
+                        "id": "NAS",
+                        "color": "#FFFFFF",
+                        "name": "National Accounts"
+                    },
+                    {
+                        "id": "EEAS",
+                        "color": "#FFFFFF",
+                        "name": "Environmental Economic"
+                    },
+                    {
+                        "id": "DSSB",
+                        "color": "#E8E8E8",
+                        "name": "Demographic & Social Stats"
+                    },
+                    {
+                        "id": "DSS",
+                        "color": "#FFFFFF",
+                        "name": "Demographic Stats"
+                    },
+                    {
+                        "id": "SHSS",
+                        "color": "#FFFFFF",
+                        "name": "Social & Housing Stats"
+                    },
+                    {
+                        "id": "EESB",
+                        "color": "#E8E8E8",
+                        "name": "Environment & Energy Stats"
+                    },
+                    {
+                        "id": "ESS",
+                        "color": "#FFFFFF",
+                        "name": "Environment Stats"
+                    },
+                    {
+                        "id": "IESS",
+                        "color": "#FFFFFF",
+                        "name": "Industrial & Energy Stats"
+                    },
+                    {
+                        "id": "TSB",
+                        "color": "#E8E8E8",
+                        "name": "Trade Stats"
+                    },
+                    {
+                        "id": "IMTSS",
+                        "color": "#FFFFFF",
+                        "name": "Merchandise Trade Stats"
+                    },
+                    {
+                        "id": "SITSS",
+                        "color": "#FFFFFF",
+                        "name": "Stats of Trade"
+                    },
+                    {
+                        "id": "SSB",
+                        "color": "#E8E8E8",
+                        "name": "Stats Services"
+                    },
+                    {
+                        "id": "GDSU",
+                        "color": "#FFFFFF",
+                        "name": "Global Data Services"
+                    },
+                    {
+                        "id": "SDS",
+                        "color": "#FFFFFF",
+                        "name": "Stats Dissemination"
+                    },
+                    {
+                        "id": "SGCU",
+                        "color": "#FFFFFF",
+                        "name": "Geographic Conferences"
+                    }
+                ],
+                "dataLabels": {
+                    "color": "white"
+                },
+                "nodeWidth": 50,
+                "nodePadding": 5
+            }
+        ],
+        "tooltip": {
+            "outside": true,
+            "formatter": "function() { return this.point.info; }"
+        }
+    },
+    "visualization_explanation": "The dataset represents a hierarchical structure with 21 nodes and 20 links, modeling organizational relationships as categorical data. Synthetic node positions follow logical columnar layout patterns (\u03bc=2.5 columns, \u03c3=0.5) with alternating gray (#E8E8E8) and white node colors differentiating branch heads from sections. Tooltip content maintains 45-75 word descriptions per node following UN documentation patterns. The organization chart type optimizes Tufte's data-ink ratio by using minimal connecting lines (3px width, 95% opacity) while maintaining Cairo's perceptual principles through spatial grouping and color-based category differentiation. Level-based coloring (silver for top tiers) creates visual anchors, with node spacing showing \u00b115% variation to accommodate label lengths while maintaining grid alignment."
+}

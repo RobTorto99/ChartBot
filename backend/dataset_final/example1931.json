@@ -1,0 +1,163 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly temperature variations using synthetic meteorological data with seasonal trends",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "styledMode": true,
+            "backgroundColor": "#F5F5F5"
+        },
+        "title": {
+            "text": "Monthly Average Temperature",
+            "style": {
+                "fontSize": "18px",
+                "color": "#2A2A2A"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#4D4D4D",
+                    "fontSize": "12px",
+                    "fontWeight": "600"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#4D4D4D",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#4D4D4D",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Average Temperature",
+                "data": [
+                    {
+                        "y": 3.2,
+                        "marker": {
+                            "enabled": false
+                        }
+                    },
+                    {
+                        "y": 4.5,
+                        "marker": {
+                            "enabled": false
+                        }
+                    },
+                    {
+                        "y": 8.1,
+                        "marker": {
+                            "enabled": false
+                        }
+                    },
+                    {
+                        "y": 14.7,
+                        "marker": {
+                            "enabled": true
+                        }
+                    },
+                    {
+                        "y": 19.3,
+                        "marker": {
+                            "enabled": false
+                        }
+                    },
+                    {
+                        "y": 22.8,
+                        "marker": {
+                            "enabled": false
+                        }
+                    },
+                    {
+                        "y": 24.6,
+                        "marker": {
+                            "enabled": false
+                        }
+                    },
+                    {
+                        "y": 23.9,
+                        "marker": {
+                            "enabled": false
+                        }
+                    },
+                    {
+                        "y": 20.1,
+                        "marker": {
+                            "enabled": false
+                        }
+                    },
+                    {
+                        "y": 15.4,
+                        "marker": {
+                            "enabled": false
+                        }
+                    },
+                    {
+                        "y": 9.8,
+                        "marker": {
+                            "enabled": false
+                        }
+                    },
+                    {
+                        "y": 5.1,
+                        "marker": {
+                            "enabled": false
+                        }
+                    }
+                ],
+                "color": "#4A90E2",
+                "marker": {
+                    "enabled": false,
+                    "states": {
+                        "hover": {
+                            "enabled": true
+                        }
+                    }
+                }
+            }
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#4D4D4D",
+                "fontSize": "12px"
+            }
+        },
+        "plotOptions": {
+            "spline": {
+                "dataLabels": {
+                    "enabled": false
+                }
+            }
+        },
+        "accessibility": {
+            "enabled": true
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate time series with 12 temporal observations (monthly) of continuous temperature measurements. Synthetic data follows a sinusoidal pattern (\u03bc=14.3\u00b0C, \u03c3=7.8\u00b0C) with summer peak and winter trough, maintaining meteorological validity for temperate climates. The spline chart maximizes data-ink ratio by removing gridlines and data markers except the critical April datapoint, which marks spring transition. Color contrast between the blue series (#4A90E2) and light gray background (#F5F5F5) adheres to Cairo's preattentive processing principles. Axis labels use high-contrast typography (600-weight months) to support rapid pattern recognition. The single emphasized marker draws attention to the inflection point where temperatures exceed 10\u00b0C threshold."
+}

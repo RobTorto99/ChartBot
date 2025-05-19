@@ -1,0 +1,79 @@
+{
+    "visualization_prompt": "Generate a pie chart showing the market share distribution of eco-friendly vehicle registrations in Sweden during March 2023 using a donut chart format with a centered hole.",
+    "visualization_code": {
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#FFFFFF",
+            "width": 600,
+            "height": 400
+        },
+        "title": {
+            "text": "March 2023 Sweden Eco-Vehicle Registrations",
+            "style": {
+                "fontSize": "16px",
+                "color": "#2E4053"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://example.com/ev-stats'>National Transport Agency</a>",
+            "useHTML": true
+        },
+        "colors": [
+            "#4CAF50",
+            "#8BC34A",
+            "#CDDC39",
+            "#FFC107",
+            "#FF9800"
+        ],
+        "plotOptions": {
+            "pie": {
+                "innerSize": "50%",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}: {y}%",
+                    "distance": 20,
+                    "style": {
+                        "fontSize": "12px"
+                    }
+                },
+                "showInLegend": true
+            }
+        },
+        "series": [
+            {
+                "name": "Market Share",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "BEV",
+                        "y": 55
+                    },
+                    {
+                        "name": "PHEV",
+                        "y": 20
+                    },
+                    {
+                        "name": "Hybrid",
+                        "y": 15
+                    },
+                    {
+                        "name": "Hydrogen",
+                        "y": 5
+                    },
+                    {
+                        "name": "Other",
+                        "y": 5
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#424242"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains categorical percentage data (5 vehicle types) with a constrained sum of 100%. Synthetic values reflect Sweden's progressive EV adoption trends, with BEVs dominating at 55% (\u00b13% margin of error). The donut chart maximizes data-ink ratio by removing redundant radial labels while maintaining proportional perception through Cairo's angular size principles. Color progression from dark to light green emphasizes electrification tiers, with warm accents for emerging technologies. Statistical validity is maintained through manual distribution balancing to simulate real-world registration patterns (\u03bc=20, \u03c3=20.6 for non-BEV categories)."
+}

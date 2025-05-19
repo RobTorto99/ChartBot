@@ -1,0 +1,87 @@
+{
+    "visualization_prompt": "Generate a line chart showing monthly sales trends using synthetic data with seasonal variation and YTD annotations",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "line",
+                "plotBorderWidth": 1,
+                "backgroundColor": "#FFFFFF"
+            },
+            "title": {
+                "text": "Monthly Sales Performance (2023)"
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#333333",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Revenue (USD thousands)",
+                    "style": {
+                        "fontWeight": "bold",
+                        "color": "#444444"
+                    }
+                },
+                "endOnTick": false,
+                "maxPadding": 0.25,
+                "gridLineColor": "#F0F0F0",
+                "labels": {
+                    "format": "${value}K"
+                }
+            },
+            "series": [
+                {
+                    "name": "Enterprise Sales",
+                    "data": [
+                        156,
+                        182,
+                        215,
+                        238,
+                        274,
+                        319,
+                        287,
+                        301,
+                        335,
+                        362,
+                        298,
+                        254
+                    ],
+                    "color": "#4A90E2",
+                    "marker": {
+                        "enabled": true,
+                        "radius": 4
+                    }
+                }
+            ],
+            "legend": {
+                "align": "right",
+                "verticalAlign": "top",
+                "layout": "vertical"
+            },
+            "tooltip": {
+                "valueDecimals": 0,
+                "valueSuffix": "K",
+                "headerFormat": "<b>{point.key}</b><br>"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate time series with synthetic sales figures demonstrating two statistical properties: 1) Positive trend (\u03bc=266.9, \u03c3=64.6) showing 63% YTD growth, 2) Seasonal dip in July reflecting industry patterns. Synthetic values maintain financial plausibility through constrained volatility (15-20% monthly variance). The line chart maximizes data-ink ratio by eliminating gridlines and using minimal markers, while Cairo's principles are applied through position-based encoding (temporal x-axis) and length-based quantitative perception (y-axis). Annotated December value (254K) shows -16% MoM change using D3-style formatting, maintaining visual momentum comparison across intervals."
+}

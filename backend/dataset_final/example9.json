@@ -1,0 +1,61 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a pie chart with the title 'Air composition'. The chart should display the percentage of different gases in the air, including Nitrogen, Oxygen, and Other gases. The chart should have custom colors and patterns for each segment, with data labels showing the name and percentage of each gas. The chart should also include a legend and a tooltip with a percentage suffix. The chart should be styled with specific colors, font sizes, and patterns for labels, axes, and titles.",
+    "visualization_code": {
+        "colors": [
+            {
+                "patternIndex": 3
+            },
+            {
+                "patternIndex": 1
+            },
+            "#5050f0"
+        ],
+        "chart": {
+            "type": "pie"
+        },
+        "title": {
+            "text": "Air composition"
+        },
+        "tooltip": {
+            "valueSuffix": "%",
+            "borderColor": "#999"
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}: {y} %",
+                    "connectorColor": "#669"
+                },
+                "showInLegend": true
+            }
+        },
+        "series": [
+            {
+                "name": "Percentage",
+                "colorByPoint": true,
+                "innerSize": "75%",
+                "data": [
+                    {
+                        "name": "Nitrogen",
+                        "y": 78,
+                        "borderColor": "#D97D26"
+                    },
+                    {
+                        "name": "Oxygen",
+                        "y": 20.9,
+                        "borderColor": "#999"
+                    },
+                    {
+                        "name": "Other gases",
+                        "y": 1.1,
+                        "borderColor": "#5050a0"
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a pie chart titled 'Air composition'. The chart displays the percentage composition of different gases in the air, specifically Nitrogen, Oxygen, and Other gases. Each segment of the pie chart is styled with custom colors and patterns, as specified in the 'colors' array. The chart includes data labels that show the name and percentage of each gas, formatted with a percentage suffix. The tooltip also displays the percentage with a suffix and has a specific border color. The pie chart allows for point selection and shows a legend, enhancing the chart's interactivity and readability. The inner size of the pie chart is set to 75%, creating a donut-like appearance. Overall, the chart is designed to provide a clear and visually appealing representation of the air composition data."
+}

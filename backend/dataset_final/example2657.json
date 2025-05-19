@@ -1,0 +1,103 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly sales trends with synthetic seasonal patterns using Highcharts export-controlled annotations",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "width": "100%",
+                "height": 400
+            },
+            "title": {
+                "text": "Monthly Sales Report (2023)",
+                "style": {
+                    "color": "#2E3440",
+                    "fontSize": "18px"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#4C566A",
+                        "fontWeight": "bold"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Revenue (USD thousands)",
+                    "style": {
+                        "color": "#2E5984",
+                        "fontStyle": "italic"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Total Sales",
+                    "data": [
+                        182,
+                        195,
+                        208,
+                        221,
+                        234,
+                        247,
+                        253,
+                        241,
+                        228,
+                        245,
+                        318,
+                        275
+                    ],
+                    "color": "#5E81AC",
+                    "dataLabels": {
+                        "enabled": false,
+                        "style": {
+                            "color": "#BF616A",
+                            "textOutline": "none"
+                        }
+                    }
+                }
+            ],
+            "exporting": {
+                "chartOptions": {
+                    "plotOptions": {
+                        "series": {
+                            "dataLabels": {
+                                "enabled": true
+                            }
+                        }
+                    }
+                }
+            },
+            "responsive": {
+                "rules": [
+                    {
+                        "condition": {
+                            "maxWidth": 800
+                        },
+                        "chartOptions": {
+                            "legend": {
+                                "align": "center"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents univariate time-series data with 12 monthly observations. Synthetic sales figures were generated with \u03bc=240, \u03c3=45, incorporating two distinct statistical patterns: 1) A 7% quarterly growth trend (Q1-Q3), and 2) An intentional November outlier (+2.8\u03c3) simulating holiday sales. Data follows financial domain constraints with realistic YoY progression.\n\nThe column chart maximizes data-ink ratio by hiding labels in default view (Tufte principle), revealing precise values only on export. Color choices (#5E81AC columns, #BF616A labels) follow Cairo's emotional design framework, using cool tones for primary data and warm accent for annotations. Responsive rules maintain readability across 320-800px viewports, while the fixed 400px height ensures proportional Y-axis interpretation."
+}

@@ -1,0 +1,347 @@
+{
+    "visualization_prompt": "Create a Highcharts organization chart that visualizes the Germanic language tree. The chart should have a title 'The Germanic Language Tree'. The nodes should be styled with specific colors and should be arranged in a hanging layout. The chart should include three main branches: West Germanic, East Germanic, and North Germanic, with their respective sub-branches and languages. The chart should also have custom colors for different levels of nodes and should be accessible with a tooltip that provides descriptions of the nodes.",
+    "visualization_code": {
+        "chart": {
+            "height": 1200,
+            "inverted": true
+        },
+        "title": {
+            "text": "The Germanic Language Tree"
+        },
+        "accessibility": {
+            "point": {
+                "descriptionFormat": "{add index 1}. {toNode.id} comes from {fromNode.id}"
+            }
+        },
+        "tooltip": {
+            "outside": true
+        },
+        "series": [
+            {
+                "name": "Germanic language tree",
+                "type": "organization",
+                "keys": [
+                    "from",
+                    "to"
+                ],
+                "nodeWidth": 40,
+                "nodePadding": 20,
+                "colorByPoint": false,
+                "hangingIndentTranslation": "cumulative",
+                "hangingIndent": 10,
+                "levels": [
+                    {
+                        "level": 0,
+                        "color": "#dedede"
+                    },
+                    {
+                        "level": 1,
+                        "color": "#dedede"
+                    },
+                    {
+                        "level": 2,
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "level": 3,
+                        "color": "#00cc99"
+                    },
+                    {
+                        "level": 4,
+                        "color": "#cc0066"
+                    }
+                ],
+                "nodes": [
+                    {
+                        "id": "North Germanic",
+                        "layout": "hanging",
+                        "offsetHorizontal": -15
+                    },
+                    {
+                        "id": "West Germanic",
+                        "layout": "hanging"
+                    },
+                    {
+                        "id": "East Germanic",
+                        "layout": "hanging"
+                    },
+                    {
+                        "id": "Bastarnisch",
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "id": "Brabantian",
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "id": "Burgundian",
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "id": "Crimean Gothic",
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "id": "Danish",
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "id": "Dutch",
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "id": "English",
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "id": "Faroese",
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "id": "Flemish",
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "id": "Frisian",
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "id": "Gepidisch",
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "id": "Gothic",
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "id": "(High) German",
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "id": "Hollandic",
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "id": "Icelandic",
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "id": "Limburgish",
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "id": "Low German",
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "id": "Norwegian",
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "id": "Rhinelandic",
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "id": "Rugisch",
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "id": "Skirisch",
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "id": "Swedish",
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "id": "Vandalic",
+                        "color": "#ffcc00"
+                    },
+                    {
+                        "id": "Yiddish",
+                        "color": "#ffcc00"
+                    }
+                ],
+                "data": [
+                    [
+                        "Germanic",
+                        "West Germanic"
+                    ],
+                    [
+                        "West Germanic",
+                        "Old English"
+                    ],
+                    [
+                        "Old English",
+                        "Middle English"
+                    ],
+                    [
+                        "Middle English",
+                        "English"
+                    ],
+                    [
+                        "West Germanic",
+                        "Old Frisian"
+                    ],
+                    [
+                        "Old Frisian",
+                        "Frisian"
+                    ],
+                    [
+                        "West Germanic",
+                        "Old Dutch"
+                    ],
+                    [
+                        "Old Dutch",
+                        "Middle Dutch"
+                    ],
+                    [
+                        "Middle Dutch",
+                        "Hollandic"
+                    ],
+                    [
+                        "Middle Dutch",
+                        "Flemish"
+                    ],
+                    [
+                        "Middle Dutch",
+                        "Dutch"
+                    ],
+                    [
+                        "Middle Dutch",
+                        "Limburgish"
+                    ],
+                    [
+                        "Middle Dutch",
+                        "Brabantian"
+                    ],
+                    [
+                        "Middle Dutch",
+                        "Rhinelandic"
+                    ],
+                    [
+                        "West Germanic",
+                        "Old Low German"
+                    ],
+                    [
+                        "Old Low German",
+                        "Middle Low German"
+                    ],
+                    [
+                        "Middle Low German",
+                        "Low German"
+                    ],
+                    [
+                        "West Germanic",
+                        "Old High German"
+                    ],
+                    [
+                        "Old High German",
+                        "Middle High German"
+                    ],
+                    [
+                        "Middle High German",
+                        "(High) German"
+                    ],
+                    [
+                        "Middle High German",
+                        "Yiddish"
+                    ],
+                    [
+                        "Germanic",
+                        "East Germanic"
+                    ],
+                    [
+                        "East Germanic",
+                        "Gothic"
+                    ],
+                    [
+                        "East Germanic",
+                        "Vandalic"
+                    ],
+                    [
+                        "East Germanic",
+                        "Burgundian"
+                    ],
+                    [
+                        "East Germanic",
+                        "Bastarnisch"
+                    ],
+                    [
+                        "East Germanic",
+                        "Gepidisch"
+                    ],
+                    [
+                        "East Germanic",
+                        "Herulisch"
+                    ],
+                    [
+                        "East Germanic",
+                        "Rugisch"
+                    ],
+                    [
+                        "East Germanic",
+                        "Skirisch"
+                    ],
+                    [
+                        "East Germanic",
+                        "Crimean Gothic"
+                    ],
+                    [
+                        "Germanic",
+                        "North Germanic"
+                    ],
+                    [
+                        "North Germanic",
+                        "Old Norse"
+                    ],
+                    [
+                        "Old Norse",
+                        "Old Icelandic"
+                    ],
+                    [
+                        "Old Icelandic",
+                        "Icelandic"
+                    ],
+                    [
+                        "Old Norse",
+                        "Old Norwegian"
+                    ],
+                    [
+                        "Old Norwegian",
+                        "Norwegian"
+                    ],
+                    [
+                        "Old Norse",
+                        "Faroese"
+                    ],
+                    [
+                        "North Germanic",
+                        "Old Swedish"
+                    ],
+                    [
+                        "Old Swedish",
+                        "Middle Swedish"
+                    ],
+                    [
+                        "Middle Swedish",
+                        "Swedish"
+                    ],
+                    [
+                        "North Germanic",
+                        "Old Danish"
+                    ],
+                    [
+                        "Old Danish",
+                        "Middle Danish"
+                    ],
+                    [
+                        "Middle Danish",
+                        "Danish"
+                    ]
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render an organization chart that visualizes the Germanic language tree. The chart is titled 'The Germanic Language Tree' and is set to be inverted with a height of 1200 pixels. The nodes are arranged in a hanging layout, with specific colors assigned to different levels of nodes. The chart includes three main branches: West Germanic, East Germanic, and North Germanic, each with their respective sub-branches and languages. The nodes are styled with custom colors, and the chart is made accessible with a tooltip that provides descriptions of the nodes. The chart also includes additional configurations such as node width, padding, and indentation settings to ensure a clear and organized visualization."
+}

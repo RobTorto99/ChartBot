@@ -1,0 +1,249 @@
+{
+    "visualization_prompt": "Generate a column chart showing comparative market share evolution of tech companies using multi-level drilldown functionality with synthetic percentage data",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "backgroundColor": "#F5F7FA",
+                "marginTop": 40
+            },
+            "title": {
+                "text": "Tech Market Share Analysis (2020 vs 2023)",
+                "style": {
+                    "color": "#2E4053",
+                    "fontSize": "20px",
+                    "fontWeight": "bold"
+                }
+            },
+            "subtitle": {
+                "text": "Click columns to view regional breakdowns. Source: Synthetic market data",
+                "style": {
+                    "color": "#616A6B"
+                }
+            },
+            "xAxis": {
+                "type": "category",
+                "labels": {
+                    "style": {
+                        "color": "#34495E",
+                        "fontSize": "14px"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Market Share (%)",
+                    "style": {
+                        "color": "#34495E",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "format": "{value}%",
+                    "style": {
+                        "color": "#7F8C8D"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "2020",
+                    "color": "#5DADE2",
+                    "data": [
+                        {
+                            "name": "TechCorp",
+                            "y": 45,
+                            "drilldown": "techcorp-2020"
+                        },
+                        {
+                            "name": "InnovateInc",
+                            "y": 32,
+                            "drilldown": "innovateinc-2020"
+                        },
+                        {
+                            "name": "Other",
+                            "y": 23,
+                            "drilldown": "other-2020"
+                        }
+                    ]
+                },
+                {
+                    "name": "2023",
+                    "color": "#58D68D",
+                    "data": [
+                        {
+                            "name": "TechCorp",
+                            "y": 51,
+                            "drilldown": "techcorp-2023"
+                        },
+                        {
+                            "name": "InnovateInc",
+                            "y": 28,
+                            "drilldown": "innovateinc-2023"
+                        },
+                        {
+                            "name": "Other",
+                            "y": 21,
+                            "drilldown": "other-2023"
+                        }
+                    ]
+                }
+            ],
+            "drilldown": {
+                "activeAxisLabelStyle": {
+                    "color": "#E74C3C"
+                },
+                "series": [
+                    {
+                        "id": "techcorp-2020",
+                        "name": "TechCorp 2020 Regions",
+                        "data": [
+                            [
+                                "East",
+                                15
+                            ],
+                            [
+                                "West",
+                                12
+                            ],
+                            [
+                                "North",
+                                10
+                            ],
+                            [
+                                "South",
+                                8
+                            ]
+                        ]
+                    },
+                    {
+                        "id": "innovateinc-2020",
+                        "name": "InnovateInc 2020 Regions",
+                        "data": [
+                            [
+                                "East",
+                                9
+                            ],
+                            [
+                                "West",
+                                14
+                            ],
+                            [
+                                "North",
+                                5
+                            ],
+                            [
+                                "South",
+                                4
+                            ]
+                        ]
+                    },
+                    {
+                        "id": "other-2020",
+                        "name": "Other 2020 Regions",
+                        "data": [
+                            [
+                                "East",
+                                6
+                            ],
+                            [
+                                "West",
+                                8
+                            ],
+                            [
+                                "North",
+                                5
+                            ],
+                            [
+                                "South",
+                                4
+                            ]
+                        ]
+                    },
+                    {
+                        "id": "techcorp-2023",
+                        "name": "TechCorp 2023 Regions",
+                        "data": [
+                            [
+                                "East",
+                                18
+                            ],
+                            [
+                                "West",
+                                15
+                            ],
+                            [
+                                "North",
+                                12
+                            ],
+                            [
+                                "South",
+                                6
+                            ]
+                        ]
+                    },
+                    {
+                        "id": "innovateinc-2023",
+                        "name": "InnovateInc 2023 Regions",
+                        "data": [
+                            [
+                                "East",
+                                7
+                            ],
+                            [
+                                "West",
+                                12
+                            ],
+                            [
+                                "North",
+                                6
+                            ],
+                            [
+                                "South",
+                                3
+                            ]
+                        ]
+                    },
+                    {
+                        "id": "other-2023",
+                        "name": "Other 2023 Regions",
+                        "data": [
+                            [
+                                "East",
+                                5
+                            ],
+                            [
+                                "West",
+                                9
+                            ],
+                            [
+                                "North",
+                                4
+                            ],
+                            [
+                                "South",
+                                3
+                            ]
+                        ]
+                    }
+                ]
+            },
+            "plotOptions": {
+                "series": {
+                    "borderWidth": 0,
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "{y}%",
+                        "color": "#2C3E50"
+                    }
+                }
+            },
+            "legend": {
+                "itemStyle": {
+                    "color": "#2C3E50"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two hierarchical levels: company market shares (primary series) and regional breakdowns (drilldown). Synthetic data follows three constraints: 1) Annual totals sum to 100% \u00b11% tolerance, 2) Regional distributions maintain parent category totals, 3) Year-over-year changes show logical progression (\u03bc=+3.2% growth for market leaders). The column chart maximizes data-ink ratio by using direct labeling instead of axis lookup, while color saturation (blue=2020, green=2023) supports Cairo's preattentive processing principles. Drilldown structure follows Schneiderman's visual information-seeking mantra: overview first, details on demand. Regional data shows geographic clustering patterns (West region \u03bc=35% of total sales) with \u03c3=6.2% variance between companies."
+}

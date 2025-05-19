@@ -1,0 +1,46 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a polar column chart with an inverted axis. The chart should have a title 'Pane's innerSize' and a subtitle 'The innerSize option is set to 15%'. The chart should have a custom pane configuration with start and end angles, size, and inner size. The x-axis should be of type category with no line, and the y-axis should range from 0 to 225 with no line and show the last label. The data series should include one series with the data [29, 106, 144, 135, 216, 95].",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "inverted": true,
+            "polar": true,
+            "marginTop": 40
+        },
+        "title": {
+            "text": "Pane's innerSize"
+        },
+        "subtitle": {
+            "text": "The innerSize option is set to 15%"
+        },
+        "pane": {
+            "startAngle": 0,
+            "endAngle": 270,
+            "size": "80%",
+            "innerSize": "15%"
+        },
+        "xAxis": {
+            "type": "category",
+            "lineWidth": 0
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 225,
+            "lineWidth": 0,
+            "showLastLabel": true
+        },
+        "series": [
+            {
+                "data": [
+                    29,
+                    106,
+                    144,
+                    135,
+                    216,
+                    95
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a polar column chart with an inverted axis. The chart is titled 'Pane's innerSize' and includes a subtitle explaining the innerSize setting. The pane configuration defines the chart's angular range and size, with an inner size set to 15%. The x-axis is configured as a category axis without a line, and the y-axis ranges from 0 to 225, also without a line, but showing the last label. The data series includes one set of data points [29, 106, 144, 135, 216, 95], which will be displayed as columns in the polar chart. Additional configurations include setting the chart's top margin to 40 pixels."
+}

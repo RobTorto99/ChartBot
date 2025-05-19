@@ -1,0 +1,125 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Monthly Average Temperature'. The chart should have two data series: 'Series 1' and 'Series 2', with data provided. The x-axis should display months as categories, and the y-axis should have two axes, one on the left and one on the right. The left axis should always be visible, while the right axis should only be visible when 'Series 2' is not hidden. The chart should have custom colors for the series and styled labels and axes.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline"
+        },
+        "title": {
+            "text": "Monthly Average Temperature",
+            "style": {
+                "color": "#333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": [
+            {
+                "title": {
+                    "text": "Temperature (\u00b0C)",
+                    "style": {
+                        "color": "#555",
+                        "fontSize": "14px"
+                    }
+                },
+                "lineWidth": 2,
+                "labels": {
+                    "style": {
+                        "color": "#555",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            {
+                "title": {
+                    "text": "Temperature (\u00b0C)",
+                    "style": {
+                        "color": "#555",
+                        "fontSize": "14px"
+                    }
+                },
+                "lineWidth": 2,
+                "opposite": true,
+                "showEmpty": false,
+                "labels": {
+                    "style": {
+                        "color": "#555",
+                        "fontSize": "12px"
+                    }
+                }
+            }
+        ],
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#008000",
+                "yAxis": 0
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4,
+                    29.9,
+                    71.5
+                ],
+                "color": "#FFA500",
+                "yAxis": 1,
+                "visible": false
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#555",
+                "fontSize": "12px"
+            }
+        },
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a spline chart titled 'Monthly Average Temperature'. The chart includes two data series, 'Series 1' and 'Series 2', with corresponding temperature data for each month. The x-axis displays the months as categories, and the y-axis has two axes: one on the left and one on the right. The left y-axis is always visible, while the right y-axis is only visible when 'Series 2' is not hidden. The chart uses custom colors for the series and styles the labels and axes with specified colors and font sizes. Additionally, the legend is enabled with styled text, and the credits are disabled for a cleaner appearance."
+}

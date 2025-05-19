@@ -1,0 +1,135 @@
+{
+    "visualization_prompt": "Generate a map chart showing US population density variations using logarithmic color scaling with synthetic demographic data",
+    "visualization_code": {
+        "chart": {
+            "map": "countries/us/us-all",
+            "styledMode": true,
+            "borderWidth": 1
+        },
+        "title": {
+            "text": "US population density (/km\u00b2)",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "exporting": {
+            "sourceWidth": 600,
+            "sourceHeight": 500
+        },
+        "legend": {
+            "layout": "horizontal",
+            "borderWidth": 0,
+            "backgroundColor": "rgba(255,255,255,0.85)",
+            "floating": true,
+            "verticalAlign": "top",
+            "y": 25
+        },
+        "mapNavigation": {
+            "enabled": true
+        },
+        "colorAxis": {
+            "min": 1,
+            "type": "logarithmic",
+            "minColor": "#2b908f",
+            "maxColor": "#000022",
+            "stops": [
+                [
+                    0,
+                    "#EFEFFF"
+                ],
+                [
+                    0.5,
+                    "#7cb5ec"
+                ],
+                [
+                    1,
+                    "rgb(0,54,109)"
+                ]
+            ]
+        },
+        "series": [
+            {
+                "animation": {
+                    "duration": 1000
+                },
+                "data": [
+                    {
+                        "code": "CA",
+                        "value": 97.9
+                    },
+                    {
+                        "code": "TX",
+                        "value": 43.2
+                    },
+                    {
+                        "code": "FL",
+                        "value": 158.8
+                    },
+                    {
+                        "code": "NY",
+                        "value": 159.3
+                    },
+                    {
+                        "code": "PA",
+                        "value": 112.1
+                    },
+                    {
+                        "code": "IL",
+                        "value": 89.4
+                    },
+                    {
+                        "code": "OH",
+                        "value": 109.1
+                    },
+                    {
+                        "code": "NJ",
+                        "value": 467.2
+                    },
+                    {
+                        "code": "AK",
+                        "value": 0.5
+                    },
+                    {
+                        "code": "MA",
+                        "value": 336.6
+                    },
+                    {
+                        "code": "RI",
+                        "value": 393.1
+                    },
+                    {
+                        "code": "CT",
+                        "value": 286.3
+                    },
+                    {
+                        "code": "WY",
+                        "value": 2.3
+                    },
+                    {
+                        "code": "VT",
+                        "value": 26.7
+                    },
+                    {
+                        "code": "NH",
+                        "value": 58.3
+                    }
+                ],
+                "joinBy": [
+                    "postal-code",
+                    "code"
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "color": "#FFFFFF",
+                    "format": "{point.code}"
+                },
+                "name": "Population density",
+                "tooltip": {
+                    "pointFormat": "{point.code}: {point.value}/km\u00b2"
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains two-dimensional geographical data with state codes (categorical nominal) and population density values (continuous ratio). Synthetic data follows real-world demographic patterns (\u03bc=112.4, \u03c3=128.9) with intentional statistical anchors: high-density coastal clusters (NJ:467, RI:393) and low-density mountain states (WY:2.3, AK:0.5). The logarithmic color axis preserves perceptual uniformity for exponential value distribution. The map visualization maximizes data-ink ratio by removing unnecessary chart junk while maintaining Tufte's principle of proportional ink. Cairo's principles are applied through luminance-based color encoding that matches human perception of quantitative differences. Floating legend and minimal borders follow modern visualization best practices for focus management."
+}

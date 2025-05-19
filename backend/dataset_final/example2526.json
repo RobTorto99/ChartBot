@@ -1,0 +1,79 @@
+{
+    "visualization_prompt": "Generate a polar chart showing monthly performance metrics with seasonal variation using non-connected time-series data points",
+    "visualization_code": {
+        "chart": {
+            "polar": true,
+            "type": "line"
+        },
+        "title": {
+            "text": "The line doesn't connect"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "labels": {
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Operational Efficiency (%)",
+                "data": [
+                    82.3,
+                    88.1,
+                    94.7,
+                    112.4,
+                    132.9,
+                    157.6,
+                    143.2,
+                    128.8,
+                    105.3,
+                    91.7,
+                    84.5,
+                    76.9
+                ],
+                "connectEnds": false,
+                "color": "#e74c3c",
+                "marker": {
+                    "symbol": "circle",
+                    "radius": 5
+                }
+            }
+        ],
+        "plotOptions": {
+            "series": {
+                "lineWidth": 3,
+                "dashStyle": "Solid"
+            }
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle"
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations (categorical ordinal scale) with continuous percentage values. Synthetic data follows a bimodal distribution (\u03bc\u2081=105.3, \u03c3=25.6 for Q2-Q3; \u03bc\u2082=83.2, \u03c3=6.4 for Q4-Q1) simulating summer peak performance and winter slowdown. The polar projection emphasizes cyclical patterns while the disconnected series endpoints prevent false cyclical interpretation. Chart employs Tufte's principle by eliminating redundant gridlines while maintaining Cairo's magnitude estimation through radial axis labels. Color choice (#e74c3c) follows pre-attentive processing principles for rapid data localization."
+}

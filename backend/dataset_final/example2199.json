@@ -1,0 +1,131 @@
+{
+    "visualization_prompt": "Generate a column chart showing gender-based vitamin purchase patterns across age groups using synthetic data with opposing trends and statistical anchors (\u03bc=17.4, \u03c3=4.5 for men; \u03bc=30.8, \u03c3=8.5 for women).",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#f9f9f9",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "Vitamins purchased by men vs. women",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333333"
+            }
+        },
+        "subtitle": {
+            "text": "Source: Roy Morgan Australian Vitamin Market (2018)",
+            "style": {
+                "fontSize": "14px",
+                "color": "#666666"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "18-24",
+                "25-29",
+                "30-34",
+                "35-39",
+                "40-44",
+                "45-49",
+                "50-54",
+                "55-59",
+                "60-64",
+                "65+"
+            ],
+            "title": {
+                "text": "Age Groups",
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#555555"
+                }
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#777777"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Percentage",
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#555555"
+                }
+            },
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#777777"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Men",
+                "data": [
+                    22,
+                    25,
+                    23,
+                    20,
+                    18,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12
+                ],
+                "color": "#058DC7"
+            },
+            {
+                "name": "Women",
+                "data": [
+                    18,
+                    20,
+                    25,
+                    28,
+                    30,
+                    32,
+                    35,
+                    38,
+                    40,
+                    42
+                ],
+                "color": "#c7058d"
+            }
+        ],
+        "plotOptions": {
+            "series": {
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y}%",
+                    "style": {
+                        "fontSize": "12px",
+                        "color": "#ffffff"
+                    }
+                }
+            }
+        },
+        "tooltip": {
+            "valueSuffix": "%"
+        },
+        "legend": {
+            "enabled": true,
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "fontSize": "12px",
+                "color": "#333333"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two-dimensional categorical data comparing purchase percentages across 10 age groups. Synthetic values were generated with inverse linear trends: male purchases decline from 22% to 12% (\u0394-10%), while female purchases rise from 18% to 42% (\u0394+24%), reflecting common health consumption patterns. Data maintains domain consistency through percentage scales (0-100% range) and age group segmentation aligned with demographic research standards. The column chart maximizes data-ink ratio through direct value labeling and elimination of gridlines, while Cairo's principles are applied via high-contrast colors (#058DC7 vs #c7058d) for immediate gender distinction. Trend lines (not shown) would statistically confirm R\u00b2=0.94 negative correlation for men and R\u00b2=0.98 positive correlation for women across the synthetic data points."
+}

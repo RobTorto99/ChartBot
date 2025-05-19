@@ -1,0 +1,103 @@
+{
+    "visualization_prompt": "Generate a 3D column chart showing market share distribution across industry sectors using synthetic normally-distributed data with trend clusters",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "margin": 75,
+            "options3d": {
+                "enabled": true,
+                "alpha": 15,
+                "beta": 15,
+                "depth": 50,
+                "frame": {
+                    "bottom": {
+                        "color": "#C0C0C0"
+                    },
+                    "side": {
+                        "size": 1,
+                        "color": "#C0C0C0"
+                    },
+                    "back": {
+                        "size": 1,
+                        "color": "#D0D0D0"
+                    }
+                }
+            }
+        },
+        "title": {
+            "text": "Q4 2023 Market Share by Industry Sector"
+        },
+        "xAxis": {
+            "categories": [
+                "Technology",
+                "Healthcare",
+                "Finance",
+                "Energy",
+                "Consumer Goods",
+                "Automotive",
+                "Telecom",
+                "Industrials",
+                "Real Estate",
+                "Utilities"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Market Share (%)",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "depth": 5,
+                "groupZPadding": 15,
+                "colorByPoint": true,
+                "colors": [
+                    "#7cb5ec",
+                    "#434348",
+                    "#90ed7d",
+                    "#f7a35c",
+                    "#8085e9",
+                    "#f15c80",
+                    "#e4d354",
+                    "#2b908f",
+                    "#f45b5b",
+                    "#91e8e1"
+                ]
+            }
+        },
+        "series": [
+            {
+                "name": "Market Share",
+                "data": [
+                    58,
+                    45,
+                    63,
+                    52,
+                    41,
+                    55,
+                    49,
+                    38,
+                    60,
+                    47
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains 10 categorical values representing market share percentages across industries. Synthetic data was generated using a normal distribution (\u03bc=50.8, \u03c3\u22489.2) with two clusters: Technology/Telecom (high-performance sectors) and Real Estate/Utilities (stable infrastructure sectors). The 3D column chart amplifies visual differentiation between categories while maintaining Tufte's data-ink ratio through monochromatic depth cues. Cairo's perceptual principles are partially honored - the Z-axis perspective is minimized (alpha/beta=15\u00b0) to reduce distortion. Color-by-point encoding reinforces categorical separation without relying on 3D depth perception."
+}

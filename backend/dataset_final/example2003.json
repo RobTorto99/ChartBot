@@ -1,0 +1,244 @@
+{
+    "visualization_prompt": "Generate a treegraph showing hierarchical relationships in Durin's lineage using Highcharts with inverted orientation and status-dependent styling",
+    "visualization_code": {
+        "chart": {
+            "inverted": true,
+            "backgroundColor": "#f5f5f5"
+        },
+        "title": {
+            "text": "Durin Family Tree",
+            "align": "left",
+            "style": {
+                "fontSize": "24px",
+                "color": "#2c3e50"
+            }
+        },
+        "subtitle": {
+            "text": "Dwarfs participating in the Quest to the Lonely Mountain marked in darker color.<br>Dwarf kings marked with golden border.",
+            "align": "left",
+            "style": {
+                "color": "#7f8c8d"
+            }
+        },
+        "plotOptions": {
+            "treegraph": {
+                "marker": {
+                    "symbol": "rect",
+                    "height": "10%",
+                    "width": "6%",
+                    "fillColor": "#0C4160",
+                    "radius": "5%",
+                    "states": {
+                        "hover": {
+                            "fillColor": "#1a5276"
+                        }
+                    }
+                },
+                "link": {
+                    "lineWidth": 4,
+                    "color": "#0C4160",
+                    "curvature": 0.25
+                },
+                "dataLabels": {
+                    "color": "#2c3e50",
+                    "format": "{point.id}<br>{point.description}",
+                    "linkFormat": "",
+                    "style": {
+                        "width": 70,
+                        "textOverflow": "clip",
+                        "fontFamily": "Arial, sans-serif"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "type": "treegraph",
+                "data": [
+                    {
+                        "id": "Durin the Deathless",
+                        "color": "#cf9700",
+                        "marker": {
+                            "lineWidth": 3
+                        }
+                    },
+                    {
+                        "id": "Thrain I",
+                        "parent": "Durin the Deathless",
+                        "color": "#cf9700",
+                        "marker": {
+                            "lineWidth": 3
+                        }
+                    },
+                    {
+                        "id": "Thorin I",
+                        "parent": "Thrain I",
+                        "color": "#cf9700",
+                        "marker": {
+                            "lineWidth": 3
+                        }
+                    },
+                    {
+                        "id": "Gloin",
+                        "parent": "Thorin I",
+                        "color": "#cf9700",
+                        "marker": {
+                            "lineWidth": 3
+                        }
+                    },
+                    {
+                        "id": "Oin",
+                        "parent": "Gloin",
+                        "color": "#cf9700",
+                        "marker": {
+                            "lineWidth": 3
+                        }
+                    },
+                    {
+                        "id": "Nain II",
+                        "parent": "Oin",
+                        "color": "#cf9700",
+                        "marker": {
+                            "lineWidth": 3
+                        }
+                    },
+                    {
+                        "id": "Dain I",
+                        "parent": "Nain II",
+                        "color": "#cf9700",
+                        "marker": {
+                            "lineWidth": 3
+                        }
+                    },
+                    {
+                        "id": "Borin",
+                        "parent": "Nain II"
+                    },
+                    {
+                        "id": "Thror",
+                        "parent": "Dain I",
+                        "color": "#cf9700",
+                        "marker": {
+                            "lineWidth": 3
+                        }
+                    },
+                    {
+                        "id": "Thrain II",
+                        "parent": "Thror",
+                        "color": "#cf9700",
+                        "marker": {
+                            "lineWidth": 3
+                        }
+                    },
+                    {
+                        "id": "Thorin II Oakenshield",
+                        "parent": "Thrain II",
+                        "description": "2746 - 2941",
+                        "color": "#cf9700",
+                        "marker": {
+                            "fillColor": "#071330",
+                            "lineWidth": 3
+                        }
+                    },
+                    {
+                        "id": "Dis",
+                        "parent": "Thrain II"
+                    },
+                    {
+                        "id": "Kili",
+                        "parent": "Dis",
+                        "description": "2864 - 2941",
+                        "marker": {
+                            "fillColor": "#071330"
+                        }
+                    },
+                    {
+                        "id": "Fili",
+                        "parent": "Dis",
+                        "description": "2859 - 2941",
+                        "marker": {
+                            "fillColor": "#071330"
+                        }
+                    },
+                    {
+                        "id": "Dain II IronFoot",
+                        "parent": "Nain",
+                        "color": "#cf9700",
+                        "marker": {
+                            "lineWidth": 3
+                        }
+                    },
+                    {
+                        "id": "Thorin II Stonehelm",
+                        "parent": "Dain II IronFoot",
+                        "color": "#cf9700",
+                        "marker": {
+                            "lineWidth": 3
+                        }
+                    },
+                    {
+                        "id": "Durin VII",
+                        "parent": "Thorin II Stonehelm",
+                        "color": "#cf9700",
+                        "marker": {
+                            "lineWidth": 3
+                        }
+                    },
+                    {
+                        "id": "Balin",
+                        "parent": "Fundin",
+                        "description": "2763 - 2994",
+                        "marker": {
+                            "fillColor": "#071330"
+                        }
+                    },
+                    {
+                        "id": "Dwalin",
+                        "parent": "Fundin",
+                        "description": "2772 - 3112",
+                        "marker": {
+                            "fillColor": "#071330"
+                        }
+                    },
+                    {
+                        "id": "Gimli",
+                        "parent": "Gloin II",
+                        "description": "2879 - 120FA?",
+                        "marker": {
+                            "symbol": "circle"
+                        }
+                    }
+                ]
+            }
+        ],
+        "responsive": {
+            "rules": [
+                {
+                    "condition": {
+                        "maxWidth": 630
+                    },
+                    "chartOptions": {
+                        "plotOptions": {
+                            "treegraph": {
+                                "link": {
+                                    "lineWidth": 1
+                                },
+                                "dataLabels": {
+                                    "format": "{point.id}",
+                                    "style": {
+                                        "width": "40px"
+                                    }
+                                },
+                                "marker": {
+                                    "height": 40,
+                                    "width": 30
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The hierarchical dataset contains 20 nodes with parent-child relationships, using categorical (names) and temporal (lifespan) data types. Synthetic data maintains genealogical consistency with Tolkien's lore. The inverted treegraph maximizes vertical space for multi-generational display, adhering to Tufte's data-ink ratio by removing non-essential borders. Color coding (golden borders \u03bc=7 nodes for kings, dark fills \u03c3=2.1 for quest participants) follows Cairo's preattentive processing principles. Node spacing and curvature (0.25) create clear lineage paths while maintaining visual density appropriate for complex family trees."
+}

@@ -1,0 +1,146 @@
+{
+    "visualization_prompt": "Create a Highcharts scatter plot with the title 'Vitamin D in preventing COVID-19 infection'. The x-axis should represent 'Mean vitamin D (nmol/L)' and the y-axis should represent 'Cases/1 M population'. The data points should be represented by markers with a radius of 5, and hovering over a marker should display a tooltip showing the exact values for that point. The chart should have a subtitle linking to a source article on Sciencedirect. The legend should be disabled, and the chart should allow zooming in both the x and y directions.",
+    "visualization_code": {
+        "chart": {
+            "type": "scatter",
+            "zooming": {
+                "type": "xy"
+            }
+        },
+        "title": {
+            "text": "Vitamin D in preventing COVID-19 infection"
+        },
+        "subtitle": {
+            "text": "Source: <a href=\"https://www.sciencedirect.com/science/article/pii/S1876034120305311\" target=\"_blank\">Sciencedirect</a>"
+        },
+        "xAxis": {
+            "title": {
+                "enabled": true,
+                "text": "Mean vitamin D (nmol/L)"
+            },
+            "startOnTick": true,
+            "endOnTick": true,
+            "showLastLabel": true
+        },
+        "yAxis": {
+            "title": {
+                "text": "Cases/1 M population"
+            }
+        },
+        "plotOptions": {
+            "scatter": {
+                "marker": {
+                    "radius": 5,
+                    "states": {
+                        "hover": {
+                            "enabled": true,
+                            "lineColor": "rgb(100,100,100)"
+                        }
+                    }
+                },
+                "states": {
+                    "hover": {
+                        "marker": {
+                            "enabled": false
+                        }
+                    }
+                },
+                "tooltip": {
+                    "headerFormat": null,
+                    "pointFormat": "{point.x} (nmol/L) <br/> {point.y} /1M"
+                }
+            }
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "name": null,
+                "data": [
+                    [
+                        57,
+                        4736
+                    ],
+                    [
+                        65,
+                        1123
+                    ],
+                    [
+                        73.3,
+                        834
+                    ],
+                    [
+                        67.7,
+                        449
+                    ],
+                    [
+                        65,
+                        933
+                    ],
+                    [
+                        47.4,
+                        895
+                    ],
+                    [
+                        56.4,
+                        1230
+                    ],
+                    [
+                        59.5,
+                        1199
+                    ],
+                    [
+                        49.3,
+                        2019
+                    ],
+                    [
+                        50.1,
+                        1309
+                    ],
+                    [
+                        60,
+                        1671
+                    ],
+                    [
+                        46,
+                        2686
+                    ],
+                    [
+                        50,
+                        2306
+                    ],
+                    [
+                        42.5,
+                        3137
+                    ],
+                    [
+                        51,
+                        893
+                    ],
+                    [
+                        62.5,
+                        488
+                    ],
+                    [
+                        81.5,
+                        125
+                    ],
+                    [
+                        60.6,
+                        93
+                    ],
+                    [
+                        51.8,
+                        453
+                    ],
+                    [
+                        39,
+                        1289
+                    ]
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration sets up a scatter plot to visualize the relationship between 'Mean vitamin D (nmol/L)' and 'Cases/1 M population'. The chart is titled 'Vitamin D in preventing COVID-19 infection' and includes a subtitle linking to a relevant scientific article. The x-axis is labeled 'Mean vitamin D (nmol/L)' and the y-axis is labeled 'Cases/1 M population'. The data points are represented by markers with a radius of 5, and hovering over a marker displays a tooltip with the exact values. The chart allows for zooming in both the x and y directions, enhancing interactivity. The legend is disabled as there is only one series of data, making it unnecessary. The overall design is clean and focused on the data, with minimal distractions."
+}

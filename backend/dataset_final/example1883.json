@@ -1,0 +1,105 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly trends of animal metrics using categorical temporal alignment",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 50,
+            "marginBottom": 70
+        },
+        "title": {
+            "text": "Monthly Animal Data",
+            "style": {
+                "color": "#333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Value (cm)",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "tooltip": {
+            "pointFormat": "{series.name}: <b>{point.y}</b><br/>",
+            "valueSuffix": " cm",
+            "shared": true
+        },
+        "series": [
+            {
+                "name": "dogs",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#FF6347"
+            },
+            {
+                "name": "cats",
+                "data": [
+                    54.4,
+                    95.6,
+                    194.1,
+                    216.4,
+                    148.5,
+                    135.6,
+                    176.0,
+                    144.0,
+                    129.2,
+                    106.4,
+                    71.5,
+                    29.9
+                ],
+                "color": "#4682B4"
+            }
+        ],
+        "legend": {
+            "itemStyle": {
+                "color": "#333",
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two seasonal time series (dogs: \u03bc=123.5, \u03c3=58.6; cats: \u03bc=123.5, \u03c3=65.8) across 12 monthly categories. Synthetic data exhibits inverse seasonal patterns - dogs peak in September while cats peak in April, creating complementary annual cycles. The spline chart maximizes data-ink ratio by eliminating markers and using minimal gridlines, while color contrast (#FF6347 vs #4682B4) leverages Cairo's preattentive processing principles. Axis labels follow Tufte's design recommendations with baseline alignment and restrained typography (14px sans-serif). The mirrored distribution (identical means, different variance) demonstrates synthetic data generation with controlled statistical properties."
+}

@@ -1,0 +1,83 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the following specifications: Chart type is column, chart title is 'Monthly Sales Data', axes and labels styling includes black color for stack labels, data series includes two series with specific monthly sales data, custom colors are not specified, and additional configurations include normal stacking, point padding of 0, group padding of 0, and data labels disabled.",
+    "visualization_code": {
+        "chart": {
+            "type": "column"
+        },
+        "title": {
+            "text": "Monthly Sales Data"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ]
+        },
+        "yAxis": {
+            "stackLabels": {
+                "style": {
+                    "color": "black"
+                },
+                "enabled": true,
+                "verticalAlign": "middle"
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "normal",
+                "pointPadding": 0,
+                "groupPadding": 0,
+                "dataLabels": {
+                    "enabled": false
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ]
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4,
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a column chart titled 'Monthly Sales Data'. The x-axis categories represent the months from January to December. The y-axis includes stack labels styled in black, enabled, and vertically aligned to the middle. The plot options for the column series specify normal stacking, with point and group padding set to 0, and data labels disabled. The data series include two sets of monthly sales data, each assigned a name for clarity in the legend. This configuration ensures a clear and concise visualization of the monthly sales data with appropriate styling and stacking options."
+}

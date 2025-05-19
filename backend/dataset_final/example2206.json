@@ -1,0 +1,80 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly temperature variations using chronological categorical x-axis labels and continuous y-axis values",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#FFFFFF",
+            "marginTop": 50,
+            "marginRight": 100,
+            "marginBottom": 50,
+            "marginLeft": 100
+        },
+        "title": {
+            "text": "Monthly Temperature Variation"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "fontFamily": "Arial",
+                    "fontSize": "12px",
+                    "color": "#333333"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0F)"
+            },
+            "labels": {
+                "style": {
+                    "fontFamily": "Verdana",
+                    "fontSize": "10px",
+                    "color": "#666666"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Temperature",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#FF6347",
+                "marker": {
+                    "enabled": false
+                }
+            }
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations of temperature values, forming a univariate time series with categorical month labels (nominal scale) and continuous quantitative measurements (interval scale). The provided data shows a non-synthetic annual pattern with summer peak (216.4\u00b0F in September) and winter lows (29.9\u00b0F in January), maintaining domain validity through seasonally appropriate value ranges. A spline chart was selected to emphasize the continuous progression of temperature changes, maximizing data-ink ratio by removing point markers while preserving the overall trend shape. Verdana/Arial font pairing follows Cairo's accessibility principles for label legibility. The salmon-red color (#FF6347) creates strong figure-ground contrast against the white background, satisfying preattentive processing requirements for quick data localization. Margin allocations prevent axis label truncation while maintaining focus on the central visualization."
+}

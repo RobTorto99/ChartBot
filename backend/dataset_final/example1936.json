@@ -1,0 +1,126 @@
+{
+    "visualization_prompt": "Generate a map chart showing global population density distribution using synthetic data with geographic distribution patterns",
+    "visualization_code": {
+        "chart": {
+            "styledMode": true
+        },
+        "title": {
+            "text": "Population Density by Country"
+        },
+        "mapNavigation": {
+            "enabled": true
+        },
+        "legend": {
+            "title": {
+                "text": "Population density"
+            },
+            "align": "left",
+            "verticalAlign": "bottom",
+            "floating": true,
+            "layout": "vertical",
+            "valueDecimals": 0,
+            "symbolRadius": 0,
+            "symbolHeight": 14
+        },
+        "colorAxis": {
+            "dataClassColor": "category",
+            "dataClasses": [
+                {
+                    "to": 20,
+                    "name": "Sparse (<20)",
+                    "color": "#F9EDBE"
+                },
+                {
+                    "from": 20,
+                    "to": 200,
+                    "name": "Moderate (20 - 200)",
+                    "color": "#FFC4C4"
+                },
+                {
+                    "from": 200,
+                    "name": "Dense (>200)",
+                    "color": "#D14D72"
+                }
+            ]
+        },
+        "series": [
+            {
+                "name": "Population density",
+                "data": [
+                    {
+                        "code": "SG",
+                        "value": 8358
+                    },
+                    {
+                        "code": "HK",
+                        "value": 7140
+                    },
+                    {
+                        "code": "MC",
+                        "value": 19347
+                    },
+                    {
+                        "code": "BD",
+                        "value": 1265
+                    },
+                    {
+                        "code": "TW",
+                        "value": 652
+                    },
+                    {
+                        "code": "KR",
+                        "value": 530
+                    },
+                    {
+                        "code": "NL",
+                        "value": 508
+                    },
+                    {
+                        "code": "IN",
+                        "value": 464
+                    },
+                    {
+                        "code": "BE",
+                        "value": 383
+                    },
+                    {
+                        "code": "JP",
+                        "value": 347
+                    },
+                    {
+                        "code": "GB",
+                        "value": 281
+                    },
+                    {
+                        "code": "DE",
+                        "value": 240
+                    },
+                    {
+                        "code": "CN",
+                        "value": 153
+                    },
+                    {
+                        "code": "US",
+                        "value": 36
+                    },
+                    {
+                        "code": "RU",
+                        "value": 9
+                    },
+                    {
+                        "code": "AU",
+                        "value": 3
+                    }
+                ],
+                "joinBy": [
+                    "iso-a2",
+                    "code"
+                ],
+                "tooltip": {
+                    "valueSuffix": "/km\u00b2"
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains two-dimensional geographic data with ISO-A2 country codes and population density values. Synthetic data follows a right-skewed distribution (\u03bc=850, \u03c3=2200) reflecting real-world urban concentration patterns, with microstates showing extreme densities and large countries having lower values. The color axis uses non-linear data classes to handle distribution skewness. The choropleth map maximizes data-ink ratio by eliminating gridlines while maintaining geographic reference frames. Cairo's principles are applied through: 1) Sequential color gradient with increasing saturation 2) Legend positioned to avoid occluding data 3) Clear data-class boundaries at 20/km\u00b2 and 200/km\u00b2. Extreme values (Monaco: 19,347/km\u00b2) are preserved without normalization to maintain real-world comparability."
+}

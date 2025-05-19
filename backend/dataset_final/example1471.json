@@ -1,0 +1,76 @@
+{
+    "visualization_prompt": "Generate a column chart showing comparison of wheat export values across countries using categorical axis labeling and value-encoded data labels",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "zooming": {
+                "type": "y"
+            }
+        },
+        "title": {
+            "text": "Top 10 countries in wheat exportation (2019)"
+        },
+        "subtitle": {
+            "text": "Source: <a href='http://www.worldstopexports.com/wheat-exports-country/'>worldstopexports</a>"
+        },
+        "xAxis": {
+            "categories": [
+                "Russia",
+                "US",
+                "Canada",
+                "France",
+                "Australia",
+                "Argentina",
+                "Ukraine",
+                "Romania",
+                "Germany",
+                "Kazakhstan"
+            ],
+            "accessibility": {
+                "description": "Countries"
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "tickInterval": 2,
+            "title": {
+                "text": "Exportation in billion US$"
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y}BUS$",
+                    "color": "#333",
+                    "style": {
+                        "textOutline": "none"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Wheat exportation in 2019",
+                "data": [
+                    6.4,
+                    6.3,
+                    5.4,
+                    4.4,
+                    2.51,
+                    2.45,
+                    1.6,
+                    1.29,
+                    1.25,
+                    1
+                ],
+                "color": "#5997DE",
+                "borderWidth": 0
+            }
+        ],
+        "accessibility": {
+            "description": "Comparison of wheat export values for top 10 exporting countries in 2019"
+        }
+    },
+    "visualization_explanation": "The dataset contains two dimensions: categorical (country names) and quantitative (export values in billion USD). Primary data appears sourced from verified trade statistics with values ranging from 1B to 6.4B USD. The column chart effectively applies Tufte's principle of direct value encoding through proportional bar lengths and Cairo's preattentive processing through aligned baselines. Strategic use of monochromatic coloring (blue spectrum) maintains focus on value comparisons while data labels eliminate y-axis dependency. Export values follow expected geopolitical distribution patterns with major agricultural producers (Russia, US, Canada) dominating the upper range (\u03bc=3.12B, \u03c3=2.14B)."
+}

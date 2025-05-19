@@ -1,0 +1,143 @@
+{
+    "visualization_prompt": "Generate a variwide chart showing stacked categorical distributions using variable-width columns with synthetic economic data",
+    "visualization_code": {
+        "chart": {
+            "type": "variwide",
+            "height": 400
+        },
+        "title": {
+            "text": "Stack labels in variwide chart",
+            "style": {
+                "color": "#333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "type": "category",
+            "categories": [
+                "Energy",
+                "Tech",
+                "Healthcare",
+                "Finance",
+                "Manufacturing",
+                "Retail"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (Billions USD)",
+                "style": {
+                    "color": "#444",
+                    "fontSize": "14px"
+                }
+            },
+            "stackLabels": {
+                "enabled": true,
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px",
+                    "textOutline": "none"
+                }
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "stacking": "normal",
+                "borderWidth": 0,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.y:.1f}Bn"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Domestic Sales",
+                "data": [
+                    [
+                        0,
+                        50,
+                        135504
+                    ],
+                    [
+                        1,
+                        42,
+                        277339
+                    ],
+                    [
+                        2,
+                        32,
+                        421611
+                    ],
+                    [
+                        3,
+                        38,
+                        462057
+                    ],
+                    [
+                        4,
+                        35,
+                        902885
+                    ],
+                    [
+                        5,
+                        34,
+                        1702641
+                    ]
+                ],
+                "color": "#008000"
+            },
+            {
+                "name": "International Sales",
+                "data": [
+                    [
+                        0,
+                        47,
+                        135504
+                    ],
+                    [
+                        1,
+                        61,
+                        277339
+                    ],
+                    [
+                        2,
+                        92,
+                        421611
+                    ],
+                    [
+                        3,
+                        76,
+                        462057
+                    ],
+                    [
+                        4,
+                        99,
+                        902885
+                    ],
+                    [
+                        5,
+                        82,
+                        1702641
+                    ]
+                ],
+                "color": "#FFA500"
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#333",
+                "fontSize": "12px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two-dimensional economic data with three variables per observation: (1) Categorical industry sectors, (2) Quantitative revenue values, and (3) Quantitative market size metrics determining column widths. Synthetic data maintains domain consistency with revenue values in billions and market sizes reflecting typical industry scales. The variwide chart effectively encodes three variables through vertical position (revenue), column width (market size), and color (sales type). Stacked columns enable direct comparison of domestic/international contributions while maintaining proportional width encoding. Color choices (#008000 for domestic, #FFA500 for international) follow Cairo's principles of discriminability and semantic resonance. Statistical anchors include mean revenue of $58.5B (\u03c3=21.8B) across sectors, with international sales showing 15% higher variability."
+}

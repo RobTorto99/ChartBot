@@ -1,0 +1,79 @@
+{
+    "visualization_prompt": "Generate a pie chart showing atmospheric gas composition using a donut-style layout with pattern fills and semantic border coloring",
+    "visualization_code": {
+        "colors": [
+            {
+                "patternIndex": 3
+            },
+            {
+                "patternIndex": 1
+            },
+            "#5050f0"
+        ],
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Air Composition Analysis",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333"
+            }
+        },
+        "plotOptions": {
+            "pie": {
+                "innerSize": "75%",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}: {y}%",
+                    "distance": 15,
+                    "style": {
+                        "fontSize": "13px"
+                    }
+                },
+                "showInLegend": true,
+                "borderWidth": 2
+            }
+        },
+        "series": [
+            {
+                "name": "Atmospheric Gases",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Nitrogen",
+                        "y": 78,
+                        "borderColor": "#D97D26"
+                    },
+                    {
+                        "name": "Oxygen",
+                        "y": 20.9,
+                        "borderColor": "#999"
+                    },
+                    {
+                        "name": "Trace Gases",
+                        "y": 1.1,
+                        "borderColor": "#5050a0",
+                        "dataLabels": {
+                            "enabled": false
+                        }
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#444"
+            }
+        },
+        "tooltip": {
+            "valueSuffix": "%",
+            "headerFormat": "<span style=\"font-size: 13px\">{point.key}</span><br/>",
+            "borderColor": "#eee"
+        }
+    },
+    "visualization_explanation": "The dataset contains three compositional percentages representing Earth's atmospheric gases. This univariate categorical data uses ratio-scale measurements summing to 100%, derived from established atmospheric science measurements. The nitrogen-oxygen-trace gas hierarchy demonstrates clear proportionality suitable for angular encoding. The donut chart variant was selected to emphasize categorical relationships through arc lengths while maintaining central space for potential annotations. Pattern fills with bordered wedges enhance Cairo's principle of perceptual separation while maintaining grayscale readability. Tufte's data-ink ratio is optimized by removing non-essential gridlines and using minimal labeling. Border colors follow semantic temperature coding (warm orange for dominant nitrogen, cool gray for oxygen). The 1.1% trace gas segment uses label suppression to avoid visual clutter, with details preserved in tooltips."
+}

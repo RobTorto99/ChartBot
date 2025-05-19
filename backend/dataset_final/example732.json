@@ -1,0 +1,74 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the following specifications: Chart type: spline, Chart title: Monthly Temperature Variation, Axes and labels styling: X-axis labels should be in Arial font, size 12, and color #333333. Y-axis labels should be in Verdana font, size 10, and color #666666. Data series: The series should be named 'Temperature' and contain the data [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]. Custom colors: The series should use the color #FF6347. Additional configurations: The chart should have a white background, a legend positioned at the bottom, and margins set to 50px top, 100px right, 50px bottom, and 100px left.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#FFFFFF",
+            "marginTop": 50,
+            "marginRight": 100,
+            "marginBottom": 50,
+            "marginLeft": 100
+        },
+        "title": {
+            "text": "Monthly Temperature Variation"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "fontFamily": "Arial",
+                    "fontSize": "12px",
+                    "color": "#333333"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "fontFamily": "Verdana",
+                    "fontSize": "10px",
+                    "color": "#666666"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Temperature",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#FF6347"
+            }
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart titled 'Monthly Temperature Variation'. The X-axis labels are styled with Arial font, size 12, and color #333333, while the Y-axis labels use Verdana font, size 10, and color #666666. The data series is named 'Temperature' and includes the specified monthly temperature data, with the series color set to #FF6347. The chart has a white background and includes a legend positioned at the bottom of the chart. The chart's margins are set to 50px top and bottom, and 100px left and right, providing ample space around the chart for better visual clarity."
+}

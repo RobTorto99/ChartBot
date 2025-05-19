@@ -1,0 +1,106 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Weekly Price Trends'. The chart should have styled axes and labels with specific colors and font sizes. The data series should represent the 'Price' for each day of the week, with custom colors for the plot bands. Additionally, configure the chart with a white background, a legend, and specific margins.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#ffffff",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "Weekly Price Trends",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Price",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "format": "${text}",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "plotBands": [
+                {
+                    "color": "rgba(255, 87, 51, 0.4)",
+                    "label": {
+                        "text": "$5 up (50%)",
+                        "style": {
+                            "color": "#FF5733",
+                            "fontSize": "12px"
+                        }
+                    },
+                    "from": 5,
+                    "to": 10
+                },
+                {
+                    "color": "rgba(255, 195, 0, 0.4)",
+                    "label": {
+                        "text": "$5 up (25%)",
+                        "style": {
+                            "color": "#FFC300",
+                            "fontSize": "12px"
+                        }
+                    },
+                    "from": 20,
+                    "to": 25
+                }
+            ]
+        },
+        "tooltip": {
+            "valuePrefix": "$"
+        },
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "14px"
+            }
+        },
+        "series": [
+            {
+                "name": "Price",
+                "data": [
+                    5,
+                    10,
+                    15,
+                    20,
+                    25,
+                    30,
+                    15
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a spline chart titled 'Weekly Price Trends'. The chart type is set to 'spline', and it includes a white background with specific margins for better visual alignment. The title and axes labels are styled with custom colors and font sizes to enhance readability. The x-axis represents the days of the week, while the y-axis represents the 'Price' with dollar formatting. The y-axis also includes two plot bands with custom colors and labels to highlight specific price ranges. The tooltip displays the price values prefixed with a dollar sign. The legend is enabled and styled to match the overall theme. The data series includes the 'Price' values for each day of the week, ensuring the chart accurately represents the weekly price trends."
+}

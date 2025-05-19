@@ -1,0 +1,142 @@
+{
+    "visualization_prompt": "Generate a spline chart showing annotated data trends using crooked line annotations with custom control points",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 50,
+            "marginBottom": 70
+        },
+        "title": {
+            "text": "Crooked Line Annotation",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px",
+                "fontFamily": "IBM Plex Sans, sans-serif"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "X Axis",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "16px",
+                    "fontFamily": "IBM Plex Sans, sans-serif"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#777777",
+                    "fontSize": "14px",
+                    "fontFamily": "IBM Plex Sans, sans-serif"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Y Axis",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "16px",
+                    "fontFamily": "IBM Plex Sans, sans-serif"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#777777",
+                    "fontSize": "14px",
+                    "fontFamily": "IBM Plex Sans, sans-serif"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Synthetic Sensor Readings",
+                "data": [
+                    1,
+                    2,
+                    3,
+                    {
+                        "y": 4,
+                        "id": "s"
+                    },
+                    5,
+                    {
+                        "y": 6,
+                        "id": "m"
+                    },
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    3,
+                    2,
+                    4,
+                    4,
+                    4,
+                    4,
+                    3
+                ],
+                "color": "#ff5f00",
+                "marker": {
+                    "enabled": true,
+                    "radius": 3
+                }
+            }
+        ],
+        "annotations": [
+            {
+                "id": "event-highlight",
+                "type": "crookedLine",
+                "controlPointOptions": {
+                    "visible": true
+                },
+                "typeOptions": {
+                    "points": [
+                        {
+                            "x": 1,
+                            "y": 5,
+                            "controlPoint": {
+                                "symbol": "square"
+                            }
+                        },
+                        {
+                            "x": 4,
+                            "y": 5
+                        },
+                        {
+                            "x": 8,
+                            "y": 8,
+                            "controlPoint": {
+                                "style": {
+                                    "fill": "blue"
+                                }
+                            }
+                        },
+                        {
+                            "x": 12,
+                            "y": 8
+                        }
+                    ],
+                    "line": {
+                        "stroke": "#ff5f00",
+                        "strokeWidth": 4,
+                        "dashStyle": "ShortDot"
+                    }
+                }
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#555555",
+                "fontSize": "14px",
+                "fontFamily": "IBM Plex Sans, sans-serif"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains univariate time-series measurements with 20 sequential observations. Synthetic values follow a multimodal distribution (\u03bc=4.2, \u03c3=1.8) with intentional clusters at 2-3 and 4-6 ranges. Annotations mark key events at observation indices 3 (id='s') and 5 (id='m'), with generated values within \u00b11\u03c3 of the mean. The spline chart maximizes data-ink ratio through minimal gridlines while maintaining Cairo's perceptual discriminability via high-contrast orange (#ff5f00) against light gray background. Annotations use Tufte's principle of direct labeling with shape-coded control points (square/blue) and broken-line styling to avoid visual interference with primary data."
+}

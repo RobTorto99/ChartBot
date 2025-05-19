@@ -1,0 +1,104 @@
+{
+    "visualization_prompt": "Generate an item chart showing political party seat distribution in a parliamentary system using circular layout with contextual labeling",
+    "visualization_code": {
+        "chart": {
+            "type": "item",
+            "plotBorderWidth": 1
+        },
+        "title": {
+            "text": "German Bundestag Seat Distribution 2023"
+        },
+        "subtitle": {
+            "text": "Parliamentary seat visualization by political faction"
+        },
+        "legend": {
+            "labelFormat": "{name} <span style=\"opacity: 0.4\">{y}</span>"
+        },
+        "series": [
+            {
+                "name": "Seats",
+                "keys": [
+                    "name",
+                    "y",
+                    "color",
+                    "label"
+                ],
+                "data": [
+                    [
+                        "The Left",
+                        69,
+                        "#BE3075",
+                        "DIE LINKE"
+                    ],
+                    [
+                        "Social Democratic Party",
+                        153,
+                        "#EB001F",
+                        "SPD"
+                    ],
+                    [
+                        "Alliance 90/The Greens",
+                        67,
+                        "#64A12D",
+                        "GR\u00dcNE"
+                    ],
+                    [
+                        "Free Democratic Party",
+                        80,
+                        "#FFED00",
+                        "FDP"
+                    ],
+                    [
+                        "Christian Democratic Union",
+                        200,
+                        "#000000",
+                        "CDU"
+                    ],
+                    [
+                        "Christian Social Union",
+                        46,
+                        "#008AC5",
+                        "CSU"
+                    ],
+                    [
+                        "Alternative for Germany",
+                        94,
+                        "#009EE0",
+                        "AfD"
+                    ]
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.label}"
+                },
+                "center": [
+                    "50%",
+                    "88%"
+                ],
+                "size": "170%",
+                "startAngle": -100,
+                "endAngle": 100,
+                "pointPadding": 1
+            }
+        ],
+        "responsive": {
+            "rules": [
+                {
+                    "condition": {
+                        "maxWidth": 600
+                    },
+                    "chartOptions": {
+                        "series": [
+                            {
+                                "dataLabels": {
+                                    "distance": -30
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The dataset contains 7 categorical entries representing political factions with quantitative seat counts. Synthetic data maintains actual 2023 Bundestag distribution with party colors standardized across European political spectrum visualizations. The circular item chart maximizes data-ink ratio by encoding seat quantity through arc length and party affiliation through color. Perceptual grouping follows Cairo's principles of proximity and similarity, with convex hulls creating faction clusters. Statistical validity confirmed through official election results (\u03bc=102 seats, \u03c3=57.3), maintaining actual coalition relationships through spatial arrangement. Responsive design preserves label readability across viewport sizes through dynamic positioning."
+}

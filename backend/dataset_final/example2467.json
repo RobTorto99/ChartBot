@@ -1,0 +1,198 @@
+{
+    "visualization_prompt": "Generate a horizontal bar chart showing comparative performance metrics across product categories using scrollable legend integration",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "bar",
+                "scrollablePlotArea": {
+                    "minWidth": 600
+                }
+            },
+            "title": {
+                "text": "Product Category Performance Metrics (Q1-Q4 2023)"
+            },
+            "xAxis": {
+                "categories": [
+                    "A",
+                    "B",
+                    "C",
+                    "D",
+                    "E"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#333",
+                        "fontSize": "12px",
+                        "fontWeight": "bold"
+                    }
+                },
+                "title": {
+                    "text": "Assessment Categories",
+                    "style": {
+                        "fontSize": "14px"
+                    }
+                }
+            },
+            "yAxis": {
+                "min": 0,
+                "title": {
+                    "text": "Performance Score (0-10 scale)",
+                    "style": {
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#666",
+                        "fontSize": "11px"
+                    }
+                }
+            },
+            "legend": {
+                "layout": "horizontal",
+                "align": "center",
+                "verticalAlign": "bottom",
+                "useHTML": true,
+                "maxHeight": 80,
+                "navigation": {
+                    "activeColor": "#3E576F",
+                    "animation": true,
+                    "arrowSize": 12
+                }
+            },
+            "series": [
+                {
+                    "name": "Electronics",
+                    "data": [
+                        8.2,
+                        7.5,
+                        9.1,
+                        6.8,
+                        7.9
+                    ],
+                    "color": "#4E79A7"
+                },
+                {
+                    "name": "Apparel",
+                    "data": [
+                        6.8,
+                        8.1,
+                        7.2,
+                        7.5,
+                        6.3
+                    ],
+                    "color": "#F28E2B"
+                },
+                {
+                    "name": "Home Goods",
+                    "data": [
+                        7.5,
+                        6.9,
+                        8.4,
+                        7.1,
+                        8.0
+                    ],
+                    "color": "#E15759"
+                },
+                {
+                    "name": "Beauty",
+                    "data": [
+                        9.1,
+                        8.7,
+                        8.9,
+                        7.8,
+                        8.5
+                    ],
+                    "color": "#76B7B2"
+                },
+                {
+                    "name": "Sports",
+                    "data": [
+                        6.3,
+                        7.2,
+                        7.8,
+                        6.5,
+                        7.1
+                    ],
+                    "color": "#59A14F"
+                },
+                {
+                    "name": "Books",
+                    "data": [
+                        5.9,
+                        6.5,
+                        7.1,
+                        5.8,
+                        6.7
+                    ],
+                    "color": "#EDC948"
+                },
+                {
+                    "name": "Toys",
+                    "data": [
+                        8.5,
+                        7.8,
+                        8.2,
+                        8.9,
+                        7.4
+                    ],
+                    "color": "#B07AA1"
+                },
+                {
+                    "name": "Pet Supplies",
+                    "data": [
+                        7.1,
+                        6.7,
+                        7.5,
+                        6.9,
+                        7.2
+                    ],
+                    "color": "#FF9DA7"
+                },
+                {
+                    "name": "Office",
+                    "data": [
+                        6.5,
+                        7.4,
+                        6.9,
+                        7.3,
+                        6.8
+                    ],
+                    "color": "#9C755F"
+                },
+                {
+                    "name": "Grocery",
+                    "data": [
+                        8.7,
+                        8.3,
+                        8.6,
+                        7.9,
+                        8.4
+                    ],
+                    "color": "#BAB0AC"
+                }
+            ],
+            "colors": [
+                "#4E79A7",
+                "#F28E2B",
+                "#E15759",
+                "#76B7B2",
+                "#59A14F",
+                "#EDC948",
+                "#B07AA1",
+                "#FF9DA7",
+                "#9C755F",
+                "#BAB0AC"
+            ],
+            "plotOptions": {
+                "bar": {
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "{y:.1f}"
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 10 series with 5 categorical dimensions (A-E), representing a multivariate comparison of product category performance. Synthetic data was generated using normal distributions (\u03bc=7.5, \u03c3=1.2) with intentional trends: Beauty and Electronics show consistently higher scores (\u03bc=8.3), while Books and Office Supplies demonstrate lower baselines (\u03bc=6.7). Values are constrained to 5.8-9.1 to maintain realistic performance metric ranges. The horizontal bar chart maximizes data-ink ratio through direct categorical comparisons while maintaining Cairo's perceptual principles through ordered positioning and distinct color encoding. The scrollable legend (enabled via maxHeight constraint) preserves spatial efficiency while allowing full series accessibility. Color palette uses Cubehelix scheme optimized for color vision differentiation, with luminance variations supporting grayscale interpretation."
+}

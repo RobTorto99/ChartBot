@@ -1,0 +1,75 @@
+{
+    "visualization_prompt": "Generate a horizontal linear gauge showing dynamic performance metrics using synthetic time-series data with randomized intervals",
+    "visualization_code": {
+        "chart": {
+            "type": "lineargauge",
+            "inverted": true,
+            "height": 100
+        },
+        "title": {
+            "text": "Server Capacity Utilization"
+        },
+        "xAxis": {
+            "lineColor": "#606060",
+            "labels": {
+                "enabled": false
+            },
+            "tickLength": 0
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 100,
+            "tickInterval": 20,
+            "gridLineWidth": 1,
+            "plotBands": [
+                {
+                    "from": 0,
+                    "to": 40,
+                    "color": "rgba(255,0,0,0.3)"
+                },
+                {
+                    "from": 40,
+                    "to": 80,
+                    "color": "rgba(255,204,0,0.3)"
+                },
+                {
+                    "from": 80,
+                    "to": 100,
+                    "color": "rgba(0,153,51,0.3)"
+                }
+            ],
+            "labels": {
+                "format": "{value}%"
+            }
+        },
+        "series": [
+            {
+                "name": "Utilization Rate",
+                "data": [
+                    78,
+                    82,
+                    76,
+                    85,
+                    79,
+                    88,
+                    91,
+                    83,
+                    79,
+                    84
+                ],
+                "color": "#2F4F4F",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.y}%",
+                    "style": {
+                        "textOutline": "none"
+                    }
+                }
+            }
+        ],
+        "exporting": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset contains univariate time-series measurements of server utilization percentages. Synthetic values (\u03bc=82%, \u03c3=5%) were generated using Brownian motion simulation to create realistic operational fluctuations while maintaining boundary constraints (0-100%). The linear gauge format maximizes data-ink ratio by eliminating redundant axes marks while employing Tufte's small multiples principle through colored bands. Cairo's preattentive processing is leveraged via position on aligned scale and color intensity gradients. Animated updates (\u03c3=4% per interval) maintain perceptual continuity while emphasizing metric volatility through controlled randomness."
+}

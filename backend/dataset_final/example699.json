@@ -1,0 +1,165 @@
+{
+    "visualization_prompt": "Create a Highcharts Organization Chart with the following specifications: Chart type: Organization. Chart title: 'Highcharts Org Chart'. Axes and labels styling: Level 0 and 1 nodes should have silver color with black data labels and height of 25. Level 2 nodes should have a color of #980104. Level 4 nodes should have a color of #359154. Data series: The data should represent an organizational structure with nodes and links. Custom colors: Nodes and links should have specific colors as defined in the levels and series configurations. Additional configurations: The chart should have a height of 600, be inverted, and include a tooltip that appears outside the chart. The exporting options should allow HTML and set the source width and height to 800 and 600 respectively.",
+    "visualization_code": {
+        "chart": {
+            "height": 600,
+            "inverted": true
+        },
+        "title": {
+            "text": "Highcharts Org Chart"
+        },
+        "series": [
+            {
+                "type": "organization",
+                "name": "Highsoft",
+                "keys": [
+                    "from",
+                    "to"
+                ],
+                "linkRadius": 0,
+                "linkLineWidth": 2,
+                "linkColor": "#ccc",
+                "data": [
+                    [
+                        "Shareholders",
+                        "Board"
+                    ],
+                    [
+                        "Board",
+                        "CEO"
+                    ],
+                    [
+                        "CEO",
+                        "CTO"
+                    ],
+                    [
+                        "CEO",
+                        "CPO"
+                    ],
+                    [
+                        "CEO",
+                        "CSO"
+                    ],
+                    [
+                        "CEO",
+                        "CMO"
+                    ],
+                    [
+                        "CEO",
+                        "HR"
+                    ],
+                    [
+                        "CTO",
+                        "Product"
+                    ],
+                    [
+                        "CTO",
+                        "Web"
+                    ],
+                    [
+                        "CSO",
+                        "Sales"
+                    ],
+                    [
+                        "CMO",
+                        "Market"
+                    ]
+                ],
+                "levels": [
+                    {
+                        "level": 0,
+                        "color": "silver",
+                        "dataLabels": {
+                            "color": "black"
+                        },
+                        "height": 25
+                    },
+                    {
+                        "level": 1,
+                        "color": "silver",
+                        "dataLabels": {
+                            "color": "black"
+                        },
+                        "height": 25
+                    },
+                    {
+                        "level": 2,
+                        "color": "#980104"
+                    },
+                    {
+                        "level": 4,
+                        "color": "#359154"
+                    }
+                ],
+                "nodes": [
+                    {
+                        "id": "Shareholders"
+                    },
+                    {
+                        "id": "Board"
+                    },
+                    {
+                        "id": "CEO"
+                    },
+                    {
+                        "id": "HR",
+                        "column": 3,
+                        "offset": "75%"
+                    },
+                    {
+                        "id": "CTO",
+                        "column": 4,
+                        "layout": "hanging"
+                    },
+                    {
+                        "id": "CPO",
+                        "column": 4
+                    },
+                    {
+                        "id": "CSO",
+                        "column": 4,
+                        "layout": "hanging"
+                    },
+                    {
+                        "id": "CMO",
+                        "column": 4,
+                        "layout": "hanging"
+                    },
+                    {
+                        "id": "Product",
+                        "name": "Product developers"
+                    },
+                    {
+                        "id": "Web",
+                        "name": "General tech",
+                        "description": "Web developers, sys admin"
+                    },
+                    {
+                        "id": "Sales",
+                        "name": "Sales team"
+                    },
+                    {
+                        "id": "Market",
+                        "name": "Marketing team"
+                    }
+                ],
+                "colorByPoint": false,
+                "color": "#007ad0",
+                "dataLabels": {
+                    "color": "white"
+                },
+                "borderColor": "white",
+                "nodeWidth": 65
+            }
+        ],
+        "tooltip": {
+            "outside": true
+        },
+        "exporting": {
+            "allowHTML": true,
+            "sourceWidth": 800,
+            "sourceHeight": 600
+        }
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render an Organization Chart that visually represents the hierarchical structure of an organization. The chart is set to be inverted with a height of 600 pixels, which means the root node will be at the top, and the hierarchy will expand downwards. The title of the chart is 'Highcharts Org Chart'. The data series includes nodes and links that define the relationships between different levels of the organization. The nodes are styled with specific colors and data labels, and the links between nodes are styled with a light gray color. The chart also includes a tooltip that appears outside the chart area, providing additional information when hovering over nodes. The exporting options allow the chart to be exported with HTML support, and the source dimensions are set to 800x600 pixels."
+}

@@ -1,0 +1,124 @@
+{
+    "visualization_prompt": "Generate a lineargauge showing performance metrics using inverted axis orientation and plot band segmentation",
+    "visualization_code": {
+        "chart": {
+            "type": "lineargauge",
+            "inverted": true,
+            "marginLeft": 40,
+            "backgroundColor": "#2a2a2a",
+            "plotBorderWidth": 0
+        },
+        "title": {
+            "text": "Linear Gauge Chart",
+            "style": {
+                "color": "#FFFFFF",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "enabled": false
+            },
+            "tickLength": 0,
+            "lineWidth": 0
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 100,
+            "tickInterval": 10,
+            "labels": {
+                "style": {
+                    "color": "#FFFFFF",
+                    "fontSize": "14px"
+                },
+                "format": "{value}%"
+            },
+            "plotBands": [
+                {
+                    "from": 0,
+                    "to": 33,
+                    "color": "#003366",
+                    "label": {
+                        "text": "Low"
+                    }
+                },
+                {
+                    "from": 34,
+                    "to": 66,
+                    "color": "#0066cc",
+                    "label": {
+                        "text": "Medium"
+                    }
+                },
+                {
+                    "from": 67,
+                    "to": 100,
+                    "color": "#66ccff",
+                    "label": {
+                        "text": "High"
+                    }
+                }
+            ],
+            "title": {
+                "text": null
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y}%",
+                    "style": {
+                        "color": "#FFFFFF",
+                        "textOutline": "none"
+                    }
+                },
+                "borderWidth": 2,
+                "borderColor": "#FFFFFF"
+            }
+        },
+        "series": [
+            {
+                "name": "System Efficiency",
+                "data": [
+                    85
+                ],
+                "color": "#FFD700",
+                "tooltip": {
+                    "valueSuffix": "% efficiency"
+                }
+            },
+            {
+                "name": "Energy Loss",
+                "data": [
+                    36
+                ],
+                "color": "#FF4500",
+                "tooltip": {
+                    "valueSuffix": "% loss"
+                }
+            },
+            {
+                "name": "Capacity Utilization",
+                "data": [
+                    73
+                ],
+                "color": "#32CD32",
+                "tooltip": {
+                    "valueSuffix": "% utilized"
+                }
+            }
+        ],
+        "credits": {
+            "enabled": false
+        },
+        "exporting": {
+            "enabled": true
+        },
+        "legend": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "This 1-dimensional gauge visualization encodes three distinct performance metrics using position encoding along a vertical scale. The dark theme (background: #2a2a2a) with high-contrast white labels adheres to Cairo's visibility principles. Plot bands create categorical segmentation (Low/Medium/High) through sequential blue hues maintaining color constancy. Synthetic data points at 85, 36, and 73 demonstrate meaningful spread (\u03bc=64.67, \u03c3=25.17) across operational thresholds. Gold/orange/green series colors provide categorical distinction while maintaining accessibility. Tufte's data-ink ratio is optimized by removing non-essential gridlines and legend. Formatting follows D3-style percentage annotations with explicit unit suffixes in tooltips."
+}

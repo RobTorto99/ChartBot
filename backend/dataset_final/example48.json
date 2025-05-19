@@ -1,0 +1,157 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Revenue Trends'. The chart should have styled axes and labels with specific colors and font sizes. The data series should include 'Installation', 'Manufacturing', 'Sales & Distribution', 'Project Development', and 'Other' with their respective data. Custom colors should be used for each series. Additional configurations include setting chart margins, background, and legend.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "width": 800,
+            "backgroundColor": "#f8f8f8",
+            "marginTop": 50,
+            "marginBottom": 100
+        },
+        "title": {
+            "text": "Revenue Trends",
+            "style": {
+                "color": "#333333",
+                "fontSize": "24px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                2010,
+                2011,
+                2012,
+                2013,
+                2014,
+                2015,
+                2016,
+                2017
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "title": {
+                "text": "Year",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (USD)",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical",
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "14px"
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "pointStart": 2010,
+                "marker": {
+                    "enabled": false
+                },
+                "lineWidth": 2,
+                "enableMouseTracking": true
+            }
+        },
+        "series": [
+            {
+                "name": "Installation",
+                "data": [
+                    43934,
+                    52503,
+                    57177,
+                    69658,
+                    97031,
+                    119931,
+                    137133,
+                    154175
+                ],
+                "color": "#7cb5ec"
+            },
+            {
+                "name": "Manufacturing",
+                "data": [
+                    24916,
+                    24064,
+                    29742,
+                    29851,
+                    32490,
+                    30282,
+                    38121,
+                    40434
+                ],
+                "color": "#434348"
+            },
+            {
+                "name": "Sales & Distribution",
+                "data": [
+                    11744,
+                    17722,
+                    16005,
+                    19771,
+                    20185,
+                    24377,
+                    32147,
+                    39387
+                ],
+                "color": "#90ed7d"
+            },
+            {
+                "name": "Project Development",
+                "data": [
+                    null,
+                    null,
+                    7988,
+                    12169,
+                    15112,
+                    22452,
+                    34400,
+                    34227
+                ],
+                "color": "#f7a35c"
+            },
+            {
+                "name": "Other",
+                "data": [
+                    12908,
+                    5948,
+                    8105,
+                    11248,
+                    8989,
+                    11816,
+                    18274,
+                    18111
+                ],
+                "color": "#8085e9"
+            }
+        ],
+        "exporting": {
+            "showTable": true,
+            "allowHTML": true
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a spline chart with the title 'Revenue Trends'. The chart includes styled axes and labels with specific colors and font sizes. The data series consists of 'Installation', 'Manufacturing', 'Sales & Distribution', 'Project Development', and 'Other', each with their respective data points. Custom colors are assigned to each series to differentiate them visually. Additional configurations include setting the chart's width, background color, and margins. The legend is enabled and styled to match the overall theme. The exporting options allow for the display of a table and HTML content in the exported chart."
+}

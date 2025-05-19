@@ -1,0 +1,97 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a mixed line/pie chart showing weekly produce metrics and category totals using color-indexed series positioning",
+    "visualization_code": {
+        "chart": {
+            "styledMode": true
+        },
+        "title": {
+            "text": "Series and point color index"
+        },
+        "xAxis": {
+            "categories": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": null
+            },
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "11px"
+                }
+            }
+        },
+        "series": [
+            {
+                "type": "line",
+                "name": "Apples",
+                "data": [
+                    0,
+                    -1,
+                    1,
+                    0
+                ],
+                "colorIndex": 0
+            },
+            {
+                "type": "line",
+                "name": "Oranges",
+                "data": [
+                    1,
+                    2,
+                    6,
+                    7
+                ],
+                "colorIndex": 1
+            },
+            {
+                "type": "line",
+                "name": "Chilis",
+                "data": [
+                    1,
+                    1,
+                    3,
+                    2
+                ],
+                "colorIndex": 2
+            },
+            {
+                "type": "pie",
+                "name": "Totals",
+                "data": [
+                    {
+                        "name": "Chilis",
+                        "y": 6,
+                        "colorIndex": 2
+                    },
+                    {
+                        "name": "Oranges",
+                        "y": 16,
+                        "colorIndex": 1
+                    }
+                ],
+                "size": "30%",
+                "center": [
+                    "20%",
+                    "30%"
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}: {point.percentage:.1f}%"
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The visualization combines temporal line series with categorical pie proportions, creating a dual-perspective analytical view. The dataset contains 4-dimensional temporal data (4 days) across three produce categories, with pie totals summing to 22 units. Synthetic data maintains ordinal consistency (negative apple values indicating possible spoilage) and proportional accuracy in pie segments (Oranges: 72.7% share). The line/pie hybrid maximizes data-ink ratio by overlaying summary statistics directly on temporal patterns. Color indexing follows Cairo's preattentive processing principles, maintaining consistent hue associations across chart types. Positioning the pie at [20%,30%] preserves primary series visibility while providing immediate summary context. Data ranges show meaningful variation (Oranges \u03c3=2.86, Chilis \u03c3=0.82) with pie segment proportions mathematically precise (16:6 ratio)."
+}

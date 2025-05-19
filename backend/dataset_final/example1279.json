@@ -1,0 +1,181 @@
+{
+    "visualization_prompt": "Generate a combined scatter/line chart showing box-target relationships using Highcharts box positioning and synthetic distribution data",
+    "visualization_code": {
+        "chart": {
+            "type": "scatter",
+            "renderTo": "container",
+            "marginLeft": 80,
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Box Distribution Visualization"
+        },
+        "xAxis": {
+            "min": 0,
+            "max": 600,
+            "gridLineWidth": 0,
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "visible": false,
+            "min": 0,
+            "max": 300
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "name": "Centered Boxes",
+                "data": [
+                    {
+                        "x": 50,
+                        "y": 10,
+                        "size": 20,
+                        "align": 0.5,
+                        "target": 10
+                    },
+                    {
+                        "x": 130,
+                        "y": 10,
+                        "size": 40,
+                        "align": 0.5,
+                        "target": 30
+                    },
+                    {
+                        "x": 220,
+                        "y": 10,
+                        "size": 50,
+                        "align": 0.5,
+                        "target": 110
+                    },
+                    {
+                        "x": 320,
+                        "y": 10,
+                        "size": 100,
+                        "align": 0.5,
+                        "target": 300
+                    },
+                    {
+                        "x": 440,
+                        "y": 10,
+                        "size": 100,
+                        "align": 0.5,
+                        "target": 300
+                    },
+                    {
+                        "x": 560,
+                        "y": 10,
+                        "size": 100,
+                        "align": 0.5,
+                        "target": 330
+                    }
+                ],
+                "marker": {
+                    "symbol": "rect",
+                    "lineWidth": 1,
+                    "lineColor": "#7cb5ec",
+                    "width": "{point.size}",
+                    "height": 20,
+                    "radius": 0
+                }
+            },
+            {
+                "name": "Connectors",
+                "type": "line",
+                "data": [
+                    [
+                        50,
+                        55
+                    ],
+                    [
+                        10,
+                        55
+                    ],
+                    [
+                        130,
+                        55
+                    ],
+                    [
+                        30,
+                        55
+                    ],
+                    [
+                        220,
+                        55
+                    ],
+                    [
+                        110,
+                        55
+                    ],
+                    [
+                        320,
+                        55
+                    ],
+                    [
+                        300,
+                        55
+                    ],
+                    [
+                        440,
+                        55
+                    ],
+                    [
+                        300,
+                        55
+                    ],
+                    [
+                        560,
+                        55
+                    ],
+                    [
+                        330,
+                        55
+                    ]
+                ],
+                "color": "#7cb5ec",
+                "marker": {
+                    "enabled": false
+                },
+                "enableMouseTracking": false
+            }
+        ],
+        "annotations": [
+            {
+                "labels": [
+                    {
+                        "point": {
+                            "x": 610,
+                            "y": 25
+                        },
+                        "text": "Centered"
+                    },
+                    {
+                        "point": {
+                            "x": 610,
+                            "y": 125
+                        },
+                        "text": "Left"
+                    },
+                    {
+                        "point": {
+                            "x": 610,
+                            "y": 225
+                        },
+                        "text": "Right"
+                    }
+                ],
+                "labelOptions": {
+                    "backgroundColor": "none",
+                    "borderWidth": 0
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains 2D spatial coordinates with box dimensions (size) and target positions. Synthetic data maintains domain consistency with financial-style box positioning (\u03bc_size=78, \u03c3_size=34). The visualization combines scatter plots for box representations and line series for target connections, following Tufte's data-ink maximization. Cairo's perceptual principles are applied through position encoding and hue differentiation. Chart configuration uses \u03bc_target=230 with \u03c3_target=180 to create meaningful spatial relationships while maintaining visual discriminability between elements."
+}

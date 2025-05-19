@@ -1,0 +1,116 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly rainfall patterns using synthetic meteorological data with seasonal variance",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f0f8ff",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "Monthly Average Rainfall",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "crosshair": true
+        },
+        "yAxis": {
+            "title": {
+                "text": "Rainfall (mm)",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "tooltip": {
+            "formatter": "function () { return this.points.reduce(function (s, point) { return s + '<br/>' + point.series.name + ': ' + Highcharts.numberFormat(point.y,1) + 'mm'; }, '<b>' + this.x + '</b>'); }",
+            "shared": true
+        },
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "14px"
+            }
+        },
+        "series": [
+            {
+                "name": "Tropical Climate",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#008000",
+                "marker": {
+                    "enabledThreshold": 6
+                }
+            },
+            {
+                "name": "Mediterranean Climate",
+                "data": [
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4,
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5
+                ],
+                "color": "#ff6347",
+                "dashStyle": "ShortDot"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains two 12-dimensional time series representing monthly rainfall patterns. Synthetic data was generated with \u03bc=125.1mm (\u03c3=60.5mm) for Tropical Climate and \u03bc=125.1mm (\u03c3=56.2mm) for Mediterranean Climate, maintaining hydroclimatic plausibility through inverse seasonal distributions. The spline chart maximizes data-ink ratio by eliminating redundant gridlines while preserving temporal continuity. Cairo's perceptual principles are applied through discriminative color coding (#008000 for tropical, #ff6347 for Mediterranean) and proportional marker sizing. The dual-peak patterns in Series 1 (Jun-Sep monsoon) and Series 2 (Dec-Mar precipitation) demonstrate synthetic seasonality validated by \u03bc\u00b12\u03c3 ranges matching WMO rainfall intensity classifications."
+}

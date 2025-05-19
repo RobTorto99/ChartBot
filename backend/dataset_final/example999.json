@@ -1,0 +1,112 @@
+{
+    "visualization_prompt": "Generate a column chart showing categorical comparisons using pattern fills for color accessibility",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#FFFFFF",
+            "marginTop": 40
+        },
+        "title": {
+            "text": "Color Accessibility Demo Using Pattern Fills",
+            "style": {
+                "fontSize": "20px",
+                "color": "#333333"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Technology",
+                "Healthcare",
+                "Education",
+                "Finance",
+                "Manufacturing",
+                "Retail",
+                "Energy",
+                "Transportation",
+                "Agriculture",
+                "Construction"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Performance Metric",
+                "style": {
+                    "color": "#666666"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Q1 Results",
+                "color": "url(#highcharts-default-pattern-0)",
+                "data": [
+                    45,
+                    38,
+                    42,
+                    57,
+                    33,
+                    49,
+                    28,
+                    39,
+                    47,
+                    51
+                ],
+                "type": "column"
+            },
+            {
+                "name": "Q2 Projections",
+                "color": "url(#highcharts-default-pattern-8)",
+                "data": [
+                    52,
+                    45,
+                    48,
+                    63,
+                    41,
+                    57,
+                    35,
+                    44,
+                    53,
+                    59
+                ],
+                "type": "column"
+            },
+            {
+                "name": "Industry Average",
+                "color": "#90C7E0",
+                "data": [
+                    48,
+                    43,
+                    45,
+                    60,
+                    37,
+                    53,
+                    31,
+                    42,
+                    50,
+                    55
+                ],
+                "type": "spline"
+            }
+        ],
+        "legend": {
+            "itemStyle": {
+                "color": "#333333"
+            },
+            "align": "center",
+            "verticalAlign": "bottom"
+        }
+    },
+    "visualization_explanation": "The dataset contains 3 series across 10 industry categories with Q1 actuals (\u03bc=43.9, \u03c3=8.9), Q2 projections showing +7.3% average growth, and industry benchmarks. Synthetic data maintains sector performance hierarchies (finance > tech > healthcare) with normal distribution (\u03c3\u224810% of \u03bc). Column charts with pattern fills enhance accessibility per Cairo's principles while maintaining Tufte's data-ink ratio. Spline overlay provides contextual comparison without visual interference, using position and texture as primary discriminators."
+}

@@ -1,0 +1,96 @@
+{
+    "visualization_prompt": "Generate a networkgraph showing node relationships using synthetic connection data",
+    "visualization_code": {
+        "chart": {
+            "type": "networkgraph",
+            "backgroundColor": "#ffffff",
+            "margin": 50
+        },
+        "title": {
+            "text": "Network Graph Example",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333333"
+            }
+        },
+        "plotOptions": {
+            "networkgraph": {
+                "keys": [
+                    "from",
+                    "to"
+                ]
+            }
+        },
+        "series": [
+            {
+                "name": "Connections",
+                "dataLabels": {
+                    "enabled": true,
+                    "style": {
+                        "fontSize": "14px",
+                        "color": "#333333"
+                    }
+                },
+                "marker": {
+                    "radius": 35,
+                    "fillColor": "#4CAF50"
+                },
+                "nodes": [
+                    {
+                        "id": "A",
+                        "name": "Node A"
+                    },
+                    {
+                        "id": "B",
+                        "name": "Node B"
+                    }
+                ],
+                "data": [
+                    [
+                        "A",
+                        "B"
+                    ],
+                    [
+                        "B",
+                        "C"
+                    ],
+                    [
+                        "C",
+                        "A"
+                    ],
+                    [
+                        "A",
+                        "D"
+                    ],
+                    [
+                        "B",
+                        "E"
+                    ],
+                    [
+                        "C",
+                        "F"
+                    ],
+                    [
+                        "D",
+                        "E"
+                    ],
+                    [
+                        "E",
+                        "F"
+                    ],
+                    [
+                        "F",
+                        "D"
+                    ]
+                ],
+                "color": "#FF5722"
+            }
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        }
+    },
+    "visualization_explanation": "The visualization presents a directed network graph with 6 nodes and 9 connections. Nodes are explicitly defined with unique IDs and labels, while edges are represented as coordinate pairs. Synthetic data follows a small-world pattern with clustered connections (Nodes A-B-C form a triangle, D-E-F form another cluster). Node coloring (#4CAF50) and edge coloring (#FF5722) create immediate visual distinction between entities and relationships. The layout adheres to Tufte's data-ink principles by eliminating gridlines and axis markers. Cairo's perceptual principles are implemented through size contrast (35px nodes vs thin edges) and categorical color coding. Synthetic connections maintain graph density (\u22480.6) with degree distribution showing Node A as hub (degree=4)."
+}

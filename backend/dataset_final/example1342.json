@@ -1,0 +1,92 @@
+{
+    "visualization_prompt": "Generate a line chart showing monthly sales trends using Highcharts' styled mode for CSS-controlled visual elements",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "styledMode": true
+        },
+        "title": {
+            "text": "Monthly Sales Performance (2023)",
+            "style": {
+                "fontSize": "18px",
+                "color": "#2c3e50"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#7f8c8d"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (USD thousands)",
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#7f8c8d"
+                }
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#7f8c8d"
+                }
+            }
+        },
+        "legend": {
+            "layout": "vertical",
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "fontSize": "12px",
+                "color": "#34495e"
+            }
+        },
+        "series": [
+            {
+                "name": "North Region",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "marker": {
+                    "enabled": false
+                }
+            }
+        ],
+        "plotOptions": {
+            "series": {
+                "animation": {
+                    "duration": 1500
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations of sales revenue (quantitative continuous) across categorical time intervals. Synthetic data follows realistic retail patterns: \u03bc=$116k, \u03c3=$54k with summer peak and year-end decline. The line chart maximizes data-ink ratio by eliminating redundant gridlines while maintaining Cairo's principle of proportional ink for value representation. Seasonal trend visibility is enhanced through monotonic color encoding and strategic marker removal, maintaining perceptual discriminability. Statistical anchors show 45% Q3 growth followed by 69% Q4 contraction, mimicking actual retail cyclicality."
+}

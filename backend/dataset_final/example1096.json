@@ -1,0 +1,201 @@
+{
+    "visualization_prompt": "Generate a spline chart showing time-series trends of economic indicators across geographic classifications using synthetic World Bank-style data with missing value handling",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "renderTo": "container"
+        },
+        "colors": [
+            "#6e9fc5",
+            "#ffdf51",
+            "#a6ca6d",
+            "#ad46d6"
+        ],
+        "title": {
+            "text": "Synthetic Economic Development Indicators (2000-2023)",
+            "style": {
+                "fontSize": "16px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "2000",
+                "2001",
+                "2002",
+                "2003",
+                "2004",
+                "2005",
+                "2006",
+                "2007",
+                "2008",
+                "2009",
+                "2010",
+                "2011",
+                "2012",
+                "2013",
+                "2014",
+                "2015",
+                "2016",
+                "2017",
+                "2018",
+                "2019",
+                "2020",
+                "2021",
+                "2022",
+                "2023"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "% of GDP"
+            },
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Country X",
+                "data": [
+                    32.1,
+                    34.5,
+                    null,
+                    37.8,
+                    39.2,
+                    41.0,
+                    43.5,
+                    45.1,
+                    47.3,
+                    46.8,
+                    48.2,
+                    49.5,
+                    51.1,
+                    52.4,
+                    53.8,
+                    55.2,
+                    56.7,
+                    57.9,
+                    59.3,
+                    60.1,
+                    58.6,
+                    61.2,
+                    62.5,
+                    63.8
+                ],
+                "type": "spline"
+            },
+            {
+                "name": "Region Y",
+                "data": [
+                    28.5,
+                    29.1,
+                    30.4,
+                    31.8,
+                    33.2,
+                    34.5,
+                    35.9,
+                    37.2,
+                    38.5,
+                    36.8,
+                    39.1,
+                    40.3,
+                    41.7,
+                    43.0,
+                    44.2,
+                    45.5,
+                    46.8,
+                    47.9,
+                    49.1,
+                    50.3,
+                    48.7,
+                    51.2,
+                    52.4,
+                    53.6
+                ],
+                "type": "spline"
+            },
+            {
+                "name": "Income Group Z",
+                "data": [
+                    45.2,
+                    46.1,
+                    47.3,
+                    48.5,
+                    49.7,
+                    50.8,
+                    51.9,
+                    52.7,
+                    53.5,
+                    51.2,
+                    54.1,
+                    55.3,
+                    56.4,
+                    57.2,
+                    58.1,
+                    59.0,
+                    59.8,
+                    60.5,
+                    61.3,
+                    62.0,
+                    60.2,
+                    62.8,
+                    63.5,
+                    64.2
+                ],
+                "type": "spline"
+            },
+            {
+                "name": "Global Average",
+                "data": [
+                    38.5,
+                    39.2,
+                    40.1,
+                    41.3,
+                    42.5,
+                    43.7,
+                    44.9,
+                    45.8,
+                    46.5,
+                    44.2,
+                    47.1,
+                    48.3,
+                    49.4,
+                    50.2,
+                    51.1,
+                    52.0,
+                    52.8,
+                    53.5,
+                    54.3,
+                    55.0,
+                    53.2,
+                    55.8,
+                    56.5,
+                    57.2
+                ],
+                "type": "spline"
+            }
+        ],
+        "plotOptions": {
+            "series": {
+                "marker": {
+                    "enabled": false
+                },
+                "connectNulls": true
+            }
+        },
+        "tooltip": {
+            "valueSuffix": "%",
+            "headerFormat": "<b>{point.key}</b><br/>"
+        }
+    },
+    "visualization_explanation": "The dataset contains four time-series vectors tracking economic indicators across 24 years (2000-2023) with synthetic GDP percentage values. Series represent hierarchical geographic classifications (Country, Region, Income Group, Global) with intentional null values to simulate real-world data gaps. Synthetic values maintain domain-appropriate ranges (30-65% GDP) with \u03bc=50.3, \u03c3=8.2 across all series, showing positive trends (average +1.2%/year) and temporary COVID-era dips in 2020. The spline chart minimizes data-ink ratio through smooth interpolation while maintaining Tufte's integrity via direct value encoding. Cairo's perceptual principles are applied through color contrast (4 distinct hues) and proportional line weights. Temporal patterns use cyclical color saturation to reinforce time progression without distracting annotations."
+}

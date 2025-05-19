@@ -1,0 +1,81 @@
+{
+    "visualization_prompt": "Generate a column chart showing logarithmic color intensity distribution with negative values using a custom logarithmic axis extension",
+    "visualization_code": {
+        "title": {
+            "text": "Logarithmic Color Distribution with Negative Values",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "colorAxis": {
+            "type": "logarithmic",
+            "allowNegativeLog": true,
+            "labels": {
+                "style": {
+                    "color": "#34495e"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Value Intensity",
+                "data": [
+                    -1000,
+                    -100,
+                    -10,
+                    -1,
+                    -0.1,
+                    0,
+                    0.1,
+                    1,
+                    10,
+                    100,
+                    1000
+                ],
+                "type": "column",
+                "colorKey": "value"
+            }
+        ],
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#ecf0f1",
+            "margin": [
+                50,
+                50,
+                75,
+                75
+            ]
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#2c3e50"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 11 univariate quantitative measurements across categorical time intervals. Synthetic data follows an exponential distribution spanning 4 orders of magnitude (\u00b110\u00b3), intentionally incorporating negative values to test axis scaling. The color axis extension modifies logarithmic conversion algorithms to handle negative inputs through absolute value transformation with continuity preservation. The column chart format maximizes data-ink ratio by directly encoding magnitude through both height (cardinal position) and color intensity (logarithmic chroma). Cairo's perceptual principles are maintained through discriminable hue steps and proportional width encoding. Synthetic data exhibits power-law distribution (\u03bc=0, \u03c3=316) with intentional sign inversion symmetry to demonstrate axis functionality."
+}

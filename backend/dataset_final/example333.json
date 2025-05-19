@@ -1,0 +1,122 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object that renders a column chart with a color axis. The chart should have a title 'Column chart with color axis'. The x-axis should display categories: 'Apples', 'Oranges', 'Pears', 'Bananas', 'Plums'. The color axis should range from 0 to 30. The chart should include two series: 'Jane' and 'John', each with corresponding data points and color values. The chart should have custom colors and additional configurations such as chart margins, background, and legend.",
+    "visualization_code": {
+        "chart": {
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 80,
+            "marginBottom": 80
+        },
+        "title": {
+            "text": "Column chart with color axis",
+            "style": {
+                "color": "#333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Apples",
+                "Oranges",
+                "Pears",
+                "Bananas",
+                "Plums"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Value",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "colorAxis": {
+            "min": 0,
+            "max": 30,
+            "minColor": "#e74c3c",
+            "maxColor": "#3498db"
+        },
+        "series": [
+            {
+                "type": "column",
+                "colorKey": "colorValue",
+                "name": "Jane",
+                "data": [
+                    {
+                        "y": 3,
+                        "colorValue": 3
+                    },
+                    {
+                        "y": 2,
+                        "colorValue": 15
+                    },
+                    {
+                        "y": 1,
+                        "colorValue": 10
+                    },
+                    {
+                        "y": 3,
+                        "colorValue": 0
+                    },
+                    {
+                        "y": 4,
+                        "colorValue": 24
+                    }
+                ]
+            },
+            {
+                "type": "column",
+                "colorKey": "colorValue",
+                "name": "John",
+                "data": [
+                    {
+                        "y": 2,
+                        "colorValue": 11
+                    },
+                    {
+                        "y": 3,
+                        "colorValue": 29
+                    },
+                    {
+                        "y": 5,
+                        "colorValue": 16
+                    },
+                    {
+                        "y": 7,
+                        "colorValue": 23
+                    },
+                    {
+                        "y": 6,
+                        "colorValue": 5
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#555",
+                "fontSize": "14px"
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "borderWidth": 0
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a column chart with a color axis. The chart is titled 'Column chart with color axis' and includes categories on the x-axis representing different fruits. The color axis ranges from 0 to 30, with custom colors for the minimum and maximum values. The chart displays two series: 'Jane' and 'John', each with data points that have corresponding color values. The chart's axes and labels are styled with specific colors and font sizes. Additionally, the chart includes a legend, custom background color, and adjusted margins for better visual presentation."
+}

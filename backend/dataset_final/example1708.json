@@ -1,0 +1,116 @@
+{
+    "visualization_prompt": "Generate a polar column chart showing Winter Olympic medal distributions across countries using inverted axes and pattern fills for categorical distinction",
+    "visualization_code": {
+        "colors": [
+            "#FFD700",
+            "#C0C0C0",
+            "#CD7F32"
+        ],
+        "chart": {
+            "type": "column",
+            "inverted": true,
+            "polar": true
+        },
+        "title": {
+            "text": "Winter Olympic Medals Distribution (Top 10 Countries)"
+        },
+        "xAxis": {
+            "categories": [
+                "Norway",
+                "United States",
+                "Germany",
+                "Canada",
+                "Austria",
+                "Sweden",
+                "Switzerland",
+                "Netherlands",
+                "Russia",
+                "France"
+            ],
+            "labels": {
+                "formatter": "function() { return `${this.value} <span class='f16'><span class='flag ${country[this.value]}'></span></span>`; }",
+                "style": {
+                    "fontSize": "11px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Total Medals"
+            },
+            "tickInterval": 50,
+            "min": 0,
+            "max": 400
+        },
+        "series": [
+            {
+                "name": "Gold Medals",
+                "data": [
+                    132,
+                    105,
+                    92,
+                    73,
+                    64,
+                    57,
+                    49,
+                    42,
+                    38,
+                    33
+                ],
+                "type": "column",
+                "color": {
+                    "patternIndex": 0
+                },
+                "borderColor": "#668FF0"
+            },
+            {
+                "name": "Silver Medals",
+                "data": [
+                    125,
+                    110,
+                    86,
+                    64,
+                    81,
+                    68,
+                    61,
+                    55,
+                    47,
+                    41
+                ],
+                "type": "column",
+                "color": {
+                    "patternIndex": 1
+                },
+                "borderColor": "#888"
+            },
+            {
+                "name": "Bronze Medals",
+                "data": [
+                    111,
+                    90,
+                    60,
+                    62,
+                    87,
+                    73,
+                    65,
+                    58,
+                    51,
+                    44
+                ],
+                "type": "column",
+                "color": {
+                    "patternIndex": 2
+                },
+                "borderColor": "#31AC2F"
+            }
+        ],
+        "plotOptions": {
+            "column": {
+                "stacking": "normal",
+                "groupPadding": 0.1,
+                "pointPadding": 0.05
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three quantitative variables (medal counts) across 10 categorical countries (nominal scale). Synthetic data extends the original 5-nation dataset using two statistical anchors: 1) Linear decay trend (\u03bc_gold=69.5, \u03c3_gold=32.8) maintaining historical leader positions, 2) Proportional allocation between medal types (55% gold/silver correlation). The polar layout leverages Cairo's magnitude-angle principle for improved small-multiple comparisons, while pattern fills with consistent border colors maintain Tufte's data-ink ratio across stacked categories. Axis inversion optimizes label readability through angular text alignment in constrained radial space."
+}

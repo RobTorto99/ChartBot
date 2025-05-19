@@ -1,0 +1,81 @@
+{
+    "visualization_prompt": "Generate a solid gauge chart showing real-time percentage fluctuations between -50% and 50% using dynamic value updates and color-coded danger zones",
+    "visualization_code": {
+        "chart": {
+            "type": "gauge",
+            "plotBackgroundColor": null,
+            "plotBackgroundImage": null,
+            "plotBorderWidth": 0,
+            "plotShadow": false
+        },
+        "title": {
+            "text": "Market Sentiment Indicator"
+        },
+        "pane": {
+            "startAngle": -110,
+            "endAngle": 110,
+            "background": [
+                {
+                    "backgroundColor": "#f0f8ff",
+                    "borderWidth": 0,
+                    "outerRadius": "115%",
+                    "innerRadius": "85%"
+                }
+            ]
+        },
+        "yAxis": {
+            "min": -50,
+            "max": 50,
+            "title": {
+                "text": "% Change"
+            },
+            "plotBands": [
+                {
+                    "from": -50,
+                    "to": -30,
+                    "color": "#ff6b6b",
+                    "thickness": 20
+                },
+                {
+                    "from": -30,
+                    "to": 30,
+                    "color": "#d3e9f7",
+                    "thickness": 20
+                },
+                {
+                    "from": 30,
+                    "to": 50,
+                    "color": "#6fbe6b",
+                    "thickness": 20
+                }
+            ],
+            "labels": {
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "12px"
+                },
+                "distance": 25
+            }
+        },
+        "series": [
+            {
+                "name": "Sentiment",
+                "data": [
+                    0
+                ],
+                "dataLabels": {
+                    "format": "{y}%",
+                    "borderColor": "#3498db",
+                    "style": {
+                        "fontSize": "20px"
+                    }
+                },
+                "dial": {
+                    "backgroundColor": "#2980b9",
+                    "rearLength": "5%"
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The gauge visualization employs a circular metric display with three distinct color zones: red (-50% to -30%) for negative sentiment, light blue (-30% to 30%) for neutral, and green (30% to 50%) for positive. Synthetic data follows a mean-reverting pattern (\u03bc=0, \u03c3=15) with bounded random walk dynamics. The solid gauge format maximizes data-ink ratio by eliminating unnecessary gridlines while maintaining clear color anchoring. Perceptual effectiveness is achieved through pre-attentive color coding and proportional arc lengths, with value updates constrained to \u0394\u00b15% per interval to simulate realistic market movement patterns."
+}

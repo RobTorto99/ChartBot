@@ -1,0 +1,86 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render an area chart with the title 'stacking: normal, connectNulls: true'. The chart should have two data series, each with some null values that should be connected. The chart should use the 'normal' stacking option. The axes and labels should be styled with specific colors and font sizes. Additionally, the chart should have custom colors for the series and other configurations such as chart margins, background, and legend.",
+    "visualization_code": {
+        "chart": {
+            "backgroundColor": "#F9F9F9",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "stacking: normal, connectNulls: true",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "plotOptions": {
+            "area": {
+                "connectNulls": true,
+                "stacking": "normal"
+            }
+        },
+        "series": [
+            {
+                "type": "area",
+                "name": "Series 1",
+                "data": [
+                    1,
+                    1,
+                    null,
+                    1,
+                    1,
+                    1
+                ],
+                "color": "#FF7F50"
+            },
+            {
+                "type": "area",
+                "name": "Series 2",
+                "data": [
+                    1,
+                    1,
+                    1,
+                    null,
+                    1,
+                    1
+                ],
+                "color": "#87CEEB"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "12px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render an area chart with specific styling and data series. The chart type is set to 'area', and the title is styled with a dark gray color and a font size of 18px. The x-axis and y-axis labels are styled with a lighter gray color and a font size of 12px, while the y-axis title is slightly larger at 14px. The plot options include connecting null values and stacking the areas in a 'normal' manner. The data series are named 'Series 1' and 'Series 2', each with specific data points and custom colors. The legend is enabled and styled with a dark gray color and a font size of 12px. The chart background is set to a light gray color, and the margins are adjusted to provide better spacing around the chart elements."
+}

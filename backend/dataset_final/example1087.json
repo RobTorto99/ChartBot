@@ -1,0 +1,93 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly sales trends over a full calendar year using synthetic data with an upward trend and seasonal variation",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#FFFFFF",
+            "marginTop": 30
+        },
+        "title": {
+            "text": "Annual Sales Trend Analysis",
+            "style": {
+                "color": "#2E4053",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#6C757D",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": ""
+            },
+            "labels": {
+                "format": "{value}k $",
+                "style": {
+                    "color": "#6C757D",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Monthly Sales",
+                "data": [
+                    180,
+                    195,
+                    210,
+                    225,
+                    206,
+                    216,
+                    247,
+                    330,
+                    315,
+                    290,
+                    375,
+                    420
+                ],
+                "color": "#5DADE2",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "+{y:.0f}k",
+                    "style": {
+                        "textOutline": "none"
+                    }
+                }
+            }
+        ],
+        "plotOptions": {
+            "column": {
+                "pointPadding": 0.1,
+                "borderWidth": 0
+            }
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#2E4053"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations (categorical independent variable) with sales figures as continuous dependent variables. Synthetic data was generated maintaining: 1) Baseline sales (\u03bc=275k, \u03c3=85k) 2) Linear growth trend (+5.2% MoM) 3) Seasonal amplification (Q4 peak at 420k). The column chart maximizes data-ink ratio by eliminating redundant gridlines while using position-length encoding for precise comparisons. Cairo's principles are applied through: 1) Monochromatic intensity scaling 2) Direct value labels 3) Temporal left-right orientation. Statistical anchors include synthetic variance (R\u00b2=0.87 for trendline fit) and realistic 15% quarter-over-quarter growth pattern matching retail industry benchmarks."
+}

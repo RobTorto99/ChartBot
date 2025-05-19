@@ -1,0 +1,105 @@
+{
+    "visualization_prompt": "Generate a lineargauge showing performance metrics using inverted layout and thematic color bands",
+    "visualization_code": {
+        "chart": {
+            "type": "lineargauge",
+            "inverted": true,
+            "marginLeft": 20,
+            "plotBorderWidth": 0.5
+        },
+        "title": {
+            "text": "Linear Gauge Chart",
+            "style": {
+                "color": "#FFFFFF"
+            }
+        },
+        "xAxis": {
+            "tickWidth": 0,
+            "lineWidth": 0,
+            "labels": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 100,
+            "tickInterval": 10,
+            "labels": {
+                "style": {
+                    "color": "#FFFFFF"
+                }
+            },
+            "plotBands": [
+                {
+                    "from": 0,
+                    "to": 20,
+                    "color": "#003366"
+                },
+                {
+                    "from": 20,
+                    "to": 70,
+                    "color": "#0066CC"
+                },
+                {
+                    "from": 70,
+                    "to": 100,
+                    "color": "#3399FF"
+                }
+            ]
+        },
+        "series": [
+            {
+                "name": "Target Metric",
+                "data": [
+                    85
+                ],
+                "borderWidth": 1,
+                "borderColor": "#FFFFFF",
+                "dataLabels": {
+                    "enabled": true,
+                    "style": {
+                        "color": "#FFFFFF"
+                    }
+                }
+            },
+            {
+                "name": "Baseline Metric",
+                "data": [
+                    36
+                ],
+                "borderWidth": 1,
+                "borderColor": "#FFFFFF",
+                "dataLabels": {
+                    "enabled": true,
+                    "style": {
+                        "color": "#FFFFFF"
+                    }
+                }
+            },
+            {
+                "name": "Current Metric",
+                "data": [
+                    73
+                ],
+                "borderWidth": 1,
+                "borderColor": "#FFFFFF",
+                "dataLabels": {
+                    "enabled": true,
+                    "style": {
+                        "color": "#FFFFFF"
+                    }
+                }
+            }
+        ],
+        "credits": {
+            "enabled": false
+        },
+        "exporting": {
+            "enabled": true
+        },
+        "legend": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The gauge uses three distinct series to represent different performance states (Target/Baseline/Current) as single data points. While synthetic, the values 36/73/85 maintain domain validity (0-100 scale for percentages) and intentional spread (\u03bc=64.6, \u03c3=24.3). The inverted layout and blue gradient plot bands adhere to Cairo's intensity perception principles. White labels maximize contrast against the dark background, optimizing Tufte's data-ink ratio. Column positioning leverages pre-attentive length encoding for immediate value comparison."
+}

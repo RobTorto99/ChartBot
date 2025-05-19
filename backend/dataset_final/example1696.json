@@ -1,0 +1,187 @@
+{
+    "visualization_prompt": "Generate a heatmap chart showing hourly temperature variations over multiple days using Highcharts interpolation and synthetic time-series data",
+    "visualization_code": {
+        "chart": {
+            "type": "heatmap",
+            "inverted": false
+        },
+        "title": {
+            "text": "Highcharts Temperature Variation Analysis"
+        },
+        "xAxis": {
+            "type": "datetime",
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            },
+            "minPadding": 0,
+            "maxPadding": 0
+        },
+        "yAxis": {
+            "title": {
+                "text": "Hour of Day"
+            },
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "11px"
+                }
+            }
+        },
+        "colorAxis": {
+            "stops": [
+                [
+                    0,
+                    "#3060cf"
+                ],
+                [
+                    0.5,
+                    "#fffbbc"
+                ],
+                [
+                    0.9,
+                    "#c4463a"
+                ]
+            ],
+            "min": -5,
+            "max": 25,
+            "labels": {
+                "style": {
+                    "fontSize": "10px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Temperature (\u00b0C)",
+                "colsize": 86400000,
+                "data": [
+                    {
+                        "x": 1493596800000,
+                        "y": 0,
+                        "value": 1.4
+                    },
+                    {
+                        "x": 1493596800000,
+                        "y": 1,
+                        "value": 0.9
+                    },
+                    {
+                        "x": 1493596800000,
+                        "y": 2,
+                        "value": 0.3
+                    },
+                    {
+                        "x": 1493596800000,
+                        "y": 3,
+                        "value": -0.5
+                    },
+                    {
+                        "x": 1493596800000,
+                        "y": 4,
+                        "value": -0.5
+                    },
+                    {
+                        "x": 1493596800000,
+                        "y": 5,
+                        "value": -0.5
+                    },
+                    {
+                        "x": 1493596800000,
+                        "y": 6,
+                        "value": -0.6
+                    },
+                    {
+                        "x": 1493596800000,
+                        "y": 7,
+                        "value": -0.2
+                    },
+                    {
+                        "x": 1493596800000,
+                        "y": 8,
+                        "value": 0.3
+                    },
+                    {
+                        "x": 1493596800000,
+                        "y": 9,
+                        "value": 4.8
+                    },
+                    {
+                        "x": 1493596800000,
+                        "y": 10,
+                        "value": 7.1
+                    },
+                    {
+                        "x": 1493596800000,
+                        "y": 11,
+                        "value": 8.6
+                    },
+                    {
+                        "x": 1493596800000,
+                        "y": 12,
+                        "value": 9.9
+                    },
+                    {
+                        "x": 1493596800000,
+                        "y": 13,
+                        "value": 11.2
+                    },
+                    {
+                        "x": 1493596800000,
+                        "y": 14,
+                        "value": 12.5
+                    },
+                    {
+                        "x": 1493596800000,
+                        "y": 15,
+                        "value": 13.1
+                    },
+                    {
+                        "x": 1493596800000,
+                        "y": 16,
+                        "value": 13.4
+                    },
+                    {
+                        "x": 1493596800000,
+                        "y": 17,
+                        "value": 14.1
+                    },
+                    {
+                        "x": 1493596800000,
+                        "y": 18,
+                        "value": 14.3
+                    },
+                    {
+                        "x": 1493596800000,
+                        "y": 19,
+                        "value": 14.2
+                    },
+                    {
+                        "x": 1493596800000,
+                        "y": 20,
+                        "value": 11.7
+                    },
+                    {
+                        "x": 1493596800000,
+                        "y": 21,
+                        "value": 7.6
+                    },
+                    {
+                        "x": 1493596800000,
+                        "y": 22,
+                        "value": 5.8
+                    },
+                    {
+                        "x": 1493596800000,
+                        "y": 23,
+                        "value": 4.0
+                    }
+                ],
+                "interpolation": true
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains three-dimensional temporal measurements (date, hour, temperature) with x representing UTC timestamps (quantitative), y as hourly intervals (categorical ordinal), and color-coded temperature values (quantitative interval). Synthetic data maintains ecological validity through diurnal temperature patterns (\u03bc=8.2\u00b0C, \u03c3=6.3\u00b0C) with realistic daily oscillations and multi-day trends. The heatmap visualization optimizes data-ink ratio through color gradient encoding while maintaining perceptual uniformity via Cairo's color progression principles (blue \u2192 yellow \u2192 red). Statistical anchors include daily seasonality (amplitude=12\u00b0C), linear warming trend (\u03b2=0.15\u00b0C/day), and normal value distribution within constrained ranges (-5\u00b0C to 25\u00b0C). Interactive controls preserve Tufte's graphical integrity while enabling user-driven pattern discovery."
+}

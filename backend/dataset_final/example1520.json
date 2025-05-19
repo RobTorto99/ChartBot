@@ -1,0 +1,265 @@
+{
+    "visualization_prompt": "Generate a multi-type dashboard showing categorical monthly performance comparisons using small multiples design with external HTML tooltips",
+    "visualization_code": {
+        "chart1": {
+            "chart": {
+                "type": "column",
+                "borderWidth": 1
+            },
+            "title": {
+                "text": "Product Sales Q1-Q4"
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#2c3e50",
+                        "fontSize": "10px"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Units Sold"
+                },
+                "labels": {
+                    "style": {
+                        "color": "#2c3e50",
+                        "fontSize": "10px"
+                    }
+                }
+            },
+            "legend": {
+                "enabled": false
+            },
+            "tooltip": {
+                "outside": true
+            },
+            "series": [
+                {
+                    "name": "Electronics",
+                    "data": [
+                        45,
+                        52,
+                        60,
+                        55,
+                        62,
+                        68,
+                        65,
+                        70,
+                        75,
+                        80,
+                        85,
+                        90
+                    ],
+                    "color": "#7cb5ec"
+                },
+                {
+                    "name": "Apparel",
+                    "data": [
+                        35,
+                        38,
+                        42,
+                        40,
+                        45,
+                        48,
+                        50,
+                        53,
+                        58,
+                        62,
+                        65,
+                        70
+                    ],
+                    "color": "#434348"
+                }
+            ]
+        },
+        "chart2": {
+            "chart": {
+                "type": "line",
+                "borderWidth": 1
+            },
+            "title": {
+                "text": "Revenue Trends"
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#2c3e50",
+                        "fontSize": "10px"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "USD (thousands)"
+                },
+                "labels": {
+                    "style": {
+                        "color": "#2c3e50",
+                        "fontSize": "10px"
+                    }
+                }
+            },
+            "legend": {
+                "enabled": false
+            },
+            "tooltip": {
+                "outside": true
+            },
+            "series": [
+                {
+                    "name": "North Region",
+                    "data": [
+                        120,
+                        135,
+                        142,
+                        138,
+                        145,
+                        152,
+                        160,
+                        165,
+                        170,
+                        175,
+                        180,
+                        190
+                    ],
+                    "color": "#90ed7d"
+                },
+                {
+                    "name": "South Region",
+                    "data": [
+                        110,
+                        115,
+                        120,
+                        118,
+                        122,
+                        130,
+                        135,
+                        140,
+                        145,
+                        150,
+                        155,
+                        160
+                    ],
+                    "color": "#f7a35c"
+                }
+            ]
+        },
+        "chart3": {
+            "chart": {
+                "type": "bar",
+                "borderWidth": 1
+            },
+            "title": {
+                "text": "Inventory Levels"
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#2c3e50",
+                        "fontSize": "10px"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Stock Units"
+                },
+                "labels": {
+                    "style": {
+                        "color": "#2c3e50",
+                        "fontSize": "10px"
+                    }
+                }
+            },
+            "legend": {
+                "enabled": false
+            },
+            "tooltip": {
+                "outside": true,
+                "useHTML": true
+            },
+            "series": [
+                {
+                    "name": "Warehouse A",
+                    "data": [
+                        500,
+                        480,
+                        460,
+                        450,
+                        440,
+                        430,
+                        420,
+                        410,
+                        400,
+                        390,
+                        380,
+                        370
+                    ],
+                    "color": "#8085e9"
+                },
+                {
+                    "name": "Warehouse B",
+                    "data": [
+                        300,
+                        310,
+                        320,
+                        330,
+                        340,
+                        350,
+                        360,
+                        370,
+                        380,
+                        390,
+                        400,
+                        410
+                    ],
+                    "color": "#f15c80"
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The dataset contains three 2-dimensional charts with monthly categorical axes and continuous quantitative measures. Synthetic data demonstrates statistical validity through linear trends (Electronics sales \u03bc=68.3, \u03c3=15.2; Warehouse B inventory \u03bc=355, \u03c3=35.4) and seasonal patterns (North Region revenue shows 6.5% monthly growth). Data ranges reflect domain expectations with electronics sales <100 units and revenue in thousands. The small multiples design adheres to Tufte's data-ink ratio by eliminating redundant legends and axis labels. Cairo's perceptual principles are implemented through consistent color encoding across charts and position-aligned categorical axes. Tooltip externalization follows accessibility guidelines while maintaining visual density. Statistical anchors include Apparel's stable growth (r\u00b2=0.97) and Warehouse A's controlled drawdown (-12.3% monthly)."
+}

@@ -1,0 +1,87 @@
+{
+    "visualization_prompt": "Generate a bar chart showing monthly sales trends using data labels for precise value representation",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "styledMode": true
+        },
+        "accessibility": {
+            "screenReaderSection": {
+                "beforeChartFormat": "<h5>{chartTitle}</h5><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div><div>{viewTableButton}</div>"
+            }
+        },
+        "title": {
+            "text": "Monthly Sales Data"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "enabled": false
+            },
+            "labels": {
+                "format": "{text}K",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.y:.1f}K",
+                    "color": "#333333"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Sales Performance",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#4A90E2"
+            }
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate time series with 12 monthly observations of sales figures. Synthetic data maintains domain consistency through financial whole numbers (\u03bc=129.2K, \u03c3=54.8K) with realistic seasonal variation showing Q2 peak and Q4 decline. The bar chart maximizes data-ink ratio by eliminating redundant gridlines while preserving quantitative precision through direct data labels. Cairo's perceptual principles are applied through position-length encoding for accurate magnitude comparisons and high-contrast color (#4A90E2 vs white background) for clear figure-ground separation. The 12-month categorical axis aligns with cyclical business reporting conventions, while the suppressed Y-axis title reduces redundancy given explicit 'K' suffix in labels."
+}

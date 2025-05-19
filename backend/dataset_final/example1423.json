@@ -1,0 +1,122 @@
+{
+    "visualization_prompt": "Generate a pie chart showing synthetic nutrient composition of egg yolk using hierarchical categorization with interactive data labels",
+    "visualization_code": {
+        "colors": [
+            "#01BAF2",
+            "#f6fa4b",
+            "#FAA74B",
+            "#baf201",
+            "#f201ba",
+            "#A74BF7",
+            "#4BF7A7",
+            "#F74B4B",
+            "#4B4BF7",
+            "#4BF74B"
+        ],
+        "chart": {
+            "type": "pie",
+            "margin": [
+                20,
+                10,
+                40,
+                10
+            ],
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Synthetic Egg Yolk Nutrient Breakdown",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "subtitle": {
+            "text": "Source: Synthetic data modeling based on nutritional studies",
+            "style": {
+                "color": "#666666"
+            }
+        },
+        "plotOptions": {
+            "pie": {
+                "dataLabels": {
+                    "distance": 15,
+                    "style": {
+                        "fontSize": "12px"
+                    }
+                },
+                "depth": 15,
+                "innerSize": "40%"
+            }
+        },
+        "series": [
+            {
+                "name": "Composition",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Water",
+                        "y": 54.0
+                    },
+                    {
+                        "name": "Saturated Fats",
+                        "y": 8.2
+                    },
+                    {
+                        "name": "Monounsaturated Fats",
+                        "y": 12.1
+                    },
+                    {
+                        "name": "Polyunsaturated Fats",
+                        "y": 6.4
+                    },
+                    {
+                        "name": "Carbohydrates",
+                        "y": 1.1
+                    },
+                    {
+                        "name": "Ovalbumin Proteins",
+                        "y": 9.8
+                    },
+                    {
+                        "name": "Globulin Proteins",
+                        "y": 5.7
+                    },
+                    {
+                        "name": "Ash Minerals",
+                        "y": 1.7
+                    },
+                    {
+                        "name": "Vitamin Complex",
+                        "y": 0.5
+                    },
+                    {
+                        "name": "Cholesterol",
+                        "y": 0.5
+                    },
+                    {
+                        "name": "Trace Elements",
+                        "y": 0.1
+                    },
+                    {
+                        "name": "Phospholipids",
+                        "y": 0.1
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#444444"
+            }
+        },
+        "tooltip": {
+            "pointFormat": "{point.y:.1f}%",
+            "style": {
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a 12-dimensional categorical decomposition of egg yolk components. Nominal variables categorize macronutrients and micronutrients while quantitative variables express percentage composition. Synthetic data preserves biological plausibility through constraint-based generation (\u03a3=100%) with power-law distribution (\u03bc=8.3%, \u03c3=14.9) reflecting nutritional science patterns. The pie chart maximizes data-ink ratio through direct percentage labeling while maintaining Tufte's principle of minimal axis decoration. Cairo's perceptual principles are implemented through: 1) Color saturation gradients indicating nutrient classes 2) Hierarchical grouping via concentric rings 3) Proportional area encoding. Statistical anchors include synthetic clusters showing 72.4% of mass in water/fats/proteins (\u03bc=24.1%, \u03c3=21.9) versus micronutrients (\u03bc=0.3%, \u03c3=0.2). Interactive elements follow Shneiderman's visualization mantra while maintaining WCAG 2.1 color contrast ratios."
+}

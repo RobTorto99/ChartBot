@@ -1,0 +1,81 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a bar chart titled 'Honey Composition'. The chart should display the composition percentages of different components in honey, including Fructose, Glucose, Water, Maltose, and Other. The chart should have custom colors, no visible axes or labels, and data labels within the bars showing the series name and percentage. The chart should also have a tooltip that displays the series name and percentage when hovering over a bar.",
+    "visualization_code": {
+        "chart": {
+            "type": "bar"
+        },
+        "title": {
+            "text": "Honey Composition"
+        },
+        "subtitle": {
+            "text": "Source: <a href=\"https://en.wikipedia.org/wiki/Honey\">Wikipedia</a>"
+        },
+        "xAxis": {
+            "categories": [
+                "Honey composition"
+            ],
+            "visible": false
+        },
+        "yAxis": {
+            "labels": {
+                "enabled": false
+            },
+            "visible": false,
+            "reversed": true,
+            "min": 0,
+            "title": {
+                "text": null
+            }
+        },
+        "tooltip": {
+            "headerFormat": null,
+            "pointFormat": "<b>{series.name}</b>: <b>{point.percentage:.0f}%</b><br/>",
+            "shared": true
+        },
+        "plotOptions": {
+            "bar": {
+                "stacking": "percent",
+                "borderColor": "#000000",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{series.name}: {y}%",
+                    "color": "black",
+                    "y": -80
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Fructose",
+                "data": [
+                    38.2
+                ]
+            },
+            {
+                "name": "Glucose",
+                "data": [
+                    31.3
+                ]
+            },
+            {
+                "name": "Water",
+                "data": [
+                    17.2
+                ]
+            },
+            {
+                "name": "Maltose",
+                "data": [
+                    7.1
+                ]
+            },
+            {
+                "name": "Other",
+                "data": [
+                    6.2
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a bar chart that visualizes the composition of honey. The chart is titled 'Honey Composition' and includes a subtitle linking to the source of the data. The chart type is set to 'bar', and the data series includes five components: Fructose, Glucose, Water, Maltose, and Other, each with their respective percentages. The x-axis and y-axis are hidden, and the chart uses a percentage stacking approach to display the data. Data labels are enabled within the bars, showing the series name and percentage. The tooltip provides additional information when hovering over a bar, displaying the series name and percentage. The chart also includes custom colors, although specific colors are not explicitly defined in the provided configuration."
+}

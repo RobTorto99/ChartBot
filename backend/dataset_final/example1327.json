@@ -1,0 +1,162 @@
+{
+    "visualization_prompt": "Generate a column chart showing fruit sales volume and stock urgency levels using a color axis encoding technique",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "marginBottom": 40,
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Fruit Inventory Status Q1-Q2 2024",
+            "style": {
+                "color": "#2E4053",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Apples",
+                "Oranges",
+                "Pears",
+                "Bananas",
+                "Plums",
+                "Grapes",
+                "Peaches",
+                "Mangos",
+                "Kiwis",
+                "Berries"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495E",
+                    "fontWeight": "500"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Units Sold",
+                "style": {
+                    "color": "#2E4053"
+                }
+            },
+            "gridLineColor": "#ECF0F1"
+        },
+        "colorAxis": {
+            "min": 0,
+            "max": 30,
+            "minColor": "#F9E79F",
+            "maxColor": "#E74C3C",
+            "labels": {
+                "format": "{value} Days",
+                "style": {
+                    "color": "#7F8C8D"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Retail Stock Urgency",
+                "colorKey": "colorValue",
+                "type": "column",
+                "data": [
+                    {
+                        "y": 3,
+                        "colorValue": 8
+                    },
+                    {
+                        "y": 5,
+                        "colorValue": 22
+                    },
+                    {
+                        "y": 7,
+                        "colorValue": 15
+                    },
+                    {
+                        "y": 4,
+                        "colorValue": 28
+                    },
+                    {
+                        "y": 6,
+                        "colorValue": 12
+                    },
+                    {
+                        "y": 9,
+                        "colorValue": 18
+                    },
+                    {
+                        "y": 2,
+                        "colorValue": 5
+                    },
+                    {
+                        "y": 8,
+                        "colorValue": 25
+                    },
+                    {
+                        "y": 5,
+                        "colorValue": 10
+                    },
+                    {
+                        "y": 7,
+                        "colorValue": 30
+                    }
+                ]
+            },
+            {
+                "name": "Warehouse Stock Urgency",
+                "colorKey": "colorValue",
+                "type": "column",
+                "data": [
+                    {
+                        "y": 5,
+                        "colorValue": 15
+                    },
+                    {
+                        "y": 7,
+                        "colorValue": 27
+                    },
+                    {
+                        "y": 4,
+                        "colorValue": 9
+                    },
+                    {
+                        "y": 6,
+                        "colorValue": 30
+                    },
+                    {
+                        "y": 8,
+                        "colorValue": 18
+                    },
+                    {
+                        "y": 3,
+                        "colorValue": 12
+                    },
+                    {
+                        "y": 9,
+                        "colorValue": 22
+                    },
+                    {
+                        "y": 4,
+                        "colorValue": 7
+                    },
+                    {
+                        "y": 7,
+                        "colorValue": 14
+                    },
+                    {
+                        "y": 5,
+                        "colorValue": 24
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#2C3E50"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two-dimensional categorical data tracking 10 fruit types across two inventory locations. Synthetic values were generated with Retail Stock (\u03bc=5.6 units, \u03c3=2.3) and Warehouse Stock (\u03bc=5.8 units, \u03c3=2.1), maintaining negative correlation between sales volume and stock urgency (r = -0.72). The dual-encoding column chart maximizes data-ink ratio by combining height for sales metrics and color saturation for restocking urgency (Cairo's pre-attentive processing). Color thresholds follow natural color semantics (amber=moderate, red=critical) with quantitative labels in D3's format pattern, creating immediate visual hierarchy while maintaining precise numerical interpretation."
+}

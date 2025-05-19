@@ -1,0 +1,66 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a pie chart displaying the composition of egg yolk. The chart should have a title 'Egg Yolk Composition' and include a subtitle with a source link. The pie chart should show the percentage of different components (Water, Fat, Carbohydrates, Protein, Ash) with custom colors. The chart should allow point selection, display data labels with the name and percentage, and show a legend. The tooltip should display the percentage with a '%' suffix.",
+    "visualization_code": {
+        "colors": [
+            "#01BAF2",
+            "#f6fa4b",
+            "#FAA74B",
+            "#baf201",
+            "#f201ba"
+        ],
+        "chart": {
+            "type": "pie"
+        },
+        "title": {
+            "text": "Egg Yolk Composition"
+        },
+        "tooltip": {
+            "valueSuffix": "%"
+        },
+        "subtitle": {
+            "text": "Source:<a href=\"https://www.mdpi.com/2072-6643/11/3/684/htm\" target=\"_default\">MDPI</a>"
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}: {point.percentage:.1f}%"
+                },
+                "showInLegend": true
+            }
+        },
+        "series": [
+            {
+                "name": "Percentage",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Water",
+                        "y": 55.02
+                    },
+                    {
+                        "name": "Fat",
+                        "sliced": true,
+                        "selected": true,
+                        "y": 26.71
+                    },
+                    {
+                        "name": "Carbohydrates",
+                        "y": 1.09
+                    },
+                    {
+                        "name": "Protein",
+                        "y": 15.5
+                    },
+                    {
+                        "name": "Ash",
+                        "y": 1.68
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a pie chart to display the composition of egg yolk. The chart is titled 'Egg Yolk Composition' and includes a subtitle with a link to the source data. The pie chart is styled with custom colors for each segment, and it allows users to select individual segments. Data labels are enabled to show the name and percentage of each component, formatted to one decimal place. The chart also includes a legend for easy identification of each segment. The tooltip displays the percentage value with a '%' suffix when hovering over a segment."
+}

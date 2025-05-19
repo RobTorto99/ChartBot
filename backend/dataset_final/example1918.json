@@ -1,0 +1,111 @@
+{
+    "visualization_prompt": "Generate a spline chart showing the relationship between material types and physical properties (speed of sound and temperature) using synthetic data with domain-appropriate value ranges.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#fff",
+            "marginTop": 50,
+            "marginRight": 50,
+            "marginBottom": 100,
+            "marginLeft": 100
+        },
+        "title": {
+            "text": "Speed of Sound Data",
+            "style": {
+                "color": "#000",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Air",
+                "Helium",
+                "Hydrogen",
+                "Water",
+                "Sea Water",
+                "Ice",
+                "Rubber",
+                "Glass",
+                "Aluminum",
+                "Copper",
+                "Steel",
+                "Oak Wood"
+            ],
+            "title": {
+                "text": "Material",
+                "style": {
+                    "color": "#000",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#000",
+                    "fontSize": "14px"
+                },
+                "rotation": -45
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Physical Properties",
+                "style": {
+                    "color": "#000",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#000",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Speed (m/s)",
+                "data": [
+                    343,
+                    965,
+                    1270,
+                    1482,
+                    1531,
+                    3200,
+                    54,
+                    4540,
+                    5100,
+                    3800,
+                    5100,
+                    3300
+                ],
+                "color": "#FF5733"
+            },
+            {
+                "name": "Temperature (\u00b0C)",
+                "data": [
+                    22,
+                    24,
+                    26,
+                    23,
+                    25,
+                    27,
+                    20,
+                    28,
+                    30,
+                    24,
+                    22,
+                    25
+                ],
+                "color": "#33FF57"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#000",
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two numerical variables (speed of sound and temperature) across 12 material categories. Synthetic speed data reflects real-world physics (e.g., 343 m/s in air, 5100 m/s in steel), while temperature values (\u03bc=25\u00b0C, \u03c3=3\u00b0C) simulate lab conditions. The spline chart emphasizes trends while maintaining high data-ink ratio per Tufte. Color contrast (#FF5733 vs #33FF57) follows Cairo's principles for discriminability. Dual line encoding allows comparison of two phenomena, though axis unit differences require careful interpretation. Statistical validity is maintained through domain-specific value ranges and trend alignment with material science literature."
+}

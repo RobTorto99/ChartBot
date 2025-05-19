@@ -1,0 +1,144 @@
+{
+    "visualization_prompt": "Create a Highcharts bar chart with the following specifications: Chart type: bar, Chart title: Monthly Sales Data, Axes and labels styling: Use a dark blue color (#003366) for the title and axis labels, with a font size of 14px. The x-axis categories should be the months of the year. Data series: The first series should represent 'Product A' sales data, and the second series should represent 'Product B' sales data. Custom colors: Use a gradient from light blue (#ADD8E6) to dark blue (#003366) for the first series and a gradient from light green (#90EE90) to dark green (#006400) for the second series. Additional configurations: The chart should have a white background, a legend positioned to the right, and normal stacking for the bars.",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#003366",
+                "fontSize": "14px"
+            }
+        },
+        "legend": {
+            "align": "right",
+            "backgroundColor": "#FFFFFF",
+            "floating": true,
+            "borderWidth": 0,
+            "verticalAlign": "top",
+            "x": -40,
+            "y": 50,
+            "reversed": true
+        },
+        "plotOptions": {
+            "bar": {
+                "stacking": "normal",
+                "colorByPoint": false,
+                "colors": [
+                    {
+                        "linearGradient": {
+                            "x1": 0,
+                            "y1": 0,
+                            "x2": 0,
+                            "y2": 1
+                        },
+                        "stops": [
+                            [
+                                0,
+                                "#ADD8E6"
+                            ],
+                            [
+                                1,
+                                "#003366"
+                            ]
+                        ]
+                    },
+                    {
+                        "linearGradient": {
+                            "x1": 0,
+                            "y1": 0,
+                            "x2": 0,
+                            "y2": 1
+                        },
+                        "stops": [
+                            [
+                                0,
+                                "#90EE90"
+                            ],
+                            [
+                                1,
+                                "#006400"
+                            ]
+                        ]
+                    }
+                ]
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#003366",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": null,
+                "style": {
+                    "color": "#003366",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#003366",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Product A",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ]
+            },
+            {
+                "name": "Product B",
+                "data": [
+                    95.6,
+                    54.4,
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration object is designed to render a bar chart with specific styling and data series. The chart type is set to 'bar', and it includes a title 'Monthly Sales Data' styled with a dark blue color and a font size of 14px. The x-axis categories represent the months of the year, and both the x-axis and y-axis labels are styled with the same dark blue color and font size. The data series include 'Product A' and 'Product B' sales data, each with a custom gradient color scheme. The chart has a white background, and the legend is positioned to the right with normal stacking applied to the bars. This configuration ensures a visually appealing and informative chart that meets the specified requirements."
+}

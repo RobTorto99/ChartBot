@@ -1,0 +1,132 @@
+{
+    "visualization_prompt": "Generate a waterfall chart showing quarterly financial performance using incremental revenue/cost breakdowns with 10 data points",
+    "visualization_code": {
+        "chart": {
+            "type": "waterfall",
+            "backgroundColor": "#f8f9fa"
+        },
+        "title": {
+            "text": "FY2023 Financial Performance (USD)",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "18px",
+                "fontFamily": "Arial"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Q1 Base",
+                "Product Sales",
+                "Operating Costs",
+                "New Contracts",
+                "Taxes",
+                "Consulting Revenue",
+                "Misc Expenses",
+                "Licensing Fees",
+                "Legal Costs",
+                "Net Profit"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "min": 50,
+            "title": {
+                "text": "Amount (USD thousands)",
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "format": "${value}K",
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Financial Movement",
+                "data": [
+                    {
+                        "y": 100,
+                        "name": "Q1 Base",
+                        "color": "#27ae60"
+                    },
+                    {
+                        "y": 28,
+                        "name": "Product Sales",
+                        "color": "#2980b9"
+                    },
+                    {
+                        "y": -17,
+                        "name": "Operating Costs",
+                        "color": "#e74c3c"
+                    },
+                    {
+                        "y": 22,
+                        "name": "New Contracts",
+                        "color": "#2980b9"
+                    },
+                    {
+                        "y": -12,
+                        "name": "Taxes",
+                        "color": "#e74c3c"
+                    },
+                    {
+                        "y": 19,
+                        "name": "Consulting Revenue",
+                        "color": "#2980b9"
+                    },
+                    {
+                        "y": -9,
+                        "name": "Misc Expenses",
+                        "color": "#e74c3c"
+                    },
+                    {
+                        "y": 14,
+                        "name": "Licensing Fees",
+                        "color": "#2980b9"
+                    },
+                    {
+                        "y": -11,
+                        "name": "Legal Costs",
+                        "color": "#e74c3c"
+                    },
+                    {
+                        "y": 134,
+                        "isSum": true,
+                        "name": "Net Profit",
+                        "color": "#27ae60"
+                    }
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "${y}K",
+                    "style": {
+                        "textOutline": "none"
+                    }
+                }
+            }
+        ],
+        "plotOptions": {
+            "waterfall": {
+                "lineWidth": 1,
+                "lineColor": "#95a5a6",
+                "borderRadius": 3
+            }
+        },
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "pointFormat": "<b>{point.name}:</b> ${point.y}K"
+        }
+    },
+    "visualization_explanation": "The dataset represents a categorical financial breakdown with 10 sequential elements (1 base value, 8 incremental changes, 1 final sum). Synthetic data maintains financial plausibility with \u03bc=+8.3K quarterly gains (\u03c3=14.2K) and alternating positive/negative movements. The waterfall chart was chosen to emphasize cumulative progression, adhering to Tufte's principles by eliminating redundant gridlines and maximizing data-ink ratio. Color application follows Cairo's affective palettes (blue=revenue, red=costs, green=summaries) for immediate perceptual grouping. Axis formatting uses D3-style monetary annotations ('$134K') and yAxis.min=50 maintains focus on meaningful value ranges while demonstrating Highcharts' axis configuration capabilities."
+}

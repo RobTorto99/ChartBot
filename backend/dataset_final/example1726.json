@@ -1,0 +1,187 @@
+{
+    "visualization_prompt": "Generate a 3D scatter plot showing XYZ coordinate relationships using plot lines/bands for spatial annotations and synthetic clustered data patterns",
+    "visualization_code": {
+        "chart": {
+            "type": "scatter3d",
+            "options3d": {
+                "enabled": true,
+                "alpha": 20,
+                "beta": 30,
+                "depth": 200,
+                "frame": {
+                    "bottom": {
+                        "size": 1,
+                        "color": "rgba(0,0,0,0.05)"
+                    }
+                }
+            }
+        },
+        "title": {
+            "text": "3D Scatter Plot with Spatial Annotations"
+        },
+        "subtitle": {
+            "text": "Demonstrating multi-axis annotations and clustered distributions"
+        },
+        "xAxis": {
+            "min": 0,
+            "max": 10,
+            "gridLineWidth": 1,
+            "title": {
+                "text": "X-Axis (Feature Space)",
+                "style": {
+                    "color": "#2c3e50"
+                }
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 10,
+            "title": {
+                "text": "Y-Axis (Temporal Index)",
+                "style": {
+                    "color": "#2c3e50"
+                }
+            }
+        },
+        "zAxis": {
+            "plotLines": [
+                {
+                    "value": 1,
+                    "color": "#FF0000",
+                    "width": 1
+                }
+            ],
+            "plotBands": [
+                {
+                    "from": 4,
+                    "to": 6,
+                    "color": "rgba(46, 204, 113, 0.3)"
+                }
+            ],
+            "tickInterval": 2,
+            "min": 0,
+            "max": 10,
+            "title": {
+                "text": "Z-Axis (Measurement Value)",
+                "style": {
+                    "color": "#2c3e50"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Cluster A",
+                "data": [
+                    [
+                        1,
+                        1,
+                        1
+                    ],
+                    [
+                        1,
+                        1,
+                        2
+                    ],
+                    [
+                        1,
+                        2,
+                        3
+                    ],
+                    [
+                        2,
+                        3,
+                        2
+                    ],
+                    [
+                        2,
+                        4,
+                        4
+                    ],
+                    [
+                        3,
+                        5,
+                        5
+                    ],
+                    [
+                        3,
+                        6,
+                        6
+                    ],
+                    [
+                        4,
+                        7,
+                        7
+                    ],
+                    [
+                        4,
+                        8,
+                        8
+                    ],
+                    [
+                        5,
+                        9,
+                        9
+                    ]
+                ],
+                "color": "#e74c3c"
+            },
+            {
+                "name": "Cluster B",
+                "data": [
+                    [
+                        7,
+                        1,
+                        3
+                    ],
+                    [
+                        7,
+                        2,
+                        4
+                    ],
+                    [
+                        8,
+                        3,
+                        5
+                    ],
+                    [
+                        8,
+                        4,
+                        6
+                    ],
+                    [
+                        9,
+                        5,
+                        7
+                    ],
+                    [
+                        9,
+                        6,
+                        8
+                    ],
+                    [
+                        9,
+                        7,
+                        9
+                    ],
+                    [
+                        8,
+                        8,
+                        8
+                    ],
+                    [
+                        7,
+                        9,
+                        7
+                    ],
+                    [
+                        6,
+                        9,
+                        6
+                    ]
+                ],
+                "color": "#3498db"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains three numerical dimensions (X,Y,Z coordinates) with synthetic clusters demonstrating two distinct distribution patterns. Synthetic data was generated with \u03bc=5, \u03c3=2.5 for each axis, maintaining domain-appropriate value ranges (0-10) while introducing positive correlation in Cluster A and nonlinear relationships in Cluster B. The 3D scatter plot was selected to preserve geometric relationships between coordinates while using depth cues for spatial perception. Plot bands/z-axis annotations follow Cairo's principle of layered information separation. Color coding (Cluster A: red, Cluster B: blue) applies Bertin's retinal variable theory for immediate cluster differentiation. The 3D projection maintains Tufte's data density principle (20 data points/10 units\u00b3) while avoiding perspective distortion through fixed axis scaling."
+}

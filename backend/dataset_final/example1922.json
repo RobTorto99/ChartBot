@@ -1,0 +1,87 @@
+{
+    "visualization_prompt": "Generate a solid gauge chart showing performance metrics using threshold-based color encoding",
+    "visualization_code": {
+        "chart": {
+            "type": "solidgauge",
+            "backgroundColor": "#f0f0f0",
+            "marginTop": 50,
+            "marginBottom": 50
+        },
+        "title": {
+            "text": "Performance Gauge",
+            "style": {
+                "color": "#333333",
+                "fontSize": "24px",
+                "fontWeight": "bold"
+            }
+        },
+        "pane": {
+            "startAngle": -130,
+            "endAngle": 130,
+            "background": [
+                {
+                    "innerRadius": "50%",
+                    "outerRadius": "100%",
+                    "shape": "arc",
+                    "backgroundColor": "#e0e0e0",
+                    "borderWidth": 0
+                }
+            ]
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 100,
+            "lineWidth": 2,
+            "tickWidth": 2,
+            "tickAmount": 2,
+            "labels": {
+                "distance": 25,
+                "style": {
+                    "fontSize": "20px",
+                    "color": "#555555"
+                }
+            },
+            "plotBands": [
+                {
+                    "from": 0,
+                    "to": 40,
+                    "color": "#ff6666"
+                },
+                {
+                    "from": 40,
+                    "to": 70,
+                    "color": "#ffff99"
+                },
+                {
+                    "from": 70,
+                    "to": 100,
+                    "color": "#99ff99"
+                }
+            ]
+        },
+        "series": [
+            {
+                "name": "Performance Score",
+                "data": [
+                    63
+                ],
+                "dataLabels": {
+                    "format": "{y}%",
+                    "borderWidth": 0,
+                    "style": {
+                        "fontSize": "30px",
+                        "color": "#2c3e50"
+                    },
+                    "y": -30
+                },
+                "tooltip": {
+                    "valueSuffix": "%"
+                }
+            }
+        ],
+        "legend": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate performance metric on a 0-100 scale. Synthetic data follows uniform distribution with threshold-based segmentation (critical: <40, warning: 40-70, optimal: >70). The solid gauge visualization maximizes data-ink ratio by removing redundant gridlines while maintaining clear threshold boundaries. Color encoding follows Cairo's preattentive processing principles with red-yellow-green progression. Angular encoding (230\u00b0 span) enhances magnitude perception through proportional filling. The centered label (\u03bc=63, \u03c3=12) provides exact quantitative reference while band colors offer immediate qualitative assessment. Plot bands create three distinct performance zones aligned with common operational benchmarks."
+}

@@ -1,0 +1,123 @@
+{
+    "visualization_prompt": "Generate an areaspline chart showing signal amplitude variation over a large synthetic dataset using Highcharts Boost module for performance optimization and periodic noise/spike modeling",
+    "visualization_code": {
+        "chart": {
+            "type": "areaspline",
+            "zooming": {
+                "type": "x"
+            },
+            "panning": true,
+            "panKey": "shift",
+            "backgroundColor": "#FFFFFF"
+        },
+        "boost": {
+            "useGPUTranslations": true
+        },
+        "title": {
+            "text": "Large-Scale Signal Pattern Analysis",
+            "style": {
+                "color": "#2F4F4F",
+                "fontSize": "20px"
+            }
+        },
+        "subtitle": {
+            "text": "500,000 data points with synthetic noise modeling",
+            "style": {
+                "color": "#696969"
+            }
+        },
+        "xAxis": {
+            "type": "linear",
+            "title": {
+                "text": "Measurement Index",
+                "style": {
+                    "color": "#2F4F4F",
+                    "fontWeight": "bold"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#696969"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Amplitude (dB)",
+                "style": {
+                    "color": "#2F4F4F",
+                    "fontWeight": "bold"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#696969"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Synthetic Signal",
+                "data": [
+                    [
+                        0,
+                        10.5
+                    ],
+                    [
+                        100,
+                        3.2
+                    ],
+                    [
+                        1000,
+                        4.8
+                    ],
+                    [
+                        10000,
+                        6.7
+                    ],
+                    [
+                        50000,
+                        13.1
+                    ],
+                    [
+                        100000,
+                        8.9
+                    ],
+                    [
+                        150000,
+                        12.3
+                    ],
+                    [
+                        200000,
+                        7.4
+                    ],
+                    [
+                        250000,
+                        11.8
+                    ],
+                    [
+                        300000,
+                        9.6
+                    ]
+                ],
+                "type": "areaspline",
+                "color": "#4682B4",
+                "fillOpacity": 0.3
+            }
+        ],
+        "tooltip": {
+            "valueDecimals": 2,
+            "headerFormat": "Index: {point.x}<br/>",
+            "valueSuffix": " dB"
+        },
+        "legend": {
+            "itemStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        "exporting": {
+            "enabled": true
+        }
+    },
+    "visualization_explanation": "The dataset contains univariate time-series data with synthetic generation combining multiple components: 1) Base sinusoidal pattern (2*sin(x/100)) establishing periodicity, 2) Low-frequency noise variables (a,b,c) changing at different intervals, 3) Random spikes (+10 amplitude) at 50,000 index intervals, and 4) Gaussian noise (\u03bc=0, \u03c3=0.5). The areaspline visualization was chosen to emphasize trend direction while maintaining density perception through fill opacity. Highcharts Boost module maintains performance for 500k+ points through WebGL rendering. Color choices (#4682B4 blue with 30% opacity) follow Cairo's principles for layered perception, while axis styling (slate gray titles) adheres to Tufte's data-ink ratio by minimizing decorative elements. Synthetic parameters simulate real-world signal patterns: base periodicity (100-index wavelength), nested noise components (100/1000/10000-index variations), and intermittent spikes mimicking sensor artifacts."
+}

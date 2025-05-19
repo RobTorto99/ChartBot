@@ -1,0 +1,124 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a lineargauge chart with the following specifications: Chart type: lineargauge, Chart title: 'Linear Gauge Chart', Axes and labels styling: Use a dark theme with white labels and titles, Data series: Include three series with data points [85], [36], and [73], Custom colors: Use shades of blue for the plot bands, Additional configurations: Set the chart to be inverted, disable credits, enable exporting, and disable the legend.",
+    "visualization_code": {
+        "chart": {
+            "inverted": true,
+            "type": "lineargauge",
+            "marginLeft": 20,
+            "plotBorderWidth": 0.5
+        },
+        "title": {
+            "text": "Linear Gauge Chart",
+            "style": {
+                "color": "#FFFFFF"
+            }
+        },
+        "credits": {
+            "enabled": false
+        },
+        "exporting": {
+            "enabled": true
+        },
+        "legend": {
+            "enabled": false
+        },
+        "xAxis": {
+            "tickWidth": 0,
+            "lineWidth": 0,
+            "labels": {
+                "enabled": false,
+                "style": {
+                    "color": "#FFFFFF"
+                }
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 100,
+            "tickInterval": 10,
+            "tickLength": 10,
+            "tickWidth": 1,
+            "minorGridLineWidth": 0,
+            "minorTickInterval": "auto",
+            "minorTickLength": 5,
+            "minorTickWidth": 1,
+            "title": {
+                "text": "",
+                "style": {
+                    "color": "#FFFFFF"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#FFFFFF"
+                }
+            },
+            "plotBands": [
+                {
+                    "from": 0,
+                    "to": 20,
+                    "color": "#003366"
+                },
+                {
+                    "from": 20,
+                    "to": 70,
+                    "color": "#0066CC"
+                },
+                {
+                    "from": 70,
+                    "to": 100,
+                    "color": "#3399FF"
+                }
+            ]
+        },
+        "plotOptions": {
+            "series": {
+                "pointPadding": 0,
+                "borderWidth": 1,
+                "borderColor": "#FFFFFF",
+                "color": "#000000",
+                "targetOptions": {
+                    "length": "150%",
+                    "width": "100%",
+                    "baseLength": "0%",
+                    "indent": "20%",
+                    "lineWidth": 1,
+                    "lineZIndex": 1
+                },
+                "dataLabels": {
+                    "enabled": true,
+                    "style": {
+                        "color": "#FFFFFF"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "onPoint": false,
+                "showColumn": false,
+                "showLine": true,
+                "data": [
+                    85
+                ]
+            },
+            {
+                "onPoint": true,
+                "showColumn": false,
+                "showLine": false,
+                "data": [
+                    36
+                ]
+            },
+            {
+                "onPoint": true,
+                "showColumn": true,
+                "showLine": false,
+                "data": [
+                    73
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a linear gauge chart with a dark theme, featuring white labels and titles. The chart is set to be inverted, which means the x and y axes are swapped. The chart includes three series, each with a single data point: [85], [36], and [73]. The plot bands on the y-axis are colored in shades of blue, providing a visual segmentation of the gauge. The chart also disables credits, enables exporting for saving the chart as an image or PDF, and hides the legend. The target options for each series are configured to display the target on the axis or on the point, with lines and columns optionally shown or hidden."
+}

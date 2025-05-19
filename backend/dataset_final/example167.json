@@ -1,0 +1,114 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the title 'Legend index demonstrated'. The chart should have three data series, each with identical data points for the months of the year. The series should be ordered in the legend according to their legendIndex property. The x-axis should display month labels, and the y-axis should represent the data values. The chart should have a white background, and the legend should be positioned at the bottom of the chart. The colors for the series should be blue, green, and red, respectively.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Legend index demonstrated"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#000000",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Data Values",
+                "style": {
+                    "color": "#000000",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#000000",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#0000FF",
+                "legendIndex": 3
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#008000",
+                "legendIndex": 2
+            },
+            {
+                "name": "Series 3",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#FF0000",
+                "legendIndex": 1
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart with the specified title 'Legend index demonstrated'. The chart includes three data series, each representing identical monthly data points. The series are ordered in the legend according to their legendIndex property, with Series 1 appearing last and Series 3 first. The x-axis displays month labels, and the y-axis represents the data values. The chart has a white background, and the legend is positioned at the bottom of the chart. The series colors are blue, green, and red, respectively, to differentiate the data series visually."
+}

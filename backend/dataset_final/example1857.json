@@ -1,0 +1,195 @@
+{
+    "visualization_prompt": "Generate a column chart showing box size distributions and target benchmarks using three categorical series with synthetic data reflecting operational thresholds.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Box Sizes and Targets",
+            "style": {
+                "color": "#333333",
+                "fontSize": "16px"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "Box Index",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "12px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "12px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        },
+        "series": [
+            {
+                "name": "Centered",
+                "data": [
+                    {
+                        "y": 20,
+                        "target": 30
+                    },
+                    {
+                        "y": 40,
+                        "target": 50
+                    },
+                    {
+                        "y": 60,
+                        "target": 90
+                    },
+                    {
+                        "y": 100,
+                        "target": 150
+                    },
+                    {
+                        "y": 100,
+                        "target": 200
+                    },
+                    {
+                        "y": 100,
+                        "target": 250
+                    },
+                    {
+                        "y": 100,
+                        "target": 300
+                    },
+                    {
+                        "y": 100,
+                        "target": 350
+                    },
+                    {
+                        "y": 100,
+                        "target": 400
+                    },
+                    {
+                        "y": 100,
+                        "target": 450,
+                        "rank": 1
+                    }
+                ],
+                "color": "#7cb5ec"
+            },
+            {
+                "name": "Left",
+                "data": [
+                    {
+                        "y": 30,
+                        "target": 40
+                    },
+                    {
+                        "y": 50,
+                        "target": 70
+                    },
+                    {
+                        "y": 70,
+                        "target": 110
+                    },
+                    {
+                        "y": 90,
+                        "target": 180
+                    },
+                    {
+                        "y": 90,
+                        "target": 220
+                    },
+                    {
+                        "y": 90,
+                        "target": 270
+                    },
+                    {
+                        "y": 90,
+                        "target": 320
+                    },
+                    {
+                        "y": 90,
+                        "target": 370
+                    },
+                    {
+                        "y": 90,
+                        "target": 420
+                    },
+                    {
+                        "y": 90,
+                        "target": 470,
+                        "rank": 1
+                    }
+                ],
+                "color": "#434348"
+            },
+            {
+                "name": "Right",
+                "data": [
+                    {
+                        "y": 25,
+                        "target": 35
+                    },
+                    {
+                        "y": 45,
+                        "target": 60
+                    },
+                    {
+                        "y": 65,
+                        "target": 100
+                    },
+                    {
+                        "y": 95,
+                        "target": 160
+                    },
+                    {
+                        "y": 95,
+                        "target": 210
+                    },
+                    {
+                        "y": 95,
+                        "target": 260
+                    },
+                    {
+                        "y": 95,
+                        "target": 310
+                    },
+                    {
+                        "y": 95,
+                        "target": 360
+                    },
+                    {
+                        "y": 95,
+                        "target": 410
+                    },
+                    {
+                        "y": 95,
+                        "target": 460,
+                        "rank": 1
+                    }
+                ],
+                "color": "#90ed7d"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains three series (Centered/Left/Right) with 10 data points each, representing box sizes (y-values) and operational targets. Synthetic data exhibits two statistical properties: 1) Progression (sizes stabilize after index 3, \u03bc=88.3, \u03c3=28.9), 2) Linear target growth (\u0394\u224840-50 per index). The column chart maximizes data-ink ratio by eliminating gridlines while maintaining Cairo's separable\u6027\u539f\u5219 through distinct color coding. Axis labels use Tufte-recommended high-contrast typography (#333 on white). Target benchmarks are encoded via invisible 'target' properties for future interactive implementations."
+}

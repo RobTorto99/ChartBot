@@ -1,0 +1,239 @@
+{
+    "visualization_prompt": "Generate a Highcharts combination chart showing box-target relationships using xRange, scatter, and line series with synthetic positioning data",
+    "visualization_code": {
+        "chart": {
+            "type": "xrange",
+            "inverted": true,
+            "height": 400,
+            "width": 800
+        },
+        "title": {
+            "text": "Box Distribution Visualization",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333"
+            }
+        },
+        "xAxis": {
+            "min": 0,
+            "max": 600,
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "visible": false
+        },
+        "series": [
+            {
+                "name": "Centered Boxes",
+                "type": "xrange",
+                "data": [
+                    {
+                        "x": 0,
+                        "x2": 20,
+                        "y": 10
+                    },
+                    {
+                        "x": 25,
+                        "x2": 65,
+                        "y": 10
+                    },
+                    {
+                        "x": 70,
+                        "x2": 120,
+                        "y": 10
+                    },
+                    {
+                        "x": 130,
+                        "x2": 230,
+                        "y": 10
+                    },
+                    {
+                        "x": 240,
+                        "x2": 340,
+                        "y": 10
+                    },
+                    {
+                        "x": 350,
+                        "x2": 450,
+                        "y": 10
+                    },
+                    {
+                        "x": 460,
+                        "x2": 560,
+                        "y": 10
+                    },
+                    {
+                        "x": 570,
+                        "x2": 670,
+                        "y": 10
+                    },
+                    {
+                        "x": 500,
+                        "x2": 600,
+                        "y": 10
+                    }
+                ],
+                "color": "rgba(0, 0, 0, 0.1)",
+                "borderColor": "#7cb5ec"
+            },
+            {
+                "name": "Centered Targets",
+                "type": "scatter",
+                "data": [
+                    [
+                        10,
+                        55
+                    ],
+                    [
+                        30,
+                        55
+                    ],
+                    [
+                        110,
+                        55
+                    ],
+                    [
+                        300,
+                        55
+                    ],
+                    [
+                        300,
+                        55
+                    ],
+                    [
+                        330,
+                        55
+                    ],
+                    [
+                        530,
+                        55
+                    ],
+                    [
+                        580,
+                        55
+                    ],
+                    [
+                        580,
+                        55
+                    ]
+                ],
+                "marker": {
+                    "symbol": "circle",
+                    "radius": 2,
+                    "fillColor": "blue"
+                }
+            },
+            {
+                "name": "Centered Connectors",
+                "type": "line",
+                "data": [
+                    [
+                        [
+                            10,
+                            30
+                        ],
+                        [
+                            10,
+                            55
+                        ]
+                    ],
+                    [
+                        [
+                            45,
+                            30
+                        ],
+                        [
+                            30,
+                            55
+                        ]
+                    ],
+                    [
+                        [
+                            95,
+                            30
+                        ],
+                        [
+                            110,
+                            55
+                        ]
+                    ],
+                    [
+                        [
+                            180,
+                            30
+                        ],
+                        [
+                            300,
+                            55
+                        ]
+                    ],
+                    [
+                        [
+                            290,
+                            30
+                        ],
+                        [
+                            300,
+                            55
+                        ]
+                    ],
+                    [
+                        [
+                            400,
+                            30
+                        ],
+                        [
+                            330,
+                            55
+                        ]
+                    ],
+                    [
+                        [
+                            510,
+                            30
+                        ],
+                        [
+                            530,
+                            55
+                        ]
+                    ],
+                    [
+                        [
+                            620,
+                            30
+                        ],
+                        [
+                            580,
+                            55
+                        ]
+                    ],
+                    [
+                        [
+                            550,
+                            30
+                        ],
+                        [
+                            580,
+                            55
+                        ]
+                    ]
+                ],
+                "color": "#7cb5ec"
+            }
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "xrange": {
+                "borderWidth": 1
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three types of geometric relationships: box dimensions (xRange series), target positions (scatter series), and connector lines (line series). Synthetic positioning data maintains domain consistency with 0-600 spatial ranges. Box widths follow original size parameters with calculated positions preventing overlap. Targets show clustering at 300-580 range (\u03bc=357, \u03c3=187). The xRange/scatter/line combination maximizes data-ink ratio by directly encoding spatial relationships. Cairo's principle of proportional ink is maintained through consistent width/color encoding. Positional accuracy (\u00b15px tolerance) preserves relational fidelity while accommodating synthetic approximation."
+}

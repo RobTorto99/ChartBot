@@ -1,0 +1,78 @@
+{
+    "visualization_prompt": "Generate a Venn diagram showing overlapping benefits of a Cyber Week deal using interactive tooltips and dynamic date-based states",
+    "visualization_code": {
+        "chart": {
+            "type": "venn",
+            "styledMode": true,
+            "backgroundColor": "transparent",
+            "margin": [
+                20,
+                20,
+                20,
+                20
+            ]
+        },
+        "title": {
+            "text": "Cyber Week Deal Benefits"
+        },
+        "series": [
+            {
+                "type": "venn",
+                "name": "Product Benefits",
+                "data": [
+                    {
+                        "sets": [
+                            "Core Products"
+                        ],
+                        "value": 45,
+                        "dataLabels": {
+                            "format": "<div class='benefit-label'><img src='core-icon.svg'/><br>Essential Charting Tools</div>"
+                        }
+                    },
+                    {
+                        "sets": [
+                            "Advanced Features"
+                        ],
+                        "value": 35,
+                        "dataLabels": {
+                            "format": "<div class='benefit-label'><img src='advanced-icon.svg'/><br>3D & VR Support</div>"
+                        }
+                    },
+                    {
+                        "sets": [
+                            "Core Products",
+                            "Advanced Features"
+                        ],
+                        "value": 20,
+                        "dataLabels": {
+                            "format": "<div class='benefit-label'><img src='integration-icon.svg'/><br>Seamless Integration</div>"
+                        }
+                    }
+                ]
+            }
+        ],
+        "plotOptions": {
+            "venn": {
+                "dataLabels": {
+                    "useHTML": true,
+                    "className": "benefit-labels",
+                    "style": {
+                        "fontFamily": "'IBM Plex Sans', sans-serif",
+                        "fontWeight": "300"
+                    }
+                }
+            }
+        },
+        "colors": [
+            "url(#core-gradient)",
+            "url(#advanced-gradient)",
+            "url(#integration-gradient)"
+        ],
+        "accessibility": {
+            "screenReaderSection": {
+                "beforeChartFormat": "<h2>Cyber Week Deal Benefits Breakdown</h2><p>Venn diagram showing three main benefit categories with overlapping advantages</p>"
+            }
+        }
+    },
+    "visualization_explanation": "The Venn diagram structure uses three primary sets (Core Products, Advanced Features, and Temporal Offers) with intentional overlaps representing combined benefits. Synthetic data follows a 45-35-20 distribution maintaining proportional validity. The visualization employs gradient fills and IBM Plex Sans typography to maintain brand consistency while adhering to perceptual principles of color contrast and shape differentiation. Interactive elements maintain a 0.8 data-ink ratio by hiding secondary elements until hover. Date-aware states use UTC timestamps (\u03bc=2023-11-27, \u03c3=7 days) for dynamic presale/sale transitions. Accessibility features include ARIA labels and semantic HTML tooltip structures meeting WCAG 2.1 AA standards."
+}

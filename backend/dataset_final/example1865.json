@@ -1,0 +1,77 @@
+{
+    "visualization_prompt": "Generate a map showing geographical points of interest using Highcharts' tiled web map integration",
+    "visualization_code": {
+        "chart": {
+            "type": "map",
+            "margin": 0,
+            "panning": {
+                "enabled": false
+            }
+        },
+        "title": {
+            "text": "Interactive Map of POIs",
+            "style": {
+                "fontSize": "20px",
+                "color": "#333333"
+            }
+        },
+        "mapNavigation": {
+            "enabled": true,
+            "buttonOptions": {
+                "alignTo": "spacingBox",
+                "theme": {
+                    "fill": "#2caffe",
+                    "stroke": "#000066",
+                    "states": {
+                        "hover": {
+                            "fill": "#000066"
+                        }
+                    }
+                }
+            }
+        },
+        "mapView": {
+            "center": [
+                6.5811472,
+                61.08707
+            ],
+            "zoom": 13
+        },
+        "series": [
+            {
+                "type": "tiledwebmap",
+                "name": "Basemap Tiles",
+                "provider": {
+                    "type": "OpenStreetMap"
+                },
+                "showInLegend": false
+            },
+            {
+                "type": "mappoint",
+                "name": "POI Locations",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}",
+                    "style": {
+                        "fontSize": "14px",
+                        "color": "#666666"
+                    }
+                },
+                "marker": {
+                    "symbol": "mapmarker",
+                    "radius": 12,
+                    "fillColor": "#ff4444"
+                },
+                "data": [
+                    {
+                        "name": "Primary POI",
+                        "lon": 6.5811472,
+                        "lat": 61.08707,
+                        "value": 100
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The visualization uses a two-layer map structure combining base topography with point data. The dataset contains geospatial coordinates (latitude/longitude) with nominal POI labels and ordinal significance values. Synthetic coordinates maintain real-world spatial relationships through decimal degree precision (7 decimal places \u2248 1cm accuracy). The base layer uses OpenStreetMap's actual tile service while the POI layer contains a single engineered data point with exaggerated marker size for visibility. The map employs perceptual grouping through color contrast (red marker on blue base map) and pre-attentive processing with marker size encoding importance. Spatial anchoring follows WGS84 coordinate system standards. Button colors (#2caffe/#000066) maintain 3:1 contrast ratio for accessibility while supporting brand alignment. Initial zoom (level 13 \u2248 1:10,000 scale) balances context with detail."
+}

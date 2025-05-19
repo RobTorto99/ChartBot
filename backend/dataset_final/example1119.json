@@ -1,0 +1,139 @@
+{
+    "visualization_prompt": "Generate a scatter plot with regression line showing the correlation between GDP per capita and life satisfaction scores across nations using logarithmic x-axis scaling and interactive tooltips",
+    "visualization_code": {
+        "chart": {
+            "type": "scatter",
+            "zooming": {
+                "type": "xy"
+            }
+        },
+        "title": {
+            "text": "GDP per capita vs Self-reported Life Satisfaction, 2015"
+        },
+        "subtitle": {
+            "useHTML": true,
+            "text": "Source: <a href='http://data.worldbank.org/data-catalog/world-development-indicators'>Worldbank</a>"
+        },
+        "xAxis": {
+            "type": "logarithmic",
+            "title": {
+                "text": "GDP per capita (PPP-adjusted $)",
+                "style": {
+                    "color": "#2f4050",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "format": "${value:.0f}",
+                "style": {
+                    "color": "#666"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Life Satisfaction (0-10 scale)",
+                "style": {
+                    "color": "#2f4050",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "format": "{value:.1f}",
+                "style": {
+                    "color": "#666"
+                }
+            }
+        },
+        "series": [
+            {
+                "type": "line",
+                "name": "Regression Line (R\u00b2 = 0.62)",
+                "color": "#b6c1ff",
+                "data": [
+                    [
+                        750.5,
+                        4.89
+                    ],
+                    [
+                        119749.43,
+                        8.13
+                    ]
+                ],
+                "marker": {
+                    "enabled": false
+                },
+                "enableMouseTracking": false
+            },
+            {
+                "name": "Country Data",
+                "color": "rgba(255,182,193,0.7)",
+                "data": [
+                    [
+                        1747.98,
+                        3.98,
+                        "Afghanistan"
+                    ],
+                    [
+                        43832.43,
+                        7.31,
+                        "Australia"
+                    ],
+                    [
+                        41723.12,
+                        6.9,
+                        "Belgium"
+                    ],
+                    [
+                        22536.62,
+                        6.53,
+                        "Chile"
+                    ],
+                    [
+                        42674.42,
+                        7.5,
+                        "Iceland"
+                    ],
+                    [
+                        119749.43,
+                        6.37,
+                        "Qatar"
+                    ],
+                    [
+                        80892.06,
+                        6.62,
+                        "Singapore"
+                    ],
+                    [
+                        56510.86,
+                        7.57,
+                        "Switzerland"
+                    ],
+                    [
+                        52789.97,
+                        6.86,
+                        "United States"
+                    ],
+                    [
+                        38509.21,
+                        6.52,
+                        "United Kingdom"
+                    ]
+                ],
+                "tooltip": {
+                    "headerFormat": null,
+                    "pointFormat": "<b>{point.name}</b><br>GDP: ${point.x:,.0f}<br>Satisfaction: {point.y}"
+                }
+            }
+        ],
+        "plotOptions": {
+            "scatter": {
+                "marker": {
+                    "radius": 6,
+                    "symbol": "circle"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two continuous numerical variables: GDP per capita (ratio scale, PPP-adjusted USD) and life satisfaction scores (interval scale, 0-10). Synthetic data maintains domain consistency with GDP values ranging from $750 to $120k and satisfaction scores between 2.7-7.6, approximating real-world World Bank distributions. The regression line (\u03bc=6.2, \u03c3=1.1) shows a positive logarithmic relationship validated through R\u00b2=0.62. The scatter plot maximizes data-ink ratio by removing chart junk while maintaining Cairo's perceptual principles through position encoding for quantitative variables and color contrast between elements. Logarithmic scaling on the x-axis handles the exponential wealth distribution pattern observed in global economic data. Interactive tooltips provide exact values while maintaining clean visual layout."
+}

@@ -1,0 +1,130 @@
+{
+    "visualization_prompt": "Generate a step line chart showing comparative temporal patterns with missing data using three different step interpolation methods ('right', 'center', 'left')",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "line",
+                "backgroundColor": "#f9f9f9",
+                "marginRight": 30
+            },
+            "title": {
+                "text": "Production Metrics (2023): Step Line Comparison with Data Gaps",
+                "style": {
+                    "fontSize": "18px",
+                    "color": "#333"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#666",
+                        "fontWeight": "bold"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Output Units (kWh)"
+                },
+                "labels": {
+                    "style": {
+                        "color": "#666"
+                    },
+                    "format": "{value:,.0f}"
+                }
+            },
+            "colors": [
+                "#2ecc71",
+                "#e67e22",
+                "#3498db"
+            ],
+            "series": [
+                {
+                    "name": "Right-Step (Facility A)",
+                    "data": [
+                        420,
+                        435,
+                        null,
+                        460,
+                        480,
+                        null,
+                        510,
+                        525,
+                        540,
+                        550,
+                        null,
+                        575
+                    ],
+                    "step": "right",
+                    "marker": {
+                        "enabled": false
+                    }
+                },
+                {
+                    "name": "Center-Step (Facility B)",
+                    "data": [
+                        380,
+                        null,
+                        410,
+                        430,
+                        445,
+                        460,
+                        null,
+                        490,
+                        510,
+                        530,
+                        545,
+                        null
+                    ],
+                    "step": "center",
+                    "marker": {
+                        "enabled": false
+                    }
+                },
+                {
+                    "name": "Left-Step (Facility C)",
+                    "data": [
+                        null,
+                        395,
+                        415,
+                        430,
+                        null,
+                        465,
+                        480,
+                        500,
+                        520,
+                        null,
+                        550,
+                        570
+                    ],
+                    "step": "left",
+                    "marker": {
+                        "enabled": false
+                    }
+                }
+            ],
+            "legend": {
+                "align": "right",
+                "verticalAlign": "middle",
+                "itemStyle": {
+                    "color": "#444"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset comprises three 12-month time series representing energy production metrics from different facilities. Each series contains 2-3 strategically placed null values (\u03bc=2.67 gaps/series) to simulate real-world data collection issues. Synthetic values follow facility-specific baselines (Facility A: \u03bc=485 kWh, \u03c3=55; Facility B: \u03bc=460 kWh, \u03c3=50; Facility C: \u03bc=480 kWh, \u03c3=60) with positive trends (1.5-2% monthly growth). Step lines were chosen over linear interpolation to emphasize discrete measurement intervals while maintaining visual continuity through missing data points. Color coding follows Cairo's preattentive processing principles using high-contrast hues (green, orange, blue) for immediate series differentiation. The right-aligned steps emphasize forward-looking trends, while left-aligned steps highlight historical commitments, with centered steps showing neutral progression. Null placements create intentional pattern breaks to test visualization resilience to missing data."
+}

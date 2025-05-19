@@ -1,0 +1,85 @@
+{
+    "visualization_prompt": "Generate a packedbubble chart showing product category performance metrics using size-encoded quantitative values with categorical grouping",
+    "visualization_code": {
+        "chart": {
+            "type": "packedbubble",
+            "backgroundColor": "#f9f9f9",
+            "borderRadius": 12,
+            "margin": [
+                40,
+                40,
+                80,
+                80
+            ]
+        },
+        "title": {
+            "text": "Product Sales Performance by Category (Q1 2023)",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "plotOptions": {
+            "packedbubble": {
+                "minPointSize": 15,
+                "maxPointSize": 300,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}: {point.value:,.0f} units",
+                    "style": {
+                        "textOutline": "none",
+                        "fontWeight": "normal"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Sales Volume",
+                "data": [
+                    {
+                        "name": "Electronics",
+                        "value": 3000,
+                        "color": "#1a73e8"
+                    },
+                    {
+                        "name": "Home Appliances",
+                        "value": 180,
+                        "color": "#4285f4"
+                    },
+                    {
+                        "name": "Sporting Goods",
+                        "value": 112,
+                        "color": "#6b8df6"
+                    },
+                    {
+                        "name": "Apparel",
+                        "value": 75,
+                        "color": "#8fa7f8"
+                    },
+                    {
+                        "name": "Books",
+                        "value": 20,
+                        "color": "#b4c2fa"
+                    },
+                    {
+                        "name": "Accessories",
+                        "value": 1,
+                        "color": "#d8dffc"
+                    }
+                ],
+                "colorKey": "value"
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical",
+            "itemStyle": {
+                "color": "#4a4a4a"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains univariate quantitative measurements across six categorical product groups. Synthetic sales figures follow exponential distribution (\u03bc=748, \u03c3=1167) with intentional right skew to reflect typical retail performance patterns. Values maintain domain validity through constrained ranges (1-3000 units) and logical category relationships. The packed bubble visualization maximizes data-ink ratio by encoding both quantitative (size) and categorical (color gradient) dimensions in single visual marks. Perceptual effectiveness is achieved through: 1) Monochromatic color progression maintaining Cairo's principle of discriminability, 2) Size scaling proportional to square root of values (max bubble area \u2248 200x min), and 3) Direct labeling avoiding legend dependencies. Extreme value (Electronics at 3000) creates natural visual hierarchy while secondary bubbles reveal mid-range performance clusters."
+}

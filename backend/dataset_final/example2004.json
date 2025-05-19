@@ -1,0 +1,138 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly trends of Sales vs Expenses using synthetic financial data with realistic growth patterns",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "animation": {
+                "duration": 1000
+            },
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ],
+            "backgroundColor": "#f9f9f9"
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "title": {
+                "text": "Months",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#777777",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Amount (USD)",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#777777",
+                    "fontSize": "12px"
+                },
+                "format": "${value:,.0f}"
+            }
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    5000,
+                    6500,
+                    7200,
+                    8800,
+                    9500,
+                    11500,
+                    13000,
+                    14200,
+                    15500,
+                    16300,
+                    17800,
+                    18500
+                ],
+                "marker": {
+                    "enabled": false
+                }
+            },
+            {
+                "name": "Expenses",
+                "data": [
+                    3200,
+                    3800,
+                    4200,
+                    4700,
+                    5300,
+                    5800,
+                    6200,
+                    6800,
+                    7300,
+                    7900,
+                    8400,
+                    8900
+                ],
+                "marker": {
+                    "enabled": false
+                }
+            }
+        ],
+        "colors": [
+            "#2c5f2d",
+            "#97bc62"
+        ],
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical",
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "12px"
+            }
+        },
+        "plotOptions": {
+            "spline": {
+                "lineWidth": 2,
+                "states": {
+                    "hover": {
+                        "lineWidth": 3
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two financial time series (Sales and Expenses) across 12 monthly intervals. Synthetic data follows realistic business patterns: Sales (\u03bc=$12,417, \u03c3=$4,382) shows accelerated growth in holiday months, while Expenses (\u03bc=$6,283, \u03c3=$1,878) maintains linear operational scaling. The spline chart maximizes data-ink ratio by removing markers and using subtle animation. Color choices (#2c5f2d vs #97bc62) follow Cairo's preattentive processing principles for immediate series differentiation. Axis formatting uses D3-style currency notation for immediate monetary recognition. The vertical legend placement and dual-series spline format enable direct comparison of growth rates while maintaining temporal coherence."
+}

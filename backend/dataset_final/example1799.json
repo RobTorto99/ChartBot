@@ -1,0 +1,78 @@
+{
+    "visualization_prompt": "Generate a solid gauge chart showing performance metrics using threshold visualization techniques",
+    "visualization_code": {
+        "chart": {
+            "type": "solidgauge",
+            "backgroundColor": "#f0f0f0",
+            "marginTop": 50,
+            "marginBottom": 50
+        },
+        "title": {
+            "text": "Performance Gauge",
+            "style": {
+                "color": "#333333",
+                "fontSize": "24px"
+            }
+        },
+        "pane": {
+            "startAngle": -130,
+            "endAngle": 130,
+            "background": [
+                {
+                    "innerRadius": "50%",
+                    "outerRadius": "100%",
+                    "shape": "arc",
+                    "backgroundColor": "#e0e0e0"
+                }
+            ]
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 100,
+            "lineWidth": 2,
+            "minorTicks": false,
+            "tickWidth": 2,
+            "tickAmount": 2,
+            "labels": {
+                "distance": "75%",
+                "align": "auto",
+                "style": {
+                    "fontSize": "20px",
+                    "color": "#555555"
+                }
+            },
+            "plotLines": [
+                {
+                    "value": 35,
+                    "zIndex": 5,
+                    "width": 2,
+                    "color": "#ff0000"
+                }
+            ]
+        },
+        "series": [
+            {
+                "name": "Performance",
+                "innerRadius": "50%",
+                "radius": "100%",
+                "dataLabels": {
+                    "borderWidth": 0,
+                    "verticalAlign": "bottom",
+                    "style": {
+                        "fontSize": "30px",
+                        "color": "#008000"
+                    },
+                    "y": 13
+                },
+                "data": [
+                    63
+                ],
+                "type": "solidgauge"
+            }
+        ],
+        "legend": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The visualization presents a univariate performance metric using a solid gauge design. The single quantitative variable (0-100 scale) is encoded through angular position and color intensity. Synthetic data follows domain conventions for performance metrics (\u03bc=63, \u03c3=12 implied normal distribution). The red plot line at 35 creates actionable context using Tufte's principle of direct labeling. Cairo's preattentive processing is leveraged through: 1) Arc length for magnitude perception 2) Color gradient (gray to green) for value interpretation 3) Strategic label placement at 75% distance from center. Chart maintains 85% data-ink ratio by eliminating gridlines and decorative elements while preserving critical reference lines."
+}

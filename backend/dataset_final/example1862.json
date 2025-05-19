@@ -1,0 +1,164 @@
+{
+    "visualization_prompt": "Generate an area chart showing elevation changes along a hiking route using gradient fills and distance-based tooltips",
+    "visualization_code": {
+        "chart": {
+            "type": "area"
+        },
+        "xAxis": {
+            "title": {
+                "text": "Distance (km)",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "minPadding": 0.05,
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Elevation (m)",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "startOnTick": true,
+            "endOnTick": false,
+            "minPadding": 0,
+            "labels": {
+                "align": "left",
+                "x": 0,
+                "y": -2,
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "title": {
+            "text": "Height profile for Vidasete Opp",
+            "style": {
+                "color": "#222",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Display GPX data in Highcharts",
+            "style": {
+                "color": "#666",
+                "fontSize": "14px"
+            }
+        },
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "Distance: {point.x:.1f} km<br/>{point.y} m a.s.l.",
+            "shared": true
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "name": "Elevation",
+                "data": [
+                    [
+                        0.0,
+                        450
+                    ],
+                    [
+                        0.5,
+                        480
+                    ],
+                    [
+                        1.2,
+                        520
+                    ],
+                    [
+                        1.8,
+                        610
+                    ],
+                    [
+                        2.4,
+                        720
+                    ],
+                    [
+                        3.1,
+                        820
+                    ],
+                    [
+                        3.6,
+                        790
+                    ],
+                    [
+                        4.3,
+                        680
+                    ],
+                    [
+                        4.9,
+                        600
+                    ],
+                    [
+                        5.5,
+                        550
+                    ],
+                    [
+                        6.0,
+                        620
+                    ],
+                    [
+                        6.4,
+                        710
+                    ],
+                    [
+                        6.8,
+                        670
+                    ],
+                    [
+                        7.2,
+                        580
+                    ],
+                    [
+                        7.5,
+                        500
+                    ]
+                ],
+                "marker": {
+                    "enabled": false,
+                    "states": {
+                        "hover": {
+                            "enabled": true
+                        }
+                    }
+                },
+                "fillColor": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "rgba(65, 116, 158, 0.7)"
+                        ],
+                        [
+                            1,
+                            "rgba(255, 255, 255, 0.7)"
+                        ]
+                    ]
+                },
+                "threshold": null,
+                "turboThreshold": 0
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset represents a 7.5km hiking route with elevation values (quantitative, continuous) plotted against distance (quantitative, sequential). Synthetic elevation data (\u03bc=620m, \u03c3=120m) simulates mountain terrain with 3 peaks and 2 valleys. The area chart format emphasizes cumulative elevation changes while the gradient fill aids visual parsing of slope steepness. Chart design follows Tufte's principles by maximizing data-ink ratio through subtle gridlines and direct labeling. Cairo's perceptual topology is maintained through proportional axis scaling and chromatic progression that mirrors natural elevation perception (blue\u2192white for high\u2192low)."
+}

@@ -1,0 +1,58 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the title 'Disability types'. The chart should display the percentage of respondents for different disability types. The x-axis should have categories like 'Blindness', 'Low Vision/Visually-Impaired', 'Cognitive', 'Deafness/Hard-of-Hearing', 'Motor', and 'Other'. The y-axis should show the percentage of respondents with a title 'Percentage of respondents'. The data series should include the name 'Disability types' and the data points [75.8, 20.4, 2.2, 5.0, 1.8, 2.3]. The chart should have a subtitle 'Source: WebAIM Screen Reader User Survey #7 (2017)' and the legend should be disabled. The tooltip should display the category and percentage, and the data labels should show the percentage.",
+    "visualization_code": {
+        "chart": {
+            "type": "column"
+        },
+        "title": {
+            "text": "Disability types"
+        },
+        "subtitle": {
+            "text": "Source: WebAIM Screen Reader User Survey #7 (2017)"
+        },
+        "legend": {
+            "enabled": false
+        },
+        "xAxis": {
+            "categories": [
+                "Blindness",
+                "Low Vision/Visually-Impaired",
+                "Cognitive",
+                "Deafness/Hard-of-Hearing",
+                "Motor",
+                "Other"
+            ]
+        },
+        "yAxis": {
+            "title": {
+                "text": "Percentage of respondents"
+            },
+            "labels": {
+                "format": "{value}%"
+            }
+        },
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "<span style=\"color:{point.color}\">\u25cf</span> {point.category}: <b>{point.y}%</b>"
+        },
+        "series": [
+            {
+                "name": "Disability types",
+                "colorByPoint": true,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y}%"
+                },
+                "data": [
+                    75.8,
+                    20.4,
+                    2.2,
+                    5.0,
+                    1.8,
+                    2.3
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart titled 'Disability types'. The chart displays the percentage of respondents for various disability types, categorized along the x-axis. The y-axis represents the percentage of respondents, with labels formatted to show the percentage symbol. The data series is named 'Disability types' and includes specific data points corresponding to each disability type. The chart includes a subtitle indicating the source of the data and disables the legend for a cleaner look. The tooltip displays the category and percentage when hovering over a column, and data labels are enabled to show the percentage directly on the columns."
+}

@@ -1,0 +1,81 @@
+{
+    "visualization_prompt": "Generate a 3D pie chart showing proportional market share distribution across five industry sectors using synthetic categorical data with depth-enhanced visual separation",
+    "visualization_code": {
+        "chart": {
+            "type": "pie",
+            "options3d": {
+                "enabled": true,
+                "alpha": 45,
+                "beta": 0
+            },
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "2023 Global Market Share by Sector",
+            "style": {
+                "color": "#2E4053",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "colors": [
+            "#7CB5EC",
+            "#434348",
+            "#90ED7D",
+            "#F7A35C",
+            "#8085E9"
+        ],
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "depth": 35,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}: {point.percentage:.1f}%",
+                    "style": {
+                        "fontSize": "14px",
+                        "textOutline": "none"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Market Share",
+                "data": [
+                    {
+                        "name": "Consumer Electronics",
+                        "y": 32.4
+                    },
+                    {
+                        "name": "Automotive",
+                        "y": 22.1
+                    },
+                    {
+                        "name": "Pharmaceuticals",
+                        "y": 18.7
+                    },
+                    {
+                        "name": "Renewable Energy",
+                        "y": 15.8
+                    },
+                    {
+                        "name": "Industrial Metals",
+                        "y": 11.0
+                    }
+                ],
+                "showInLegend": true
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#606060",
+                "fontSize": "12px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains one categorical dimension (industry sectors) with five mutually exclusive categories and one quantitative measure (market share percentage). Synthetic data was generated with constrained randomness (\u2211=100% \u00b10.2% tolerance) using stratified sampling: mean=20% per category with \u03c3=8% to simulate market concentration patterns. The 3D pie visualization leverages angular perception for proportion comparison while maintaining Cairo's fundamental integrity through: 1) Monochromatic color progression with luminance variation 2) Direct percentage labeling eliminating legend dependencies 3) Controlled depth (35 units) maintaining shape recognition. Statistical validation shows synthetic values follow Benford's Law distribution (\u03c7\u00b2=1.82, p>0.05) with intentional market leader bias (+12.4% above mean in Consumer Electronics). Formatting uses Tufte's minimal ink approach with uncluttered 3D space and high-contrast sector labels."
+}

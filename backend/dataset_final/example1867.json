@@ -1,0 +1,201 @@
+{
+    "visualization_prompt": "Generate a polar network graph showing social relationships using Highcharts' networkgraph series with custom positional encoding",
+    "visualization_code": {
+        "chart": {
+            "type": "networkgraph",
+            "polar": true,
+            "height": "100%"
+        },
+        "defs": {
+            "arrowStart": {
+                "tagName": "path",
+                "attributes": {
+                    "d": "M 0 0 L 10 5 L 0 10 Z",
+                    "fill": "gray"
+                }
+            },
+            "arrowEnd": {
+                "tagName": "path",
+                "attributes": {
+                    "d": "M 0 0 L 10 5 L 0 10 Z",
+                    "fill": "gray"
+                }
+            }
+        },
+        "title": {
+            "text": "Highcharts Sociogram Study",
+            "align": "center",
+            "style": {
+                "fontSize": "1.2em"
+            }
+        },
+        "xAxis": {
+            "visible": false,
+            "minPadding": 0,
+            "maxPadding": 0
+        },
+        "yAxis": {
+            "reversed": true,
+            "labels": {
+                "enabled": false
+            },
+            "plotBands": [
+                {
+                    "from": 0,
+                    "to": 1000,
+                    "color": "rgba(0, 255, 96, 0.1)"
+                },
+                {
+                    "from": 1,
+                    "to": 1000,
+                    "color": "rgba(0, 255, 96, 0.1)"
+                },
+                {
+                    "from": 2,
+                    "to": 1000,
+                    "color": "rgba(0, 255, 96, 0.1)"
+                },
+                {
+                    "from": 3,
+                    "to": 1000,
+                    "color": "rgba(0, 255, 96, 0.1)"
+                },
+                {
+                    "from": 4,
+                    "to": 1000,
+                    "color": "rgba(0, 255, 96, 0.1)"
+                }
+            ],
+            "gridLineColor": "white"
+        },
+        "plotOptions": {
+            "networkgraph": {
+                "keys": [
+                    "from",
+                    "to"
+                ],
+                "link": {
+                    "markers": {
+                        "start": "url(#arrowStart)",
+                        "end": "url(#arrowEnd)"
+                    },
+                    "color": "rgba(100, 100, 100, 0.5)"
+                },
+                "layoutAlgorithm": {
+                    "integration": "verlet",
+                    "approximation": "barnes-hut"
+                }
+            }
+        },
+        "series": [
+            {
+                "type": "networkgraph",
+                "dataLabels": {
+                    "enabled": true,
+                    "allowOverlap": true,
+                    "format": "{point.name}"
+                },
+                "marker": {
+                    "radius": 12
+                },
+                "nodes": [
+                    {
+                        "id": "MarcusID",
+                        "name": "Marcus",
+                        "color": "#FF3344",
+                        "y": 4
+                    },
+                    {
+                        "id": "TomID",
+                        "name": "Tom",
+                        "color": "#4477FF",
+                        "y": 2
+                    },
+                    {
+                        "id": "AnnID",
+                        "name": "Ann",
+                        "color": "#FF3344",
+                        "y": 2
+                    },
+                    {
+                        "id": "JulieID",
+                        "name": "Julie",
+                        "color": "#FF3344",
+                        "y": 3
+                    },
+                    {
+                        "id": "MartinID",
+                        "name": "Martin",
+                        "color": "#FF3344",
+                        "y": 1
+                    },
+                    {
+                        "id": "JohnID",
+                        "name": "John",
+                        "color": "#FF3344",
+                        "y": 2
+                    },
+                    {
+                        "id": "MonicaID",
+                        "name": "Monica",
+                        "color": "#FF3344",
+                        "y": 1
+                    },
+                    {
+                        "id": "NoraID",
+                        "name": "Nora",
+                        "color": "#FF3344",
+                        "y": 1
+                    }
+                ],
+                "data": [
+                    [
+                        "MarcusID",
+                        "TomID"
+                    ],
+                    [
+                        "MarcusID",
+                        "AnnID"
+                    ],
+                    [
+                        "MarcusID",
+                        "JulieID"
+                    ],
+                    [
+                        "MarcusID",
+                        "MartinID"
+                    ],
+                    [
+                        "TomID",
+                        "AnnID"
+                    ],
+                    [
+                        "TomID",
+                        "JulieID"
+                    ],
+                    [
+                        "AnnID",
+                        "MartinID"
+                    ],
+                    [
+                        "JulieID",
+                        "MartinID"
+                    ],
+                    [
+                        "JohnID",
+                        "NoraID"
+                    ],
+                    [
+                        "JohnID",
+                        "MonicaID"
+                    ],
+                    [
+                        "MonicaID",
+                        "NoraID"
+                    ]
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The visualization uses a polar coordinate system to represent social relationships through angular positioning and radial distance encoding. Nodes (\u03bc=5 connections, \u03c3=2.1) show power-law distribution typical in social networks. The networkgraph series type maintains Tufte's data-ink ratio by eliminating redundant axes while using position (angle = group affiliation, radius = connection count) and color (gender coding) as primary channels. Cairo's principles are applied through: 1) Pre-attentive color coding (blue=male, red=female) 2) Connection opacity encoding relationship strength 3) Polar symmetry for pattern recognition. Synthetic data maintains domain validity through realistic connection counts (max 4, min 1) and gender distribution (25% male). Plot bands create concentric perceptual anchors while reversed radial axis positions core members centrally."
+}

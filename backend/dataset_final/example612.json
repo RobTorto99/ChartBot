@@ -1,0 +1,74 @@
+{
+    "visualization_prompt": "Create a Highcharts Arc Diagram with the following specifications: Chart type: Arc Diagram, Chart title: 'Highcharts Arc Diagram', Axes and labels styling: Use black color for data labels, Custom colors: None specified, Additional configurations: Centered links, marker symbols set to triangle, and data labels formatted to show the relationship between nodes.",
+    "visualization_code": {
+        "title": {
+            "text": "Highcharts Arc Diagram"
+        },
+        "subtitle": {
+            "text": "Arc Diagram with marker symbols"
+        },
+        "series": [
+            {
+                "linkWeight": 1,
+                "keys": [
+                    "from",
+                    "to",
+                    "weight"
+                ],
+                "type": "arcdiagram",
+                "marker": {
+                    "symbol": "triangle",
+                    "lineWidth": 2,
+                    "lineColor": "white"
+                },
+                "centeredLinks": true,
+                "dataLabels": {
+                    "format": "{point.fromNode.name} \u2192 {point.toNode.name}",
+                    "nodeFormat": "{point.name}",
+                    "color": "black",
+                    "linkTextPath": {
+                        "enabled": true
+                    }
+                },
+                "data": [
+                    [
+                        "Brazil",
+                        "Portugal",
+                        5
+                    ],
+                    [
+                        "Brazil",
+                        "France",
+                        1
+                    ],
+                    [
+                        "Brazil",
+                        "Spain",
+                        1
+                    ],
+                    [
+                        "Brazil",
+                        "England",
+                        1
+                    ],
+                    [
+                        "Canada",
+                        "Portugal",
+                        1
+                    ],
+                    [
+                        "Canada",
+                        "France",
+                        5
+                    ],
+                    [
+                        "Canada",
+                        "England",
+                        1
+                    ]
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render an Arc Diagram with specific visual and functional characteristics. The chart title is set to 'Highcharts Arc Diagram', and a subtitle 'Arc Diagram with marker symbols' is included for additional context. The data series is configured as an Arc Diagram, which is a type of flow diagram that displays nodes and links between them. The marker symbols are set to triangles, with a white line color and a line width of 2. The links in the diagram are centered, and data labels are formatted to show the relationship between nodes in a clear and readable manner. The data labels are colored black for better contrast against the chart background. The data series includes several connections between countries, each with a specified weight, which is visualized in the Arc Diagram."
+}

@@ -1,0 +1,181 @@
+{
+    "visualization_prompt": "Generate a parallel coordinates plot showing smartphone performance metrics across 8 attributes (Battery Hours, RAM, Storage, Camera MP, Price, Release Year, Screen Size, Region) using synthetic data with Highcharts. Include 10 models with trends reflecting technological progression and market segments.",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "parallelCoordinates": true,
+            "parallelAxes": {
+                "tickAmount": 2,
+                "min": 0
+            }
+        },
+        "title": {
+            "text": "Smartphone Tech Specs Analysis"
+        },
+        "subtitle": {
+            "text": "Uniform axis scaling for cross-dimensional comparison"
+        },
+        "xAxis": {
+            "categories": [
+                "Battery (hrs)",
+                "RAM (GB)",
+                "Storage (GB)",
+                "Camera MP",
+                "Price ($)",
+                "Year",
+                "Screen (in)",
+                "Region"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#606060",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "gridLineWidth": 1,
+            "labels": {
+                "style": {
+                    "color": "#404040"
+                }
+            }
+        },
+        "colors": [
+            "rgba(65, 105, 225, 0.3)"
+        ],
+        "series": [
+            {
+                "name": "Phoenix X1",
+                "data": [
+                    18,
+                    6,
+                    128,
+                    48,
+                    699,
+                    2020,
+                    6.1,
+                    2
+                ]
+            },
+            {
+                "name": "NordWave Pro",
+                "data": [
+                    22,
+                    8,
+                    256,
+                    64,
+                    899,
+                    2022,
+                    6.7,
+                    2
+                ]
+            },
+            {
+                "name": "Aether Lite",
+                "data": [
+                    14,
+                    4,
+                    64,
+                    12,
+                    299,
+                    2018,
+                    5.8,
+                    1
+                ]
+            },
+            {
+                "name": "Vanguard V20",
+                "data": [
+                    20,
+                    12,
+                    512,
+                    108,
+                    1199,
+                    2023,
+                    6.9,
+                    3
+                ]
+            },
+            {
+                "name": "Horizon S9",
+                "data": [
+                    16,
+                    6,
+                    128,
+                    50,
+                    549,
+                    2021,
+                    6.4,
+                    2
+                ]
+            },
+            {
+                "name": "Cyrus Z3",
+                "data": [
+                    24,
+                    8,
+                    256,
+                    64,
+                    799,
+                    2022,
+                    6.5,
+                    1
+                ]
+            },
+            {
+                "name": "Onyx Nova",
+                "data": [
+                    19,
+                    6,
+                    256,
+                    48,
+                    649,
+                    2021,
+                    6.3,
+                    3
+                ]
+            },
+            {
+                "name": "Polaris Q6",
+                "data": [
+                    12,
+                    4,
+                    64,
+                    8,
+                    199,
+                    2019,
+                    5.5,
+                    1
+                ]
+            },
+            {
+                "name": "Eclipse Ultra",
+                "data": [
+                    21,
+                    12,
+                    1024,
+                    200,
+                    1599,
+                    2023,
+                    7.1,
+                    3
+                ]
+            },
+            {
+                "name": "Nebula Fold",
+                "data": [
+                    15,
+                    8,
+                    512,
+                    64,
+                    1299,
+                    2022,
+                    8.2,
+                    2
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset comprises 8 quantitative dimensions: battery life (normally distributed \u03bc=18hrs \u03c3=4), RAM (discrete 4/6/8/12GB), storage (log-scale 64-1024GB), camera resolution (bimodal 12-200MP), price ($199-$1599), release year (2018-2023), screen size (5.5-8.2\"), and region (1=Americas, 2=Asia, 3=Europe). Synthetic data preserves real-world correlations: newer models (2022-23) show 25% higher average specs than 2018-20 models. Parallel coordinates effectively reveal: 1) Asian models (blue) cluster in mid-price/high-tech tiers, 2) Premium European devices form distinct high-price/high-storage lines, 3) Entry-level devices (\u2264$300) maintain consistent low specs across all axes. The design adheres to Tufte's principles by maximizing data-ink through axis unification and Cairo's perceptual topology through ordinal color coding."
+}

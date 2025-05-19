@@ -1,0 +1,101 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart, a line chart, and a bar chart. Each chart should have a title, styled axes and labels, and multiple data series. The tooltip should be configured to appear outside the chart area and use HTML for the bar chart. Additionally, specify custom colors for the data series and configure the chart margins and background.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "borderWidth": 1,
+            "backgroundColor": "#f9f9f9",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "Column chart",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333333"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr"
+            ],
+            "labels": {
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#666666"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Values",
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#666666"
+                }
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#666666"
+                }
+            }
+        },
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "outside": true
+        },
+        "series": [
+            {
+                "name": "Really, really long series name 1",
+                "data": [
+                    1,
+                    4,
+                    2,
+                    3
+                ],
+                "color": "#008000"
+            },
+            {
+                "name": "Really, really long series name 2",
+                "data": [
+                    4,
+                    2,
+                    5,
+                    3
+                ],
+                "color": "#FFA500"
+            },
+            {
+                "name": "Really, really long series name 3",
+                "data": [
+                    6,
+                    5,
+                    3,
+                    1
+                ],
+                "color": "#FF0000"
+            },
+            {
+                "name": "Really, really long series name 4",
+                "data": [
+                    6,
+                    4,
+                    2,
+                    1
+                ],
+                "color": "#0000FF"
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart with specific styling and data series. The chart type is set to 'column', and it includes a title styled with a larger font size and a dark color. The x-axis and y-axis labels are styled with a medium font size and a gray color. The chart has multiple data series, each with a unique color. The tooltip is configured to appear outside the chart area, enhancing readability. The chart's background is set to a light gray, and the margins are adjusted to provide more space around the chart elements. This configuration ensures a clear and visually appealing presentation of the data."
+}

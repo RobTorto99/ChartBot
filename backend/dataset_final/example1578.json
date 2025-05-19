@@ -1,0 +1,105 @@
+{
+    "visualization_prompt": "Generate a column chart showing Product Sales Performance using synthetic data with an upward trend and clustered growth patterns",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#FFFFFF",
+            "renderTo": "container"
+        },
+        "title": {
+            "text": "Product Sales Performance",
+            "style": {
+                "color": "#2E4053",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Product 1",
+                "Product 2",
+                "Product 3",
+                "Product 4",
+                "Product 5",
+                "Product 6",
+                "Product 7",
+                "Product 8",
+                "Product 9",
+                "Product 10"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Product Line",
+                "style": {
+                    "color": "#2C3E50",
+                    "fontSize": "14px"
+                }
+            },
+            "minPadding": 0.05,
+            "maxPadding": 0.05
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales (USD Thousands)",
+                "style": {
+                    "color": "#2C3E50",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "12px"
+                },
+                "format": "{value:,.0f}"
+            }
+        },
+        "series": [
+            {
+                "name": "Annual Sales",
+                "data": [
+                    53,
+                    65,
+                    72,
+                    78,
+                    85,
+                    105,
+                    115,
+                    118,
+                    135,
+                    142
+                ],
+                "color": "#3498DB",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y:,.0f}K",
+                    "color": "#2C3E50",
+                    "style": {
+                        "textShadow": "none"
+                    }
+                }
+            }
+        ],
+        "plotOptions": {
+            "column": {
+                "pointPadding": 0.1,
+                "borderWidth": 0,
+                "groupPadding": 0.15
+            }
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#34495E",
+                "fontSize": "12px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains univariate quantitative sales figures across 10 categorical product lines. Synthetic data was generated with \u03bc=97.8 and \u03c3=29.2, following a positive linear trend (slope=9.89/yr) with superimposed normal distribution noise (\u03c3=8). This maintains domain consistency for business metrics while introducing intentional clustering in the latter half (Products 6-10 average 123K vs 70.6K in 1-5). The column chart maximizes data-ink ratio per Tufte by eliminating gridlines and using direct labeling. Cairo's preattentive processing is leveraged through aligned quantitative labels and a single-hue color progression. The categorical spacing (minPadding/maxPadding=0.05) follows perceptual grouping principles while preventing optical overflow."
+}

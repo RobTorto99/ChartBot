@@ -1,0 +1,130 @@
+{
+    "visualization_prompt": "Generate a spline chart showing mathematical sequence patterns using Fibonacci retracement annotations",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ],
+            "zoomType": "xy"
+        },
+        "title": {
+            "text": "Fibonacci Annotation",
+            "style": {
+                "color": "#333",
+                "fontSize": "20px",
+                "fontFamily": "IBM Plex Sans, sans-serif"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "Sequence Position",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "16px",
+                    "fontFamily": "IBM Plex Sans, sans-serif"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#777",
+                    "fontSize": "14px",
+                    "fontFamily": "IBM Plex Sans, sans-serif"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Value",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "16px",
+                    "fontFamily": "IBM Plex Sans, sans-serif"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#777",
+                    "fontSize": "14px",
+                    "fontFamily": "IBM Plex Sans, sans-serif"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Modified Fibonacci Sequence",
+                "data": [
+                    1,
+                    2,
+                    3,
+                    {
+                        "y": 4,
+                        "marker": {
+                            "symbol": "triangle",
+                            "radius": 6
+                        }
+                    },
+                    5,
+                    {
+                        "y": 6,
+                        "marker": {
+                            "symbol": "square",
+                            "radius": 6
+                        }
+                    },
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    3,
+                    2,
+                    4,
+                    4,
+                    4,
+                    4,
+                    3
+                ],
+                "color": "#071952",
+                "marker": {
+                    "lineColor": "#97DECE",
+                    "lineWidth": 2
+                }
+            }
+        ],
+        "annotations": [
+            {
+                "type": "fibonacci",
+                "typeOptions": {
+                    "points": [
+                        {
+                            "x": 3,
+                            "y": 4
+                        },
+                        {
+                            "x": 5,
+                            "y": 6
+                        }
+                    ],
+                    "color": "#97DECE",
+                    "lineWidth": 2
+                }
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333",
+                "fontSize": "14px",
+                "fontFamily": "IBM Plex Sans, sans-serif"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a 1D numerical sequence with 20 temporal observations. Synthetic data combines base Fibonacci progression (\u03bc=3.8, \u03c3=1.9) with intentional perturbations to create retracement patterns. Visualization employs Tufte's data-ink ratio through minimal gridlines and high-contrast spline curves. Cairo's perceptual principles are implemented via distinct marker symbols (triangle/square) for key Fibonacci levels and color-coded annotations (#97DECE). The spline interpolation emphasizes trend continuity while maintaining visible data points, with Fibonacci retracement zones calculated between local extrema at positions 3-5 (23.6%-61.8% levels)."
+}

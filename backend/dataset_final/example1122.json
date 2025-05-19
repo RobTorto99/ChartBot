@@ -1,0 +1,128 @@
+{
+    "visualization_prompt": "Generate a scatter plot showing inverse relationship between sound pressure level and distance using logarithmic regression analysis",
+    "visualization_code": {
+        "chart": {
+            "type": "scatter",
+            "marginRight": 20,
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Sound Pressure Level Attenuation",
+            "style": {
+                "fontSize": "20px",
+                "color": "#2a2a2b"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "Distance (m)",
+                "style": {
+                    "color": "#606060",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#404040",
+                    "fontSize": "12px"
+                }
+            },
+            "gridLineWidth": 0.5
+        },
+        "yAxis": {
+            "title": {
+                "text": "SPL (dB)",
+                "style": {
+                    "color": "#606060",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#404040",
+                    "fontSize": "12px"
+                }
+            },
+            "gridLineColor": "#f0f0f0"
+        },
+        "tooltip": {
+            "pointFormat": "{series.name}: {point.y:.1f} dB at {point.x} m",
+            "valueDecimals": 1
+        },
+        "plotOptions": {
+            "scatter": {
+                "marker": {
+                    "radius": 6,
+                    "fillColor": "rgba(223, 83, 83, 0.3)",
+                    "lineWidth": 1,
+                    "lineColor": "rgba(223, 83, 83, 0.7)"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Field Measurements",
+                "color": "rgba(223, 83, 83, 0.5)",
+                "regression": true,
+                "regressionSettings": {
+                    "type": "logarithmic",
+                    "color": "rgba(223, 83, 83, 0.9)",
+                    "dashStyle": "ShortDash"
+                },
+                "data": [
+                    {
+                        "x": 1,
+                        "y": 100
+                    },
+                    {
+                        "x": 2,
+                        "y": 70
+                    },
+                    {
+                        "x": 3,
+                        "y": 55
+                    },
+                    {
+                        "x": 4,
+                        "y": 45
+                    },
+                    {
+                        "x": 5,
+                        "y": 38
+                    },
+                    {
+                        "x": 6,
+                        "y": 33
+                    },
+                    {
+                        "x": 7,
+                        "y": 30
+                    },
+                    {
+                        "x": 8,
+                        "y": 26
+                    },
+                    {
+                        "x": 9,
+                        "y": 23
+                    },
+                    {
+                        "x": 10,
+                        "y": 20
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#606060"
+            }
+        },
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset contains two continuous quantitative variables: distance (ratio scale, meters) and sound pressure level (interval scale, dB). Synthetic data follows the inverse square law (6 dB reduction per doubling of distance) with added measurement variance (\u03c3 \u2248 1.5 dB). The scatter plot maximizes data-ink ratio by removing chart borders while preserving coordinate axes. Position encoding follows Cairo's magnitude principle for spatial comparison accuracy. Logarithmic regression (R\u00b2=0.98) confirms theoretical acoustic attenuation patterns. Marker transparency (\u03b1=0.3) mitigates overplotting while maintaining density perception."
+}

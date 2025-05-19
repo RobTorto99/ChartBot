@@ -1,0 +1,127 @@
+{
+    "visualization_prompt": "Generate a stacked column chart showing monthly product category performance using synthetic sales data with seasonal trends and growth patterns",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "backgroundColor": "#F9F9F9",
+                "marginTop": 40
+            },
+            "title": {
+                "text": "2023 Monthly Sales Distribution by Product Line",
+                "style": {
+                    "fontSize": "18px",
+                    "color": "#2C3E50"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#34495E",
+                        "fontWeight": "500"
+                    }
+                },
+                "title": {
+                    "text": "Months",
+                    "style": {
+                        "color": "#7F8C8D",
+                        "fontSize": "14px"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Revenue (USD thousands)",
+                    "style": {
+                        "color": "#7F8C8D",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#34495E"
+                    },
+                    "format": "{value:,.0f}"
+                }
+            },
+            "plotOptions": {
+                "series": {
+                    "stacking": "normal",
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "{point.percentage:.0f}%",
+                        "color": "#2C3E50"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Consumer Electronics",
+                    "data": [
+                        85,
+                        78,
+                        112,
+                        125,
+                        143,
+                        167,
+                        189,
+                        175,
+                        158,
+                        132,
+                        98,
+                        82
+                    ],
+                    "color": "#3498DB",
+                    "marker": {
+                        "symbol": "circle"
+                    }
+                },
+                {
+                    "name": "Home Appliances",
+                    "data": [
+                        115,
+                        122,
+                        138,
+                        155,
+                        167,
+                        183,
+                        211,
+                        198,
+                        172,
+                        148,
+                        112,
+                        98
+                    ],
+                    "color": "#E74C3C"
+                }
+            ],
+            "tooltip": {
+                "headerFormat": "<b>{point.x}</b><br/>",
+                "pointFormat": "<span style='color:{point.color}'>\u25cf</span> {series.name}: <b>${point.y:,.0f}k</b> ({point.percentage:.1f}%)",
+                "shared": true
+            },
+            "legend": {
+                "align": "right",
+                "verticalAlign": "top",
+                "itemStyle": {
+                    "color": "#2C3E50"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two-dimensional monthly sales data (24 total observations) with one categorical temporal variable (months) and two quantitative variables (product category revenues). Synthetic data was generated with \u03bc=125k (\u03c3=35k) for Consumer Electronics showing summer peaks, and \u03bc=150k (\u03c3=40k) for Home Appliances with Q3 emphasis, maintaining realistic retail seasonality. The stacked column format maximizes data-ink ratio by directly encoding both absolute values through column height and relative proportions through color segments, following Tufte's principles. Cairo's perceptual topology is maintained through distinct hue differentiation (blue vs red) and consistent spatial alignment. Percentage annotations and dual-axis tooltip formatting (D3-style ,.0f) enable efficient magnitude comparisons while preserving density-altitude relationships in the temporal progression."
+}

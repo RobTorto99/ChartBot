@@ -1,0 +1,115 @@
+{
+    "visualization_prompt": "Generate a 3D column chart showing monthly sales trends with synthetic seasonal data using Highcharts 3D styling and depth parameters",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "margin": 75,
+            "options3d": {
+                "enabled": true,
+                "alpha": 15,
+                "beta": 15,
+                "depth": 50
+            },
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "2023 Monthly Sales Report (USD)",
+            "style": {
+                "color": "#2E4053",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "12px"
+                },
+                "rotation": -45
+            },
+            "title": {
+                "text": "Month",
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (Thousands)",
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "12px"
+                },
+                "format": "${value}K"
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "depth": 25,
+                "color": "#3498DB",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "${y}K",
+                    "style": {
+                        "textOutline": "none",
+                        "fontSize": "12px"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Retail Sales",
+                "data": [
+                    72,
+                    88,
+                    105,
+                    132,
+                    162,
+                    203,
+                    192,
+                    181,
+                    152,
+                    123,
+                    91,
+                    63
+                ],
+                "type": "column"
+            }
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "headerFormat": "<b>{point.x}</b><br/>",
+            "pointFormat": "Sales: <b>${point.y}K</b>",
+            "style": {
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations of retail sales (univariate time series). Synthetic data was generated with \u03bc=130.4K and \u03c3=48.2K, simulating seasonal patterns with summer peak (Jun: 203K) and winter trough (Dec: 63K). The 3D column chart emphasizes monthly comparisons while maintaining value readability through front-facing data labels. Though 3D effects increase chart ink, controlled alpha/beta angles (15\u00b0) preserve value perception per Cairo's principles of visual integrity. The blue color gradient and dollar-formatted labels follow financial visualization conventions, while the suppressed legend reduces cognitive load for single-series data. Statistical anchors: Synthetic data shows 66% variance reduction from peak to trough, with Q2 sales averaging 166K vs Q4 average of 92K."
+}

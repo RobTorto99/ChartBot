@@ -1,0 +1,119 @@
+{
+    "visualization_prompt": "Generate an areaspline chart showing weekly fruit consumption patterns using synthetic time-series data with comparative analysis",
+    "visualization_code": {
+        "chart": {
+            "type": "areaspline",
+            "backgroundColor": "#f7f7f7"
+        },
+        "title": {
+            "text": "Highcharts with time control",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Fruit consumption analysis: Current vs. Average Week",
+            "style": {
+                "color": "#7f8c8d",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Mon",
+                "Tue",
+                "Wed",
+                "Thu",
+                "Fri",
+                "Sat",
+                "Sun"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "12px",
+                    "fontFamily": "Arial"
+                }
+            },
+            "gridLineWidth": 1,
+            "gridLineColor": "#ecf0f1"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Consumption Units",
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "14px",
+                    "fontWeight": "normal"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            },
+            "gridLineColor": "#ecf0f1"
+        },
+        "plotOptions": {
+            "areaspline": {
+                "fillOpacity": 0.4,
+                "marker": {
+                    "radius": 3,
+                    "fillColor": "#ffffff",
+                    "lineWidth": 2
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Current Week",
+                "data": [
+                    18,
+                    25,
+                    22,
+                    30,
+                    27,
+                    35,
+                    40
+                ],
+                "color": "#3498db",
+                "dashStyle": "Solid"
+            },
+            {
+                "name": "3-Month Average",
+                "data": [
+                    22,
+                    28,
+                    25,
+                    32,
+                    30,
+                    38,
+                    42
+                ],
+                "color": "#e74c3c",
+                "dashStyle": "ShortDot"
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "layout": "vertical",
+            "itemStyle": {
+                "color": "#2c3e50",
+                "fontSize": "12px"
+            }
+        },
+        "tooltip": {
+            "valueSuffix": " units",
+            "backgroundColor": "rgba(255,255,255,0.95)",
+            "borderColor": "#bdc3c7",
+            "style": {
+                "color": "#2c3e50"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two time-series vectors (current week vs. 3-month average) across seven temporal categories (daily consumption). Synthetic data was generated with \u03bc=30 \u00b18 SD for current week and \u03bc=32 \u00b17 SD for historical average, maintaining domain-appropriate ranges for food consumption metrics. The areaspline format maximizes data-ink ratio by using gradient fills instead of solid areas, while maintaining visual separation between series through Cairo's principles of color contrast (blue=current, red=historical) and line differentiation (solid vs. dotted). Statistical anchors show the current week's 15% variance from average (peaking at 40 vs 42 units) while preserving weekly periodicity patterns. Axis styling uses a monochromatic hierarchy (dark titles, medium-gray labels) to direct attention to the data layer."
+}

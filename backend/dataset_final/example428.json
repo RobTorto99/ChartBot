@@ -1,0 +1,88 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a 3D column chart with the following specifications: Chart type: column, Chart title: '3D Column Chart Example', Axes and labels styling: Use a dark blue color (#003366) for the title and axis labels, with a font size of 14px. Data series: Two series with data [1, 2, 4] and [5, 6, 3], respectively. Custom colors: Use a gradient from #7cb5ec to #434348 for the columns. Additional configurations: Enable 3D options with alpha: 15, beta: 15, and depth: 40. Enable stacking for the columns and set the chart margins to 75.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "margin": 75,
+            "options3d": {
+                "enabled": true,
+                "alpha": 15,
+                "beta": 15,
+                "depth": 40
+            }
+        },
+        "title": {
+            "text": "3D Column Chart Example",
+            "style": {
+                "color": "#003366",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#003366",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#003366",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#003366",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "depth": 40,
+                "stacking": true,
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#7cb5ec"
+                        ],
+                        [
+                            1,
+                            "#434348"
+                        ]
+                    ]
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    1,
+                    2,
+                    4
+                ]
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    5,
+                    6,
+                    3
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a 3D column chart with specific styling and data series. The chart type is set to 'column', and 3D options are enabled with alpha and beta angles of 15 degrees and a depth of 40. The chart title is styled with a dark blue color and a font size of 14px. The x-axis and y-axis labels are also styled with the same dark blue color and font size. The columns are stacked and colored with a gradient from light blue to dark gray. The data series include two sets of data, each with a name and corresponding data points."
+}

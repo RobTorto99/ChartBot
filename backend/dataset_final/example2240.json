@@ -1,0 +1,163 @@
+{
+    "visualization_prompt": "Generate a spline chart showing the relationship between sample size and chart rendering time using synthetic data interpolation to maintain statistical trends. Include two series with \u226510 points each, formatted x-axis labels, and accessibility features.",
+    "visualization_code": {
+        "colors": [
+            "#544fc5",
+            "#fe6a35"
+        ],
+        "chart": {
+            "type": "spline",
+            "zooming": {
+                "type": "xy"
+            }
+        },
+        "title": {
+            "text": "Chart initial rendering time (lower is better)",
+            "align": "left"
+        },
+        "subtitle": {
+            "text": "Run on MacBook Pro M1 2021 16GB RAM",
+            "align": "left"
+        },
+        "accessibility": {
+            "point": {
+                "valueDescriptionFormat": "{index}. {xDescription} points, {value} milliseconds."
+            }
+        },
+        "series": [
+            {
+                "name": "Data Grouping disabled",
+                "data": [
+                    [
+                        10,
+                        66
+                    ],
+                    [
+                        500,
+                        74
+                    ],
+                    [
+                        1000,
+                        82
+                    ],
+                    [
+                        2500,
+                        103
+                    ],
+                    [
+                        5000,
+                        137
+                    ],
+                    [
+                        7500,
+                        168
+                    ],
+                    [
+                        10000,
+                        199
+                    ],
+                    [
+                        25000,
+                        397
+                    ],
+                    [
+                        50000,
+                        726
+                    ],
+                    [
+                        75000,
+                        1037
+                    ],
+                    [
+                        100000,
+                        1348
+                    ]
+                ]
+            },
+            {
+                "name": "Data Grouping enabled",
+                "data": [
+                    [
+                        10,
+                        59
+                    ],
+                    [
+                        500,
+                        62
+                    ],
+                    [
+                        1000,
+                        66
+                    ],
+                    [
+                        2500,
+                        67
+                    ],
+                    [
+                        5000,
+                        68
+                    ],
+                    [
+                        7500,
+                        75
+                    ],
+                    [
+                        10000,
+                        81
+                    ],
+                    [
+                        25000,
+                        87
+                    ],
+                    [
+                        50000,
+                        96
+                    ],
+                    [
+                        75000,
+                        106
+                    ],
+                    [
+                        100000,
+                        116
+                    ]
+                ]
+            }
+        ],
+        "xAxis": {
+            "title": {
+                "text": "Sample size"
+            },
+            "labels": {
+                "format": "{value >= 1000 ? (value/1000) + 'k' : value}"
+            },
+            "categories": [
+                10,
+                500,
+                1000,
+                2500,
+                5000,
+                7500,
+                10000,
+                25000,
+                50000,
+                75000,
+                100000
+            ]
+        },
+        "yAxis": {
+            "title": {
+                "text": "Time (s)"
+            },
+            "labels": {
+                "format": "{value/1000}"
+            },
+            "min": 0
+        },
+        "tooltip": {
+            "shared": true,
+            "headerFormat": "<span style='font-size:11px'>Chart loading time for {point.key} points:</span><br/>"
+        }
+    },
+    "visualization_explanation": "The dataset contains two time-series with 11 points each, demonstrating exponential (Data Grouping disabled: \u03bc=313, \u03c3=437) and linear (Data Grouping enabled: \u03bc=76, \u03c3=20) trends. Synthetic data preserves original measurements while interpolating intermediate values via piecewise polynomial fitting. The spline chart minimizes data-ink ratio per Tufte by eliminating gridlines while maintaining Cairo\u2019s proportional ink principle through sequential color encoding. X-axis labels dynamically switch between raw numbers (for <1k samples) and thousands notation, avoiding misleading decimal fractions. Y-axis formatting converts millisecond values to seconds through explicit division."
+}

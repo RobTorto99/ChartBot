@@ -1,0 +1,77 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a Streamgraph chart with the title 'JS Frameworks Trends'. The chart should have specific styling for axes and labels, including custom colors for the data series. The chart should also include additional configurations such as zooming, tooltips, and data loading from a CSV URL.",
+    "visualization_code": {
+        "chart": {
+            "type": "streamgraph",
+            "marginBottom": 30,
+            "zooming": {
+                "type": "x"
+            }
+        },
+        "title": {
+            "floating": true,
+            "align": "left",
+            "text": "JS Frameworks Trends"
+        },
+        "subtitle": {
+            "floating": true,
+            "align": "left",
+            "y": 30,
+            "text": "Source: <a href=\"https://trends.google.com/trends/\" target=\"_blank\">Google trends</a>"
+        },
+        "xAxis": {
+            "maxPadding": 0,
+            "crosshair": true,
+            "labels": {
+                "align": "left",
+                "reserveSpace": false,
+                "rotation": 270
+            },
+            "lineWidth": 0,
+            "margin": 20,
+            "tickWidth": 0
+        },
+        "yAxis": {
+            "visible": false,
+            "startOnTick": false,
+            "endOnTick": false
+        },
+        "legend": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "series": {
+                "label": {
+                    "minFontSize": 5,
+                    "maxFontSize": 15,
+                    "style": {
+                        "color": "rgba(255,255,255,0.75)"
+                    }
+                }
+            }
+        },
+        "tooltip": {
+            "xDateFormat": "%B %Y",
+            "shared": true
+        },
+        "data": {
+            "csvURL": "https://www.highcharts.com/samples/data/js-frameworks-trends.csv",
+            "endColumn": 4
+        },
+        "series": [
+            {
+                "color": "#4284F3"
+            },
+            {
+                "color": "#33A852"
+            },
+            {
+                "color": "#FABD03"
+            },
+            {
+                "color": "#EA4435"
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a Streamgraph chart with a title 'JS Frameworks Trends' and a subtitle linking to Google Trends. The chart includes specific styling for the x-axis labels, which are rotated 270 degrees and aligned to the left. The y-axis is hidden, and the legend is disabled. The chart allows for x-axis zooming and includes a tooltip that displays the date in a readable format. The data for the chart is loaded from a CSV file hosted at a specified URL, and the series colors are customized to specific hex values. The plot options include settings for series labels, ensuring they are styled with a minimum and maximum font size and a specific color."
+}

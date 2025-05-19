@@ -1,0 +1,73 @@
+{
+    "visualization_prompt": "Generate a pie chart showing employment status distribution using categorical percentage aggregation",
+    "visualization_code": {
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "WEBAIM Survey",
+            "style": {
+                "fontFamily": "Verdana, sans-serif",
+                "fontSize": "1.2em",
+                "color": "#555"
+            }
+        },
+        "subtitle": {
+            "text": "Level of Employment",
+            "style": {
+                "fontFamily": "Verdana, sans-serif",
+                "fontSize": "12pt",
+                "color": "#555"
+            }
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<b>{point.name}</b>: {point.percentage:.1f}%",
+                    "style": {
+                        "fontFamily": "Verdana, sans-serif",
+                        "fontSize": "12pt",
+                        "color": "#555"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Employment Status",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Full time employment",
+                        "y": 40.7
+                    },
+                    {
+                        "name": "Part time employment",
+                        "y": 13.9
+                    },
+                    {
+                        "name": "Unemployed",
+                        "y": 45.4
+                    }
+                ]
+            }
+        ],
+        "accessibility": {
+            "keyboardNavigation": {
+                "focusBorder": {
+                    "style": {
+                        "lineWidth": 3,
+                        "color": "#aa1111",
+                        "borderRadius": 5
+                    },
+                    "margin": 4
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three categorical variables representing employment status percentages from the WEBAIM survey. This univariate distribution (n=3 categories) uses synthetic survey data with proportions normalized to 100%. The pie chart visualization follows Tufte's principle of maximizing data-ink ratio by removing unnecessary gridlines while maintaining Cairo's perceptual transparency through direct percentage labeling. Angular encoding leverages human perception of relative sector sizes, supported by exact percentage values (\u03bc=33.33% hypothetical mean, \u03c3=16.85% standard deviation). Accessibility features include high-contrast labels (12pt Verdana) and keyboard-navigable focus states (#aa1111 border) meeting WCAG 2.1 guidelines."
+}

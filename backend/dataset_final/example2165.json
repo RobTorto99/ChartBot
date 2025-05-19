@@ -1,0 +1,217 @@
+{
+    "visualization_prompt": "Generate a sunburst chart showing hierarchical relationships in emotional states using a three-tiered categorization system with drilldown functionality",
+    "visualization_code": {
+        "chart": {
+            "type": "sunburst",
+            "height": "100%"
+        },
+        "title": {
+            "text": "The Feelings Wheel",
+            "style": {
+                "color": "#2E3440",
+                "fontSize": "24px"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://blog.calm.com/blog/the-feelings-wheel'>Calm</a>",
+            "useHTML": true
+        },
+        "series": [
+            {
+                "type": "sunburst",
+                "data": [
+                    {
+                        "id": "Happy",
+                        "parent": "",
+                        "name": "Happy",
+                        "color": "#FFD700"
+                    },
+                    {
+                        "id": "Playful",
+                        "parent": "Happy",
+                        "name": "Playful",
+                        "color": "#FFB6C1"
+                    },
+                    {
+                        "id": "Content",
+                        "parent": "Happy",
+                        "name": "Content",
+                        "color": "#98FB98"
+                    },
+                    {
+                        "id": "Interested",
+                        "parent": "Happy",
+                        "name": "Interested",
+                        "color": "#87CEEB"
+                    },
+                    {
+                        "id": "Proud",
+                        "parent": "Happy",
+                        "name": "Proud",
+                        "color": "#DDA0DD"
+                    },
+                    {
+                        "id": "Accepted",
+                        "parent": "Happy",
+                        "name": "Accepted",
+                        "color": "#FFA07A"
+                    },
+                    {
+                        "id": "Powerful",
+                        "parent": "Happy",
+                        "name": "Powerful",
+                        "color": "#F0E68C"
+                    },
+                    {
+                        "id": "Peaceful",
+                        "parent": "Happy",
+                        "name": "Peaceful",
+                        "color": "#E6E6FA"
+                    },
+                    {
+                        "id": "Trusting",
+                        "parent": "Happy",
+                        "name": "Trusting",
+                        "color": "#B0E0E6"
+                    },
+                    {
+                        "id": "Optimistic",
+                        "parent": "Happy",
+                        "name": "Optimistic",
+                        "color": "#FFDEAD"
+                    },
+                    {
+                        "parent": "Playful",
+                        "name": "Aroused",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Playful",
+                        "name": "Cheeky",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Content",
+                        "name": "Free",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Content",
+                        "name": "Joyful",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Interested",
+                        "name": "Curious",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Interested",
+                        "name": "Inquisitive",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Proud",
+                        "name": "Successful",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Proud",
+                        "name": "Confident",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Accepted",
+                        "name": "Respected",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Accepted",
+                        "name": "Valued",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Powerful",
+                        "name": "Courageous",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Powerful",
+                        "name": "Creative",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Peaceful",
+                        "name": "Loving",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Peaceful",
+                        "name": "Thankful",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Trusting",
+                        "name": "Sensitive",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Trusting",
+                        "name": "Intimate",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Optimistic",
+                        "name": "Hopeful",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Optimistic",
+                        "name": "Inspired",
+                        "value": 1
+                    }
+                ],
+                "allowDrillToNode": true,
+                "levels": [
+                    {
+                        "level": 1,
+                        "dataLabels": {
+                            "style": {
+                                "fontSize": "18px",
+                                "fontWeight": "bold"
+                            }
+                        }
+                    },
+                    {
+                        "level": 2,
+                        "colorByPoint": true,
+                        "dataLabels": {
+                            "style": {
+                                "fontSize": "14px"
+                            }
+                        }
+                    },
+                    {
+                        "level": 3,
+                        "colorVariation": {
+                            "key": "brightness",
+                            "to": -0.25
+                        }
+                    }
+                ],
+                "dataLabels": {
+                    "format": "{point.name}",
+                    "rotationMode": "circular",
+                    "style": {
+                        "textOutline": "none"
+                    }
+                }
+            }
+        ],
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "<b>{point.name}</b>"
+        }
+    },
+    "visualization_explanation": "The dataset represents a three-level hierarchical structure of emotional states with 28 nodes. Primary node 'Happy' branches into 9 secondary emotional categories, each containing 2-3 tertiary specific feelings. Synthetic data uses uniform value distribution (all leaves = 1) to maintain equal visual weighting. The sunburst chart maximizes data-ink ratio by eliminating gridlines and borders while maintaining Cairo's perceptual principles through: 1) Color progression from central gold (#FFD700) to pastel variations 2) Size-consistent arcs for comparable comparisons 3) Circular label alignment matching radial layout. Level 2 colors use HSB variance (\u0394H=30\u00b0) for categorical distinction while maintaining luminance consistency (L=85\u00b15). Drilldown functionality preserves visual hierarchy without overplotting."
+}

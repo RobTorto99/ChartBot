@@ -1,0 +1,79 @@
+{
+    "visualization_prompt": "Create a Highcharts Treemap chart with the following specifications: The chart should display a treemap with data points labeled 'A' through 'G', each with corresponding values and color values. The chart title should be 'Highcharts Treemap'. The axes and labels should be styled with specific colors and font sizes. The chart should use a gradient color scheme from white to red based on the color values. Additional configurations include enabling styled mode, setting the minimum and maximum values for the color axis, and ensuring the chart is responsive within a container with a minimum width of 300px and a maximum width of 600px.",
+    "visualization_code": {
+        "chart": {
+            "type": "treemap",
+            "styledMode": true
+        },
+        "title": {
+            "text": "Highcharts Treemap",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "colorAxis": {
+            "min": 1,
+            "max": 6,
+            "minColor": "#FFFFFF",
+            "maxColor": "#FF0000"
+        },
+        "series": [
+            {
+                "type": "treemap",
+                "data": [
+                    {
+                        "name": "A",
+                        "value": 6,
+                        "colorValue": 6
+                    },
+                    {
+                        "name": "B",
+                        "value": 6,
+                        "colorValue": 6
+                    },
+                    {
+                        "name": "C",
+                        "value": 4,
+                        "colorValue": 4
+                    },
+                    {
+                        "name": "D",
+                        "value": 3,
+                        "colorValue": 3
+                    },
+                    {
+                        "name": "E",
+                        "value": 2,
+                        "colorValue": 2
+                    },
+                    {
+                        "name": "F",
+                        "value": 2,
+                        "colorValue": 2
+                    },
+                    {
+                        "name": "G",
+                        "value": 1,
+                        "colorValue": 1
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "treemap": {
+                "dataLabels": {
+                    "enabled": true,
+                    "style": {
+                        "color": "#000000",
+                        "fontSize": "12px"
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts configuration object is designed to render a Treemap chart with specific styling and data points. The chart type is set to 'treemap', and the title is styled with a dark gray color and a font size of 18px. The color axis is configured to use a gradient from white to red, with values ranging from 1 to 6. Each data point in the series is labeled from 'A' to 'G' and has a corresponding value and color value that determines its color on the gradient. The chart is set to use styled mode, which allows for more control over the visual elements using CSS. The legend is disabled, and the data labels are enabled with a black color and a font size of 12px. The chart is responsive and will adjust within a container with a minimum width of 300px and a maximum width of 600px, ensuring it looks good on various screen sizes."
+}

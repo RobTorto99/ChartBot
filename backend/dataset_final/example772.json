@@ -1,0 +1,277 @@
+{
+    "visualization_prompt": "Create a Highcharts map chart that visualizes data for each state in the United States. The chart should have a title 'US State Data Visualization', with axes and labels styled in a specific color and font size. The data series should include a series named 'Random data' with the provided data, and another series named 'Separators' that displays map lines. Custom colors should be applied to the chart, and additional configurations should include chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "map": "countries/us/us-all",
+            "backgroundColor": "#f0f0f0",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "US State Data Visualization",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px"
+            }
+        },
+        "subtitle": {
+            "text": null
+        },
+        "mapNavigation": {
+            "enabled": true,
+            "enableButtons": false
+        },
+        "colorAxis": {
+            "min": 0
+        },
+        "tooltip": {
+            "formatter": "function () { return this.key + '<br/>' + this.point['hc-key']; }"
+        },
+        "series": [
+            {
+                "data": [
+                    [
+                        "us-ma",
+                        0
+                    ],
+                    [
+                        "us-wa",
+                        1
+                    ],
+                    [
+                        "us-ca",
+                        2
+                    ],
+                    [
+                        "us-or",
+                        3
+                    ],
+                    [
+                        "us-wi",
+                        4
+                    ],
+                    [
+                        "us-me",
+                        5
+                    ],
+                    [
+                        "us-mi",
+                        6
+                    ],
+                    [
+                        "us-nv",
+                        7
+                    ],
+                    [
+                        "us-nm",
+                        8
+                    ],
+                    [
+                        "us-co",
+                        9
+                    ],
+                    [
+                        "us-wy",
+                        10
+                    ],
+                    [
+                        "us-ks",
+                        11
+                    ],
+                    [
+                        "us-ne",
+                        12
+                    ],
+                    [
+                        "us-ok",
+                        13
+                    ],
+                    [
+                        "us-mo",
+                        14
+                    ],
+                    [
+                        "us-il",
+                        15
+                    ],
+                    [
+                        "us-in",
+                        16
+                    ],
+                    [
+                        "us-vt",
+                        17
+                    ],
+                    [
+                        "us-ar",
+                        18
+                    ],
+                    [
+                        "us-tx",
+                        20
+                    ],
+                    [
+                        "us-ri",
+                        20
+                    ],
+                    [
+                        "us-al",
+                        21
+                    ],
+                    [
+                        "us-ms",
+                        22
+                    ],
+                    [
+                        "us-nc",
+                        23
+                    ],
+                    [
+                        "us-va",
+                        24
+                    ],
+                    [
+                        "us-ia",
+                        25
+                    ],
+                    [
+                        "us-md",
+                        26
+                    ],
+                    [
+                        "us-de",
+                        27
+                    ],
+                    [
+                        "us-pa",
+                        28
+                    ],
+                    [
+                        "us-nj",
+                        29
+                    ],
+                    [
+                        "us-ny",
+                        30
+                    ],
+                    [
+                        "us-id",
+                        31
+                    ],
+                    [
+                        "us-sd",
+                        32
+                    ],
+                    [
+                        "us-ct",
+                        33
+                    ],
+                    [
+                        "us-nh",
+                        34
+                    ],
+                    [
+                        "us-ky",
+                        35
+                    ],
+                    [
+                        "us-oh",
+                        36
+                    ],
+                    [
+                        "us-tn",
+                        37
+                    ],
+                    [
+                        "us-wv",
+                        38
+                    ],
+                    [
+                        "us-dc",
+                        39
+                    ],
+                    [
+                        "us-la",
+                        40
+                    ],
+                    [
+                        "us-fl",
+                        41
+                    ],
+                    [
+                        "us-ga",
+                        42
+                    ],
+                    [
+                        "us-sc",
+                        43
+                    ],
+                    [
+                        "us-mn",
+                        44
+                    ],
+                    [
+                        "us-mt",
+                        20
+                    ],
+                    [
+                        "us-nd",
+                        46
+                    ],
+                    [
+                        "us-az",
+                        20
+                    ],
+                    [
+                        "us-ut",
+                        48
+                    ],
+                    [
+                        "us-hi",
+                        49
+                    ],
+                    [
+                        "us-ak",
+                        50
+                    ],
+                    [
+                        "undefined",
+                        51
+                    ]
+                ],
+                "name": "Random data",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}",
+                    "style": {
+                        "color": "#000000",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            {
+                "name": "Separators",
+                "type": "mapline",
+                "data": "Highcharts.geojson(Highcharts.maps['countries/us/us-all'], 'mapline')",
+                "color": "silver",
+                "showInLegend": false,
+                "enableMouseTracking": false
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical",
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a map chart of the United States, visualizing data for each state. The chart type is a map, specifically using the 'countries/us/us-all' map data. The chart title is set to 'US State Data Visualization', styled with a dark color and a larger font size for better visibility. The axes and labels are styled with a specific color and font size to ensure clarity. The data series includes a series named 'Random data' with the provided data, and another series named 'Separators' that displays map lines in silver color. Custom colors are applied to the chart, and additional configurations include chart margins, background color, and legend settings to enhance the overall appearance and usability of the chart."
+}

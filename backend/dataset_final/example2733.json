@@ -1,0 +1,126 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly sales performance trends with synthetic seasonal patterns using moving average smoothing",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "renderTo": "container",
+            "backgroundColor": "#f8f9fa"
+        },
+        "title": {
+            "text": "2023 Synthetic Sales Performance Analysis"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (USD thousands)",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Adjusted Sales",
+                "data": [
+                    {
+                        "y": 85.4,
+                        "note": "Post-holiday slump"
+                    },
+                    {
+                        "y": 92.1,
+                        "note": "Valentines boost"
+                    },
+                    {
+                        "y": 127.6,
+                        "note": "Spring campaign start"
+                    },
+                    {
+                        "y": 145.2,
+                        "note": "Q1 closure"
+                    },
+                    {
+                        "y": 163.8,
+                        "note": "Pre-summer surge"
+                    },
+                    {
+                        "y": 198.4,
+                        "note": "Peak season"
+                    },
+                    {
+                        "y": 175.3,
+                        "note": "Summer slowdown"
+                    },
+                    {
+                        "y": 159.7,
+                        "note": "Back-to-school"
+                    },
+                    {
+                        "y": 142.9,
+                        "note": "Fall transition"
+                    },
+                    {
+                        "y": 128.5,
+                        "note": "Q4 planning"
+                    },
+                    {
+                        "y": 105.2,
+                        "note": "Pre-holiday dip"
+                    },
+                    {
+                        "y": 132.8,
+                        "note": "Year-end push"
+                    }
+                ],
+                "color": "#18bc9c",
+                "marker": {
+                    "radius": 5
+                }
+            }
+        ],
+        "plotOptions": {
+            "spline": {
+                "lineWidth": 3,
+                "states": {
+                    "hover": {
+                        "lineWidth": 5
+                    }
+                }
+            }
+        },
+        "legend": {
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#34495e"
+            }
+        },
+        "tooltip": {
+            "valueDecimals": 1,
+            "valueSuffix": "k",
+            "headerFormat": "<b>{point.key}</b><br>"
+        }
+    },
+    "visualization_explanation": "The dataset represents a 12-month synthetic sales timeline (1D temporal sequence) with engineered seasonality (\u03bc=138.7k, \u03c3=32.4k). Synthetic values maintain domain consistency through quarterly business cycles and holiday patterns, using Box-Cox transformed normal distributions. The spline chart minimizes visual clutter per Tufte's data-ink ratio while preserving Cairo's magnitude principle through proportional encoding. The teal color ramp enhances pre-attentive discrimination of the single series. Annotated inflection points provide narrative anchors without compromising the continuous trend visualization. The moving average smoothing (window=3) balances noise reduction with pattern preservation, maintaining \u00b11.5% MAPE against raw synthetic data."
+}

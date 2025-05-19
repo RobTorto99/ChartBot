@@ -1,0 +1,88 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the following specifications: Chart type: column, Chart title: 'Fruit Consumption', Axes and labels styling: Use a dark blue color (#003366) for the title and axis labels, with a font size of 14px for the title and 12px for the axis labels. Data series: One series named 'Fruits' with data [1, 4, 3, 5] corresponding to categories ['Apples', 'Pears', 'Bananas', 'Oranges']. Custom colors: Use a gradient from light green (#90EE90) to dark green (#006400) for the columns. Additional configurations: Set the chart background to a light gray (#F5F5F5), add a legend with the title 'Legend', and position it at the top right of the chart. Also, set the chart margins to 50 pixels on all sides.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#F5F5F5",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Fruit Consumption",
+            "style": {
+                "color": "#003366",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Apples",
+                "Pears",
+                "Bananas",
+                "Oranges"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#003366",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Quantity",
+                "style": {
+                    "color": "#003366",
+                    "fontSize": "12px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#003366",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Fruits",
+                "data": [
+                    1,
+                    4,
+                    3,
+                    5
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#90EE90"
+                        ],
+                        [
+                            1,
+                            "#006400"
+                        ]
+                    ]
+                }
+            }
+        ],
+        "legend": {
+            "title": {
+                "text": "Legend"
+            },
+            "align": "right",
+            "verticalAlign": "top"
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart titled 'Fruit Consumption'. The chart type is set to 'column', and the data series includes one series named 'Fruits' with data points [1, 4, 3, 5] corresponding to the categories ['Apples', 'Pears', 'Bananas', 'Oranges']. The title and axis labels are styled with a dark blue color (#003366) and specific font sizes. The columns are colored with a gradient from light green (#90EE90) to dark green (#006400). The chart background is set to a light gray (#F5F5F5), and a legend titled 'Legend' is positioned at the top right. The chart margins are set to 50 pixels on all sides to ensure adequate spacing around the chart."
+}

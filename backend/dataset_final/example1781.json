@@ -1,0 +1,86 @@
+{
+    "visualization_prompt": "Generate a pie chart showing browser market share distribution using categorical data segmentation with brand-specific color encoding",
+    "visualization_code": {
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#333333"
+        },
+        "title": {
+            "text": "Browser Market Share",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<b>{point.name}</b>: {point.percentage:.1f}%",
+                    "style": {
+                        "color": "#ffffff",
+                        "textOutline": "none"
+                    }
+                },
+                "colors": [
+                    "#ff9900",
+                    "#0073e6",
+                    "#33cc33",
+                    "#ff3333",
+                    "#9966cc",
+                    "#666666"
+                ]
+            }
+        },
+        "series": [
+            {
+                "name": "Market Share",
+                "type": "pie",
+                "data": [
+                    {
+                        "name": "Firefox",
+                        "y": 45.0
+                    },
+                    {
+                        "name": "IE",
+                        "y": 26.8
+                    },
+                    {
+                        "name": "Chrome",
+                        "y": 12.8,
+                        "sliced": true,
+                        "selected": true
+                    },
+                    {
+                        "name": "Safari",
+                        "y": 8.5
+                    },
+                    {
+                        "name": "Opera",
+                        "y": 6.2
+                    },
+                    {
+                        "name": "Others",
+                        "y": 0.7
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "align": "center",
+            "verticalAlign": "bottom",
+            "layout": "horizontal",
+            "itemStyle": {
+                "color": "#ffffff"
+            }
+        },
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "<span style='color:{point.color}'>\u25cf</span> {point.name}: <b>{point.percentage:.1f}%</b>"
+        }
+    },
+    "visualization_explanation": "The dataset contains six categorical variables representing browser market shares with quantitative percentage values. Synthetic data maintains proportional relationships (summing to 100%) with Firefox dominant at 45%. The pie chart effectively shows part-to-whole relationships through angular encoding, adhering to Cairo's principle of proportional ink. Brand-specific color mapping (Firefox orange, Chrome green) enhances pattern recognition. Dark theme implementation (background #333333, white labels) follows Tufte's data-ink maximization by removing non-essential chart elements. The exploded Chrome slice (12.8%) draws attention through interactive highlighting while maintaining overall proportion readability."
+}

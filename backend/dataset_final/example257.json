@@ -1,0 +1,82 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the title 'Animal Population'. The chart should have a custom color palette, styled axes and labels, and a data series for 'Animals' with data points corresponding to the number of Cats, Dogs, Sheep, and Cows. Additionally, include configurations for chart margins, background, and legend.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#f8f8f8",
+            "marginTop": 50,
+            "marginBottom": 70,
+            "marginLeft": 70,
+            "marginRight": 70
+        },
+        "title": {
+            "text": "Animal Population",
+            "style": {
+                "color": "#333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Cats",
+                "Dogs",
+                "Sheep",
+                "Cows"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            },
+            "title": {
+                "text": "Animal Types",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Population",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Animals",
+                "data": [
+                    1,
+                    4,
+                    3,
+                    5
+                ],
+                "colorByPoint": true,
+                "colors": [
+                    "#7cb5ec",
+                    "#434348",
+                    "#90ed7d",
+                    "#f7a35c"
+                ]
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333",
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart titled 'Animal Population'. The chart type is set to 'column', and it includes a custom background color and margins for better visual appeal. The x-axis is labeled with categories 'Cats', 'Dogs', 'Sheep', and 'Cows', and the y-axis represents the 'Population'. Both axes have styled labels and titles with specified colors and font sizes. The data series 'Animals' contains the population data for each animal type, and the colors for each column are customized using a predefined color palette. The legend is enabled and styled to match the overall theme of the chart."
+}

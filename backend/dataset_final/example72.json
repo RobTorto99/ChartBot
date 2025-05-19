@@ -1,0 +1,105 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Monthly Animal Data'. The chart should have axes and labels styled with specific colors and font sizes. The data series should include two series named 'dogs' and 'cats', with their respective data provided. Custom colors should be used for the series, and additional configurations should include chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 50,
+            "marginBottom": 70
+        },
+        "title": {
+            "text": "Monthly Animal Data",
+            "style": {
+                "color": "#333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Value (cm)",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "tooltip": {
+            "pointFormat": "{series.name}: <b>{point.y}</b><br/>",
+            "valueSuffix": " cm",
+            "shared": true
+        },
+        "series": [
+            {
+                "name": "dogs",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#FF6347"
+            },
+            {
+                "name": "cats",
+                "data": [
+                    54.4,
+                    95.6,
+                    194.1,
+                    216.4,
+                    148.5,
+                    135.6,
+                    176.0,
+                    144.0,
+                    129.2,
+                    106.4,
+                    71.5,
+                    29.9
+                ],
+                "color": "#4682B4"
+            }
+        ],
+        "legend": {
+            "itemStyle": {
+                "color": "#333",
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a spline chart titled 'Monthly Animal Data'. The chart type is set to 'spline', and it includes specific styling for the title, axes, and labels. The x-axis categories represent the months from January to December, while the y-axis is labeled with 'Value (cm)'. The tooltip displays the series name and value in centimeters. The data series include 'dogs' and 'cats', each with their respective data points. Custom colors are applied to the series for better differentiation. Additional configurations include setting the chart's background color, margins, and legend styling to enhance readability and visual appeal."
+}

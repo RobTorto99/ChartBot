@@ -1,0 +1,118 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the title 'Monthly Sales Data'. The chart should have three data series: 'Product A', 'Product B', and 'Product C'. Each series should have data for the months of January to December. The x-axis should display the months, and the y-axis should display the sales figures. The chart should have a legend positioned to the right, vertically aligned in the middle, and laid out vertically. The chart should also have custom colors for each series: '#7cb5ec', '#434348', and '#90ed7d'. The chart should be styled using CSS, with a background color of '#f7f7f7' and a margin of 50 pixels on all sides.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "styledMode": true,
+            "backgroundColor": "#f7f7f7",
+            "margin": 50
+        },
+        "title": {
+            "text": "Monthly Sales Data"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales Figures",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "stacking": "normal"
+            }
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical"
+        },
+        "series": [
+            {
+                "name": "Product A",
+                "data": [
+                    5000,
+                    6000,
+                    7000,
+                    8000,
+                    9000,
+                    10000,
+                    11000,
+                    12000,
+                    13000,
+                    14000,
+                    15000,
+                    16000
+                ],
+                "color": "#7cb5ec"
+            },
+            {
+                "name": "Product B",
+                "data": [
+                    4000,
+                    5000,
+                    6000,
+                    7000,
+                    8000,
+                    9000,
+                    10000,
+                    11000,
+                    12000,
+                    13000,
+                    14000,
+                    15000
+                ],
+                "color": "#434348"
+            },
+            {
+                "name": "Product C",
+                "data": [
+                    3000,
+                    4000,
+                    5000,
+                    6000,
+                    7000,
+                    8000,
+                    9000,
+                    10000,
+                    11000,
+                    12000,
+                    13000,
+                    14000
+                ],
+                "color": "#90ed7d"
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart titled 'Monthly Sales Data'. The chart includes three data series: 'Product A', 'Product B', and 'Product C', each with sales data for the months of January to December. The x-axis displays the months, and the y-axis displays the sales figures. The chart uses custom colors for each series: '#7cb5ec' for 'Product A', '#434348' for 'Product B', and '#90ed7d' for 'Product C'. The legend is positioned to the right, vertically aligned in the middle, and laid out vertically. The chart is styled using CSS, with a background color of '#f7f7f7' and a margin of 50 pixels on all sides. The axes and labels are styled with a font size of 12px for labels and 14px for the y-axis title, both in a dark gray color (#333)."
+}

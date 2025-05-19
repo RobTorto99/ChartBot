@@ -1,0 +1,100 @@
+{
+    "visualization_prompt": "Generate a spline chart showing interactive data points with conditional drag-and-drop functionality using Highcharts event handlers and class-based constraints.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#2c3e50",
+            "marginTop": 60,
+            "marginBottom": 80,
+            "marginLeft": 80,
+            "marginRight": 80
+        },
+        "title": {
+            "text": "Drag & Drop Disabled for Specific Points",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "min": 0.5,
+            "max": 3.5,
+            "labels": {
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "14px"
+                }
+            },
+            "title": {
+                "text": "X Axis",
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "yAxis": {
+            "softMin": -200,
+            "softMax": 200,
+            "labels": {
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "14px"
+                }
+            },
+            "title": {
+                "text": "Y Axis",
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "tooltip": {
+            "enabled": false
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "dragDrop": {
+                    "draggableY": true
+                },
+                "point": {
+                    "events": {
+                        "drag": "function () { return this.className !== 'undraggable'; }",
+                        "drop": "function () { return this.className !== 'undraggable'; }"
+                    }
+                },
+                "dataLabels": {
+                    "enabled": true,
+                    "y": -6,
+                    "format": "{point.className}",
+                    "style": {
+                        "color": "#ffffff",
+                        "fontSize": "12px"
+                    }
+                },
+                "cursor": "ns-resize",
+                "data": [
+                    {
+                        "x": 1,
+                        "y": -25
+                    },
+                    {
+                        "x": 2,
+                        "y": 1,
+                        "color": "#f33",
+                        "className": "undraggable"
+                    },
+                    {
+                        "x": 3,
+                        "y": 25
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "This visualization uses a low-dimensional dataset with three explicitly defined points. The synthetic data maintains domain consistency for interactive charts, focusing on discrete event-driven interactions rather than continuous trends. The spline chart was chosen to emphasize potential data continuity while allowing clear identification of individual points. Tufte's data-ink ratio is optimized by removing non-essential elements (legend, tooltips), while Cairo's perceptual principles are applied through high-contrast labeling and constrained axis ranges. The 'undraggable' point at (2,1) uses \u03bc=1 (neutral baseline) with \u03c3=0 (fixed position) to enforce interaction constraints."
+}

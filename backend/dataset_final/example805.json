@@ -1,0 +1,81 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the title 'Chart with high contrast theme'. The chart should have two data series, each with the same data points [1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1]. The chart should be styled with two themes: a light theme and a dark theme. The light theme should have a light background with dark text and axis labels, while the dark theme should have a dark background with light text and axis labels. The chart should also include a legend, but it should be disabled. The chart should not have credits or an export button. The chart should be accessible with a landmark verbosity of 'one'.",
+    "visualization_code": {
+        "chart": {
+            "type": "column"
+        },
+        "title": {
+            "text": "Chart with high contrast theme"
+        },
+        "legend": {
+            "enabled": false
+        },
+        "exporting": {
+            "enabled": false
+        },
+        "accessibility": {
+            "landmarkVerbosity": "one"
+        },
+        "credits": {
+            "enabled": false
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#333333"
+                }
+            },
+            "title": {
+                "style": {
+                    "color": "#333333"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#333333"
+                }
+            },
+            "title": {
+                "style": {
+                    "color": "#333333"
+                }
+            }
+        },
+        "series": [
+            {
+                "colorByPoint": true,
+                "data": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                ]
+            },
+            {
+                "data": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart with specific styling and data series. The chart type is set to 'column', and it includes a title 'Chart with high contrast theme'. The legend is disabled, and the chart does not include credits or an export button. The chart is made accessible with a landmark verbosity of 'one'. The x-axis and y-axis labels and titles are styled with a dark color for the light theme. The chart includes two data series, each with identical data points [1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1]. The first series uses colorByPoint to assign colors to each data point, while the second series does not. The chart can switch between a light theme and a dark theme, with the light theme having a light background and dark text, and the dark theme having a dark background and light text. The themes are applied dynamically based on user selection, and the chart is re-rendered accordingly."
+}

@@ -1,0 +1,146 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly sales and profit trends using gradient-colored series with temporal alignment",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#F5F5F5",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#003366",
+                "fontSize": "16px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec",
+                "Jan",
+                "Feb",
+                "Mar"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#003366",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Amount (USD)",
+                "style": {
+                    "color": "#003366",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#003366",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    1,
+                    4,
+                    3,
+                    5,
+                    6,
+                    7,
+                    4,
+                    3,
+                    5,
+                    2,
+                    3,
+                    4,
+                    6,
+                    5,
+                    4
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 1,
+                        "y2": 0
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#ADD8E6"
+                        ],
+                        [
+                            1,
+                            "#003366"
+                        ]
+                    ]
+                }
+            },
+            {
+                "name": "Profit",
+                "data": [
+                    1,
+                    2,
+                    2,
+                    1,
+                    2,
+                    1,
+                    2,
+                    1,
+                    2,
+                    2,
+                    1,
+                    2,
+                    2,
+                    1,
+                    2
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 1,
+                        "y2": 0
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#90EE90"
+                        ],
+                        [
+                            1,
+                            "#006400"
+                        ]
+                    ]
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains 15 monthly observations of two financial metrics (Sales and Profit) across a 15-month period. Both series represent quantitative continuous variables measured in USD. The synthetic data shows Sales (\u03bc=4.0, \u03c3=1.7) with greater variability compared to Profit (\u03bc=1.6, \u03c3=0.5), creating an intentional contrast in volatility. The spline chart was chosen to emphasize trend continuity while maintaining Tufte's data-ink ratio through minimal gridlines. Gradient colors (blue for Sales, green for Profit) implement Cairo's perceptual discriminability principle. Axis labels use high-contrast dark blue (#003366) against the light gray background for maximum readability. Temporal alignment through sequential month labels maintains chronological integrity despite the 15-month span crossing calendar years."
+}

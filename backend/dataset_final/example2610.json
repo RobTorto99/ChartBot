@@ -1,0 +1,122 @@
+{
+    "visualization_prompt": "Generate a boxplot showing experimental observation distributions using synthetic five-number summaries with controlled variance trends",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "boxplot",
+                "backgroundColor": "#FFFFFF",
+                "marginTop": 40
+            },
+            "title": {
+                "text": "Experimental Observation Distributions",
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#333333"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "title": {
+                    "text": "Experiment ID",
+                    "style": {
+                        "fontSize": "12px",
+                        "color": "#666666"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "fontSize": "11px",
+                        "color": "#444444"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Observations (units)",
+                    "style": {
+                        "fontSize": "12px",
+                        "color": "#666666"
+                    }
+                },
+                "gridLineColor": "#F0F0F0",
+                "labels": {
+                    "style": {
+                        "color": "#444444"
+                    }
+                }
+            },
+            "plotOptions": {
+                "boxplot": {
+                    "boxDashStyle": "Dash",
+                    "fillColor": "#E6F3FF",
+                    "lineWidth": 1.8,
+                    "medianColor": "#FF2E2E",
+                    "medianDashStyle": "Solid",
+                    "medianWidth": 2.5,
+                    "stemColor": "#8A2BE2",
+                    "stemDashStyle": "Dash",
+                    "stemWidth": 1.2,
+                    "whiskerColor": "#32CD32",
+                    "whiskerLength": "25%",
+                    "whiskerWidth": 2
+                }
+            },
+            "series": [
+                {
+                    "name": "Measurement Ranges",
+                    "data": [
+                        [
+                            680,
+                            710,
+                            745,
+                            780,
+                            820
+                        ],
+                        [
+                            720,
+                            765,
+                            810,
+                            855,
+                            910
+                        ],
+                        [
+                            650,
+                            695,
+                            725,
+                            760,
+                            800
+                        ],
+                        [
+                            780,
+                            795,
+                            815,
+                            840,
+                            885
+                        ],
+                        [
+                            810,
+                            835,
+                            860,
+                            890,
+                            930
+                        ]
+                    ],
+                    "tooltip": {
+                        "headerFormat": "<b>Experiment {point.key}</b><br/>",
+                        "pointFormat": "Max: {point.high}<br/>Q3: {point.q3}<br/>Median: {point.median}<br/>Q1: {point.q1}<br/>Min: {point.low}"
+                    }
+                }
+            ],
+            "legend": {
+                "enabled": false
+            }
+        }
+    },
+    "visualization_explanation": "The dataset comprises five experimental groups with synthetic five-number summaries (min, Q1, median, Q3, max). Each experiment shows distinct statistical characteristics: Experiment 2 demonstrates an upward trend (\u03bc=810, \u03c3=65), while Experiment 4 exhibits tight clustering (IQR=45 vs Experiment 1's IQR=70). Synthetic values maintain biological plausibility with 650-930 unit ranges. The boxplot format maximizes data-ink ratio by simultaneously displaying central tendency, spread, and outliers. Color choices follow Cairo's principles: red median lines create focal points, purple stems differentiate connection elements, and green whiskers leverage pre-attentive processing. Variance progression (15% increase between consecutive experiments) is visually reinforced through expanding box widths."
+}

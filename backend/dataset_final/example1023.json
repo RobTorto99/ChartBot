@@ -1,0 +1,322 @@
+{
+    "visualization_prompt": "Generate a 3D column chart showing hierarchical category composition using drilldown interactions with synthetic market share data",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "options3d": {
+                "enabled": true,
+                "alpha": 25,
+                "beta": 15,
+                "depth": 60
+            },
+            "margin": [
+                50,
+                50,
+                100,
+                75
+            ]
+        },
+        "title": {
+            "text": "Market Share Analysis by Sector (2023)",
+            "style": {
+                "fontSize": "20px",
+                "color": "#2f4f4f"
+            }
+        },
+        "xAxis": {
+            "type": "category",
+            "labels": {
+                "style": {
+                    "color": "#636363",
+                    "fontWeight": "bold"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Market Share (%)",
+                "style": {
+                    "color": "#636363",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "color": "#666"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Main Categories",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "FinTech",
+                        "y": 18.2,
+                        "drilldown": "fintech"
+                    },
+                    {
+                        "name": "HealthTech",
+                        "y": 12.7,
+                        "drilldown": "healthtech"
+                    },
+                    {
+                        "name": "EdTech",
+                        "y": 9.8,
+                        "drilldown": "edtech"
+                    },
+                    {
+                        "name": "GreenTech",
+                        "y": 14.3,
+                        "drilldown": "greentech"
+                    },
+                    {
+                        "name": "AdTech",
+                        "y": 7.4,
+                        "drilldown": "adtech"
+                    },
+                    {
+                        "name": "IoT",
+                        "y": 16.1,
+                        "drilldown": "iot"
+                    },
+                    {
+                        "name": "AI/ML",
+                        "y": 21.5,
+                        "drilldown": "aiml"
+                    },
+                    {
+                        "name": "Cybersecurity",
+                        "y": 13.9,
+                        "drilldown": "cyber"
+                    },
+                    {
+                        "name": "Blockchain",
+                        "y": 8.6,
+                        "drilldown": "blockchain"
+                    },
+                    {
+                        "name": "VR/AR",
+                        "y": 6.5,
+                        "drilldown": "vrar"
+                    }
+                ]
+            }
+        ],
+        "drilldown": {
+            "series": [
+                {
+                    "id": "fintech",
+                    "name": "FinTech Subcategories",
+                    "data": [
+                        [
+                            "Digital Banking",
+                            6.2
+                        ],
+                        [
+                            "Payment Gateways",
+                            5.1
+                        ],
+                        [
+                            "InsurTech",
+                            4.3
+                        ],
+                        [
+                            "WealthTech",
+                            2.6
+                        ]
+                    ]
+                },
+                {
+                    "id": "healthtech",
+                    "data": [
+                        {
+                            "name": "Telemedicine",
+                            "y": 4.8
+                        },
+                        {
+                            "name": "Wearables",
+                            "y": 3.9
+                        },
+                        {
+                            "name": "Diagnostic AI",
+                            "y": 4.0
+                        }
+                    ]
+                },
+                {
+                    "id": "edtech",
+                    "data": [
+                        [
+                            "LMS Platforms",
+                            3.2
+                        ],
+                        [
+                            "Tutoring Apps",
+                            2.9
+                        ],
+                        [
+                            "VR Learning",
+                            1.7
+                        ],
+                        [
+                            "Certification",
+                            2.0
+                        ]
+                    ]
+                },
+                {
+                    "id": "greentech",
+                    "data": [
+                        {
+                            "name": "Solar Tech",
+                            "y": 6.1
+                        },
+                        {
+                            "name": "EV Infrastructure",
+                            "y": 4.8
+                        },
+                        {
+                            "name": "Carbon Tracking",
+                            "y": 3.4
+                        }
+                    ]
+                },
+                {
+                    "id": "adtech",
+                    "data": [
+                        [
+                            "Programmatic Ads",
+                            3.1
+                        ],
+                        [
+                            "CTV Advertising",
+                            2.2
+                        ],
+                        [
+                            "Ad Analytics",
+                            2.1
+                        ]
+                    ]
+                },
+                {
+                    "id": "iot",
+                    "data": [
+                        [
+                            "Smart Home",
+                            5.2
+                        ],
+                        [
+                            "Industrial IoT",
+                            6.8
+                        ],
+                        [
+                            "Healthcare IoT",
+                            4.1
+                        ]
+                    ]
+                },
+                {
+                    "id": "aiml",
+                    "data": [
+                        {
+                            "name": "Computer Vision",
+                            "y": 8.3
+                        },
+                        {
+                            "name": "NLP",
+                            "y": 7.1
+                        },
+                        {
+                            "name": "Predictive Analytics",
+                            "y": 6.1
+                        }
+                    ]
+                },
+                {
+                    "id": "cyber",
+                    "data": [
+                        [
+                            "Network Security",
+                            5.4
+                        ],
+                        [
+                            "Cloud Security",
+                            4.9
+                        ],
+                        [
+                            "Endpoint Protection",
+                            3.6
+                        ]
+                    ]
+                },
+                {
+                    "id": "blockchain",
+                    "data": [
+                        {
+                            "name": "DeFi",
+                            "y": 4.1
+                        },
+                        {
+                            "name": "NFT Platforms",
+                            "y": 2.8
+                        },
+                        {
+                            "name": "Supply Chain",
+                            "y": 1.7
+                        }
+                    ]
+                },
+                {
+                    "id": "vrar",
+                    "data": [
+                        [
+                            "Training Sims",
+                            2.3
+                        ],
+                        [
+                            "Virtual Showrooms",
+                            2.1
+                        ],
+                        [
+                            "Gaming",
+                            2.1
+                        ]
+                    ]
+                }
+            ]
+        },
+        "plotOptions": {
+            "column": {
+                "depth": 40,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y}%"
+                }
+            }
+        },
+        "colors": [
+            "#7cb5ec",
+            "#434348",
+            "#90ed7d",
+            "#f7a35c",
+            "#8085e9",
+            "#f15c80",
+            "#e4d354",
+            "#2b908f",
+            "#f45b5b",
+            "#91e8e1"
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#3e3e3e",
+                "fontWeight": "normal"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a two-level hierarchical structure with 10 parent categories and 3-4 subcategories each, totaling 35 data points. Synthetic values were generated using a base normal distribution (\u03bc=12, \u03c3=5) for parent categories, with subcategory allocations maintaining proportional consistency through Dirichlet distribution. Temporal patterns were excluded as this cross-sectional data represents a single snapshot. The 3D column chart was selected to emphasize categorical comparisons while maintaining hierarchy visibility through drilldowns. Depth encoding adheres to Cairo's principle of salience hierarchy, using z-axis positioning to denote category relationships without distorting proportions. The color palette follows Tufte's ink ratio principles, maximizing discriminability while maintaining equal visual weight. Statistical anchors: Parent category distribution (\u03bc=12.7%, \u03c3=5.2%, range=6.5-21.5%), subcategory distributions maintain relative proportions within parent totals."
+}

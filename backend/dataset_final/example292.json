@@ -1,0 +1,116 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a smoothed area chart with the title 'Moose and deer hunting in Norway, 2000 - 2024'. The chart should have an x-axis plot band highlighting the years 2020 to 2023. The chart should include two data series: 'Moose' and 'Deer', with their respective data points from 2000 to 2023. The axes and labels should be styled with specific colors and font sizes. The legend should be positioned vertically on the left side of the chart. Additional configurations include disabling credits and setting the fill opacity of the areaspline to 0.5.",
+    "visualization_code": {
+        "chart": {
+            "type": "areaspline"
+        },
+        "title": {
+            "text": "Moose and deer hunting in Norway, 2000 - 2024",
+            "align": "left"
+        },
+        "subtitle": {
+            "text": "Source: <a href=\"https://www.ssb.no/jord-skog-jakt-og-fiskeri/jakt\" target=\"_blank\">SSB</a>",
+            "align": "left"
+        },
+        "legend": {
+            "layout": "vertical",
+            "align": "left",
+            "verticalAlign": "top",
+            "x": 120,
+            "y": 70,
+            "floating": true,
+            "borderWidth": 1,
+            "backgroundColor": "#FFFFFF"
+        },
+        "xAxis": {
+            "plotBands": [
+                {
+                    "from": 2020,
+                    "to": 2023,
+                    "color": "rgba(68, 170, 213, .2)"
+                }
+            ]
+        },
+        "yAxis": {
+            "title": {
+                "text": "Quantity"
+            }
+        },
+        "tooltip": {
+            "shared": true,
+            "headerFormat": "<b>Hunting season starting autumn {point.x}</b><br>"
+        },
+        "credits": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "series": {
+                "pointStart": 2000
+            },
+            "areaspline": {
+                "fillOpacity": 0.5
+            }
+        },
+        "series": [
+            {
+                "name": "Moose",
+                "data": [
+                    38000,
+                    37300,
+                    37892,
+                    38564,
+                    36770,
+                    36026,
+                    34978,
+                    35657,
+                    35620,
+                    35971,
+                    36409,
+                    36435,
+                    34643,
+                    34956,
+                    33199,
+                    31136,
+                    30835,
+                    31611,
+                    30666,
+                    30319,
+                    31766,
+                    29278,
+                    27487,
+                    26007
+                ]
+            },
+            {
+                "name": "Deer",
+                "data": [
+                    22534,
+                    23599,
+                    24533,
+                    25195,
+                    25896,
+                    27635,
+                    29173,
+                    32646,
+                    35686,
+                    37709,
+                    39143,
+                    36829,
+                    35031,
+                    36202,
+                    35140,
+                    33718,
+                    37773,
+                    42556,
+                    43820,
+                    46445,
+                    50048,
+                    52804,
+                    49317,
+                    52490
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a smoothed area chart (areaspline) with a title 'Moose and deer hunting in Norway, 2000 - 2024'. The x-axis includes a plot band highlighting the years 2020 to 2023, which is intended to draw attention to a specific period of interest. The chart includes two data series: 'Moose' and 'Deer', each with data points from the year 2000 to 2023. The legend is positioned vertically on the left side of the chart, and the background color of the legend is set to white. The y-axis is labeled 'Quantity', and the tooltip displays the hunting season starting autumn for each data point. The chart's credits are disabled, and the fill opacity of the areaspline is set to 0.5 to create a smoother visual effect."
+}

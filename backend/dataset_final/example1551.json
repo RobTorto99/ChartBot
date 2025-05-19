@@ -1,0 +1,107 @@
+{
+    "visualization_prompt": "Generate a pie chart showing market share distribution among desktop browsers using proportional segmentation with interactive data labels",
+    "visualization_code": {
+        "chart": {
+            "plotBackgroundColor": null,
+            "plotBorderWidth": null,
+            "plotShadow": false,
+            "type": "pie"
+        },
+        "title": {
+            "text": "Desktop Browser Market Share (Q1 2024)",
+            "style": {
+                "color": "#2f4f4f",
+                "fontSize": "20px"
+            }
+        },
+        "tooltip": {
+            "pointFormat": "{series.name}: <b>{point.percentage:.1f}%</b>",
+            "style": {
+                "fontSize": "14px"
+            }
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<b>{point.name}</b>: {point.percentage:.1f}%",
+                    "style": {
+                        "fontSize": "12px"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Market Share",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Chrome",
+                        "y": 63.2,
+                        "sliced": true,
+                        "selected": true
+                    },
+                    {
+                        "name": "Safari",
+                        "y": 18.7
+                    },
+                    {
+                        "name": "Edge",
+                        "y": 6.1
+                    },
+                    {
+                        "name": "Firefox",
+                        "y": 4.9
+                    },
+                    {
+                        "name": "Opera",
+                        "y": 2.3
+                    },
+                    {
+                        "name": "Brave",
+                        "y": 1.8
+                    },
+                    {
+                        "name": "Samsung Internet",
+                        "y": 1.2
+                    },
+                    {
+                        "name": "UC Browser",
+                        "y": 0.9
+                    },
+                    {
+                        "name": "Vivaldi",
+                        "y": 0.6
+                    },
+                    {
+                        "name": "Other",
+                        "y": 0.3
+                    }
+                ]
+            }
+        ],
+        "colors": [
+            "#4285f4",
+            "#ff9900",
+            "#109618",
+            "#dc3912",
+            "#990099",
+            "#0099c6",
+            "#dd4477",
+            "#66aa00",
+            "#b82e2e",
+            "#316395"
+        ],
+        "legend": {
+            "itemStyle": {
+                "fontSize": "12px"
+            },
+            "align": "right",
+            "verticalAlign": "middle"
+        }
+    },
+    "visualization_explanation": "The dataset contains univariate categorical proportions representing browser market shares. Ten categories capture the long-tail distribution typical of technology adoption patterns, with Chrome dominating (63.2%) followed by Safari (18.7%). Synthetic percentages maintain a valid part-to-whole relationship (\u03a3=100%) with realistic variance (\u03c3=23.4), mimicking real-world dominance patterns observed in StatCounter data.\n\nThe pie chart maximizes data-ink ratio by eliminating redundant gridlines while preserving value-adding elements like direct percentage labels. Color differentiation follows Cairo's preattentive processing principles using distinct hues. Interactive slicing maintains Tufte's principle of showing data at multiple levels of detail. The distribution skewness (g1=1.4) reflects typical market leader dominance in tech ecosystems."
+}

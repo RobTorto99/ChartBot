@@ -1,0 +1,133 @@
+{
+    "visualization_prompt": "Generate a column chart showing comparative industry performance metrics using dual-variable grouping",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "backgroundColor": "#F9F9F9",
+                "marginTop": 40
+            },
+            "title": {
+                "text": "Annual Product Sales vs. Returns by Industry Sector",
+                "style": {
+                    "color": "#2C3E50",
+                    "fontSize": "18px",
+                    "fontWeight": "bold"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Technology",
+                    "Pharmaceuticals",
+                    "Automotive",
+                    "Retail",
+                    "Aerospace",
+                    "Energy",
+                    "Construction",
+                    "Food Production",
+                    "Telecom",
+                    "Healthcare",
+                    "Education",
+                    "Entertainment"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#34495E",
+                        "fontSize": "12px",
+                        "fontWeight": "600"
+                    }
+                },
+                "crosshair": true
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Value in Millions (USD)",
+                    "style": {
+                        "color": "#34495E",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#7F8C8D",
+                        "fontSize": "12px"
+                    },
+                    "format": "{value}M"
+                }
+            },
+            "tooltip": {
+                "shared": true,
+                "headerFormat": "<b>{point.key}</b><br>",
+                "pointFormat": "{series.name}: {point.y:.1f}M<br>"
+            },
+            "series": [
+                {
+                    "name": "Gross Sales",
+                    "data": [
+                        482,
+                        518,
+                        465,
+                        387,
+                        554,
+                        603,
+                        421,
+                        359,
+                        576,
+                        498,
+                        407,
+                        533
+                    ],
+                    "color": "#2980B9",
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "{y:.0f}M",
+                        "style": {
+                            "textOutline": "none"
+                        }
+                    }
+                },
+                {
+                    "name": "Product Returns",
+                    "data": [
+                        42,
+                        38,
+                        55,
+                        61,
+                        29,
+                        22,
+                        67,
+                        74,
+                        31,
+                        45,
+                        58,
+                        39
+                    ],
+                    "color": "#E67E22",
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "{y:.0f}M",
+                        "style": {
+                            "textOutline": "none"
+                        }
+                    }
+                }
+            ],
+            "legend": {
+                "align": "right",
+                "verticalAlign": "top",
+                "itemStyle": {
+                    "color": "#2C3E50",
+                    "fontWeight": "normal"
+                }
+            },
+            "plotOptions": {
+                "column": {
+                    "grouping": false,
+                    "pointPadding": 0.15,
+                    "borderWidth": 0
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two quantitative variables (Sales and Returns) across 12 categorical industry sectors. Synthetic data was generated with distinct statistical profiles: Sales follow an upward trend (\u03bc=488M, \u03c3=78M) with intentional outliers in cyclical industries, while Returns show inverse correlation (\u03bc=46M, \u03c3=17M) maintaining logical domain constraints where durable goods sectors show lower return rates. The column chart format was selected to enable direct categorical comparisons while maintaining Tufte's data density principles. Color pairing (#2980B9/#E67E22) follows Cairo's preattentive processing guidelines, using luminance contrast for immediate distinction. Grouped columns with shared tooltips preserve Cleveland's ranking of graphical perception effectiveness for position-aligned comparisons."
+}

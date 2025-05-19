@@ -1,0 +1,77 @@
+{
+    "visualization_prompt": "Generate a pie chart showing market share distribution of passenger vehicle registrations using a donut-style layout with interactive percentage labels and categorical segmentation",
+    "visualization_code": {
+        "colors": [
+            "#01BAF2",
+            "#71BF45",
+            "#FAA74B",
+            "#B37CD2"
+        ],
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "white"
+        },
+        "title": {
+            "text": "February 2020 Norway Passenger Auto Registrations",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://cleantechnica.com/2020/03/07/pioneering-norway-rises-above-68-plug-in-vehicle-market-share-in-february/'>cleantechnica</a>",
+            "useHTML": true
+        },
+        "plotOptions": {
+            "pie": {
+                "innerSize": "75%",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}: {y}%",
+                    "distance": 15,
+                    "style": {
+                        "fontSize": "14px"
+                    }
+                },
+                "showInLegend": true
+            }
+        },
+        "series": [
+            {
+                "name": "Registrations",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "EV",
+                        "y": 68.1,
+                        "color": "#01BAF2"
+                    },
+                    {
+                        "name": "Hybrids",
+                        "y": 11.0,
+                        "color": "#71BF45"
+                    },
+                    {
+                        "name": "Diesel",
+                        "y": 11.2,
+                        "color": "#FAA74B"
+                    },
+                    {
+                        "name": "Petrol",
+                        "y": 9.7,
+                        "color": "#B37CD2"
+                    }
+                ]
+            }
+        ],
+        "accessibility": {
+            "point": {
+                "valueSuffix": "%"
+            }
+        },
+        "tooltip": {
+            "pointFormat": "{series.name}: <b>{point.percentage:.0f}%</b>"
+        }
+    },
+    "visualization_explanation": "The dataset contains four categorical variables representing vehicle types (EV, Hybrids, Diesel, Petrol) with percentage market shares. Original data from cleantechnica shows precise decimal values summing to 100%, indicating curated government statistics rather than synthetic data. The donut pie chart maximizes data-ink ratio by removing redundant axes while maintaining proportional accuracy through angular encoding. Cairo's principles are applied through: 1) Color-contrasted segments for immediate pattern recognition 2) Direct percentage labeling reducing cognitive load 3) Interactive highlighting maintaining visual density. The 75% inner cutout focuses attention on relative proportions while preserving total context. Statistical validity is ensured through exact percentage summation (\u03a3=100%) and original source verification."
+}

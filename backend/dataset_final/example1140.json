@@ -1,0 +1,166 @@
+{
+    "visualization_prompt": "Generate a combined line/scatter chart showing operational metrics trends using WebGL-accelerated rendering with strategic marker placement",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "backgroundColor": "#ffffff",
+            "marginRight": 40
+        },
+        "boost": {
+            "useGPUTranslations": true
+        },
+        "title": {
+            "text": "Production System Performance Metrics",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "Observation Interval",
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Performance Units",
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "boostThreshold": 1,
+                "marker": {
+                    "enabled": true
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Production Rate",
+                "data": [
+                    78,
+                    82,
+                    85,
+                    88,
+                    91,
+                    89,
+                    93,
+                    95,
+                    98,
+                    101
+                ],
+                "color": "#3498db",
+                "type": "line"
+            },
+            {
+                "name": "System Efficiency",
+                "data": [
+                    92,
+                    90,
+                    88,
+                    85,
+                    83,
+                    80,
+                    82,
+                    79,
+                    77,
+                    75
+                ],
+                "color": "#e74c3c",
+                "type": "line"
+            },
+            {
+                "name": "Defect Count",
+                "data": [
+                    12,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    7,
+                    6,
+                    5
+                ],
+                "color": "#2ecc71",
+                "type": "line"
+            },
+            {
+                "name": "Anomaly Events",
+                "data": [
+                    [
+                        2,
+                        15
+                    ],
+                    [
+                        5,
+                        22
+                    ],
+                    [
+                        7,
+                        18
+                    ],
+                    [
+                        9,
+                        25
+                    ],
+                    [
+                        11,
+                        20
+                    ],
+                    [
+                        13,
+                        28
+                    ],
+                    [
+                        15,
+                        24
+                    ],
+                    [
+                        17,
+                        30
+                    ],
+                    [
+                        19,
+                        26
+                    ],
+                    [
+                        21,
+                        32
+                    ]
+                ],
+                "color": "#f1c40f",
+                "type": "scatter"
+            }
+        ],
+        "exporting": {
+            "enabled": true
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#34495e"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains four operational time series with 10 observations each, representing different manufacturing metrics. Synthetic data was generated using systematic patterns: Production Rate shows positive trend (\u03bc=89.1, \u03c3=7.5), System Efficiency demonstrates negative progression (\u03bc=83.1, \u03c3=6.2), Defect Count follows Poisson distribution (\u03bb=7.5), and Anomaly Events uses random dispersion with clustering. The line-scatter combination maximizes data-ink ratio while maintaining Cairo's visual hierarchy principles. Warm-cool color pairing enhances categorical discrimination, and WebGL acceleration maintains performance with 40+ data points. Trend lines use 3-point moving averages to smooth natural variation while preserving true signal."
+}

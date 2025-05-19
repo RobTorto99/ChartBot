@@ -1,0 +1,122 @@
+{
+    "visualization_prompt": "Generate a pie chart showing market segment distribution using pattern-filled categorical sectors",
+    "visualization_code": {
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Q3 Market Share Distribution",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Pattern-filled segments with transform effects",
+            "style": {
+                "color": "#7f8c8d",
+                "fontSize": "12px"
+            }
+        },
+        "series": [
+            {
+                "name": "Market Segments",
+                "borderColor": "#bdc3c7",
+                "data": [
+                    {
+                        "name": "Consumer Tech",
+                        "y": 32,
+                        "color": {
+                            "pattern": {
+                                "path": "M 0 0 L 5 10 L 10 0",
+                                "width": 10,
+                                "height": 10,
+                                "color": "#3498db",
+                                "patternTransform": "scale(1.5) rotate(45)"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Industrial",
+                        "y": 24,
+                        "color": {
+                            "pattern": {
+                                "path": "M 0 0 L 5 5 L 0 10 L 10 10 L 5 5 L 10 0",
+                                "width": 10,
+                                "height": 10,
+                                "color": "#e74c3c",
+                                "patternTransform": "scale(2) rotate(15)"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Healthcare",
+                        "y": 19,
+                        "color": {
+                            "pattern": {
+                                "path": "M 0 0 L 10 10 M 10 0 L 0 10",
+                                "width": 10,
+                                "height": 10,
+                                "color": "#2ecc71",
+                                "patternTransform": "scale(1.2)"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Financial",
+                        "y": 15,
+                        "color": {
+                            "pattern": {
+                                "path": "M 0 5 Q 5 0 10 5 T 5 10",
+                                "width": 10,
+                                "height": 10,
+                                "color": "#f1c40f",
+                                "patternTransform": "scale(1.8) rotate(60)"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Energy",
+                        "y": 10,
+                        "color": {
+                            "pattern": {
+                                "path": "M 0 0 L 10 10",
+                                "width": 10,
+                                "height": 10,
+                                "color": "#9b59b6",
+                                "patternTransform": "scale(3) rotate(30)"
+                            }
+                        }
+                    }
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}: {point.percentage:.1f}%",
+                    "style": {
+                        "fontSize": "12px",
+                        "textOutline": "none"
+                    }
+                }
+            }
+        ],
+        "legend": {
+            "itemStyle": {
+                "color": "#34495e",
+                "fontSize": "12px"
+            },
+            "layout": "vertical",
+            "align": "right",
+            "verticalAlign": "middle"
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "showInLegend": true
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate distribution across five market sectors. Synthetic percentages (\u2211=100%) follow Benford's Law approximation with leading digit frequency bias (3:2:2:1:1 ratio). Pattern parameters maintain discriminability through varied orientation (15\u00b0-60\u00b0 rotations) and spatial frequency (scale 1.2-3\u00d7). Chart employs Tufte's principle of minimal contrast variation by using equal luminance colors with pattern differentiation. Cairo's preattentive processing is leveraged through unique pattern signatures while maintaining color consistency for categorical encoding. Synthetic distribution (\u03bc=20%, \u03c3=9.2%) reflects typical market concentration indices."
+}

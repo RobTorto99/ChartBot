@@ -1,0 +1,132 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Monthly Sales Data'. The chart should have styled axes and labels with specific colors and font sizes. The data series should include two series: 'Sales' and 'Expenses', with corresponding data points. Custom colors should be applied to the series and annotations. Additional configurations include chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "zooming": {
+                "type": "xy"
+            },
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 60,
+            "marginBottom": 80
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#333",
+                "fontSize": "24px",
+                "fontFamily": "IBM Plex Sans, sans-serif"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px",
+                    "fontFamily": "IBM Plex Sans, sans-serif"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Amount (in USD)",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "16px",
+                    "fontFamily": "IBM Plex Sans, sans-serif"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px",
+                    "fontFamily": "IBM Plex Sans, sans-serif"
+                }
+            },
+            "tickInterval": 0.5
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    1000,
+                    1200,
+                    1300,
+                    1400,
+                    1500,
+                    1600,
+                    1700,
+                    1800,
+                    1900,
+                    2000,
+                    2100,
+                    2200
+                ],
+                "color": "#4CAF50"
+            },
+            {
+                "name": "Expenses",
+                "data": [
+                    800,
+                    900,
+                    1000,
+                    1100,
+                    1200,
+                    1300,
+                    1400,
+                    1500,
+                    1600,
+                    1700,
+                    1800,
+                    1900
+                ],
+                "color": "#F44336"
+            }
+        ],
+        "annotations": [
+            {
+                "type": "verticalLine",
+                "typeOptions": {
+                    "point": "s",
+                    "label": {
+                        "style": {
+                            "color": "rgb(255, 69, 69)",
+                            "fontSize": "1.3em"
+                        }
+                    },
+                    "connector": {
+                        "fill": "rgb(255, 69, 69)",
+                        "stroke": "rgba(255, 69, 69, 0.4)",
+                        "strokeWidth": 2
+                    }
+                }
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical",
+            "itemStyle": {
+                "color": "#333",
+                "fontSize": "14px",
+                "fontFamily": "IBM Plex Sans, sans-serif"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a spline chart with a title 'Monthly Sales Data'. The chart includes styled axes and labels with specified colors and font sizes, ensuring readability and consistency with the provided CSS. The data series includes 'Sales' and 'Expenses' with corresponding data points, each assigned a custom color. Annotations are configured to include a vertical line with a specific style, which can be updated dynamically via a button click. Additional configurations such as chart margins, background color, and legend settings are included to enhance the overall presentation and user interaction."
+}

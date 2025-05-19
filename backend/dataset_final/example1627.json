@@ -1,0 +1,224 @@
+{
+    "visualization_prompt": "Generate a sunburst chart showing hierarchical emotional classifications using drill-down interactivity and color gradient variations",
+    "visualization_code": {
+        "chart": {
+            "type": "sunburst",
+            "height": "100%"
+        },
+        "title": {
+            "text": "The Feelings Wheel"
+        },
+        "subtitle": {
+            "text": "Source <href=\"https://blog.calm.com/blog/the-feelings-wheel\">Calm</a>"
+        },
+        "accessibility": {
+            "typeDescription": "Sunburst chart with three levels to display the feelings wheel of happiness. The first level shows the word happy. The next level displays close feelings to the word happy such as content and optimistic, where the third level displays more general happiness feelings, such as free, joyful, successful."
+        },
+        "series": [
+            {
+                "data": [
+                    {
+                        "id": "Happy",
+                        "parent": "",
+                        "name": "Happy",
+                        "color": "#FFFFFF"
+                    },
+                    {
+                        "id": "Playful",
+                        "parent": "Happy",
+                        "name": "Playful"
+                    },
+                    {
+                        "id": "Content",
+                        "parent": "Happy",
+                        "name": "Content"
+                    },
+                    {
+                        "id": "Interested",
+                        "parent": "Happy",
+                        "name": "Interested"
+                    },
+                    {
+                        "id": "Proud",
+                        "parent": "Happy",
+                        "name": "Proud"
+                    },
+                    {
+                        "id": "Accepted",
+                        "parent": "Happy",
+                        "name": "Accepted"
+                    },
+                    {
+                        "id": "Powerful",
+                        "parent": "Happy",
+                        "name": "Powerful"
+                    },
+                    {
+                        "id": "Peaceful",
+                        "parent": "Happy",
+                        "name": "Peaceful"
+                    },
+                    {
+                        "id": "Trusting",
+                        "parent": "Happy",
+                        "name": "Trusting"
+                    },
+                    {
+                        "id": "Optimistic",
+                        "parent": "Happy",
+                        "name": "Optimistic"
+                    },
+                    {
+                        "id": "Aroused",
+                        "parent": "Playful",
+                        "name": "Aroused",
+                        "value": 1
+                    },
+                    {
+                        "id": "Cheeky",
+                        "parent": "Playful",
+                        "name": "Cheeky",
+                        "value": 1
+                    },
+                    {
+                        "id": "Free",
+                        "parent": "Content",
+                        "name": "Free",
+                        "value": 1
+                    },
+                    {
+                        "id": "Joyful",
+                        "parent": "Content",
+                        "name": "Joyful",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Interested",
+                        "name": "Curious",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Interested",
+                        "name": "Inquisitive",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Proud",
+                        "name": "Successful",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Proud",
+                        "name": "Confident",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Accepted",
+                        "name": "Respected",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Accepted",
+                        "name": "Valued",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Powerful",
+                        "name": "Courageous",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Powerful",
+                        "name": "Creative",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Peaceful",
+                        "name": "Loving",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Peaceful",
+                        "name": "Thankful",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Trusting",
+                        "name": "Sensitive",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Trusting",
+                        "name": "Intimate",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Optimistic",
+                        "name": "Hopeful",
+                        "value": 1
+                    },
+                    {
+                        "parent": "Optimistic",
+                        "name": "Inspired",
+                        "value": 1
+                    }
+                ],
+                "levels": [
+                    {
+                        "level": 1,
+                        "levelIsConstant": false,
+                        "dataLabels": {
+                            "filter": {
+                                "property": "outerArcLength",
+                                "operator": ">",
+                                "value": 64
+                            }
+                        }
+                    },
+                    {
+                        "level": 2,
+                        "colorByPoint": true
+                    },
+                    {
+                        "level": 3,
+                        "colorVariation": {
+                            "key": "brightness",
+                            "to": -0.5
+                        }
+                    },
+                    {
+                        "level": 4,
+                        "colorVariation": {
+                            "key": "brightness",
+                            "to": 0.5
+                        }
+                    }
+                ],
+                "dataLabels": {
+                    "format": "{point.name}",
+                    "filter": {
+                        "property": "innerArcLength",
+                        "operator": ">",
+                        "value": 8
+                    },
+                    "style": {
+                        "textOutline": false,
+                        "color": "#000000"
+                    },
+                    "rotationMode": "circular"
+                },
+                "borderWidth": 3,
+                "borderColor": "#000000"
+            }
+        ],
+        "colors": [
+            "#B0B0B0",
+            "#FFFFFF"
+        ],
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "Feeling: <b>{point.options.name}</b>"
+        }
+    },
+    "visualization_explanation": "The dataset represents a three-level hierarchical structure with categorical emotional classifications. Root node 'Happy' branches into 9 second-level emotions, each further divided into 2-3 specific third-level states. All leaf nodes carry equal weight (value=1) for uniform sector sizing. Synthetic data follows strict parent-child relationships with 100% coverage at each branch level. The sunburst chart maximizes data-ink ratio by using angular proportions rather than separate legends, aligning with Tufte's principles. Color variations (-50% to +50% brightness) create perceptual grouping through Cairo's similarity principle, while border contrast maintains figure-ground differentiation. Uniform value distribution (\u03bc=1, \u03c3=0) creates equal part-to-whole relationships, emphasizing categorical structure over quantitative differences."
+}

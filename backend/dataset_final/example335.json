@@ -1,0 +1,103 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a polar column chart displaying the total Winter Olympics medals earned for the top 5 countries. The chart should have a title, styled axes and labels, and specific data series for gold, silver, and bronze medals. Additionally, specify custom colors and other configurations such as chart margins, background, and legend.",
+    "visualization_code": {
+        "colors": [
+            "#FFD700",
+            "#C0C0C0",
+            "#CD7F32"
+        ],
+        "chart": {
+            "type": "column",
+            "inverted": true,
+            "polar": true
+        },
+        "title": {
+            "text": "Winter Olympic medals per existing country (TOP 5)",
+            "align": "left"
+        },
+        "subtitle": {
+            "text": "Source: <a href=\"https://en.wikipedia.org/wiki/All-time_Olympic_Games_medal_table\" target=\"_blank\">Wikipedia</a>",
+            "align": "left"
+        },
+        "tooltip": {
+            "outside": true
+        },
+        "pane": {
+            "size": "85%",
+            "innerSize": "20%",
+            "endAngle": 270
+        },
+        "xAxis": {
+            "tickInterval": 1,
+            "labels": {
+                "align": "right",
+                "useHTML": true,
+                "allowOverlap": true,
+                "step": 1,
+                "y": 3,
+                "style": {
+                    "fontSize": "13px"
+                }
+            },
+            "lineWidth": 0,
+            "gridLineWidth": 0,
+            "categories": [
+                "Norway <span class=\"f16\"><span id=\"flag\" class=\"flag no\"></span></span>",
+                "United States <span class=\"f16\"><span id=\"flag\" class=\"flag us\"></span></span>",
+                "Germany <span class=\"f16\"><span id=\"flag\" class=\"flag de\"></span></span>",
+                "Austria <span class=\"f16\"><span id=\"flag\" class=\"flag at\"></span></span>",
+                "Canada <span class=\"f16\"><span id=\"flag\" class=\"flag ca\"></span></span>"
+            ]
+        },
+        "yAxis": {
+            "lineWidth": 0,
+            "tickInterval": 25,
+            "reversedStacks": false,
+            "endOnTick": true,
+            "showLastLabel": true,
+            "gridLineWidth": 0
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "normal",
+                "borderWidth": 0,
+                "pointPadding": 0,
+                "groupPadding": 0.15,
+                "borderRadius": "50%"
+            }
+        },
+        "series": [
+            {
+                "name": "Gold medals",
+                "data": [
+                    148,
+                    113,
+                    104,
+                    71,
+                    77
+                ]
+            },
+            {
+                "name": "Silver medals",
+                "data": [
+                    113,
+                    122,
+                    98,
+                    88,
+                    72
+                ]
+            },
+            {
+                "name": "Bronze medals",
+                "data": [
+                    124,
+                    95,
+                    65,
+                    91,
+                    76
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a polar column chart that visualizes the total Winter Olympics medals earned by the top 5 countries. The chart is titled 'Winter Olympic medals per existing country (TOP 5)' and includes a subtitle linking to the source data on Wikipedia. The x-axis labels are styled with a specific font size and include country flags for visual enhancement. The y-axis is configured to display tick intervals of 25, ensuring clarity in the medal counts. The plot options for the columns include stacking, border settings, and padding adjustments to ensure a clean and visually appealing layout. The data series include separate entries for gold, silver, and bronze medals, each with specific data points corresponding to the top 5 countries. Custom colors are applied to differentiate the medal types, enhancing the visual distinction between them."
+}

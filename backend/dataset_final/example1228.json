@@ -1,0 +1,96 @@
+{
+    "visualization_prompt": "Generate a column chart showing agricultural production comparison across major producers using grouped columns with data labels and perceptual color contrast",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "zooming": {
+                "type": "y"
+            }
+        },
+        "title": {
+            "text": "Global Grain Production 2023 (1000 MT)"
+        },
+        "subtitle": {
+            "text": "Source: Synthetic data modeling USDA estimates"
+        },
+        "xAxis": {
+            "categories": [
+                "USA",
+                "China",
+                "Brazil",
+                "EU",
+                "India",
+                "Russia",
+                "Argentina",
+                "Canada",
+                "Ukraine",
+                "Australia",
+                "Mexico",
+                "South Africa"
+            ],
+            "accessibility": {
+                "description": "Major agricultural nations"
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Production (1000 MT)"
+            },
+            "labels": {
+                "overflow": "justify"
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "dataLabels": {
+                    "enabled": true
+                },
+                "borderColor": "#949494"
+            }
+        },
+        "tooltip": {
+            "valueSuffix": " (1000 MT)",
+            "stickOnContact": true,
+            "backgroundColor": "rgba(255, 255, 255, 0.93)"
+        },
+        "series": [
+            {
+                "name": "Corn",
+                "data": [
+                    412300,
+                    265000,
+                    112500,
+                    69500,
+                    28400,
+                    15200,
+                    48500,
+                    37800,
+                    41700,
+                    22400,
+                    18900,
+                    13400
+                ],
+                "color": "#C0C0C0"
+            },
+            {
+                "name": "Wheat",
+                "data": [
+                    52500,
+                    141200,
+                    6200,
+                    138400,
+                    110500,
+                    79500,
+                    28400,
+                    45600,
+                    67500,
+                    33200,
+                    18700,
+                    24500
+                ],
+                "color": "#0C090A"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains two quantitative variables (corn/wheat production) across 12 categorical entities (countries). Synthetic data extends USDA estimates using normal distribution (corn: \u03bc=85,000, \u03c3=120,000; wheat: \u03bc=65,000, \u03c3=50,000) maintaining rank-order consistency. Column charts effectively enable magnitude comparisons through positioned rectangles, adhering to Tufte's principle by maximizing data-ink through direct value labels. Cairo's color contrast principles (light corn vs dark wheat) create immediate categorical distinction. Production clusters show North/South American corn dominance (USA-Brazil-Argentina) versus Eurasian wheat specialization (China-EU-Russia), with synthetic values maintaining regional production patterns."
+}

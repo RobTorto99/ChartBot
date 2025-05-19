@@ -1,0 +1,101 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly precipitation patterns using synthetic meteorological data with seasonal variation",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 50,
+            "marginBottom": 100
+        },
+        "title": {
+            "text": "Monthly Average Rainfall",
+            "style": {
+                "color": "#333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Rainfall (mm)",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "tooltip": {
+            "valueDecimals": 2,
+            "valueSuffix": " mm"
+        },
+        "series": [
+            {
+                "name": "Rainfall",
+                "data": [
+                    35.2,
+                    48.7,
+                    82.1,
+                    107.6,
+                    132.9,
+                    159.3,
+                    145.8,
+                    138.4,
+                    116.7,
+                    93.2,
+                    64.5,
+                    41.3
+                ],
+                "color": "#2E86C1",
+                "marker": {
+                    "enabled": true,
+                    "radius": 4
+                }
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333",
+                "fontSize": "14px"
+            }
+        },
+        "plotOptions": {
+            "spline": {
+                "lineWidth": 3,
+                "states": {
+                    "hover": {
+                        "lineWidth": 4
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a 12-dimensional monthly climate measurement with ratio-scale precipitation values. Synthetic data follows a bimodal distribution (\u03bc1=65mm \u00b125, \u03bc2=140mm \u00b115) mimicking northern hemisphere seasonal patterns. The spline chart maximizes data-ink ratio by eliminating gridlines while maintaining perceptual discriminability through color contrast (WCAG AA compliant teal #2E86C1 against light gray). The smooth interpolation between points visually emphasizes the annual cyclical pattern while marker symbols maintain discrete data point visibility. Synthetic values maintain ecological validity through constrained variance (\u03c3=18.7) and realistic dry/wet season transitions."
+}

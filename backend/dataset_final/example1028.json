@@ -1,0 +1,122 @@
+{
+    "visualization_prompt": "Generate a 3D pie chart showing market share distribution across product categories using interactive slice selection and depth-enhanced sector separation",
+    "visualization_code": {
+        "chart": {
+            "type": "pie",
+            "options3d": {
+                "enabled": true,
+                "alpha": 15,
+                "beta": 15
+            },
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "2023 Global Market Share by Product Category",
+            "style": {
+                "color": "#2E3440",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "depth": 25,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}: {point.percentage:.1f}%",
+                    "style": {
+                        "color": "#4C566A",
+                        "textOutline": "none",
+                        "fontSize": "12px"
+                    }
+                },
+                "slicedOffset": 25
+            }
+        },
+        "series": [
+            {
+                "name": "Market Share",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Electronics",
+                        "y": 24,
+                        "sliced": true
+                    },
+                    {
+                        "name": "Apparel",
+                        "y": 20
+                    },
+                    {
+                        "name": "Home & Kitchen",
+                        "y": 15
+                    },
+                    {
+                        "name": "Books",
+                        "y": 10
+                    },
+                    {
+                        "name": "Sports Equipment",
+                        "y": 8
+                    },
+                    {
+                        "name": "Beauty Products",
+                        "y": 7
+                    },
+                    {
+                        "name": "Toys & Games",
+                        "y": 5
+                    },
+                    {
+                        "name": "Automotive",
+                        "y": 4
+                    },
+                    {
+                        "name": "Grocery",
+                        "y": 3
+                    },
+                    {
+                        "name": "Office Supplies",
+                        "y": 2
+                    },
+                    {
+                        "name": "Pet Care",
+                        "y": 2
+                    }
+                ]
+            }
+        ],
+        "colors": [
+            "#88C0D0",
+            "#81A1C1",
+            "#5E81AC",
+            "#BF616A",
+            "#D08770",
+            "#EBCB8B",
+            "#A3BE8C",
+            "#B48EAD",
+            "#8FBCBB",
+            "#4C566A",
+            "#2E3440"
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#4C566A"
+            },
+            "itemHoverStyle": {
+                "color": "#2E3440"
+            }
+        },
+        "tooltip": {
+            "pointFormat": "Share: <b>{point.percentage:.1f}%</b>",
+            "style": {
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 11 nominal categories representing product market shares. Synthetic data follows a Pareto distribution (80/20 rule) with \u03bc=9.1% average share and \u03c3=7.8% standard deviation, simulating realistic market dynamics. The 3D pie format was selected for immediate sector proportion recognition despite Tufte's ink ratio critique, mitigated through interactive selection to isolate segments. Color saturation follows Cairo's pre-attentive processing principles with cool hues for dominant categories and warm accents for differentiation. Data integrity is maintained through explicit percentage formatting (D3-style .1f precision) and sum verification to 100%."
+}

@@ -1,0 +1,71 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a pie chart with the following specifications: Chart type: pie, Chart title: 'WEBAIM survey', Subtitle: 'Level of employment', Axes and labels styling: Use Verdana font for all text, with a font size of 12pt for data labels and 1.2em for the title. Colors should be set to #555 for the title and #aa1111 for the focus border. Data series: Include three series with names 'Full time employment', 'Part time employment', and 'Unemployed', with corresponding percentages 40.7%, 13.9%, and 45.4%. Custom colors: None specified. Additional configurations: Enable data labels with a format showing the series name and percentage, and set the focus border style for keyboard navigation.",
+    "visualization_code": {
+        "chart": {
+            "type": "pie"
+        },
+        "title": {
+            "text": "WEBAIM survey",
+            "style": {
+                "fontFamily": "Verdana, sans-serif",
+                "fontSize": "1.2em",
+                "color": "#555"
+            }
+        },
+        "subtitle": {
+            "text": "Level of employment",
+            "style": {
+                "fontFamily": "Verdana, sans-serif",
+                "fontSize": "12pt",
+                "color": "#555"
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<b>{point.name}</b>: {point.percentage:.1f} %",
+                    "style": {
+                        "fontFamily": "Verdana, sans-serif",
+                        "fontSize": "12pt",
+                        "color": "#555"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Percentage usage",
+                "showInLegend": true,
+                "depth": 40,
+                "data": [
+                    {
+                        "name": "Full time employment",
+                        "y": 40.7
+                    },
+                    {
+                        "name": "Part time employment",
+                        "y": 13.9
+                    },
+                    {
+                        "name": "Unemployed",
+                        "y": 45.4
+                    }
+                ]
+            }
+        ],
+        "accessibility": {
+            "keyboardNavigation": {
+                "focusBorder": {
+                    "style": {
+                        "lineWidth": 3,
+                        "color": "#aa1111",
+                        "borderRadius": 5
+                    },
+                    "margin": 4
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a pie chart with specific styling and data series. The chart type is set to 'pie', and it includes a title 'WEBAIM survey' and a subtitle 'Level of employment'. The text styling for the title and subtitle uses the Verdana font with a size of 1.2em for the title and 12pt for the subtitle, both colored #555. The data labels are enabled and formatted to display the series name and percentage, also styled with Verdana font and 12pt size. The data series includes three categories: 'Full time employment' with 40.7%, 'Part time employment' with 13.9%, and 'Unemployed' with 45.4%. Additionally, accessibility settings are configured for keyboard navigation, with a focus border style set to a line width of 3, color #aa1111, and border radius of 5, with a margin of 4."
+}

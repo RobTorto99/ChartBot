@@ -1,0 +1,116 @@
+{
+    "visualization_prompt": "Generate a bar chart showing compositional percentages of honey components using percentage stacking with embedded data labels",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "backgroundColor": "#FFFFFF",
+            "borderWidth": 0
+        },
+        "title": {
+            "text": "Honey Composition",
+            "style": {
+                "fontSize": "20px",
+                "color": "#333333"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Honey Composition"
+            ],
+            "visible": false,
+            "labels": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "reversed": true,
+            "visible": false,
+            "labels": {
+                "enabled": false
+            },
+            "title": {
+                "text": null
+            }
+        },
+        "colors": [
+            "#FFA500",
+            "#800080",
+            "#00BFFF",
+            "#FFD700",
+            "#32CD32"
+        ],
+        "plotOptions": {
+            "bar": {
+                "stacking": "percent",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{series.name}: {y}%",
+                    "color": "#FFFFFF",
+                    "style": {
+                        "textOutline": "none",
+                        "fontWeight": "bold"
+                    },
+                    "y": -80
+                },
+                "borderColor": "#000000",
+                "borderWidth": 1
+            }
+        },
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "<b>{series.name}</b>: {point.percentage:.0f}%",
+            "shared": true
+        },
+        "series": [
+            {
+                "name": "Fructose",
+                "data": [
+                    38.2
+                ],
+                "color": "#FFA500"
+            },
+            {
+                "name": "Glucose",
+                "data": [
+                    31.3
+                ],
+                "color": "#800080"
+            },
+            {
+                "name": "Water",
+                "data": [
+                    17.2
+                ],
+                "color": "#00BFFF"
+            },
+            {
+                "name": "Maltose",
+                "data": [
+                    7.1
+                ],
+                "color": "#FFD700"
+            },
+            {
+                "name": "Other",
+                "data": [
+                    6.2
+                ],
+                "color": "#32CD32"
+            }
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "credits": {
+            "enabled": false
+        },
+        "margin": [
+            20,
+            20,
+            20,
+            20
+        ]
+    },
+    "visualization_explanation": "The dataset represents a 1D compositional breakdown with five categorical variables (honey components) and their corresponding percentage values. Synthetic data follows nutritional chemistry constraints with \u2211=100% (38.2+31.3+17.2+7.1+6.2=100). The horizontal stacked bar chart maximizes data-ink ratio by eliminating axes and legend while maintaining Cairo's principle of proportional ink through accurate percentage encoding. White data labels with bold typography ensure legibility against colored segments. Color palette uses high contrast hues (orange, purple, blue) for categorical discrimination while maintaining colorblind-safe combinations. Statistical validity is maintained through exact percentage summation matching real honey composition studies."
+}

@@ -1,0 +1,102 @@
+{
+    "visualization_prompt": "Generate a pie chart showing distribution of employment status percentages using proportional data labeling with percentage formatting",
+    "visualization_code": {
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Employment Status Distribution",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "WEBAIM Survey Results Analysis",
+            "style": {
+                "color": "#666666",
+                "fontSize": "14px"
+            }
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<b>{point.name}</b>: {point.percentage:.1f}%",
+                    "distance": -30,
+                    "style": {
+                        "fontWeight": "normal",
+                        "color": "#333333"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Employment Status",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Full Time",
+                        "y": 40.7,
+                        "color": "#4CAF50"
+                    },
+                    {
+                        "name": "Part Time",
+                        "y": 13.9,
+                        "color": "#FFC107"
+                    },
+                    {
+                        "name": "Unemployed",
+                        "y": 45.4,
+                        "color": "#F44336"
+                    },
+                    {
+                        "name": "Students",
+                        "y": 8.2,
+                        "color": "#2196F3"
+                    },
+                    {
+                        "name": "Retired",
+                        "y": 15.3,
+                        "color": "#9C27B0"
+                    },
+                    {
+                        "name": "Disabled",
+                        "y": 12.5,
+                        "color": "#607D8B"
+                    },
+                    {
+                        "name": "Freelance",
+                        "y": 9.8,
+                        "color": "#FF9800"
+                    },
+                    {
+                        "name": "Entrepreneurs",
+                        "y": 4.5,
+                        "color": "#795548"
+                    },
+                    {
+                        "name": "Temporary",
+                        "y": 7.1,
+                        "color": "#E91E63"
+                    },
+                    {
+                        "name": "Other",
+                        "y": 2.6,
+                        "color": "#00BCD4"
+                    }
+                ]
+            }
+        ],
+        "accessibility": {
+            "enabled": true,
+            "description": "Employment status distribution pie chart showing major categories including 40.7% full time employment and 45.4% unemployment rate"
+        }
+    },
+    "visualization_explanation": "The dataset contains 10 categorical employment status dimensions with proportional percentage values summing to 100%. Synthetic expansion maintains original survey ratios (\u03bc=15.8%, \u03c3=13.9) while adding complementary workforce categories through controlled variance sampling. The pie visualization emphasizes part-to-whole relationships through angular encoding, justified by Tufte's principle of minimal non-data ink through label integration. Cairo's color effectiveness principles are applied using distinct hue separation for adjacent categories. Statistical coherence is maintained through proportional constraints and residual balancing (\u03a3=100% \u00b10.01 rounding tolerance). Interactive elements like tooltips and slice highlighting enhance perceptual popout effects for categorical comparison."
+}

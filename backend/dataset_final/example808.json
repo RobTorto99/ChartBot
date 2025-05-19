@@ -1,0 +1,106 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a bar chart with the title 'Monthly Sales Data'. The chart should have a high-contrast light theme, with custom styling for axes and labels. The x-axis should display categories for each month, and the y-axis should display sales data in thousands (K). The chart should also include accessibility features such as screen reader support. The data series should represent monthly sales data with a single series named 'Sales'.",
+    "visualization_code": {
+        "chart": {
+            "type": "bar"
+        },
+        "accessibility": {
+            "screenReaderSection": {
+                "beforeChartFormat": "<h5>{chartTitle}</h5><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div><div>{viewTableButton}</div>"
+            }
+        },
+        "title": {
+            "text": "Monthly Sales Data"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px",
+                    "fontFamily": "Verdana, sans-serif"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "enabled": false
+            },
+            "labels": {
+                "format": "{text}K",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px",
+                    "fontFamily": "Verdana, sans-serif"
+                }
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.y:.1f}K",
+                    "style": {
+                        "color": "#333",
+                        "fontSize": "12px",
+                        "fontFamily": "Verdana, sans-serif"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ]
+            }
+        ],
+        "colors": [
+            "#0071A7",
+            "#FF6600",
+            "#28A745",
+            "#DC3545",
+            "#6F42C1"
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333",
+                "fontSize": "12px",
+                "fontFamily": "Verdana, sans-serif"
+            }
+        },
+        "exporting": {
+            "enabled": true
+        },
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a bar chart with the title 'Monthly Sales Data'. The chart includes accessibility features such as screen reader support, which is configured using the 'beforeChartFormat' option. The x-axis displays categories for each month, and the y-axis displays sales data in thousands (K) with custom label formatting. The chart uses a high-contrast light theme and custom colors for the series. The legend is enabled and styled with a consistent font and color scheme. Additionally, exporting options are enabled for the chart, and Highcharts credits are disabled."
+}

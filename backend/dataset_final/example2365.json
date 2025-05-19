@@ -1,0 +1,119 @@
+{
+    "visualization_prompt": "Generate a polar area chart showing monthly energy contribution percentages using synthetic data with seasonal trends and linear growth",
+    "visualization_code": {
+        "chart": {
+            "type": "area",
+            "polar": true,
+            "height": 500
+        },
+        "title": {
+            "text": "Energy Source Contributions by Month",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Percentage",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "plotOptions": {
+            "area": {
+                "stacking": "percent",
+                "color": [
+                    "#FF7F50",
+                    "#6495ED"
+                ]
+            }
+        },
+        "series": [
+            {
+                "type": "area",
+                "name": "Solar",
+                "data": [
+                    30,
+                    40,
+                    50,
+                    60,
+                    70,
+                    80,
+                    75,
+                    70,
+                    60,
+                    50,
+                    40,
+                    35
+                ]
+            },
+            {
+                "type": "area",
+                "name": "Wind",
+                "data": [
+                    70,
+                    65,
+                    60,
+                    55,
+                    50,
+                    45,
+                    55,
+                    65,
+                    80,
+                    95,
+                    110,
+                    120
+                ]
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical",
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "12px"
+            }
+        },
+        "credits": {
+            "enabled": false
+        },
+        "exporting": {
+            "enabled": true
+        }
+    },
+    "visualization_explanation": "The dataset contains two-dimensional temporal data with 12 monthly observations for two energy sources. Synthetic values were generated using: 1) A linear growth trend (total energy production increasing 5 units/month), 2) Seasonal patterns (solar peaking in summer months), and 3) Complementary variance (wind inversely correlated with solar). Statistical anchors: Solar \u03bc=54.58 (\u03c3=16.82), Wind \u03bc=75.42 (\u03c3=27.90). The polar projection emphasizes cyclical patterns while percentage stacking reveals compositional changes. The chart maximizes data-ink ratio by using position and color saturation for primary comparisons, following Tufte's principles. Angular labels leverage Cairo's pre-attentive processing for rapid pattern recognition. Coral/orange (#FF7F50) and cornflower blue (#6495ED) provide chromatic contrast while maintaining readability in circular format."
+}

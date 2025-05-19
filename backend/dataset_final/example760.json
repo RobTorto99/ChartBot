@@ -1,0 +1,103 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object that renders a line chart with the title 'Chart inside tooltip demo'. The chart should have custom styling for axes and labels, including specific colors and font sizes. The data series should include three points, each with an embedded pie chart inside the tooltip. The tooltip should use HTML for formatting and should display a pie chart with the data provided in the 'eData' property of each point. Additionally, specify custom colors for the chart and configure the chart's background and margins.",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "backgroundColor": "#f9f9f9",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "Chart inside tooltip demo",
+            "style": {
+                "color": "#333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "X Axis",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#777",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Y Axis",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#777",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "tooltip": {
+            "useHTML": true,
+            "headerFormat": "",
+            "pointFormat": "<div id='hc-tooltip'></div>"
+        },
+        "series": [
+            {
+                "type": "line",
+                "data": [
+                    {
+                        "y": 10,
+                        "eData": [
+                            1,
+                            2,
+                            3,
+                            4,
+                            5
+                        ]
+                    },
+                    {
+                        "y": 5,
+                        "eData": [
+                            -10,
+                            20,
+                            50,
+                            70,
+                            20
+                        ]
+                    },
+                    {
+                        "y": 2,
+                        "eData": [
+                            103,
+                            11,
+                            12,
+                            54,
+                            68
+                        ]
+                    }
+                ],
+                "color": "#0073e6"
+            }
+        ],
+        "plotOptions": {
+            "series": {
+                "marker": {
+                    "enabled": false
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a line chart with a title 'Chart inside tooltip demo'. The chart includes custom styling for the axes and labels, with specific colors and font sizes applied to the titles and labels. The data series consists of three points, each containing an 'eData' property that is used to render a pie chart inside the tooltip when the point is hovered over. The tooltip is configured to use HTML for formatting and includes a placeholder div with the id 'hc-tooltip' where the pie chart will be rendered. The chart's background color is set to a light gray, and margins are adjusted to provide more space around the chart. The line series uses a custom color for the line, enhancing the visual appeal of the chart."
+}

@@ -1,0 +1,100 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a waterfall chart with the following specifications: Chart type should be 'waterfall'. The chart title should be 'Stack labels in waterfall chart'. The axes and labels should have specific styling: X-axis categories should be ['0', '1', '2', '1. Intermediate Sum', '4', '5', '2. Intermediate Sum', '7', 'Sum']. The Y-axis should have a tickPixelInterval of 30 and stackLabels enabled with cropping disabled. The data series should include three series with specific data points and intermediate sums. Custom colors are not specified, but additional configurations include shared tooltips, normal stacking, and a line width of 1 for series.",
+    "visualization_code": {
+        "chart": {
+            "type": "waterfall"
+        },
+        "title": {
+            "text": "Stack labels in waterfall chart"
+        },
+        "tooltip": {
+            "shared": true
+        },
+        "xAxis": {
+            "categories": [
+                "0",
+                "1",
+                "2",
+                "1. Intermediate Sum",
+                "4",
+                "5",
+                "2. Intermediate Sum",
+                "7",
+                "Sum"
+            ]
+        },
+        "yAxis": {
+            "tickPixelInterval": 30,
+            "stackLabels": {
+                "enabled": true,
+                "crop": false
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "stacking": "normal",
+                "lineWidth": 1
+            }
+        },
+        "series": [
+            {
+                "data": [
+                    10,
+                    10,
+                    30,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    20,
+                    -10,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    10,
+                    {
+                        "isSum": true
+                    }
+                ]
+            },
+            {
+                "data": [
+                    -20,
+                    -10,
+                    -20,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    10,
+                    20,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    -20,
+                    {
+                        "isSum": true
+                    }
+                ]
+            },
+            {
+                "data": [
+                    -20,
+                    10,
+                    10,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    30,
+                    -20,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    -10,
+                    {
+                        "isSum": true
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a waterfall chart with specific settings. The chart type is set to 'waterfall', and the title is 'Stack labels in waterfall chart'. The X-axis categories are defined to include specific labels, and the Y-axis has a tickPixelInterval of 30 with stackLabels enabled and cropping disabled. The data series include three sets of data points, each with intermediate sums and a final sum. The plotOptions specify normal stacking and a line width of 1 for the series. Additionally, the tooltip is configured to be shared across data points. This configuration effectively visualizes the data in a waterfall format, highlighting intermediate sums and the final sum."
+}

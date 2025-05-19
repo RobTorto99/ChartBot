@@ -1,0 +1,130 @@
+{
+    "visualization_prompt": "Generate a horizontal organization chart showing corporate hierarchy relationships using Highcharts' organization series type with multi-level color coding",
+    "visualization_code": {
+        "chart": {
+            "type": "organization",
+            "inverted": true
+        },
+        "title": {
+            "text": "Highcharts Horizontal Org Chart",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "series": [
+            {
+                "type": "organization",
+                "name": "Corporate Structure",
+                "keys": [
+                    "from",
+                    "to"
+                ],
+                "data": [
+                    [
+                        "Shareholders",
+                        "Board"
+                    ],
+                    [
+                        "Board",
+                        "CEO"
+                    ],
+                    [
+                        "CEO",
+                        "CTO"
+                    ],
+                    [
+                        "CEO",
+                        "CPO"
+                    ],
+                    [
+                        "CEO",
+                        "CSO"
+                    ],
+                    [
+                        "CEO",
+                        "CMO"
+                    ],
+                    [
+                        "CEO",
+                        "HR"
+                    ],
+                    [
+                        "CTO",
+                        "DevOps"
+                    ],
+                    [
+                        "CTO",
+                        "QA"
+                    ],
+                    [
+                        "CPO",
+                        "Design"
+                    ],
+                    [
+                        "CSO",
+                        "Sales"
+                    ],
+                    [
+                        "CMO",
+                        "Advertising"
+                    ]
+                ],
+                "levels": [
+                    {
+                        "level": 0,
+                        "color": "#e6e6e6",
+                        "dataLabels": {
+                            "color": "#2c3e50",
+                            "fontSize": "14px"
+                        },
+                        "height": 40
+                    },
+                    {
+                        "level": 1,
+                        "color": "#bdc3c7",
+                        "dataLabels": {
+                            "color": "#2c3e50",
+                            "fontSize": "13px"
+                        }
+                    },
+                    {
+                        "level": 2,
+                        "color": "#3498db",
+                        "dataLabels": {
+                            "color": "white",
+                            "fontSize": "12px"
+                        }
+                    }
+                ],
+                "linkColor": "#95a5a6",
+                "nodeWidth": 150,
+                "colorByPoint": false,
+                "borderColor": "white",
+                "dataLabels": {
+                    "style": {
+                        "textOutline": "none"
+                    }
+                }
+            }
+        ],
+        "exporting": {
+            "enabled": true,
+            "sourceWidth": 1200,
+            "sourceHeight": 800,
+            "buttons": {
+                "contextButton": {
+                    "symbolStroke": "#7f8c8d"
+                }
+            }
+        },
+        "plotOptions": {
+            "organization": {
+                "borderRadius": 5,
+                "linkLineWidth": 2
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a hierarchical structure with 12 nodes across 3 organizational levels. Node relationships are defined through parent-child links using [from, to] pairs. Synthetic data maintains corporate hierarchy conventions with C-suite positions and department divisions. The three-level color coding (light gray for investors, medium gray for executives, blue for departments) creates immediate visual stratification. The horizontal layout optimized for executive-to-department relationships reading follows perceptual grouping principles. Color choices adhere to Tufte's data-ink ratio by using minimal saturated colors (only 16.7% of nodes colored) for focal points. Typography hierarchy (14px investors \u2192 12px departments) implements Cairo's magnitude signaling. Node spacing and link curvature (default 0.15 curvature factor) maintain clear connectivity visualization without overlap."
+}

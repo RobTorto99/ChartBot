@@ -1,0 +1,121 @@
+{
+    "visualization_prompt": "Generate a 3D column chart showing monthly sales performance with missing data points using synthetic time-series data with seasonal trends and statistical variance",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "margin": 75,
+            "options3d": {
+                "enabled": true,
+                "alpha": 15,
+                "beta": 15,
+                "depth": 50,
+                "frame": {
+                    "bottom": {
+                        "color": "#C0C0C0"
+                    },
+                    "side": {
+                        "size": 1,
+                        "color": "#C0C0C0"
+                    },
+                    "back": {
+                        "size": 1,
+                        "color": "#D0D0D0"
+                    }
+                }
+            }
+        },
+        "title": {
+            "text": "Q1-Q4 2023 Sales Performance (3D Column)"
+        },
+        "xAxis": {
+            "type": "category",
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (USD thousands)",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "depth": 5,
+                "groupZPadding": 15,
+                "color": "#4A90E2"
+            }
+        },
+        "series": [
+            {
+                "name": "Regional Sales",
+                "data": [
+                    {
+                        "name": "Jan",
+                        "y": 42
+                    },
+                    {
+                        "name": "Feb",
+                        "y": 57
+                    },
+                    {
+                        "name": "Mar",
+                        "y": null
+                    },
+                    {
+                        "name": "Apr",
+                        "y": 48
+                    },
+                    {
+                        "name": "May",
+                        "y": 63
+                    },
+                    {
+                        "name": "Jun",
+                        "y": 72
+                    },
+                    {
+                        "name": "Jul",
+                        "y": 35
+                    },
+                    {
+                        "name": "Aug",
+                        "y": 68
+                    },
+                    {
+                        "name": "Sep",
+                        "y": 75
+                    },
+                    {
+                        "name": "Oct",
+                        "y": 82
+                    },
+                    {
+                        "name": "Nov",
+                        "y": 78
+                    },
+                    {
+                        "name": "Dec",
+                        "y": 95
+                    }
+                ],
+                "tooltip": {
+                    "valueSuffix": "k (+7.2% YoY)"
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations of sales figures (quantitative ratio scale) with one intentional null value representing missing data. Synthetic values were generated using \u03bc=65, \u03c3=18 normal distribution with +0.8% weekly growth rate and Q3 seasonal dip. The 3D perspective enhances depth perception between quarterly groupings while maintaining Tufte's data-ink ratio through monochromatic coloring. Cairo's perceptual principles are applied through consistent z-axis shading and proportional column width scaling. Missing data is explicitly preserved as null to avoid misleading interpolation, with tooltip annotations providing YoY growth context through D3-style formatting."
+}

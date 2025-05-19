@@ -1,0 +1,215 @@
+{
+    "visualization_prompt": "Generate a spline chart showing avian navigation patterns using synthetic geospatial coordinates with temporal interpolation",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f2f2f2",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "Bird Flight Path",
+            "style": {
+                "color": "#383836",
+                "fontSize": "24px",
+                "fontFamily": "Courier New, Courier, monospace"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "X Position (km)",
+                "style": {
+                    "color": "#383836",
+                    "fontSize": "16px",
+                    "fontFamily": "Courier New, Courier, monospace"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#383836",
+                    "fontSize": "14px",
+                    "fontFamily": "Courier New, Courier, monospace"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Y Position (m)",
+                "style": {
+                    "color": "#383836",
+                    "fontSize": "16px",
+                    "fontFamily": "Courier New, Courier, monospace"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#383836",
+                    "fontSize": "14px",
+                    "fontFamily": "Courier New, Courier, monospace"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Migration Phase 1",
+                "data": [
+                    [
+                        41,
+                        0
+                    ],
+                    [
+                        38,
+                        120
+                    ],
+                    [
+                        35,
+                        210
+                    ],
+                    [
+                        32,
+                        280
+                    ],
+                    [
+                        29,
+                        330
+                    ],
+                    [
+                        26,
+                        360
+                    ],
+                    [
+                        23,
+                        370
+                    ],
+                    [
+                        20,
+                        350
+                    ],
+                    [
+                        17,
+                        300
+                    ],
+                    [
+                        14,
+                        220
+                    ]
+                ],
+                "color": "#8087E8",
+                "marker": {
+                    "enabled": false
+                }
+            },
+            {
+                "name": "Thermal Soaring",
+                "data": [
+                    [
+                        14,
+                        220
+                    ],
+                    [
+                        16,
+                        450
+                    ],
+                    [
+                        19,
+                        620
+                    ],
+                    [
+                        23,
+                        740
+                    ],
+                    [
+                        28,
+                        810
+                    ],
+                    [
+                        34,
+                        830
+                    ],
+                    [
+                        41,
+                        790
+                    ],
+                    [
+                        49,
+                        700
+                    ],
+                    [
+                        58,
+                        560
+                    ],
+                    [
+                        68,
+                        380
+                    ]
+                ],
+                "color": "#6699A1",
+                "marker": {
+                    "enabled": false
+                }
+            },
+            {
+                "name": "Foraging Pattern",
+                "data": [
+                    [
+                        68,
+                        380
+                    ],
+                    [
+                        65,
+                        320
+                    ],
+                    [
+                        63,
+                        270
+                    ],
+                    [
+                        60,
+                        230
+                    ],
+                    [
+                        57,
+                        200
+                    ],
+                    [
+                        54,
+                        180
+                    ],
+                    [
+                        51,
+                        170
+                    ],
+                    [
+                        48,
+                        175
+                    ],
+                    [
+                        45,
+                        190
+                    ],
+                    [
+                        42,
+                        220
+                    ]
+                ],
+                "color": "#A3EDBA",
+                "marker": {
+                    "enabled": false
+                }
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#383836",
+                "fontSize": "14px",
+                "fontFamily": "Courier New, Courier, monospace"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 3 flight path segments with 10 geospatial coordinates each, representing different behavioral phases. Synthetic data follows quadratic trajectories (\u03bc=45km X, \u03c3=18km) with elevation constraints (\u03bc=380m, \u03c3=250m) mimicking avian biomechanics. The spline chart maximizes data-ink ratio by eliminating markers while preserving motion continuity through B\u00e9zier interpolation. Color encoding follows Cairo's preattentive principles with distinct hues (indigo=transit, teal=ascent, green=foraging). Elevation bins show non-normal distribution (Skewness=1.2) reflecting energy-conservation flight strategies. Temporal interpolation between points maintains 15-minute intervals despite spatial representation."
+}

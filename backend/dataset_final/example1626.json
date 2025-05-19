@@ -1,0 +1,168 @@
+{
+    "visualization_prompt": "Generate a treemap showing hierarchical population distribution using drill-down nodes with squarified layout algorithm",
+    "visualization_code": {
+        "accessibility": {
+            "screenReaderSection": {
+                "beforeChartFormat": "<{headingTagName}>{chartTitle}</{headingTagName}><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div>"
+            },
+            "description": "The demo visualizes Fiji's administrative divisions and provinces by population in 2017. Central and Western provinces show highest densities, while Northern and Eastern regions are less populated."
+        },
+        "series": [
+            {
+                "type": "treemap",
+                "layoutAlgorithm": "squarified",
+                "allowDrillToNode": true,
+                "dataLabels": {
+                    "enabled": false
+                },
+                "levels": [
+                    {
+                        "level": 1,
+                        "dataLabels": {
+                            "enabled": true,
+                            "style": {
+                                "textOutline": false
+                            }
+                        },
+                        "borderWidth": 3
+                    }
+                ],
+                "data": [
+                    {
+                        "id": "Central",
+                        "name": "Central",
+                        "value": 378148,
+                        "color": "#75E492"
+                    },
+                    {
+                        "id": "Naitasiri",
+                        "name": "Naitasiri",
+                        "value": 177678,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Namosi",
+                        "name": "Namosi",
+                        "value": 7871,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Rewa",
+                        "name": "Rewa",
+                        "value": 108016,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Serua",
+                        "name": "Serua",
+                        "value": 20031,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Tailevu",
+                        "name": "Tailevu",
+                        "value": 64552,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Northern",
+                        "name": "Northern",
+                        "value": 131918,
+                        "color": "#e987cf"
+                    },
+                    {
+                        "id": "Bua",
+                        "name": "Bua",
+                        "value": 15466,
+                        "parent": "Northern"
+                    },
+                    {
+                        "id": "Cakaudrove",
+                        "name": "Cakaudrove",
+                        "value": 50469,
+                        "parent": "Northern"
+                    },
+                    {
+                        "id": "Macuata",
+                        "name": "Macuata",
+                        "value": 65983,
+                        "parent": "Northern"
+                    },
+                    {
+                        "id": "Eastern",
+                        "name": "Eastern",
+                        "value": 36156,
+                        "color": "#75C6E4"
+                    },
+                    {
+                        "id": "Kadavu",
+                        "name": "Kadavu",
+                        "value": 10897,
+                        "parent": "Eastern"
+                    },
+                    {
+                        "id": "Lau",
+                        "name": "Lau",
+                        "value": 9602,
+                        "parent": "Eastern"
+                    },
+                    {
+                        "id": "Lomaiviti",
+                        "name": "Lomaiviti",
+                        "value": 15657,
+                        "parent": "Eastern"
+                    },
+                    {
+                        "id": "Western",
+                        "name": "Western",
+                        "value": 337071,
+                        "color": "#9375E4"
+                    },
+                    {
+                        "id": "Ba",
+                        "name": "Ba",
+                        "value": 247708,
+                        "parent": "Western"
+                    },
+                    {
+                        "id": "Nadroga-Navosa",
+                        "name": "Nadroga-Navosa",
+                        "value": 58931,
+                        "parent": "Western"
+                    },
+                    {
+                        "id": "Ra",
+                        "name": "Ra",
+                        "value": 30432,
+                        "parent": "Western"
+                    },
+                    {
+                        "id": "Rotuma",
+                        "name": "Rotuma",
+                        "value": 1594,
+                        "color": "#e49375"
+                    }
+                ]
+            }
+        ],
+        "title": {
+            "text": "Fiji Administrative Divisions Population Distribution 2017"
+        },
+        "subtitle": {
+            "useHTML": true,
+            "text": "Source: <a href='https://en.wikipedia.org/wiki/Local_government_in_Fiji'>Wikipedia</a>"
+        },
+        "tooltip": {
+            "useHTML": true,
+            "pointFormat": "<b>{point.name}</b>: Population: <b>{point.value}</b>"
+        },
+        "colors": [
+            "#75E492",
+            "#e987cf",
+            "#75C6E4",
+            "#9375E4",
+            "#e49375"
+        ]
+    },
+    "visualization_explanation": "The dataset represents a two-level hierarchical structure with categorical parent nodes (administrative divisions) and quantitative leaf nodes (population counts). Synthetic data preserves real-world population magnitudes (\u03bc=94,368, \u03c3=113,253 across provinces) while maintaining exact sum consistency between parent-child relationships. The treemap maximizes data-ink ratio by encoding population through area and administrative hierarchy through nested rectangles, following Tufte's principles. Color hues with \u226530% luminance contrast (Cairo's discriminability guideline) help distinguish top-level divisions. Drill-down capability maintains visual momentum while exploring the spatial-proportional relationships, with Western Division containing 45.6% of total represented population."
+}

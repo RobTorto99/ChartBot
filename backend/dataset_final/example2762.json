@@ -1,0 +1,185 @@
+{
+    "visualization_prompt": "Generate a treemap showing hierarchical area relationships using drill-down interactivity",
+    "visualization_code": {
+        "chart_config": {
+            "chart": {
+                "type": "treemap",
+                "inverted": false
+            },
+            "title": {
+                "text": "Canadian provinces and territories by area",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "18px",
+                    "fontWeight": "bold"
+                }
+            },
+            "subtitle": {
+                "useHTML": true,
+                "text": "Source: <a href='https://en.wikipedia.org/wiki/List_of_Canadian_provinces_and_territories_by_area'>Wikipedia</a>"
+            },
+            "accessibility": {
+                "screenReaderSection": {
+                    "beforeChartFormat": "<{headingTagName}>{chartTitle}</{headingTagName}><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div>"
+                },
+                "description": "Interactive hierarchical visualization of Canadian regional divisions. Northern Canada contains 3 territories, Western Canada 3 provinces, Central Canada 2 provinces, and Atlantic Canada 4 provinces."
+            }
+        },
+        "data_series": {
+            "series": [
+                {
+                    "type": "treemap",
+                    "layoutAlgorithm": "squarified",
+                    "allowDrillToNode": true,
+                    "levels": [
+                        {
+                            "level": 1,
+                            "dataLabels": {
+                                "enabled": true,
+                                "style": {
+                                    "textOutline": "none"
+                                }
+                            },
+                            "borderWidth": 3
+                        }
+                    ],
+                    "data": [
+                        {
+                            "id": "root",
+                            "name": "Canada",
+                            "value": 9984670
+                        },
+                        {
+                            "id": "N",
+                            "name": "Northern Canada",
+                            "value": 3921739,
+                            "color": "#2c3e50"
+                        },
+                        {
+                            "id": "N1",
+                            "parent": "N",
+                            "name": "Yukon",
+                            "value": 482443
+                        },
+                        {
+                            "id": "N2",
+                            "parent": "N",
+                            "name": "NW Territories",
+                            "value": 1346106
+                        },
+                        {
+                            "id": "N3",
+                            "parent": "N",
+                            "name": "Nunavut",
+                            "value": 2093190
+                        },
+                        {
+                            "id": "W",
+                            "name": "Western Canada",
+                            "value": 2258483,
+                            "color": "#3498db"
+                        },
+                        {
+                            "id": "W1",
+                            "parent": "W",
+                            "name": "British Columbia",
+                            "value": 944735
+                        },
+                        {
+                            "id": "W2",
+                            "parent": "W",
+                            "name": "Alberta",
+                            "value": 661848
+                        },
+                        {
+                            "id": "W3",
+                            "parent": "W",
+                            "name": "Saskatchewan",
+                            "value": 651900
+                        },
+                        {
+                            "id": "C",
+                            "name": "Central Canada",
+                            "value": 2743000,
+                            "color": "#2980b9"
+                        },
+                        {
+                            "id": "C1",
+                            "parent": "C",
+                            "name": "Ontario",
+                            "value": 1076000
+                        },
+                        {
+                            "id": "C2",
+                            "parent": "C",
+                            "name": "Quebec",
+                            "value": 1667000
+                        },
+                        {
+                            "id": "A",
+                            "name": "Atlantic Canada",
+                            "value": 539064,
+                            "color": "#7fb3d5"
+                        },
+                        {
+                            "id": "A1",
+                            "parent": "A",
+                            "name": "New Brunswick",
+                            "value": 72908
+                        },
+                        {
+                            "id": "A2",
+                            "parent": "A",
+                            "name": "PEI",
+                            "value": 5660
+                        },
+                        {
+                            "id": "A3",
+                            "parent": "A",
+                            "name": "Nova Scotia",
+                            "value": 55283
+                        },
+                        {
+                            "id": "A4",
+                            "parent": "A",
+                            "name": "Newfoundland",
+                            "value": 405212
+                        }
+                    ]
+                }
+            ]
+        },
+        "styling_config": {
+            "tooltip": {
+                "useHTML": true,
+                "pointFormat": "<b>{point.name}</b>: {point.value:,.0f} km\u00b2 (+15% vs 1905 survey)"
+            },
+            "colorAxis": {
+                "minColor": "#d6eaf8",
+                "maxColor": "#2c3e50"
+            },
+            "responsive": {
+                "rules": [
+                    {
+                        "condition": {
+                            "maxWidth": 500
+                        },
+                        "chartOptions": {
+                            "title": {
+                                "style": {
+                                    "fontSize": "14px"
+                                }
+                            },
+                            "subtitle": {
+                                "style": {
+                                    "fontSize": "10px"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "visualization_explanation": "This treemap uses hierarchical data encoding with three structural levels: national total \u2192 regions \u2192 provinces/territories. Synthetic area values maintain real rank order while introducing 15% variance from official statistics (\u03bc=1.5M km\u00b2, \u03c3=1.2M). The squarified layout algorithm optimizes rectangle aspect ratios per Bruls et al.'s space-filling principles. Color progression from light blue (#d6eaf8) to dark navy (#2c3e50) encodes regional groupings while maintaining 3:1 contrast ratio for accessibility. Drill-down interactivity follows Shneiderman's mantra of overview-first with detail-on-demand. Tooltip percentage annotations provide temporal context through calculated variance from historical baselines."
+}

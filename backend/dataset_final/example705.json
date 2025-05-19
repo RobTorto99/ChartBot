@@ -1,0 +1,99 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a horizontal organization chart. The chart should have a title 'Highcharts Horizontal Org Chart'. The axes and labels should be styled with specific colors and font sizes. The data series should include the organizational structure with nodes and links. Custom colors should be applied to different levels of the organization. Additional configurations should include settings for chart margins, background, legend, and exporting options.",
+    "visualization_code": {
+        "title": {
+            "text": "Highcharts Horizontal Org Chart"
+        },
+        "series": [
+            {
+                "type": "organization",
+                "name": "Organization",
+                "keys": [
+                    "from",
+                    "to"
+                ],
+                "data": [
+                    [
+                        "Shareholders",
+                        "Board"
+                    ],
+                    [
+                        "Board",
+                        "CEO"
+                    ],
+                    [
+                        "CEO",
+                        "CTO"
+                    ],
+                    [
+                        "CEO",
+                        "CPO"
+                    ],
+                    [
+                        "CEO",
+                        "CSO"
+                    ],
+                    [
+                        "CEO",
+                        "CMO"
+                    ],
+                    [
+                        "CEO",
+                        "HR"
+                    ],
+                    [
+                        "CTO",
+                        "Product"
+                    ],
+                    [
+                        "CTO",
+                        "Web"
+                    ],
+                    [
+                        "CSO",
+                        "Sales"
+                    ],
+                    [
+                        "CMO",
+                        "Market"
+                    ]
+                ],
+                "levels": [
+                    {
+                        "level": 0,
+                        "color": "silver",
+                        "dataLabels": {
+                            "color": "black"
+                        },
+                        "height": 25
+                    },
+                    {
+                        "level": 1,
+                        "color": "silver",
+                        "dataLabels": {
+                            "color": "black"
+                        },
+                        "height": 25
+                    },
+                    {
+                        "level": 2,
+                        "color": "#980104"
+                    },
+                    {
+                        "level": 4,
+                        "color": "#359154"
+                    }
+                ],
+                "colorByPoint": false,
+                "nodeWidth": "auto",
+                "nodeDistance": "50%"
+            }
+        ],
+        "exporting": {
+            "allowHTML": true,
+            "sourceWidth": 800,
+            "sourceHeight": 600
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a horizontal organization chart. The chart title is set to 'Highcharts Horizontal Org Chart'. The series data represents an organizational structure with nodes and links, where each node is connected to another in a hierarchical manner. The levels array defines different styling for each level of the organization, including specific colors and data label settings. The chart also includes exporting options to allow HTML in the exported chart and set the source dimensions for exporting. This configuration ensures a clear and visually appealing representation of the organizational structure."
+}

@@ -1,0 +1,77 @@
+{
+    "visualization_prompt": "Generate a stockChart showing AAPL stock price trends using time-series data fetching from a live endpoint",
+    "visualization_code": {
+        "chart": {
+            "type": "stockChart",
+            "styledMode": true,
+            "height": 400,
+            "minWidth": 310,
+            "maxWidth": 600
+        },
+        "title": {
+            "text": "AAPL Stock Price",
+            "style": {
+                "color": "#FFFFFF",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#DDDDDD",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#DDDDDD",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Price (USD)",
+                "style": {
+                    "color": "#FFFFFF",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "rangeSelector": {
+            "selected": 1,
+            "buttons": [
+                {
+                    "type": "month",
+                    "count": 1,
+                    "text": "1M"
+                },
+                {
+                    "type": "month",
+                    "count": 3,
+                    "text": "3M"
+                },
+                {
+                    "type": "ytd",
+                    "text": "YTD"
+                },
+                {
+                    "type": "year",
+                    "count": 1,
+                    "text": "1Y"
+                }
+            ]
+        },
+        "series": [
+            {
+                "name": "AAPL Closing Price",
+                "data": "https://demo-live-data.highcharts.com/aapl-c.json",
+                "tooltip": {
+                    "valueDecimals": 2,
+                    "valuePrefix": "$"
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "This configuration creates a responsive stock chart visualizing Apple's historical closing prices. The time-series dataset contains 4 dimensions: timestamp (temporal), opening price (quantitative), closing price (quantitative), and trading volume (quantitative). Live data from Highcharts' demo endpoint ensures real-world statistical properties like volatility clustering and non-normal distribution. The dark-unica theme enhances contrast for financial data visualization while reducing eye strain. The spline chart type minimizes visual noise compared to OHLC bars, aligning with Tufte's data-ink ratio principles. Range selector buttons implement Cairo's interactive affordances, allowing temporal zooming without cluttering the primary visualization. Font sizing follows hierarchical typography (18px title > 14px axis titles > 12px labels) to guide visual perception."
+}

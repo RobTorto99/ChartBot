@@ -1,0 +1,112 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a lollipop chart with multiple series grouped together. The chart should have a title 'Multiple lollipop series with grouping', with the x-axis as a category type. The chart should not display a legend. The data series should include three series, each with data points for categories 'A', 'B', and 'C'. The chart should be styled with specific colors, font sizes, and other configurations as specified.",
+    "visualization_code": {
+        "chart": {
+            "backgroundColor": "#F9F9F9",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "legend": {
+            "enabled": false
+        },
+        "title": {
+            "text": "Multiple lollipop series with grouping",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "type": "category",
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "plotOptions": {
+            "lollipop": {
+                "grouping": true
+            }
+        },
+        "series": [
+            {
+                "data": [
+                    {
+                        "name": "A",
+                        "y": 167
+                    },
+                    {
+                        "name": "B",
+                        "y": 434
+                    },
+                    {
+                        "name": "C",
+                        "y": 254
+                    }
+                ],
+                "color": "#FF6384"
+            },
+            {
+                "data": [
+                    {
+                        "name": "A",
+                        "y": 321
+                    },
+                    {
+                        "name": "B",
+                        "y": 132
+                    },
+                    {
+                        "name": "C",
+                        "y": 354
+                    }
+                ],
+                "color": "#36A2EB"
+            },
+            {
+                "data": [
+                    {
+                        "name": "A",
+                        "y": 90
+                    },
+                    {
+                        "name": "B",
+                        "y": 256
+                    },
+                    {
+                        "name": "C",
+                        "y": 128
+                    }
+                ],
+                "color": "#FFCE56"
+            }
+        ],
+        "colors": [
+            "#FF6384",
+            "#36A2EB",
+            "#FFCE56"
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a lollipop chart with multiple series grouped together. The chart type is set to 'lollipop', and the title is 'Multiple lollipop series with grouping'. The x-axis is configured as a category type, and the y-axis has a title 'Values'. The chart does not display a legend. The data series include three series, each with data points for categories 'A', 'B', and 'C'. The series are styled with specific colors: '#FF6384', '#36A2EB', and '#FFCE56'. The chart's background color is set to '#F9F9F9', and the margins are adjusted to [50, 50, 100, 80]. The labels and titles for both axes are styled with a font size of 14px and a color of '#666666'. The chart title is styled with a font size of 18px and a color of '#333333'."
+}

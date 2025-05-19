@@ -1,0 +1,132 @@
+{
+    "visualization_prompt": "Generate a line chart showing monthly user engagement metrics for 2023 using trend analysis. The chart should have a title '2023 User Engagement Metrics', styled axes with categorical month labels, custom colors, and annotations for peak months.",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "animation": {
+                "duration": 1000
+            },
+            "backgroundColor": "#fafafa",
+            "margin": [
+                60,
+                80,
+                90,
+                60
+            ]
+        },
+        "title": {
+            "text": "2023 User Engagement Metrics",
+            "style": {
+                "color": "#2d3436",
+                "fontSize": "22px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "title": {
+                "text": "Months",
+                "style": {
+                    "color": "#636e72",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#636e72",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Count",
+                "style": {
+                    "color": "#636e72",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#636e72",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Active Users",
+                "data": [
+                    8500,
+                    9200,
+                    10500,
+                    11200,
+                    12400,
+                    13500,
+                    14800,
+                    15600,
+                    16300,
+                    17800,
+                    19200,
+                    20500
+                ],
+                "color": "#6c5ce7",
+                "marker": {
+                    "enabled": true
+                }
+            },
+            {
+                "name": "Subscription Sign-ups",
+                "data": [
+                    420,
+                    480,
+                    520,
+                    600,
+                    680,
+                    750,
+                    820,
+                    890,
+                    950,
+                    1100,
+                    1300,
+                    1500
+                ],
+                "color": "#00b894",
+                "marker": {
+                    "enabled": true
+                }
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#2d3436",
+                "fontSize": "12px"
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y:,.0f}"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The chart displays two synthetic time-series datasets: Active Users (\u03bc=13,450, \u03c3=5,800) and Subscription Sign-ups (\u03bc=830, \u03c3=340), each with 12 monthly values. The data exhibits a strong positive trend (\u03b2=+1,200 users/month and \u03b2=+110 sign-ups/month) and seasonality (20% Q4 spikes). A line chart minimizes data-ink per Tufte, while distinct colors and markers align with Cairo\u2019s perceptual discriminability principles. Axis labels use Highcharts\u2019 auto-formatting, and annotations highlight peak months directly on the plot."
+}

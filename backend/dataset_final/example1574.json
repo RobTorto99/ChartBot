@@ -1,0 +1,116 @@
+{
+    "visualization_prompt": "Generate a pie chart showing proportional distribution across technology sectors using pattern fills with rotational transforms for texture differentiation",
+    "visualization_code": {
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#f7f9fc"
+        },
+        "title": {
+            "text": "Technology Market Share Distribution",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "18px"
+            }
+        },
+        "plotOptions": {
+            "pie": {
+                "borderWidth": 1,
+                "borderColor": "#2c3e50",
+                "dataLabels": {
+                    "distance": 15,
+                    "style": {
+                        "fontSize": "12px"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Market Share",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Cloud Services",
+                        "y": 28,
+                        "color": {
+                            "pattern": {
+                                "path": "M 0 0 L 5 5 L 0 10",
+                                "width": 8,
+                                "height": 8,
+                                "color": "#3498db",
+                                "patternTransform": "rotate(45)"
+                            }
+                        }
+                    },
+                    {
+                        "name": "AI Hardware",
+                        "y": 22,
+                        "color": {
+                            "pattern": {
+                                "path": "M 0 0 L 10 10 M 9 -1 L 11 1 M -1 9 L 1 11",
+                                "width": 12,
+                                "color": "#e74c3c",
+                                "patternTransform": "scale(0.8)"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Cybersecurity",
+                        "y": 18,
+                        "color": {
+                            "pattern": {
+                                "path": "circle",
+                                "width": 6,
+                                "height": 6,
+                                "color": "#2ecc71"
+                            }
+                        }
+                    },
+                    {
+                        "name": "IoT Devices",
+                        "y": 15,
+                        "color": {
+                            "pattern": {
+                                "path": "M 0 0 L 5 10 L 10 0",
+                                "width": 10,
+                                "color": "#9b59b6",
+                                "patternTransform": "skewX(20)"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Quantum Computing",
+                        "y": 9,
+                        "color": {
+                            "pattern": {
+                                "path": "M 0 0 L 10 10",
+                                "width": 5,
+                                "color": "#f1c40f",
+                                "patternTransform": "rotate(30)"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Edge Computing",
+                        "y": 8,
+                        "color": {
+                            "pattern": {
+                                "path": "M 0 0 L 0 10 M 5 0 L 5 10",
+                                "width": 5,
+                                "color": "#e67e22"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "itemStyle": {
+                "color": "#34495e"
+            },
+            "align": "right",
+            "verticalAlign": "middle"
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate categorical distribution across six technology sectors. Synthetic market share percentages (summing to 100%) were generated using a Dirichlet distribution (\u03b1=1) to simulate proportional data. Values maintain domain consistency with current tech industry trends (\u03bc=16.67%, \u03c3=7.89%). The pie chart was selected for part-to-whole relationship visualization, with pattern fills enhancing accessibility per Cairo's principles of redundant coding. Tufte's data-ink ratio is maintained through minimized chart junk while using texture variations to enable pattern separation. Rotational pattern transforms create unique textures without color dependence, supporting color vision deficiency interpretation. Proportional accuracy is reinforced with direct percentage labels and legend positioning optimized for spatial efficiency."
+}

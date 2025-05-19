@@ -1,0 +1,142 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly sales performance with annotation callouts using shape markers and trend connectors",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#f8f9fa",
+            "marginTop": 40
+        },
+        "title": {
+            "text": "2023 Sales Performance Analysis",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales (USD thousands)",
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                },
+                "format": "{value}K"
+            },
+            "max": 300
+        },
+        "series": [
+            {
+                "name": "Monthly Sales",
+                "data": [
+                    85,
+                    112,
+                    98,
+                    135,
+                    148,
+                    167,
+                    182,
+                    175,
+                    190,
+                    208,
+                    235,
+                    278
+                ],
+                "color": "#3498db",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y}K",
+                    "color": "#2c3e50"
+                }
+            }
+        ],
+        "annotations": [
+            {
+                "shapes": [
+                    {
+                        "point": "0",
+                        "type": "circle",
+                        "r": 12,
+                        "fill": "rgba(46, 204, 113, 0.2)",
+                        "stroke": "#2ecc71",
+                        "strokeWidth": 2
+                    },
+                    {
+                        "point": "3",
+                        "type": "rect",
+                        "width": 24,
+                        "height": 24,
+                        "x": -12,
+                        "y": -30,
+                        "fill": "rgba(241, 196, 15, 0.2)",
+                        "stroke": "#f1c40f"
+                    },
+                    {
+                        "type": "path",
+                        "stroke": "#e74c3c",
+                        "strokeWidth": 2,
+                        "d": [
+                            "M",
+                            "shapes/0",
+                            "L",
+                            "shapes/1",
+                            "L",
+                            8,
+                            240
+                        ],
+                        "markerEnd": "arrow"
+                    }
+                ],
+                "labels": [
+                    {
+                        "point": {
+                            "x": 8,
+                            "y": 240
+                        },
+                        "text": "Q4 Surge<br><span style=\"color: #e74c3c\">+23%</span> vs Q3",
+                        "style": {
+                            "color": "#2c3e50",
+                            "fontSize": "12px"
+                        }
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#7f8c8d"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate time series with 12 monthly observations of sales figures. Synthetic data follows a positive trend (\u03bc=166.25, \u03c3=58.9) with Q4 seasonality, maintaining domain-appropriate ranges for business metrics. The column chart maximizes data-ink ratio by eliminating gridlines while using contrasting colors for annotations. Cairo's principles are applied through positional encoding (height for magnitude) and color saturation for emphasis. Annotations use Tufte's minimal ink approach with semi-transparent fills, while the path annotation creates visual narrative flow. Statistical anchors include 15.8% monthly growth rate and Q4 contributing 35.7% of annual sales."
+}

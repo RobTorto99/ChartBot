@@ -1,0 +1,103 @@
+{
+    "visualization_prompt": "Generate a pie chart showing browser market share distribution using proportional categorical data",
+    "visualization_code": {
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#ffffff",
+            "plotBackgroundColor": null,
+            "plotBorderWidth": null,
+            "plotShadow": false
+        },
+        "title": {
+            "text": "Browser market shares in January, 2018",
+            "style": {
+                "fontWeight": "bold",
+                "fontSize": "18px"
+            }
+        },
+        "tooltip": {
+            "pointFormat": "{series.name}: <b>{point.percentage:.1f}%</b>"
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<b>{point.name}</b>: {point.percentage:.1f} %",
+                    "style": {
+                        "fontWeight": "bold",
+                        "fontSize": "14px"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Brands",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Chrome",
+                        "y": 61.41,
+                        "sliced": true,
+                        "selected": true
+                    },
+                    {
+                        "name": "Internet Explorer",
+                        "y": 11.84
+                    },
+                    {
+                        "name": "Firefox",
+                        "y": 10.85
+                    },
+                    {
+                        "name": "Edge",
+                        "y": 4.67
+                    },
+                    {
+                        "name": "Safari",
+                        "y": 4.18
+                    },
+                    {
+                        "name": "Sogou Explorer",
+                        "y": 1.64
+                    },
+                    {
+                        "name": "Opera",
+                        "y": 1.6
+                    },
+                    {
+                        "name": "QQ",
+                        "y": 1.2
+                    },
+                    {
+                        "name": "Other",
+                        "y": 2.61
+                    }
+                ],
+                "colors": [
+                    "#4CAF50",
+                    "#FF9800",
+                    "#2196F3",
+                    "#F44336",
+                    "#9C27B0",
+                    "#FFEB3B",
+                    "#795548",
+                    "#607D8B",
+                    "#E91E63"
+                ]
+            }
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "fontWeight": "bold",
+                "fontSize": "12px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a single categorical dimension (browser names) with proportional quantitative values (market share percentages). Synthetic data follows market share distribution patterns from historical records, maintaining total sum at 100% with Chrome dominating (61.41%) followed by legacy browsers. The pie chart maximizes data-ink ratio by removing unnecessary borders and shadows while maintaining perceptual integrity through distinct color coding. Proportional slices follow Cairo's magnitude principle with area corresponding to percentage values. Data labels provide direct value reading while interactive selection enables focused analysis. Custom colors enhance categorical distinction while bold typography ensures legibility across all chart elements."
+}

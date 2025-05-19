@@ -1,0 +1,134 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the title 'Percentage legend width'. The chart should have multiple series with specific data points. The legend should be aligned to the right, vertically centered, and take up 40% of the chart width. The chart should also have a border around the legend. The axes and labels should be styled with specific colors and font sizes.",
+    "visualization_code": {
+        "chart": {
+            "type": "column"
+        },
+        "title": {
+            "text": "Percentage legend width",
+            "style": {
+                "color": "#333",
+                "fontSize": "18px"
+            }
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "width": "40%",
+            "borderWidth": 1,
+            "itemStyle": {
+                "color": "#555",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#777",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#777",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "First",
+                "data": [
+                    6,
+                    4,
+                    2
+                ]
+            },
+            {
+                "name": "Second",
+                "data": [
+                    7,
+                    3,
+                    2
+                ]
+            },
+            {
+                "name": "Third",
+                "data": [
+                    9,
+                    4,
+                    8
+                ]
+            },
+            {
+                "name": "Fourth",
+                "data": [
+                    1,
+                    2,
+                    6
+                ]
+            },
+            {
+                "name": "Fifth",
+                "data": [
+                    4,
+                    6,
+                    4
+                ]
+            },
+            {
+                "name": "Sixth",
+                "data": [
+                    1,
+                    2,
+                    7
+                ]
+            },
+            {
+                "name": "Seventh",
+                "data": [
+                    4,
+                    2,
+                    5
+                ]
+            },
+            {
+                "name": "Eighth",
+                "data": [
+                    8,
+                    3,
+                    2
+                ]
+            },
+            {
+                "name": "Ninth",
+                "data": [
+                    4,
+                    5,
+                    6
+                ]
+            }
+        ],
+        "colors": [
+            "#007BFF",
+            "#28A745",
+            "#DC3545",
+            "#FFC107",
+            "#17A2B8",
+            "#6C757D",
+            "#343A40",
+            "#0056b3",
+            "#218838"
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart with a title 'Percentage legend width'. The chart includes multiple series, each with specific data points. The legend is styled to be aligned to the right, vertically centered, and occupies 40% of the chart width, with a border around it. The axes and labels are styled with specific colors and font sizes to enhance readability. The series data is provided in the format required by Highcharts, and custom colors are assigned to each series to differentiate them visually."
+}

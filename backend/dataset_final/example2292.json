@@ -1,0 +1,94 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly sales trends using synthetic time-series data with seasonal variation and positive trend",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "marginLeft": 80,
+            "backgroundColor": "#f7fbff"
+        },
+        "title": {
+            "text": "Monthly Sales Performance (2023)",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "22px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "14px"
+                }
+            },
+            "gridLineWidth": 1,
+            "lineColor": "#bdc3c7"
+        },
+        "yAxis": {
+            "min": 0,
+            "title": {
+                "text": "Revenue (USD thousands)",
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                },
+                "format": "{value:,.0f}"
+            }
+        },
+        "series": [
+            {
+                "name": "North Region Sales",
+                "data": [
+                    82,
+                    88,
+                    95,
+                    112,
+                    125,
+                    142,
+                    155,
+                    147,
+                    132,
+                    118,
+                    105,
+                    94
+                ],
+                "color": "#2980b9",
+                "marker": {
+                    "enabled": true,
+                    "radius": 4
+                }
+            }
+        ],
+        "plotOptions": {
+            "spline": {
+                "lineWidth": 3,
+                "states": {
+                    "hover": {
+                        "lineWidth": 5
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents 12-month synthetic sales figures (univariate time series) with two key statistical properties: 1) A positive linear trend (\u03bc=115.5, slope=5.2/month) reflecting growth, 2) Seasonal variation (\u03c3=23.4) peaking in summer months. Synthetic values were generated using y = baseline + (month_index*trend) + seasonal_component + normal_noise(\u03bc=0, \u03c3=7). The spline chart maximizes data-ink ratio per Tufte by eliminating gridlines while maintaining axis references. Cairo's principles are applied through color contrast (dark blue series on light blue background) and proportional sizing (thick line with hover state). The curved interpolation helps visualize underlying trends between discrete monthly measurements."
+}

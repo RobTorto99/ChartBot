@@ -1,0 +1,107 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the title 'Stack labels with no overlap'. The chart should have two data series with specific data points. The y-axis should have stack labels enabled. The chart should have a width of 400 pixels and use the 'normal' stacking mode for columns. Additionally, the chart should have no point padding and group padding.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "width": 400
+        },
+        "title": {
+            "text": "Stack labels with no overlap"
+        },
+        "yAxis": {
+            "stackLabels": {
+                "enabled": true
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "normal",
+                "pointPadding": 0,
+                "groupPadding": 0
+            }
+        },
+        "series": [
+            {
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4,
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4,
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ]
+            },
+            {
+                "data": [
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4,
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4,
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a column chart with specific settings. The chart type is set to 'column', and it has a fixed width of 400 pixels. The title of the chart is 'Stack labels with no overlap'. The y-axis is configured to display stack labels, which are enabled but do not allow overlap. The plot options for the column series include 'normal' stacking, which means that the columns will be stacked on top of each other. Additionally, the point padding and group padding are set to 0, ensuring that the columns are tightly grouped. The data series include two sets of data points, each representing a different series on the chart."
+}

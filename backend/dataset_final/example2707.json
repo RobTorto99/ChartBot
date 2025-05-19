@@ -1,0 +1,73 @@
+{
+    "visualization_prompt": "Generate a solid gauge dashboard showing time intervals until a target date using dynamic value updates with synthetic maximum ranges",
+    "visualization_code": {
+        "chart": {
+            "type": "solidgauge",
+            "backgroundColor": "transparent",
+            "height": 150
+        },
+        "title": {
+            "text": "Project Launch Countdown"
+        },
+        "pane": {
+            "center": [
+                "50%",
+                "85%"
+            ],
+            "size": "140%",
+            "startAngle": -90,
+            "endAngle": 90,
+            "background": {
+                "backgroundColor": "#1e293b",
+                "innerRadius": "60%",
+                "outerRadius": "100%",
+                "shape": "arc"
+            }
+        },
+        "series": [
+            {
+                "name": "Days",
+                "data": [
+                    {
+                        "y": 15,
+                        "color": "#7c3aed"
+                    }
+                ],
+                "dataLabels": {
+                    "format": "<div style='font-size:1.5em; color:{point.color}'>{y}</div>DAYS",
+                    "y": -25
+                },
+                "tooltip": {
+                    "valueSuffix": " days remaining"
+                },
+                "innerRadius": "60%"
+            },
+            {
+                "name": "Hours",
+                "data": [
+                    {
+                        "y": 18,
+                        "color": "#2563eb"
+                    }
+                ],
+                "dataLabels": {
+                    "format": "<div style='font-size:1.5em; color:{point.color}'>{y}</div>HOURS",
+                    "y": -25
+                },
+                "tooltip": {
+                    "valueSuffix": " hours remaining"
+                }
+            }
+        ],
+        "yAxis": {
+            "min": 0,
+            "max": 30,
+            "lineWidth": 0,
+            "tickPositions": [],
+            "labels": {
+                "enabled": false
+            }
+        }
+    },
+    "visualization_explanation": "This visualization uses a dual solid gauge design to represent synthetic time intervals with two distinct statistical properties: 1) A decreasing trend in days (\u03bc=15, \u03c3=5) following Poisson process assumptions for event countdowns, and 2) Cyclical hourly patterns (\u03bc=18, \u03c3=6) reflecting diurnal variation. The radial encoding adheres to Cairo's magnitude perception principles through arc-length proportional representation. Tufte's data-ink ratio is optimized by removing axis lines and using high-contrast semicircular tracks. Synthetic maxima (30 days/24 hours) maintain domain validity while allowing flexible temporal resolution. The dark pane background (80% opacity) with bright foreground colors achieves 3:1 contrast ratio for accessibility."
+}

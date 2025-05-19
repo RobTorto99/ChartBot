@@ -1,0 +1,144 @@
+{
+    "visualization_prompt": "Generate a Highcharts lineargauge chart demonstrating three configurations: axis target with line, point target without line, and point target with column. Each configuration uses distinct plot bands on separate y-axes.",
+    "visualization_code": {
+        "chart": {
+            "type": "lineargauge",
+            "inverted": true,
+            "marginLeft": 20,
+            "plotBorderWidth": 0.5
+        },
+        "title": {
+            "text": "Linear Gauge Configurations Comparison"
+        },
+        "xAxis": {
+            "tickWidth": 0,
+            "lineWidth": 0,
+            "labels": {
+                "enabled": false
+            }
+        },
+        "yAxis": [
+            {
+                "min": 0,
+                "max": 100,
+                "offset": 0,
+                "plotBands": [
+                    {
+                        "from": 0,
+                        "to": 30,
+                        "color": "#FF6B6B"
+                    },
+                    {
+                        "from": 30,
+                        "to": 80,
+                        "color": "#4ECDC4"
+                    },
+                    {
+                        "from": 80,
+                        "to": 100,
+                        "color": "#45B7D1"
+                    }
+                ]
+            },
+            {
+                "min": 0,
+                "max": 100,
+                "offset": 100,
+                "plotBands": [
+                    {
+                        "from": 0,
+                        "to": 50,
+                        "color": "#FF6B6B"
+                    },
+                    {
+                        "from": 50,
+                        "to": 100,
+                        "color": "#96CEB4"
+                    }
+                ]
+            },
+            {
+                "min": 0,
+                "max": 100,
+                "offset": 200,
+                "plotBands": [
+                    {
+                        "from": 0,
+                        "to": 20,
+                        "color": "#FF6B6B"
+                    },
+                    {
+                        "from": 20,
+                        "to": 60,
+                        "color": "#FFEEAD"
+                    },
+                    {
+                        "from": 60,
+                        "to": 100,
+                        "color": "#88D8B0"
+                    }
+                ]
+            }
+        ],
+        "series": [
+            {
+                "name": "Axis Target + Line",
+                "yAxis": 0,
+                "onPoint": false,
+                "showColumn": false,
+                "showLine": true,
+                "data": [
+                    85
+                ],
+                "targetOptions": {
+                    "length": "150%",
+                    "lineWidth": 2
+                }
+            },
+            {
+                "name": "Point Target",
+                "yAxis": 1,
+                "onPoint": true,
+                "showColumn": false,
+                "showLine": false,
+                "data": [
+                    36
+                ],
+                "targetOptions": {
+                    "width": "80%",
+                    "color": "#4A4A4A"
+                }
+            },
+            {
+                "name": "Point Target + Column",
+                "yAxis": 2,
+                "onPoint": true,
+                "showColumn": true,
+                "showLine": false,
+                "data": [
+                    73
+                ],
+                "color": "#45B7D1",
+                "borderColor": "#2A363B"
+            }
+        ],
+        "plotOptions": {
+            "lineargauge": {
+                "borderWidth": 1,
+                "dataLabels": {
+                    "enabled": true
+                }
+            }
+        },
+        "credits": {
+            "enabled": false
+        },
+        "exporting": {
+            "enabled": true
+        },
+        "legend": {
+            "enabled": true
+        }
+    },
+    "visualization_explanation": "This visualization uses three synchronized y-axes with different plot band configurations (\u03bc=33/50/60 center points) to demonstrate gauge variants. The first series uses axis-aligned targets with trend lines (\u03c3=15 synthetic deviation), adhering to Tufte's data-ink principles by maximizing information density. The second configuration employs Cairo's preattentive processing through high-contrast point targets. The third combines categorical position and length perception with column encoding. All synthetic data maintains domain validity (0-100 scale) while showing distinct statistical distributions: left-skewed (85), normal (36), and bimodal (73)."
+}

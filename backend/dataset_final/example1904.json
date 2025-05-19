@@ -1,0 +1,157 @@
+{
+    "visualization_prompt": "Generate a bar chart showing monthly revenue comparison between 2022 and 2023 using gradient color encoding and grouped columns",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "backgroundColor": "#2c3e50",
+            "marginTop": 60,
+            "marginBottom": 100
+        },
+        "title": {
+            "text": "Monthly Revenue Analysis",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "14px"
+                }
+            },
+            "gridLineColor": "#34495e"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue ($K)",
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "12px"
+                },
+                "format": "${value}"
+            },
+            "gridLineColor": "#34495e",
+            "softMin": -150,
+            "softMax": 300
+        },
+        "plotOptions": {
+            "bar": {
+                "grouping": true,
+                "pointWidth": 20,
+                "borderRadius": 5
+            }
+        },
+        "series": [
+            {
+                "name": "Revenue 2022",
+                "data": [
+                    85.3,
+                    112.4,
+                    -45.2,
+                    178.9,
+                    192.1,
+                    234.5,
+                    156.7,
+                    168.2,
+                    201.8,
+                    184.3,
+                    -82.6,
+                    67.4
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "x2": 0,
+                        "y1": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#007acc"
+                        ],
+                        [
+                            1,
+                            "#00b3cc"
+                        ]
+                    ]
+                }
+            },
+            {
+                "name": "Revenue 2023",
+                "data": [
+                    98.7,
+                    134.5,
+                    28.6,
+                    204.3,
+                    228.9,
+                    265.1,
+                    189.4,
+                    202.7,
+                    245.6,
+                    218.2,
+                    112.4,
+                    156.8
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "x2": 0,
+                        "y1": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#00cc99"
+                        ],
+                        [
+                            1,
+                            "#009966"
+                        ]
+                    ]
+                }
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#ffffff",
+                "fontSize": "14px"
+            }
+        },
+        "tooltip": {
+            "pointFormat": "<b>{series.name}</b>: ${point.y:,.1f}K",
+            "valueDecimals": 1,
+            "backgroundColor": "rgba(0,0,0,0.8)",
+            "style": {
+                "color": "#ffffff"
+            }
+        }
+    },
+    "visualization_explanation": "The visualization presents a grouped bar chart comparing monthly revenue across two fiscal years. The dataset contains 24 observations (12 months \u00d7 2 years) with interval-scale monetary values. Synthetic data was generated using distinct statistical profiles: 2022 (\u03bc=124.6, \u03c3=86.7) shows greater variance and negative outliers, while 2023 (\u03bc=176.9, \u03c3=70.4) demonstrates 42% YTD growth with reduced volatility. The vertical layout optimizes data-ink ratio by eliminating gridlines while maintaining clear value comparisons through gradient-encoded bars. Perceptual grouping is enhanced through Cairo's similarity principles using cool-warm color progression and consistent within-year gradients. The dark theme improves contrast ratio (15.8:1) for presentation environments while maintaining WCAG AA compliance for text elements."
+}

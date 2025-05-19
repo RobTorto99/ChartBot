@@ -1,0 +1,118 @@
+{
+    "visualization_prompt": "Generate a column chart showing atmospheric layer distribution using percentage stacking",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Earth's Atmosphere",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://www.nasa.gov/mission_pages/sunearth/science/atmosphere-layers2.html' style='color: #3498db'>nasa.gov</a>",
+            "useHTML": true
+        },
+        "xAxis": {
+            "categories": [
+                "Atmospheric Layers"
+            ],
+            "visible": false,
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "visible": false,
+            "labels": {
+                "enabled": false
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "percent",
+                "borderColor": "#2c3e50",
+                "borderWidth": 2,
+                "color": "#ffffff",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{series.name}: {point.series.userOptions.custom.height}",
+                    "color": "#2c3e50",
+                    "style": {
+                        "textOutline": "none",
+                        "fontSize": "12px"
+                    }
+                }
+            }
+        },
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "{point.series.userOptions.custom.info}",
+            "useHTML": true
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "name": "Exosphere",
+                "data": [
+                    1
+                ],
+                "custom": {
+                    "height": "10,000 km",
+                    "info": "Upper atmospheric boundary<br>Contains sparse particles<br>Merges with solar wind"
+                }
+            },
+            {
+                "name": "Thermosphere",
+                "data": [
+                    1
+                ],
+                "custom": {
+                    "height": "600 km",
+                    "info": "Absorbs X-rays/UV radiation<br>Temperatures reach 2,500\u00b0C<br>International Space Station orbit"
+                }
+            },
+            {
+                "name": "Mesosphere",
+                "data": [
+                    1
+                ],
+                "custom": {
+                    "height": "85 km",
+                    "info": "Meteor burning layer<br>Coldest atmospheric layer<br>Temperature decreases with altitude"
+                }
+            },
+            {
+                "name": "Stratosphere",
+                "data": [
+                    1
+                ],
+                "custom": {
+                    "height": "50 km",
+                    "info": "Contains ozone layer<br>Temperature increases with altitude<br>Jet stream location"
+                }
+            },
+            {
+                "name": "Troposphere",
+                "data": [
+                    1
+                ],
+                "custom": {
+                    "height": "8-14.5 km",
+                    "info": "Weather formation layer<br>Contains 75-80% atmospheric mass<br>Temperature decreases with altitude"
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The visualization uses a 100% stacked column chart to emphasize relative layer positions rather than absolute heights. Five atmospheric layers are represented with equal data values (1 unit each) to create proportional segments. Synthetic height ranges follow known atmospheric science measurements (\u03bc=1, uniform distribution). The monochromatic design maximizes data-ink ratio while border contrast maintains perceptual separation. Tooltip content follows Cairo's principle of informative layers by providing essential characteristics for each atmospheric stratum. Hidden axes focus attention on the labeled segments and their informational hierarchy."
+}

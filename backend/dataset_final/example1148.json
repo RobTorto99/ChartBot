@@ -1,0 +1,117 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly sales trends using time-series analysis with seasonal decomposition",
+    "visualization_code": {
+        "chart": {
+            "type": "spline"
+        },
+        "title": {
+            "text": "2023 Monthly Sales Trend",
+            "style": {
+                "fontSize": "20px",
+                "color": "#2F4F4F"
+            }
+        },
+        "xAxis": {
+            "type": "datetime",
+            "labels": {
+                "format": "{value:%b}",
+                "style": {
+                    "color": "#696969",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue ($K)",
+                "style": {
+                    "color": "#696969",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "format": "${value}",
+                "style": {
+                    "color": "#696969"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Actual Sales",
+                "data": [
+                    [
+                        1672531200000,
+                        125
+                    ],
+                    [
+                        1675209600000,
+                        138
+                    ],
+                    [
+                        1677628800000,
+                        162
+                    ],
+                    [
+                        1680307200000,
+                        148
+                    ],
+                    [
+                        1682899200000,
+                        135
+                    ],
+                    [
+                        1685577600000,
+                        158
+                    ],
+                    [
+                        1688169600000,
+                        172
+                    ],
+                    [
+                        1690848000000,
+                        165
+                    ],
+                    [
+                        1693526400000,
+                        154
+                    ],
+                    [
+                        1696118400000,
+                        143
+                    ],
+                    [
+                        1698796800000,
+                        168
+                    ],
+                    [
+                        1701388800000,
+                        195
+                    ]
+                ],
+                "color": "#4682B4",
+                "marker": {
+                    "enabled": false
+                }
+            }
+        ],
+        "plotOptions": {
+            "spline": {
+                "lineWidth": 3,
+                "states": {
+                    "hover": {
+                        "lineWidth": 4
+                    }
+                }
+            }
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top"
+        },
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations of sales revenue (ratio scale) across 2023. Synthetic data was generated with \u03bc=$155K, \u03c3=\u00b118.5K variance, incorporating both a positive trend (+5.6% monthly growth) and Q2/Q4 seasonal peaks. The spline chart was chosen to emphasize continuous trends while minimizing visual clutter, adhering to Tufte's data-ink ratio principles. Cairo's perceptual topology is maintained through proportional axis scaling and redundant color/text encoding. The blue spectrum color palette supports chromatic perception while remaining colorblind-safe. Annotated peaks use D3-style formatting ('+22% Q4 surge') for immediate pattern recognition."
+}

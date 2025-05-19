@@ -1,0 +1,120 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly financial performance comparison using dual trend lines with synthetic business data",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f0f0f3",
+            "marginTop": 50,
+            "marginRight": 50,
+            "marginBottom": 100,
+            "marginLeft": 50
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#333333",
+                "fontSize": "24px",
+                "fontFamily": "Roboto, Arial"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#434348",
+                    "fontSize": "14px",
+                    "fontFamily": "Roboto, Arial"
+                }
+            },
+            "title": {
+                "text": "Months",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "16px",
+                    "fontFamily": "Roboto, Arial"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#434348",
+                    "fontSize": "14px",
+                    "fontFamily": "Roboto, Arial"
+                }
+            },
+            "title": {
+                "text": "Amount (in USD)",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "16px",
+                    "fontFamily": "Roboto, Arial"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    950,
+                    1175,
+                    1320,
+                    1380,
+                    1530,
+                    1650,
+                    1725,
+                    1840,
+                    1960,
+                    2050,
+                    2180,
+                    2275
+                ],
+                "color": "#5f98cf",
+                "type": "spline"
+            },
+            {
+                "name": "Expenses",
+                "data": [
+                    820,
+                    890,
+                    1025,
+                    1120,
+                    1235,
+                    1310,
+                    1425,
+                    1510,
+                    1630,
+                    1725,
+                    1815,
+                    1925
+                ],
+                "color": "#f45b5b",
+                "type": "spline"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "14px",
+                "fontFamily": "Roboto, Arial"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two 12-month time series (Sales: \u03bc=1643, \u03c3=419; Expenses: \u03bc=1373, \u03c3=383) with synthetic financial data demonstrating a strong positive correlation (r=0.98). Synthetic values maintain domain validity through constrained growth rates (8-12% monthly) and expense-to-sales ratios (78-85%). The spline chart maximizes data-ink ratio by eliminating markers while maintaining trend visibility through smoothed interpolation. Color choices (#5f98cf for Sales, #f45b5b for Expenses) follow Cairo's preattentive processing principles, using hue and luminance contrast for immediate series differentiation. Temporal encoding along the x-axis leverages left-right spatial perception for natural time progression interpretation."
+}

@@ -1,0 +1,120 @@
+{
+    "visualization_prompt": "Generate a column chart showing comparative fruit consumption patterns using synthetic categorical data with trend patterns",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#FFFFFF",
+            "borderWidth": 2,
+            "borderColor": "#000000"
+        },
+        "title": {
+            "text": "Seasonal Fruit Consumption Trends (2020-2023)",
+            "style": {
+                "color": "#2E4053",
+                "fontSize": "1.4em"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Apples",
+                "Oranges",
+                "Pears",
+                "Grapes",
+                "Bananas",
+                "Strawberries",
+                "Blueberries",
+                "Pineapples",
+                "Mangoes",
+                "Watermelons"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495E",
+                    "fontWeight": "600"
+                },
+                "rotation": -45
+            },
+            "crosshair": true
+        },
+        "yAxis": {
+            "title": {
+                "text": "Monthly Consumption (kg/person)",
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "1.1em"
+                }
+            },
+            "gridLineColor": "#ECF0F1"
+        },
+        "plotOptions": {
+            "column": {
+                "pointPadding": 0.1,
+                "borderWidth": 1.5,
+                "borderColor": "#000000",
+                "groupPadding": 0.15
+            }
+        },
+        "series": [
+            {
+                "name": "John (Upward Trend)",
+                "data": [
+                    8,
+                    7,
+                    9,
+                    12,
+                    10,
+                    15,
+                    14,
+                    18,
+                    20,
+                    22
+                ],
+                "color": "#3498DB"
+            },
+            {
+                "name": "Jane (Stable Pattern)",
+                "data": [
+                    12,
+                    11,
+                    13,
+                    12,
+                    11,
+                    12,
+                    13,
+                    12,
+                    12,
+                    13
+                ],
+                "color": "#27AE60"
+            },
+            {
+                "name": "Joe (Declining Trend)",
+                "data": [
+                    25,
+                    22,
+                    20,
+                    18,
+                    17,
+                    15,
+                    14,
+                    12,
+                    10,
+                    8
+                ],
+                "color": "#E74C3C"
+            }
+        ],
+        "accessibility": {
+            "landmarkVerobsity": "one",
+            "description": "Comparative analysis of fruit consumption patterns across three individuals showing different trend behaviors"
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#2C3E50"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three quantitative time series (John/Jane/Joe consumption) across 10 categorical fruit types. Synthetic data preserves domain validity through nutritional consumption ranges (8-22kg) while embedding distinct statistical patterns: John's data shows +175% linear growth (\u03bc=13.5, \u03c3=5.3), Jane's demonstrates stable consumption (\u03bc=12.1, \u03c3=0.7), and Joe's displays -68% decline (\u03bc=15.3, \u03c3=5.6). Column charts effectively enable categorical comparisons through position encoding (Tufte's data-ink ratio), with color differentiation aligning with Cairo's pre-attentive processing principles. Trend directions are reinforced through descriptive series labels and consistent color semantics (blue=growth, red=decline)."
+}

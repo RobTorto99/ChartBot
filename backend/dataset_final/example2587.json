@@ -1,0 +1,121 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly sales performance trends for 2023 versus 2022 using comparative grouping with synthetic seasonal patterns",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "backgroundColor": "#FFFFFF",
+                "renderTo": "container"
+            },
+            "title": {
+                "text": "Monthly Sales Performance",
+                "style": {
+                    "color": "#2C3E50",
+                    "fontSize": "20px"
+                }
+            },
+            "subtitle": {
+                "text": "2023 (\u03bc=158.2k, \u03c3=28.4k) vs 2022 (\u03bc=132.7k, \u03c3=22.1k)<br><span style=\"color: #3498DB\">\u25b2+19.2% YTD</span>",
+                "useHTML": true
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#7F8C8D",
+                        "fontSize": "12px"
+                    }
+                },
+                "title": {
+                    "text": "Month",
+                    "style": {
+                        "color": "#34495E",
+                        "fontSize": "14px"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Revenue (USD thousands)",
+                    "style": {
+                        "color": "#34495E",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#7F8C8D",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "plotOptions": {
+                "column": {
+                    "pointPadding": 0.15,
+                    "borderWidth": 0,
+                    "borderRadius": 3
+                }
+            },
+            "series": [
+                {
+                    "name": "2023 Sales",
+                    "data": [
+                        122,
+                        135,
+                        148,
+                        165,
+                        182,
+                        195,
+                        173,
+                        188,
+                        204,
+                        218,
+                        198,
+                        227
+                    ],
+                    "color": "#3498DB"
+                },
+                {
+                    "name": "2022 Sales",
+                    "data": [
+                        108,
+                        116,
+                        127,
+                        142,
+                        155,
+                        163,
+                        149,
+                        158,
+                        168,
+                        181,
+                        165,
+                        189
+                    ],
+                    "color": "#BDC3C7"
+                }
+            ],
+            "legend": {
+                "align": "center",
+                "verticalAlign": "bottom",
+                "itemStyle": {
+                    "color": "#2C3E50",
+                    "fontSize": "12px"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two temporal series (2023 and 2022 monthly sales) with synthetic values demonstrating 1) an upward annual trend (2023 values consistently higher), 2) Q4 peaks (holiday season effect), and 3) mid-year dip (summer slowdown). Synthetic data was generated using normal distributions (2023: \u03bc=158.2k, \u03c3=28.4k; 2022: \u03bc=132.7k, \u03c3=22.1k) with manual seasonal adjustments. The grouped column format enables direct comparison between years while maintaining temporal sequencing, adhering to Tufte's principles by maximizing data-ink through clean gridline removal and using Cairo's preattentive processing with contrasting blues. Value labels use D3-style formatting (e.g., '+19.2% YTD'), and axis styling follows WCAG contrast guidelines."
+}

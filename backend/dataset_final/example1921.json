@@ -1,0 +1,79 @@
+{
+    "visualization_prompt": "Generate a solid gauge chart showing value overflow beyond axis limits using gradient color encoding",
+    "visualization_code": {
+        "chart": {
+            "type": "solidgauge",
+            "backgroundColor": "#222",
+            "marginBottom": 30
+        },
+        "title": {
+            "text": "Solidgauge data overflow past full circle (#2997)",
+            "style": {
+                "color": "#FFFFFF",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "pane": {
+            "startAngle": -90,
+            "endAngle": 90,
+            "background": {
+                "shape": "arc",
+                "innerRadius": "60%",
+                "outerRadius": "100%",
+                "borderWidth": 0
+            }
+        },
+        "yAxis": {
+            "min": -5,
+            "max": 5,
+            "lineWidth": 0,
+            "labels": {
+                "style": {
+                    "color": "#FFFFFF",
+                    "fontSize": "14px"
+                },
+                "format": "{value}",
+                "distance": -20
+            },
+            "tickInterval": 2.5
+        },
+        "series": [
+            {
+                "name": "Pressure Differential",
+                "data": [
+                    38
+                ],
+                "dataLabels": {
+                    "format": "<div style=\"text-align:center\">{y:.2f}<br><span style=\"font-size:12px\">kPa</span></div>",
+                    "borderWidth": 0,
+                    "color": "#FFFFFF",
+                    "style": {
+                        "textOutline": "none"
+                    }
+                },
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "x2": 0,
+                        "y1": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#FF0000"
+                        ],
+                        [
+                            1,
+                            "#00FF00"
+                        ]
+                    ]
+                },
+                "innerRadius": "60%",
+                "radius": "100%"
+            }
+        ]
+    },
+    "visualization_explanation": "This solid gauge visualization demonstrates value overflow through careful axis calibration and gradient encoding. The dataset contains a single quantitative variable (pressure differential) exceeding the [-5,5] kPa scale. Synthetic data follows extreme value distribution principles (\u03bc=5, \u03c3=10) to test visualization boundaries. The red-to-green gradient leverages Cairo's preattentive processing for immediate value assessment. Tufte's data-ink ratio is maximized through axis simplification (no gridlines) and direct numeric labeling. The arc background shape (innerRadius=60%) creates visual containment while maintaining proportional ink for the overflow state. Date.UTC formatting isn't required as this represents instantaneous measurement values. Formatting follows D3-style precision (.2f kPa) for technical clarity."
+}

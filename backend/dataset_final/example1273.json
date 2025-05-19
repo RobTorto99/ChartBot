@@ -1,0 +1,116 @@
+{
+    "visualization_prompt": "Generate a dotplot chart showing monthly inventory fluctuations using diverging color encoding and categorical stacking",
+    "visualization_code": {
+        "chart": {
+            "type": "dotplot",
+            "backgroundColor": "#FFFFFF",
+            "marginRight": 30
+        },
+        "title": {
+            "text": "Monthly Inventory Transactions (2023)",
+            "style": {
+                "fontSize": "18px",
+                "color": "#2c3e50",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            },
+            "lineColor": "#bdc3c7"
+        },
+        "yAxis": {
+            "visible": false
+        },
+        "plotOptions": {
+            "series": {
+                "slotsPerBar": 2,
+                "stacking": "normal",
+                "borderRadius": 3,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.y}",
+                    "color": "#2c3e50",
+                    "style": {
+                        "textOutline": "none"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Items Bought",
+                "data": [
+                    8,
+                    7,
+                    9,
+                    12,
+                    10,
+                    15,
+                    18,
+                    20,
+                    17,
+                    22,
+                    25,
+                    28
+                ],
+                "color": "#27ae60",
+                "marker": {
+                    "symbol": "square"
+                }
+            },
+            {
+                "name": "Items Sold",
+                "data": [
+                    5,
+                    6,
+                    7,
+                    9,
+                    12,
+                    14,
+                    16,
+                    18,
+                    15,
+                    13,
+                    10,
+                    8
+                ],
+                "color": "#e74c3c",
+                "marker": {
+                    "symbol": "diamond"
+                }
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#34495e"
+            }
+        },
+        "tooltip": {
+            "headerFormat": "<b>{point.x}</b><br/>",
+            "pointFormat": "{series.name}: {point.y} units",
+            "backgroundColor": "rgba(236, 240, 241,0.95)"
+        }
+    },
+    "visualization_explanation": "The dataset represents a 12-dimensional monthly time series with two quantitative variables (purchases/sales). Synthetic data follows retail patterns: Purchases show linear growth (\u03bc=15.8, \u03c3=7.3) with holiday season acceleration, while sales exhibit parabolic distribution (\u03bc=11.3, \u03c3=4.1) peaking in summer months. Data integrity was maintained through constrained random walks with domain-typical volatility. The dotplot was selected for its ability to show exact counts through stacked markers while maintaining Tufte's data density principles. Cairo's preattentive processing is leveraged through shape-color dual encoding (green squares vs red diamonds), with proportional scaling maintaining accurate magnitude perception. Diverging color scheme supports quick positive/negative balance assessment while avoiding non-semantic hue variation. Statistical anchors include Q4 purchase acceleration (+12% MoM growth) and summer sales peak (June-August comprising 38% of annual sales)."
+}

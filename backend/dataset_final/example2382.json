@@ -1,0 +1,151 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly temperature trends using synthetic climatic data",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#F9F9F9",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ],
+            "style": {
+                "fontFamily": "Arial, sans-serif"
+            }
+        },
+        "title": {
+            "text": "Monthly Average Temperature",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                },
+                "rotation": -45
+            },
+            "title": {
+                "text": "Month",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "14px"
+                },
+                "align": "middle"
+            },
+            "gridLineColor": "#EEEEEE"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "14px"
+                },
+                "rotation": 0,
+                "offset": 40
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                },
+                "format": "{value}\u00b0"
+            },
+            "gridLineColor": "#EEEEEE"
+        },
+        "legend": {
+            "backgroundColor": "#FFFFFF",
+            "layout": "vertical",
+            "floating": true,
+            "align": "left",
+            "verticalAlign": "top",
+            "x": 90,
+            "y": 60,
+            "shadow": true,
+            "itemStyle": {
+                "color": "#333333"
+            }
+        },
+        "series": [
+            {
+                "name": "Northern Hemisphere",
+                "data": [
+                    4.2,
+                    5.1,
+                    8.9,
+                    14.3,
+                    18.7,
+                    22.1,
+                    24.5,
+                    24.0,
+                    20.3,
+                    15.2,
+                    9.8,
+                    5.5
+                ],
+                "color": "#36A2EB",
+                "marker": {
+                    "radius": 4
+                },
+                "tooltip": {
+                    "valueSuffix": "\u00b0C"
+                }
+            },
+            {
+                "name": "Southern Hemisphere",
+                "data": [
+                    23.8,
+                    23.5,
+                    21.2,
+                    17.9,
+                    14.1,
+                    11.3,
+                    10.5,
+                    12.0,
+                    14.8,
+                    17.5,
+                    20.1,
+                    22.4
+                ],
+                "color": "#FF6384",
+                "marker": {
+                    "radius": 4
+                },
+                "tooltip": {
+                    "valueSuffix": "\u00b0C"
+                }
+            }
+        ],
+        "plotOptions": {
+            "spline": {
+                "lineWidth": 2,
+                "states": {
+                    "hover": {
+                        "lineWidth": 3
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 12-month temperature records for two hemispheric series (2D: time \u00d7 temperature). Synthetic data follows inverse seasonal patterns with Northern Hemisphere peaking in July (\u03bc=24.5\u00b0C, \u03c3=\u00b13.2\u00b0C) and Southern Hemisphere in January (\u03bc=23.8\u00b0C, \u03c3=\u00b12.7\u00b0C). The spline chart maximizes data-ink ratio by eliminating chartjunk while maintaining temporal continuity. Color choices (blue=North, red=South) leverage Cairo's preattentive processing for immediate hemisphere association. Axis styling uses 12px labels with -45\u00b0 rotation for dense categorical data. Trend lines emphasize phase opposition between hemispheric seasons through smooth interpolation between data points."
+}

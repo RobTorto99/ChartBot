@@ -1,0 +1,183 @@
+{
+    "visualization_prompt": "Generate a packedbubble chart showing beverage consumption patterns across demographic groups using synthetic data generation with normal distribution sampling",
+    "visualization_code": {
+        "chart": {
+            "type": "packedbubble",
+            "height": "80%",
+            "backgroundColor": "#f5f5f5"
+        },
+        "title": {
+            "text": "Beverage Consumption Analysis",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px"
+            }
+        },
+        "subtitle": {
+            "text": "Synthetic Demographic Consumption Patterns",
+            "style": {
+                "color": "#7f8c8d"
+            }
+        },
+        "tooltip": {
+            "useHTML": true,
+            "pointFormat": "<b>{point.name}:</b> {point.y} cups/week"
+        },
+        "plotOptions": {
+            "packedbubble": {
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}",
+                    "style": {
+                        "color": "black",
+                        "textOutline": "none",
+                        "fontWeight": "normal",
+                        "fontSize": "12px"
+                    }
+                },
+                "minPointSize": 15,
+                "maxSize": 100
+            }
+        },
+        "series": [
+            {
+                "name": "Coffee",
+                "data": [
+                    {
+                        "name": "Alex",
+                        "value": 12,
+                        "color": "#8d6e63"
+                    },
+                    {
+                        "name": "Sam",
+                        "value": 9
+                    },
+                    {
+                        "name": "Jordan",
+                        "value": 14
+                    },
+                    {
+                        "name": "Taylor",
+                        "value": 11
+                    },
+                    {
+                        "name": "Casey",
+                        "value": 8
+                    },
+                    {
+                        "name": "Morgan",
+                        "value": 13
+                    },
+                    {
+                        "name": "Jamie",
+                        "value": 10
+                    },
+                    {
+                        "name": "Riley",
+                        "value": 7
+                    },
+                    {
+                        "name": "Quinn",
+                        "value": 15
+                    },
+                    {
+                        "name": "Dakota",
+                        "value": 10
+                    }
+                ]
+            },
+            {
+                "name": "Energy Drinks",
+                "data": [
+                    {
+                        "name": "Avery",
+                        "value": 6
+                    },
+                    {
+                        "name": "Peyton",
+                        "value": 5
+                    },
+                    {
+                        "name": "Rowan",
+                        "value": 7
+                    },
+                    {
+                        "name": "Skyler",
+                        "value": 4
+                    },
+                    {
+                        "name": "Charlie",
+                        "value": 8
+                    },
+                    {
+                        "name": "Emerson",
+                        "value": 5
+                    },
+                    {
+                        "name": "Finley",
+                        "value": 6
+                    },
+                    {
+                        "name": "Sawyer",
+                        "value": 3
+                    },
+                    {
+                        "name": "Reese",
+                        "value": 7
+                    },
+                    {
+                        "name": "Hayden",
+                        "value": 5
+                    }
+                ]
+            },
+            {
+                "name": "Tea",
+                "data": [
+                    {
+                        "name": "Robin",
+                        "value": 9
+                    },
+                    {
+                        "name": "Drew",
+                        "value": 7
+                    },
+                    {
+                        "name": "Kai",
+                        "value": 11
+                    },
+                    {
+                        "name": "Blair",
+                        "value": 8
+                    },
+                    {
+                        "name": "Dallas",
+                        "value": 6
+                    },
+                    {
+                        "name": "Phoenix",
+                        "value": 10
+                    },
+                    {
+                        "name": "Harper",
+                        "value": 12
+                    },
+                    {
+                        "name": "Sage",
+                        "value": 7
+                    },
+                    {
+                        "name": "Ellis",
+                        "value": 9
+                    },
+                    {
+                        "name": "Remy",
+                        "value": 8,
+                        "color": "#dcedc8"
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains three categorical series (Coffee, Energy Drinks, Tea) with 10 observations each. Each data point represents synthetic consumption values (\u03bc_Coffee=10.9, \u03c3=2.6; \u03bc_Energy=5.6, \u03c3=1.5; \u03bc_Tea=8.7, \u03c3=1.9) generated through normal distribution sampling, maintaining domain-appropriate ranges (3-15 cups/week). The packed bubble visualization effectively encodes quantity through circle area while maintaining category separation through color grouping. This design adheres to Tufte's data-ink ratio by eliminating redundant gridlines and using minimal labeling. Cairo's principles are applied through pre-attentive size coding and categorical color differentiation (earth tones for coffee, cool tones for energy drinks, pastels for tea). Statistical validity is maintained with synthetic data showing normal distributions while allowing for natural variation (+/-1\u03c3 within 68% data points)."
+}

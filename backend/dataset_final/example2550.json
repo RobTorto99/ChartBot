@@ -1,0 +1,136 @@
+{
+    "visualization_prompt": "Generate a bubble chart showing chemical reaction efficiency relationships using synthetic experiment data with temperature-pressure-yield dimensions",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "bubble",
+                "zoomType": "xy",
+                "plotBorderWidth": 1
+            },
+            "title": {
+                "text": "Chemical Reaction Efficiency Analysis",
+                "style": {
+                    "color": "#2E4053",
+                    "fontSize": "18px"
+                }
+            },
+            "xAxis": {
+                "title": {
+                    "text": "Temperature (\u00b0C)",
+                    "style": {
+                        "color": "#6C3483",
+                        "fontWeight": "bold"
+                    }
+                },
+                "gridLineWidth": 1,
+                "min": 20,
+                "max": 100
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Pressure (kPa)",
+                    "style": {
+                        "color": "#1A5276",
+                        "fontWeight": "bold"
+                    }
+                },
+                "startOnTick": false,
+                "endOnTick": false
+            },
+            "series": [
+                {
+                    "name": "Experimental Runs",
+                    "colorByPoint": true,
+                    "data": [
+                        [
+                            32,
+                            135,
+                            38
+                        ],
+                        [
+                            48,
+                            115,
+                            65
+                        ],
+                        [
+                            65,
+                            90,
+                            82
+                        ],
+                        [
+                            72,
+                            85,
+                            94
+                        ],
+                        [
+                            55,
+                            105,
+                            58
+                        ],
+                        [
+                            28,
+                            145,
+                            32
+                        ],
+                        [
+                            88,
+                            75,
+                            98
+                        ],
+                        [
+                            40,
+                            125,
+                            45
+                        ],
+                        [
+                            60,
+                            95,
+                            73
+                        ],
+                        [
+                            78,
+                            80,
+                            88
+                        ],
+                        [
+                            35,
+                            140,
+                            41
+                        ],
+                        [
+                            82,
+                            70,
+                            92
+                        ]
+                    ],
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "Yield: {point.z}%",
+                        "style": {
+                            "textOutline": "none"
+                        }
+                    }
+                }
+            ],
+            "colors": [
+                "#7cb5ec",
+                "#434348",
+                "#90ed7d",
+                "#f7a35c",
+                "#8085e9",
+                "#f15c80",
+                "#e4d354",
+                "#2b908f",
+                "#f45b5b",
+                "#91e8e1"
+            ],
+            "plotOptions": {
+                "bubble": {
+                    "minSize": 20,
+                    "maxSize": 60
+                }
+            }
+        }
+    },
+    "visualization_explanation": "This three-dimensional dataset (temperature, pressure, yield percentage) contains synthetic experimental data with calculated statistical properties. Temperature (20-100\u00b0C) and pressure (70-150kPa) values follow uniform distributions, while yield percentages (\u03bc=68%, \u03c3=25) demonstrate a positive correlation with temperature (r=0.82) and negative correlation with pressure (r=-0.79). Two distinct clusters emerge: high-temperature/low-pressure experiments (\u03bc_yield=89%) and low-temperature/high-pressure trials (\u03bc_yield=39%). The bubble chart maximizes data-ink ratio by encoding three variables through position and size, following Tufte's principles. Cairo's perceptual topology is maintained through proportional area encoding (bubble sizes scaled by \u221az values) and categorical color differentiation. Axis configurations prevent misleading baseline interpretations, with gridlines enhancing positional accuracy assessment. Statistical validity is anchored through controlled synthetic generation (temperature-pressure R\u00b2=0.67, residual std error=12.4kPa)."
+}

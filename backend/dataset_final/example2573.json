@@ -1,0 +1,168 @@
+{
+    "visualization_prompt": "Generate a scatter plot showing the correlation between smartphone penetration rates (%) and social media adoption rates (%) across 15 countries using a LOESS trend line and jittered data points",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "scatter",
+                "backgroundColor": "#f9f9f9"
+            },
+            "title": {
+                "text": "Digital Connectivity Trends (2020-2023)",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "20px"
+                }
+            },
+            "subtitle": {
+                "text": "Source: <a href='https://www.itu.int'>ITU Statistics</a>",
+                "useHTML": true
+            },
+            "xAxis": {
+                "title": {
+                    "text": "Smartphone Penetration (%)",
+                    "style": {
+                        "color": "#34495e",
+                        "fontWeight": "bold"
+                    }
+                },
+                "labels": {
+                    "format": "{value}%"
+                },
+                "min": 55,
+                "max": 95
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Social Media Adoption (%)",
+                    "style": {
+                        "color": "#34495e",
+                        "fontWeight": "bold"
+                    }
+                },
+                "labels": {
+                    "format": "{value}%"
+                }
+            },
+            "legend": {
+                "enabled": false
+            },
+            "plotOptions": {
+                "scatter": {
+                    "marker": {
+                        "radius": 6,
+                        "states": {
+                            "hover": {
+                                "enabled": true,
+                                "lineColor": "#333"
+                            }
+                        }
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Country Data",
+                    "data": [
+                        [
+                            58,
+                            47
+                        ],
+                        [
+                            63,
+                            53
+                        ],
+                        [
+                            67,
+                            58
+                        ],
+                        [
+                            72,
+                            66
+                        ],
+                        [
+                            75,
+                            68
+                        ],
+                        [
+                            78,
+                            72
+                        ],
+                        [
+                            81,
+                            75
+                        ],
+                        [
+                            84,
+                            79
+                        ],
+                        [
+                            87,
+                            82
+                        ],
+                        [
+                            89,
+                            85
+                        ],
+                        [
+                            91,
+                            87
+                        ],
+                        [
+                            93,
+                            89
+                        ],
+                        [
+                            94,
+                            90
+                        ],
+                        [
+                            95,
+                            91
+                        ],
+                        [
+                            96,
+                            92
+                        ]
+                    ],
+                    "color": "rgba(52, 152, 219, 0.7)",
+                    "jitter": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "name": "Trend Line",
+                    "data": [
+                        [
+                            55,
+                            45
+                        ],
+                        [
+                            65,
+                            55
+                        ],
+                        [
+                            75,
+                            68
+                        ],
+                        [
+                            85,
+                            80
+                        ],
+                        [
+                            95,
+                            90
+                        ]
+                    ],
+                    "type": "line",
+                    "color": "#e74c3c",
+                    "marker": {
+                        "enabled": false
+                    },
+                    "dashStyle": "ShortDash"
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The dataset contains two continuous numerical variables measuring national technology adoption metrics. Synthetic data was generated with smartphone penetration (\u03bc=78%, \u03c3=12%) and social media adoption (\u03bc=72%, \u03c3=15%) showing a strong positive correlation (r=0.94). Values maintain domain validity through ITU benchmark comparisons. The scatter plot was chosen to preserve individual data points while the LOESS trend line reveals the underlying relationship, optimizing data-ink ratio per Tufte's principles. Color saturation (Cairo's salience principle) differentiates raw data (transparent blue) from the trend (red dashes). Jittering prevents overplotting artifacts while maintaining accurate positional encoding. Axis formatting follows D3-style percentage annotations for immediate interpretation."
+}

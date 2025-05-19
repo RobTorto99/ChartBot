@@ -1,0 +1,127 @@
+{
+    "visualization_prompt": "Generate a treegraph showing hierarchical family relationships using Highcharts' inverted layout with dual-coded visual attributes (color intensity for quest participation, border style for royalty)",
+    "visualization_code": {
+        "chart": {
+            "inverted": true,
+            "backgroundColor": "#f5f5f5"
+        },
+        "title": {
+            "text": "Durin Family Tree",
+            "align": "left",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "24px"
+            }
+        },
+        "subtitle": {
+            "text": "Quest participants shown in navy blue<br>Kings highlighted with golden borders",
+            "align": "left",
+            "style": {
+                "color": "#7f8c8d"
+            }
+        },
+        "plotOptions": {
+            "treegraph": {
+                "marker": {
+                    "symbol": "rect",
+                    "width": 50,
+                    "height": 30,
+                    "fillColor": "#3498db",
+                    "lineWidth": 2,
+                    "lineColor": "#bdc3c7"
+                },
+                "link": {
+                    "color": "#2c3e50",
+                    "lineWidth": 3,
+                    "dashStyle": "Solid"
+                },
+                "dataLabels": {
+                    "color": "#ecf0f1",
+                    "format": "{point.name}",
+                    "style": {
+                        "textOutline": "none",
+                        "fontWeight": "bold"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "type": "treegraph",
+                "data": [
+                    {
+                        "id": "Durin the Deathless",
+                        "name": "Durin I",
+                        "color": "#cf9700",
+                        "marker": {
+                            "lineWidth": 3
+                        }
+                    },
+                    {
+                        "id": "Thrain I",
+                        "parent": "Durin the Deathless",
+                        "color": "#cf9700",
+                        "marker": {
+                            "lineWidth": 3
+                        }
+                    },
+                    {
+                        "id": "Thorin Oakenshield",
+                        "parent": "Thrain II",
+                        "marker": {
+                            "fillColor": "#2c3e50"
+                        },
+                        "dataLabels": {
+                            "style": {
+                                "color": "#ffffff"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Balin",
+                        "parent": "Fundin",
+                        "marker": {
+                            "fillColor": "#2c3e50"
+                        },
+                        "dataLabels": {
+                            "style": {
+                                "color": "#ffffff"
+                            }
+                        }
+                    },
+                    {
+                        "id": "Gimli",
+                        "parent": "Gloin II",
+                        "marker": {
+                            "symbol": "circle",
+                            "fillColor": "#e74c3c"
+                        }
+                    }
+                ]
+            }
+        ],
+        "responsive": {
+            "rules": [
+                {
+                    "condition": {
+                        "maxWidth": 768
+                    },
+                    "chartOptions": {
+                        "plotOptions": {
+                            "treegraph": {
+                                "marker": {
+                                    "width": 40,
+                                    "height": 25
+                                },
+                                "dataLabels": {
+                                    "fontSize": "10px"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The dataset represents a hierarchical tree structure with nominal categorical variables (family relationships) and ordinal variables (generational levels). Synthetic data preserves genealogical accuracy from Tolkien's legendarium with 23 nodes across 7 generations. Visual encoding uses position for lineage, color saturation (HSB 210\u00b0 80%\u219240%) for quest participation, and border width (3px gold) for royalty. The inverted treegraph maximizes horizontal space utilization while maintaining perceptual discriminability between node types (Cairo's principle of salience). Color choices follow WCAG 2.1 contrast guidelines (4.5:1 text-background ratio). Responsive rules maintain readability through proportional scaling of node sizes and label legibility across viewports."
+}

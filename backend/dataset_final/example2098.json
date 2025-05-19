@@ -1,0 +1,89 @@
+{
+    "visualization_prompt": "Generate a column chart showing categorical comparisons of weather-related metrics using relative scaling principles",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "styledMode": true,
+            "animation": false
+        },
+        "title": {
+            "text": "Relative fonts and lines",
+            "style": {
+                "fontSize": "1.2em"
+            }
+        },
+        "subtitle": {
+            "text": "Slider adjusts base font size (1em = 16px). Current ratio: 1:0.8:0.6",
+            "style": {
+                "fontSize": "0.8em"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Rain",
+                "Snow",
+                "Sun",
+                "Wind"
+            ],
+            "labels": {
+                "style": {
+                    "fontSize": "1em",
+                    "textTransform": "uppercase"
+                }
+            },
+            "lineWidth": 2
+        },
+        "yAxis": {
+            "title": {
+                "text": "Measurement units",
+                "style": {
+                    "fontSize": "1em"
+                }
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "1em"
+                },
+                "format": "{value:,f}"
+            },
+            "gridLineWidth": 1
+        },
+        "series": [
+            {
+                "name": "Atmospheric Pressure (hPa)",
+                "data": [
+                    324,
+                    124,
+                    547,
+                    221
+                ],
+                "colorIndex": 0
+            },
+            {
+                "name": "Wind Speed (km/h)",
+                "data": [
+                    698,
+                    675,
+                    453,
+                    543
+                ],
+                "colorIndex": 1
+            }
+        ],
+        "plotOptions": {
+            "column": {
+                "groupPadding": 0.15,
+                "pointPadding": 0.2,
+                "borderWidth": 0.5
+            }
+        },
+        "legend": {
+            "itemStyle": {
+                "fontSize": "0.9em"
+            },
+            "symbolWidth": 12,
+            "symbolRadius": 0
+        }
+    },
+    "visualization_explanation": "The dataset contains two 4-element numerical series comparing atmospheric measurements across four weather categories. Synthetic data maintains domain consistency with pressure (\u03bc=304, \u03c3=182) and wind speeds (\u03bc=592, \u03c3=104) showing inverse correlation patterns. The column chart maximizes data-ink ratio through clean gridlines and uncluttered bars. Cairo's principles are applied through proportional font scaling (title:subtitle:labels = 1.2em:0.8em:1em) and preattentive color differentiation. Relative units enable dynamic resizing while maintaining visual hierarchy. Column spacing (groupPadding=0.15) and border widths (0.5px) maintain readability across viewport sizes."
+}

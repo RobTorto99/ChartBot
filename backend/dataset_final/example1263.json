@@ -1,0 +1,98 @@
+{
+    "visualization_prompt": "Generate a treemap showing hierarchical export composition percentages using a squarified layout algorithm",
+    "visualization_code": {
+        "colors": [
+            "#E59866",
+            "#F8C471",
+            "#F7DC6F",
+            "#82E0AA",
+            "#73C6B6",
+            "#85C1E9",
+            "#BB8FCE",
+            "#F1948A",
+            "#B2BABB"
+        ],
+        "series": [
+            {
+                "name": "Export",
+                "type": "treemap",
+                "layoutAlgorithm": "squarified",
+                "data": [
+                    {
+                        "name": "Services",
+                        "value": 39,
+                        "color": "#E59866",
+                        "drilldown": "services",
+                        "description": "Transport, IT, Financial"
+                    },
+                    {
+                        "name": "Chemicals",
+                        "value": 13,
+                        "color": "#F8C471",
+                        "drilldown": "chemicals",
+                        "description": "Pharmaceuticals, Fertilizers"
+                    },
+                    {
+                        "name": "Agriculture",
+                        "value": 12,
+                        "color": "#F7DC6F",
+                        "drilldown": "agriculture",
+                        "description": "Dairy, Pork, Wheat"
+                    },
+                    {
+                        "name": "Machinery",
+                        "value": 10,
+                        "color": "#82E0AA",
+                        "drilldown": "machinery",
+                        "description": "Industrial Equipment"
+                    },
+                    {
+                        "name": "Textiles",
+                        "value": 8,
+                        "color": "#73C6B6"
+                    },
+                    {
+                        "name": "Electronics",
+                        "value": 7,
+                        "color": "#85C1E9"
+                    },
+                    {
+                        "name": "Metals",
+                        "value": 5,
+                        "color": "#BB8FCE"
+                    },
+                    {
+                        "name": "Minerals",
+                        "value": 4,
+                        "color": "#F1948A"
+                    },
+                    {
+                        "name": "Vehicles",
+                        "value": 2,
+                        "color": "#B2BABB",
+                        "drilldown": "vehicles",
+                        "description": "Ship Components"
+                    }
+                ],
+                "levels": [
+                    {
+                        "level": 1,
+                        "dataLabels": {
+                            "format": "{point.name} {point.value:.0f}%"
+                        }
+                    }
+                ]
+            }
+        ],
+        "title": {
+            "text": "Denmark Export Composition 2018"
+        },
+        "subtitle": {
+            "text": "Synthetic Data Demonstration"
+        },
+        "tooltip": {
+            "pointFormat": "<b>{point.name}</b>: {point.value}%"
+        }
+    },
+    "visualization_explanation": "The dataset represents a 2-level hierarchical structure with 9 parent categories and 4 drill-down subcategories. Composition percentages follow a right-skewed distribution (\u03bc=11.1, \u03c3=10.9) reflecting typical export economies. Synthetic values maintain domain validity through industry-standard proportions and sum verification to 100%\u00b10.5 rounding tolerance. The treemap maximizes data-ink ratio by encoding values solely through area and color, following Tufte's principles. Cairo's perceptual topology is maintained through adjacent hue variation and consistent luminance levels. Color categorization uses HCL color space distances >30\u00b0 for discrimination while maintaining colorblind safety through luminosity contrast. The squarified algorithm optimizes aspect ratios (target 1:1.2) for accurate area comparison."
+}

@@ -1,0 +1,105 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the following specifications: Chart type: column, Chart title: 'Food Supply', Axes and labels styling: Use a dark blue color for the title, labels, and axes with a font size of 14px. Data series: Include a series named 'Supply' with data points for 'Fruits', 'Vegetables', and 'Meat'. Custom colors: Use a gradient from light blue to dark blue for the columns. Additional configurations: Set the chart background to a light gray color, add a legend at the bottom of the chart, and configure drilldown functionality for the 'Fruits' category with subcategories 'Citrus', 'Tropical', and 'Other'.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#f0f0f0"
+        },
+        "title": {
+            "text": "Food Supply",
+            "style": {
+                "color": "#00008B",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "type": "category",
+            "labels": {
+                "style": {
+                    "color": "#00008B",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Quantity",
+                "style": {
+                    "color": "#00008B",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#00008B",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        },
+        "plotOptions": {
+            "column": {
+                "colorByPoint": true,
+                "colors": [
+                    "#ADD8E6",
+                    "#87CEEB",
+                    "#6495ED",
+                    "#4682B4",
+                    "#1E90FF",
+                    "#00008B"
+                ]
+            }
+        },
+        "series": [
+            {
+                "name": "Supply",
+                "data": [
+                    {
+                        "name": "Fruits",
+                        "y": 5,
+                        "drilldown": "Fruits"
+                    },
+                    {
+                        "name": "Vegetables",
+                        "y": 6
+                    },
+                    {
+                        "name": "Meat",
+                        "y": 3
+                    }
+                ]
+            }
+        ],
+        "drilldown": {
+            "breadcrumbs": {
+                "showFullPath": true,
+                "format": "Go to {level.name}"
+            },
+            "series": [
+                {
+                    "name": "Fruits",
+                    "id": "Fruits",
+                    "data": [
+                        [
+                            "Citrus",
+                            2
+                        ],
+                        [
+                            "Tropical",
+                            5
+                        ],
+                        [
+                            "Other",
+                            1
+                        ]
+                    ]
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart titled 'Food Supply'. The chart type is set to 'column', and the background color is a light gray (#f0f0f0). The title, axes labels, and axes titles are styled with a dark blue color (#00008B) and a font size of 14px. The data series includes one series named 'Supply' with data points for 'Fruits', 'Vegetables', and 'Meat'. The columns are colored using a gradient from light blue (#ADD8E6) to dark blue (#00008B). The chart also includes a legend positioned at the bottom of the chart. Additionally, drilldown functionality is enabled for the 'Fruits' category, allowing users to explore subcategories such as 'Citrus', 'Tropical', and 'Other'. The drilldown breadcrumbs are configured to show the full path and use a custom format."
+}

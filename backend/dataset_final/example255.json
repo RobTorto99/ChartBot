@@ -1,0 +1,106 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the title 'Variable font size'. The chart should have two data series: one with data [324, 124, 547, 221] and another with data [698, 675, 453, 543]. The x-axis should have categories ['Rain', 'Snow', 'Sun', 'Wind'], and the y-axis should be titled 'Hours'. The chart should have custom colors for each data point, and the labels and axes should be styled with specific font sizes and colors. Additionally, the chart should have a legend and a background color.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#f9f9f9"
+        },
+        "title": {
+            "text": "Variable font size",
+            "align": "left",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333"
+            }
+        },
+        "subtitle": {
+            "text": "Use the buttons above the chart to set top-level font size",
+            "align": "left",
+            "style": {
+                "fontSize": "14px",
+                "color": "#666"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Rain",
+                "Snow",
+                "Sun",
+                "Wind"
+            ],
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#555"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Hours",
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#444"
+                }
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#555"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    324,
+                    124,
+                    547,
+                    221
+                ],
+                "colorByPoint": true,
+                "dataLabels": {
+                    "enabled": true,
+                    "inside": true,
+                    "style": {
+                        "fontSize": "12px",
+                        "color": "#fff"
+                    }
+                }
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    698,
+                    675,
+                    453,
+                    543
+                ],
+                "colorByPoint": true,
+                "dataLabels": {
+                    "enabled": true,
+                    "inside": true,
+                    "style": {
+                        "fontSize": "12px",
+                        "color": "#fff"
+                    }
+                }
+            }
+        ],
+        "colors": [
+            "#7cb5ec",
+            "#434348",
+            "#90ed7d",
+            "#f7a35c"
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "fontSize": "12px",
+                "color": "#444"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart with a title 'Variable font size' and a subtitle explaining the functionality of the buttons above the chart. The x-axis categories are set to ['Rain', 'Snow', 'Sun', 'Wind'], and the y-axis is titled 'Hours'. The chart includes two data series, each with its own set of data points. The chart uses custom colors for each data point and styles the labels, axes, and titles with specific font sizes and colors. The chart also includes a legend and a background color to enhance readability and visual appeal."
+}

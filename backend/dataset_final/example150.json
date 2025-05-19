@@ -1,0 +1,75 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the title 'Relative fonts and lines'. The chart should have two data series: one with the data [324, 124, 547, 221] and another with the data [698, 675, 453, 543]. The x-axis should have categories ['Rain', 'Snow', 'Sun', 'Wind']. The chart should be styled with relative font sizes and line widths, and should include a subtitle explaining the functionality of a slider below the chart that adjusts the top-level font size. The chart should be rendered in styled mode without animations.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "animation": false,
+            "styledMode": true
+        },
+        "title": {
+            "text": "Relative fonts and lines"
+        },
+        "subtitle": {
+            "text": "Use the slider below the chart to set top-level font size"
+        },
+        "xAxis": {
+            "categories": [
+                "Rain",
+                "Snow",
+                "Sun",
+                "Wind"
+            ],
+            "labels": {
+                "style": {
+                    "fontSize": "1em"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Values",
+                "style": {
+                    "fontSize": "1em"
+                }
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "1em"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    324,
+                    124,
+                    547,
+                    221
+                ]
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    698,
+                    675,
+                    453,
+                    543
+                ]
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "fontSize": "1em"
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "pointPadding": 0.2,
+                "borderWidth": 0
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a column chart with specific styling and functional requirements. The chart type is set to 'column', and it includes two data series with the specified data. The x-axis categories are defined as ['Rain', 'Snow', 'Sun', 'Wind'], and the y-axis is labeled with 'Values'. The chart title and subtitle are set to 'Relative fonts and lines' and 'Use the slider below the chart to set top-level font size', respectively. The chart is configured to use relative font sizes for labels, titles, and the legend, ensuring that the visual elements scale proportionally. The chart is rendered in styled mode without animations, and a slider is provided to adjust the top-level font size dynamically. The plot options for the column series include padding and border settings to ensure a clean and consistent appearance."
+}

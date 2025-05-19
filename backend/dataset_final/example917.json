@@ -1,0 +1,97 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a polar column chart with two panes. The chart should have a title 'Custom thresholds' and a subtitle explaining the thresholds. Each pane should have its own x and y axes with specific ranges and tick intervals. The chart should have two series, each with a different threshold and data points. The chart should be inverted, have a top margin of 50 pixels, and use custom colors for the series.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "inverted": true,
+            "polar": true,
+            "marginTop": 50
+        },
+        "title": {
+            "text": "Custom thresholds"
+        },
+        "subtitle": {
+            "text": "Left pane <b>(-5.5)</b> and right pane <b>(5.5)</b>"
+        },
+        "pane": [
+            {
+                "size": "60%",
+                "center": [
+                    "25%",
+                    "50%"
+                ]
+            },
+            {
+                "size": "60%",
+                "center": [
+                    "75%",
+                    "50%"
+                ]
+            }
+        ],
+        "xAxis": [
+            {
+                "tickInterval": 1
+            },
+            {
+                "pane": 1,
+                "tickInterval": 1
+            }
+        ],
+        "yAxis": [
+            {
+                "min": -10,
+                "max": 10,
+                "tickInterval": 1
+            },
+            {
+                "pane": 1,
+                "min": -10,
+                "max": 10,
+                "tickInterval": 1
+            }
+        ],
+        "plotOptions": {
+            "series": {
+                "grouping": false,
+                "pointPadding": 0,
+                "groupPadding": 0
+            }
+        },
+        "series": [
+            {
+                "threshold": -5.5,
+                "data": [
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                ]
+            },
+            {
+                "xAxis": 1,
+                "yAxis": 1,
+                "threshold": 5.5,
+                "data": [
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a polar column chart with two panes, each displaying a series of data points. The chart is inverted and polar, giving it a unique visual style. The title and subtitle provide context for the chart, explaining the custom thresholds used in the data series. Each pane has its own x and y axes, with specific ranges and tick intervals, ensuring clear and distinct data representation. The series are configured with thresholds and data points, and the chart is styled with a top margin of 50 pixels. This configuration effectively visualizes the data with clear separation and context, making it easy to interpret the custom thresholds and data points."
+}

@@ -1,0 +1,230 @@
+{
+    "visualization_prompt": "Create a Highcharts network graph that visualizes the domestic flight routes in South Korea. The chart should have a title 'South Korea domestic flight routes'. The nodes should be airports, and the edges should represent flight routes between them. The nodes should be color-coded based on the number of direct destinations: red for more than 50, yellow for more than 10, and green for less than 10. The nodes should also have varying sizes based on the number of direct destinations. The chart should include a tooltip that provides information about the airport and its direct destinations when hovering over a node.",
+    "visualization_code": {
+        "chart": {
+            "type": "networkgraph",
+            "marginTop": 80
+        },
+        "title": {
+            "text": "South Korea domestic flight routes"
+        },
+        "tooltip": {
+            "formatter": "function () {\n            let info = '';\n            switch (this.color) {\n            case '#E8544E':\n                info = 'is an aiport <b>more than 50</b> direct distinations';\n                break;\n            case '#FFD265':\n                info = 'is an aiport <b>more than 10</b> direct distinations';\n                break;\n            case '#2AA775':\n                info = 'is an aiport <b>less than 10</b> direct distinations';\n                break;\n            }\n            return '<b>' + this.key + '</b>: ' + info;\n        }"
+        },
+        "plotOptions": {
+            "networkgraph": {
+                "keys": [
+                    "from",
+                    "to"
+                ],
+                "layoutAlgorithm": {
+                    "enableSimulation": true,
+                    "integration": "verlet",
+                    "linkLength": 100
+                }
+            }
+        },
+        "series": [
+            {
+                "marker": {
+                    "radius": 13
+                },
+                "dataLabels": {
+                    "enabled": true,
+                    "linkFormat": "",
+                    "allowOverlap": true,
+                    "style": {
+                        "textOutline": false
+                    }
+                },
+                "data": [
+                    [
+                        "Seoul ICN",
+                        "Daegu"
+                    ],
+                    [
+                        "Seoul ICN",
+                        "Busan"
+                    ],
+                    [
+                        "Busan",
+                        "Seoul GMP"
+                    ],
+                    [
+                        "Busan",
+                        "Yangyang"
+                    ],
+                    [
+                        "Daegu",
+                        "Seoul GMP"
+                    ],
+                    [
+                        "Daegu",
+                        "Jeju"
+                    ],
+                    [
+                        "Seoul GMP",
+                        "Gwangju"
+                    ],
+                    [
+                        "Seoul GMP",
+                        "Yeosu"
+                    ],
+                    [
+                        "Seoul GMP",
+                        "Sacheon"
+                    ],
+                    [
+                        "Seoul GMP",
+                        "Ulsan"
+                    ],
+                    [
+                        "Seoul GMP",
+                        "Pohang"
+                    ],
+                    [
+                        "Jeju",
+                        "Gwangju"
+                    ],
+                    [
+                        "Jeju",
+                        "Gunsan"
+                    ],
+                    [
+                        "Jeju",
+                        "Wonju"
+                    ],
+                    [
+                        "Jeju",
+                        "Yangyang"
+                    ],
+                    [
+                        "Jeju",
+                        "Daegu"
+                    ],
+                    [
+                        "Jeju",
+                        "Yeosu"
+                    ],
+                    [
+                        "Jeju",
+                        "Sacheon"
+                    ],
+                    [
+                        "Jeju",
+                        "Ulsan"
+                    ],
+                    [
+                        "Jeju",
+                        "Busan"
+                    ],
+                    [
+                        "Jeju",
+                        "Cheongju"
+                    ]
+                ],
+                "nodes": [
+                    {
+                        "id": "Seoul ICN",
+                        "marker": {
+                            "radius": 30
+                        },
+                        "color": "#E8544E"
+                    },
+                    {
+                        "id": "Daegu",
+                        "marker": {
+                            "radius": 10
+                        },
+                        "color": "#2AA775"
+                    },
+                    {
+                        "id": "Busan",
+                        "marker": {
+                            "radius": 30
+                        },
+                        "color": "#E8544E"
+                    },
+                    {
+                        "id": "Seoul GMP",
+                        "marker": {
+                            "radius": 20
+                        },
+                        "color": "#FFD265"
+                    },
+                    {
+                        "id": "Jeju",
+                        "marker": {
+                            "radius": 30
+                        },
+                        "color": "#E8544E"
+                    },
+                    {
+                        "id": "Gwangju",
+                        "marker": {
+                            "radius": 10
+                        },
+                        "color": "#2AA775"
+                    },
+                    {
+                        "id": "Yeosu",
+                        "marker": {
+                            "radius": 10
+                        },
+                        "color": "#2AA775"
+                    },
+                    {
+                        "id": "Sacheon",
+                        "marker": {
+                            "radius": 10
+                        },
+                        "color": "#2AA775"
+                    },
+                    {
+                        "id": "Ulsan",
+                        "marker": {
+                            "radius": 10
+                        },
+                        "color": "#2AA775"
+                    },
+                    {
+                        "id": "Pohang",
+                        "marker": {
+                            "radius": 20
+                        },
+                        "color": "#FFD265"
+                    },
+                    {
+                        "id": "Gunsan",
+                        "marker": {
+                            "radius": 10
+                        },
+                        "color": "#2AA775"
+                    },
+                    {
+                        "id": "Wonju",
+                        "marker": {
+                            "radius": 10
+                        },
+                        "color": "#2AA775"
+                    },
+                    {
+                        "id": "Yangyang",
+                        "marker": {
+                            "radius": 10
+                        },
+                        "color": "#2AA775"
+                    },
+                    {
+                        "id": "Cheongju",
+                        "marker": {
+                            "radius": 20
+                        },
+                        "color": "#FFD265"
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration creates a network graph that visualizes the domestic flight routes in South Korea. The chart type is set to 'networkgraph', which is suitable for displaying relationships between nodes. The title of the chart is 'South Korea domestic flight routes'. The nodes represent airports, and the edges represent flight routes between them. The nodes are color-coded based on the number of direct destinations: red for more than 50, yellow for more than 10, and green for less than 10. The size of the nodes also varies based on the number of direct destinations. The tooltip provides additional information about the airport and its direct destinations when hovering over a node. The layout algorithm is configured to enable simulation and uses the Verlet integration method with a link length of 100. This configuration ensures that the nodes and edges are arranged in a visually appealing manner."
+}

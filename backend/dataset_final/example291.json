@@ -1,0 +1,111 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a stacked percentage column chart. The chart should display domestic passenger transport by mode of transport in Norway for the years 2019, 2020, and 2021. The chart should have a title, a subtitle with a source link, and styled axes and labels. The data series should include the modes of transport: Road, Rail, Air, and Sea, with their respective data points. The chart should also have custom colors and additional configurations such as chart margins, background, and legend.",
+    "visualization_code": {
+        "chart": {
+            "backgroundColor": "#f8f8f8",
+            "margin": [
+                50,
+                100,
+                60,
+                150
+            ]
+        },
+        "title": {
+            "text": "Domestic passenger transport by mode of transport, Norway",
+            "align": "left"
+        },
+        "subtitle": {
+            "text": "Source: <a href=\"https://www.ssb.no/transport-og-reiseliv/landtransport/statistikk/innenlandsk-transport\">SSB</a>",
+            "align": "left"
+        },
+        "xAxis": {
+            "categories": [
+                "2019",
+                "2020",
+                "2021"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "title": {
+                "text": "Percent",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "tooltip": {
+            "pointFormat": "<span style=\"color:{series.color}\">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>",
+            "shared": true
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "percent",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.percentage:.0f}%"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Road",
+                "data": [
+                    434,
+                    290,
+                    307
+                ]
+            },
+            {
+                "name": "Rail",
+                "data": [
+                    272,
+                    153,
+                    156
+                ]
+            },
+            {
+                "name": "Air",
+                "data": [
+                    13,
+                    7,
+                    8
+                ]
+            },
+            {
+                "name": "Sea",
+                "data": [
+                    55,
+                    35,
+                    41
+                ]
+            }
+        ],
+        "colors": [
+            "#7cb5ec",
+            "#434348",
+            "#90ed7d",
+            "#f7a35c"
+        ],
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical"
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a stacked percentage column chart. The chart displays domestic passenger transport by mode of transport in Norway for the years 2019, 2020, and 2021. The title and subtitle are aligned to the left, with the subtitle containing a link to the source data. The x-axis categories represent the years, and the y-axis represents the percentage values. The tooltip shows the series name, data point value, and percentage. The plot options for columns include stacking in percentage format and enabled data labels. The series data includes the modes of transport: Road, Rail, Air, and Sea, with their respective data points. Custom colors are applied to the series, and the legend is positioned to the right, vertically aligned in the middle. The chart background is set to a light gray color, and the margins are adjusted for better visualization."
+}

@@ -1,0 +1,98 @@
+{
+    "visualization_prompt": "Generate a donut chart showing market share distribution of passenger vehicle types using a proportional segmented layout with pattern fills",
+    "visualization_code": {
+        "colors": [
+            "#01BAF2",
+            "#71BF45",
+            "#FAA74B",
+            "#B37CD2"
+        ],
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "February 2020 Norway Passenger Auto Registrations",
+            "style": {
+                "fontSize": "16px",
+                "color": "#333333"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://cleantechnica.com/2020/03/07/pioneering-norway-rises-above-68-plug-in-vehicle-market-share-in-february/'>cleantechnica</a>",
+            "useHTML": true
+        },
+        "plotOptions": {
+            "pie": {
+                "innerSize": "75%",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}: {y}%",
+                    "style": {
+                        "fontSize": "12px"
+                    }
+                },
+                "borderWidth": 1
+            }
+        },
+        "series": [
+            {
+                "name": "Registrations",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "EV",
+                        "y": 68.1,
+                        "color": {
+                            "patternIndex": 0
+                        },
+                        "borderColor": "#5997DE"
+                    },
+                    {
+                        "name": "Hybrids",
+                        "y": 11.0,
+                        "color": {
+                            "patternIndex": 1
+                        },
+                        "borderColor": "#949494"
+                    },
+                    {
+                        "name": "Diesel",
+                        "y": 11.2,
+                        "color": {
+                            "patternIndex": 2
+                        },
+                        "borderColor": "#69A550"
+                    },
+                    {
+                        "name": "Petrol",
+                        "y": 9.7,
+                        "color": {
+                            "patternIndex": 3
+                        },
+                        "borderColor": "#C9854A"
+                    }
+                ]
+            }
+        ],
+        "accessibility": {
+            "point": {
+                "valueSuffix": "%"
+            }
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "fontSize": "12px"
+            }
+        },
+        "tooltip": {
+            "pointFormat": "{series.name}: <b>{point.percentage:.0f}%</b>",
+            "style": {
+                "fontSize": "12px"
+            }
+        }
+    },
+    "visualization_explanation": "This dataset contains four categorical variables representing vehicle types (EV, Hybrids, Diesel, Petrol) with percentage market shares. Original data from cleantechnica shows strong EV dominance (\u03bc=68.1%, \u03c3=25.3) with secondary clusters for hybrids and legacy fuels. The donut chart maximizes data-ink ratio by removing redundant central space while maintaining proportional perception. Pattern fills enhance color differentiation per Cairo's principles of redundant encoding. Inner radius of 75% creates visual balance between categorical segments and negative space. Value labels use direct percentage formatting for immediate pattern recognition without legend reference."
+}

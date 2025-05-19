@@ -1,0 +1,126 @@
+{
+    "visualization_prompt": "Generate a spline chart showing comparative monthly trends of environmental metrics using synthetic seasonal data patterns",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "spline",
+                "backgroundColor": "#ffffff",
+                "marginTop": 40
+            },
+            "title": {
+                "text": "Monthly Environmental Metrics Comparison",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "20px"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#34495e",
+                        "fontSize": "12px"
+                    },
+                    "rotation": -45
+                },
+                "lineColor": "#bdc3c7"
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Measurement Units",
+                    "style": {
+                        "color": "#34495e",
+                        "fontSize": "14px"
+                    }
+                },
+                "gridLineColor": "#ecf0f1"
+            },
+            "series": [
+                {
+                    "name": "Air Quality Index",
+                    "data": [
+                        58.3,
+                        62.1,
+                        67.8,
+                        71.4,
+                        69.2,
+                        65.7,
+                        61.9,
+                        59.4,
+                        55.6,
+                        52.3,
+                        49.8,
+                        47.1
+                    ],
+                    "color": "#e67e22",
+                    "marker": {
+                        "radius": 8,
+                        "symbol": "circle"
+                    },
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "{y:.1f}"
+                    }
+                },
+                {
+                    "name": "Water Turbidity",
+                    "data": [
+                        12.4,
+                        14.2,
+                        18.9,
+                        22.7,
+                        28.3,
+                        34.6,
+                        38.1,
+                        35.4,
+                        29.8,
+                        24.3,
+                        19.7,
+                        15.2
+                    ],
+                    "color": "#2980b9",
+                    "marker": {
+                        "radius": 8,
+                        "symbol": "square"
+                    },
+                    "dashStyle": "ShortDot",
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "{y:.1f} NTU"
+                    }
+                }
+            ],
+            "legend": {
+                "align": "right",
+                "verticalAlign": "bottom",
+                "itemStyle": {
+                    "color": "#7f8c8d"
+                }
+            },
+            "plotOptions": {
+                "spline": {
+                    "lineWidth": 3,
+                    "states": {
+                        "hover": {
+                            "lineWidth": 5
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two temporal series (Air Quality Index and Water Turbidity) with 12 monthly observations each. Synthetic data was generated with contrasting statistical profiles: AQI shows a gradual annual decline (\u03bc=58.3\u219247.1, \u03c3\u22488.5) suggesting environmental improvement, while turbidity displays summer peaking (Jun-Jul \u03bc=36.4) with seasonal variation (\u03c3\u224810.2). The spline chart was chosen to emphasize trend continuity while maintaining Tufte's data-ink ratio through clean gridlines and direct labeling. Cairo's perceptual principles are applied through color-coding (warm orange for air, cool blue for water) and distinct marker shapes, enabling immediate series differentiation. The 8px markers balance visibility with minimal ink usage, while dual-axis formatting (plain numbers vs NTU units) maintains measurement context without cluttering."
+}

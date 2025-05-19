@@ -1,0 +1,123 @@
+{
+    "visualization_prompt": "Generate a spline chart showing age-weight relationship progression across individuals using synthetic anthropometric data with positive correlation",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 60,
+            "marginBottom": 80
+        },
+        "title": {
+            "text": "Age vs Weight Distribution",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "22px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Subject 1",
+                "Subject 2",
+                "Subject 3",
+                "Subject 4",
+                "Subject 5",
+                "Subject 6",
+                "Subject 7",
+                "Subject 8",
+                "Subject 9",
+                "Subject 10"
+            ],
+            "title": {
+                "text": "Study Participants",
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Measurement Values",
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Age (Years)",
+                "data": [
+                    22,
+                    24,
+                    23,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31
+                ],
+                "color": "#e74c3c",
+                "marker": {
+                    "symbol": "circle",
+                    "radius": 6
+                }
+            },
+            {
+                "name": "Weight (kg)",
+                "data": [
+                    58,
+                    62,
+                    61,
+                    65,
+                    67,
+                    69,
+                    71,
+                    72,
+                    73,
+                    75
+                ],
+                "color": "#27ae60",
+                "marker": {
+                    "symbol": "square",
+                    "radius": 6
+                }
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#2c3e50",
+                "fontSize": "14px"
+            }
+        },
+        "plotOptions": {
+            "spline": {
+                "lineWidth": 3,
+                "states": {
+                    "hover": {
+                        "lineWidth": 5
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two quantitative variables (age and weight) across 10 categorical observations. Synthetic data follows normal distributions (Age: \u03bc=26.5, \u03c3=3.02; Weight: \u03bc=67.3, \u03c3=5.48) with intentional positive correlation (r\u22480.95). The spline chart maximizes data-ink ratio through clean curves and minimal gridlines while maintaining precision with dual-value axes. Cairo's principles are applied through distinctive marker shapes and high-contrast colors for pre-attentive processing. Temporal progression is simulated through ordered subject IDs showing weight increase patterns with age. Statistical anchors include synthetic data ranges (Age: 22-31 years, Weight: 58-75 kg) mirroring WHO adult anthropometric standards."
+}

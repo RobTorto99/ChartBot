@@ -1,0 +1,92 @@
+{
+    "visualization_prompt": "Generate a pie chart showing atmospheric gas composition percentages using sector patterns and percentage annotations",
+    "visualization_code": {
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#f8f9fa"
+        },
+        "title": {
+            "text": "Air Composition",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "24px",
+                "fontWeight": "bold"
+            }
+        },
+        "colors": [
+            {
+                "patternIndex": 3,
+                "patternColor": "#4b8bbe"
+            },
+            {
+                "patternIndex": 1,
+                "patternColor": "#c0504d"
+            },
+            {
+                "patternIndex": 5,
+                "patternColor": "#9bbb59"
+            }
+        ],
+        "series": [
+            {
+                "name": "Atmospheric Gases",
+                "colorByPoint": true,
+                "innerSize": "40%",
+                "data": [
+                    {
+                        "name": "Nitrogen (N\u2082)",
+                        "y": 78.08,
+                        "dataLabels": {
+                            "distance": 30,
+                            "style": {
+                                "fontSize": "16px"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Oxygen (O\u2082)",
+                        "y": 20.95,
+                        "dataLabels": {
+                            "distance": -40,
+                            "style": {
+                                "color": "#ffffff"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Trace Gases",
+                        "y": 0.97,
+                        "sliced": true,
+                        "selected": true,
+                        "dataLabels": {
+                            "format": "Ar/CO\u2082/Ne: {y}%",
+                            "style": {
+                                "fontStyle": "italic"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "tooltip": {
+            "pointFormat": "<b>{point.percentage:.2f}%</b>",
+            "style": {
+                "fontSize": "14px"
+            }
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "depth": 15,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}: {y}%",
+                    "connectorShape": "crookedLine",
+                    "connectorPadding": 5
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The pie chart encodes a 1-dimensional categorical dataset (gas types) with quantitative percentage values. Synthetic data preserves real atmospheric composition measurements (NIST Standard Reference Database), maintaining \u2211=100% validity. The donut variant (innerSize) improves center space utilization while sector patterns (patternIndex) enhance color deficiency accessibility. Cairo's principles are applied through: 1) Direct percentage labeling reducing legend dependency 2) Contrast-adjusted data labels 3) Pattern-texture redundancy for categorical distinction. Tufte's data-ink ratio is optimized by eliminating axis lines and using minimal active legend. The exploded 'Trace Gases' slice emphasizes small-but-critical components through pre-attentive pop-out effect (sliced property)."
+}

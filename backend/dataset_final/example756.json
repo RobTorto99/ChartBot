@@ -1,0 +1,56 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the title 'Monthly Sales Trend (May-Aug)'. The x-axis should display the months May, June, July, and August. The y-axis should show the sales data in thousands of dollars. The chart should have a single series named 'Sales' with the data [206, 216, 247, 330]. The chart should have a white background and a legend positioned at the bottom. The x-axis labels should be in a 12px Arial font, and the y-axis labels should be in a 10px Verdana font with a dark gray color.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Monthly Sales Trend (May-Aug)"
+        },
+        "xAxis": {
+            "categories": [
+                "May",
+                "June",
+                "July",
+                "Aug"
+            ],
+            "labels": {
+                "style": {
+                    "fontFamily": "Arial",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": ""
+            },
+            "labels": {
+                "format": "{value}k $",
+                "style": {
+                    "fontFamily": "Verdana",
+                    "fontSize": "10px",
+                    "color": "#333333"
+                }
+            }
+        },
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    206,
+                    216,
+                    247,
+                    330
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart with specific visual and functional attributes. The chart type is set to 'column', and it has a white background for a clean appearance. The title of the chart is 'Monthly Sales Trend (May-Aug)', which is displayed prominently at the top. The x-axis is labeled with the months May, June, July, and August, with labels styled in 12px Arial font. The y-axis displays sales data in thousands of dollars, formatted as '{value}k $', with labels styled in 10px Verdana font and a dark gray color for better readability. The chart includes a single series named 'Sales' with the data [206, 216, 247, 330], representing the sales figures for each month. Additionally, a legend is included at the bottom of the chart, centered and horizontally aligned, to provide context for the data series."
+}

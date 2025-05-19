@@ -1,0 +1,241 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the title 'Monthly Sales Data'. The chart should have styled axes and labels with specific colors and font sizes. The data series should include monthly sales data for different products, each with a unique name and corresponding data points. The chart should also have custom colors for each series and additional configurations such as chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "width": 500
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Months",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "legend": {
+            "itemWidth": 100,
+            "itemStyle": {
+                "color": "#666666",
+                "fontSize": "12px"
+            }
+        },
+        "series": [
+            {
+                "name": "First",
+                "data": [
+                    6,
+                    4,
+                    2,
+                    7,
+                    3,
+                    2,
+                    9,
+                    4,
+                    8,
+                    1,
+                    2,
+                    6
+                ],
+                "color": "#FF5733"
+            },
+            {
+                "name": "Second",
+                "data": [
+                    7,
+                    3,
+                    2,
+                    4,
+                    6,
+                    4,
+                    1,
+                    2,
+                    7,
+                    4,
+                    2,
+                    5
+                ],
+                "color": "#33FF57"
+            },
+            {
+                "name": "Third",
+                "data": [
+                    9,
+                    4,
+                    8,
+                    1,
+                    2,
+                    6,
+                    4,
+                    6,
+                    4,
+                    1,
+                    2,
+                    7
+                ],
+                "color": "#3357FF"
+            },
+            {
+                "name": "Fourth",
+                "data": [
+                    1,
+                    2,
+                    6,
+                    4,
+                    6,
+                    4,
+                    1,
+                    2,
+                    7,
+                    4,
+                    2,
+                    5
+                ],
+                "color": "#FF33A1"
+            },
+            {
+                "name": "Fifth",
+                "data": [
+                    4,
+                    6,
+                    4,
+                    1,
+                    2,
+                    7,
+                    4,
+                    2,
+                    5,
+                    8,
+                    3,
+                    2
+                ],
+                "color": "#A133FF"
+            },
+            {
+                "name": "Sixth",
+                "data": [
+                    1,
+                    2,
+                    7,
+                    4,
+                    2,
+                    5,
+                    8,
+                    3,
+                    2,
+                    4,
+                    5,
+                    6
+                ],
+                "color": "#33FFA1"
+            },
+            {
+                "name": "Seventh",
+                "data": [
+                    4,
+                    2,
+                    5,
+                    8,
+                    3,
+                    2,
+                    4,
+                    5,
+                    6,
+                    1,
+                    2,
+                    6
+                ],
+                "color": "#FFA133"
+            },
+            {
+                "name": "Eighth",
+                "data": [
+                    8,
+                    3,
+                    2,
+                    4,
+                    5,
+                    6,
+                    1,
+                    2,
+                    6,
+                    4,
+                    6,
+                    4
+                ],
+                "color": "#A1FF33"
+            },
+            {
+                "name": "Ninth",
+                "data": [
+                    4,
+                    5,
+                    6,
+                    1,
+                    2,
+                    6,
+                    4,
+                    6,
+                    4,
+                    1,
+                    2,
+                    7
+                ],
+                "color": "#33A1FF"
+            }
+        ],
+        "plotOptions": {
+            "column": {
+                "pointPadding": 0.2,
+                "borderWidth": 0
+            }
+        },
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a column chart with the title 'Monthly Sales Data'. The chart includes styled axes and labels with specific colors and font sizes for better readability. The data series represents monthly sales data for different products, each with a unique name and corresponding data points. Custom colors are assigned to each series to differentiate them visually. Additional configurations include settings for chart margins, background, and legend, ensuring a clean and organized presentation. The legend's 'itemWidth' is set to 100 to control the width of each legend item, and the chart's width is set to 500 pixels. The 'plotOptions' section customizes the appearance of the columns, and credits are disabled to remove the Highcharts watermark."
+}

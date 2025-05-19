@@ -1,0 +1,144 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a variable pie chart with two series. The chart should have a title 'Example of the sizeBy option' and a subtitle explaining the difference between the two pies. The first series should be named 'Size by radius' and the second 'Size by area'. Each series should have specific data points and should be positioned on the chart accordingly. The chart should have custom colors and styling for labels, axes, and titles.",
+    "visualization_code": {
+        "chart": {
+            "type": "variablepie"
+        },
+        "title": {
+            "text": "Example of the sizeBy option",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "subtitle": {
+            "text": "Left pie - sizeBy = 'radius'. Right pie - sizeBy = 'area'",
+            "style": {
+                "color": "#666666",
+                "fontSize": "14px"
+            }
+        },
+        "plotOptions": {
+            "variablepie": {
+                "dataLabels": {
+                    "enabled": false
+                }
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "size": "70%",
+                "innerSize": "20%",
+                "center": [
+                    "25%",
+                    "50%"
+                ],
+                "name": "Size by radius",
+                "sizeBy": "radius",
+                "data": [
+                    {
+                        "y": 505370,
+                        "z": 1
+                    },
+                    {
+                        "y": 551500,
+                        "z": 2
+                    },
+                    {
+                        "y": 312685,
+                        "z": 4
+                    },
+                    {
+                        "y": 78867,
+                        "z": 8
+                    },
+                    {
+                        "y": 301340,
+                        "z": 9
+                    },
+                    {
+                        "y": 41277,
+                        "z": 21
+                    },
+                    {
+                        "y": 357022,
+                        "z": 22
+                    }
+                ],
+                "color": "#FF6384"
+            },
+            {
+                "size": "70%",
+                "innerSize": "20%",
+                "center": [
+                    "75%",
+                    "50%"
+                ],
+                "sizeBy": "area",
+                "name": "Size by area",
+                "data": [
+                    {
+                        "y": 505370,
+                        "z": 1
+                    },
+                    {
+                        "y": 551500,
+                        "z": 2
+                    },
+                    {
+                        "y": 312685,
+                        "z": 4
+                    },
+                    {
+                        "y": 78867,
+                        "z": 8
+                    },
+                    {
+                        "y": 301340,
+                        "z": 9
+                    },
+                    {
+                        "y": 41277,
+                        "z": 21
+                    },
+                    {
+                        "y": 357022,
+                        "z": 22
+                    }
+                ],
+                "color": "#36A2EB"
+            }
+        ],
+        "colors": [
+            "#FF6384",
+            "#36A2EB"
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#555555",
+                "fontSize": "12px"
+            }
+        },
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a variable pie chart with two series, each representing data points with different sizing methods. The first series, 'Size by radius', uses the 'radius' method to size the pie slices, while the second series, 'Size by area', uses the 'area' method. Both series are positioned on the chart to create a visual comparison. The chart includes a title and subtitle with specific styling for better readability. The axes labels and legend are also styled to match the overall theme. Custom colors are applied to the series to differentiate them visually. The chart is designed to be informative and visually appealing, with all elements styled consistently."
+}

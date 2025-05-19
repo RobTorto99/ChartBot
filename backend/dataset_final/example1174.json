@@ -1,0 +1,81 @@
+{
+    "visualization_prompt": "Generate a pie chart illustrating synthetic browser market share distribution using Highcharts' series.keys option for multi-property data mapping",
+    "visualization_code": {
+        "title": {
+            "text": "Synthetic Browser Market Share Analysis"
+        },
+        "subtitle": {
+            "text": "Demonstration of series.keys for property mapping"
+        },
+        "tooltip": {
+            "pointFormat": "{series.name}: <b>{point.percentage:.1f}%</b>"
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<b>{point.name}</b>: {point.percentage:.1f} %"
+                }
+            }
+        },
+        "series": [
+            {
+                "type": "pie",
+                "name": "Usage share",
+                "keys": [
+                    "name",
+                    "y",
+                    "sliced",
+                    "selected"
+                ],
+                "data": [
+                    [
+                        "Chrome",
+                        45.0,
+                        true,
+                        true
+                    ],
+                    [
+                        "Firefox",
+                        20.0
+                    ],
+                    [
+                        "Safari",
+                        15.0
+                    ],
+                    [
+                        "Edge",
+                        10.0
+                    ],
+                    [
+                        "Opera",
+                        3.0
+                    ],
+                    [
+                        "Brave",
+                        2.0
+                    ],
+                    [
+                        "Vivaldi",
+                        1.5
+                    ],
+                    [
+                        "UC Browser",
+                        1.0
+                    ],
+                    [
+                        "Samsung Internet",
+                        1.0
+                    ],
+                    [
+                        "Other",
+                        1.5
+                    ]
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "This dataset contains 10 categorical entries representing synthetic browser market shares. Variables include nominal (browser names) and ratio (percentage share) data types. Synthetic values were generated with a power-law distribution (\u03bc=9.2%, \u03c3=13.1) to simulate realistic market dominance patterns, summing to 100% through iterative normalization. The pie chart was selected to emphasize part-to-whole relationships despite Tufte's data-ink criticisms, justified by Cairo's principle of proportional perception in partitive comparisons. Pre-attentive processing is enhanced through strategic use of slice offsetting (Chrome segment) and categorical color differentiation. Statistical anchors include Chrome's 45% dominance (\u00b15% realistic variance) and long-tail distribution with 5 categories below 2% share."
+}

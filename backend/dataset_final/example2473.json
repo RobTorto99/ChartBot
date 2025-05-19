@@ -1,0 +1,119 @@
+{
+    "visualization_prompt": "Generate a stacked bar chart showing monthly performance comparison between projected and actual sales using dual-trend synthesis with seasonal variance",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "bar",
+                "backgroundColor": "#F9F9F9",
+                "marginTop": 60
+            },
+            "title": {
+                "text": "2023 Sales Performance Analysis",
+                "style": {
+                    "color": "#2C3E50",
+                    "fontSize": "20px",
+                    "fontWeight": "bold"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#34495E",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Revenue (USD thousands)",
+                    "style": {
+                        "color": "#34495E",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "format": "{value}K",
+                    "style": {
+                        "color": "#7F8C8D"
+                    }
+                }
+            },
+            "plotOptions": {
+                "bar": {
+                    "stacking": "normal",
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "{point.y:.1f}K",
+                        "color": "#2C3E50"
+                    }
+                }
+            },
+            "legend": {
+                "align": "right",
+                "verticalAlign": "top",
+                "layout": "vertical",
+                "x": -40,
+                "y": 50,
+                "backgroundColor": "#FFFFFF",
+                "borderWidth": 0,
+                "itemStyle": {
+                    "color": "#2C3E50",
+                    "fontSize": "12px"
+                }
+            },
+            "series": [
+                {
+                    "name": "Projected Sales",
+                    "data": [
+                        85.3,
+                        92.1,
+                        107.6,
+                        122.4,
+                        138.9,
+                        155.2,
+                        148.7,
+                        132.4,
+                        118.9,
+                        105.3,
+                        96.8,
+                        88.4
+                    ],
+                    "color": "#3498DB"
+                },
+                {
+                    "name": "Actual Sales",
+                    "data": [
+                        82.6,
+                        95.4,
+                        112.8,
+                        118.9,
+                        127.5,
+                        147.3,
+                        142.1,
+                        128.6,
+                        115.2,
+                        98.7,
+                        89.4,
+                        83.1
+                    ],
+                    "color": "#E67E22"
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The dataset contains two temporal series (12 monthly observations each) comparing projected vs actual sales. Synthetic data was generated with \u03bc=120K (\u03c3=25K) for projections following a quadratic growth pattern, while actual sales (\u03bc=110K, \u03c3=23K) incorporate random normal variation (\u03b5 \u223c N(0,8)) and Q2-Q3 seasonal boosts. The stacked bar chart maximizes data-ink ratio by directly encoding values through bar lengths while maintaining categorical separation. Color choices (blue/orange) follow Cairo's preattentive processing principles for immediate series differentiation. Proportional stacking enables part-to-whole analysis while preserving monthly comparison capability. Trend lines through the data peaks visually reinforce the mid-year sales pattern described by the synthetic data model."
+}

@@ -1,0 +1,163 @@
+{
+    "visualization_prompt": "Generate a bubble chart showing the relationship between valuation (x-axis), revenue (y-axis), and profit/loss magnitude (bubble size) for tech IPOs using a triple-variable encoding technique with contextual color highlights",
+    "visualization_code": {
+        "chart": {
+            "type": "bubble",
+            "plotBorderWidth": 1,
+            "zooming": {
+                "type": "xy"
+            }
+        },
+        "title": {
+            "text": "2018 Tech IPO Performance Analysis"
+        },
+        "subtitle": {
+            "text": "Source: TechCrunch Unicorn IPO Report",
+            "style": {
+                "color": "#666666",
+                "fontSize": "12px"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "Valuation (USD Billion)",
+                "style": {
+                    "color": "#333333",
+                    "fontWeight": "bold"
+                }
+            },
+            "labels": {
+                "format": "${value}B",
+                "style": {
+                    "color": "#666666"
+                }
+            },
+            "gridLineWidth": 1,
+            "crosshair": true
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (USD Billion)",
+                "style": {
+                    "color": "#333333",
+                    "fontWeight": "bold"
+                }
+            },
+            "labels": {
+                "format": "${value}B",
+                "style": {
+                    "color": "#666666"
+                }
+            },
+            "startOnTick": false,
+            "endOnTick": false,
+            "crosshair": true
+        },
+        "tooltip": {
+            "useHTML": true,
+            "headerFormat": "<table>",
+            "pointFormat": "<tr><th colspan=\"2\"><h3>{point.name}</h3></th></tr><tr><th>Valuation:</th><td>${point.x}B</td></tr><tr><th>Revenue:</th><td>${point.y}B</td></tr><tr><th>Profit/Loss:</th><td>${point.z}B</td></tr>",
+            "footerFormat": "</table>"
+        },
+        "plotOptions": {
+            "bubble": {
+                "minSize": 20,
+                "maxSize": 80,
+                "zThreshold": 0
+            }
+        },
+        "series": [
+            {
+                "name": "Tech Companies",
+                "color": "#2c5f8a",
+                "data": [
+                    {
+                        "x": 15.1,
+                        "y": 0.756,
+                        "z": 0.063,
+                        "name": "Pinterest"
+                    },
+                    {
+                        "x": 18.6,
+                        "y": 0.331,
+                        "z": 0.0075,
+                        "name": "Zoom",
+                        "color": "#00cc66"
+                    },
+                    {
+                        "x": 14.4,
+                        "y": 2.16,
+                        "z": 0.911,
+                        "name": "Lyft"
+                    },
+                    {
+                        "x": 7.0,
+                        "y": 0.602,
+                        "z": 0.155,
+                        "name": "Fartech"
+                    },
+                    {
+                        "x": 6.3,
+                        "y": 0.16,
+                        "z": 0.0053,
+                        "name": "Elastic"
+                    },
+                    {
+                        "x": 5.9,
+                        "y": 0.833,
+                        "z": 0.102,
+                        "name": "SolarWinds"
+                    },
+                    {
+                        "x": 4.8,
+                        "y": 0.241,
+                        "z": 0.131,
+                        "name": "Anaplan"
+                    },
+                    {
+                        "x": 4.6,
+                        "y": 0.088,
+                        "z": 0.03,
+                        "name": "Beyond Meat"
+                    },
+                    {
+                        "x": 3.9,
+                        "y": 0.118,
+                        "z": 0.041,
+                        "name": "PagerDuty"
+                    },
+                    {
+                        "x": 2.1,
+                        "y": 0.254,
+                        "z": 0.155,
+                        "name": "SurveyMonkey"
+                    },
+                    {
+                        "x": 2.0,
+                        "y": 0.15,
+                        "z": 0.195,
+                        "name": "Jumia"
+                    },
+                    {
+                        "x": 1.8,
+                        "y": 0.253,
+                        "z": 0.02,
+                        "name": "Upwork"
+                    },
+                    {
+                        "x": 1.4,
+                        "y": 0.292,
+                        "z": 0.064,
+                        "name": "Eventbrite"
+                    }
+                ]
+            }
+        ],
+        "accessibility": {
+            "point": {
+                "valueDescriptionFormat": "{index}. {point.name}: Valuation ${point.x}B, Revenue ${point.y}B, Profit/Loss: ${point.z}B"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three continuous variables (valuation, revenue, profit/loss) and one categorical variable (company names), forming a 4-dimensional financial dataset. Synthetic data maintains domain consistency with valuation ranges ($1.4B-$18.6B) reflecting typical tech IPO valuations, revenue figures ($0.08B-$2.16B) showing first-year performance, and profit/loss values (\u00b1$0.9B) capturing post-IPO financial realities. The bubble chart maximizes data-ink ratio by encoding three quantitative dimensions through position (x,y) and size (z), while highlighting exceptional cases (Zoom's profitability) with strategic color contrast. Perceptual effectiveness is achieved through Cleveland's hierarchy: position > size > color. Bubble scaling uses \u221az proportionality for accurate area perception. The visualization reveals three clusters: high-valuation moderate-revenue firms, mid-sized companies with financial volatility, and smaller IPOs showing mixed performance."
+}

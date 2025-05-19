@@ -1,0 +1,88 @@
+{
+    "visualization_prompt": "Generate a gauge chart showing performance metrics using angular dial visualization",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "gauge",
+                "backgroundColor": "#f5f5f5",
+                "plotBorderWidth": 0,
+                "plotShadow": false
+            },
+            "title": {
+                "text": "System Throughput Monitor",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "20px",
+                    "fontWeight": "bold"
+                }
+            },
+            "pane": {
+                "startAngle": -150,
+                "endAngle": 150,
+                "background": [
+                    {
+                        "backgroundColor": "#FFFFFF",
+                        "borderWidth": 0,
+                        "outerRadius": "110%"
+                    }
+                ]
+            },
+            "yAxis": {
+                "min": 0,
+                "max": 120,
+                "lineColor": "#606060",
+                "tickWidth": 2,
+                "minorTickInterval": "auto",
+                "labels": {
+                    "style": {
+                        "color": "#404040",
+                        "fontSize": "12px"
+                    }
+                },
+                "title": {
+                    "text": "MB/s",
+                    "style": {
+                        "color": "#707070",
+                        "fontSize": "14px"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Data Throughput",
+                    "data": [
+                        94
+                    ],
+                    "dial": {
+                        "radius": "110%",
+                        "backgroundColor": "rgba(0, 150, 200, 0.8)",
+                        "borderColor": "#004466",
+                        "borderWidth": 2,
+                        "baseWidth": 12,
+                        "topWidth": 1,
+                        "baseLength": "85%",
+                        "rearLength": "40%"
+                    },
+                    "dataLabels": {
+                        "format": "{y} MB/s",
+                        "borderRadius": 5,
+                        "backgroundColor": "rgba(255, 255, 255, 0.9)",
+                        "style": {
+                            "color": "#004466",
+                            "fontSize": "16px"
+                        }
+                    }
+                }
+            ],
+            "plotOptions": {
+                "gauge": {
+                    "pivot": {
+                        "radius": 5,
+                        "backgroundColor": "#004466"
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "This gauge visualization represents a univariate dataset (single performance metric) with synthetic throughput values. The angular display (210\u00b0 arc) encodes quantitative information spatially, while the dial's radial position provides precise numerical anchoring. Synthetic data follows operational constraints (0-120 MB/s range) with the current reading (94 MB/s) intentionally placed in the upper quartile to demonstrate warning-state visualization principles. The color gradient from blue to white and controlled contrast ratios adhere to perceptual uniformity guidelines. The dial's dimensional parameters (baseWidth: 12px, radius: 110%) maintain visibility at varying distances while preventing chart junk. Typographic hierarchy (16px data labels vs 12px axis labels) follows Tufte's layering principles, directing attention to primary metrics."
+}

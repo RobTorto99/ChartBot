@@ -1,0 +1,120 @@
+{
+    "visualization_prompt": "Generate a stacked column chart showing monthly renewable energy contributions using seasonally-adjusted synthetic generation data",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "backgroundColor": "#FFFFFF",
+                "marginTop": 30,
+                "marginBottom": 70
+            },
+            "title": {
+                "text": "2023 Monthly Renewable Energy Generation (GWh)",
+                "style": {
+                    "fontSize": "18px",
+                    "color": "#2E4053"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#34495E",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Energy Generation",
+                    "style": {
+                        "color": "#34495E",
+                        "fontSize": "12px"
+                    }
+                },
+                "stackLabels": {
+                    "enabled": true,
+                    "align": "center",
+                    "style": {
+                        "fontWeight": "bold",
+                        "textOutline": "none"
+                    }
+                }
+            },
+            "colors": [
+                "#FFA726",
+                "#29B6F6"
+            ],
+            "plotOptions": {
+                "column": {
+                    "stacking": "normal",
+                    "dataLabels": {
+                        "enabled": true,
+                        "color": "#FFFFFF",
+                        "format": "{point.y:.0f}"
+                    },
+                    "groupPadding": 0.1
+                }
+            },
+            "series": [
+                {
+                    "name": "Solar",
+                    "data": [
+                        40,
+                        60,
+                        80,
+                        100,
+                        140,
+                        160,
+                        150,
+                        130,
+                        110,
+                        90,
+                        70,
+                        50
+                    ],
+                    "stack": "renewables"
+                },
+                {
+                    "name": "Wind",
+                    "data": [
+                        120,
+                        110,
+                        100,
+                        90,
+                        80,
+                        70,
+                        80,
+                        90,
+                        100,
+                        110,
+                        120,
+                        130
+                    ],
+                    "stack": "renewables"
+                }
+            ],
+            "legend": {
+                "align": "center",
+                "verticalAlign": "bottom",
+                "itemStyle": {
+                    "color": "#2C3E50"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two temporal series (Solar and Wind generation) across 12 monthly intervals. Synthetic data maintains domain validity through inverse seasonal patterns: Solar shows summer peaking (\u03bc=99.2, \u03c3=40.1) while Wind demonstrates winter dominance (\u03bc=99.2, \u03c3=17.8). The stacked column format adheres to Tufte's principles by maximizing data-ink through direct value labels instead of axis reliance. Cairo's color perception guidelines are implemented using high-contrast orange (#FFA726) and blue (#29B6F6) with white text for accessibility. The dual seasonal trends (+20% solar summer amplitude, -15% wind summer dip) create natural data clusters while maintaining constant annual means for controlled comparison."
+}

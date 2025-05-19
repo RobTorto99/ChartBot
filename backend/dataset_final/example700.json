@@ -1,0 +1,89 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the following specifications: Chart type: column, Chart title: 'Top 10 nuclear vs renewable energy producers (2011)', Axes and labels styling: x-axis categories for countries, y-axis labels formatted as percentages, Custom colors: ['#01BAF2', '#71BF45', '#FFA500'], Data series: three series with names 'Hydropower', 'Other renewable', and 'Nuclear', each containing data for the top 10 countries, Additional configurations: include a subtitle with a source link, shared tooltip, and no title for the y-axis.",
+    "visualization_code": {
+        "chart": {
+            "type": "column"
+        },
+        "title": {
+            "text": "Top 10 nuclear vs renewable energy producers (2011)"
+        },
+        "subtitle": {
+            "text": "Source: <a href=\"https://en.wikipedia.org/wiki/List_of_countries_by_electricity_production\">Wikipedia</a>"
+        },
+        "xAxis": {
+            "categories": [
+                "China",
+                "United States",
+                "Russia",
+                "India",
+                "Japan",
+                "Canada",
+                "Germany",
+                "France",
+                "South Korea",
+                "United Kingdom"
+            ]
+        },
+        "yAxis": {
+            "labels": {
+                "format": "{value} %"
+            },
+            "min": 0,
+            "title": {
+                "text": null
+            }
+        },
+        "tooltip": {
+            "pointFormat": "<span style=\"color:{series.color}\">{series.name}</span>: <b>{point.y}%</b><br/>",
+            "shared": true
+        },
+        "series": [
+            {
+                "name": "Hydropower",
+                "data": [
+                    14.8,
+                    7.4,
+                    15.7,
+                    12.4,
+                    8,
+                    59,
+                    2.9,
+                    8,
+                    0.9,
+                    1.6
+                ]
+            },
+            {
+                "name": "Other renewable",
+                "data": [
+                    2.2,
+                    4.8,
+                    0.1,
+                    5,
+                    4.2,
+                    3.3,
+                    17.6,
+                    3.6,
+                    0.6,
+                    40.3
+                ]
+            },
+            {
+                "name": "Nuclear",
+                "data": [
+                    1.8,
+                    19.2,
+                    16.4,
+                    3.2,
+                    9.8,
+                    14.7,
+                    17.9,
+                    79.4,
+                    29.8,
+                    19.1
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart that compares the production of nuclear and renewable energy among the top 10 countries in 2011. The chart includes a main title and a subtitle with a link to the data source. The x-axis is labeled with the names of the countries, and the y-axis is formatted to display percentages. The chart uses custom colors for the data series, which are defined globally using Highcharts.setOptions. The tooltip is shared among the series, displaying the series name and the corresponding percentage value. The y-axis title is intentionally set to null to avoid redundancy, as the percentage format of the labels already indicates the nature of the data."
+}

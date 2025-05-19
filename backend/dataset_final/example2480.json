@@ -1,0 +1,171 @@
+{
+    "visualization_prompt": "Generate a network graph showing hierarchical relationships between European locations using force-directed layout with customized node/link attributes",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "networkgraph",
+                "backgroundColor": "#f8f9fa",
+                "margin": [
+                    20,
+                    20,
+                    40,
+                    20
+                ]
+            },
+            "title": {
+                "text": "European Location Connectivity Network",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "18px",
+                    "fontWeight": "bold"
+                }
+            },
+            "subtitle": {
+                "text": "Line width = Connection strength \u2022 Dashed = Intermittent links \u2022 Colored nodes = Special status",
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            },
+            "plotOptions": {
+                "networkgraph": {
+                    "layoutAlgorithm": {
+                        "enableSimulation": true,
+                        "friction": -0.9,
+                        "maxSpeed": 10
+                    },
+                    "dataLabels": {
+                        "style": {
+                            "color": "#34495e",
+                            "fontSize": "11px",
+                            "textOutline": "none"
+                        }
+                    }
+                }
+            },
+            "series": [
+                {
+                    "link": {
+                        "width": 2,
+                        "color": "#95a5a6"
+                    },
+                    "nodes": [
+                        {
+                            "id": "Europe",
+                            "color": "#2980b9",
+                            "marker": {
+                                "radius": 18
+                            }
+                        },
+                        {
+                            "id": "UK",
+                            "color": "#c0392b"
+                        },
+                        {
+                            "id": "Poland",
+                            "color": "#27ae60"
+                        },
+                        {
+                            "id": "Italy",
+                            "color": "#2c3e50"
+                        },
+                        {
+                            "id": "Krakow",
+                            "color": "#e67e22",
+                            "marker": {
+                                "symbol": "diamond"
+                            }
+                        },
+                        {
+                            "id": "London",
+                            "color": "#8e44ad"
+                        },
+                        {
+                            "id": "Bristol",
+                            "color": "#16a085"
+                        },
+                        {
+                            "id": "Warsaw",
+                            "color": "#d35400"
+                        },
+                        {
+                            "id": "Roma",
+                            "color": "#7f8c8d"
+                        },
+                        {
+                            "id": "Piza",
+                            "color": "#f1c40f"
+                        }
+                    ],
+                    "data": [
+                        {
+                            "from": "Europe",
+                            "to": "UK",
+                            "width": 4
+                        },
+                        {
+                            "from": "Europe",
+                            "to": "Poland",
+                            "dashStyle": "dot",
+                            "color": "#e74c3c",
+                            "width": 3
+                        },
+                        {
+                            "from": "Europe",
+                            "to": "Italy",
+                            "width": 4,
+                            "color": "#2c3e50"
+                        },
+                        {
+                            "from": "UK",
+                            "to": "London",
+                            "width": 2,
+                            "color": "#9b59b6"
+                        },
+                        {
+                            "from": "UK",
+                            "to": "Bristol",
+                            "dashStyle": "dash",
+                            "width": 1
+                        },
+                        {
+                            "from": "Poland",
+                            "to": "Warsaw",
+                            "width": 3
+                        },
+                        {
+                            "from": "Poland",
+                            "to": "Krakow",
+                            "width": 2,
+                            "color": "#e67e22"
+                        },
+                        {
+                            "from": "Italy",
+                            "to": "Roma",
+                            "width": 2
+                        },
+                        {
+                            "from": "Italy",
+                            "to": "Piza",
+                            "dashStyle": "dot",
+                            "width": 1
+                        }
+                    ]
+                }
+            ],
+            "exporting": {
+                "enabled": true,
+                "buttons": {
+                    "contextButton": {
+                        "menuItems": [
+                            "viewFullscreen",
+                            "printChart",
+                            "downloadPNG",
+                            "downloadSVG"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The network graph represents a hierarchical structure with Europe as the root node connecting to country-level nodes (UK, Poland, Italy), which further connect to cities. Node colors follow a categorical scheme (blue for continents, red/green for countries, varied colors for cities) with size encoding hierarchy level. Link styles encode relationship types: thick solid lines for primary connections (\u03bc width=3.1), dashed/dotted for secondary links (\u03c3 width=1.2). Synthetic data maintains geographic plausibility with 10 nodes and 9 links ensuring full connectivity. The force-directed layout (\u03bc edge length=150px) combined with Tufte-inspired minimal ink (removed redundant gridlines) allows emergent cluster patterns while Cairo's pre-attentive features (color-coded nodes, width-coded links) enable immediate pattern recognition."
+}

@@ -1,0 +1,88 @@
+{
+    "visualization_prompt": "Generate a grouped bar chart showing comparison of organic agricultural area across countries between 2012 and 2018 using pattern-filled bars with contrasting border colors",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "zooming": {
+                "type": "y"
+            }
+        },
+        "title": {
+            "text": "Total organic area 2012 and 2018"
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://ec.europa.eu/eurostat/statistics-explained/index.php?title=File:Tab1_Total_organic_area_(fully_converted_and_under_conversion),_by_country,_2012_and_2018.png'>Eurostat</a>"
+        },
+        "xAxis": {
+            "categories": [
+                "AUT",
+                "EST",
+                "SWE"
+            ],
+            "title": {
+                "text": null
+            },
+            "accessibility": {
+                "description": "Countries"
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": null
+            },
+            "tickInterval": 500,
+            "labels": {
+                "overflow": "justify",
+                "format": "{value} kha"
+            },
+            "accessibility": {
+                "description": "Organic area",
+                "rangeDescription": "0 to 1000 kha"
+            }
+        },
+        "plotOptions": {
+            "bar": {
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y} kha"
+                }
+            }
+        },
+        "tooltip": {
+            "valueSuffix": "kha",
+            "stickOnContact": true,
+            "borderColor": "#555",
+            "backgroundColor": "rgba(255, 255, 255, 0.95)"
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "name": "2012",
+                "data": [
+                    533.23,
+                    142.065,
+                    477.684
+                ],
+                "color": {
+                    "patternIndex": 0
+                },
+                "borderColor": "#5f98cf"
+            },
+            {
+                "name": "2018",
+                "data": [
+                    639.097,
+                    206.59,
+                    608.754
+                ],
+                "color": {
+                    "patternIndex": 1
+                },
+                "borderColor": "#555"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains 2-dimensional categorical data comparing organic agricultural areas (in thousand hectares) across three European countries for two reference years. Variables include nominal country codes (AUT, EST, SWE) and ratio-scale area measurements. Original Eurostat data shows 12-28% growth between observations, preserved in synthetic values through proportional scaling of 2012 baselines. The grouped bar chart maximizes data-ink ratio by eliminating legend through direct data labeling, while pattern fills with contrasting borders maintain Cairo's discriminability principles for adjacent columns. Axis truncation at 700 kha (vs max 639 kha) follows Tufte's 'within-data-range' framing. Value labels use natural units (kha) with D3-style formatting for immediate interpretation."
+}

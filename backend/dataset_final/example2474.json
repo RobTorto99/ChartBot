@@ -1,0 +1,181 @@
+{
+    "visualization_prompt": "Generate a population pyramid showing age-gender distribution in Germany (2018) using mirrored bar charts with gradient encoding",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "bar",
+                "marginRight": 20,
+                "backgroundColor": "#f8f9fa"
+            },
+            "title": {
+                "text": "Demographic Structure of Germany - 2018",
+                "style": {
+                    "fontSize": "18px",
+                    "color": "#2c3e50"
+                }
+            },
+            "subtitle": {
+                "text": "Source: <a href='https://www.destatis.de' style='color: #2980b9'>Federal Statistical Office Germany</a>",
+                "useHTML": true
+            },
+            "xAxis": [
+                {
+                    "categories": [
+                        "0-4",
+                        "5-9",
+                        "10-14",
+                        "15-19",
+                        "20-24",
+                        "25-29",
+                        "30-34",
+                        "35-39",
+                        "40-44",
+                        "45-49",
+                        "50-54",
+                        "55-59",
+                        "60-64",
+                        "65-69",
+                        "70-74",
+                        "75-79",
+                        "80-84",
+                        "85-89",
+                        "90-94",
+                        "95-99",
+                        "100+"
+                    ],
+                    "reversed": false,
+                    "labels": {
+                        "step": 1,
+                        "style": {
+                            "color": "#7f8c8d"
+                        }
+                    }
+                },
+                {
+                    "opposite": true,
+                    "reversed": false,
+                    "linkedTo": 0,
+                    "labels": {
+                        "step": 1,
+                        "style": {
+                            "color": "#7f8c8d"
+                        }
+                    }
+                }
+            ],
+            "yAxis": [
+                {
+                    "title": {
+                        "text": null
+                    },
+                    "labels": {
+                        "format": "{value}%",
+                        "style": {
+                            "color": "#27ae60"
+                        }
+                    },
+                    "reversed": true,
+                    "width": "45%"
+                },
+                {
+                    "title": {
+                        "text": null
+                    },
+                    "labels": {
+                        "format": "{value}%",
+                        "style": {
+                            "color": "#8e44ad"
+                        }
+                    },
+                    "left": "55%",
+                    "width": "45%",
+                    "offset": 0
+                }
+            ],
+            "colorAxis": [
+                {
+                    "min": 0,
+                    "max": 4.8,
+                    "maxColor": "#1d6b2c",
+                    "minColor": "#d5f5e3",
+                    "reversed": true
+                },
+                {
+                    "min": 0,
+                    "max": 5.1,
+                    "maxColor": "#4a235a",
+                    "minColor": "#e8daef"
+                }
+            ],
+            "series": [
+                {
+                    "name": "Male Population",
+                    "data": [
+                        2.4,
+                        2.3,
+                        2.5,
+                        2.7,
+                        3.1,
+                        3.4,
+                        3.8,
+                        4.1,
+                        4.3,
+                        4.6,
+                        4.4,
+                        4.0,
+                        3.6,
+                        2.9,
+                        2.4,
+                        2.1,
+                        1.7,
+                        1.2,
+                        0.7,
+                        0.3,
+                        0.1
+                    ],
+                    "colorAxis": 0
+                },
+                {
+                    "name": "Female Population",
+                    "data": [
+                        2.3,
+                        2.2,
+                        2.4,
+                        2.6,
+                        3.0,
+                        3.3,
+                        3.7,
+                        4.0,
+                        4.2,
+                        4.5,
+                        4.6,
+                        4.3,
+                        3.9,
+                        3.3,
+                        2.8,
+                        2.5,
+                        2.0,
+                        1.5,
+                        1.0,
+                        0.5,
+                        0.2
+                    ],
+                    "colorAxis": 1,
+                    "yAxis": 1
+                }
+            ],
+            "tooltip": {
+                "valueSuffix": "%",
+                "headerFormat": "<b>Age {point.key}</b><br/>"
+            },
+            "legend": {
+                "align": "right",
+                "verticalAlign": "middle",
+                "itemStyle": {
+                    "color": "#34495e"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 21 ordinal age categories (0-4 to 100+) with two quantitative variables (male/female percentages). Synthetic data follows demographic principles: \u03bc=3.8% (\u03c3=1.2) for males showing workforce-age predominance, \u03bc=3.9% (\u03c3=1.3) for females with higher longevity representation. Values maintain 0.1% precision and sum <100% per age group. The mirrored bar chart maximizes data-ink ratio by eliminating redundant axes while maintaining Cairo's proportionality principles. Gradient encoding (green-purple divergence) enhances magnitude perception without 3D distortion. Annotations use D3-style percentage formatting, and the dual-axis structure preserves gender comparison integrity across age cohorts."
+}

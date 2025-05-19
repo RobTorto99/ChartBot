@@ -1,0 +1,90 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a bar chart with the following specifications: Chart type is bar, chart title is 'Fruit Consumption', axes and labels styling includes specific colors and font sizes, data series includes the name 'Fruit consumption' and its data, custom colors are provided, and additional configurations include chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "backgroundColor": "#f9f9f9",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "Fruit Consumption",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Apples",
+                "Pears",
+                "Bananas",
+                "Oranges",
+                "Carrots"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": null
+            },
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "name": "Fruit consumption",
+                "data": [
+                    112,
+                    2345,
+                    3245,
+                    6321,
+                    6870
+                ],
+                "dataLabels": {
+                    "align": "right",
+                    "alignTo": "plotEdges",
+                    "enabled": true,
+                    "style": {
+                        "color": "#333333",
+                        "fontSize": "12px"
+                    }
+                },
+                "colorByPoint": true,
+                "colors": [
+                    "#FF5733",
+                    "#33FF57",
+                    "#3357FF",
+                    "#FF33A1",
+                    "#A133FF"
+                ]
+            }
+        ],
+        "plotOptions": {
+            "bar": {
+                "dataLabels": {
+                    "enabled": true
+                }
+            }
+        },
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a bar chart with the title 'Fruit Consumption'. The x-axis categories represent different fruits, and the y-axis displays the consumption data. The chart includes specific styling for the title, axes labels, and data labels, with defined colors and font sizes. The data series is named 'Fruit consumption' and includes the consumption data for each fruit. Custom colors are applied to each bar in the series. Additional configurations include disabling the legend, setting the chart background color, and adjusting the chart margins for better visual appeal."
+}

@@ -1,0 +1,95 @@
+{
+    "visualization_prompt": "Generate a boxplot showing distribution variations across three experimental groups using customized whisker lengths and synthetic five-number summaries",
+    "visualization_code": {
+        "chart": {
+            "type": "boxplot",
+            "width": 800,
+            "height": 400,
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "Experimental Group Performance Distribution",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Control Group",
+                "Treatment A",
+                "Treatment B"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": null
+            },
+            "labels": {
+                "format": "{value}\u03c3",
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Experimental Results",
+                "color": "#e74c3c",
+                "data": [
+                    {
+                        "x": 0,
+                        "low": 28,
+                        "q1": 35,
+                        "median": 42,
+                        "q3": 48,
+                        "high": 55,
+                        "whiskerLength": "50%"
+                    },
+                    {
+                        "x": 1,
+                        "low": 12,
+                        "q1": 25,
+                        "median": 38,
+                        "q3": 52,
+                        "high": 65,
+                        "lowerWhiskerLength": "150%"
+                    },
+                    {
+                        "x": 2,
+                        "low": 40,
+                        "q1": 45,
+                        "median": 49,
+                        "q3": 53,
+                        "high": 57,
+                        "upperWhiskerLength": "10%"
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "boxplot": {
+                "fillColor": "#f1f2f6",
+                "lineWidth": 2,
+                "whiskerWidth": 2
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three categorical groups with five-number summaries (minimum, Q1, median, Q3, maximum) synthesized to demonstrate different distribution characteristics. Control Group shows normal distribution (\u03bc=42, \u03c3=8.5), Treatment A exhibits left skew with wider spread (\u03bc=38, \u03c3=15.2), and Treatment B displays tight clustering (\u03bc=49, \u03c3=4.8). The boxplot format maximizes data-ink ratio by eliminating redundant chart elements while preserving distribution metrics. Cairo's principles are applied through position encoding for quartiles and length encoding for whiskers. Custom whisker lengths highlight measurement variability differences: 50% symmetrical reduction (Control), extended lower whisker for left-tailed data (Treatment A), and truncated upper whisker for right-censored results (Treatment B)."
+}

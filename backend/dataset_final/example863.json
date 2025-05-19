@@ -1,0 +1,139 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the following specifications: Chart type: column, Chart title: Monthly Sales Data, Axes and labels styling: Use a dark background with white text for labels and titles, Data series: Two series with monthly sales data, Custom colors: Use a gradient from blue to green for the columns, Additional configurations: Set chart margins, background, and legend.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#2c3e50",
+            "marginTop": 60,
+            "marginBottom": 80,
+            "marginLeft": 80,
+            "marginRight": 80
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales",
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "14px"
+                }
+            },
+            "stackLabels": {
+                "enabled": true,
+                "style": {
+                    "color": "#000000",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "normal",
+                "pointPadding": 0,
+                "groupPadding": 0,
+                "dataLabels": {
+                    "enabled": false
+                },
+                "colorByPoint": true,
+                "colors": [
+                    {
+                        "linearGradient": {
+                            "x1": 0,
+                            "x2": 0,
+                            "y1": 0,
+                            "y2": 1
+                        },
+                        "stops": [
+                            [
+                                0,
+                                "#0073e6"
+                            ],
+                            [
+                                1,
+                                "#00b300"
+                            ]
+                        ]
+                    }
+                ]
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ]
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4,
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2
+                ]
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#ffffff",
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a column chart with a dark background and white text for labels and titles. The chart displays monthly sales data with two series, each representing different sets of sales figures. The columns are colored using a gradient from blue to green, enhancing visual appeal. The chart includes additional configurations such as margins, background color, and legend styling to ensure a cohesive and readable presentation. The stacking of columns is enabled, allowing for a clear comparison of cumulative values across months."
+}

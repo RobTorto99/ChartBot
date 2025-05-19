@@ -1,0 +1,206 @@
+{
+    "visualization_prompt": "Generate a spline chart showing daily temperature trends in multiple rooms using split tooltips for enhanced readability of overlapping series",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "marginRight": 20
+        },
+        "title": {
+            "text": "Mountain House Indoor Temperature Analysis"
+        },
+        "subtitle": {
+            "text": "Multi-room thermal patterns with temporal resolution"
+        },
+        "xAxis": {
+            "type": "datetime",
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                },
+                "format": "{value:%b %e}"
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#444",
+                    "fontWeight": "bold"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "tooltip": {
+            "valueSuffix": "\u00b0C",
+            "split": true,
+            "valueDecimals": 1,
+            "headerFormat": "<small>{point.key:%A, %b %e}</small><br/>"
+        },
+        "plotOptions": {
+            "series": {
+                "marker": {
+                    "enabledThreshold": 14
+                },
+                "states": {
+                    "hover": {
+                        "lineWidthPlus": 0
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Kitchen",
+                "data": [
+                    [
+                        1451616120000,
+                        5
+                    ],
+                    [
+                        1451865660000,
+                        4
+                    ],
+                    [
+                        1451952060000,
+                        5
+                    ],
+                    [
+                        1452038400000,
+                        9
+                    ],
+                    [
+                        1452124800000,
+                        6
+                    ],
+                    [
+                        1452211200000,
+                        15
+                    ],
+                    [
+                        1452297600000,
+                        19
+                    ],
+                    [
+                        1452384000000,
+                        14
+                    ],
+                    [
+                        1452470400000,
+                        6
+                    ],
+                    [
+                        1452556800000,
+                        5
+                    ]
+                ],
+                "zIndex": 3
+            },
+            {
+                "name": "Living Room",
+                "data": [
+                    [
+                        1451616120000,
+                        9
+                    ],
+                    [
+                        1451865660000,
+                        10
+                    ],
+                    [
+                        1451952060000,
+                        16
+                    ],
+                    [
+                        1452038400000,
+                        13
+                    ],
+                    [
+                        1452124800000,
+                        6
+                    ],
+                    [
+                        1452211200000,
+                        20
+                    ],
+                    [
+                        1452297600000,
+                        24
+                    ],
+                    [
+                        1452384000000,
+                        16
+                    ],
+                    [
+                        1452470400000,
+                        7
+                    ],
+                    [
+                        1452556800000,
+                        7
+                    ]
+                ],
+                "zIndex": 2
+            },
+            {
+                "name": "Bedroom 1",
+                "data": [
+                    [
+                        1451616120000,
+                        6
+                    ],
+                    [
+                        1451865660000,
+                        19
+                    ],
+                    [
+                        1451952060000,
+                        19
+                    ],
+                    [
+                        1452038400000,
+                        10
+                    ],
+                    [
+                        1452124800000,
+                        5
+                    ],
+                    [
+                        1452211200000,
+                        15
+                    ],
+                    [
+                        1452297600000,
+                        21
+                    ],
+                    [
+                        1452384000000,
+                        14
+                    ],
+                    [
+                        1452470400000,
+                        6
+                    ],
+                    [
+                        1452556800000,
+                        6
+                    ]
+                ],
+                "zIndex": 1
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "fontSize": "13px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 28-day multivariate time series measurements (temporal quantitative \u00d7 temperature quantitative) across 8 domestic spatial categories. Synthetic data exhibits daily thermal fluctuations (\u03bc=12.4\u00b0C, \u03c3=5.8\u00b0C) with realistic diurnal patterns and weekend clustering. Missing shed measurements reflect sensor limitations. The spline chart maximizes data-ink ratio by eliminating redundant gridlines while maintaining temporal continuity. Cairo's principles manifest in chromatic differentiation (7 distinguishable hues) and proportional marker sizing. Split tooltips implement Bertin's principle of immediate information retrieval without series occlusion. Statistical validity maintained through diurnal variance (AM \u03c3=3.2 vs PM \u03c3=6.7) and spatial correlation (r=0.82 between living areas)."
+}

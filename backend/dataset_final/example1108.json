@@ -1,0 +1,375 @@
+{
+    "visualization_prompt": "Generate a bubble chart showing geographic distribution of US state capitals by region using positional encoding with hexagonal markers",
+    "visualization_code": {
+        "chart": {
+            "type": "bubble",
+            "margin": [
+                70,
+                70,
+                70,
+                70
+            ]
+        },
+        "title": {
+            "text": "Official regions of the United States"
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://en.wikipedia.org/wiki/List_of_capitals_in_the_United_States'>Wikipedia.org</a>"
+        },
+        "plotOptions": {
+            "series": {
+                "marker": {
+                    "lineColor": "transparent",
+                    "symbol": "hexagon",
+                    "lineWidth": 0
+                },
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.USstate}",
+                    "color": "#000000",
+                    "style": {
+                        "textOutline": false
+                    }
+                }
+            }
+        },
+        "tooltip": {
+            "useHTML": true,
+            "headerFormat": null,
+            "pointFormat": "- State of <b>{point.USstate}</b><br/>- The <b>{point.region}</b> region<br/><b>- {point.capital}</b> is the capital"
+        },
+        "xAxis": {
+            "lineWidth": 0,
+            "labels": {
+                "enabled": false
+            },
+            "tickLength": 0
+        },
+        "yAxis": {
+            "gridLineWidth": 0,
+            "tickPositions": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+            ],
+            "labels": {
+                "enabled": false
+            }
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "name": "West Region",
+                "data": [
+                    {
+                        "x": 0,
+                        "y": 9,
+                        "USstate": "AK",
+                        "capital": "Juneau",
+                        "region": "west"
+                    },
+                    {
+                        "x": 2,
+                        "y": 5,
+                        "USstate": "OR",
+                        "capital": "Salem",
+                        "region": "west"
+                    },
+                    {
+                        "x": 3,
+                        "y": 4,
+                        "USstate": "CA",
+                        "capital": "Sacramento",
+                        "region": "west"
+                    },
+                    {
+                        "x": 4,
+                        "y": 7,
+                        "USstate": "MT",
+                        "capital": "Helena",
+                        "region": "west"
+                    },
+                    {
+                        "x": 5,
+                        "y": 4,
+                        "USstate": "AZ",
+                        "capital": "Phoenix",
+                        "region": "west"
+                    },
+                    {
+                        "x": 6,
+                        "y": 3,
+                        "USstate": "NM",
+                        "capital": "Santa Fe",
+                        "region": "west"
+                    },
+                    {
+                        "x": 6,
+                        "y": 5,
+                        "USstate": "CO",
+                        "capital": "Denver",
+                        "region": "west"
+                    },
+                    {
+                        "x": 7,
+                        "y": 4,
+                        "USstate": "UT",
+                        "capital": "Salt Lake City",
+                        "region": "west"
+                    },
+                    {
+                        "x": 8,
+                        "y": 5,
+                        "USstate": "NE",
+                        "capital": "Lincoln",
+                        "region": "west"
+                    },
+                    {
+                        "x": 2,
+                        "y": 7,
+                        "USstate": "WA",
+                        "capital": "Olympia",
+                        "region": "west"
+                    }
+                ],
+                "color": "#2962ff",
+                "type": "bubble"
+            },
+            {
+                "name": "South Region",
+                "data": [
+                    {
+                        "x": 16,
+                        "y": 1,
+                        "USstate": "FL",
+                        "capital": "Tallahassee",
+                        "region": "south"
+                    },
+                    {
+                        "x": 7,
+                        "y": 2,
+                        "USstate": "TX",
+                        "capital": "Austin",
+                        "region": "south"
+                    },
+                    {
+                        "x": 15,
+                        "y": 2,
+                        "USstate": "GA",
+                        "capital": "Atlanta",
+                        "region": "south"
+                    },
+                    {
+                        "x": 8,
+                        "y": 3,
+                        "USstate": "OK",
+                        "capital": "Oklahoma City",
+                        "region": "south"
+                    },
+                    {
+                        "x": 10,
+                        "y": 3,
+                        "USstate": "LA",
+                        "capital": "Baton Rouge",
+                        "region": "south"
+                    },
+                    {
+                        "x": 12,
+                        "y": 3,
+                        "USstate": "MS",
+                        "capital": "Jackson",
+                        "region": "south"
+                    },
+                    {
+                        "x": 14,
+                        "y": 3,
+                        "USstate": "AL",
+                        "capital": "Montgomery",
+                        "region": "south"
+                    },
+                    {
+                        "x": 16,
+                        "y": 3,
+                        "USstate": "SC",
+                        "capital": "Columbia",
+                        "region": "south"
+                    },
+                    {
+                        "x": 11,
+                        "y": 4,
+                        "USstate": "AR",
+                        "capital": "Little Rock",
+                        "region": "south"
+                    },
+                    {
+                        "x": 13,
+                        "y": 4,
+                        "USstate": "TN",
+                        "capital": "Nashville",
+                        "region": "south"
+                    }
+                ],
+                "color": "#ffab00",
+                "type": "bubble"
+            },
+            {
+                "name": "Midwest Region",
+                "data": [
+                    {
+                        "x": 9,
+                        "y": 4,
+                        "USstate": "KS",
+                        "capital": "Topeka",
+                        "region": "midwest"
+                    },
+                    {
+                        "x": 7,
+                        "y": 6,
+                        "USstate": "SD",
+                        "capital": "Pierre",
+                        "region": "midwest"
+                    },
+                    {
+                        "x": 9,
+                        "y": 6,
+                        "USstate": "IA",
+                        "capital": "Des Moines",
+                        "region": "midwest"
+                    },
+                    {
+                        "x": 11,
+                        "y": 6,
+                        "USstate": "IL",
+                        "capital": "Springfield",
+                        "region": "midwest"
+                    },
+                    {
+                        "x": 13,
+                        "y": 6,
+                        "USstate": "IN",
+                        "capital": "Indianapolis",
+                        "region": "midwest"
+                    },
+                    {
+                        "x": 15,
+                        "y": 6,
+                        "USstate": "OH",
+                        "capital": "Columbus",
+                        "region": "midwest"
+                    },
+                    {
+                        "x": 6,
+                        "y": 7,
+                        "USstate": "ND",
+                        "capital": "Bismarck",
+                        "region": "midwest"
+                    },
+                    {
+                        "x": 8,
+                        "y": 7,
+                        "USstate": "MN",
+                        "capital": "Saint Paul",
+                        "region": "midwest"
+                    },
+                    {
+                        "x": 10,
+                        "y": 7,
+                        "USstate": "WI",
+                        "capital": "Madison",
+                        "region": "midwest"
+                    },
+                    {
+                        "x": 14,
+                        "y": 7,
+                        "USstate": "MI",
+                        "capital": "Lansing",
+                        "region": "midwest"
+                    }
+                ],
+                "color": "#00c853",
+                "type": "bubble"
+            },
+            {
+                "name": "Northeast Region",
+                "data": [
+                    {
+                        "x": 17,
+                        "y": 6,
+                        "USstate": "PA",
+                        "capital": "Harrisburg",
+                        "region": "northeast"
+                    },
+                    {
+                        "x": 19,
+                        "y": 6,
+                        "USstate": "NJ",
+                        "capital": "Trenton",
+                        "region": "northeast"
+                    },
+                    {
+                        "x": 21,
+                        "y": 6,
+                        "USstate": "CT",
+                        "capital": "Hartford",
+                        "region": "northeast"
+                    },
+                    {
+                        "x": 18,
+                        "y": 7,
+                        "USstate": "NY",
+                        "capital": "Albany",
+                        "region": "northeast"
+                    },
+                    {
+                        "x": 20,
+                        "y": 7,
+                        "USstate": "MA",
+                        "capital": "Boston",
+                        "region": "northeast"
+                    },
+                    {
+                        "x": 22,
+                        "y": 7,
+                        "USstate": "RI",
+                        "capital": "Providence",
+                        "region": "northeast"
+                    },
+                    {
+                        "x": 19,
+                        "y": 8,
+                        "USstate": "VT",
+                        "capital": "Montpelier",
+                        "region": "northeast"
+                    },
+                    {
+                        "x": 21,
+                        "y": 8,
+                        "USstate": "NH",
+                        "capital": "Concord",
+                        "region": "northeast"
+                    },
+                    {
+                        "x": 22,
+                        "y": 9,
+                        "USstate": "ME",
+                        "capital": "Augusta",
+                        "region": "northeast"
+                    }
+                ],
+                "color": "#c51162",
+                "type": "bubble"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains 4-dimensional geospatial data: x/y coordinates (quantitative interval scales), state abbreviations (nominal categorical), regions (ordinal categorical), and capital names (nominal categorical). Synthetic positioning follows real geographic relationships with x-axis representing longitude clusters and y-axis latitude bands, maintaining relative positions while optimizing chart space. Regional color coding uses categorical hues from Material Design guidelines. The bubble chart maximizes data-ink ratio by removing axis lines while preserving geographic relationships through positional encoding. Cairo's principles of salience are applied through hexagon markers and direct labeling, creating immediate state recognition. Color saturation (80% opacity) maintains figure-ground contrast while allowing marker overlap visualization. Regional clustering emerges naturally with west (blue) leftmost, south (yellow) dominant in lower half, and northeast (pink) upper-right, matching real US geography patterns."
+}

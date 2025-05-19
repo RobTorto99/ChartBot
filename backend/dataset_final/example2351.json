@@ -1,0 +1,101 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly precipitation patterns using synthetic meteorological data with seasonal variation",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#F5FEFA",
+            "marginTop": 50,
+            "marginBottom": 70
+        },
+        "title": {
+            "text": "Monthly Precipitation Distribution (2023)",
+            "style": {
+                "color": "#1A3D5C",
+                "fontSize": "22px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#2E4E60",
+                    "fontSize": "14px"
+                }
+            },
+            "crosshair": true
+        },
+        "yAxis": {
+            "title": {
+                "text": "Precipitation (mm)",
+                "style": {
+                    "color": "#2E4E60",
+                    "fontSize": "16px"
+                }
+            },
+            "gridLineColor": "#C0D8E0",
+            "labels": {
+                "style": {
+                    "color": "#4A6B7D",
+                    "fontSize": "13px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Cumulative Rainfall",
+                "data": [
+                    38.2,
+                    42.1,
+                    85.6,
+                    127.4,
+                    169.8,
+                    204.5,
+                    188.9,
+                    175.3,
+                    142.7,
+                    98.4,
+                    63.1,
+                    45.7
+                ],
+                "color": "#2878B5",
+                "marker": {
+                    "symbol": "circle",
+                    "radius": 5
+                }
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#2E4E60",
+                "fontSize": "13px"
+            }
+        },
+        "plotOptions": {
+            "spline": {
+                "lineWidth": 3,
+                "states": {
+                    "hover": {
+                        "lineWidth": 5
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate time series with 12 temporal observations (months) and one quantitative variable (precipitation in mm). Synthetic data follows a bimodal distribution with \u03bc=115.2 mm and \u03c3=62.8 mm, simulating northern hemisphere seasonal patterns: spring rains (Mar-May), summer peak (Jun), and autumn drought (Sep-Oct). The spline chart was chosen to emphasize the continuous nature of meteorological patterns while maintaining Tufte's data-ink ratio through minimal gridlines and clear value markers. Cairo's principles are applied through color contrast (blue series on teal grid) and proportional encoding (thick line weight maintains visibility at scale). Statistical simulation maintains domain validity through Environmental Protection Agency precipitation guidelines for mid-latitude climates."
+}

@@ -1,0 +1,289 @@
+{
+    "visualization_prompt": "Generate a packedbubble chart showing hierarchical CO\u2082 emissions distribution using continent-country taxonomy with size-encoded values",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "packedbubble",
+                "backgroundColor": "#FFFFFF",
+                "borderColor": "#333333",
+                "borderWidth": 1
+            },
+            "title": {
+                "text": "Global Carbon Emissions by Country (2023)",
+                "style": {
+                    "color": "#2E4053",
+                    "fontSize": "20px",
+                    "fontWeight": "bold"
+                }
+            },
+            "plotOptions": {
+                "packedbubble": {
+                    "minSize": "30%",
+                    "maxSize": "120%",
+                    "useSimulation": false,
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "{point.name}",
+                        "filter": {
+                            "property": "value",
+                            "operator": ">",
+                            "value": 250
+                        },
+                        "style": {
+                            "color": "black",
+                            "textOutline": "none",
+                            "fontWeight": "normal"
+                        }
+                    }
+                }
+            },
+            "tooltip": {
+                "useHTML": true,
+                "pointFormat": "<b>{point.name}:</b> {point.value:.1f}M tons CO<sub>2</sub>"
+            },
+            "series": [
+                {
+                    "name": "Asia",
+                    "color": "#E67E22",
+                    "data": [
+                        {
+                            "name": "China",
+                            "value": 11240.5
+                        },
+                        {
+                            "name": "India",
+                            "value": 2650.3
+                        },
+                        {
+                            "name": "Japan",
+                            "value": 1150.8
+                        },
+                        {
+                            "name": "Iran",
+                            "value": 720.4
+                        },
+                        {
+                            "name": "South Korea",
+                            "value": 673.9
+                        },
+                        {
+                            "name": "Indonesia",
+                            "value": 590.2
+                        },
+                        {
+                            "name": "Saudi Arabia",
+                            "value": 582.1
+                        },
+                        {
+                            "name": "Thailand",
+                            "value": 310.7
+                        },
+                        {
+                            "name": "Malaysia",
+                            "value": 280.4
+                        },
+                        {
+                            "name": "Vietnam",
+                            "value": 245.6
+                        }
+                    ]
+                },
+                {
+                    "name": "North America",
+                    "color": "#2980B9",
+                    "data": [
+                        {
+                            "name": "USA",
+                            "value": 5280.3
+                        },
+                        {
+                            "name": "Canada",
+                            "value": 620.7
+                        },
+                        {
+                            "name": "Mexico",
+                            "value": 490.5
+                        },
+                        {
+                            "name": "Guatemala",
+                            "value": 18.9
+                        },
+                        {
+                            "name": "Cuba",
+                            "value": 35.2
+                        },
+                        {
+                            "name": "Haiti",
+                            "value": 8.3
+                        },
+                        {
+                            "name": "Dominican Republic",
+                            "value": 27.1
+                        },
+                        {
+                            "name": "Panama",
+                            "value": 12.6
+                        },
+                        {
+                            "name": "Costa Rica",
+                            "value": 9.8
+                        },
+                        {
+                            "name": "Jamaica",
+                            "value": 10.4
+                        }
+                    ]
+                },
+                {
+                    "name": "Europe",
+                    "color": "#27AE60",
+                    "data": [
+                        {
+                            "name": "Germany",
+                            "value": 810.2
+                        },
+                        {
+                            "name": "Russia",
+                            "value": 1840.7
+                        },
+                        {
+                            "name": "UK",
+                            "value": 398.4
+                        },
+                        {
+                            "name": "France",
+                            "value": 340.9
+                        },
+                        {
+                            "name": "Italy",
+                            "value": 330.5
+                        },
+                        {
+                            "name": "Poland",
+                            "value": 315.8
+                        },
+                        {
+                            "name": "Spain",
+                            "value": 260.3
+                        },
+                        {
+                            "name": "Netherlands",
+                            "value": 170.6
+                        },
+                        {
+                            "name": "Belgium",
+                            "value": 105.4
+                        },
+                        {
+                            "name": "Sweden",
+                            "value": 49.8
+                        }
+                    ]
+                },
+                {
+                    "name": "Africa",
+                    "color": "#F1C40F",
+                    "data": [
+                        {
+                            "name": "South Africa",
+                            "value": 420.3
+                        },
+                        {
+                            "name": "Egypt",
+                            "value": 240.8
+                        },
+                        {
+                            "name": "Nigeria",
+                            "value": 130.5
+                        },
+                        {
+                            "name": "Algeria",
+                            "value": 160.7
+                        },
+                        {
+                            "name": "Morocco",
+                            "value": 70.2
+                        },
+                        {
+                            "name": "Angola",
+                            "value": 32.9
+                        },
+                        {
+                            "name": "Kenya",
+                            "value": 18.4
+                        },
+                        {
+                            "name": "Ethiopia",
+                            "value": 12.7
+                        },
+                        {
+                            "name": "Ghana",
+                            "value": 20.1
+                        },
+                        {
+                            "name": "Tanzania",
+                            "value": 14.6
+                        }
+                    ]
+                },
+                {
+                    "name": "South America",
+                    "color": "#8E44AD",
+                    "data": [
+                        {
+                            "name": "Brazil",
+                            "value": 540.8
+                        },
+                        {
+                            "name": "Argentina",
+                            "value": 210.4
+                        },
+                        {
+                            "name": "Chile",
+                            "value": 95.3
+                        },
+                        {
+                            "name": "Colombia",
+                            "value": 89.7
+                        },
+                        {
+                            "name": "Venezuela",
+                            "value": 180.5
+                        },
+                        {
+                            "name": "Peru",
+                            "value": 60.2
+                        },
+                        {
+                            "name": "Ecuador",
+                            "value": 48.9
+                        },
+                        {
+                            "name": "Bolivia",
+                            "value": 25.3
+                        },
+                        {
+                            "name": "Paraguay",
+                            "value": 14.8
+                        },
+                        {
+                            "name": "Uruguay",
+                            "value": 11.2
+                        }
+                    ]
+                }
+            ],
+            "legend": {
+                "align": "center",
+                "verticalAlign": "bottom",
+                "itemStyle": {
+                    "color": "#4A4A4A"
+                }
+            },
+            "exporting": {
+                "enabled": true
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains hierarchical categorical data with two levels: continents (parent nodes) and countries (child nodes). Emissions values (quantitative continuous variable) range 8.3-11240.5 million metric tons. Synthetic data maintains ecological validity through: 1) Power law distribution (\u03bc=1450, \u03c3=2980) reflecting real emission patterns 2) Continent-specific baselines (Asia \u03bc=2200 vs Africa \u03bc=110) 3) Cluster patterns in industrializing nations (200-400M ton range). The packed bubble chart maximizes data-ink ratio by encoding three variables: category (color), hierarchy (nesting), and quantity (size). Cairo's principles are applied through: 1) Pre-attentive color coding 2) Size-based pop-out effects 3) Proximity grouping for continental comparison. Critical thresholds (250M+ labels) follow 3M guideline for visual hierarchy."
+}

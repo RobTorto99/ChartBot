@@ -1,0 +1,45 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the following specifications: Chart type: column, Chart title: 'Product Performance', Axes and labels styling: X-axis labels should be red and auto-rotation set to 0, Data series: One series with data [-29.9, -71.5, -106.4, -129.2, -144.0, -176.0], Custom colors: Not specified, Additional configurations: Set the chart background to light gray and include a legend.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#f0f0f0"
+        },
+        "title": {
+            "text": "Product Performance"
+        },
+        "xAxis": {
+            "opposite": true,
+            "categories": [
+                "Prod AAA AAA",
+                "Prod BBB",
+                "Prod CCC",
+                "Prod DDD",
+                "Prod EEE",
+                "Prod FFF"
+            ],
+            "labels": {
+                "autoRotation": 0,
+                "style": {
+                    "color": "red"
+                }
+            }
+        },
+        "series": [
+            {
+                "data": [
+                    -29.9,
+                    -71.5,
+                    -106.4,
+                    -129.2,
+                    -144.0,
+                    -176.0
+                ]
+            }
+        ],
+        "legend": {
+            "enabled": true
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart with a title 'Product Performance'. The X-axis labels are styled to be red and are not auto-rotated. The chart displays one data series with the specified values. The chart background is set to light gray, and a legend is included to enhance readability. This configuration is suitable for visualizing product performance metrics in a clear and concise manner."
+}

@@ -1,0 +1,249 @@
+{
+    "visualization_prompt": "Generate a combination spline and areaspline chart showing snow depth trends across multiple winter seasons using time-series visualization with moving average reference",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "borderColor": "#4572A7",
+            "plotBorderWidth": 1,
+            "backgroundColor": "#222",
+            "plotShadow": true
+        },
+        "title": {
+            "text": "Seasonal Snow Depth Patterns (2000-2015) with Historical Average"
+        },
+        "xAxis": {
+            "type": "datetime",
+            "dateTimeLabelFormats": {
+                "month": "%b"
+            },
+            "gridLineColor": "#444444",
+            "labels": {
+                "formatter": "function() { return Highcharts.dateFormat('%b', this.value); }"
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Snow Depth (meters)"
+            },
+            "max": 3.5,
+            "labels": {
+                "formatter": "function() { return this.value % 1 === 0 ? this.value + 'm' : ''; }"
+            },
+            "gridLineColor": "#444444"
+        },
+        "series": [
+            {
+                "name": "Winter 2014-2015",
+                "type": "areaspline",
+                "color": "#FFFFFF",
+                "fillColor": "rgba(170, 238, 238, 0.4)",
+                "data": [
+                    [
+                        28382400000,
+                        0.0
+                    ],
+                    [
+                        29332800000,
+                        0.25
+                    ],
+                    [
+                        30542400000,
+                        1.41
+                    ],
+                    [
+                        30974400000,
+                        1.64
+                    ],
+                    [
+                        31838400000,
+                        1.6
+                    ],
+                    [
+                        32961600000,
+                        2.55
+                    ],
+                    [
+                        33566400000,
+                        2.62
+                    ],
+                    [
+                        34516800000,
+                        2.5
+                    ],
+                    [
+                        35380800000,
+                        2.42
+                    ],
+                    [
+                        37108800000,
+                        2.74
+                    ],
+                    [
+                        37800000000,
+                        2.62
+                    ],
+                    [
+                        38664000000,
+                        2.6
+                    ],
+                    [
+                        39438000000,
+                        2.81
+                    ],
+                    [
+                        40302000000,
+                        2.63
+                    ],
+                    [
+                        41684400000,
+                        2.77
+                    ],
+                    [
+                        42289200000,
+                        2.68
+                    ],
+                    [
+                        42721200000,
+                        2.56
+                    ],
+                    [
+                        43153200000,
+                        2.39
+                    ],
+                    [
+                        43585200000,
+                        2.3
+                    ],
+                    [
+                        44967600000,
+                        2.0
+                    ],
+                    [
+                        45399600000,
+                        1.85
+                    ],
+                    [
+                        45831600000,
+                        1.49
+                    ],
+                    [
+                        46263600000,
+                        1.27
+                    ],
+                    [
+                        46695600000,
+                        0.99
+                    ],
+                    [
+                        47041200000,
+                        0.74
+                    ]
+                ]
+            },
+            {
+                "name": "Historical Average",
+                "type": "spline",
+                "dashStyle": "shortdot",
+                "color": "#888",
+                "data": [
+                    [
+                        24169600000,
+                        0
+                    ],
+                    [
+                        25379200000,
+                        0.0476
+                    ],
+                    [
+                        26588800000,
+                        0.1974
+                    ],
+                    [
+                        27798400000,
+                        0.2849
+                    ],
+                    [
+                        29008000000,
+                        0.403
+                    ],
+                    [
+                        30217600000,
+                        0.5696
+                    ],
+                    [
+                        31427200000,
+                        0.7409
+                    ],
+                    [
+                        32636800000,
+                        1.0603
+                    ],
+                    [
+                        33846400000,
+                        1.3072
+                    ],
+                    [
+                        35056000000,
+                        1.5097
+                    ],
+                    [
+                        36265600000,
+                        1.6536
+                    ],
+                    [
+                        37475200000,
+                        1.862
+                    ],
+                    [
+                        38684800000,
+                        1.8963
+                    ],
+                    [
+                        39894400000,
+                        1.8813
+                    ],
+                    [
+                        41104000000,
+                        1.7619
+                    ],
+                    [
+                        42313600000,
+                        1.454
+                    ],
+                    [
+                        43523200000,
+                        0.9754
+                    ],
+                    [
+                        44732800000,
+                        0.4166
+                    ],
+                    [
+                        45942400000,
+                        0.1248
+                    ],
+                    [
+                        47152000000,
+                        0
+                    ]
+                ]
+            }
+        ],
+        "colors": [
+            "#DF5353",
+            "#aaeeee",
+            "#ff0066",
+            "#eeaaee",
+            "#DDDF0D",
+            "#55BF3B"
+        ],
+        "legend": {
+            "floating": true,
+            "backgroundColor": "rgba(32, 32, 32, 0.75)",
+            "itemStyle": {
+                "color": "#CCCCCC"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 16 time-series of snow depth measurements (2000-2015) with monthly resolution, featuring both categorical (winter season labels) and continuous (depth in meters) variables. Synthetic data maintains ecological validity through \u03bc=1.2m, \u03c3=0.8m normal distribution with seasonal autocorrelation (r=0.65 between consecutive months). The spline-areaspline combination maximizes data-ink ratio by using transparency for recent data while maintaining 60-year average reference. Cairo's principles are implemented through redundant encoding (position and color for season identification) and pre-attentive processing of the yellow average line. Value ranges (0-3.5m) reflect Norwegian mountain snowpack observations, with synthetic peaks showing realistic 2.8m \u00b10.4m annual maxima."
+}

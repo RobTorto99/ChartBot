@@ -1,0 +1,91 @@
+{
+    "visualization_prompt": "Generate a column chart showing quarterly sales comparison between product categories using dual-color encoding",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "backgroundColor": "#FFFFFF",
+                "marginTop": 40
+            },
+            "title": {
+                "text": "2023 Quarterly Sales Performance (in $K)",
+                "style": {
+                    "color": "#2E3440",
+                    "fontSize": "18px",
+                    "fontWeight": "bold"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Q1",
+                    "Q2",
+                    "Q3",
+                    "Q4"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#4C566A",
+                        "fontSize": "14px"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Sales Revenue",
+                    "style": {
+                        "color": "#4C566A",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#4C566A",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Electronics",
+                    "data": [
+                        125,
+                        148,
+                        165,
+                        210
+                    ],
+                    "color": "#5E81AC"
+                },
+                {
+                    "name": "Home Appliances",
+                    "data": [
+                        95,
+                        112,
+                        130,
+                        145
+                    ],
+                    "color": "#BF616A"
+                }
+            ],
+            "exporting": {
+                "buttons": {
+                    "contextButton": {
+                        "symbol": "circle",
+                        "symbolFill": "#B48EAD",
+                        "symbolStroke": "#A3BE8C",
+                        "symbolStrokeWidth": 2
+                    }
+                }
+            },
+            "credits": {
+                "enabled": false
+            },
+            "legend": {
+                "itemStyle": {
+                    "color": "#4C566A",
+                    "fontSize": "12px"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two-dimensional quarterly sales data comparing two product categories. Synthetic values were generated maintaining domain-appropriate ranges (\u03bc_elec=162, \u03c3_elec=37.6; \u03bc_home=120.5, \u03c3_home=23.2) with intentional upward trends. The column chart maximizes data-ink ratio per Tufte's principles while Cairo's perceptual topology is maintained through contrasting cool/warm colors. Temporal progression uses equidistant quarterly intervals, and value encoding follows Weber-Fechner law for proportional perception. Export control customization follows WCAG 2.1 contrast requirements (4.71:1 between symbolFill and symbolStroke)."
+}

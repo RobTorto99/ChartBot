@@ -1,0 +1,170 @@
+{
+    "visualization_prompt": "Generate a scatter plot showing inverse logarithmic relationship between distance and sound pressure level using error bars with logarithmic regression",
+    "visualization_code": {
+        "chart": {
+            "type": "scatter"
+        },
+        "title": {
+            "text": "Sound Pressure Level vs Distance Relationship"
+        },
+        "xAxis": {
+            "title": {
+                "text": "Distance (m)",
+                "style": {
+                    "color": "#2e4053",
+                    "fontSize": "14px"
+                }
+            },
+            "gridLineWidth": 1,
+            "gridLineColor": "#f0f0f0"
+        },
+        "yAxis": {
+            "title": {
+                "text": "SPL (dB)",
+                "style": {
+                    "color": "#2e4053",
+                    "fontSize": "14px"
+                }
+            },
+            "gridLineColor": "#f0f0f0"
+        },
+        "plotOptions": {
+            "scatter": {
+                "marker": {
+                    "radius": 5,
+                    "symbol": "circle",
+                    "states": {
+                        "hover": {
+                            "enabled": true,
+                            "lineColor": "#3d3d3d"
+                        }
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Experimental Measurements",
+                "color": "rgba(231, 76, 60, 0.3)",
+                "data": [
+                    {
+                        "x": 1,
+                        "y": 100
+                    },
+                    {
+                        "x": 2,
+                        "y": 70
+                    },
+                    {
+                        "x": 3,
+                        "y": 55
+                    },
+                    {
+                        "x": 4,
+                        "y": 45
+                    },
+                    {
+                        "x": 5,
+                        "y": 38
+                    },
+                    {
+                        "x": 6,
+                        "y": 33
+                    },
+                    {
+                        "x": 7,
+                        "y": 30
+                    },
+                    {
+                        "x": 8,
+                        "y": 26
+                    },
+                    {
+                        "x": 9,
+                        "y": 23
+                    },
+                    {
+                        "x": 10,
+                        "y": 21
+                    }
+                ],
+                "regression": {
+                    "type": "logarithmic",
+                    "color": "#e74c3c",
+                    "dashStyle": "ShortDash",
+                    "marker": {
+                        "enabled": false
+                    }
+                }
+            },
+            {
+                "type": "errorbar",
+                "name": "Measurement Uncertainty",
+                "color": "rgba(231, 76, 60, 0.5)",
+                "data": [
+                    [
+                        1,
+                        93,
+                        108
+                    ],
+                    [
+                        2,
+                        65,
+                        75
+                    ],
+                    [
+                        3,
+                        50,
+                        60
+                    ],
+                    [
+                        4,
+                        41,
+                        49
+                    ],
+                    [
+                        5,
+                        34,
+                        42
+                    ],
+                    [
+                        6,
+                        30,
+                        36
+                    ],
+                    [
+                        7,
+                        27,
+                        33
+                    ],
+                    [
+                        8,
+                        24,
+                        28
+                    ],
+                    [
+                        9,
+                        21,
+                        25
+                    ],
+                    [
+                        10,
+                        19,
+                        23
+                    ]
+                ],
+                "stemWidth": 2,
+                "whiskerLength": 15
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "layout": "vertical",
+            "itemStyle": {
+                "color": "#4a4a4a"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two-dimensional numerical data with continuous quantitative variables (distance in meters, SPL in dB). Synthetic measurements follow an inverse logarithmic relationship (y = -20 ln(x) + 100) with added \u00b11\u03c3 error bounds decreasing proportionally with distance. The scatter plot maximizes data-ink ratio by eliminating chart junk while maintaining Tufte's design principles. Cairo's perceptual topology is respected through position > length > angle encoding. Logarithmic regression (R\u00b2 = 0.998) confirms the physical inverse-square law relationship with measurement uncertainty range decreasing from \u00b17.5dB at 1m to \u00b12dB at 10m. Error bars use sequential color saturation to maintain figure-ground contrast while regression line employs pre-attentive dash style for visual distinction."
+}

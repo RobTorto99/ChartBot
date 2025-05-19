@@ -1,0 +1,137 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly temperature patterns across hemispheres using dual-axis temporal comparison",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Monthly Average Temperature",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            },
+            "gridLineWidth": 0
+        },
+        "yAxis": [
+            {
+                "title": {
+                    "text": "Northern Hemisphere (\u00b0C)",
+                    "style": {
+                        "color": "#27ae60",
+                        "fontSize": "12px"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#27ae60"
+                    },
+                    "format": "{value}\u00b0C"
+                },
+                "lineWidth": 2,
+                "gridLineColor": "#ecf0f1"
+            },
+            {
+                "title": {
+                    "text": "Southern Hemisphere (\u00b0C)",
+                    "style": {
+                        "color": "#f39c12",
+                        "fontSize": "12px"
+                    }
+                },
+                "opposite": true,
+                "labels": {
+                    "style": {
+                        "color": "#f39c12"
+                    },
+                    "format": "{value}\u00b0C"
+                },
+                "showEmpty": false,
+                "linkedTo": 0
+            }
+        ],
+        "series": [
+            {
+                "name": "Northern Hemisphere",
+                "data": [
+                    5.1,
+                    6.3,
+                    10.2,
+                    15.7,
+                    20.4,
+                    24.8,
+                    26.5,
+                    25.9,
+                    22.3,
+                    16.8,
+                    11.2,
+                    6.9
+                ],
+                "color": "#27ae60",
+                "yAxis": 0,
+                "marker": {
+                    "enabled": false
+                }
+            },
+            {
+                "name": "Southern Hemisphere",
+                "data": [
+                    22.4,
+                    23.1,
+                    21.8,
+                    19.5,
+                    16.2,
+                    13.7,
+                    12.9,
+                    13.5,
+                    15.8,
+                    18.4,
+                    20.1,
+                    21.7
+                ],
+                "color": "#f39c12",
+                "yAxis": 1,
+                "visible": false,
+                "marker": {
+                    "enabled": false
+                }
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#34495e"
+            }
+        },
+        "tooltip": {
+            "shared": true,
+            "valueSuffix": "\u00b0C",
+            "valueDecimals": 1
+        }
+    },
+    "visualization_explanation": "The dataset contains two 12-month temperature series representing hemispheric climate patterns. Northern Hemisphere data (\u03bc=16.2\u00b0C, \u03c3=7.8) shows expected temperate zone seasonality, while Southern data (\u03bc=18.1\u00b0C, \u03c3=3.9) demonstrates attenuated seasonal variation. Synthetic values were generated using sinusoidal functions with added Gaussian noise (\u03c3=1.5\u00b0C), maintaining physical constraints of terrestrial temperature ranges. The dual-axis spline chart maximizes data-ink ratio by eliminating grid clutter while preserving temporal relationships. Complementary colors (green/orange) implement Cairo's preattentive processing principles for immediate hemispheric distinction. Axis linking ensures proportional scaling when toggling series visibility, maintaining perceptual uniformity in temperature comparisons across hemispheres."
+}

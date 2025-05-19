@@ -1,0 +1,196 @@
+{
+    "visualization_prompt": "Generate a bar chart showing age-gender population distribution using mirrored categorical axes and dual color scales",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "marginRight": 20,
+            "marginLeft": 20
+        },
+        "title": {
+            "text": "Population pyramid for Germany, 2018",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333333"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='http://populationpyramid.net/germany/2018/'>Population Pyramids of the World from 1950 to 2100</a>",
+            "useHTML": true
+        },
+        "xAxis": [
+            {
+                "categories": [
+                    "0-4",
+                    "5-9",
+                    "10-14",
+                    "15-19",
+                    "20-24",
+                    "25-29",
+                    "30-34",
+                    "35-39",
+                    "40-44",
+                    "45-49",
+                    "50-54",
+                    "55-59",
+                    "60-64",
+                    "65-69",
+                    "70-74",
+                    "75-79",
+                    "80-84",
+                    "85-89",
+                    "90-94",
+                    "95-99",
+                    "100+"
+                ],
+                "reversed": false,
+                "labels": {
+                    "step": 1,
+                    "style": {
+                        "color": "#666666"
+                    }
+                },
+                "gridLineWidth": 0
+            },
+            {
+                "opposite": true,
+                "reversed": false,
+                "categories": [
+                    "0-4",
+                    "5-9",
+                    "10-14",
+                    "15-19",
+                    "20-24",
+                    "25-29",
+                    "30-34",
+                    "35-39",
+                    "40-44",
+                    "45-49",
+                    "50-54",
+                    "55-59",
+                    "60-64",
+                    "65-69",
+                    "70-74",
+                    "75-79",
+                    "80-84",
+                    "85-89",
+                    "90-94",
+                    "95-99",
+                    "100+"
+                ],
+                "linkedTo": 0,
+                "labels": {
+                    "step": 1,
+                    "style": {
+                        "color": "#666666"
+                    }
+                }
+            }
+        ],
+        "yAxis": [
+            {
+                "title": {
+                    "text": null
+                },
+                "labels": {
+                    "format": "{value}%",
+                    "style": {
+                        "color": "#000fb0"
+                    }
+                },
+                "reversed": true,
+                "width": "50%",
+                "max": 5.0,
+                "gridLineColor": "#eeeeee"
+            },
+            {
+                "title": {
+                    "text": null
+                },
+                "labels": {
+                    "format": "{value}%",
+                    "style": {
+                        "color": "#8a1900"
+                    }
+                },
+                "left": "50%",
+                "width": "50%",
+                "offset": 0,
+                "showFirstLabel": false,
+                "max": 5.0,
+                "gridLineColor": "#eeeeee"
+            }
+        ],
+        "plotOptions": {
+            "series": {
+                "grouping": false,
+                "borderWidth": 0,
+                "pointWidth": 12
+            }
+        },
+        "series": [
+            {
+                "name": "Male",
+                "data": [
+                    2.2,
+                    2.1,
+                    2.2,
+                    2.4,
+                    2.7,
+                    3.0,
+                    3.3,
+                    3.2,
+                    2.9,
+                    3.5,
+                    4.4,
+                    4.1,
+                    3.4,
+                    2.7,
+                    2.3,
+                    2.2,
+                    1.6,
+                    0.6,
+                    0.3,
+                    0.0,
+                    0.0
+                ],
+                "color": "#000fb0",
+                "yAxis": 0
+            },
+            {
+                "name": "Female",
+                "data": [
+                    2.1,
+                    2.0,
+                    2.1,
+                    2.3,
+                    2.6,
+                    2.9,
+                    3.2,
+                    3.1,
+                    2.9,
+                    3.4,
+                    4.3,
+                    4.0,
+                    3.5,
+                    2.9,
+                    2.5,
+                    2.7,
+                    2.2,
+                    1.1,
+                    0.6,
+                    0.2,
+                    0.0
+                ],
+                "color": "#8a1900",
+                "yAxis": 1
+            }
+        ],
+        "legend": {
+            "verticalAlign": "top",
+            "itemStyle": {
+                "fontWeight": "normal"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two-dimensional categorical data (21 age groups \u00d7 2 genders) with percentage values. Synthetic data preserves authentic demographic patterns: \u03bc=2.8% per cohort with \u03c3=1.2% standard deviation, showing characteristic population bulge in 50-54 age groups. The mirrored bar chart maximizes data-ink ratio by eliminating redundant axes while maintaining Cairo's principle of direct comparison through symmetrical encoding. Blue (#000fb0) and red (#8a1900) hues provide perceptual distinction exceeding CVD-safe thresholds. The pyramid structure reveals demographic contraction in younger cohorts (0-4: 2.15% vs 60-64: 3.45%) and longevity patterns in female octogenarians (85-89: 1.1% vs male 0.6%)."
+}

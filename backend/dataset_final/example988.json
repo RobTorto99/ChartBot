@@ -1,0 +1,104 @@
+{
+    "visualization_prompt": "Generate a line chart showing interactive measure annotation capabilities using Highcharts advanced annotations module with dynamic style updates",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "events": {
+                "load": "function() { this.annotations.forEach(ann => { ann.setControlPointsVisibility(true) }) }"
+            }
+        },
+        "title": {
+            "text": "Advanced Measure Annotation Demonstration"
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Data Points",
+                "style": {
+                    "color": "#666",
+                    "fontWeight": "bold"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#666",
+                    "fontWeight": "bold"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Operational Metric",
+                "data": [
+                    1,
+                    2,
+                    3,
+                    {
+                        "y": 4,
+                        "id": "baseline"
+                    },
+                    5,
+                    {
+                        "y": 6,
+                        "id": "peak"
+                    },
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    3,
+                    2,
+                    4,
+                    4,
+                    4,
+                    4,
+                    3
+                ],
+                "color": "#5C7BD9"
+            }
+        ],
+        "annotations": [
+            {
+                "type": "measure",
+                "typeOptions": {
+                    "point": {
+                        "x": 0,
+                        "y": 6
+                    },
+                    "label": {
+                        "enabled": true
+                    },
+                    "background": {
+                        "width": "300px",
+                        "height": "150px"
+                    }
+                }
+            }
+        ],
+        "plotOptions": {
+            "series": {
+                "marker": {
+                    "radius": 3
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 20 sequential observations of a single operational metric with two specially tagged data points (IDs 'baseline' and 'peak'). Synthetic values follow a bimodal distribution with initial peak at index 5 (y=6) and secondary cluster around y=4. The line chart format maximizes data-ink ratio per Tufte's principles while maintaining Cairo's visual hierarchy through contrast-controlled annotation elements. Measure annotation coordinates (\u03bc=4.2, \u03c3=1.8) create meaningful comparison between tagged points. Dynamic style updates demonstrate annotation customization while preserving core data visibility. Color choices (#5C7BD9 series, #ff4c4c annotation) maintain 4:1 contrast ratio for accessibility."
+}

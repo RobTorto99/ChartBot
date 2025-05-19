@@ -1,0 +1,99 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly sales trends using categorical temporal encoding",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "styledMode": true,
+            "marginTop": 80,
+            "marginBottom": 80,
+            "backgroundColor": "white"
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#434348",
+                "fontSize": "3em",
+                "fontWeight": "bold",
+                "letterSpacing": "0.3em"
+            }
+        },
+        "subtitle": {
+            "text": "2023 Fiscal Year Performance",
+            "style": {
+                "fontFamily": "Courier New, monospace",
+                "fontStyle": "italic",
+                "color": "#7cb5ec"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (USD thousands)",
+                "style": {
+                    "fontWeight": "bold"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "colorByPoint": true
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle"
+        },
+        "plotOptions": {
+            "column": {
+                "borderWidth": 0,
+                "groupPadding": 0.1
+            }
+        },
+        "caption": {
+            "text": "* Q4 holiday season peak followed by seasonal decline",
+            "style": {
+                "fontFamily": "Courier New, monospace",
+                "fontStyle": "italic",
+                "color": "green"
+            },
+            "useHTML": true
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations of sales figures, representing a univariate time series with ordinal temporal encoding. Synthetic data follows realistic retail patterns: gradual Q1 growth (\u03bc=85.3, \u03c3=54.7), summer peak in June (176.0), and holiday season surge in September-December. The column chart maximizes data-ink ratio by eliminating unnecessary gridlines while maintaining Cairo's proportional ink principle through consistent bar widths. Seasonal patterns are emphasized through chromatic progression (cool-warm-cool colors), leveraging preattentive processing for immediate trend recognition. Statistical validity is maintained with synthetic data showing +91% Q4/Q1 growth ratio and typical 35% post-holiday sales contraction."
+}

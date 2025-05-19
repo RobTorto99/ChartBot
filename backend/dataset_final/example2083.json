@@ -1,0 +1,108 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly temperature variations using synthetic climate data with seasonal trends",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "styledMode": true,
+            "backgroundColor": "#2E2E2E"
+        },
+        "title": {
+            "text": "Monthly Average Temperature",
+            "style": {
+                "color": "#FFFFFF",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#FFFFFF",
+                    "fontSize": "14px"
+                }
+            },
+            "lineColor": "#606060"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#FFFFFF",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#FFFFFF",
+                    "fontSize": "14px"
+                }
+            },
+            "gridLineColor": "#404040"
+        },
+        "series": [
+            {
+                "name": "Northern Hemisphere Average",
+                "data": [
+                    5.2,
+                    6.1,
+                    10.4,
+                    15.8,
+                    20.3,
+                    24.9,
+                    27.5,
+                    26.8,
+                    22.3,
+                    16.7,
+                    10.1,
+                    6.8
+                ],
+                "marker": {
+                    "fillColor": "#FFD700",
+                    "lineWidth": 2,
+                    "lineColor": "#B8860B"
+                }
+            }
+        ],
+        "colors": [
+            "#FFD700"
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#FFFFFF",
+                "fontSize": "14px"
+            }
+        },
+        "plotOptions": {
+            "spline": {
+                "lineWidth": 3,
+                "states": {
+                    "hover": {
+                        "lineWidth": 5
+                    }
+                }
+            }
+        },
+        "credits": {
+            "enabled": false
+        },
+        "exporting": {
+            "enabled": true
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate time series with 12 temporal data points (monthly intervals). Synthetic temperature data follows a sinusoidal pattern (\u03bc=15.6\u00b0C, \u03c3=8.2) simulating northern hemisphere seasonal variation. The spline chart maximizes data-ink ratio by removing chart borders while maintaining critical grid references. Color choices follow Cairo's emotional semiotics principle (gold line = warmth, dark background = night sky). Seasonal amplitude (22.3\u00b0C January-July difference) reflects mid-latitude continental climate patterns. Marker spacing and anti-aliased spline interpolation maintain visual continuity while emphasizing individual data points."
+}

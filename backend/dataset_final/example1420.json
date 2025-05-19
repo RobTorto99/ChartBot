@@ -1,0 +1,80 @@
+{
+    "visualization_prompt": "Generate a pie chart showing proportional distribution of Earth's water supply using categorical percentage breakdown with accessibility-compliant labeling",
+    "visualization_code": {
+        "colors": [
+            "#7CB5EC",
+            "#346DA4",
+            "#10487F"
+        ],
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "white"
+        },
+        "accessibility": {
+            "point": {
+                "valueSuffix": "%"
+            }
+        },
+        "title": {
+            "text": "Earth's Water Supply",
+            "style": {
+                "color": "#333",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "tooltip": {
+            "pointFormat": "{series.name}: <b>{point.percentage:.0f}%</b>",
+            "style": {
+                "fontSize": "14px"
+            }
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<b>{point.name}</b>: {point.percentage:.0f}%",
+                    "style": {
+                        "textOutline": "none"
+                    }
+                },
+                "showInLegend": true
+            }
+        },
+        "series": [
+            {
+                "name": "Water Distribution",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Salt water",
+                        "y": 97,
+                        "color": "#7CB5EC"
+                    },
+                    {
+                        "name": "Ice",
+                        "y": 2,
+                        "color": "#346DA4"
+                    },
+                    {
+                        "name": "Fresh water",
+                        "y": 1,
+                        "color": "#10487F",
+                        "sliced": true,
+                        "selected": true
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "fontSize": "12px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three categorical variables representing Earth's hydrospheric composition. Percentage values (Salt water: 97%, Ice: 2%, Fresh water: 1%) derive from established geophysical measurements, requiring no synthetic generation. The pie chart maximizes data-ink ratio by eliminating gridlines and using direct percentage labels, following Tufte's principles. Color contrast between marine (#7CB5EC) and freshwater (#10487F) components adheres to Cairo's perceptual discriminability standards. The exploded fresh water slice emphasizes its ecological significance despite small proportional value. Legend positioning and percentage formatting (+/- 0% variance from source data) maintain visual clarity while preserving scientific accuracy."
+}

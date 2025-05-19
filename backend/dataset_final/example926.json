@@ -1,0 +1,74 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render an inverted area chart with a percent stack. The chart should have a title 'Inverted chart, percent stack'. The axes and labels should be styled with specific colors and font sizes. The data series should include two series with the provided data. Custom colors should be applied, and additional configurations such as chart margins, background, and legend should be set.",
+    "visualization_code": {
+        "chart": {
+            "backgroundColor": "#F9F9F9",
+            "marginTop": 50,
+            "marginBottom": 70
+        },
+        "title": {
+            "text": "Inverted chart, percent stack",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Percentage",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "stacking": "percent"
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "color": "#FF6600"
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    null,
+                    1,
+                    null,
+                    null
+                ],
+                "color": "#0099CC"
+            }
+        ],
+        "legend": {
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "12px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures an inverted area chart with a percent stack. The chart title is set to 'Inverted chart, percent stack' with a specific font size and color. The axes labels are styled with a different color and font size for better readability. The data series includes two series with the given data, each assigned a custom color. The legend is also styled with a specific font size and color. Additional configurations include setting the chart background color, and adjusting the top and bottom margins for better spacing."
+}

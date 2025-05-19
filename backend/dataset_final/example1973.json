@@ -1,0 +1,114 @@
+{
+    "visualization_prompt": "Generate a spline chart showing annotated data trends using tunnel annotation techniques",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ],
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Tunnel Annotation",
+            "style": {
+                "fontFamily": "'IBM Plex Sans', sans-serif",
+                "fontSize": "18px",
+                "color": "#333"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "fontFamily": "'IBM Plex Sans', sans-serif",
+                    "fontSize": "14px",
+                    "color": "#333"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "fontFamily": "'IBM Plex Sans', sans-serif",
+                    "fontSize": "14px",
+                    "color": "#333"
+                }
+            }
+        },
+        "annotations": [
+            {
+                "type": "tunnel",
+                "controlPointOptions": {
+                    "style": {
+                        "fill": "rgb(255, 69, 221)"
+                    },
+                    "visible": true
+                },
+                "typeOptions": {
+                    "points": [
+                        {
+                            "x": 4,
+                            "y": 4,
+                            "controlPoint": {
+                                "style": {
+                                    "fill": "#d5ff4c"
+                                }
+                            }
+                        },
+                        {
+                            "x": 10,
+                            "y": 5
+                        }
+                    ],
+                    "line": {
+                        "stroke": "rgb(255, 69, 221)",
+                        "strokeWidth": 4
+                    },
+                    "background": {
+                        "fill": "rgba(255, 69, 221, 0.4)"
+                    }
+                }
+            }
+        ],
+        "series": [
+            {
+                "name": "Data Points",
+                "data": [
+                    1,
+                    2,
+                    3,
+                    {
+                        "y": 4,
+                        "id": "s"
+                    },
+                    5,
+                    {
+                        "y": 6,
+                        "id": "m"
+                    },
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    3,
+                    2,
+                    4,
+                    4,
+                    4,
+                    4,
+                    3
+                ]
+            }
+        ],
+        "legend": {
+            "borderColor": "#333",
+            "borderWidth": 1
+        }
+    },
+    "visualization_explanation": "This spline chart visualization presents 20 sequential data points with two annotated markers (IDs: 's' and 'm'). The synthetic dataset shows natural variance (\u03bc=4.1, \u03c3=1.8) with intentional outliers at positions 6 (value=8) and 10 (value=6). The tunnel annotation uses color psychology principles - magenta (#FF45DD) for attention-grabbing lines paired with 40% opacity fill for contextual grounding. Font styling follows Tufte's data-ink maximization with clean IBM Plex Sans typeface. The spline interpolation smooths data while maintaining Cairo's principle of proportional ink through visible individual plot points."
+}

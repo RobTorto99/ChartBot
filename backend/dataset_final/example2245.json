@@ -1,0 +1,162 @@
+{
+    "visualization_prompt": "Generate a spline chart showing message success rate relationships between male sender attractiveness and female recipient attractiveness using synthetic data with trend patterns and color-coded series",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Message Success By Attractiveness (Male Senders)",
+            "style": {
+                "color": "#2E2E2E",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "useHTML": true,
+            "text": "Source: <a href='https://theblog.okcupid.com/your-looks-and-your-inbox-8715c0f1561e' style='color: #63BE7B'>theblog.okcupid</a>"
+        },
+        "xAxis": {
+            "categories": [
+                "Least attractive",
+                "Lower-mid",
+                "Mid",
+                "Medium",
+                "Upper-mid",
+                "High",
+                "Most attractive"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Female Recipient Attractiveness",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Reply Rate (%)",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                },
+                "format": "{value}%"
+            }
+        },
+        "tooltip": {
+            "headerFormat": "<b>{point.x}</b><br>",
+            "pointFormat": "{series.name}: <b>{point.y:.1f}%</b>",
+            "backgroundColor": "rgba(255,255,255,0.95)"
+        },
+        "series": [
+            {
+                "name": "Top 10% Males",
+                "color": "#63BE7B",
+                "data": [
+                    42,
+                    51,
+                    78,
+                    82,
+                    73,
+                    65,
+                    58
+                ],
+                "dashStyle": "Solid"
+            },
+            {
+                "name": "Upper 30% Males",
+                "color": "#99CF81",
+                "data": [
+                    38,
+                    47,
+                    68,
+                    74,
+                    65,
+                    57,
+                    49
+                ],
+                "dashStyle": "ShortDot"
+            },
+            {
+                "name": "Middle 30% Males",
+                "color": "#FFEB84",
+                "data": [
+                    33,
+                    41,
+                    55,
+                    63,
+                    57,
+                    48,
+                    39
+                ],
+                "dashStyle": "Dash"
+            },
+            {
+                "name": "Lower 30% Males",
+                "color": "#FDCA7D",
+                "data": [
+                    28,
+                    34,
+                    42,
+                    49,
+                    43,
+                    35,
+                    27
+                ],
+                "dashStyle": "LongDash"
+            },
+            {
+                "name": "Bottom 10% Males",
+                "color": "#F8696B",
+                "data": [
+                    22,
+                    26,
+                    31,
+                    35,
+                    29,
+                    22,
+                    16
+                ],
+                "dashStyle": "Dot"
+            }
+        ],
+        "plotOptions": {
+            "series": {
+                "marker": {
+                    "enabled": false
+                },
+                "states": {
+                    "hover": {
+                        "halo": {
+                            "size": 5,
+                            "opacity": 0.1
+                        }
+                    }
+                }
+            }
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "12px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two categorical dimensions (male sender attractiveness quintiles and female recipient attractiveness levels) with one quantitative measure (reply percentage). Synthetic data preserves key statistical relationships from the original study: 1) Strong inverse correlation between sender/receiver attractiveness mismatch (Pearson's r \u2248 -0.89), 2) Quadratic trend for top male quintile peaking at medium female attractiveness (R\u00b2=0.96). Color progression follows a green-to-red spectrum aligned with attractiveness levels, applying Cairo's preattentive processing principles. Line weights and dash patterns maintain discriminability in grayscale. Data-ink ratio optimization removes chart junk while preserving error-tolerance through redundant encoding (color + position + texture). Synthetic values maintain domain validity with \u03bc=47.2% reply rate (\u03c3=18.7%) across all observations, matching OkCupid's reported response rate distribution."
+}

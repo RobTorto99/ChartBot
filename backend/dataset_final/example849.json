@@ -1,0 +1,89 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the following specifications: The chart should have a title 'Monthly Sales Data', with axes and labels styled with specific colors and font sizes. The x-axis should have categories for each month, and the y-axis should start from 0. The data series should include monthly sales data with a custom color. Additionally, the chart should have custom margins and a background color.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "marginLeft": 120,
+            "backgroundColor": "#f9f9f9"
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "offset": 10,
+            "lineWidth": 2,
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "lineWidth": 2,
+            "min": 0,
+            "offset": 10,
+            "tickWidth": 1,
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            },
+            "title": {
+                "text": "Sales",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "series": [
+            {
+                "type": "spline",
+                "name": "Monthly Sales",
+                "data": [
+                    29.9,
+                    71.5,
+                    0,
+                    0,
+                    0,
+                    450.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    0,
+                    0,
+                    0
+                ],
+                "color": "#008080"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333",
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a spline chart with a title 'Monthly Sales Data'. The chart has custom margins and a light gray background. The x-axis displays categories for each month, with labels styled in a darker gray and a larger font size. The y-axis starts from 0, with labels and a title also styled in a darker gray and larger font size. The data series represents monthly sales data, with a custom color of teal. The legend is enabled and styled with a darker gray and larger font size for better readability."
+}

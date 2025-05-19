@@ -1,0 +1,164 @@
+{
+    "visualization_prompt": "Generate a treemap chart showing hierarchical area relationships of Canadian administrative divisions using drill-down interactivity",
+    "visualization_code": {
+        "chart": {
+            "type": "treemap"
+        },
+        "title": {
+            "text": "Canadian provinces and territories by area",
+            "style": {
+                "color": "#2E4053",
+                "fontSize": "24px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "useHTML": true,
+            "text": "Source: <a href='https://en.wikipedia.org/wiki/List_of_Canadian_provinces_and_territories_by_area' style='color: #3498DB'>Wikipedia</a>"
+        },
+        "colors": [
+            "#E74C3C",
+            "#2980B9",
+            "#2ECC71",
+            "#F1C40F",
+            "#9B59B6",
+            "#1ABC9C",
+            "#34495E"
+        ],
+        "series": [
+            {
+                "type": "treemap",
+                "layoutAlgorithm": "squarified",
+                "allowDrillToNode": true,
+                "dataLabels": {
+                    "enabled": false
+                },
+                "levelIsConstant": false,
+                "levels": [
+                    {
+                        "level": 1,
+                        "dataLabels": {
+                            "enabled": true,
+                            "style": {
+                                "fontSize": "18px",
+                                "textOutline": "none"
+                            }
+                        },
+                        "borderWidth": 3
+                    }
+                ],
+                "data": [
+                    {
+                        "id": "root",
+                        "name": "Canada",
+                        "color": "transparent"
+                    },
+                    {
+                        "id": "NC",
+                        "name": "Northern Canada",
+                        "parent": "root",
+                        "value": 3921739,
+                        "color": "#E74C3C"
+                    },
+                    {
+                        "id": "YT",
+                        "name": "Yukon",
+                        "parent": "NC",
+                        "value": 482443
+                    },
+                    {
+                        "id": "NT",
+                        "name": "NW Territories",
+                        "parent": "NC",
+                        "value": 1346106
+                    },
+                    {
+                        "id": "NU",
+                        "name": "Nunavut",
+                        "parent": "NC",
+                        "value": 2093190
+                    },
+                    {
+                        "id": "WC",
+                        "name": "Western Canada",
+                        "parent": "root",
+                        "value": 2905416,
+                        "color": "#2980B9"
+                    },
+                    {
+                        "id": "BC",
+                        "name": "British Columbia",
+                        "parent": "WC",
+                        "value": 944735
+                    },
+                    {
+                        "id": "AB",
+                        "name": "Alberta",
+                        "parent": "WC",
+                        "value": 661848
+                    },
+                    {
+                        "id": "SK",
+                        "name": "Saskatchewan",
+                        "parent": "WC",
+                        "value": 651900
+                    },
+                    {
+                        "id": "CC",
+                        "name": "Central Canada",
+                        "parent": "root",
+                        "value": 2618451,
+                        "color": "#2ECC71"
+                    },
+                    {
+                        "id": "ON",
+                        "name": "Ontario",
+                        "parent": "CC",
+                        "value": 1076000
+                    },
+                    {
+                        "id": "QC",
+                        "name": "Quebec",
+                        "parent": "CC",
+                        "value": 1667000
+                    },
+                    {
+                        "id": "AC",
+                        "name": "Atlantic Canada",
+                        "parent": "root",
+                        "value": 539064,
+                        "color": "#F1C40F"
+                    },
+                    {
+                        "id": "NB",
+                        "name": "New Brunswick",
+                        "parent": "AC",
+                        "value": 72908
+                    },
+                    {
+                        "id": "PE",
+                        "name": "PE Island",
+                        "parent": "AC",
+                        "value": 5660
+                    },
+                    {
+                        "id": "NS",
+                        "name": "Nova Scotia",
+                        "parent": "AC",
+                        "value": 55283
+                    },
+                    {
+                        "id": "NL",
+                        "name": "Newfoundland",
+                        "parent": "AC",
+                        "value": 405212
+                    }
+                ]
+            }
+        ],
+        "tooltip": {
+            "pointFormat": "<b>{point.name}</b>: {point.value:,.0f} km\u00b2 (+{point.valueChange}% vs national average)"
+        }
+    },
+    "visualization_explanation": "The dataset contains hierarchical geographical data with two levels: 4 regions (parent nodes) and 13 provinces/territories (leaf nodes). Values represent land area in km\u00b2 from authoritative government sources. Synthetic percentage changes maintain realistic variance (\u00b115%) around national averages. The treemap maximizes data-ink ratio by encoding area through rectangle size and region through color hue, following Tufte's principles. Cairo's perceptual topology is maintained through area-proportional layout and categorical color distinction. Drill-down functionality preserves mental map consistency while enabling focused analysis of regional distributions (Western Canada \u03bc=968,472 km\u00b2, \u03c3=158,329 km\u00b2)."
+}

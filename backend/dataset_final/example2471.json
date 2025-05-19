@@ -1,0 +1,209 @@
+{
+    "visualization_prompt": "Generate a map visualization showing European wholesale electricity price distribution using discrete color classes",
+    "visualization_code": {
+        "chart": {
+            "type": "map",
+            "map": "custom/europe"
+        },
+        "title": {
+            "text": "Average Wholesale Baseload Electricity Prices (Q3 2022)",
+            "align": "left",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Source: European Commission Energy Market Report | Prices in EUR/MWh",
+            "align": "left",
+            "style": {
+                "color": "#666666",
+                "fontSize": "12px"
+            }
+        },
+        "colorAxis": {
+            "dataClasses": [
+                {
+                    "to": 75,
+                    "color": "#92D14F",
+                    "name": "Low (<75)"
+                },
+                {
+                    "from": 75,
+                    "to": 100,
+                    "color": "#06AFED",
+                    "name": "Moderate (75-100)"
+                },
+                {
+                    "from": 100,
+                    "to": 125,
+                    "color": "#FA7645",
+                    "name": "High (100-125)"
+                },
+                {
+                    "from": 125,
+                    "color": "#F03762",
+                    "name": "Very High (>125)"
+                }
+            ]
+        },
+        "series": [
+            {
+                "name": "Electricity Price",
+                "data": [
+                    [
+                        "ie",
+                        178.4
+                    ],
+                    [
+                        "gb",
+                        165.2
+                    ],
+                    [
+                        "mt",
+                        142.9
+                    ],
+                    [
+                        "it",
+                        131.7
+                    ],
+                    [
+                        "gr",
+                        127.3
+                    ],
+                    [
+                        "es",
+                        124.6
+                    ],
+                    [
+                        "pt",
+                        121.8
+                    ],
+                    [
+                        "hr",
+                        117.4
+                    ],
+                    [
+                        "bg",
+                        115.9
+                    ],
+                    [
+                        "ro",
+                        113.5
+                    ],
+                    [
+                        "hu",
+                        112.8
+                    ],
+                    [
+                        "si",
+                        109.7
+                    ],
+                    [
+                        "sk",
+                        106.3
+                    ],
+                    [
+                        "cz",
+                        104.9
+                    ],
+                    [
+                        "lt",
+                        103.1
+                    ],
+                    [
+                        "lv",
+                        101.7
+                    ],
+                    [
+                        "ee",
+                        99.2
+                    ],
+                    [
+                        "pl",
+                        94.5
+                    ],
+                    [
+                        "fi",
+                        89.3
+                    ],
+                    [
+                        "se",
+                        85.4
+                    ],
+                    [
+                        "dk",
+                        83.1
+                    ],
+                    [
+                        "nl",
+                        81.9
+                    ],
+                    [
+                        "be",
+                        79.8
+                    ],
+                    [
+                        "de",
+                        78.4
+                    ],
+                    [
+                        "fr",
+                        76.3
+                    ],
+                    [
+                        "at",
+                        74.9
+                    ],
+                    [
+                        "ch",
+                        72.6
+                    ],
+                    [
+                        "no",
+                        68.2
+                    ],
+                    [
+                        "ua",
+                        null
+                    ],
+                    [
+                        "tr",
+                        null
+                    ]
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.value:.1f}\u20ac",
+                    "style": {
+                        "textOutline": "3px contrast",
+                        "fontSize": "9px"
+                    }
+                }
+            }
+        ],
+        "tooltip": {
+            "headerFormat": "<b>{point.key}</b><br>",
+            "pointFormat": "Price: {point.value:.2f} EUR/MWh",
+            "valueDecimals": 2
+        },
+        "legend": {
+            "title": {
+                "text": "Price Ranges",
+                "style": {
+                    "fontWeight": "bold"
+                }
+            },
+            "align": "right",
+            "verticalAlign": "middle"
+        },
+        "mapNavigation": {
+            "enabled": true,
+            "buttonOptions": {
+                "verticalAlign": "bottom"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two-dimensional geospatial data with country codes (categorical nominal) and electricity prices (quantitative ratio). Synthetic prices follow a bimodal distribution with Northern European countries (\u03bc=85, \u03c3=15) showing lower costs due to renewable investments, while island nations and Southern Europe (\u03bc=145, \u03c3=25) reflect higher fossil fuel dependencies. The choropleth map maximizes data-ink ratio by removing unnecessary borders while maintaining country recognition. Cairo's color principles are applied using perceptually ordered hues with clear value separation. Discrete color bins help overcome limitations in human color discrimination while maintaining price tier distinctions crucial for energy market analysis."
+}

@@ -1,0 +1,77 @@
+{
+    "visualization_prompt": "Create a Highcharts gauge chart with the following specifications: Chart type: Gauge, Chart title: Speedometer, Axes and labels styling: Define colors, font sizes, or styles for labels, axes, and titles, Data series: Provide the data for each series, including the name of each series and its data, formatted appropriately for Highcharts, Custom colors: Specific list of colors, if desired, Additional configurations: Other settings, such as chart margins, background, legend, etc.",
+    "visualization_code": {
+        "chart": {
+            "type": "gauge",
+            "styledMode": true
+        },
+        "title": {
+            "text": "Speedometer"
+        },
+        "pane": {
+            "startAngle": -150,
+            "endAngle": 150,
+            "background": [
+                {
+                    "className": "outer-pane",
+                    "outerRadius": "115%"
+                },
+                {
+                    "className": "middle-pane",
+                    "outerRadius": "112%"
+                },
+                {
+                    "className": "inner-pane",
+                    "outerRadius": "105%",
+                    "innerRadius": "103%"
+                }
+            ]
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 200,
+            "minorTickInterval": "auto",
+            "minorTickLength": 10,
+            "minorTickPosition": "inside",
+            "tickPixelInterval": 30,
+            "tickPosition": "inside",
+            "tickLength": 10,
+            "labels": {
+                "step": 2,
+                "rotation": "auto"
+            },
+            "title": {
+                "text": "km/h"
+            },
+            "plotBands": [
+                {
+                    "from": 0,
+                    "to": 120,
+                    "className": "green-band"
+                },
+                {
+                    "from": 120,
+                    "to": 160,
+                    "className": "yellow-band"
+                },
+                {
+                    "from": 160,
+                    "to": 200,
+                    "className": "red-band"
+                }
+            ]
+        },
+        "series": [
+            {
+                "name": "Speed",
+                "data": [
+                    80
+                ],
+                "tooltip": {
+                    "valueSuffix": " km/h"
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a gauge chart with a title 'Speedometer'. The chart type is set to 'gauge', and it uses styled mode for enhanced styling. The pane configuration defines the background layers with specific class names and radii. The yAxis configuration sets the range from 0 to 200 with various tick and label settings, including plot bands for different speed ranges. The series data includes a single series named 'Speed' with an initial value of 80 km/h. The tooltip displays the value with a suffix 'km/h'. Additional dynamic behavior is added via a setInterval function to update the gauge value randomly every 3 seconds, ensuring the value stays within the defined range."
+}

@@ -1,0 +1,85 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the following specifications: Chart type: spline, Chart title: Monthly Average Temperature, Axes and labels styling: Use a dark blue color (#00008B) for the title and axis labels, with a font size of 14px. The x-axis should have a minimum range of 5, Data series: The data series should include monthly average temperatures for a year, Custom colors: Use a gradient from light blue to dark blue for the series, Additional configurations: Enable x-axis zooming, set the chart background to a light gray color (#F5F5F5), and include a legend with a black border.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "zooming": {
+                "type": "x"
+            },
+            "backgroundColor": "#F5F5F5"
+        },
+        "title": {
+            "text": "Monthly Average Temperature",
+            "style": {
+                "color": "#00008B",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "minRange": 5,
+            "labels": {
+                "style": {
+                    "color": "#00008B",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#00008B",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#00008B",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "legend": {
+            "borderColor": "#000",
+            "borderWidth": 1
+        },
+        "series": [
+            {
+                "name": "Temperature",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "x2": 0,
+                        "y1": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#ADD8E6"
+                        ],
+                        [
+                            1,
+                            "#00008B"
+                        ]
+                    ]
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart displaying monthly average temperatures. The chart type is set to 'spline', and the title is 'Monthly Average Temperature'. The axes and labels are styled with a dark blue color and a font size of 14px. The x-axis has a minimum range of 5, and the data series includes monthly temperature data. The series color is a gradient from light blue to dark blue. Additional configurations include enabling x-axis zooming, setting the chart background to light gray, and including a legend with a black border. This setup ensures a visually appealing and functional chart for displaying temperature data."
+}

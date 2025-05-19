@@ -1,0 +1,81 @@
+{
+    "visualization_prompt": "Create a Highcharts Sankey chart with the following specifications: Chart type: Sankey, Chart title: 'Node Distance Demo', Axes and labels styling: Use a dark background with white text for titles and labels, Data series: Include data series with nodes A, B, C, and D and their respective weights, Custom colors: Use a specific color palette for nodes and links, Additional configurations: Set chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "sankey",
+            "backgroundColor": "#2e2e2e",
+            "marginTop": 50,
+            "marginBottom": 50,
+            "marginLeft": 50,
+            "marginRight": 50
+        },
+        "title": {
+            "text": "Node Distance Demo",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": "20px"
+            }
+        },
+        "subtitle": {
+            "text": "<em>nodeDistance: 100%</em> means equal to node width",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": "14px"
+            }
+        },
+        "series": [
+            {
+                "type": "sankey",
+                "keys": [
+                    "from",
+                    "to",
+                    "weight"
+                ],
+                "nodeWidth": "auto",
+                "nodeDistance": "100%",
+                "data": [
+                    {
+                        "from": "A",
+                        "to": "B",
+                        "weight": 0.3
+                    },
+                    {
+                        "from": "A",
+                        "to": "C",
+                        "weight": 0.5
+                    },
+                    {
+                        "from": "B",
+                        "to": "D",
+                        "weight": 0.3
+                    },
+                    {
+                        "from": "C",
+                        "to": "D",
+                        "weight": 0.3
+                    }
+                ],
+                "colorByPoint": false,
+                "colors": [
+                    "#00bcd4",
+                    "#ff9800",
+                    "#4caf50",
+                    "#f44336"
+                ],
+                "dataLabels": {
+                    "style": {
+                        "color": "#ffffff",
+                        "fontSize": "12px"
+                    }
+                }
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#ffffff"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts configuration object is designed to render a Sankey chart with a dark background and white text for titles and labels. The chart is titled 'Node Distance Demo' and includes a subtitle explaining the node distance setting. The data series includes nodes A, B, C, and D with specified weights, and the nodes and links are colored using a custom palette. Additional configurations include setting the chart margins, background color, and enabling the legend with white text. This setup ensures a visually appealing and informative Sankey chart."
+}

@@ -1,0 +1,95 @@
+{
+    "visualization_prompt": "Create a Highcharts scatter plot visualizing the relationship between the height and weight of Olympic athletes, categorized by sport. The chart should include a title, subtitle, and styled axes with labels. Each sport should be represented by a different marker symbol, and the chart should allow for zooming in both the x and y directions. The legend should be enabled, and the tooltip should display the height and weight of each point.",
+    "visualization_code": {
+        "chart": {
+            "type": "scatter",
+            "zooming": {
+                "type": "xy"
+            }
+        },
+        "title": {
+            "text": "Olympics athletes by height and weight",
+            "align": "left"
+        },
+        "subtitle": {
+            "text": "Source: <a href=\"https://www.theguardian.com/sport/datablog/2012/aug/07/olympics-2012-athletes-age-weight-height\">The Guardian</a>",
+            "align": "left"
+        },
+        "xAxis": {
+            "title": {
+                "text": "Height"
+            },
+            "labels": {
+                "format": "{value} m"
+            },
+            "startOnTick": true,
+            "endOnTick": true,
+            "showLastLabel": true
+        },
+        "yAxis": {
+            "title": {
+                "text": "Weight"
+            },
+            "labels": {
+                "format": "{value} kg"
+            }
+        },
+        "legend": {
+            "enabled": true
+        },
+        "plotOptions": {
+            "scatter": {
+                "marker": {
+                    "radius": 2.5,
+                    "symbol": "circle",
+                    "states": {
+                        "hover": {
+                            "enabled": true,
+                            "lineColor": "rgb(100,100,100)"
+                        }
+                    }
+                },
+                "states": {
+                    "hover": {
+                        "marker": {
+                            "enabled": false
+                        }
+                    }
+                },
+                "jitter": {
+                    "x": 0.005
+                }
+            }
+        },
+        "tooltip": {
+            "pointFormat": "Height: {point.x} m <br/> Weight: {point.y} kg"
+        },
+        "series": [
+            {
+                "name": "Basketball",
+                "id": "basketball",
+                "marker": {
+                    "symbol": "circle"
+                },
+                "data": []
+            },
+            {
+                "name": "Triathlon",
+                "id": "triathlon",
+                "marker": {
+                    "symbol": "triangle"
+                },
+                "data": []
+            },
+            {
+                "name": "Volleyball",
+                "id": "volleyball",
+                "marker": {
+                    "symbol": "square"
+                },
+                "data": []
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a scatter plot that visualizes the relationship between the height and weight of Olympic athletes, categorized by sport. The chart type is set to 'scatter', allowing for the display of individual data points. The title and subtitle are aligned to the left, providing context about the data source. The x-axis represents height, labeled in meters, and the y-axis represents weight, labeled in kilograms. The legend is enabled to help identify each sport's data series. Each sport is represented by a different marker symbol: circle for Basketball, triangle for Triathlon, and square for Volleyball. The chart includes a tooltip that displays the height and weight of each point when hovered over. Additionally, the chart allows for zooming in both the x and y directions, enhancing the ability to explore the data closely. The series data is initially empty and will be populated dynamically by fetching data from an external source."
+}

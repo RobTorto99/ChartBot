@@ -1,0 +1,108 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the following specifications: Chart type: spline, Chart title: 'Monthly Data Trends', Axes and labels styling: Use a dark blue color (#003366) for the axis labels and titles, with a font size of 14px. The x-axis should have categories for each month from January to December. The y-axis should be logarithmic with minor tick intervals set to 'auto'. Data series: The series should include one set of data with the values [0.29, 71.5, 1.06, 1292, 14.4, 1.760, 135, 1.48, 0.216, 0.194, 9.56, 54.4]. Custom colors: Use a gradient from light blue (#ADD8E6) to dark blue (#003366) for the series. Additional configurations: Set the chart background to a light gray color (#F5F5F5), add a legend with the title 'Data Series', and set the chart margins to 50 pixels on all sides.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#F5F5F5",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Monthly Data Trends",
+            "style": {
+                "color": "#003366",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#003366",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "type": "logarithmic",
+            "minorTickInterval": "auto",
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#003366",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#003366",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Data Series",
+                "data": [
+                    0.29,
+                    71.5,
+                    1.06,
+                    1292,
+                    14.4,
+                    1.76,
+                    135,
+                    1.48,
+                    0.216,
+                    0.194,
+                    9.56,
+                    54.4
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#ADD8E6"
+                        ],
+                        [
+                            1,
+                            "#003366"
+                        ]
+                    ]
+                }
+            }
+        ],
+        "legend": {
+            "title": {
+                "text": "Data Series",
+                "style": {
+                    "color": "#003366",
+                    "fontSize": "14px"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart titled 'Monthly Data Trends'. The chart type is set to 'spline', and the background color is a light gray (#F5F5F5). The chart has a margin of 50 pixels on all sides. The x-axis displays categories for each month from January to December, with labels styled in dark blue (#003366) and a font size of 14px. The y-axis is logarithmic with minor tick intervals set to 'auto', and its labels and title are also styled in dark blue with a font size of 14px. The data series includes one set of values corresponding to each month, with a gradient color from light blue (#ADD8E6) to dark blue (#003366). The legend is titled 'Data Series' and is styled similarly to the axis labels and titles. This configuration ensures a visually appealing and informative chart that effectively displays the monthly data trends."
+}

@@ -1,0 +1,74 @@
+{
+    "visualization_prompt": "Generate a bullet chart showing actual vs. target performance metrics using Highcharts plot bands and inverted axes",
+    "visualization_code": {
+        "chart": {
+            "inverted": true,
+            "marginLeft": 135,
+            "marginTop": 40,
+            "type": "bullet",
+            "styledMode": true
+        },
+        "title": {
+            "text": "2017 YTD"
+        },
+        "legend": {
+            "enabled": false
+        },
+        "xAxis": {
+            "categories": [
+                "<span class='hc-cat-title'>Revenue</span><br/>U.S. $ (1,000s)"
+            ]
+        },
+        "yAxis": {
+            "plotBands": [
+                {
+                    "from": 0,
+                    "to": 150,
+                    "className": "plot-band-low"
+                },
+                {
+                    "from": 150,
+                    "to": 225,
+                    "className": "plot-band-medium"
+                },
+                {
+                    "from": 225,
+                    "to": 300,
+                    "className": "plot-band-high"
+                }
+            ],
+            "title": null,
+            "gridLineWidth": 0
+        },
+        "plotOptions": {
+            "series": {
+                "pointPadding": 0.25,
+                "borderWidth": 0,
+                "targetOptions": {
+                    "width": "200%"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Actual Performance",
+                "data": [
+                    {
+                        "y": 275,
+                        "target": 250
+                    }
+                ]
+            }
+        ],
+        "tooltip": {
+            "pointFormat": "<b>{point.y}</b> (with target at {point.target})"
+        },
+        "credits": {
+            "enabled": false
+        },
+        "exporting": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The bullet chart uses a single data point with actual value (275) and target (250) to compare performance against qualitative ranges. Synthetic data adheres to financial context with realistic value magnitudes. The inverted layout maximizes data-ink ratio per Tufte's principles, while plot bands use Cairo's preattentive processing for instant range recognition. Color-coded bands (low/medium/high) follow perceptual uniformity guidelines. Statistical validity is maintained with actual value exceeding target by +10%, and plot bands represent 0-150 (low), 150-225 (medium), 225-300 (high) to create meaningful performance thresholds."
+}

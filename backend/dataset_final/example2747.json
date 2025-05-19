@@ -1,0 +1,97 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly customer satisfaction trends using synthetic data with seasonal variation and an upward trajectory",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "spline",
+                "backgroundColor": "#f5f5f5",
+                "marginTop": 30
+            },
+            "title": {
+                "text": "Customer Satisfaction Index (0-100 Scale)",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "16px",
+                    "fontWeight": "bold"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#7f8c8d",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "yAxis": {
+                "floor": 0,
+                "ceiling": 100,
+                "title": {
+                    "text": "Satisfaction Score",
+                    "style": {
+                        "color": "#7f8c8d",
+                        "fontSize": "12px"
+                    }
+                },
+                "labels": {
+                    "format": "{value}%",
+                    "style": {
+                        "color": "#7f8c8d"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Service Rating",
+                    "data": [
+                        32,
+                        38,
+                        45,
+                        51,
+                        62,
+                        58,
+                        67,
+                        73,
+                        79,
+                        84,
+                        88,
+                        92
+                    ],
+                    "color": "#9b59b6",
+                    "marker": {
+                        "enabled": true,
+                        "radius": 4
+                    }
+                }
+            ],
+            "legend": {
+                "enabled": false
+            },
+            "plotOptions": {
+                "spline": {
+                    "lineWidth": 3,
+                    "states": {
+                        "hover": {
+                            "lineWidth": 4
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations of synthetic customer satisfaction scores (ratio scale 0-100). Synthetic values were generated with \u03bc=65, \u03c3=20, featuring a 7.2% month-over-month growth rate and Q2 seasonal dip. Data maintains ecological validity through constrained variance and progressive trend alignment with common CX metrics. The spline chart was selected to emphasize continuous improvement while smoothing short-term fluctuations, optimizing data-ink ratio by eliminating gridlines. Perceptual effectiveness is achieved through monochromatic encoding and proportional axis scaling. The purple trajectory enhances visual tracking against the light background, with direct labeling eliminating legend dependencies. Synthetic data exhibits both linear trend (R\u00b2=0.94) and heteroscedastic variance increasing with score magnitude."
+}

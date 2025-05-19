@@ -1,0 +1,258 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart titled 'Top 10 largest economies by average values of GDP'. The chart should have specific styling for axes, labels, and titles, including white text on a dark background. The data series should include the GDP values for countries like China, USA, India, Germany, Japan, Russia, Indonesia, Brazil, France, and the UK. Additionally, the chart should have custom colors for the series and other configurations such as chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#1b1b1b",
+            "marginBottom": 40
+        },
+        "title": {
+            "text": "Top 10 largest economies by average values of GDP",
+            "style": {
+                "color": "#FFFFFF",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href=\"https://en.wikipedia.org/wiki/List_of_countries_by_largest_historical_GDP\" target=\"_blank\" style=\"color:white\">Wikipedia</a>",
+            "align": "left",
+            "style": {
+                "color": "#FFFFFF",
+                "fontWeight": "bold"
+            }
+        },
+        "yAxis": {
+            "reversed": true,
+            "gridLineWidth": 0,
+            "tickInterval": 1,
+            "startOnTick": false,
+            "endOnTick": false,
+            "labels": {
+                "style": {
+                    "color": "#FFFFFF",
+                    "fontWeight": "bold"
+                }
+            },
+            "title": {
+                "text": null,
+                "style": {
+                    "color": "#FFFFFF",
+                    "fontWeight": "bold"
+                }
+            }
+        },
+        "xAxis": {
+            "opposite": true,
+            "offset": 10,
+            "labels": {
+                "style": {
+                    "color": "#FFFFFF",
+                    "fontWeight": "bold"
+                }
+            },
+            "accessibility": {
+                "rangeDescription": "Range: 2010 to 2020"
+            }
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "proximate",
+            "itemStyle": {
+                "color": "#FFFFFF",
+                "fontWeight": "bold"
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "label": {
+                    "connectorAllowed": false
+                },
+                "marker": {
+                    "enabled": false,
+                    "symbol": "circle"
+                },
+                "pointStart": 1980,
+                "pointInterval": 5,
+                "lineWidth": 4
+            }
+        },
+        "colors": [
+            "#FF0200",
+            "#7CB4EC",
+            "#008001",
+            "#faf0be",
+            "#FFB6C1",
+            "#2C908F",
+            "#91EE7D",
+            "#F7A35B",
+            "#8185E8",
+            "#F15C80",
+            "#ffffff",
+            "#A19642"
+        ],
+        "series": [
+            {
+                "name": "China",
+                "data": [
+                    10,
+                    9,
+                    7,
+                    3,
+                    2,
+                    2,
+                    2,
+                    1,
+                    1
+                ]
+            },
+            {
+                "name": "USA",
+                "data": [
+                    1,
+                    2,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    2,
+                    2
+                ]
+            },
+            {
+                "name": "India",
+                "data": [
+                    9,
+                    10,
+                    10,
+                    5,
+                    5,
+                    4,
+                    3,
+                    3,
+                    3
+                ]
+            },
+            {
+                "name": "Germany",
+                "data": [
+                    4,
+                    4,
+                    4,
+                    4,
+                    4,
+                    5,
+                    5,
+                    5,
+                    5
+                ]
+            },
+            {
+                "name": "Japan",
+                "data": [
+                    3,
+                    3,
+                    3,
+                    2,
+                    3,
+                    3,
+                    4,
+                    4,
+                    4
+                ]
+            },
+            {
+                "name": "Russia",
+                "data": [
+                    null,
+                    null,
+                    null,
+                    6,
+                    7,
+                    6,
+                    6,
+                    6,
+                    6
+                ]
+            },
+            {
+                "name": "Indonesia",
+                "data": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    8,
+                    7
+                ]
+            },
+            {
+                "name": "Brazil",
+                "data": [
+                    7,
+                    7,
+                    9,
+                    9,
+                    9,
+                    7,
+                    7,
+                    7,
+                    8
+                ]
+            },
+            {
+                "name": "France",
+                "data": [
+                    6,
+                    6,
+                    6,
+                    8,
+                    6,
+                    8,
+                    8,
+                    10,
+                    9
+                ]
+            },
+            {
+                "name": "UK",
+                "data": [
+                    8,
+                    8,
+                    8,
+                    10,
+                    10,
+                    9,
+                    9,
+                    9,
+                    10
+                ]
+            },
+            {
+                "name": "Soviet Union",
+                "data": [
+                    2,
+                    1,
+                    2,
+                    null
+                ],
+                "showInLegend": false
+            },
+            {
+                "name": "Italy",
+                "data": [
+                    5,
+                    5,
+                    5,
+                    null
+                ],
+                "showInLegend": false
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart with a dark background and white text for titles, labels, and axes. The chart displays the top 10 largest economies by average GDP values, with data series for countries including China, USA, India, Germany, Japan, Russia, Indonesia, Brazil, France, and the UK. The chart includes custom colors for the series and additional configurations such as chart margins, background, and legend settings. The x-axis is styled to be opposite and offset, while the y-axis is reversed and has no grid lines. The legend is aligned to the right and vertically centered, with bold white text. The plot options include settings for series labels, markers, and point intervals, ensuring a clean and readable chart layout."
+}

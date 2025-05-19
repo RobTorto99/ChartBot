@@ -1,0 +1,88 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a pie chart with the title 'Pie point CSS'. The chart should have a dark background color and custom colors for the data series. The data series should include the names of fruits and their corresponding values. The chart should also have a legend that shows the names of the fruits.",
+    "visualization_code": {
+        "chart": {
+            "styledMode": true,
+            "backgroundColor": "#333"
+        },
+        "title": {
+            "text": "Pie point CSS",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": "18px"
+            }
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<b>{point.name}</b>: {point.percentage:.1f} %",
+                    "style": {
+                        "color": "#ffffff",
+                        "fontSize": "14px"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "type": "pie",
+                "name": "Fruits",
+                "data": [
+                    {
+                        "name": "Apples",
+                        "y": 29.9,
+                        "color": "#b3597c"
+                    },
+                    {
+                        "name": "Pears",
+                        "y": 71.5,
+                        "color": "#c4688c"
+                    },
+                    {
+                        "name": "Oranges",
+                        "y": 106.4,
+                        "color": "#78a8d1"
+                    },
+                    {
+                        "name": "Plums",
+                        "y": 129.2,
+                        "color": "#7991d2"
+                    },
+                    {
+                        "name": "Bananas",
+                        "y": 144.0,
+                        "color": "#7d7bd4"
+                    },
+                    {
+                        "name": "Peaches",
+                        "y": 176.0,
+                        "color": "#977dd5"
+                    },
+                    {
+                        "name": "Prunes",
+                        "y": 135.6,
+                        "selected": true,
+                        "sliced": true,
+                        "color": "#b3597c"
+                    },
+                    {
+                        "name": "Avocados",
+                        "y": 148.5,
+                        "color": "#b27fd6"
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#ffffff",
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a pie chart with a dark background color, as specified in the CSS. The chart title is 'Pie point CSS', styled with a white color and a font size of 18px. The pie chart displays data series representing different fruits and their corresponding values, each with a custom color. The data labels are enabled and formatted to show the fruit name and its percentage, styled with a white color and a font size of 14px. The legend is also enabled, showing the names of the fruits, styled with a white color and a font size of 14px. The chart is designed to be visually appealing and informative, with clear labels and a well-organized legend."
+}

@@ -1,0 +1,92 @@
+{
+    "visualization_prompt": "Generate a pie chart showing proportional seat distribution among political parties in the 2015 Canadian federal election using categorical color-coding aligned with party branding",
+    "visualization_code": {
+        "title": {
+            "text": "Seats Won per Party in the Canadian Federal Election, 2015",
+            "style": {
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "color": "#2E3440"
+            }
+        },
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#FFFFFF",
+            "margin": [
+                30,
+                30,
+                30,
+                30
+            ],
+            "borderRadius": 8
+        },
+        "credits": {
+            "enabled": false
+        },
+        "tooltip": {
+            "headerFormat": "<span style='font-size:13px'><b>{point.key}</b></span><br/>",
+            "pointFormat": "<b>{point.percentage:.1f}%</b> of seats ({point.y})",
+            "useHTML": true
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<b>{point.name}</b><br/>{point.y}",
+                    "distance": 20,
+                    "style": {
+                        "fontSize": "12px",
+                        "textOverflow": "clip"
+                    }
+                },
+                "showInLegend": true
+            }
+        },
+        "legend": {
+            "layout": "vertical",
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "fontSize": "13px",
+                "color": "#4C566A"
+            }
+        },
+        "series": [
+            {
+                "name": "Seat Distribution",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Liberal",
+                        "y": 184,
+                        "color": "#D71920",
+                        "sliced": true
+                    },
+                    {
+                        "name": "Conservative",
+                        "y": 99,
+                        "color": "#1A4780"
+                    },
+                    {
+                        "name": "New Democratic",
+                        "y": 44,
+                        "color": "#F37021"
+                    },
+                    {
+                        "name": "Bloc Qu\u00e9b\u00e9cois",
+                        "y": 10,
+                        "color": "#33B2CC"
+                    },
+                    {
+                        "name": "Green",
+                        "y": 1,
+                        "color": "#3D9B35"
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "This pie chart visualizes the 338-seat composition of Canada's 42nd Parliament using authentic electoral data. The univariate dataset contains five categorical variables (political parties) with quantitative seat counts (discrete integers). Party colors follow official branding guidelines for immediate recognition. The pie chart format emphasizes proportional representation while maintaining Tufte's data-ink ratio through clean labeling and a minimal legend. Cairo's principles are applied through: 1) Pre-attentive color coding 2) Direct percentage labeling 3) Logical clockwise ordering from largest to smallest segment. The Liberal Party's 54.4% majority (184/338 seats) is immediately apparent through both angular dominance and strategic first-position slicing. Conservative (29.3%) and NDP (13.0%) proportions create visual hierarchy, while minor parties demonstrate threshold visibility through explicit labeling despite small angles."
+}

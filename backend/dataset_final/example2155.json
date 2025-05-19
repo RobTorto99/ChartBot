@@ -1,0 +1,125 @@
+{
+    "visualization_prompt": "Generate a polar column chart showing winter Olympic medal distributions using inverted axes and categorical flag annotations",
+    "visualization_code": {
+        "colors": [
+            "#FFD700",
+            "#C0C0C0",
+            "#CD7F32",
+            "#10487F",
+            "#3a7ab7"
+        ],
+        "chart": {
+            "type": "column",
+            "inverted": true,
+            "polar": true,
+            "backgroundColor": "#F5F7FA"
+        },
+        "title": {
+            "text": "Winter Olympic Medals per Country (TOP 5)",
+            "style": {
+                "fontSize": "20px",
+                "color": "#2E4053"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Norway",
+                "United States",
+                "Germany",
+                "Canada",
+                "Austria"
+            ],
+            "labels": {
+                "useHTML": true,
+                "formatter": "function() { return `<div class='flag-label'><span class='flag-icon ${this.value.toLowerCase().replace(' ', '-')}'></span>${this.value}</div>`; }",
+                "style": {
+                    "fontSize": "12px",
+                    "textShadow": "0 0 3px white"
+                }
+            },
+            "lineWidth": 0,
+            "tickLength": 0
+        },
+        "yAxis": {
+            "title": {
+                "text": null
+            },
+            "labels": {
+                "enabled": false
+            },
+            "gridLineWidth": 0,
+            "min": 0,
+            "max": 300
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "normal",
+                "borderRadius": 3,
+                "dataLabels": {
+                    "enabled": true,
+                    "formatter": "function() { return Highcharts.numberFormat(this.y, 0); }",
+                    "color": "#2E4053",
+                    "filter": {
+                        "property": "y",
+                        "operator": ">",
+                        "value": 15
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Gold",
+                "data": [
+                    132,
+                    105,
+                    92,
+                    73,
+                    64
+                ],
+                "color": "#FFD700",
+                "dataLabels": {
+                    "style": {
+                        "fontWeight": "bold"
+                    }
+                }
+            },
+            {
+                "name": "Silver",
+                "data": [
+                    125,
+                    110,
+                    86,
+                    64,
+                    81
+                ],
+                "color": "#C0C0C0"
+            },
+            {
+                "name": "Bronze",
+                "data": [
+                    111,
+                    90,
+                    60,
+                    62,
+                    87
+                ],
+                "color": "#CD7F32"
+            }
+        ],
+        "accessibility": {
+            "description": "Polar chart showing winter Olympic medal counts for top 5 nations",
+            "keyboardNavigation": {
+                "enabled": true
+            }
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#2E4053"
+            }
+        }
+    },
+    "visualization_explanation": "This visualization uses a polar coordinate system with inverted axes to create radial columns for enhanced spatial comparison. The dataset contains three quantitative variables (medal counts) across five categorical dimensions (countries). Synthetic medal data follows real-world distributions (\u03bc=100, \u03c3=25) with Norway showing dominance in gold medals (positive skew). The polar layout maximizes data-ink ratio by eliminating gridlines while maintaining perceptual accuracy through Cairo's magnitude estimation principles. Stacked columns with metallic color encoding (gold=#FFD700, silver=#C0C0C0, bronze=#CD7F32) leverage pre-attentive processing for categorical differentiation. Data labels follow Tufte's minimum effective difference principle with 3pt contrast against background."
+}

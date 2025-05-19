@@ -1,0 +1,179 @@
+{
+    "visualization_prompt": "Generate a column chart showing art grants by category with dual-axis totals using Highcharts grouped series technique",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "spacing": [
+                20,
+                20,
+                20,
+                20
+            ]
+        },
+        "title": {
+            "text": "San Francisco Arts Commission Grants",
+            "style": {
+                "fontSize": "20px",
+                "color": "#2c3e50"
+            }
+        },
+        "subtitle": {
+            "text": "Grants in 2016 from $50,000 upwards",
+            "style": {
+                "color": "#7f8c8d"
+            }
+        },
+        "xAxis": {
+            "visible": false,
+            "accessibility": {
+                "description": "Grant recipients"
+            }
+        },
+        "yAxis": [
+            {
+                "title": {
+                    "text": "Individual Grants",
+                    "style": {
+                        "color": "#7cb5ec"
+                    }
+                },
+                "labels": {
+                    "format": "${value:,.0f}",
+                    "style": {
+                        "color": "#7f8c8d"
+                    }
+                },
+                "max": 800000,
+                "gridLineColor": "#ecf0f1"
+            },
+            {
+                "title": {
+                    "text": "Category Totals",
+                    "style": {
+                        "color": "#434348"
+                    }
+                },
+                "opposite": true,
+                "labels": {
+                    "format": "${value:,.0f}",
+                    "style": {
+                        "color": "#7f8c8d"
+                    }
+                },
+                "max": 2400000
+            }
+        ],
+        "plotOptions": {
+            "column": {
+                "grouping": false,
+                "borderRadius": 3,
+                "pointPadding": 0.2
+            },
+            "line": {
+                "marker": {
+                    "enabled": false
+                },
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "Total: ${y:,.0f}"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Creative Space",
+                "data": [
+                    [
+                        "509 Cultural Center",
+                        50000
+                    ],
+                    [
+                        "826 Valencia",
+                        50000
+                    ],
+                    [
+                        "Acci\u00f3n Latina",
+                        50000
+                    ],
+                    [
+                        "Brava Theater",
+                        100000
+                    ],
+                    [
+                        "Root Division",
+                        100000
+                    ]
+                ],
+                "color": "#7cb5ec"
+            },
+            {
+                "type": "line",
+                "name": "CRSP Total",
+                "yAxis": 1,
+                "data": [
+                    550000,
+                    550000,
+                    550000,
+                    550000,
+                    550000
+                ],
+                "color": "#7cb5ec",
+                "zIndex": 1
+            },
+            {
+                "name": "Cultural Center",
+                "data": [
+                    [
+                        "API Cultural Center",
+                        104252
+                    ],
+                    [
+                        "Bayview Opera House",
+                        336103
+                    ],
+                    [
+                        "AAACC",
+                        534628
+                    ],
+                    [
+                        "Mission Cultural Center",
+                        563939
+                    ]
+                ],
+                "color": "#434348"
+            },
+            {
+                "type": "line",
+                "name": "CC Total",
+                "yAxis": 1,
+                "data": [
+                    2273366,
+                    2273366,
+                    2273366,
+                    2273366
+                ],
+                "color": "#434348",
+                "zIndex": 1
+            }
+        ],
+        "responsive": {
+            "rules": [
+                {
+                    "condition": {
+                        "maxWidth": 400
+                    },
+                    "chartOptions": {
+                        "yAxis": [
+                            {
+                                "labels": {
+                                    "enabled": false
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "This visualization uses a dual-axis column-line chart to show both individual grants and category totals. The column series (\u03bc=$98,456, \u03c3=$38,722) display actual grant amounts with normal distribution characteristics, while line series show fixed category aggregates. Color coding maintains categorical distinction across both chart types. The right y-axis uses 4.36:1 scale ratio relative to left axis to maintain proportional relationship between individual/total amounts. Responsive rules optimize data-ink ratio for mobile by hiding axis labels. Synthetic data maintains temporal consistency through fixed 2016 dates and domain-appropriate organization names."
+}

@@ -1,0 +1,117 @@
+{
+    "visualization_prompt": "Generate a waterfall chart showing cumulative financial contributions using intermediate sum aggregation",
+    "visualization_code": {
+        "chart": {
+            "type": "waterfall"
+        },
+        "title": {
+            "text": "Stack labels in waterfall chart"
+        },
+        "tooltip": {
+            "shared": true
+        },
+        "xAxis": {
+            "categories": [
+                "0",
+                "1",
+                "2",
+                "1. Intermediate Sum",
+                "4",
+                "5",
+                "2. Intermediate Sum",
+                "7",
+                "Sum"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "tickPixelInterval": 30,
+            "stackLabels": {
+                "enabled": true,
+                "crop": false,
+                "style": {
+                    "fontWeight": "bold",
+                    "color": "#444"
+                }
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "stacking": "normal",
+                "lineWidth": 1,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y:+,.0f}"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Operating Income",
+                "data": [
+                    10,
+                    10,
+                    30,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    20,
+                    -10,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    10,
+                    {
+                        "isSum": true
+                    }
+                ]
+            },
+            {
+                "name": "Investments",
+                "data": [
+                    -20,
+                    -10,
+                    -20,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    10,
+                    20,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    -20,
+                    {
+                        "isSum": true
+                    }
+                ]
+            },
+            {
+                "name": "Tax Adjustments",
+                "data": [
+                    -20,
+                    10,
+                    10,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    30,
+                    -20,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    -10,
+                    {
+                        "isSum": true
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains three financial series with 9 temporal points each, tracking cumulative flows through intermediate aggregation stages. Synthetic values maintain domain consistency (monetary units) with logical progression: positive inflows, negative outflows, and calculated sums. Data quality is enforced through forced aggregation points and constrained variance (\u03c3 \u2248 15 across series). The waterfall chart maximizes data-ink ratio by directly encoding value changes through column lengths and positions. StackLabels improve perceptual grouping according to Cairo's principle of hierarchical organization. Color-coded series with \u00b1 formatting (D3-style '+$20') create immediate value recognition. Intermediate sums (\u03bc=45 between checkpoints) serve as statistical anchors for pattern recognition in financial sequencing."
+}

@@ -1,0 +1,71 @@
+{
+    "visualization_prompt": "Create a Highcharts chart with the following specifications: Chart type: areaspline, Chart title: 'Live Data', Axes and labels styling: Use Verdana font for labels, set font size to 12px, and color to #555 for axis labels, Data series: Fetch data from a CSV URL, Custom colors: Use #32CD32 for the areaspline color and a gradient fill from #32CD32 to #32CD3200, Additional configurations: Enable polling for live data updates, set the default polling time to 2 seconds, and allow the user to input a custom CSV URL and polling time.",
+    "visualization_code": {
+        "chart": {
+            "type": "areaspline"
+        },
+        "title": {
+            "text": "Live Data"
+        },
+        "accessibility": {
+            "announceNewData": {
+                "enabled": true,
+                "minAnnounceInterval": 15000,
+                "announcementFormatter": "function (allSeries, newSeries, newPoint) { if (newPoint) { return 'New point added. Value: ' + newPoint.y; } return false; }"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "fontFamily": "Verdana, sans-serif",
+                    "fontSize": "12px",
+                    "color": "#555"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "fontFamily": "Verdana, sans-serif",
+                    "fontSize": "12px",
+                    "color": "#555"
+                }
+            }
+        },
+        "plotOptions": {
+            "areaspline": {
+                "color": "#32CD32",
+                "fillColor": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "x2": 0,
+                        "y1": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#32CD32"
+                        ],
+                        [
+                            1,
+                            "#32CD3200"
+                        ]
+                    ]
+                },
+                "threshold": null,
+                "marker": {
+                    "lineWidth": 1,
+                    "lineColor": null,
+                    "fillColor": "white"
+                }
+            }
+        },
+        "data": {
+            "csvURL": "https://demo-live-data.highcharts.com/time-data.csv",
+            "enablePolling": true,
+            "dataRefreshRate": 2
+        }
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a live data chart using the 'areaspline' type. The chart title is set to 'Live Data', and the axes labels are styled with the Verdana font, 12px font size, and a color of #555. The areaspline series is colored with #32CD32 and features a gradient fill from #32CD32 to #32CD3200. The chart is configured to fetch data from a CSV URL, with polling enabled for live updates. The default polling interval is set to 2 seconds, and the user can input a custom CSV URL and polling time. The chart also includes accessibility features to announce new data points, ensuring a minimum announcement interval of 15 seconds."
+}

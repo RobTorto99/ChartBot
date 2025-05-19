@@ -1,0 +1,102 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly meteorological trends using gradient fill effects and annotated extremes",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#ffffff",
+            "borderWidth": 1,
+            "borderColor": "#cccccc"
+        },
+        "title": {
+            "text": "2023 Monthly Temperature Anomalies (\u00b0C)",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontWeight": "bold"
+                }
+            },
+            "lineColor": "#bdc3c7"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Deviation from Baseline",
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "14px"
+                }
+            },
+            "gridLineColor": "#ecf0f1"
+        },
+        "series": [
+            {
+                "name": "Temperature Anomaly",
+                "data": [
+                    0.9,
+                    1.5,
+                    2.4,
+                    3.2,
+                    4.0,
+                    5.0,
+                    5.6,
+                    5.5,
+                    4.4,
+                    3.1,
+                    1.6,
+                    0.4
+                ],
+                "type": "spline",
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "x2": 0,
+                        "y1": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#3498db"
+                        ],
+                        [
+                            1,
+                            "#2c3e50"
+                        ]
+                    ]
+                },
+                "marker": {
+                    "fillColor": "#e74c3c",
+                    "lineWidth": 2,
+                    "lineColor": "#ffffff"
+                }
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#34495e"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations of temperature deviations (continuous numerical) across categorical time intervals. Synthetic data follows a realistic seasonal pattern (\u03bc=2.95\u00b0C, \u03c3=1.8\u00b0C) with summer peaks and winter troughs, incorporating 8% YTD warming trend. The spline chart maximizes data-ink ratio by removing chart junk while using gradient fills to emphasize amplitude. Cairo's principles guide the use of position > length > angle encoding and pre-attentive red markers for July/August extremes. Axis styling follows Tufte's minimal ink approach with pale gridlines and high-contrast labels."
+}

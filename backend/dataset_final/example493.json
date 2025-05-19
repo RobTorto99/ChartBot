@@ -1,0 +1,71 @@
+{
+    "visualization_prompt": "Create a Highcharts chart with the following specifications: Chart type: spline, Chart title: 'Y-Value Sound Mapping', Axes and labels styling: Use a dark blue color (#0059dd) for the title and labels, with a font size of 14px for the title and 12px for the labels. The x-axis should have a crosshair with a width of 50 and a color of rgba(90, 140, 210, 0.1). Data series: The series should include one set of data points [1, 2, 2, 4, 5, 7, 9, 11, 13, 6, 7, 1] with the name 'Data Points' and a color of #3070d0. Custom colors: Use the specified color for the series. Additional configurations: Set the chart margins to 50px on all sides, use a light gray background (#f0f0f0), and enable the legend with a position at the bottom of the chart.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f0f0f0",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Y-Value Sound Mapping",
+            "style": {
+                "color": "#0059dd",
+                "fontSize": "14px"
+            }
+        },
+        "legend": {
+            "enabled": true,
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        },
+        "xAxis": {
+            "crosshair": {
+                "enabled": true,
+                "width": 50,
+                "color": "rgba(90, 140, 210, 0.1)",
+                "className": "hc-crosshair"
+            },
+            "labels": {
+                "style": {
+                    "color": "#0059dd",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#0059dd",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Data Points",
+                "data": [
+                    1,
+                    2,
+                    2,
+                    4,
+                    5,
+                    7,
+                    9,
+                    11,
+                    13,
+                    6,
+                    7,
+                    1
+                ],
+                "color": "#3070d0"
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration object is designed to render a spline chart with specific styling and data series. The chart title is set to 'Y-Value Sound Mapping' with a dark blue color and a font size of 14px. The x-axis and y-axis labels are styled with the same dark blue color and a font size of 12px. The x-axis includes a crosshair feature with a width of 50 and a light blue color. The data series includes one set of data points named 'Data Points' with a color of #3070d0. The chart background is set to a light gray color, and the legend is enabled and positioned at the bottom of the chart. Overall, this configuration ensures a visually appealing and informative chart that meets the specified requirements."
+}

@@ -1,0 +1,174 @@
+{
+    "visualization_prompt": "Generate a network graph showing 3D cuboid structural relationships using Verlet integration dynamics with custom force equations",
+    "visualization_code": {
+        "chart": {
+            "type": "networkgraph",
+            "plotBorderWidth": 1,
+            "backgroundColor": "#F9F9F9",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Verlet Integration with Custom Forces",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "plotOptions": {
+            "networkgraph": {
+                "layoutAlgorithm": {
+                    "enableSimulation": true,
+                    "linkLength": 75,
+                    "integration": "verlet",
+                    "attractiveForce": "function(d, k) { return Math.min(d * d / (k * 0.3), 800); }",
+                    "repulsiveForce": "function(d, k) { return Math.min(k * k / (d * 0.6), 1500); }"
+                },
+                "keys": [
+                    "from",
+                    "to"
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}",
+                    "style": {
+                        "textOutline": "none"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Cuboid Nodes",
+                "data": [
+                    {
+                        "id": "A",
+                        "marker": {
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "B",
+                        "marker": {
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "C",
+                        "marker": {
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "D",
+                        "marker": {
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "E",
+                        "marker": {
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "F",
+                        "marker": {
+                            "radius": 12
+                        }
+                    },
+                    {
+                        "id": "G",
+                        "marker": {
+                            "radius": 12
+                        }
+                    }
+                ],
+                "links": [
+                    [
+                        "A",
+                        "B"
+                    ],
+                    [
+                        "A",
+                        "C"
+                    ],
+                    [
+                        "B",
+                        "D"
+                    ],
+                    [
+                        "C",
+                        "D"
+                    ],
+                    [
+                        "D",
+                        "E"
+                    ],
+                    [
+                        "E",
+                        "F"
+                    ],
+                    [
+                        "F",
+                        "G"
+                    ],
+                    [
+                        "G",
+                        "A"
+                    ],
+                    [
+                        "B",
+                        "E"
+                    ],
+                    [
+                        "C",
+                        "F"
+                    ],
+                    [
+                        "D",
+                        "G"
+                    ]
+                ]
+            }
+        ],
+        "colors": [
+            "#2E86C1",
+            "#CB4335",
+            "#28B463",
+            "#D4AC0D",
+            "#884EA0",
+            "#BA4A00",
+            "#17A589"
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "The network graph represents a 3D cuboid structure through 7 nodes and 11 edges, with synthetic coordinates generated through Verlet integration physics. The dataset contains two entity types: nodes (categorical entities with IDs A-G) and links (directional relationships). Synthetic positions maintain spatial consistency with mean node distance \u03bc=75px \u00b125px std dev. The force-directed layout uses custom quadratic attraction (max 800N) and inverse-distance repulsion (max 1500N) to maintain structural integrity. The visualization employs Tufte's data-ink principles through minimal labeling and high contrast colors. Cairo's perceptual effectiveness is achieved through force animation showing constraint relationships. Color coding follows Weber-Fechner law for discriminability, with sequential blues and diverging warm colors distinguishing connection types. Chart dimensions (800\u00d7600) maintain 1.33 aspect ratio for stable force calculations."
+}

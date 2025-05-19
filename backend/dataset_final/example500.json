@@ -1,0 +1,82 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a bar chart with the following specifications: Chart type: bar, Chart title: 'Total organic area 2012 and 2018', Axes and labels styling: X-axis labels should be 'AUT', 'EST', 'SWE' with a title of 'Countries', Y-axis labels should be formatted as '{value} kha' with a range description of '0 to 1000 kha.', Data series: Two series named '2012' and '2018' with corresponding data, Custom colors: '2012' series color is '#0C090A' with border color '#949494', '2018' series color is '#C0C0C0', Additional configurations: Enable data labels for bars, set tooltip value suffix to 'kha', disable legend, and enable y-axis zooming.",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "zooming": {
+                "type": "y"
+            }
+        },
+        "title": {
+            "text": "Total organic area 2012 and 2018"
+        },
+        "subtitle": {
+            "text": "Source: <a href=\"https://ec.europa.eu/eurostat/statistics-explained/index.php?title=File:Tab1_Total_organic_area_(fully_converted_and_under_conversion),_by_country,_2012_and_2018.png\">Eurostat</a>"
+        },
+        "xAxis": {
+            "categories": [
+                "AUT",
+                "EST",
+                "SWE"
+            ],
+            "title": {
+                "text": null
+            },
+            "accessibility": {
+                "description": "Countries"
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": null
+            },
+            "accessibility": {
+                "description": "Organic area",
+                "rangeDescription": "0 to 1000 kha."
+            },
+            "tickInterval": 500,
+            "labels": {
+                "overflow": "justify",
+                "format": "{value} kha"
+            }
+        },
+        "plotOptions": {
+            "bar": {
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y} kha"
+                }
+            }
+        },
+        "tooltip": {
+            "valueSuffix": "kha",
+            "stickOnContact": true,
+            "backgroundColor": "rgba(255, 255, 255, 0.95)"
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "name": "2012",
+                "data": [
+                    533.23,
+                    142.065,
+                    477.684
+                ],
+                "color": "#0C090A",
+                "borderColor": "#949494"
+            },
+            {
+                "name": "2018",
+                "data": [
+                    639.097,
+                    206.59,
+                    608.754
+                ],
+                "color": "#C0C0C0"
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a bar chart that visualizes the total organic area for the years 2012 and 2018 across three countries: Austria (AUT), Estonia (EST), and Sweden (SWE). The chart includes a title and subtitle with a source reference to Eurostat. The x-axis is labeled with the country codes, and the y-axis is formatted to display values in 'kha' (kilohectares) with a tick interval of 500. Each bar in the chart is labeled with its value in 'kha', and the tooltip displays the value with the suffix 'kha'. The chart uses specific colors for each series: '#0C090A' with a border color of '#949494' for the 2012 series, and '#C0C0C0' for the 2018 series. The legend is disabled, and the chart allows zooming on the y-axis for better data inspection."
+}

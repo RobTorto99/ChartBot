@@ -1,0 +1,245 @@
+{
+    "visualization_prompt": "Generate a polar column chart showing wind direction frequency distribution by speed category using stacked percentages in a radial layout",
+    "visualization_code": {
+        "chart": {
+            "polar": true,
+            "type": "column",
+            "renderTo": "container"
+        },
+        "title": {
+            "text": "Wind Rose Analysis: South Shore Met Station, Oregon"
+        },
+        "subtitle": {
+            "text": "Source: or.water.usgs.gov | Frequency distribution (%) by wind speed categories"
+        },
+        "xAxis": {
+            "categories": [
+                "N",
+                "NNE",
+                "NE",
+                "ENE",
+                "E",
+                "ESE",
+                "SE",
+                "SSE",
+                "S",
+                "SSW",
+                "SW",
+                "WSW",
+                "W",
+                "WNW",
+                "NW",
+                "NNW"
+            ],
+            "tickmarkPlacement": "on",
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "11px"
+                }
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Frequency (%)",
+                "style": {
+                    "color": "#444",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "stacking": "normal",
+                "groupPadding": 0,
+                "pointPlacement": "on",
+                "borderWidth": 0
+            }
+        },
+        "series": [
+            {
+                "name": "> 10 m/s",
+                "data": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.13,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.03,
+                    0.07
+                ],
+                "color": "#2c5a8c"
+            },
+            {
+                "name": "8-10 m/s",
+                "data": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.39,
+                    0.49,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.1,
+                    0.0,
+                    0.69,
+                    0.13
+                ],
+                "color": "#3c6ea6"
+            },
+            {
+                "name": "6-8 m/s",
+                "data": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.13,
+                    1.74,
+                    0.53,
+                    0.0,
+                    0.0,
+                    0.13,
+                    0.3,
+                    0.26,
+                    0.33,
+                    0.66,
+                    0.23
+                ],
+                "color": "#5a8cba"
+            },
+            {
+                "name": "4-6 m/s",
+                "data": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.3,
+                    2.14,
+                    0.86,
+                    0.0,
+                    0.0,
+                    0.49,
+                    0.79,
+                    1.45,
+                    1.61,
+                    0.76,
+                    0.13
+                ],
+                "color": "#7aaed5"
+            },
+            {
+                "name": "2-4 m/s",
+                "data": [
+                    0.16,
+                    0.0,
+                    0.07,
+                    0.07,
+                    0.49,
+                    1.55,
+                    2.37,
+                    1.97,
+                    0.43,
+                    0.26,
+                    1.22,
+                    1.97,
+                    0.92,
+                    0.99,
+                    1.28,
+                    1.32
+                ],
+                "color": "#9fc5e0"
+            },
+            {
+                "name": "0.5-2 m/s",
+                "data": [
+                    1.78,
+                    1.09,
+                    0.82,
+                    1.22,
+                    2.2,
+                    2.01,
+                    3.06,
+                    3.42,
+                    4.74,
+                    4.14,
+                    4.01,
+                    2.66,
+                    1.71,
+                    2.4,
+                    4.28,
+                    5.0
+                ],
+                "color": "#c6dced"
+            },
+            {
+                "name": "< 0.5 m/s",
+                "data": [
+                    1.81,
+                    0.62,
+                    0.82,
+                    0.59,
+                    0.62,
+                    1.22,
+                    1.61,
+                    2.04,
+                    2.66,
+                    2.96,
+                    2.53,
+                    1.97,
+                    1.64,
+                    1.32,
+                    1.58,
+                    1.51
+                ],
+                "color": "#e6f0f7"
+            }
+        ],
+        "legend": {
+            "reversed": true,
+            "layout": "vertical",
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#333",
+                "fontSize": "12px"
+            }
+        },
+        "tooltip": {
+            "valueSuffix": "%",
+            "headerFormat": "<b>{point.key}</b><br/>"
+        },
+        "pane": {
+            "size": "85%",
+            "background": {
+                "backgroundColor": "#f8f9fa"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains multivariate meteorological observations with 16 directional categories (nominal) and 7 ordinal speed bins measured as percentages. Original data from USGS maintains domain validity with column totals approximating 100% through rounding. The polar column chart maximizes data-ink ratio by using angular position for direction and radial length for frequency magnitude. Stacked color segments follow Cairo's preattentive processing principles for categorical discrimination. Blue gradient encoding maintains perceptual ordering of speed intensities (\u03bc=4.9%, \u03c3=6.2% across categories). The radial layout efficiently displays cyclic directional patterns while maintaining proportional area comparisons through angular consistency."
+}

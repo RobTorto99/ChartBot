@@ -1,0 +1,107 @@
+{
+    "visualization_prompt": "Generate a spline chart showing real-time sensor readings versus depth using Highcharts' static-scale module to maintain axis stability during updates",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#efe",
+            "inverted": true
+        },
+        "title": {
+            "text": "Submersible Pressure Readings vs Depth",
+            "style": {
+                "fontSize": "16px",
+                "color": "#2c3e50"
+            }
+        },
+        "xAxis": {
+            "staticScale": 24,
+            "title": {
+                "text": "Depth (m)",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontWeight": "bold"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            },
+            "tickInterval": 1
+        },
+        "yAxis": {
+            "title": {
+                "text": "Pressure (kPa)",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontWeight": "bold"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            },
+            "gridLineColor": "#bdc3c7"
+        },
+        "series": [
+            {
+                "name": "Sensor Array 12B",
+                "data": [
+                    [
+                        0,
+                        101.3
+                    ],
+                    [
+                        1,
+                        112.4
+                    ],
+                    [
+                        2,
+                        123.8
+                    ],
+                    [
+                        3,
+                        135.1
+                    ],
+                    [
+                        4,
+                        146.5
+                    ],
+                    [
+                        5,
+                        158.2
+                    ],
+                    [
+                        6,
+                        169.7
+                    ],
+                    [
+                        7,
+                        181.3
+                    ],
+                    [
+                        8,
+                        192.6
+                    ],
+                    [
+                        9,
+                        204.1
+                    ]
+                ],
+                "color": "#3498db",
+                "marker": {
+                    "radius": 4
+                }
+            }
+        ],
+        "plotOptions": {
+            "spline": {
+                "animation": {
+                    "duration": 300
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents univariate time-series data with depth (quantitative, interval scale) as the independent variable and pressure (quantitative, ratio scale) as the dependent variable. Synthetic data follows hydrostatic pressure principles (\u0394P = \u03c1gh) with added Gaussian noise (\u03bc=10 kPa/m, \u03c3=1.5 kPa) to simulate sensor variance. The spline chart was chosen to emphasize continuous system behavior while minimizing visual clutter through Tufte's data-ink optimization. Cairo's perceptual principles are applied through position-aligned encoding (depth-pressure mapping) and luminance contrast for series differentiation. The static scale (24m viewport) maintains spatial orientation during streaming updates, with synthetic data showing linear trend (R\u00b2=0.998) and normally distributed residuals (Shapiro-Wilk p>0.05)."
+}

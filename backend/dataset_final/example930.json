@@ -1,0 +1,42 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render an area chart with the following specifications: Chart type: area, Chart title: 'stacking: percent, connectNulls: false', Axes and labels styling: Use default styling, Data series: Two series with data [1, 1, null, 1, 1, 1] and [1, 1, 1, null, 1, 1], Custom colors: Not specified, Additional configurations: Use default settings for chart margins, background, and legend.",
+    "visualization_code": {
+        "chart": {
+            "type": "area"
+        },
+        "title": {
+            "text": "stacking: percent, connectNulls: false"
+        },
+        "plotOptions": {
+            "area": {
+                "connectNulls": false,
+                "stacking": "percent"
+            }
+        },
+        "series": [
+            {
+                "type": "area",
+                "data": [
+                    1,
+                    1,
+                    null,
+                    1,
+                    1,
+                    1
+                ]
+            },
+            {
+                "type": "area",
+                "data": [
+                    1,
+                    1,
+                    1,
+                    null,
+                    1,
+                    1
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render an area chart with specific settings. The chart type is set to 'area', and the title of the chart is 'stacking: percent, connectNulls: false'. The plotOptions for the area chart include 'connectNulls: false' to ensure that null values in the data series do not connect, and 'stacking: percent' to stack the data series in a percentage format. The data series consist of two areas, each with specific data points that include null values to demonstrate the effect of 'connectNulls: false'. The chart uses default styling for axes, labels, and other configurations such as margins, background, and legend, as no custom colors or additional configurations were specified."
+}

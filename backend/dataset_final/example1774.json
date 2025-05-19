@@ -1,0 +1,131 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly sales trends comparison between 2022 and 2023 using synthetic sales data with realistic seasonal patterns",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#FFFFFF",
+            "marginTop": 50,
+            "marginBottom": 90
+        },
+        "title": {
+            "text": "Monthly Sales Performance: 2022 vs 2023",
+            "style": {
+                "color": "#2C3E50",
+                "fontSize": "22px",
+                "fontFamily": "Arial"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "14px",
+                    "fontWeight": "bold"
+                }
+            },
+            "gridLineWidth": 1
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (USD thousands)",
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7F8C8D",
+                    "fontSize": "12px"
+                },
+                "format": "${value}K"
+            }
+        },
+        "series": [
+            {
+                "name": "2022 Sales",
+                "data": [
+                    185,
+                    210,
+                    245,
+                    280,
+                    315,
+                    365,
+                    340,
+                    325,
+                    295,
+                    260,
+                    230,
+                    200
+                ],
+                "color": "#E74C3C",
+                "marker": {
+                    "symbol": "circle",
+                    "radius": 5
+                }
+            },
+            {
+                "name": "2023 Sales",
+                "data": [
+                    205,
+                    235,
+                    275,
+                    310,
+                    345,
+                    395,
+                    360,
+                    345,
+                    315,
+                    280,
+                    250,
+                    220
+                ],
+                "color": "#2980B9",
+                "marker": {
+                    "symbol": "square",
+                    "radius": 5
+                }
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#2C3E50",
+                "fontSize": "14px"
+            }
+        },
+        "tooltip": {
+            "valuePrefix": "$",
+            "valueSuffix": "K",
+            "headerFormat": "<b>{point.x}</b><br>",
+            "pointFormat": "{series.name}: <b>{point.y}</b>"
+        },
+        "plotOptions": {
+            "spline": {
+                "lineWidth": 3,
+                "states": {
+                    "hover": {
+                        "lineWidth": 5
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two time series (2022 and 2023 sales) with 12 monthly observations each. Synthetic data was generated with 15% year-over-year growth while maintaining similar seasonal patterns (\u03bc_2022=276K, \u03c3=64K; \u03bc_2023=317K, \u03c3=69K). The spline chart maximizes data-ink ratio by eliminating chart junk while maintaining Tufte's principle of proportional ink. Color choices (warm red vs cool blue) follow Cairo's perceptual discriminability principles. Marker symbols and line weights create visual hierarchy, with hover states enhancing interactivity. Y-axis formatting uses D3-style monetary notation for immediate quantitative interpretation."
+}

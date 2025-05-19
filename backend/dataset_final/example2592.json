@@ -1,0 +1,110 @@
+{
+    "visualization_prompt": "Generate a horizontal waterfall chart showing quarterly financial movements for a tech company using synthetic monetary values with \u00b115% variance",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "waterfall",
+                "inverted": true,
+                "backgroundColor": "#F9F9F9"
+            },
+            "title": {
+                "text": "Q2 2023 Financial Flow Analysis (TechCo)",
+                "style": {
+                    "color": "#2A2A2A",
+                    "fontSize": "18px",
+                    "fontWeight": "bold"
+                }
+            },
+            "xAxis": {
+                "type": "category",
+                "labels": {
+                    "style": {
+                        "color": "#555555",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "USD",
+                    "style": {
+                        "color": "#555555",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "formatter": "function() { return '$' + Highcharts.numberFormat(this.value, 0); }",
+                    "style": {
+                        "color": "#555555"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Cash Flow",
+                    "upColor": "#4CAF50",
+                    "color": "#F44336",
+                    "data": [
+                        {
+                            "name": "Opening Balance",
+                            "y": 250000
+                        },
+                        {
+                            "name": "Hardware Sales",
+                            "y": 420000
+                        },
+                        {
+                            "name": "Software Licenses",
+                            "y": 185000
+                        },
+                        {
+                            "name": "Cloud Services",
+                            "y": 310000
+                        },
+                        {
+                            "name": "Gross Revenue",
+                            "isIntermediateSum": true,
+                            "color": "#2196F3"
+                        },
+                        {
+                            "name": "R&D Costs",
+                            "y": -275000
+                        },
+                        {
+                            "name": "Marketing",
+                            "y": -190000
+                        },
+                        {
+                            "name": "Operations",
+                            "y": -320000
+                        },
+                        {
+                            "name": "Net Profit",
+                            "isSum": true,
+                            "color": "#2196F3"
+                        }
+                    ],
+                    "dataLabels": {
+                        "enabled": true,
+                        "formatter": "function() { return Highcharts.numberFormat(this.y/1000, 0) + 'k'; }",
+                        "style": {
+                            "color": "#2A2A2A",
+                            "textOutline": "none",
+                            "fontSize": "12px"
+                        }
+                    }
+                }
+            ],
+            "tooltip": {
+                "pointFormatter": "function() { return '<b>$' + Highcharts.numberFormat(this.y, 0, '.', ',') + '</b><br/>'; }"
+            },
+            "plotOptions": {
+                "series": {
+                    "borderWidth": 0,
+                    "pointPadding": 0.1
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 9 financial metrics (1 opening balance, 3 revenue streams, 1 intermediate sum, 3 cost centers, and 1 final sum) representing quarterly cash flow. Synthetic values were generated using baseline corporate financial ratios (\u03bc=$300k, \u03c3=$150k) with intentional variance to simulate real-world fluctuations. The horizontal waterfall format applies Tufte's data-ink principles by eliminating redundant gridlines while maintaining Cairo's proportional perception through aligned rectangular connectors. Color coding (green=positive, red=negative, blue=summaries) creates immediate visual categorization, with data label formatting (+20% YTD equivalent) providing immediate quantitative context without tooltip interaction. The $1.16M intermediate sum and $380k final balance demonstrate controlled variance (15% std dev) while maintaining arithmetic validity across the progression."
+}

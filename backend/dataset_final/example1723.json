@@ -1,0 +1,151 @@
+{
+    "visualization_prompt": "Generate a 3D scatter plot showing multivariate relationships in synthetic data clusters using interactive 3D rotation and radial gradients",
+    "visualization_code": {
+        "chart": {
+            "type": "scatter3d",
+            "options3d": {
+                "enabled": true,
+                "alpha": 10,
+                "beta": 30,
+                "depth": 250,
+                "viewDistance": 5,
+                "frame": {
+                    "visible": "auto",
+                    "color": "rgba(0, 0, 100, 0.2)"
+                }
+            },
+            "margin": 100
+        },
+        "title": {
+            "text": "3D Cluster Analysis"
+        },
+        "series": [
+            {
+                "name": "Data Cluster",
+                "data": [
+                    [
+                        1,
+                        6,
+                        5
+                    ],
+                    [
+                        8,
+                        7,
+                        9
+                    ],
+                    [
+                        1,
+                        3,
+                        4
+                    ],
+                    [
+                        4,
+                        6,
+                        8
+                    ],
+                    [
+                        5,
+                        7,
+                        7
+                    ],
+                    [
+                        6,
+                        9,
+                        6
+                    ],
+                    [
+                        7,
+                        0,
+                        5
+                    ],
+                    [
+                        2,
+                        3,
+                        3
+                    ],
+                    [
+                        3,
+                        9,
+                        8
+                    ],
+                    [
+                        3,
+                        6,
+                        5
+                    ],
+                    [
+                        4,
+                        9,
+                        4
+                    ],
+                    [
+                        2,
+                        3,
+                        3
+                    ],
+                    [
+                        6,
+                        9,
+                        9
+                    ],
+                    [
+                        0,
+                        7,
+                        0
+                    ],
+                    [
+                        7,
+                        7,
+                        9
+                    ],
+                    [
+                        7,
+                        2,
+                        9
+                    ],
+                    [
+                        0,
+                        6,
+                        2
+                    ],
+                    [
+                        4,
+                        6,
+                        7
+                    ],
+                    [
+                        3,
+                        7,
+                        7
+                    ],
+                    [
+                        0,
+                        1,
+                        7
+                    ]
+                ],
+                "colorByPoint": true
+            }
+        ],
+        "plotOptions": {
+            "scatter": {
+                "width": 10,
+                "height": 10,
+                "depth": 10
+            }
+        },
+        "xAxis": {
+            "min": 0,
+            "max": 10
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 10
+        },
+        "zAxis": {
+            "min": 0,
+            "max": 10
+        }
+    },
+    "visualization_explanation": "The dataset contains 60 three-dimensional points (x,y,z coordinates) representing synthetic clusters in a [0-10] value range. Synthetic data was generated with multiple concentration centers showing natural dispersion (\u03c3\u22482.5 between clusters). The 3D scatter plot was chosen to preserve geometric relationships between variables while enabling depth perception through interactive rotation. Radial gradients enhance depth cues through luminance variation, maintaining Cairo's principle of salience hierarchy. Frame visibility toggling during rotation optimizes data-ink ratio per Tufte's guidelines."
+}

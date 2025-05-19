@@ -1,0 +1,62 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a stock chart with the following specifications: Chart type: OHLC (Open-High-Low-Close), Chart title: 'USD to EUR Exchange Rate', Axes and labels styling: Use a dark theme with white text for labels and titles, Data series: Include one series named 'USD to EUR' with the provided ohlcdata, Custom colors: Use a dark background with light blue for the series color, Additional configurations: Set the chart to styled mode, include a range selector with the first option selected, and ensure the chart has a minimum width of 600px and a height of 400px.",
+    "visualization_code": {
+        "chart": {
+            "styledMode": true,
+            "backgroundColor": "#2e2e2e",
+            "borderColor": "#444",
+            "borderRadius": 10,
+            "borderWidth": 1,
+            "height": 400,
+            "minWidth": 600
+        },
+        "title": {
+            "text": "USD to EUR Exchange Rate",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#ffffff"
+                }
+            },
+            "title": {
+                "style": {
+                    "color": "#ffffff"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#ffffff"
+                }
+            },
+            "title": {
+                "style": {
+                    "color": "#ffffff"
+                }
+            }
+        },
+        "rangeSelector": {
+            "selected": 1
+        },
+        "series": [
+            {
+                "type": "ohlc",
+                "name": "USD to EUR",
+                "data": "ohlcdata",
+                "color": "#4a90e2"
+            }
+        ],
+        "legend": {
+            "itemStyle": {
+                "color": "#ffffff"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render an OHLC (Open-High-Low-Close) stock chart with a dark theme. The chart title is set to 'USD to EUR Exchange Rate' with white text and a font size of 18px. The axes labels and titles are styled with white text to contrast against the dark background. The data series includes one series named 'USD to EUR' with the provided ohlcdata, and the series color is set to a light blue shade (#4a90e2). The chart is set to styled mode, which allows for more advanced styling through CSS. Additionally, a range selector is included with the first option selected, and the chart has a minimum width of 600px and a height of 400px. The background color of the chart is a dark shade (#2e2e2e), and the border is styled with a slightly lighter shade (#444) and rounded corners."
+}

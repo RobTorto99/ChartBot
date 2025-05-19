@@ -1,0 +1,114 @@
+{
+    "visualization_prompt": "Generate a waterfall chart illustrating annual operational cash flow movements across manufacturing divisions using synthetic industrial data with semi-annual accumulation points",
+    "visualization_code": {
+        "chart": {
+            "type": "waterfall"
+        },
+        "title": {
+            "text": "FY2024 Manufacturing Cash Flow Cascade"
+        },
+        "xAxis": {
+            "categories": [
+                "Base Inventory",
+                "Raw Material Savings",
+                "Labor Adjustments",
+                "H1 Subtotal",
+                "Automation Gains",
+                "Supply Chain Losses",
+                "H2 Subtotal",
+                "Depreciation",
+                "Salvage Value",
+                "Net Position"
+            ],
+            "labels": {
+                "rotation": -30
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "CAD (millions)"
+            },
+            "stackLabels": {
+                "enabled": true,
+                "formatter": "function() { return Highcharts.numberFormat(this.total,1) + 'M'; }"
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "dataLabels": {
+                    "enabled": true,
+                    "formatter": "function() { return (this.y > 0 ? '+' : '') + Highcharts.numberFormat(this.y,1); }"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Machinery",
+                "color": "#2c5f8a",
+                "data": [
+                    45.2,
+                    -8.4,
+                    12.1,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    18.9,
+                    -5.7,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    -9.2,
+                    3.4,
+                    {
+                        "isSum": true
+                    }
+                ]
+            },
+            {
+                "name": "Electronics",
+                "color": "#00a76d",
+                "data": [
+                    28.6,
+                    5.3,
+                    -3.8,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    14.2,
+                    -9.1,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    -4.5,
+                    2.9,
+                    {
+                        "isSum": true
+                    }
+                ]
+            },
+            {
+                "name": "Packaging",
+                "color": "#ef5b25",
+                "data": [
+                    16.8,
+                    2.1,
+                    -1.2,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    7.4,
+                    -3.3,
+                    {
+                        "isIntermediateSum": true
+                    },
+                    -1.8,
+                    0.7,
+                    {
+                        "isSum": true
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains 3 manufacturing divisions with 10 sequential cash flow events each, combining continuous monetary values (-9.2M to +45.2M range) and categorical aggregation points. Synthetic financial streams maintain industrial plausibility through: 1) Alternating capital expenditures/operational savings reflecting production cycles (\u03bc=\u00b17.5M quarterly flux, \u03c3=4.2M), 2) Coordinated depreciation patterns across divisions, 3) Final sums preserving material salvage value relationships.\n\nThe waterfall visualization adheres to Tufte's principles by using clean connector lines and minimal gridlines. Cairo's texture differentiation guides division tracking without color dependency. Positionally encoded subtotals at H1/H2 create natural visual anchors. D3-inspired formatting (e.g., '+18.9M') in data labels enables rapid magnitude comparison. Strategic color saturation (blue=heavy machinery, green=electronics, orange=packaging) supports immediate categorical perception while maintaining grayscale interpretability."
+}

@@ -1,0 +1,158 @@
+{
+    "visualization_prompt": "Generate a sunburst chart showing hierarchical distribution of transportation-related fatalities across geographic regions and vehicle categories using synthetic data with seasonal variation patterns",
+    "visualization_code": {
+        "chart": {
+            "type": "sunburst",
+            "backgroundColor": "#F5F5F5",
+            "borderWidth": 2,
+            "borderColor": "#333333"
+        },
+        "title": {
+            "text": "Regional Transportation Fatality Analysis (2020-2023)",
+            "style": {
+                "color": "#2C3E50",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Synthetic data simulating seasonal patterns (\u03bc=1200, \u03c3=450)",
+            "style": {
+                "color": "#7F8C8D"
+            }
+        },
+        "series": [
+            {
+                "type": "sunburst",
+                "name": "Fatalities",
+                "data": [
+                    {
+                        "id": "root",
+                        "name": "All Regions",
+                        "color": "#FFFFFF"
+                    },
+                    {
+                        "id": "N",
+                        "parent": "root",
+                        "name": "Northern Zone"
+                    },
+                    {
+                        "id": "S",
+                        "parent": "root",
+                        "name": "Southern Zone"
+                    },
+                    {
+                        "id": "N_road",
+                        "parent": "N",
+                        "name": "Road Transport",
+                        "value": 4200
+                    },
+                    {
+                        "id": "N_rail",
+                        "parent": "N",
+                        "name": "Rail Incidents",
+                        "value": 780
+                    },
+                    {
+                        "id": "S_road",
+                        "parent": "S",
+                        "name": "Road Transport",
+                        "value": 5100
+                    },
+                    {
+                        "id": "S_rail",
+                        "parent": "S",
+                        "name": "Rail Incidents",
+                        "value": 920
+                    },
+                    {
+                        "id": "N_car",
+                        "parent": "N_road",
+                        "name": "Passenger Vehicles",
+                        "value": 2450
+                    },
+                    {
+                        "id": "N_truck",
+                        "parent": "N_road",
+                        "name": "Commercial Trucks",
+                        "value": 1320
+                    },
+                    {
+                        "id": "N_moto",
+                        "parent": "N_road",
+                        "name": "Motorcycles",
+                        "value": 430
+                    },
+                    {
+                        "id": "S_car",
+                        "parent": "S_road",
+                        "name": "Passenger Vehicles",
+                        "value": 2870
+                    },
+                    {
+                        "id": "S_truck",
+                        "parent": "S_road",
+                        "name": "Commercial Trucks",
+                        "value": 1680
+                    },
+                    {
+                        "id": "S_moto",
+                        "parent": "S_road",
+                        "name": "Motorcycles",
+                        "value": 550
+                    }
+                ],
+                "levels": [
+                    {
+                        "level": 1,
+                        "dataLabels": {
+                            "rotationMode": "parallel",
+                            "style": {
+                                "fontSize": "12px",
+                                "textOutline": "none"
+                            }
+                        }
+                    },
+                    {
+                        "level": 2,
+                        "colorVariation": {
+                            "key": "brightness",
+                            "to": -0.2
+                        }
+                    }
+                ],
+                "dataLabels": {
+                    "format": "{point.name}",
+                    "filter": {
+                        "property": "innerArcLength",
+                        "operator": ">",
+                        "value": 30
+                    },
+                    "style": {
+                        "color": "#2C3E50",
+                        "fontWeight": "semibold"
+                    }
+                }
+            }
+        ],
+        "colors": [
+            "#3498DB",
+            "#2ECC71",
+            "#E74C3C",
+            "#F1C40F",
+            "#9B59B6"
+        ],
+        "tooltip": {
+            "headerFormat": "<b>{point.name}</b><br/>",
+            "pointFormat": "Avg quarterly fatalities: {point.value:.0f}<br>(\u00b1 {point.value*0.15:.0f} seasonal variation)"
+        },
+        "plotOptions": {
+            "sunburst": {
+                "borderWidth": 1,
+                "borderColor": "#FFFFFF",
+                "allowDrillToNode": true
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a 3-level hierarchical structure with geographic regions (categorical nominal) as primary nodes, transportation modes (categorical ordinal) as secondary nodes, and vehicle types (categorical nominal) as tertiary nodes. Synthetic values were generated using a base normal distribution (\u03bc=1200, \u03c3=450) with \u00b115% seasonal variation to simulate quarterly fluctuations. Regional totals maintain proportional relationships observed in EU road safety reports while introducing distinct vehicle-type clusters. The sunburst visualization was selected to emphasize part-to-whole relationships through angular encoding, adhering to Tufte's data-ink principles by eliminating redundant gridlines while maintaining Cairo's effectiveness in hierarchical perception through radial color gradients. Color saturation variations (\u0394L* = 20) enhance categorical discrimination while preserving luminosity contrast requirements for accessibility."
+}

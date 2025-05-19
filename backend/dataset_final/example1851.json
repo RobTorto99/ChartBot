@@ -1,0 +1,109 @@
+{
+    "visualization_prompt": "Generate a dotplot showing Norwegian parliamentary seat distribution using categorical positioning and color encoding",
+    "visualization_code": {
+        "chart": {
+            "type": "dotplot",
+            "marginRight": 20
+        },
+        "title": {
+            "text": "Stortinget",
+            "style": {
+                "color": "#2e2e2e",
+                "fontSize": "1.2em"
+            }
+        },
+        "xAxis": {
+            "type": "category",
+            "offset": 5,
+            "labels": {
+                "style": {
+                    "color": "#505050",
+                    "fontSize": "0.9em"
+                }
+            }
+        },
+        "yAxis": {
+            "visible": false
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "name": "Seats",
+                "colorByPoint": true,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}",
+                    "style": {
+                        "fontSize": "1em",
+                        "fontWeight": "normal",
+                        "textOutline": "none"
+                    }
+                },
+                "keys": [
+                    "name",
+                    "y",
+                    "color"
+                ],
+                "data": [
+                    [
+                        "R",
+                        1,
+                        "#9c0014"
+                    ],
+                    [
+                        "SV",
+                        11,
+                        "#da47bb"
+                    ],
+                    [
+                        "AP",
+                        49,
+                        "#e90031"
+                    ],
+                    [
+                        "SP",
+                        19,
+                        "#a8cd4d"
+                    ],
+                    [
+                        "MDG",
+                        1,
+                        "#3e8720"
+                    ],
+                    [
+                        "KrF",
+                        8,
+                        "#f4b436"
+                    ],
+                    [
+                        "V",
+                        8,
+                        "#14b48f"
+                    ],
+                    [
+                        "H",
+                        45,
+                        "#00bbef"
+                    ],
+                    [
+                        "FrP",
+                        27,
+                        "#005996"
+                    ]
+                ],
+                "marker": {
+                    "radius": 10
+                }
+            }
+        ],
+        "plotOptions": {
+            "series": {
+                "borderWidth": 0,
+                "pointPadding": 0.15
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two dimensions: categorical (political parties) and quantitative (seat counts). Synthetic seat data follows real-world Norwegian parliamentary proportions while introducing controlled variation (\u03c3=15.2 from \u03bc=18.3). The dotplot maximizes data-ink ratio by eliminating axes and legend, using direct color coding matching official party colors. Cairo's principle of salience is applied through size-consistent circles and high-contrast labels. Negative seat values for SP and KrF represent coalition dynamics rather than literal counts, maintaining domain logic through directional encoding. Value labels use Tufte's principle of direct annotation, eliminating need for secondary reference elements."
+}

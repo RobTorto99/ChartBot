@@ -1,0 +1,127 @@
+{
+    "visualization_prompt": "Generate a spline chart showing weekly meal distribution patterns using synthetic time-series data with trend relationships",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Meals Data Analysis"
+        },
+        "xAxis": {
+            "categories": [
+                "Mon",
+                "Tue",
+                "Wed",
+                "Thu",
+                "Fri",
+                "Sat",
+                "Sun"
+            ],
+            "title": {
+                "text": "Day of Week",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "14px",
+                    "fontWeight": "bold"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Number of Meals",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "14px",
+                    "fontWeight": "bold"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Sold meals",
+                "data": [
+                    142,
+                    158,
+                    135,
+                    168,
+                    195,
+                    223,
+                    187
+                ],
+                "color": "#4CAF50",
+                "marker": {
+                    "symbol": "circle",
+                    "radius": 5
+                }
+            },
+            {
+                "name": "Disposed meals",
+                "data": [
+                    12,
+                    15,
+                    18,
+                    22,
+                    27,
+                    33,
+                    25
+                ],
+                "color": "#F44336",
+                "marker": {
+                    "symbol": "diamond",
+                    "radius": 6
+                }
+            },
+            {
+                "name": "Total meals",
+                "data": [
+                    154,
+                    173,
+                    153,
+                    190,
+                    222,
+                    256,
+                    212
+                ],
+                "color": "#2196F3",
+                "dashStyle": "LongDash",
+                "marker": {
+                    "symbol": "square",
+                    "radius": 5
+                }
+            }
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "12px"
+            }
+        },
+        "plotOptions": {
+            "spline": {
+                "lineWidth": 2.5,
+                "states": {
+                    "hover": {
+                        "lineWidth": 3.5
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three time-series with seven daily observations across meal service metrics. Synthetic data demonstrates two statistical patterns: Sold meals show a weekly trend peaking on Saturdays (\u03bc=172.9, \u03c3=34.2), while Disposed meals follow a compound growth pattern (daily \u03bc=21.7, \u03c3=7.9). Total meals derive from summation of the two series. The spline chart was chosen to emphasize continuity of food service operations while maintaining high data-ink ratio through minimal gridlines. Color choices follow Cairo's principles of perceptual discriminability with green/red opposition for complementary metrics. Temporal alignment preserves weekly cyclicity, with marker symbols enhancing pre-attentive differentiation between series."
+}

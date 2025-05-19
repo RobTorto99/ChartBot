@@ -1,0 +1,85 @@
+{
+    "visualization_prompt": "Generate a column chart showing proportional layers of Earth's atmosphere using percent stacking with annotated height ranges",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "white",
+            "borderColor": "black",
+            "borderWidth": 2
+        },
+        "title": {
+            "text": "Earth's atmosphere"
+        },
+        "subtitle": {
+            "text": "Source: NASA"
+        },
+        "xAxis": {
+            "categories": [
+                "Atmospheric Layers"
+            ],
+            "visible": false
+        },
+        "yAxis": {
+            "visible": false,
+            "min": 0
+        },
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "{point.series.userOptions.info}"
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "percent",
+                "borderWidth": 2,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{series.name}: {point.series.userOptions.height}",
+                    "color": "black"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Exosphere",
+                "data": [
+                    1
+                ],
+                "height": "up to 10,000km",
+                "info": "Upper atmospheric boundary extending to space vacuum"
+            },
+            {
+                "name": "Thermosphere",
+                "data": [
+                    1
+                ],
+                "height": "600km",
+                "info": "Absorbs harmful X-ray and UV radiation"
+            },
+            {
+                "name": "Mesosphere",
+                "data": [
+                    1
+                ],
+                "height": "85km",
+                "info": "Meteor burning layer with decreasing temperature"
+            },
+            {
+                "name": "Stratosphere",
+                "data": [
+                    1
+                ],
+                "height": "50km",
+                "info": "Contains ozone layer protecting from UV"
+            },
+            {
+                "name": "Troposphere",
+                "data": [
+                    1
+                ],
+                "height": "8-14.5km",
+                "info": "Weather layer containing breathable air"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset uses categorical stacking with ordinal atmospheric layers. Synthetic unity values (all =1) enable percentage stacking visualization despite non-proportional real heights. Data quality prioritizes didactic labeling over physical accuracy. The column chart maximizes data-ink ratio by hiding axes and using direct labeling. Cairo's principles are applied through position-based encoding (vertical stacking order) and color-free differentiation. Equal segment distribution creates false proportional perception but serves mnemonic purpose for layer sequence memorization."
+}

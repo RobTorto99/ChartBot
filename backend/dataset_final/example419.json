@@ -1,0 +1,95 @@
+{
+    "visualization_prompt": "Create a Highcharts 3D bar chart with the title 'Highcharts 3D bar chart'. The chart should display data for different types of trees, with each bar representing the number of trees of that type. The chart should have a 3D effect with specific angles and depth. The axes and labels should be styled with specific colors and font sizes. The chart should also have custom colors for each bar.",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "margin": 75,
+            "options3d": {
+                "enabled": true,
+                "alpha": 15,
+                "beta": 15,
+                "depth": 50
+            }
+        },
+        "title": {
+            "text": "Highcharts 3D bar chart",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px"
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "depth": 25,
+                "colorByPoint": true
+            }
+        },
+        "xAxis": {
+            "type": "category",
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Number of Trees",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "series": [
+            {
+                "data": [
+                    [
+                        "Birch",
+                        34
+                    ],
+                    [
+                        "Oak",
+                        20
+                    ],
+                    [
+                        "Pine",
+                        44
+                    ],
+                    [
+                        "Elm",
+                        12
+                    ],
+                    [
+                        "Aspen",
+                        59
+                    ],
+                    [
+                        "Maple",
+                        41
+                    ]
+                ],
+                "colorByPoint": true,
+                "colors": [
+                    "#7cb5ec",
+                    "#434348",
+                    "#90ed7d",
+                    "#f7a35c",
+                    "#8085e9",
+                    "#f15c80"
+                ]
+            }
+        ],
+        "legend": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a 3D bar chart with specific visual enhancements. The chart type is set to 'bar', and it includes a 3D effect enabled with specific angles (alpha and beta) and depth. The title of the chart is styled with a dark gray color and a font size of 20px. The x-axis is configured as a category axis with labels styled in a lighter gray color and a font size of 14px. The y-axis includes a title styled similarly and labels with the same styling. The data series includes specific tree types and their respective counts, with each bar colored uniquely using a predefined list of colors. The legend is disabled to keep the chart clean and focused on the data representation."
+}

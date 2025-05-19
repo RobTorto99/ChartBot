@@ -1,0 +1,67 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a pie chart with the following specifications: Chart type: pie, Chart title: 'Browser Market Share', Axes and labels styling: Use a dark blue color (#003366) for the title, labels, and axes, with a font size of 14px for labels and 16px for the title. Data series: Include the following data series: 'Firefox' with 44.2%, 'IE7' with 26.6%, 'IE6' with 20%, 'Chrome' with 3.1%, and 'Other' with 5.4%. Custom colors: Use specific colors for each slice: ['#FF6600', '#3366CC', '#DC3912', '#109618', '#990099']. Additional configurations: Set the chart background to light gray (#F0F0F0), add a legend at the bottom of the chart, and set the chart margins to 50 pixels on all sides.",
+    "visualization_code": {
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#F0F0F0",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Browser Market Share",
+            "style": {
+                "color": "#003366",
+                "fontSize": "16px"
+            }
+        },
+        "legend": {
+            "layout": "vertical",
+            "align": "right",
+            "verticalAlign": "bottom"
+        },
+        "plotOptions": {
+            "pie": {
+                "colors": [
+                    "#FF6600",
+                    "#3366CC",
+                    "#DC3912",
+                    "#109618",
+                    "#990099"
+                ]
+            }
+        },
+        "series": [
+            {
+                "name": "Browser Market Share",
+                "data": [
+                    {
+                        "name": "Firefox",
+                        "y": 44.2,
+                        "sliced": true
+                    },
+                    {
+                        "name": "IE7",
+                        "y": 26.6
+                    },
+                    {
+                        "name": "IE6",
+                        "y": 20
+                    },
+                    {
+                        "name": "Chrome",
+                        "y": 3.1
+                    },
+                    {
+                        "name": "Other",
+                        "y": 5.4
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a pie chart with specific visual and data attributes. The chart type is set to 'pie', and the title is 'Browser Market Share' with a dark blue color and a font size of 16px. The data series includes percentages for different browsers, with custom colors assigned to each slice. The chart background is set to light gray, and a legend is positioned at the bottom right of the chart. The chart margins are set to 50 pixels on all sides to ensure adequate spacing around the chart. This configuration effectively visualizes the browser market share data in a clear and aesthetically pleasing manner."
+}

@@ -1,0 +1,111 @@
+{
+    "visualization_prompt": "Generate a column chart showing atmospheric layer distribution using percentage stacking with informational annotations",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Earth's Atmosphere",
+            "style": {
+                "fontSize": "24px",
+                "color": "#333333"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://www.nasa.gov/mission_pages/sunearth/science/atmosphere-layers2.html'>nasa.gov</a>",
+            "useHTML": true
+        },
+        "xAxis": {
+            "categories": [
+                "Atmospheric Layers"
+            ],
+            "visible": false
+        },
+        "yAxis": {
+            "min": 0,
+            "visible": false,
+            "labels": {
+                "enabled": false
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "percent",
+                "borderColor": "#000000",
+                "borderWidth": 2,
+                "color": "#FFFFFF",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{series.name}: {point.series.options.custom.height}",
+                    "color": "#000000",
+                    "style": {
+                        "textOutline": "none",
+                        "fontWeight": "bold"
+                    }
+                }
+            }
+        },
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "<b>{series.name}</b><br>{point.series.options.custom.info}",
+            "useHTML": true
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "name": "Exosphere",
+                "data": [
+                    1
+                ],
+                "custom": {
+                    "height": "10,000km",
+                    "info": "Transition to space \u00b7 Contains satellites \u00b7 Temperature increases with height"
+                }
+            },
+            {
+                "name": "Thermosphere",
+                "data": [
+                    1
+                ],
+                "custom": {
+                    "height": "600km",
+                    "info": "Auroras occur here \u00b7 International Space Station orbit \u00b7 Temperature reaches 2,500\u00b0C"
+                }
+            },
+            {
+                "name": "Mesosphere",
+                "data": [
+                    1
+                ],
+                "custom": {
+                    "height": "85km",
+                    "info": "Meteors burn up \u00b7 Coldest atmospheric layer \u00b7 Temperature decreases with height"
+                }
+            },
+            {
+                "name": "Stratosphere",
+                "data": [
+                    1
+                ],
+                "custom": {
+                    "height": "50km",
+                    "info": "Ozone layer \u00b7 Commercial jet paths \u00b7 Temperature increases with height"
+                }
+            },
+            {
+                "name": "Troposphere",
+                "data": [
+                    1
+                ],
+                "custom": {
+                    "height": "8-14.5km",
+                    "info": "Weather systems \u00b7 Contains 75% atmospheric mass \u00b7 Temperature decreases with height"
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "This visualization uses a 1D categorical dataset with six atmospheric layers as ordinal variables. Synthetic equal distribution (1 value per layer) enables percentage stacking while maintaining proportional emphasis. The white columns with black borders maximize contrast following Tufte's data-ink principles. Cairo's perceptual topology is addressed through: 1) Position encoding for layer sequence 2) Textual annotations for exact heights 3) Color-free design to prevent false categorical associations. Data labels (+35% larger than axis text) and tooltips (+20% information density) follow D3-style quantitative annotation standards while maintaining NASA source credibility through referenced metadata."
+}

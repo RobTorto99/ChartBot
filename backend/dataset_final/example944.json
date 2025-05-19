@@ -1,0 +1,172 @@
+{
+    "visualization_prompt": "Create a Highcharts treemap chart that visualizes the population of Fiji's divisions and provinces in 2017. The chart should have a title 'Fiji divisions and provinces by population 2017' and a subtitle with a link to the source data on Wikipedia. The treemap should be interactive, allowing drill-down to nodes, and should have data labels enabled for the top-level nodes. The chart should use specific colors for different provinces and should have a tooltip that displays the name and population of each province when hovered over.",
+    "visualization_code": {
+        "chart": {
+            "type": "treemap"
+        },
+        "title": {
+            "text": "Fiji divisions and provinces by population 2017"
+        },
+        "subtitle": {
+            "useHTML": true,
+            "text": "Source:<a href=\"https://en.wikipedia.org/wiki/Local_government_in_Fiji\">Wikipedia</a>"
+        },
+        "tooltip": {
+            "useHTML": true,
+            "pointFormat": "<b>{point.name}</b>: Population is <b>{point.value}</b>"
+        },
+        "series": [
+            {
+                "type": "treemap",
+                "layoutAlgorithm": "squarified",
+                "allowDrillToNode": true,
+                "dataLabels": {
+                    "enabled": false
+                },
+                "borderColor": "#000000",
+                "levels": [
+                    {
+                        "level": 1,
+                        "dataLabels": {
+                            "enabled": true,
+                            "color": "#000000",
+                            "style": {
+                                "textOutline": "5px contrast",
+                                "fontSize": 18
+                            },
+                            "zIndex": 9
+                        },
+                        "borderWidth": 3
+                    }
+                ],
+                "data": [
+                    {
+                        "id": "Central",
+                        "name": "Central",
+                        "value": 378148,
+                        "color": {
+                            "patternIndex": 0
+                        }
+                    },
+                    {
+                        "id": "Naitasiri",
+                        "name": "Naitasiri",
+                        "value": 177678,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Namosi",
+                        "name": "Namosi",
+                        "value": 7871,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Rewa",
+                        "name": "Rewa",
+                        "value": 108016,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Serua",
+                        "name": "Serua",
+                        "value": 20031,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Tailevu",
+                        "name": "Tailevu",
+                        "value": 64552,
+                        "parent": "Central"
+                    },
+                    {
+                        "id": "Northern",
+                        "name": "Northern",
+                        "value": 131918,
+                        "color": {
+                            "patternIndex": 1
+                        }
+                    },
+                    {
+                        "id": "Bua",
+                        "name": "Bua",
+                        "value": 15466,
+                        "parent": "Northern"
+                    },
+                    {
+                        "id": "Cakaudrove",
+                        "name": "Cakaudrove",
+                        "value": 50469,
+                        "parent": "Northern"
+                    },
+                    {
+                        "id": "Macuata",
+                        "name": "Macuata",
+                        "value": 65983,
+                        "parent": "Northern"
+                    },
+                    {
+                        "id": "Eastern",
+                        "name": "Eastern",
+                        "value": 36156,
+                        "color": {
+                            "patternIndex": 2
+                        }
+                    },
+                    {
+                        "id": "Kadavu",
+                        "name": "Kadavu",
+                        "value": 10897,
+                        "parent": "Eastern"
+                    },
+                    {
+                        "id": "Lau",
+                        "name": "Lau",
+                        "value": 9602,
+                        "parent": "Eastern"
+                    },
+                    {
+                        "id": "Lomaiviti",
+                        "name": "Lomaiviti",
+                        "value": 15657,
+                        "parent": "Eastern"
+                    },
+                    {
+                        "id": "Western",
+                        "name": "Western",
+                        "value": 337071,
+                        "color": {
+                            "patternIndex": 3
+                        }
+                    },
+                    {
+                        "id": "Ba",
+                        "name": "Ba",
+                        "value": 247708,
+                        "parent": "Western"
+                    },
+                    {
+                        "id": "Nadroga-Navosa",
+                        "name": "Nadroga-Navosa",
+                        "value": 58931,
+                        "parent": "Western"
+                    },
+                    {
+                        "id": "Ra",
+                        "name": "Ra",
+                        "value": 30432,
+                        "parent": "Western"
+                    },
+                    {
+                        "id": "Rotuma",
+                        "name": "Rotuma",
+                        "value": 1594,
+                        "color": {
+                            "patternIndex": 4
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a treemap chart that visualizes the population distribution of Fiji's divisions and provinces in 2017. The chart type is set to 'treemap', which is suitable for hierarchical data representation. The title of the chart is 'Fiji divisions and provinces by population 2017', and a subtitle is included with a link to the source data on Wikipedia. The treemap is interactive, allowing users to drill down into specific nodes for more detailed information. Data labels are enabled for the top-level nodes, providing clear visibility of the main categories. The chart uses specific colors for different provinces, enhancing visual differentiation. A tooltip is configured to display the name and population of each province when hovered over, providing additional context to the data. Overall, this configuration effectively presents the hierarchical population data in an interactive and visually appealing manner."
+}

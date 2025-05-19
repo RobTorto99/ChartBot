@@ -1,0 +1,111 @@
+{
+    "visualization_prompt": "Generate a column chart showing organic crop production distribution across regions using stacked columns with styled value labels",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "backgroundColor": "#F9F9F9",
+                "marginTop": 40
+            },
+            "title": {
+                "text": "Organic Crop Production (2020-2023)",
+                "style": {
+                    "color": "#2E4053",
+                    "fontSize": "20px",
+                    "fontWeight": "bold"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Wheat",
+                    "Rice",
+                    "Corn",
+                    "Barley",
+                    "Oats",
+                    "Soybeans",
+                    "Cotton",
+                    "Canola",
+                    "Sunflower",
+                    "Sorghum"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#34495E",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Metric Tons (\u00d71000)",
+                    "style": {
+                        "color": "#34495E",
+                        "fontSize": "14px"
+                    }
+                },
+                "stackLabels": {
+                    "enabled": true,
+                    "backgroundColor": "rgba(173, 216, 230, 0.85)",
+                    "borderColor": "#4682B4",
+                    "borderRadius": 4,
+                    "borderWidth": 1,
+                    "style": {
+                        "color": "#1A5276",
+                        "textOutline": "none"
+                    }
+                }
+            },
+            "plotOptions": {
+                "column": {
+                    "stacking": "normal",
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "{point.y:,.0f}K"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Northern Region",
+                    "data": [
+                        184,
+                        156,
+                        210,
+                        92,
+                        78,
+                        145,
+                        88,
+                        103,
+                        65,
+                        120
+                    ],
+                    "color": "#3498DB"
+                },
+                {
+                    "name": "Southern Region",
+                    "data": [
+                        142,
+                        128,
+                        165,
+                        113,
+                        94,
+                        98,
+                        124,
+                        85,
+                        110,
+                        92
+                    ],
+                    "color": "#E74C3C"
+                }
+            ],
+            "legend": {
+                "align": "right",
+                "verticalAlign": "top",
+                "itemStyle": {
+                    "color": "#2C3E50"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two-dimensional numerical data comparing organic crop production (metric tons) across 10 crop types and two geographical regions. Synthetic data was generated using normal distributions (Northern \u03bc=130\u00b140, Southern \u03bc=115\u00b130) with intentional clustering showing grains (wheat, corn) dominating northern production while southern regions show balanced distribution. The column chart maximizes data-ink ratio through direct value labels and minimal gridlines, following Tufte's principles. Color saturation (blue=North, red=South) applies Cairo's preattentive processing for immediate regional comparison. Stack labels use high-contrast typography with semi-transparent backgrounds to maintain layer legibility. Production values maintain agricultural plausibility with 65K-210K metric ton ranges per crop type."
+}

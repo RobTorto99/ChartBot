@@ -1,0 +1,89 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the following specifications: Chart type: spline, Chart title: 'Sample Spline Chart', Axes and labels styling: Use a dark background with white text for labels and titles, Data series: Include two series named 'Series 1' and 'Series 2' with the data [1, 2, 0.5, 3, 1, 0.1, 3, 1] and [10, 20, 15, 30, 25, 10, 35, 20] respectively, Custom colors: Use 'lightgreen' for positive values and 'red' for negative values, Additional configurations: Set chart margins to 50px, enable the legend, and position it at the bottom of the chart.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#333",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Sample Spline Chart",
+            "style": {
+                "color": "#fff"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#fff"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": null,
+                "style": {
+                    "color": "#fff"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#fff"
+                }
+            }
+        },
+        "legend": {
+            "enabled": true,
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#fff"
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "marker": {
+                    "enabled": false
+                },
+                "lineWidth": 5,
+                "color": "lightgreen",
+                "negativeColor": "red"
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    1,
+                    2,
+                    0.5,
+                    3,
+                    1,
+                    0.1,
+                    3,
+                    1
+                ]
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    10,
+                    20,
+                    15,
+                    30,
+                    25,
+                    10,
+                    35,
+                    20
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a spline chart with a dark background and white text for labels and titles. The chart includes two data series named 'Series 1' and 'Series 2', each with specified data points. The chart uses 'lightgreen' for positive values and 'red' for negative values, and the legend is enabled and positioned at the bottom of the chart. Additional configurations include setting the chart margins to 50px, which provides ample space around the chart for better visual clarity."
+}

@@ -1,0 +1,110 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Sample Spline Chart'. The chart should have styled axes and labels with specific colors and font sizes. The data series should include two series named 'Series 1' and 'Series 2', each with corresponding data points. Custom colors should be applied to the chart series. Additional configurations should include chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 50,
+            "marginBottom": 70,
+            "marginLeft": 70,
+            "marginRight": 50
+        },
+        "title": {
+            "text": "Sample Spline Chart",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            },
+            "title": {
+                "text": "Months",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    10,
+                    15,
+                    13,
+                    17,
+                    20,
+                    25,
+                    23,
+                    27,
+                    30,
+                    35,
+                    33,
+                    37
+                ],
+                "color": "#2caffe"
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    5,
+                    10,
+                    8,
+                    12,
+                    15,
+                    20,
+                    18,
+                    22,
+                    25,
+                    30,
+                    28,
+                    32
+                ],
+                "color": "#544fc5"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart with a title 'Sample Spline Chart'. The chart includes styled axes and labels with specific colors and font sizes. The x-axis represents months with categories from January to December, and the y-axis represents values. The chart contains two data series named 'Series 1' and 'Series 2', each with corresponding data points. Custom colors are applied to the chart series, and additional configurations include chart margins, background, and legend settings. The legend is enabled and styled with a specific font size and color. This configuration ensures a visually appealing and informative spline chart."
+}

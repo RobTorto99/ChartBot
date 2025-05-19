@@ -1,0 +1,137 @@
+{
+    "visualization_prompt": "Generate a sunburst chart showing hierarchical composition of International Space Station visitors using parent-child relationships with continent-country structure",
+    "visualization_code": {
+        "chart": {
+            "type": "sunburst",
+            "margin": [
+                20,
+                20,
+                20,
+                20
+            ],
+            "backgroundColor": "#f8f9fa"
+        },
+        "title": {
+            "text": "ISS Visitors by Nationality (2000-2023)",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://www.nasa.gov/iss-visitors' style='color: #2980b9'>NASA Historical Data</a>",
+            "useHTML": true
+        },
+        "series": [
+            {
+                "type": "sunburst",
+                "name": "Visitors",
+                "data": [
+                    {
+                        "id": "root",
+                        "name": "Global",
+                        "color": "#7f8c8d"
+                    },
+                    {
+                        "id": "NA",
+                        "parent": "root",
+                        "name": "North America",
+                        "value": 160,
+                        "color": "#3498db"
+                    },
+                    {
+                        "id": "EU",
+                        "parent": "root",
+                        "name": "Europe",
+                        "value": 62,
+                        "color": "#e74c3c"
+                    },
+                    {
+                        "id": "AS",
+                        "parent": "root",
+                        "name": "Asia",
+                        "value": 59,
+                        "color": "#2ecc71"
+                    },
+                    {
+                        "parent": "NA",
+                        "name": "United States",
+                        "value": 151,
+                        "color": "#2980b9"
+                    },
+                    {
+                        "parent": "NA",
+                        "name": "Canada",
+                        "value": 8,
+                        "color": "#3498db"
+                    },
+                    {
+                        "parent": "EU",
+                        "name": "Russia",
+                        "value": 49,
+                        "color": "#c0392b"
+                    },
+                    {
+                        "parent": "EU",
+                        "name": "Italy",
+                        "value": 5,
+                        "color": "#e74c3c"
+                    },
+                    {
+                        "parent": "AS",
+                        "name": "Japan",
+                        "value": 9,
+                        "color": "#27ae60"
+                    },
+                    {
+                        "parent": "AS",
+                        "name": "UAE",
+                        "value": 2,
+                        "color": "#2ecc71"
+                    },
+                    {
+                        "parent": "root",
+                        "name": "Other",
+                        "value": 11,
+                        "color": "#95a5a6"
+                    }
+                ],
+                "levels": [
+                    {
+                        "level": 1,
+                        "dataLabels": {
+                            "rotationMode": "parallel",
+                            "filter": {
+                                "property": "outerArcLength",
+                                "operator": ">",
+                                "value": 64
+                            },
+                            "style": {
+                                "fontSize": "12px",
+                                "textOutline": "none"
+                            }
+                        }
+                    }
+                ],
+                "dataLabels": {
+                    "format": "{point.name}",
+                    "style": {
+                        "color": "#2c3e50",
+                        "fontWeight": "semibold"
+                    }
+                },
+                "borderWidth": 1,
+                "allowDrillToNode": true
+            }
+        ],
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "<span style='color:{point.color}'>\u25cf</span> {point.name}: <b>{point.value}</b> astronauts<br/>({point.percentage:.1f}%)"
+        },
+        "legend": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset contains hierarchical categorical data with two levels: continental regions (parent nodes) and countries (child nodes). Synthetic data preserves NASA's reported distribution (\u03bc=151 US visitors, \u03c3=\u00b118% for other nations) while maintaining integer counts. The sunburst visualization maximizes data-ink ratio by encoding quantities through arc lengths and color hues. Perceptual principles are maintained through adjacent color temperatures (cool blues for North America, warm reds for Europe) and proportional area encoding. The two-level hierarchy reduces cognitive load compared to flat pie charts, while drill-down capability preserves Cairo's principle of hierarchical disclosure. Value annotations use D3-style percentage formatting in tooltips for proportional context."
+}

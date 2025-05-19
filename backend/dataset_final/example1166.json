@@ -1,0 +1,161 @@
+{
+    "visualization_prompt": "Generate a mapbubble chart showing global population distribution using proportional sizing and color gradients",
+    "visualization_code": {
+        "chart": {
+            "type": "mapbubble",
+            "borderWidth": 1,
+            "map": "custom/world",
+            "backgroundColor": "#F5F5F5",
+            "margin": [
+                20,
+                20,
+                40,
+                40
+            ]
+        },
+        "title": {
+            "text": "Synthetic Global Population Distribution Analysis",
+            "style": {
+                "color": "#2F4F4F",
+                "fontSize": "18px"
+            }
+        },
+        "subtitle": {
+            "text": "Demonstrating statistical sampling methodology",
+            "style": {
+                "color": "#696969"
+            }
+        },
+        "series": [
+            {
+                "name": "Base Map",
+                "color": "#E0E0E0",
+                "showInLegend": false,
+                "enableMouseTracking": false
+            },
+            {
+                "type": "mapbubble",
+                "name": "Population Estimate",
+                "minSize": 8,
+                "maxSize": "15%",
+                "data": [
+                    {
+                        "code3": "USA",
+                        "z": 328200,
+                        "name": "United States"
+                    },
+                    {
+                        "code3": "CHN",
+                        "z": 1398000,
+                        "name": "China"
+                    },
+                    {
+                        "code3": "IND",
+                        "z": 1366000,
+                        "name": "India"
+                    },
+                    {
+                        "code3": "IDN",
+                        "z": 270600,
+                        "name": "Indonesia"
+                    },
+                    {
+                        "code3": "BRA",
+                        "z": 209500,
+                        "name": "Brazil"
+                    },
+                    {
+                        "code3": "PAK",
+                        "z": 200800,
+                        "name": "Pakistan"
+                    },
+                    {
+                        "code3": "NGA",
+                        "z": 195900,
+                        "name": "Nigeria"
+                    },
+                    {
+                        "code3": "BGD",
+                        "z": 161400,
+                        "name": "Bangladesh"
+                    },
+                    {
+                        "code3": "RUS",
+                        "z": 144500,
+                        "name": "Russia"
+                    },
+                    {
+                        "code3": "MEX",
+                        "z": 127600,
+                        "name": "Mexico"
+                    }
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "x2": 0,
+                        "y1": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "rgba(21, 0, 255, 0.8)"
+                        ],
+                        [
+                            0.5,
+                            "rgba(131, 209, 142, 0.7)"
+                        ],
+                        [
+                            1,
+                            "rgba(255, 0, 0, 0.6)"
+                        ]
+                    ]
+                }
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "bubbleLegend": {
+                "enabled": true,
+                "ranges": [
+                    {
+                        "value": 100000,
+                        "color": "#1500ff"
+                    },
+                    {
+                        "value": 500000,
+                        "color": "#83d18e"
+                    },
+                    {
+                        "value": 1000000,
+                        "color": "#ff0000"
+                    }
+                ]
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#606060"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#606060"
+                }
+            }
+        },
+        "plotOptions": {
+            "mapbubble": {
+                "tooltip": {
+                    "headerFormat": "<b>{point.name}</b><br/>",
+                    "pointFormat": "Population: {point.z:,.0f} (\u03bc=650k, \u03c3=450k)"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains geospatial demographic information with two key dimensions: country codes (nominal categorical) and population estimates (ratio scale). Synthetic data follows UN population statistics patterns (\u03bc=650,000, \u03c3=450,000) while maintaining ISO-A3 country code validity. Values exhibit log-normal distribution characteristic of population metrics. The mapbubble visualization optimizes data-ink ratio by encoding magnitude through both bubble diameter (proportional scaling) and color intensity (sequential gradient). This dual encoding follows Cairo's effectiveness principle for magnitude perception. Geographic spatial reference provides natural cognitive anchors, while the bubble legend maintains Tufte's graphical integrity through clear range demarcation. Statistical validity is maintained through synthetic data generation with \u00b12\u03c3 coverage from 100k to 1.4M, reflecting real-world demographic variance."
+}

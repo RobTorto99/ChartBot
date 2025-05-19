@@ -1,0 +1,179 @@
+{
+    "visualization_prompt": "Generate a parallel coordinates plot showing multivariate relationships between car performance metrics (MPG, Cylinders, Displacement, Horsepower, Weight, Acceleration, Model Year, Origin) using standardized axis scaling and temporal grouping.",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "parallelCoordinates": true,
+            "marginTop": 50
+        },
+        "title": {
+            "text": "Automotive Performance Profile Analysis",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px"
+            }
+        },
+        "subtitle": {
+            "text": "Normalized axes with \u03bc\u00b12\u03c3 ranges | Synthetic dataset (n=150 models)",
+            "style": {
+                "color": "#7f8c8d"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "MPG",
+                "Cyl",
+                "Disp",
+                "HP",
+                "Weight",
+                "0-60",
+                "Year",
+                "Origin"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495e",
+                    "fontWeight": "bold"
+                }
+            },
+            "lineWidth": 2
+        },
+        "yAxis": {
+            "plotBands": [
+                {
+                    "from": -2,
+                    "to": 2,
+                    "color": "rgba(150, 150, 150, 0.1)"
+                }
+            ]
+        },
+        "plotOptions": {
+            "series": {
+                "animation": {
+                    "duration": 500
+                },
+                "marker": {
+                    "enabled": false
+                },
+                "states": {
+                    "hover": {
+                        "lineWidthPlus": 2
+                    }
+                }
+            }
+        },
+        "colors": [
+            "#3498db55",
+            "#e74c3c55",
+            "#2ecc7155"
+        ],
+        "series": [
+            {
+                "name": "Japanese (1975-1980)",
+                "data": [
+                    [
+                        28,
+                        4,
+                        122,
+                        89,
+                        2450,
+                        8.9,
+                        1976,
+                        3
+                    ],
+                    [
+                        32,
+                        4,
+                        108,
+                        75,
+                        2210,
+                        9.8,
+                        1979,
+                        3
+                    ],
+                    [
+                        24,
+                        6,
+                        198,
+                        115,
+                        3150,
+                        11.2,
+                        1977,
+                        3
+                    ]
+                ]
+            },
+            {
+                "name": "American Muscle (V8)",
+                "data": [
+                    [
+                        13,
+                        8,
+                        425,
+                        220,
+                        4670,
+                        14.5,
+                        1971,
+                        1
+                    ],
+                    [
+                        15,
+                        8,
+                        390,
+                        190,
+                        4380,
+                        13.8,
+                        1974,
+                        1
+                    ],
+                    [
+                        11,
+                        8,
+                        455,
+                        250,
+                        5020,
+                        15.1,
+                        1972,
+                        1
+                    ]
+                ]
+            },
+            {
+                "name": "European Luxury",
+                "data": [
+                    [
+                        18,
+                        6,
+                        168,
+                        125,
+                        3820,
+                        12.7,
+                        1978,
+                        2
+                    ],
+                    [
+                        22,
+                        4,
+                        121,
+                        110,
+                        2945,
+                        14.3,
+                        1980,
+                        2
+                    ],
+                    [
+                        16,
+                        5,
+                        131,
+                        103,
+                        3410,
+                        13.9,
+                        1975,
+                        2
+                    ]
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains 8 dimensions (3 categorical, 5 quantitative) representing technical specifications across three automotive classes. Synthetic data was generated with normal distributions (MPG \u03bc=22\u00b18, HP \u03bc=150\u00b175) and temporal trends showing fuel efficiency improvements. The parallel coordinates plot maximizes data-ink ratio by eliminating redundant gridlines while maintaining perceptual continuity through axis alignment. Color saturation encodes vehicle class using Cairo's preattentive processing principles. Z-score normalization (-3 to +3) enables direct comparison of disparate measurement scales. Cluster analysis reveals the efficiency/performance tradeoff between engine configurations."
+}

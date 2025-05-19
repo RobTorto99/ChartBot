@@ -1,0 +1,80 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a line chart with the following specifications: Chart type should be 'line'. The chart title should be 'Monthly Average Rainfall'. The axes and labels should have specific styling: the title font size should be 18px, axis labels font size should be 14px, and the color for all labels and titles should be '#333333'. The data series should include one series named 'Rainfall' with the provided data. Custom colors should be used for the series, specifically '#008000'. Additional configurations should include a border around the chart, a plot border, and a left margin of 150 pixels. The chart should also have a tooltip that displays the series name and the point's category and value.",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "borderWidth": 1,
+            "plotBorderWidth": 1,
+            "marginLeft": 150
+        },
+        "title": {
+            "text": "Monthly Average Rainfall",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333333"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#333333"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Rainfall (mm)",
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#333333"
+                }
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#333333"
+                }
+            }
+        },
+        "tooltip": {
+            "headerFormat": "<b>{series.name}</b><br/>",
+            "pointFormat": "{point.category}: {point.y}"
+        },
+        "series": [
+            {
+                "name": "Rainfall",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#008000"
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a line chart with a title 'Monthly Average Rainfall'. The chart type is set to 'line', and it includes a border and plot border with a left margin of 150 pixels. The x-axis categories represent the months from January to December, and the y-axis title is 'Rainfall (mm)'. Both axes have labels styled with a font size of 14px and a color of '#333333'. The chart title is styled with a font size of 18px and the same color. The data series includes one series named 'Rainfall' with the given data points, and the series color is set to '#008000'. The tooltip displays the series name and the point's category and value when hovered over."
+}

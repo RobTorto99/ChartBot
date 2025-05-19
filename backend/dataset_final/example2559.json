@@ -1,0 +1,188 @@
+{
+    "visualization_prompt": "Generate a sunburst chart showing hierarchical distribution of synthetic international visitor data using drilldown regions and dynamic label rotation modes",
+    "visualization_code": {
+        "chart": {
+            "type": "sunburst",
+            "height": "100%"
+        },
+        "title": {
+            "text": "Synthetic Global Visitor Distribution - 2023 Analysis",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Simulated data showing \u03bc=1.2M, \u03c3=0.4M visitor distribution<br>Source: Synthetic Data Institute",
+            "useHTML": true
+        },
+        "series": [
+            {
+                "type": "sunburst",
+                "name": "Visitor Hierarchy",
+                "data": [
+                    {
+                        "id": "root",
+                        "name": "Global",
+                        "color": "transparent"
+                    },
+                    {
+                        "id": "R1",
+                        "parent": "root",
+                        "name": "Northern Zone"
+                    },
+                    {
+                        "id": "R2",
+                        "parent": "root",
+                        "name": "Tropical Belt"
+                    },
+                    {
+                        "id": "R3",
+                        "parent": "root",
+                        "name": "Southern Cluster"
+                    },
+                    {
+                        "id": "C1",
+                        "parent": "R1",
+                        "name": "Frostland"
+                    },
+                    {
+                        "parent": "C1",
+                        "name": "Icetown",
+                        "value": 2450000
+                    },
+                    {
+                        "parent": "C1",
+                        "name": "Glacier City",
+                        "value": 1820000
+                    },
+                    {
+                        "id": "C2",
+                        "parent": "R1",
+                        "name": "Nordic Union"
+                    },
+                    {
+                        "parent": "C2",
+                        "name": "Aurora Metro",
+                        "value": 3145000
+                    },
+                    {
+                        "parent": "C2",
+                        "name": "Fjord Haven",
+                        "value": 2278000
+                    },
+                    {
+                        "id": "C3",
+                        "parent": "R2",
+                        "name": "Sun Archipelago"
+                    },
+                    {
+                        "parent": "C3",
+                        "name": "Palm Beach",
+                        "value": 4180000
+                    },
+                    {
+                        "parent": "C3",
+                        "name": "Coral City",
+                        "value": 2950000
+                    },
+                    {
+                        "id": "C4",
+                        "parent": "R2",
+                        "name": "Equatorial Republic"
+                    },
+                    {
+                        "parent": "C4",
+                        "name": "Jungle Capital",
+                        "value": 3872000
+                    },
+                    {
+                        "parent": "C4",
+                        "name": "Rainforest Hub",
+                        "value": 2540000
+                    },
+                    {
+                        "id": "C5",
+                        "parent": "R3",
+                        "name": "Desert Federation"
+                    },
+                    {
+                        "parent": "C5",
+                        "name": "Oasis City",
+                        "value": 1620000
+                    },
+                    {
+                        "parent": "C5",
+                        "name": "Mirage Town",
+                        "value": 1345000
+                    },
+                    {
+                        "id": "C6",
+                        "parent": "R3",
+                        "name": "Savannah League"
+                    },
+                    {
+                        "parent": "C6",
+                        "name": "Safari Central",
+                        "value": 2780000
+                    },
+                    {
+                        "parent": "C6",
+                        "name": "Wildlife Metro",
+                        "value": 2050000
+                    }
+                ],
+                "levels": [
+                    {
+                        "level": 1,
+                        "levelIsConstant": false,
+                        "dataLabels": {
+                            "rotationMode": "auto"
+                        }
+                    },
+                    {
+                        "level": 2,
+                        "colorByPoint": true,
+                        "colorVariation": {
+                            "key": "brightness",
+                            "to": -0.3
+                        }
+                    },
+                    {
+                        "level": 3,
+                        "colorVariation": {
+                            "key": "brightness",
+                            "to": 0.4
+                        }
+                    }
+                ]
+            }
+        ],
+        "colors": [
+            "#7cb5ec",
+            "#434348",
+            "#90ed7d",
+            "#f7a35c",
+            "#8085e9",
+            "#f15c80"
+        ],
+        "plotOptions": {
+            "sunburst": {
+                "dataLabels": {
+                    "filter": {
+                        "property": "outerArcLength",
+                        "operator": ">",
+                        "value": 16
+                    },
+                    "format": "{point.name}: {point.value:,.0f}"
+                }
+            }
+        },
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "<b>{point.name}</b><br>Visitors: <b>{point.value:,.0f}</b>"
+        }
+    },
+    "visualization_explanation": "The dataset represents a 3-level hierarchical structure (Region > Country > City) with synthetic visitor numbers. Continuous variables use log-normal distribution (\u03bc=1.2M, \u03c3=0.4M) to simulate right-skewed tourism data. Categorical labels follow geographic naming conventions while avoiding real-world locations to ensure synthetic purity. The sunburst visualization maximizes data-ink ratio through angular encoding of quantities and color saturation for hierarchy levels, adhering to Tufte's principles. Cairo's perceptual topology is maintained through consistent sector angles and proportional label placement. Interactive rotation modes preserve label readability across different node sizes while drilldown functionality enables exploration of the hierarchical structure without visual overload."
+}

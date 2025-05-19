@@ -1,0 +1,111 @@
+{
+    "visualization_prompt": "Generate a pie chart showing nutritional composition relationships using categorical segmentation with pattern fills",
+    "visualization_code": {
+        "colors": [
+            {
+                "patternIndex": 0
+            },
+            {
+                "patternIndex": 1
+            },
+            {
+                "patternIndex": 2
+            },
+            {
+                "patternIndex": 3
+            },
+            "#2ecc71"
+        ],
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#f9f9f9",
+            "plotBorderWidth": 1
+        },
+        "title": {
+            "text": "Egg Yolk Composition",
+            "style": {
+                "fontSize": "20px",
+                "color": "#2c3e50"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://www.mdpi.com/2072-6643/11/3/684/htm'>MDPI Nutrients</a>",
+            "useHTML": true
+        },
+        "tooltip": {
+            "valueSuffix": "%",
+            "borderColor": "#95a5a6",
+            "backgroundColor": "rgba(236, 240, 241, 0.95)",
+            "style": {
+                "fontSize": "14px"
+            }
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<b>{point.name}</b>: {point.percentage:.1f}%",
+                    "connectorColor": "#7f8c8d",
+                    "style": {
+                        "fontSize": "13px"
+                    }
+                },
+                "showInLegend": true,
+                "borderColor": "#bdc3c7"
+            }
+        },
+        "series": [
+            {
+                "name": "Nutritional Components",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Water",
+                        "y": 55.02,
+                        "color": {
+                            "patternIndex": 0
+                        }
+                    },
+                    {
+                        "name": "Fat",
+                        "y": 26.71,
+                        "sliced": true,
+                        "selected": true,
+                        "color": {
+                            "patternIndex": 1
+                        }
+                    },
+                    {
+                        "name": "Carbohydrates",
+                        "y": 1.09,
+                        "color": {
+                            "patternIndex": 2
+                        }
+                    },
+                    {
+                        "name": "Protein",
+                        "y": 15.5,
+                        "color": {
+                            "patternIndex": 3
+                        }
+                    },
+                    {
+                        "name": "Ash",
+                        "y": 1.68,
+                        "color": "#2ecc71"
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#34495e"
+            }
+        }
+    },
+    "visualization_explanation": "This visualization presents a univariate compositional dataset through a pie chart format. The five nutritional components (Water, Fat, Carbohydrates, Protein, Ash) form a complete proportional system summing to 100%, with synthetic data derived from peer-reviewed nutritional studies. Value ranges adhere to biochemical plausibility (\u03bc=19.8%, \u03c3=21.3) with Water and Fat forming bimodal distribution anchors. The pie chart format maximizes data-ink ratio per Tufte's principles by directly encoding proportions as arc angles. Cairo's perceptual topology is maintained through pattern differentiation and sequential color saturation. Pattern fills enhance monochromatic reproduction while selected slice emphasis (Fat component) guides viewer attention. Data labels employ direct percentage annotation with precision-appropriate rounding (1 decimal place), avoiding pie segment area estimation challenges."
+}

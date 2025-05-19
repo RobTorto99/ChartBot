@@ -1,0 +1,53 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a boxplot chart with the title 'Configuring whisker lengths'. The chart should have specific whisker lengths for different data points, and the y-axis should not have a title. The chart should not display a legend. The data series should include three data points with different whisker lengths.",
+    "visualization_code": {
+        "chart": {
+            "type": "boxplot"
+        },
+        "title": {
+            "text": "Configuring whisker lengths"
+        },
+        "yAxis": {
+            "title": false
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "whiskerLength": "100%",
+                "lowerWhiskerLength": "10%",
+                "data": [
+                    {
+                        "x": 0,
+                        "low": 1,
+                        "q1": 2,
+                        "median": 3,
+                        "q3": 4,
+                        "high": 5,
+                        "whiskerLength": "50%"
+                    },
+                    {
+                        "x": 1,
+                        "low": 1,
+                        "q1": 2,
+                        "median": 3,
+                        "q3": 4,
+                        "high": 5,
+                        "lowerWhiskerLength": "150%"
+                    },
+                    {
+                        "x": 2,
+                        "low": 1,
+                        "q1": 2,
+                        "median": 3,
+                        "q3": 4,
+                        "high": 5,
+                        "upperWhiskerLength": "10%"
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a boxplot chart. The chart type is set to 'boxplot', and the title is 'Configuring whisker lengths'. The y-axis does not have a title, and the legend is disabled. The data series includes three data points, each with different whisker lengths specified. The first data point has a whisker length of 50%, the second has a lower whisker length of 150%, and the third has an upper whisker length of 10%. These configurations ensure that the boxplot chart visually represents the specified whisker lengths for each data point."
+}

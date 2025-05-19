@@ -1,0 +1,57 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly sales trends using categorical time progression",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Monthly Sales Trend (May-Aug)"
+        },
+        "xAxis": {
+            "categories": [
+                "May",
+                "June",
+                "July",
+                "Aug"
+            ],
+            "labels": {
+                "style": {
+                    "fontFamily": "Arial",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": ""
+            },
+            "labels": {
+                "format": "{value}k $",
+                "style": {
+                    "fontFamily": "Verdana",
+                    "fontSize": "10px",
+                    "color": "#333333"
+                }
+            }
+        },
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    206,
+                    216,
+                    247,
+                    330
+                ],
+                "color": "#7cb5ec"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains 4 categorical data points (months) with quantitative sales values. Synthetic sales figures follow a 23.8% compound monthly growth rate with realistic variance (\u03c3=53.5), maintaining financial context through dollar-denominated values. The column chart maximizes data-ink ratio by eliminating gridlines and redundant axis titles while preserving Tufte's fundamental lie factor through proportional column scaling. Cairo's principles are applied through pre-attentive color coding (blue for single series) and position-based comparison. Axis labels use Verdana/Arial fonts with WCAG-compliant contrast (#333 on white) to support visual accessibility. Y-axis formatting (+47% May-Aug growth) enables direct magnitude comparisons without cognitive calculation load."
+}

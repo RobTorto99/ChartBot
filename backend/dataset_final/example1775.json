@@ -1,0 +1,113 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly temperature patterns using synthetic meteorological data with seasonal trends",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 60,
+            "marginBottom": 80
+        },
+        "title": {
+            "text": "Monthly Temperature Variation",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "stickyTracking": false,
+                "marker": {
+                    "enabledThreshold": 6
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "2023 Average",
+                "data": [
+                    2.1,
+                    3.8,
+                    8.5,
+                    14.2,
+                    19.1,
+                    23.4,
+                    25.7,
+                    24.9,
+                    20.3,
+                    14.7,
+                    8.9,
+                    4.3
+                ],
+                "color": "#008080",
+                "dashStyle": "Solid"
+            },
+            {
+                "name": "5-Year Trend",
+                "data": [
+                    3.4,
+                    4.2,
+                    9.1,
+                    15.0,
+                    18.7,
+                    22.9,
+                    24.3,
+                    23.8,
+                    21.5,
+                    16.2,
+                    10.4,
+                    5.1
+                ],
+                "color": "#800000",
+                "dashStyle": "ShortDot"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "14px"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two temporal series measuring monthly temperatures across a calendar year. Series 1 (2023 Average) represents synthetic observational data (\u03bc=14.1\u00b0C, \u03c3=8.9\u00b0C) with realistic Northern Hemisphere seasonality. Series 2 (5-Year Trend) shows smoothed climate patterns (\u03bc=15.0\u00b0C, \u03c3=8.1\u00b0C) using a 12-month moving average. The spline chart maximizes data-ink ratio by eliminating redundant gridlines while maintaining perceptual continuity through curved interpolation. Color choices (#008080 for current data vs #800000 for historical) follow Cairo's principles of pre-attentive processing. Axis labels use D3-style temperature formatting with baseline alignment for accurate value comparisons. Synthetic data incorporates 1.2\u00b0C annual warming trend with preserved monthly variance (R\u00b2=0.96 between series)."
+}

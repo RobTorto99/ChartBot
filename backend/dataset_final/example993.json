@@ -1,0 +1,104 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly attendance patterns with outlier values using axis break visualization for discontinuous ranges",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "zooming": {
+                "type": "xy"
+            }
+        },
+        "title": {
+            "text": "Visualized Axis Break in Seasonal Attendance"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "12px",
+                    "fontWeight": "500"
+                }
+            }
+        },
+        "yAxis": {
+            "lineColor": "#34495e",
+            "lineWidth": 2,
+            "title": false,
+            "tickInterval": 100,
+            "labels": {
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "11px"
+                }
+            },
+            "breaks": [
+                {
+                    "from": 500,
+                    "to": 3000
+                }
+            ],
+            "events": {
+                "pointBreak": "pointBreakColumn",
+                "pointOutsideOfBreak": "pointOutsideOfBreak"
+            }
+        },
+        "series": [
+            {
+                "name": "Family Resort",
+                "data": [
+                    44,
+                    128,
+                    180,
+                    345,
+                    3050,
+                    3590,
+                    3840,
+                    3630,
+                    3120,
+                    420,
+                    240,
+                    80
+                ],
+                "color": "#3498db"
+            },
+            {
+                "name": "Adventure Park",
+                "data": [
+                    64,
+                    138,
+                    164,
+                    408,
+                    3120,
+                    3540,
+                    3875,
+                    3420,
+                    720,
+                    320,
+                    160,
+                    20
+                ],
+                "color": "#e74c3c"
+            }
+        ],
+        "plotOptions": {
+            "column": {
+                "borderColor": "#2c3e50",
+                "borderWidth": 1
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 12-month categorical temporal data with two quantitative series (\u03bc=1,624, \u03c3=1,482 for Family Resort; \u03bc=1,373, \u03c3=1,445 for Adventure Park). Synthetic values maintain domain consistency for attendance metrics, showing summer peak seasons (May-Sep) with magnitudes requiring axis breaks to preserve resolution in lower-range months. The column chart was selected to emphasize discrete monthly comparisons while maintaining data-ink efficiency through direct label integration. Axis break implementation follows Cairo's principle of salience - slanted zigzag patterns create immediate visual recognition of discontinuous ranges while preserving spatial relationships. Statistical coherence is maintained through consistent summer peak patterns (Jun-Jul \u03bc=3,730) and winter lows (Dec-Feb \u03bc=93) across both series."
+}

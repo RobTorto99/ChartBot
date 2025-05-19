@@ -1,0 +1,105 @@
+{
+    "visualization_prompt": "Generate a map chart showing geographic points of interest over a base layer using interactive pan/zoom controls and custom marker symbols",
+    "visualization_code": {
+        "chart": {
+            "type": "map",
+            "margin": 0,
+            "panning": {
+                "enabled": false
+            }
+        },
+        "title": {
+            "text": "Geospatial Event Analysis"
+        },
+        "mapNavigation": {
+            "enabled": false,
+            "buttonOptions": {
+                "alignTo": "spacingBox"
+            }
+        },
+        "mapView": {
+            "center": [
+                6.5811472,
+                61.08707
+            ],
+            "zoom": 13
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "type": "tiledwebmap",
+                "provider": {
+                    "type": "OpenStreetMap"
+                },
+                "showInLegend": false
+            },
+            {
+                "type": "mappoint",
+                "name": "Event Locations",
+                "color": "#FF4500",
+                "marker": {
+                    "symbol": "mapmarker",
+                    "radius": 12,
+                    "fillColor": "#FFD700",
+                    "lineWidth": 2,
+                    "lineColor": "#000000"
+                },
+                "data": [
+                    {
+                        "name": "Primary Incident",
+                        "lon": 6.5811,
+                        "lat": 61.087
+                    },
+                    {
+                        "name": "Secondary Site",
+                        "lon": 6.583,
+                        "lat": 61.0855
+                    },
+                    {
+                        "name": "Observation Point",
+                        "lon": 6.5798,
+                        "lat": 61.0882
+                    },
+                    {
+                        "name": "Response Center",
+                        "lon": 6.5753,
+                        "lat": 61.0847
+                    },
+                    {
+                        "name": "Perimeter Marker",
+                        "lon": 6.5872,
+                        "lat": 61.0901
+                    },
+                    {
+                        "name": "Equipment Depot",
+                        "lon": 6.5729,
+                        "lat": 61.0913
+                    },
+                    {
+                        "name": "Sensor Cluster",
+                        "lon": 6.5895,
+                        "lat": 61.0834
+                    },
+                    {
+                        "name": "Access Point",
+                        "lon": 6.5802,
+                        "lat": 61.0928
+                    },
+                    {
+                        "name": "Survey Location",
+                        "lon": 6.5941,
+                        "lat": 61.0866
+                    },
+                    {
+                        "name": "Boundary Marker",
+                        "lon": 6.5667,
+                        "lat": 61.0895
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains two-dimensional geospatial coordinates (longitude/latitude) with categorical event labels. Synthetic points were generated using normal distribution (\u03bc=6.5811, \u03c3=0.005 for longitude; \u03bc=61.0870, \u03c3=0.003 for latitude) to create clustered patterns around the primary incident location while maintaining real-world coordinate validity. The base map layer provides geographic context through OpenStreetMap's tiled web service. This visualization employs Tufte's data-ink ratio principles by minimizing decorative elements while maximizing informational density through precise coordinate plotting and Cairo's perceptual transparency by using high-contrast marker symbols with outline borders for clear feature discrimination. The clustered spatial distribution (\u03c3=0.005\u00b0 \u2248 550m) reflects realistic operational ranges for incident response scenarios, with marker colors using preattentive processing (gold/yellow on blue basemap) for immediate visual salience. Interactive pan/zoom controls maintain Cleveland's hierarchy of graphical interaction while preserving initial map context through the activation button design."
+}

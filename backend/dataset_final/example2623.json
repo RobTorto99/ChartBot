@@ -1,0 +1,99 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly website traffic growth over 12 months using synthetic data with an upward trend (\u00b1200 seasonal variance). Include hover interactions that enlarge markers and emphasize line width.",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "spline",
+                "backgroundColor": "#FFFFFF"
+            },
+            "title": {
+                "text": "Monthly Website Traffic (2023)",
+                "style": {
+                    "fontSize": "20px",
+                    "color": "#2E4053"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#34495E",
+                        "fontWeight": "bold"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Visitors",
+                    "style": {
+                        "color": "#34495E"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#2E4053"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Traffic Volume",
+                    "data": [
+                        5180,
+                        5530,
+                        4870,
+                        6020,
+                        6410,
+                        5950,
+                        7230,
+                        7690,
+                        8150,
+                        8420,
+                        8910,
+                        9270
+                    ],
+                    "color": "#6A1B9A",
+                    "lineWidth": 4,
+                    "marker": {
+                        "radius": 6,
+                        "lineWidth": 2,
+                        "lineColor": "#6A1B9A",
+                        "fillColor": "#FFFFFF",
+                        "states": {
+                            "hover": {
+                                "radius": 11,
+                                "lineWidth": 4
+                            }
+                        }
+                    },
+                    "states": {
+                        "hover": {
+                            "lineWidth": 9
+                        }
+                    }
+                }
+            ],
+            "legend": {
+                "enabled": false
+            },
+            "tooltip": {
+                "valueSuffix": " visitors",
+                "valueDecimals": 0
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations of synthetic website traffic (univariate time series). Data follows a quadratic growth pattern (\u03bc=7,120, \u03c3=1,320) with seasonal dips in March and June. Synthetic values maintain domain consistency through realistic visitor counts and weekend/holiday-driven variance. The spline chart minimizes visual noise while preserving trend visibility per Tufte's data-ink principles. Marker sizing and line-width transitions employ Cairo's magnitude estimation heuristics, with hover states doubling as redundant encoding. Purple (#6A1B9A) ensures chromatic differentiation from background, while white-filled markers prevent occlusion at data points."
+}

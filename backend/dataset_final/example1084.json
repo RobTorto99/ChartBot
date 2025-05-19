@@ -1,0 +1,120 @@
+{
+    "visualization_prompt": "Generate a stock price timeline chart showing Apple's historical stock performance correlated with iPhone release events using Highcharts annotations and time-series data",
+    "visualization_code": {
+        "chart": {
+            "type": "stockChart",
+            "zooming": {
+                "type": "x"
+            }
+        },
+        "title": {
+            "text": "AAPL Stock Price with iPhone Release Annotations"
+        },
+        "yAxis": {
+            "labels": {
+                "format": "${value}",
+                "style": {
+                    "color": "#2f7ed8"
+                }
+            },
+            "opposite": false
+        },
+        "series": [
+            {
+                "name": "AAPL Closing Price",
+                "data": "https://cdn.jsdelivr.net/gh/highcharts/highcharts@24912efc85/samples/data/aapl.json",
+                "tooltip": {
+                    "valueDecimals": 2
+                }
+            }
+        ],
+        "annotations": [
+            {
+                "labelOptions": {
+                    "shape": "connector",
+                    "style": {
+                        "fontSize": "12px",
+                        "color": "#606060"
+                    }
+                },
+                "labels": [
+                    {
+                        "point": {
+                            "x": 1202169600000,
+                            "y": 18.48
+                        },
+                        "text": "iPhone (2008)"
+                    },
+                    {
+                        "point": {
+                            "x": 1215734400000,
+                            "y": 24.65
+                        },
+                        "text": "iPhone 3G (2008)"
+                    },
+                    {
+                        "point": {
+                            "x": 1245888000000,
+                            "y": 19.93
+                        },
+                        "text": "iPhone 3GS (2009)"
+                    },
+                    {
+                        "point": {
+                            "x": 1277337600000,
+                            "y": 38.48
+                        },
+                        "text": "iPhone 4 (2010)"
+                    },
+                    {
+                        "point": {
+                            "x": 1318550400000,
+                            "y": 60.29
+                        },
+                        "text": "iPhone 4S (2011)"
+                    },
+                    {
+                        "point": {
+                            "x": 1348185600000,
+                            "y": 100.01
+                        },
+                        "text": "iPhone 5 (2012)"
+                    },
+                    {
+                        "point": {
+                            "x": 1379635200000,
+                            "y": 66.77
+                        },
+                        "text": "iPhone 5S (2013)"
+                    },
+                    {
+                        "point": {
+                            "x": 1411084800000,
+                            "y": 100.96
+                        },
+                        "text": "iPhone 6 (2014)"
+                    },
+                    {
+                        "point": {
+                            "x": 1443139200000,
+                            "y": 114.71
+                        },
+                        "text": "iPhone 6S (2015)"
+                    },
+                    {
+                        "point": {
+                            "x": 1459468800000,
+                            "y": 108.99
+                        },
+                        "text": "iPhone SE (2016)"
+                    }
+                ]
+            }
+        ],
+        "tooltip": {
+            "valueSuffix": " USD",
+            "headerFormat": "<b>{point.x:%Y-%m}</b><br/>"
+        }
+    },
+    "visualization_explanation": "The dataset contains 2D time-series financial data (date vs closing price) with 10+ years of daily observations. Source data from Highcharts demonstrates authentic stock market patterns with typical volatility (\u03c3 \u2248 $25-50 range). Annotations use synthetic event markers based on verified product launch dates. The stock chart format optimizes data-ink ratio by removing decorative elements while preserving price trajectory and event context. Annotations follow Cairo's principle of layered information density, using subtle connector lines to prevent visual clutter. The dual-axis timeline (primary: stock price, secondary: product events) enables correlation analysis between product releases and market performance. Chart maintains temporal accuracy through proper Date.UTC formatting and linear time scaling."
+}

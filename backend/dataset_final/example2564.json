@@ -1,0 +1,169 @@
+{
+    "visualization_prompt": "Generate a line chart demonstrating Highcharts dash styles with vertically spaced labeled lines using synthetic categorical positioning",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "line",
+                "marginLeft": 120
+            },
+            "title": {
+                "text": "Highcharts Line Dash Styles Reference"
+            },
+            "xAxis": {
+                "min": 0,
+                "max": 100,
+                "labels": {
+                    "enabled": false
+                },
+                "tickLength": 0,
+                "lineWidth": 0
+            },
+            "yAxis": {
+                "categories": [
+                    "Solid",
+                    "ShortDash",
+                    "ShortDot",
+                    "ShortDashDot",
+                    "ShortDashDotDot",
+                    "Dot",
+                    "Dash",
+                    "LongDash",
+                    "DashDot",
+                    "LongDashDot",
+                    "LongDashDotDot"
+                ],
+                "title": {
+                    "text": null
+                },
+                "gridLineWidth": 0,
+                "labels": {
+                    "style": {
+                        "fontSize": "14px",
+                        "color": "#2c3e50"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Style Reference",
+                    "data": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            100,
+                            0
+                        ],
+                        [
+                            0,
+                            1
+                        ],
+                        [
+                            100,
+                            1
+                        ],
+                        [
+                            0,
+                            2
+                        ],
+                        [
+                            100,
+                            2
+                        ],
+                        [
+                            0,
+                            3
+                        ],
+                        [
+                            100,
+                            3
+                        ],
+                        [
+                            0,
+                            4
+                        ],
+                        [
+                            100,
+                            4
+                        ],
+                        [
+                            0,
+                            5
+                        ],
+                        [
+                            100,
+                            5
+                        ],
+                        [
+                            0,
+                            6
+                        ],
+                        [
+                            100,
+                            6
+                        ],
+                        [
+                            0,
+                            7
+                        ],
+                        [
+                            100,
+                            7
+                        ],
+                        [
+                            0,
+                            8
+                        ],
+                        [
+                            100,
+                            8
+                        ],
+                        [
+                            0,
+                            9
+                        ],
+                        [
+                            100,
+                            9
+                        ],
+                        [
+                            0,
+                            10
+                        ],
+                        [
+                            100,
+                            10
+                        ]
+                    ],
+                    "dashStyle": "Solid",
+                    "color": "#34495e",
+                    "lineWidth": 3,
+                    "marker": {
+                        "enabled": false
+                    },
+                    "dataLabels": {
+                        "enabled": true,
+                        "align": "left",
+                        "x": -110,
+                        "format": "{point.category}",
+                        "style": {
+                            "fontWeight": "bold"
+                        }
+                    }
+                }
+            ],
+            "plotOptions": {
+                "series": {
+                    "animation": false,
+                    "keys": [
+                        "x",
+                        "y",
+                        "category"
+                    ]
+                }
+            }
+        }
+    },
+    "visualization_explanation": "This visualization uses ordinal y-axis positioning with categorical labels to vertically align dashed style samples. The synthetic dataset contains 22 points forming 11 horizontal lines (2 points per line) with y-values mapped to categorical labels. DataLabels leverage Highcharts' formatting to display style names through indirect key mapping. The design follows Tufte's minimal ink principles by eliminating gridlines and axes while maintaining Cairo's perceptual accuracy through consistent line weights and high-contrast labels. Technical implementation uses Highcharts' extended data labeling capabilities with x-offset positioning for clear style identification."
+}

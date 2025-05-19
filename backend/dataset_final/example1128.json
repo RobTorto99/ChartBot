@@ -1,0 +1,114 @@
+{
+    "visualization_prompt": "Generate a gauge chart showing real-time speedometer data using dynamic interval updates with synthetic speed fluctuations",
+    "visualization_code": {
+        "chart": {
+            "type": "gauge",
+            "plotBackgroundColor": null,
+            "plotBackgroundImage": null,
+            "plotBorderWidth": 0,
+            "plotShadow": false
+        },
+        "title": {
+            "text": "Vehicle Speed Analysis"
+        },
+        "pane": {
+            "startAngle": -150,
+            "endAngle": 150,
+            "background": [
+                {
+                    "backgroundColor": {
+                        "linearGradient": {
+                            "x1": 0,
+                            "y1": 0,
+                            "x2": 0,
+                            "y2": 1
+                        },
+                        "stops": [
+                            [
+                                0,
+                                "#FFF"
+                            ],
+                            [
+                                1,
+                                "#333"
+                            ]
+                        ]
+                    },
+                    "borderWidth": 0,
+                    "outerRadius": "109%"
+                },
+                {
+                    "backgroundColor": {
+                        "linearGradient": {
+                            "x1": 0,
+                            "y1": 0,
+                            "x2": 0,
+                            "y2": 1
+                        },
+                        "stops": [
+                            [
+                                0,
+                                "#333"
+                            ],
+                            [
+                                1,
+                                "#FFF"
+                            ]
+                        ]
+                    },
+                    "borderWidth": 1,
+                    "outerRadius": "107%"
+                },
+                {
+                    "backgroundColor": "#DDD",
+                    "borderWidth": 0,
+                    "outerRadius": "105%",
+                    "innerRadius": "103%"
+                }
+            ]
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 200,
+            "minorTickInterval": "auto",
+            "minorTickColor": "#666",
+            "tickColor": "#666",
+            "labels": {
+                "step": 2,
+                "rotation": "auto"
+            },
+            "title": {
+                "text": "km/h"
+            },
+            "plotBands": [
+                {
+                    "from": 0,
+                    "to": 120,
+                    "color": "#55BF3B"
+                },
+                {
+                    "from": 120,
+                    "to": 160,
+                    "color": "#DDDF0D"
+                },
+                {
+                    "from": 160,
+                    "to": 200,
+                    "color": "#DF5353"
+                }
+            ]
+        },
+        "series": [
+            {
+                "name": "Speed",
+                "data": [
+                    80
+                ],
+                "tooltip": {
+                    "valueSuffix": " km/h"
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset represents univariate time-series measurements of vehicle speed. While only displaying current speed, the synthetic data generation uses Brownian motion (\u03bc=80 km/h, \u03c3\u00b2=100) with reflecting boundaries at 0-200 km/h to simulate realistic acceleration patterns. The gauge visualization effectively communicates three information layers: 1) Instantaneous value via needle position 2) Performance context through color-coded bands 3) Measurement scale via radial axis. This adheres to Tufte's principles by maximizing data-ink ratio through removal of non-essential gridlines and borders. Cairo's perceptual topology is maintained through: 1) Pre-attentive color coding (green/yellow/red) 2) Proportional angle encoding (150\u00b0 arc) 3) Clear magnitude relationships via equidistant tick marks. The dynamic update interval (3s) follows Nielsen's responsiveness guidelines while maintaining legibility."
+}

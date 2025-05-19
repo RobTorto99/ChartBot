@@ -1,0 +1,102 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the following specifications: Chart type: spline, Chart title: Monthly Average Temperature, Axes and labels styling: Use a dark blue color (#003366) for the title and axis labels, with a font size of 14px. Use a light gray color (#CCCCCC) for the grid lines. Data series: The series should be named 'Temperature' and contain the data provided in the JavaScript code. Custom colors: Use a gradient from blue to green for the series. Additional configurations: Set the chart background to a light gray color (#F0F0F0), enable zooming on the x-axis, and position the zoom reset button at the top-left corner of the chart.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#F0F0F0",
+            "zooming": {
+                "type": "x",
+                "resetButton": {
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            }
+        },
+        "title": {
+            "text": "Monthly Average Temperature",
+            "style": {
+                "color": "#003366",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#003366",
+                    "fontSize": "14px"
+                }
+            },
+            "gridLineColor": "#CCCCCC"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#003366",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#003366",
+                    "fontSize": "14px"
+                }
+            },
+            "gridLineColor": "#CCCCCC"
+        },
+        "series": [
+            {
+                "name": "Temperature",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 1,
+                        "y2": 0
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#003366"
+                        ],
+                        [
+                            1,
+                            "#33CC66"
+                        ]
+                    ]
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a spline chart with a title 'Monthly Average Temperature'. The chart type is set to 'spline', and the background color is a light gray (#F0F0F0). The x-axis and y-axis labels are styled with a dark blue color (#003366) and a font size of 14px. The grid lines on both axes are styled with a light gray color (#CCCCCC). The data series is named 'Temperature' and contains the monthly temperature data. The series color is a gradient from blue (#003366) to green (#33CC66). Additionally, the chart allows zooming on the x-axis, and the zoom reset button is positioned at the top-left corner of the chart."
+}

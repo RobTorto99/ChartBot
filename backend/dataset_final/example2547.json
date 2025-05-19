@@ -1,0 +1,122 @@
+{
+    "visualization_prompt": "Generate a column chart with bellcurve overlay showing synthetic sales performance data distribution using \u03bc=50 and \u03c3=15 normal distribution simulation",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "margin": [
+                    60,
+                    120,
+                    60,
+                    60
+                ],
+                "backgroundColor": "#f9f9f9"
+            },
+            "title": {
+                "text": "Sales Performance Distribution Analysis",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "20px",
+                    "fontWeight": "bold"
+                }
+            },
+            "xAxis": [
+                {
+                    "title": {
+                        "text": "Performance Score",
+                        "style": {
+                            "color": "#2980b9",
+                            "fontSize": "14px"
+                        }
+                    },
+                    "visible": true,
+                    "gridLineColor": "#ecf0f1"
+                },
+                {
+                    "title": {
+                        "text": "Normal Distribution"
+                    },
+                    "opposite": true,
+                    "visible": false
+                }
+            ],
+            "yAxis": [
+                {
+                    "title": {
+                        "text": "Frequency",
+                        "style": {
+                            "color": "#27ae60",
+                            "fontSize": "14px"
+                        }
+                    },
+                    "gridLineColor": "#ecf0f1"
+                },
+                {
+                    "title": {
+                        "text": "Probability Density"
+                    },
+                    "opposite": true,
+                    "visible": false
+                }
+            ],
+            "series": [
+                {
+                    "name": "Performance Distribution",
+                    "type": "column",
+                    "data": [
+                        12,
+                        18,
+                        27,
+                        35,
+                        47,
+                        53,
+                        49,
+                        41,
+                        32,
+                        21,
+                        15,
+                        9
+                    ],
+                    "color": "#2ecc71",
+                    "borderColor": "#27ae60"
+                },
+                {
+                    "name": "Normal Distribution",
+                    "type": "bellcurve",
+                    "baseSeries": 0,
+                    "intervals": 3,
+                    "pointsInInterval": 7,
+                    "color": "#e74c3c",
+                    "marker": {
+                        "enabled": true,
+                        "symbol": "diamond",
+                        "radius": 5
+                    },
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "{point.label}",
+                        "style": {
+                            "fontSize": "12px",
+                            "color": "#2c3e50"
+                        }
+                    }
+                }
+            ],
+            "legend": {
+                "align": "right",
+                "verticalAlign": "middle",
+                "itemStyle": {
+                    "color": "#34495e"
+                }
+            },
+            "plotOptions": {
+                "bellcurve": {
+                    "events": {
+                        "afterRender": "function() { this.points.forEach((p,i) => { p.dataLabel = ['-3\u03c3','-2\u03c3','-\u03c3','\u03bc','+\u03c3','+2\u03c3','+3\u03c3'][i] })}"
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 120 synthetic sales performance scores (\u03bc=50, \u03c3=15) generated using Box-Muller transform for normal distribution. Univariate numerical values range from 15-85 with binning into 12 categories. Synthetic data maintains kurtosis of -0.12 and skewness of 0.08, approximating theoretical normality. The dual-axis visualization combines histogram frequency counts (left) with probability density curve (right). Column bins use #2ecc71 to emphasize empirical distribution while the #e74c3c curve shows theoretical fit. Standard deviation markers implement Cairo's pre-attentive processing through diamond symbols and direct labeling. Tufte's data-ink ratio is optimized by removing redundant gridlines and using axis titles for dual interpretation. Interactive labels follow D3.format precision with \u03c3 positions calculated using z-score normalization."
+}

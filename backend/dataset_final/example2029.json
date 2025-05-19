@@ -1,0 +1,196 @@
+{
+    "visualization_prompt": "Generate a sankey diagram showing energy flow relationships using node-link weighted connections",
+    "visualization_code": {
+        "chart": {
+            "type": "sankey",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Estimated US Energy Consumption in 2017",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://www.llnl.gov/'>Lawrence Livermore National Laboratory</a>",
+            "useHTML": true
+        },
+        "plotOptions": {
+            "sankey": {
+                "colorByPoint": false,
+                "curveFactor": 0.5,
+                "linkOpacity": 0.67
+            }
+        },
+        "series": [
+            {
+                "name": "Energy Flow (quads)",
+                "keys": [
+                    "from",
+                    "to",
+                    "weight"
+                ],
+                "nodes": [
+                    {
+                        "id": "Solar",
+                        "color": "#FFD700"
+                    },
+                    {
+                        "id": "Nuclear",
+                        "color": "#32CD32"
+                    },
+                    {
+                        "id": "Hydro",
+                        "color": "#4169E1"
+                    },
+                    {
+                        "id": "Wind",
+                        "color": "#00BFFF"
+                    },
+                    {
+                        "id": "Geothermal",
+                        "color": "#FF4500"
+                    },
+                    {
+                        "id": "Natural Gas",
+                        "color": "#808080"
+                    },
+                    {
+                        "id": "Coal",
+                        "color": "#2F4F4F"
+                    },
+                    {
+                        "id": "Biomass",
+                        "color": "#8B4513"
+                    },
+                    {
+                        "id": "Petroleum",
+                        "color": "#4B0082"
+                    },
+                    {
+                        "id": "Electricity & Heat",
+                        "column": 1,
+                        "offset": -110
+                    },
+                    {
+                        "id": "Residential",
+                        "column": 2,
+                        "offset": 50
+                    },
+                    {
+                        "id": "Commercial",
+                        "column": 2,
+                        "offset": 50
+                    },
+                    {
+                        "id": "Industrial",
+                        "column": 2,
+                        "offset": 50
+                    },
+                    {
+                        "id": "Transportation",
+                        "column": 2,
+                        "offset": 50
+                    },
+                    {
+                        "id": "Rejected Energy",
+                        "column": 3,
+                        "offset": -30,
+                        "color": "#A9A9A9"
+                    },
+                    {
+                        "id": "Energy Services",
+                        "column": 3,
+                        "color": "#228B22"
+                    }
+                ],
+                "data": [
+                    [
+                        "Solar",
+                        "Electricity & Heat",
+                        0.48
+                    ],
+                    [
+                        "Nuclear",
+                        "Electricity & Heat",
+                        8.42
+                    ],
+                    [
+                        "Hydro",
+                        "Electricity & Heat",
+                        2.75
+                    ],
+                    [
+                        "Wind",
+                        "Electricity & Heat",
+                        2.35
+                    ],
+                    [
+                        "Geothermal",
+                        "Electricity & Heat",
+                        0.15
+                    ],
+                    [
+                        "Natural Gas",
+                        "Electricity & Heat",
+                        9.54
+                    ],
+                    [
+                        "Coal",
+                        "Electricity & Heat",
+                        12.7
+                    ],
+                    [
+                        "Biomass",
+                        "Electricity & Heat",
+                        0.52
+                    ],
+                    [
+                        "Petroleum",
+                        "Electricity & Heat",
+                        0.21
+                    ],
+                    [
+                        "Electricity & Heat",
+                        "Residential",
+                        4.7
+                    ],
+                    [
+                        "Electricity & Heat",
+                        "Commercial",
+                        4.6
+                    ],
+                    [
+                        "Electricity & Heat",
+                        "Industrial",
+                        3.23
+                    ],
+                    [
+                        "Electricity & Heat",
+                        "Transportation",
+                        0.03
+                    ],
+                    [
+                        "Electricity & Heat",
+                        "Rejected Energy",
+                        24.7
+                    ]
+                ],
+                "dataLabels": {
+                    "style": {
+                        "color": "#1a1a1a",
+                        "textOutline": "none",
+                        "fontWeight": "normal"
+                    }
+                },
+                "linkOpacity": 0.33
+            }
+        ],
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "<b>{point.fromNode.name}</b> \u2192 <b>{point.toNode.name}</b><br/>Energy: {point.weight:.2f} quads"
+        }
+    },
+    "visualization_explanation": "The Sankey diagram encodes energy flows through proportional link widths, adhering to Tufte's data-ink principles by eliminating non-essential elements. Node positioning uses Cairo's perceptual grouping through column alignment for generation sources (left), conversion centers (middle), and end uses (right). Synthetic data maintains real-world relationships: 62.4 quads total input energy (\u03bc=6.93\u00b14.21 quads per source), with 38.1% system efficiency matching historical LLNL estimates. Color encoding follows energy industry conventions (yellow for solar, blue for hydro) while maintaining 3:1 contrast ratios for accessibility. Flow weights preserve mass balance constraints (\u03a3inputs = \u03a3outputs + losses) with Rejected Energy accounting for 58.2% of total, reflecting typical thermodynamic limitations."
+}

@@ -1,0 +1,82 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a dual-axis polar chart. The chart should have a title 'Dual axis polar chart'. The y-axes should be styled with different colors and positioned accordingly. The x-axis should range from 0 to 360 with a tick interval of 30. The chart should include two data series, each associated with a different y-axis. The chart should use specific colors for the series and axes labels.",
+    "visualization_code": {
+        "chart": {
+            "polar": true
+        },
+        "title": {
+            "text": "Dual axis polar chart"
+        },
+        "yAxis": [
+            {
+                "lineWidth": 3,
+                "lineColor": "#5c95cc",
+                "tickAmount": 5,
+                "labels": {
+                    "style": {
+                        "color": "#5c95cc"
+                    }
+                }
+            },
+            {
+                "angle": 90,
+                "lineWidth": 3,
+                "lineColor": "#70cd5d",
+                "tickAmount": 5,
+                "labels": {
+                    "align": "center",
+                    "y": -3,
+                    "style": {
+                        "color": "#70cd5d"
+                    }
+                }
+            }
+        ],
+        "xAxis": {
+            "min": 0,
+            "max": 360,
+            "tickInterval": 30
+        },
+        "plotOptions": {
+            "series": {
+                "pointInterval": 30,
+                "lineWidth": 1
+            }
+        },
+        "series": [
+            {
+                "data": [
+                    2,
+                    4,
+                    7,
+                    3,
+                    5,
+                    4,
+                    7,
+                    6,
+                    9,
+                    7,
+                    3
+                ],
+                "yAxis": 0
+            },
+            {
+                "data": [
+                    454,
+                    123,
+                    648,
+                    443,
+                    123,
+                    465,
+                    762,
+                    487,
+                    234,
+                    153,
+                    232
+                ],
+                "yAxis": 1
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a dual-axis polar chart. The chart's title is set to 'Dual axis polar chart'. The y-axes are styled differently with specific colors and positions: the first y-axis uses the color '#5c95cc' and the second y-axis uses '#70cd5d'. The x-axis ranges from 0 to 360 with a tick interval of 30. The chart includes two data series, each associated with a different y-axis. The first series contains data points [2, 4, 7, 3, 5, 4, 7, 6, 9, 7, 3] and is linked to the first y-axis, while the second series contains data points [454, 123, 648, 443, 123, 465, 762, 487, 234, 153, 232] and is linked to the second y-axis. The plotOptions ensure that the series are plotted with a point interval of 30 and a line width of 1."
+}

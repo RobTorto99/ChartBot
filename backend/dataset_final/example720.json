@@ -1,0 +1,71 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Monthly Sales Trend (May-Aug)'. The chart should have axes and labels styled with specific colors and font sizes. The data series should include the name 'Sales' with data points for May, June, July, and August. Additionally, specify custom colors for the series and include configurations for chart margins, background, and legend.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "Monthly Sales Trend (May-Aug)",
+            "style": {
+                "color": "#333",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "May",
+                "June",
+                "July",
+                "Aug"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Sales",
+                "data": [
+                    206,
+                    216,
+                    247,
+                    330
+                ],
+                "color": "#4CAF50"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#333",
+                "fontSize": "12px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart with a title 'Monthly Sales Trend (May-Aug)'. The chart type is set to 'spline', and the background color is light gray with specific margins for better spacing. The x-axis and y-axis labels are styled with a medium gray color and a font size of 14px. The y-axis title is intentionally left blank. The data series includes the name 'Sales' with corresponding data points for May, June, July, and August, and the series color is set to a green shade. The legend is enabled and styled with a dark gray color and a font size of 12px. This configuration ensures a clean and readable chart presentation."
+}

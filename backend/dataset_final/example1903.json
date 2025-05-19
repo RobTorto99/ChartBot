@@ -1,0 +1,100 @@
+{
+    "visualization_prompt": "Generate a spline chart showing interactive data point manipulation using conditional drag-drop constraints",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#2c3e50",
+            "marginTop": 60,
+            "marginBottom": 80,
+            "marginLeft": 80,
+            "marginRight": 80
+        },
+        "title": {
+            "text": "Drag & Drop Disabled for Specific Points",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "min": 0.5,
+            "max": 3.5,
+            "labels": {
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "14px"
+                }
+            },
+            "title": {
+                "text": "X Axis",
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "yAxis": {
+            "softMin": -200,
+            "softMax": 200,
+            "labels": {
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "14px"
+                }
+            },
+            "title": {
+                "text": "Y Axis",
+                "style": {
+                    "color": "#ffffff",
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "series": [
+            {
+                "dragDrop": {
+                    "draggableY": true
+                },
+                "point": {
+                    "events": {
+                        "drag": "function() { return this.className !== 'undraggable'; }",
+                        "drop": "function() { return this.className !== 'undraggable'; }"
+                    }
+                },
+                "dataLabels": {
+                    "enabled": true,
+                    "y": -6,
+                    "format": "{point.className}",
+                    "style": {
+                        "color": "#ffffff",
+                        "fontSize": "12px"
+                    }
+                },
+                "cursor": "ns-resize",
+                "data": [
+                    {
+                        "x": 1,
+                        "y": -25
+                    },
+                    {
+                        "x": 2,
+                        "y": 1,
+                        "color": "#f33",
+                        "className": "undraggable"
+                    },
+                    {
+                        "x": 3,
+                        "y": 25
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset contains three strategically placed control points in a 1D interaction space (x: ordinal positions, y: continuous values). Synthetic coordinates were created with \u03bc=0.33, \u03c3=28.9 to test edge-case handling. The spline visualization was chosen for its ability to show potential movement paths between points while maintaining Tufte's data-ink ratio through minimal gridlines. Cairo's perceptual principles are applied through high-contrast color coding (red #f33 L*56 vs background L*24) and direct data labeling. The draggable constraint implementation follows W3C pointer events specifications while maintaining accessibility through visible state indicators."
+}

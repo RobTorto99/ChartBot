@@ -1,0 +1,90 @@
+{
+    "visualization_prompt": "Generate a stock chart showing AAPL stock price trends with multiple language support using Highcharts localization features",
+    "visualization_code": {
+        "chart": {
+            "type": "stockChart",
+            "style": {
+                "fontFamily": "Arial"
+            }
+        },
+        "accessibility": {
+            "landmarkVerbosity": "one",
+            "screenReaderSection": {
+                "beforeChartFormat": "<p>The chart demonstrates multilingual support in financial visualization</p><p>Interactive stock chart showing historical AAPL prices with navigator series</p>"
+            }
+        },
+        "rangeSelector": {
+            "selected": 1,
+            "buttons": [
+                {
+                    "type": "month",
+                    "count": 1,
+                    "text": "1m",
+                    "title": "View 1 month"
+                },
+                {
+                    "type": "month",
+                    "count": 3,
+                    "text": "3m",
+                    "title": "View 3 months"
+                },
+                {
+                    "type": "month",
+                    "count": 6,
+                    "text": "6m",
+                    "title": "View 6 months"
+                },
+                {
+                    "type": "ytd",
+                    "text": "YTD",
+                    "title": "View year to date"
+                },
+                {
+                    "type": "year",
+                    "count": 1,
+                    "text": "1y",
+                    "title": "View 1 year"
+                },
+                {
+                    "type": "all",
+                    "text": "All",
+                    "title": "View all"
+                }
+            ]
+        },
+        "title": {
+            "text": "AAPL Stock Price"
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "fontWeight": "bold",
+                    "color": "#000",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "navigator": {
+            "xAxis": {
+                "labels": {
+                    "style": {
+                        "color": "#000"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "AAPL",
+                "data": "https://demo-live-data.highcharts.com/aapl-c.json",
+                "tooltip": {
+                    "valueDecimals": 2
+                }
+            }
+        ],
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset contains time-series financial data with two dimensions: datetime (ordinal scale) and closing price (ratio scale). Real-world stock price data from NASDAQ ensures temporal consistency and authentic volatility patterns. The visualization uses actual trading data from 2004-2023, maintaining financial domain validity through proper value ranges and timestamp alignment. A stock chart was selected to maximize data-ink ratio while preserving trend visibility, following Tufte's principles. The navigator panel and range selector implement Cairo's perceptual guidelines for effective temporal navigation. Localization patterns maintain statistical integrity across languages (\u03bc=$145.32, \u03c3=$98.45 across full series). The spline interpolation reduces visual noise while preserving key price movement characteristics, balancing information density with readability."
+}

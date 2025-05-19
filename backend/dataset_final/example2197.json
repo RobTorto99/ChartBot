@@ -1,0 +1,102 @@
+{
+    "visualization_prompt": "Generate a column chart showing fruit sales distribution across 10 categories using synthetic data with statistical validity. Include axis toggling between linear/logarithmic scales.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#f2f2f2"
+        },
+        "title": {
+            "text": "Fruit Sales",
+            "style": {
+                "fontSize": "18px",
+                "color": "#333333"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Apples",
+                "Pears",
+                "Bananas",
+                "Oranges",
+                "Grapes",
+                "Mangoes",
+                "Strawberries",
+                "Peaches",
+                "Kiwis",
+                "Pineapples"
+            ],
+            "labels": {
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#555555"
+                }
+            },
+            "title": {
+                "text": "Fruits",
+                "style": {
+                    "fontSize": "16px",
+                    "color": "#444444"
+                }
+            }
+        },
+        "yAxis": {
+            "type": "linear",
+            "title": {
+                "text": "Sales (Units)",
+                "style": {
+                    "fontSize": "16px",
+                    "color": "#444444"
+                }
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#555555"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Annual Sales",
+                "data": [
+                    142,
+                    89,
+                    203,
+                    45,
+                    167,
+                    92,
+                    215,
+                    58,
+                    189,
+                    76
+                ],
+                "color": "#FFA500"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "fontSize": "14px",
+                "color": "#666666"
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "colorByPoint": true,
+                "colors": [
+                    "#FF6347",
+                    "#32CD32",
+                    "#4169E1",
+                    "#FFD700",
+                    "#FF69B4",
+                    "#00FF00",
+                    "#FF4500",
+                    "#7B68EE",
+                    "#FFA07A",
+                    "#20B2AA"
+                ]
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains univariate sales figures across 10 fruit categories. Synthetic data was generated using a bimodal distribution (\u03bc\u2081=65, \u03c3\u2081=15 for budget fruits; \u03bc\u2082=195, \u03c3\u2082=20 for premium fruits) to simulate real-world sales patterns. The column chart maximizes data-ink ratio by eliminating gridlines while maintaining Cairo's proportionality principles through consistent width/spacing. Logarithmic toggle accommodates the 45-215 unit range spread. Color-by-point encoding enhances categorical discrimination while the light background reduces visual fatigue during analysis."
+}

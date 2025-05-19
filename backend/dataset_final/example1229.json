@@ -1,0 +1,130 @@
+{
+    "visualization_prompt": "Generate a column chart showing synthetic sales distribution across color categories using normally distributed data with \u03bc=50 and \u03c3=15",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#FFFFFF",
+            "marginTop": 40
+        },
+        "title": {
+            "text": "Monthly Sales Distribution by Color Category",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Red",
+                "Orange",
+                "Yellow",
+                "Green",
+                "Blue",
+                "Indigo",
+                "Violet",
+                "Pink",
+                "Brown",
+                "White",
+                "Black",
+                "Gray"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales Units",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Color Category Sales",
+                "data": [
+                    {
+                        "name": "Red",
+                        "y": 45,
+                        "color": "#FF0000"
+                    },
+                    {
+                        "name": "Orange",
+                        "y": 60,
+                        "color": "#FFA500"
+                    },
+                    {
+                        "name": "Yellow",
+                        "y": 55,
+                        "color": "#FFFF00"
+                    },
+                    {
+                        "name": "Green",
+                        "y": 50,
+                        "color": "#00FF00"
+                    },
+                    {
+                        "name": "Blue",
+                        "y": 65,
+                        "color": "#0000FF"
+                    },
+                    {
+                        "name": "Indigo",
+                        "y": 40,
+                        "color": "#4B0082"
+                    },
+                    {
+                        "name": "Violet",
+                        "y": 48,
+                        "color": "#EE82EE"
+                    },
+                    {
+                        "name": "Pink",
+                        "y": 52,
+                        "color": "#FF00FF"
+                    },
+                    {
+                        "name": "Brown",
+                        "y": 58,
+                        "color": "#A52A2A"
+                    },
+                    {
+                        "name": "White",
+                        "y": 43,
+                        "color": "#FFFFFF"
+                    },
+                    {
+                        "name": "Black",
+                        "y": 47,
+                        "color": "#000000"
+                    },
+                    {
+                        "name": "Gray",
+                        "y": 53,
+                        "color": "#808080"
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "valueSuffix": " units",
+            "headerFormat": "<b>{point.key}</b><br>"
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 categorical entries representing color categories with corresponding synthetic sales units. Variables include nominal color labels and ratio-scale sales figures. Synthetic data was generated using normal distribution (\u03bc=50, \u03c3=15) with constrained positivity, simulating realistic retail sales variation while maintaining domain relevance through appropriate color hex codes. The column chart was selected to maximize data-ink ratio per Tufte's principles, allowing direct categorical comparisons. Cairo's perceptual effectiveness is achieved through consistent color encoding matching category names. Value labels use D3-style formatting (+/- notation) with statistical anchoring (\u03bc=50 \u00b115\u03c3). The monochromatic progression in columns maintains visual hierarchy while avoiding chromatic rivalry."
+}

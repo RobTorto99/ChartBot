@@ -1,0 +1,110 @@
+{
+    "visualization_prompt": "Generate a Venn diagram showing overlapping character attributes of fictional entities using set intersection areas proportional to narrative significance",
+    "visualization_code": {
+        "chart": {
+            "type": "venn",
+            "backgroundColor": "#f2f2f2",
+            "height": "100%"
+        },
+        "title": {
+            "text": null
+        },
+        "series": [
+            {
+                "type": "venn",
+                "opacity": 0.4,
+                "borderWidth": 0,
+                "data": [
+                    {
+                        "sets": [
+                            "Knows If You Have Been Naughty Or Nice"
+                        ],
+                        "value": 4,
+                        "color": "#b3e5fc"
+                    },
+                    {
+                        "sets": [
+                            "Great Power Great Responsibility"
+                        ],
+                        "value": 4,
+                        "color": "#bee175"
+                    },
+                    {
+                        "sets": [
+                            "Wears Red Suit"
+                        ],
+                        "value": 4,
+                        "color": "#ff3232"
+                    },
+                    {
+                        "sets": [
+                            "Great Power Great Responsibility",
+                            "Wears Red Suit"
+                        ],
+                        "value": 1,
+                        "name": "Spider Man",
+                        "dataLabels": {
+                            "color": "white"
+                        }
+                    },
+                    {
+                        "sets": [
+                            "Great Power Great Responsibility",
+                            "Knows If You Have Been Naughty Or Nice"
+                        ],
+                        "value": 1,
+                        "name": "GOD",
+                        "dataLabels": {
+                            "color": "white"
+                        }
+                    },
+                    {
+                        "sets": [
+                            "Wears Red Suit",
+                            "Knows If You Have Been Naughty Or Nice"
+                        ],
+                        "value": 1,
+                        "name": "Spanish Inquisition",
+                        "dataLabels": {
+                            "color": "white"
+                        }
+                    },
+                    {
+                        "sets": [
+                            "Great Power Great Responsibility",
+                            "Wears Red Suit",
+                            "Knows If You Have Been Naughty Or Nice"
+                        ],
+                        "value": 1,
+                        "name": "Santa",
+                        "dataLabels": {
+                            "color": "white"
+                        }
+                    }
+                ]
+            }
+        ],
+        "responsive": {
+            "rules": [
+                {
+                    "condition": {
+                        "maxWidth": 650
+                    },
+                    "chartOptions": {
+                        "plotOptions": {
+                            "venn": {
+                                "dataLabels": {
+                                    "style": {
+                                        "fontSize": "14px",
+                                        "width": "100px"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The dataset represents a three-dimensional categorical space tracking supernatural attributes across cultural icons. Synthetic values follow equal distribution (4 base values, 1 intersections) to emphasize parity in mythological significance. Color coding maintains perceptual distance between moral judgment (blue), power responsibility (green), and visual identity (red). The Venn diagram maximizes data-ink ratio by using area encoding for set cardinality and strategic label placement. Cairo's principles of salience are implemented through chromatic contrast and intersection labeling, while the opacity stacking maintains legibility of overlapping regions. Responsive text scaling preserves Tufte's clarity principles across viewport sizes, with intersection labels using white text for maximum contrast against colored backgrounds."
+}

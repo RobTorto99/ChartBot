@@ -1,0 +1,160 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'City Elevation Analysis'. The chart should have axes and labels styled with specific colors and font sizes. The data series should include the name of each city and its elevation, formatted appropriately for Highcharts. Custom colors should be used for the series, and additional configurations such as chart margins, background, and legend should be included.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 60,
+            "marginBottom": 80,
+            "marginLeft": 70,
+            "marginRight": 70
+        },
+        "title": {
+            "text": "City Elevation Analysis",
+            "style": {
+                "color": "#333",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Auckland",
+                "Bangkok",
+                "Beijing",
+                "Buenos Aires",
+                "Cairo",
+                "Caracas",
+                "Casablanca",
+                "Chongqing",
+                "Dakar",
+                "Delhi",
+                "Dhaka",
+                "Dublin",
+                "Grytviken",
+                "Helsinki",
+                "Honolulu",
+                "Instanbul",
+                "Jakarta",
+                "Johannesburg",
+                "Karachi",
+                "Kathmandu",
+                "Kinshasa",
+                "Lagos",
+                "Lhasa",
+                "Lima",
+                "London",
+                "Los Angeles",
+                "Madrid",
+                "Manila",
+                "Mexico City",
+                "Mumbai",
+                "New York",
+                "Odesa",
+                "Osaka",
+                "Port aux Fran\u00e7ais",
+                "Port Moresby",
+                "Reykjav\u00edk",
+                "S\u00e3o Paulo",
+                "Shanghai",
+                "Singapore",
+                "Sydney",
+                "Tokyo",
+                "Ulaanbaatar",
+                "Vancouver",
+                "Xining"
+            ],
+            "title": {
+                "text": "Cities",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#777",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Elevation (m)",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#777",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Elevation",
+                "data": [
+                    98,
+                    1,
+                    63,
+                    10,
+                    22,
+                    909,
+                    75,
+                    244,
+                    37,
+                    225,
+                    3,
+                    8,
+                    17,
+                    25,
+                    6,
+                    268,
+                    3,
+                    1753,
+                    10,
+                    1298,
+                    240,
+                    41,
+                    3490,
+                    107,
+                    14,
+                    93,
+                    667,
+                    7,
+                    2216,
+                    14,
+                    10,
+                    40,
+                    12,
+                    16,
+                    39,
+                    12,
+                    760,
+                    122,
+                    11,
+                    35,
+                    17,
+                    1350,
+                    76,
+                    2275
+                ],
+                "color": "#008080"
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical",
+            "itemStyle": {
+                "color": "#555",
+                "fontSize": "12px"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart titled 'City Elevation Analysis'. The chart includes a custom background color and specific margins for better visual appeal. The x-axis represents the cities, while the y-axis represents the elevation in meters. Both axes have styled titles and labels with defined colors and font sizes. The data series includes the elevation data for each city, with a custom color applied to the series. Additionally, the legend is enabled and styled to match the overall theme of the chart."
+}

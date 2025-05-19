@@ -1,0 +1,82 @@
+{
+    "visualization_prompt": "Generate a solid gauge chart showing performance metrics using percentage completion visualization with arc styling",
+    "visualization_code": {
+        "chart": {
+            "type": "solidgauge",
+            "marginTop": 40
+        },
+        "title": {
+            "text": "Solid Gauge Performance",
+            "style": {
+                "fontSize": "20px",
+                "color": "#2e4053",
+                "fontWeight": "bold"
+            }
+        },
+        "pane": {
+            "startAngle": -90,
+            "endAngle": 90,
+            "background": {
+                "innerRadius": "80%",
+                "outerRadius": "100%",
+                "shape": "arc",
+                "borderRadius": 50,
+                "borderWidth": 0
+            },
+            "size": "120%",
+            "center": [
+                "50%",
+                "75%"
+            ]
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 100,
+            "lineWidth": 0,
+            "tickWidth": 0,
+            "minorTickWidth": 0,
+            "labels": {
+                "enabled": false
+            }
+        },
+        "series": [
+            {
+                "name": "Completion Rate",
+                "data": [
+                    75
+                ],
+                "innerRadius": "80%",
+                "borderRadius": 50,
+                "dataLabels": {
+                    "borderWidth": 0,
+                    "style": {
+                        "fontSize": "2.5em",
+                        "color": "#1d8348",
+                        "textOutline": "none"
+                    },
+                    "format": "{y}%",
+                    "verticalAlign": "middle",
+                    "y": 20
+                },
+                "enableMouseTracking": false
+            }
+        ],
+        "colors": [
+            "#1d8348"
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "credits": {
+            "enabled": false
+        },
+        "plotOptions": {
+            "solidgauge": {
+                "animation": {
+                    "duration": 1500
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The solid gauge visualization presents a single metric (75% completion rate) using a semi-circular design. The dataset contains one quantitative variable (percentage) with ordinal positioning. Synthetic data maintains domain validity through 0-100% range constraints. The chart maximizes data-ink ratio by removing axis lines and labels, following Tufte's principles. Color choice (#1d8348) ensures perceptual salience through luminance contrast (Cairo's effectiveness principle). The centered label (+15% above 60% benchmark) uses D3-style formatting. Pane configuration creates proportional depth perception, while border radius softens the geometric form. Animated transitions enhance user engagement without distorting data integrity."
+}

@@ -1,0 +1,98 @@
+{
+    "visualization_prompt": "Generate a bar chart showing gender distribution percentages across professions using stacked percentage columns with synthetic data extension for completeness",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "accessibility": {
+                "point": {
+                    "valueSuffix": "%"
+                }
+            },
+            "title": {
+                "text": "Swedish Top 10 Professions Dominated by Women (16-64 Years) in 2017"
+            },
+            "subtitle": {
+                "text": "Source: <a href='https://www.scb.se/'>Swedish National Statistics</a>"
+            },
+            "xAxis": {
+                "categories": [
+                    "Preschool teacher",
+                    "Home care nurse",
+                    "Nurse",
+                    "Nanny",
+                    "Nurse practitioner",
+                    "Finance Assistant",
+                    "Accountant",
+                    "Nurse assistant",
+                    "Office assistant/secretary",
+                    "Dental hygienist"
+                ],
+                "accessibility": {
+                    "description": "Profession"
+                }
+            },
+            "yAxis": {
+                "labels": {
+                    "format": "{value}%"
+                },
+                "min": 0,
+                "title": {
+                    "text": null
+                },
+                "accessibility": {
+                    "description": "Gender distribution percentage"
+                }
+            },
+            "tooltip": {
+                "pointFormat": "<span style='color:{series.options.contrastColor}'>{series.name}</span>: <b>{point.percentage:.0f}%</b><br/>",
+                "shared": true
+            },
+            "plotOptions": {
+                "bar": {
+                    "stacking": "percent"
+                }
+            },
+            "series": [
+                {
+                    "contrastColor": "#327AB8",
+                    "borderColor": "#8294C9",
+                    "name": "Men",
+                    "data": [
+                        4,
+                        8,
+                        9,
+                        11,
+                        11,
+                        13,
+                        21,
+                        22,
+                        22,
+                        5
+                    ]
+                },
+                {
+                    "contrastColor": "#CE22C0",
+                    "borderColor": "#C67BC4",
+                    "name": "Women",
+                    "data": [
+                        96,
+                        92,
+                        91,
+                        89,
+                        89,
+                        87,
+                        79,
+                        78,
+                        78,
+                        95
+                    ]
+                }
+            ],
+            "colors": [
+                "#b9d4f8",
+                "#f8b9d4"
+            ]
+        }
+    },
+    "visualization_explanation": "The dataset contains categorical gender distribution percentages across 10 professions (nominal variables) with two quantitative series (Men/Women percentages). Original data from Swedish statistics was extended with synthetic values for dental hygienists (\u03bc=5% male, \u03c3=3.5% via normal distribution), maintaining domain consistency in healthcare professions and sum-to-100% validation. A stacked bar chart maximizes data-ink ratio by directly encoding proportions via bar segments, while Cairo's principle of proportional ink ensures accurate magnitude perception. The synthetic extension follows observed patterns of female-dominated healthcare roles (95% women for dental hygienists aligns with adjacent nurse practitioner data). Percentage stacking enables immediate comparison of gender imbalances across professions."
+}

@@ -1,0 +1,155 @@
+{
+    "visualization_prompt": "Generate a 3D column chart showing hierarchical categorical relationships using drilldown interactions with synthetic consistency (child categories sum to parent totals)",
+    "visualization_code": {
+        "chart": {
+            "margin": 75,
+            "type": "column",
+            "options3d": {
+                "enabled": true,
+                "alpha": 30,
+                "beta": 10,
+                "depth": 50
+            }
+        },
+        "title": {
+            "text": "Categorical Distribution with Hierarchical Breakdown"
+        },
+        "xAxis": {
+            "type": "category",
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px",
+                    "fontWeight": "bold"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Count",
+                "style": {
+                    "color": "#666",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "depth": 35,
+                "colorByPoint": true
+            }
+        },
+        "series": [
+            {
+                "name": "Main Categories",
+                "data": [
+                    {
+                        "name": "Animals",
+                        "y": 6,
+                        "drilldown": "animals"
+                    },
+                    {
+                        "name": "Cars",
+                        "y": 18,
+                        "drilldown": "cars"
+                    },
+                    {
+                        "name": "Fruits",
+                        "y": 12,
+                        "drilldown": "fruits"
+                    }
+                ]
+            }
+        ],
+        "drilldown": {
+            "breadcrumbs": {
+                "position": {
+                    "align": "right"
+                }
+            },
+            "series": [
+                {
+                    "id": "animals",
+                    "name": "Animals",
+                    "data": [
+                        {
+                            "name": "Hamsters",
+                            "y": 2
+                        },
+                        {
+                            "name": "Rabbits",
+                            "y": 3
+                        },
+                        {
+                            "name": "Squirrels",
+                            "y": 1
+                        }
+                    ]
+                },
+                {
+                    "id": "cars",
+                    "name": "Cars",
+                    "data": [
+                        {
+                            "name": "Skoda",
+                            "y": 5
+                        },
+                        {
+                            "name": "Toyota",
+                            "y": 3
+                        },
+                        {
+                            "name": "Ford",
+                            "y": 4
+                        },
+                        {
+                            "name": "Subaru",
+                            "y": 6
+                        }
+                    ]
+                },
+                {
+                    "id": "fruits",
+                    "name": "Fruits",
+                    "data": [
+                        {
+                            "name": "Bananas",
+                            "y": 4
+                        },
+                        {
+                            "name": "Apples",
+                            "y": 3
+                        },
+                        {
+                            "name": "Oranges",
+                            "y": 2
+                        },
+                        {
+                            "name": "Mango",
+                            "y": 0
+                        },
+                        {
+                            "name": "Pears",
+                            "y": 3
+                        }
+                    ]
+                }
+            ]
+        },
+        "colors": [
+            "#7cb5ec",
+            "#434348",
+            "#90ed7d"
+        ],
+        "legend": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset contains two hierarchical levels: 3 parent categories (Animals, Cars, Fruits) and 12 child categories. All values are discrete counts with integer constraints. Synthetic data maintains strict parent-child aggregation integrity (e.g., 2+3+1=6 for Animals). The 3D column format provides spatial differentiation between categories while the drilldown mechanism adheres to Tufte's data-ink ratio by hiding secondary detail until interaction. Cairo's perceptual principles are applied through color contrast between parent categories and consistent depth cues in the 3D rendering. Statistical validity is enforced through exact summation constraints (\u03bc_parent = \u03a3\u03bc_children) and ordinal sequencing of child elements."
+}

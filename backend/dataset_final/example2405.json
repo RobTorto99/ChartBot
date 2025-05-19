@@ -1,0 +1,102 @@
+{
+    "visualization_prompt": "Generate a spline chart showing seasonal temperature variations using synthetic meteorological data with realistic annual progression and statistical noise.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "marginRight": 80,
+            "backgroundColor": "#F5F7FA"
+        },
+        "title": {
+            "text": "Northern Hemisphere Temperature Profile 2023",
+            "style": {
+                "color": "#2C3E50",
+                "fontSize": "22px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "14px"
+                }
+            },
+            "crosshair": true
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#34495E",
+                    "fontSize": "14px"
+                },
+                "format": "{value}\u00b0"
+            },
+            "gridLineColor": "#E0E0E0"
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#2C3E50",
+                "fontSize": "14px"
+            }
+        },
+        "series": [
+            {
+                "name": "Average Temperature",
+                "data": [
+                    4.8,
+                    6.2,
+                    9.5,
+                    14.3,
+                    18.1,
+                    22.4,
+                    25.6,
+                    24.9,
+                    20.2,
+                    15.5,
+                    9.8,
+                    6.7
+                ],
+                "color": "#E74C3C",
+                "marker": {
+                    "fillColor": "#FFFFFF",
+                    "lineWidth": 2,
+                    "lineColor": "#E74C3C"
+                }
+            }
+        ],
+        "plotOptions": {
+            "spline": {
+                "lineWidth": 3,
+                "states": {
+                    "hover": {
+                        "lineWidth": 5
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate time series with 12 monthly observations (categorical temporal scale). Synthetic data follows a sinusoidal pattern (\u03bc=15.2\u00b0C, \u03c3=7.8\u00b0C) with added Gaussian noise (\u03c3=1.5\u00b0C) to simulate natural variability. The spline chart was selected to emphasize seasonal progression while minimizing visual noise, adhering to Tufte's data-ink ratio principles. Color choice (#E74C3C) follows Cairo's emphasis principles for continuous quantitative data, with axis styling ensuring proper magnitude perception. The smooth interpolation between points reduces cognitive load for trend recognition while maintaining numerical precision through gridlines and formatted labels."
+}

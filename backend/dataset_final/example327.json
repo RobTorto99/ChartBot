@@ -1,0 +1,59 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a polar stacked column chart. The chart should visualize wind speed distribution based on the provided data. The chart should have a title 'Wind rose for South Shore Met Station, Oregon' and a subtitle indicating the data source 'Source: or.water.usgs.gov'. The axes and labels should be styled with specific colors and font sizes. The data series should include the wind speed categories and their corresponding frequencies. Custom colors should be applied to the series, and additional configurations such as chart margins, background, and legend should be set.",
+    "visualization_code": {
+        "data": {
+            "table": "freq",
+            "startRow": 1,
+            "endRow": 17,
+            "endColumn": 7
+        },
+        "chart": {
+            "polar": true,
+            "type": "column"
+        },
+        "title": {
+            "text": "Wind rose for South Shore Met Station, Oregon",
+            "align": "left"
+        },
+        "subtitle": {
+            "text": "Source: or.water.usgs.gov",
+            "align": "left"
+        },
+        "pane": {
+            "size": "85%"
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "y": 100,
+            "layout": "vertical"
+        },
+        "xAxis": {
+            "tickmarkPlacement": "on"
+        },
+        "yAxis": {
+            "min": 0,
+            "endOnTick": false,
+            "showLastLabel": true,
+            "title": {
+                "text": "Frequency (%)"
+            },
+            "labels": {
+                "format": "{value}%"
+            },
+            "reversedStacks": false
+        },
+        "tooltip": {
+            "valueSuffix": "%"
+        },
+        "plotOptions": {
+            "series": {
+                "stacking": "normal",
+                "shadow": false,
+                "groupPadding": 0,
+                "pointPlacement": "on"
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a polar stacked column chart, which is suitable for visualizing wind speed distribution. The chart is set to use data from an HTML table with the ID 'freq', starting from the second row (index 1) and ending at the 17th row, with data up to the 7th column. The chart's title and subtitle are aligned to the left, providing context about the data source and location. The polar chart is styled with a pane size of 85%, ensuring the chart is visually prominent. The legend is positioned to the right, vertically aligned at the top, and set to a vertical layout. The x-axis is configured to place tick marks on the data points, while the y-axis is set to display frequencies in percentage format, with a minimum value of 0 and no end tick marks. The tooltip displays values with a '%' suffix. The plot options ensure that series are stacked normally, without shadows, and grouped without padding, with points placed on the data points. This configuration effectively visualizes the wind speed distribution in a clear and informative manner."
+}

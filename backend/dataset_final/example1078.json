@@ -1,0 +1,105 @@
+{
+    "visualization_prompt": "Generate a line chart showing interactive annotation patterns using Highcharts' pitchfork annotation module with dynamic style updates",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "renderTo": "container"
+        },
+        "title": {
+            "text": "Pitchfork Advanced Annotation Demo",
+            "style": {
+                "fontFamily": "'IBM Plex Sans', sans-serif",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "color": "#666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Annotation Targets",
+                "data": [
+                    1,
+                    2,
+                    3,
+                    {
+                        "y": 4,
+                        "id": "s"
+                    },
+                    5,
+                    {
+                        "y": 6,
+                        "id": "m"
+                    },
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    3,
+                    2,
+                    4,
+                    4,
+                    4,
+                    4,
+                    3
+                ],
+                "color": "#7cb5ec"
+            }
+        ],
+        "annotations": [
+            {
+                "type": "pitchfork",
+                "typeOptions": {
+                    "points": [
+                        {
+                            "x": 4,
+                            "y": 4,
+                            "controlPoint": {
+                                "style": {
+                                    "fill": "red"
+                                }
+                            }
+                        },
+                        {
+                            "x": 10,
+                            "y": 6
+                        },
+                        {
+                            "x": 10,
+                            "y": 2
+                        }
+                    ],
+                    "innerBackground": {
+                        "fill": "rgba(100, 170, 255, 0.8)"
+                    }
+                }
+            }
+        ],
+        "plotOptions": {
+            "series": {
+                "marker": {
+                    "radius": 3,
+                    "fillColor": "#ffffff",
+                    "lineWidth": 2
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains a univariate series with 20 sequential observations mixing numeric primitives and annotated data points. Synthetic values demonstrate discrete event marking (IDs 's' and 'm') within an otherwise random walk pattern (\u03bc=3.8, \u03c3=1.6). The line chart maximizes data-ink ratio per Tufte while maintaining Cairo's magnitude principle through proportional axis scaling. Pitchfork annotation implements Cairo's connection principle by visually linking related data points. Dynamic color updates demonstrate interactive redundancy reduction. Statistical anchors include synthetic fluctuation range (1-8) matching 95% CI of generated values."
+}

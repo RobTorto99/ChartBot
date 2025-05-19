@@ -1,0 +1,102 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render an inverted spline chart. The chart should display the 'Atmosphere Temperature by Altitude' according to the Standard Atmosphere Model. The X-axis should represent the altitude in kilometers, and the Y-axis should represent the temperature in degrees Celsius. The chart should have a title and subtitle aligned to the left. The X-axis labels should be formatted to show the altitude in kilometers, and the Y-axis labels should be formatted to show the temperature in degrees Celsius. The chart should have a single series named 'Temperature' with data points representing the temperature at various altitudes. The chart should not display a legend and should have a tooltip that shows the altitude and temperature for each data point.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "inverted": true
+        },
+        "title": {
+            "text": "Atmosphere Temperature by Altitude",
+            "align": "left"
+        },
+        "subtitle": {
+            "text": "According to the Standard Atmosphere Model",
+            "align": "left"
+        },
+        "xAxis": {
+            "reversed": false,
+            "title": {
+                "enabled": true,
+                "text": "Altitude"
+            },
+            "labels": {
+                "format": "{value} km"
+            },
+            "accessibility": {
+                "rangeDescription": "Range: 0 to 80 km."
+            },
+            "maxPadding": 0.05,
+            "showLastLabel": true
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature"
+            },
+            "labels": {
+                "format": "{value}\u00b0"
+            },
+            "accessibility": {
+                "rangeDescription": "Range: -90\u00b0C to 20\u00b0C."
+            },
+            "lineWidth": 2
+        },
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "headerFormat": "<b>{series.name}</b><br/>",
+            "pointFormat": "{point.x} km: {point.y}\u00b0C"
+        },
+        "plotOptions": {
+            "spline": {
+                "marker": {
+                    "enable": false
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Temperature",
+                "data": [
+                    [
+                        0,
+                        15
+                    ],
+                    [
+                        10,
+                        -50
+                    ],
+                    [
+                        20,
+                        -56.5
+                    ],
+                    [
+                        30,
+                        -46.5
+                    ],
+                    [
+                        40,
+                        -22.1
+                    ],
+                    [
+                        50,
+                        -2.5
+                    ],
+                    [
+                        60,
+                        -27.7
+                    ],
+                    [
+                        70,
+                        -55.7
+                    ],
+                    [
+                        80,
+                        -76.5
+                    ]
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures an inverted spline chart that visualizes the 'Atmosphere Temperature by Altitude' according to the Standard Atmosphere Model. The chart is inverted, meaning the X-axis represents the vertical altitude and the Y-axis represents the horizontal temperature. The X-axis is titled 'Altitude' and its labels are formatted to display the altitude in kilometers. The Y-axis is titled 'Temperature' and its labels are formatted to display the temperature in degrees Celsius. The chart includes a single series named 'Temperature' with data points representing the temperature at various altitudes. The chart does not display a legend, and the tooltip shows the altitude and temperature for each data point when hovered over. The chart is designed to be intuitive for data sets where the X-axis represents vertical altitude, as described in the accompanying HTML and CSS."
+}

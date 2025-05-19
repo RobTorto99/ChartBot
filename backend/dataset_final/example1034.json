@@ -1,0 +1,194 @@
+{
+    "visualization_prompt": "Generate a 3D scatter plot showing the spatial distribution of multivariate data points using interactive 3D perspective rotation",
+    "visualization_code": {
+        "chart": {
+            "type": "scatter3d",
+            "options3d": {
+                "enabled": true,
+                "alpha": 10,
+                "beta": 30,
+                "depth": 250,
+                "viewDistance": 5,
+                "frame": {
+                    "bottom": {
+                        "size": 1,
+                        "color": "rgba(0,0,0,0.02)"
+                    },
+                    "back": {
+                        "size": 1,
+                        "color": "rgba(0,0,0,0.04)"
+                    },
+                    "side": {
+                        "size": 1,
+                        "color": "rgba(0,0,0,0.06)"
+                    }
+                }
+            }
+        },
+        "title": {
+            "text": "3D Multivariate Data Distribution"
+        },
+        "subtitle": {
+            "text": "Drag to rotate view perspective"
+        },
+        "xAxis": {
+            "min": 0,
+            "max": 1000,
+            "title": {
+                "text": "Feature X"
+            },
+            "labels": {
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "max": 1000,
+            "title": {
+                "text": "Feature Y"
+            },
+            "labels": {
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "zAxis": {
+            "min": 0,
+            "max": 1000,
+            "title": {
+                "text": "Feature Z"
+            },
+            "labels": {
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Multivariate Observations",
+                "data": [
+                    [
+                        611,
+                        138,
+                        82
+                    ],
+                    [
+                        304,
+                        716,
+                        717
+                    ],
+                    [
+                        250,
+                        196,
+                        324
+                    ],
+                    [
+                        309,
+                        751,
+                        146
+                    ],
+                    [
+                        528,
+                        724,
+                        239
+                    ],
+                    [
+                        51,
+                        8,
+                        341
+                    ],
+                    [
+                        113,
+                        414,
+                        490
+                    ],
+                    [
+                        194,
+                        762,
+                        536
+                    ],
+                    [
+                        350,
+                        939,
+                        500
+                    ],
+                    [
+                        339,
+                        920,
+                        386
+                    ],
+                    [
+                        758,
+                        314,
+                        434
+                    ],
+                    [
+                        144,
+                        779,
+                        960
+                    ],
+                    [
+                        564,
+                        464,
+                        823
+                    ],
+                    [
+                        312,
+                        497,
+                        148
+                    ],
+                    [
+                        705,
+                        669,
+                        944
+                    ],
+                    [
+                        306,
+                        829,
+                        993
+                    ],
+                    [
+                        926,
+                        211,
+                        649
+                    ],
+                    [
+                        887,
+                        176,
+                        630
+                    ],
+                    [
+                        492,
+                        572,
+                        691
+                    ],
+                    [
+                        440,
+                        259,
+                        283
+                    ]
+                ],
+                "colorByPoint": true,
+                "marker": {
+                    "radius": 4
+                }
+            }
+        ],
+        "plotOptions": {
+            "scatter": {
+                "tooltip": {
+                    "headerFormat": "<b>{series.name}</b><br>",
+                    "pointFormat": "X: {point.x}<br>Y: {point.y}<br>Z: {point.z}"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 20 three-dimensional observations with numerical features (X, Y, Z) ranging 0-1000. Synthetic data was generated using uniform distributions across all axes to demonstrate 3D plotting capabilities while maintaining spatial coherence. Values show no temporal component but maintain domain-appropriate ranges for abstract feature space visualization.\n\nThe 3D scatter plot was selected to enable spatial pattern detection through interactive rotation, adhering to Tufte's principles by maximizing data-ink ratio through minimal chart junk. Cairo's perceptual principles are implemented through depth cues in axis framing and color variation. Data distribution shows \u03bc\u2248500, \u03c3\u2248290 across all dimensions, with random dispersion simulating independent variables. Interactive rotation preserves proportional perspective through orthographic projection."
+}

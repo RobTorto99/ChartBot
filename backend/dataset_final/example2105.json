@@ -1,0 +1,141 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly average temperature variations in a temperate climate using synthetic data with seasonal trends",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#efffff",
+            "borderColor": "#7cb5ec",
+            "borderWidth": 2,
+            "margin": [
+                50,
+                50,
+                100,
+                80
+            ]
+        },
+        "title": {
+            "text": "Northern Hemisphere Temperature Profile",
+            "style": {
+                "color": "#2e4053",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#4a4a4a",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Month",
+                "style": {
+                    "color": "#4a4a4a",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#4a4a4a",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#4a4a4a",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Average Temperature",
+                "data": [
+                    {
+                        "y": 3.2,
+                        "note": "Winter minimum"
+                    },
+                    {
+                        "y": 4.5,
+                        "note": "Early frost"
+                    },
+                    {
+                        "y": 8.9,
+                        "note": "Spring onset"
+                    },
+                    {
+                        "y": 14.1,
+                        "note": "Frost-free"
+                    },
+                    {
+                        "y": 18.7,
+                        "note": "Planting season"
+                    },
+                    {
+                        "y": 22.4,
+                        "note": "Summer start"
+                    },
+                    {
+                        "y": 24.8,
+                        "note": "Peak heat"
+                    },
+                    {
+                        "y": 24.1,
+                        "note": "Warm nights"
+                    },
+                    {
+                        "y": 19.6,
+                        "note": "Harvest begins"
+                    },
+                    {
+                        "y": 13.9,
+                        "note": "First frost"
+                    },
+                    {
+                        "y": 7.3,
+                        "note": "Leaf fall"
+                    },
+                    {
+                        "y": 2.8,
+                        "note": "Winter return"
+                    }
+                ],
+                "color": "#e74c3c",
+                "marker": {
+                    "enabled": true,
+                    "radius": 4
+                }
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "itemStyle": {
+                "color": "#2e4053",
+                "fontSize": "12px"
+            }
+        },
+        "tooltip": {
+            "valueSuffix": "\u00b0C",
+            "headerFormat": "<b>{point.key}</b><br>"
+        }
+    },
+    "visualization_explanation": "The dataset represents 12 monthly observations (univariate time series) of synthetic temperature data. Categorical x-axis labels use month abbreviations while the quantitative y-axis shows Celsius values. Synthetic data was generated with \u03bc=14.2\u00b0C annual average and \u03c3=8.3\u00b0C standard deviation, maintaining realistic seasonal progression and hemispheric patterns. The spline chart was chosen to emphasize smooth seasonal transitions while minimizing visual noise through disabled gridlines and subtle markers. Following Cairo's principles, the red series color provides pre-attentive pop against the ice-blue background, while Tufte's data-ink ratio is maintained through minimalist styling. Annotations use D3.format precision (1 decimal) with natural language notes in tooltips."
+}

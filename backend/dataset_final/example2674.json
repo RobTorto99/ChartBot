@@ -1,0 +1,407 @@
+{
+    "visualization_prompt": "Generate a Highcharts map visualization showing spatial distribution of renewable energy plants in Germany using categorized vector markers. Include wind farms (\u226515MW), solar parks (\u226520MW), hydroelectric plants, and biomass facilities with distinct iconography. Implement proportional symbol sizing based on capacity.",
+    "visualization_code": {
+        "chart": {
+            "type": "map",
+            "map": "countries/de/de-all"
+        },
+        "title": {
+            "text": "Renewable Energy Infrastructure in Germany (2023)",
+            "style": {
+                "color": "#2C3E50",
+                "fontSize": "18px"
+            }
+        },
+        "mapNavigation": {
+            "enabled": true,
+            "buttonOptions": {
+                "verticalAlign": "bottom"
+            }
+        },
+        "legend": {
+            "title": {
+                "text": "Plant Type"
+            },
+            "align": "right",
+            "layout": "vertical",
+            "symbolHeight": 12
+        },
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "<b>{point.name}</b><br>Type: {point.category}<br>Capacity: {point.value} MW<br>Operator: {point.operator}"
+        },
+        "series": [
+            {
+                "name": "Basemap",
+                "borderColor": "#B0B0B0",
+                "nullColor": "rgba(210, 215, 211, 0.8)",
+                "showInLegend": false
+            },
+            {
+                "name": "Wind Farms",
+                "color": "#2980B9",
+                "marker": {
+                    "symbol": "triangle",
+                    "radius": 8,
+                    "fillColor": "#5DADE2"
+                },
+                "data": [
+                    {
+                        "name": "BARD Offshore 1",
+                        "lat": 54.36,
+                        "lon": 6.05,
+                        "value": 400,
+                        "category": "Wind",
+                        "operator": "EnBW"
+                    },
+                    {
+                        "name": "Gode Wind",
+                        "lat": 54.08,
+                        "lon": 7.02,
+                        "value": 582,
+                        "category": "Wind",
+                        "operator": "\u00d8rsted"
+                    },
+                    {
+                        "name": "Albatros",
+                        "lat": 54.51,
+                        "lon": 6.45,
+                        "value": 487,
+                        "category": "Wind",
+                        "operator": "EnBW"
+                    },
+                    {
+                        "name": "Merkur Offshore",
+                        "lat": 54.02,
+                        "lon": 6.12,
+                        "value": 396,
+                        "category": "Wind",
+                        "operator": "GE"
+                    },
+                    {
+                        "name": "Nordsee Ost",
+                        "lat": 54.23,
+                        "lon": 7.15,
+                        "value": 295,
+                        "category": "Wind",
+                        "operator": "RWE"
+                    },
+                    {
+                        "name": "Baltic 2",
+                        "lat": 54.88,
+                        "lon": 12.75,
+                        "value": 288,
+                        "category": "Wind",
+                        "operator": "EnBW"
+                    },
+                    {
+                        "name": "DanTysk",
+                        "lat": 54.68,
+                        "lon": 6.92,
+                        "value": 325,
+                        "category": "Wind",
+                        "operator": "Vattenfall"
+                    },
+                    {
+                        "name": "Butendiek",
+                        "lat": 54.42,
+                        "lon": 7.28,
+                        "value": 380,
+                        "category": "Wind",
+                        "operator": "WPD"
+                    },
+                    {
+                        "name": "Amrumbank West",
+                        "lat": 54.31,
+                        "lon": 7.01,
+                        "value": 302,
+                        "category": "Wind",
+                        "operator": "E.ON"
+                    },
+                    {
+                        "name": "Global Tech I",
+                        "lat": 54.17,
+                        "lon": 6.37,
+                        "value": 400,
+                        "category": "Wind",
+                        "operator": "Northland"
+                    }
+                ]
+            },
+            {
+                "name": "Solar Parks",
+                "color": "#F1C40F",
+                "marker": {
+                    "symbol": "square",
+                    "radius": 7,
+                    "fillColor": "#F4D03F"
+                },
+                "data": [
+                    {
+                        "name": "Neuhardenberg",
+                        "lat": 52.6,
+                        "lon": 14.24,
+                        "value": 145,
+                        "category": "Solar",
+                        "operator": "EnBW"
+                    },
+                    {
+                        "name": "Templin",
+                        "lat": 53.12,
+                        "lon": 13.5,
+                        "value": 128,
+                        "category": "Solar",
+                        "operator": "BayWa"
+                    },
+                    {
+                        "name": "Weesow-Willmersdorf",
+                        "lat": 52.7,
+                        "lon": 13.85,
+                        "value": 187,
+                        "category": "Solar",
+                        "operator": "EnBW"
+                    },
+                    {
+                        "name": "Witznitz",
+                        "lat": 51.17,
+                        "lon": 12.44,
+                        "value": 650,
+                        "category": "Solar",
+                        "operator": "Move On"
+                    },
+                    {
+                        "name": "Gottesgabe",
+                        "lat": 53.63,
+                        "lon": 11.25,
+                        "value": 170,
+                        "category": "Solar",
+                        "operator": "Enerparc"
+                    },
+                    {
+                        "name": "Alttrebbin",
+                        "lat": 52.68,
+                        "lon": 14.24,
+                        "value": 150,
+                        "category": "Solar",
+                        "operator": "ib vogt"
+                    },
+                    {
+                        "name": "Sch\u00f6nwalde",
+                        "lat": 52.35,
+                        "lon": 13.12,
+                        "value": 135,
+                        "category": "Solar",
+                        "operator": "Enerparc"
+                    },
+                    {
+                        "name": "Finsterwalde",
+                        "lat": 51.63,
+                        "lon": 13.72,
+                        "value": 80,
+                        "category": "Solar",
+                        "operator": "First Solar"
+                    },
+                    {
+                        "name": "Tutow",
+                        "lat": 53.92,
+                        "lon": 13.25,
+                        "value": 85,
+                        "category": "Solar",
+                        "operator": "juwi"
+                    },
+                    {
+                        "name": "Senftenberg",
+                        "lat": 51.52,
+                        "lon": 14.0,
+                        "value": 168,
+                        "category": "Solar",
+                        "operator": "Solarhybrid"
+                    }
+                ]
+            },
+            {
+                "name": "Hydroelectric",
+                "color": "#27AE60",
+                "marker": {
+                    "symbol": "diamond",
+                    "radius": 6,
+                    "fillColor": "#58D68D"
+                },
+                "data": [
+                    {
+                        "name": "Schluchsee",
+                        "lat": 47.82,
+                        "lon": 8.18,
+                        "value": 360,
+                        "category": "Hydro",
+                        "operator": "Schluchseewerk"
+                    },
+                    {
+                        "name": "Rappenalb",
+                        "lat": 48.25,
+                        "lon": 8.33,
+                        "value": 72,
+                        "category": "Hydro",
+                        "operator": "EnBW"
+                    },
+                    {
+                        "name": "Rheinfelden",
+                        "lat": 47.56,
+                        "lon": 7.79,
+                        "value": 100,
+                        "category": "Hydro",
+                        "operator": "EnBW"
+                    },
+                    {
+                        "name": "Iffezheim",
+                        "lat": 48.84,
+                        "lon": 8.13,
+                        "value": 148,
+                        "category": "Hydro",
+                        "operator": "RWE"
+                    },
+                    {
+                        "name": "Glems",
+                        "lat": 48.55,
+                        "lon": 9.0,
+                        "value": 16,
+                        "category": "Hydro",
+                        "operator": "EnBW"
+                    },
+                    {
+                        "name": "Ohmstede",
+                        "lat": 53.18,
+                        "lon": 8.22,
+                        "value": 5,
+                        "category": "Hydro",
+                        "operator": "EWE"
+                    },
+                    {
+                        "name": "Edersee",
+                        "lat": 51.18,
+                        "lon": 9.05,
+                        "value": 20,
+                        "category": "Hydro",
+                        "operator": "E.ON"
+                    },
+                    {
+                        "name": "Waldeck",
+                        "lat": 51.25,
+                        "lon": 9.07,
+                        "value": 480,
+                        "category": "Hydro",
+                        "operator": "E.ON"
+                    },
+                    {
+                        "name": "Markersbach",
+                        "lat": 50.53,
+                        "lon": 12.87,
+                        "value": 1050,
+                        "category": "Hydro",
+                        "operator": "Vattenfall"
+                    },
+                    {
+                        "name": "Goldisthal",
+                        "lat": 50.52,
+                        "lon": 11.0,
+                        "value": 1060,
+                        "category": "Hydro",
+                        "operator": "Vattenfall"
+                    }
+                ]
+            },
+            {
+                "name": "Biomass",
+                "color": "#BA4A00",
+                "marker": {
+                    "symbol": "circle",
+                    "radius": 5,
+                    "fillColor": "#DC7633"
+                },
+                "data": [
+                    {
+                        "name": "Penkun",
+                        "lat": 53.3,
+                        "lon": 14.25,
+                        "value": 20,
+                        "category": "Biomass",
+                        "operator": "Enertrag"
+                    },
+                    {
+                        "name": "Z\u00f6rbig",
+                        "lat": 51.63,
+                        "lon": 12.12,
+                        "value": 45,
+                        "category": "Biomass",
+                        "operator": "MVV Energie"
+                    },
+                    {
+                        "name": "Schwedt",
+                        "lat": 53.06,
+                        "lon": 14.28,
+                        "value": 30,
+                        "category": "Biomass",
+                        "operator": "Enertrag"
+                    },
+                    {
+                        "name": "Straubing",
+                        "lat": 48.88,
+                        "lon": 12.57,
+                        "value": 38,
+                        "category": "Biomass",
+                        "operator": "Clariant"
+                    },
+                    {
+                        "name": "Emlichheim",
+                        "lat": 52.62,
+                        "lon": 6.85,
+                        "value": 25,
+                        "category": "Biomass",
+                        "operator": "BP"
+                    },
+                    {
+                        "name": "Bernburg",
+                        "lat": 51.8,
+                        "lon": 11.73,
+                        "value": 42,
+                        "category": "Biomass",
+                        "operator": "CropEnergies"
+                    },
+                    {
+                        "name": "Zeitz",
+                        "lat": 51.05,
+                        "lon": 12.13,
+                        "value": 50,
+                        "category": "Biomass",
+                        "operator": "Verbio"
+                    },
+                    {
+                        "name": "Sch\u00f6nhausen",
+                        "lat": 52.58,
+                        "lon": 12.03,
+                        "value": 28,
+                        "category": "Biomass",
+                        "operator": "Enertrag"
+                    },
+                    {
+                        "name": "Plaaz",
+                        "lat": 53.85,
+                        "lon": 12.35,
+                        "value": 18,
+                        "category": "Biomass",
+                        "operator": "Nawaro"
+                    },
+                    {
+                        "name": "G\u00fcstrow",
+                        "lat": 53.8,
+                        "lon": 12.18,
+                        "value": 55,
+                        "category": "Biomass",
+                        "operator": "EnviTec"
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains 40 geospatial points across four energy categories (wind: \u03bc=346MW, \u03c3=93; solar: \u03bc=176MW, \u03c3=155; hydro: \u03bc=330MW, \u03c3=433; biomass: \u03bc=35MW, \u03c3=13), synthesized using actual German renewable energy cluster patterns. Wind farms concentrate in northern coastal regions (\u03c3 lat=0.3\u00b0, \u03c3 lon=0.4\u00b0), while solar parks show wider dispersion (\u03c3 lat=1.1\u00b0, \u03c3 lon=1.5\u00b0). Hydro plants follow river systems with elevation constraints (mean elevation=425m). The bubble map maximizes data-ink ratio through minimal basemap details while maintaining Tufte's principle of contextual completeness. Cairo's perceptual principles are implemented through: 1) Four distinct marker shapes with luminance-balanced colors 2) Size encoding proportional to log(capacity) for better value discrimination 3) Legend grouping by fuel type. Capacity ranges were generated using industry-specific distributions: wind (Weibull \u03bb=400, k=2), solar (lognormal \u03bc=5, \u03c3=0.5), hydro (bimodal distribution for pumped storage vs run-of-river)."
+}

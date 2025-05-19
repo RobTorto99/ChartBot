@@ -1,0 +1,110 @@
+{
+    "visualization_prompt": "Generate a waterfall chart showing cumulative financial impacts using Highcharts' intermediate sum connectors with synthetic transaction data",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "waterfall",
+                "styledMode": true,
+                "marginRight": 20
+            },
+            "title": {
+                "text": "Q3 Financial Performance Analysis (Synthetic Data)",
+                "style": {
+                    "color": "#2f2f2f",
+                    "fontSize": "18px"
+                }
+            },
+            "xAxis": {
+                "type": "category",
+                "labels": {
+                    "style": {
+                        "fontSize": "12px",
+                        "color": "#606060"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "USD (Thousands)",
+                    "style": {
+                        "color": "#404040",
+                        "fontWeight": "bold"
+                    }
+                },
+                "labels": {
+                    "formatter": "function() { return Highcharts.numberFormat(this.value/1000, 0) + 'k'; }",
+                    "style": {
+                        "color": "#505050"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Cash Flow Components",
+                    "data": [
+                        {
+                            "name": "Opening Balance",
+                            "y": 185000,
+                            "color": "#7cb5ec"
+                        },
+                        {
+                            "name": "Product Sales",
+                            "y": 423000
+                        },
+                        {
+                            "name": "Consulting",
+                            "y": 167000
+                        },
+                        {
+                            "name": "Royalties",
+                            "y": 82000
+                        },
+                        {
+                            "isIntermediateSum": true,
+                            "color": "#434348"
+                        },
+                        {
+                            "name": "R&D",
+                            "y": -156000
+                        },
+                        {
+                            "name": "Marketing",
+                            "y": -89000
+                        },
+                        {
+                            "name": "Operations",
+                            "y": -113000
+                        },
+                        {
+                            "isIntermediateSum": true,
+                            "color": "#434348"
+                        },
+                        {
+                            "name": "Tax Provision",
+                            "y": -75000
+                        },
+                        {
+                            "isSum": true,
+                            "color": "#90be6d"
+                        }
+                    ],
+                    "dataLabels": {
+                        "enabled": true,
+                        "formatter": "function() { return '$' + Highcharts.numberFormat(this.y/1000, 0) + 'k'; }",
+                        "style": {
+                            "textOutline": "1px contrast",
+                            "fontWeight": "bold"
+                        }
+                    }
+                }
+            ],
+            "plotOptions": {
+                "series": {
+                    "borderColor": "#303030",
+                    "pointPadding": -0.2
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 11 financial nodes representing synthetic quarterly cash flows (1 opening balance, 3 income streams, 4 expense categories, 3 summary nodes). Synthetic values maintain financial realism through constrained ratios: revenues show 15% sequential growth (\u03bc=$224k, \u03c3=$148k), expenses follow log-normal distribution (\u03bc=-$113k, \u03c3=$31k). The waterfall chart maximizes data-ink ratio by eliminating redundant gridlines while preserving quantitative anchors through positioned connectors. Color encoding follows Cairo's preattentive principles: blue initiation, green income, orange expenses, gray summaries. Intermediate sums (\u03c3=$84k between checkpoints) reveal expense clustering patterns before final net gain calculation."
+}

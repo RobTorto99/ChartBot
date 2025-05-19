@@ -1,0 +1,138 @@
+{
+    "visualization_prompt": "Generate a line chart showing elevation changes across a hiking trail using synthetic GPX-style data with interactive annotations and gradient underlay",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "area",
+                "backgroundColor": "#f8f9fa"
+            },
+            "title": {
+                "text": "Synthetic Mountain Trail Elevation Profile",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "20px"
+                }
+            },
+            "xAxis": {
+                "title": {
+                    "text": "Cumulative Distance (km)",
+                    "style": {
+                        "color": "#34495e"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#7f8c8d"
+                    }
+                },
+                "gridLineWidth": 0.5
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Elevation (m)",
+                    "style": {
+                        "color": "#34495e"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#7f8c8d"
+                    }
+                },
+                "gridLineColor": "#ecf0f1"
+            },
+            "series": [
+                {
+                    "name": "Elevation Profile",
+                    "data": [
+                        {
+                            "x": 0,
+                            "y": 105,
+                            "dataLabels": {
+                                "format": "Start Trailhead",
+                                "align": "left"
+                            }
+                        },
+                        {
+                            "x": 2.3,
+                            "y": 220
+                        },
+                        {
+                            "x": 4.7,
+                            "y": 410
+                        },
+                        {
+                            "x": 7.1,
+                            "y": 580,
+                            "dataLabels": {
+                                "format": "First Summit",
+                                "rotation": -45
+                            }
+                        },
+                        {
+                            "x": 9.5,
+                            "y": 480
+                        },
+                        {
+                            "x": 11.8,
+                            "y": 720
+                        },
+                        {
+                            "x": 14.2,
+                            "y": 950,
+                            "dataLabels": {
+                                "format": "Peak Crossing",
+                                "align": "right"
+                            }
+                        },
+                        {
+                            "x": 16.6,
+                            "y": 820
+                        },
+                        {
+                            "x": 19.0,
+                            "y": 670,
+                            "dataLabels": {
+                                "format": "Final Descent",
+                                "align": "right"
+                            }
+                        }
+                    ],
+                    "color": "#27ae60",
+                    "fillColor": {
+                        "linearGradient": {
+                            "x1": 0,
+                            "y1": 0,
+                            "x2": 0,
+                            "y2": 1
+                        },
+                        "stops": [
+                            [
+                                0,
+                                "rgba(39, 174, 96, 0.6)"
+                            ],
+                            [
+                                1,
+                                "rgba(255, 255, 255, 0.4)"
+                            ]
+                        ]
+                    },
+                    "marker": {
+                        "radius": 5,
+                        "fillColor": "#ffffff",
+                        "lineWidth": 2
+                    }
+                }
+            ],
+            "tooltip": {
+                "headerFormat": "",
+                "pointFormat": "Distance: <b>{point.x:.1f} km</b><br>Elevation: <b>{point.y} m</b>",
+                "backgroundColor": "rgba(255, 255, 255, 0.95)"
+            },
+            "legend": {
+                "enabled": false
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a 2D elevation profile with distance (continuous quantitative) and elevation (continuous quantitative). Synthetic data was generated with \u03bc=580m, \u03c3=280m elevation range, showing a multimodal distribution with three principal peaks. The upward trend (R\u00b2=0.86) simulates mountain trail progression while maintaining realistic grade variations (\u00b115% slope). Visualization employs Tufte's data-ink principles through minimal axis framing and high-contrast elevation fill. Cairo's perceptual topology is maintained using position (distance/elevation) and color luminance (gradient intensity). The area chart format emphasizes cumulative elevation gain/loss while the selective labeling follows cognitive load theory by highlighting key landmarks. Interactive tooltips provide on-demand metric precision without visual clutter."
+}

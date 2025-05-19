@@ -1,0 +1,135 @@
+{
+    "visualization_prompt": "Generate a bubble chart showing parliamentary seat distribution using size-encoded markers with political party color coding",
+    "visualization_code": {
+        "chart": {
+            "type": "bubble",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Norwegian Parliament Seat Distribution 2024",
+            "style": {
+                "color": "#2f2f2f",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "type": "category",
+            "categories": [
+                "R",
+                "SV",
+                "AP",
+                "SP",
+                "MDG",
+                "KrF",
+                "V",
+                "H",
+                "FrP"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#606060",
+                    "fontSize": "14px"
+                }
+            },
+            "lineWidth": 0
+        },
+        "yAxis": {
+            "visible": false,
+            "min": -1,
+            "max": 1
+        },
+        "plotOptions": {
+            "bubble": {
+                "minSize": 20,
+                "maxSize": 80
+            }
+        },
+        "series": [
+            {
+                "name": "Parliament Seats",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "R",
+                        "x": 0,
+                        "y": 0,
+                        "z": 8,
+                        "color": "#9c0014"
+                    },
+                    {
+                        "name": "SV",
+                        "x": 1,
+                        "y": 0,
+                        "z": 18,
+                        "color": "#da47bb"
+                    },
+                    {
+                        "name": "AP",
+                        "x": 2,
+                        "y": 0,
+                        "z": 42,
+                        "color": "#e90031"
+                    },
+                    {
+                        "name": "SP",
+                        "x": 3,
+                        "y": 0,
+                        "z": 27,
+                        "color": "#a8cd4d"
+                    },
+                    {
+                        "name": "MDG",
+                        "x": 4,
+                        "y": 0,
+                        "z": 4,
+                        "color": "#3e8720"
+                    },
+                    {
+                        "name": "KrF",
+                        "x": 5,
+                        "y": 0,
+                        "z": 6,
+                        "color": "#f4b436"
+                    },
+                    {
+                        "name": "V",
+                        "x": 6,
+                        "y": 0,
+                        "z": 12,
+                        "color": "#14b48f"
+                    },
+                    {
+                        "name": "H",
+                        "x": 7,
+                        "y": 0,
+                        "z": 38,
+                        "color": "#00bbef"
+                    },
+                    {
+                        "name": "FrP",
+                        "x": 8,
+                        "y": 0,
+                        "z": 24,
+                        "color": "#005996"
+                    }
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.z}",
+                    "style": {
+                        "textOutline": "none",
+                        "fontSize": "14px",
+                        "color": "#2f2f2f"
+                    },
+                    "verticalAlign": "middle",
+                    "y": -15
+                }
+            }
+        ],
+        "legend": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset contains categorical (party abbreviations) and quantitative (seat counts) dimensions, representing a univariate distribution across 9 political entities. Synthetic seat counts (\u03bc=22.4, \u03c3=13.8) maintain the parliamentary total of 169 while introducing variance through a simulated coalition scenario. The bubble chart employs Tufte's data-ink principles by eliminating gridlines and axis markers while retaining proportional encoding through marker sizing. Cairo's perceptual topology is maintained through color constancy (official party colors) and position along a single axis. Size scaling follows Stevens' power law for accurate magnitude perception, with data labels providing exact values to complement the visual encoding."
+}

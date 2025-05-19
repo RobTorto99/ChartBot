@@ -1,0 +1,113 @@
+{
+    "visualization_prompt": "Generate a column chart showing atmospheric layer composition using percentage stacking with annotated height ranges",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "white",
+            "borderColor": "black",
+            "borderWidth": 1
+        },
+        "title": {
+            "text": "Earth's Atmospheric Layers",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Source: NASA Atmospheric Science Division",
+            "style": {
+                "color": "#7f8c8d",
+                "fontSize": "12px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Atmospheric Composition"
+            ],
+            "visible": false
+        },
+        "yAxis": {
+            "visible": false,
+            "min": 0
+        },
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "{point.series.userOptions.info}"
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "percent",
+                "borderColor": "black",
+                "borderWidth": 2,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{series.name}: {point.series.userOptions.height}",
+                    "color": "black",
+                    "style": {
+                        "textOutline": "none",
+                        "fontWeight": "bold"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Exosphere",
+                "data": [
+                    1
+                ],
+                "height": "10,000 km",
+                "info": "Upper atmospheric boundary extending into space<br>Contains sparse hydrogen atoms",
+                "color": "rgba(189, 195, 199, 0.7)"
+            },
+            {
+                "name": "Ionosphere",
+                "data": [
+                    1
+                ],
+                "height": "965 km",
+                "info": "Electron-rich layer enabling radio communication<br>Absorbs solar X-rays",
+                "color": "rgba(52, 152, 219, 0.7)"
+            },
+            {
+                "name": "Thermosphere",
+                "data": [
+                    1
+                ],
+                "height": "600 km",
+                "info": "Absorbs harmful UV radiation<br>Temperatures reach 2,500\u00b0C",
+                "color": "rgba(231, 76, 60, 0.7)"
+            },
+            {
+                "name": "Mesosphere",
+                "data": [
+                    1
+                ],
+                "height": "85 km",
+                "info": "Coldest atmospheric layer (-90\u00b0C)<br>Meteor ablation zone",
+                "color": "rgba(46, 204, 113, 0.7)"
+            },
+            {
+                "name": "Stratosphere",
+                "data": [
+                    1
+                ],
+                "height": "50 km",
+                "info": "Contains ozone layer<br>Temperature inversion layer",
+                "color": "rgba(241, 196, 15, 0.7)"
+            },
+            {
+                "name": "Troposphere",
+                "data": [
+                    1
+                ],
+                "height": "14.5 km",
+                "info": "Weather formation layer<br>Contains 80% atmospheric mass",
+                "color": "rgba(41, 128, 185, 0.7)"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset represents a single categorical variable (atmospheric layers) with two derived quantitative attributes: relative position percentage and height range. Synthetic data uses uniform value distribution (all 1s) to force equal percentage stacking segments, with layer heights following NASA's atmospheric model specifications. The visualization employs Tufte's data-ink maximization by removing axes and gridlines while maintaining Cairo's perceptual transparency through position-encoded height labels and color-coded segments. The monochromatic color scheme with varying hues (\u03bc=50% saturation, \u03c3=15% lightness variation) maintains discriminability while avoiding false quantitative associations. Percentage stacking creates proportional representation of atmospheric scale relationships despite uniform data values, with border contrast enhancing layer separation."
+}

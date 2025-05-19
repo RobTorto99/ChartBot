@@ -1,0 +1,104 @@
+{
+    "visualization_prompt": "Generate a bar chart showing percentage composition of honey using stacked percentage bars with rotated data labels",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Honey Composition",
+            "style": {
+                "fontSize": "20px",
+                "color": "#333333"
+            }
+        },
+        "subtitle": {
+            "text": "Source: National Honey Board",
+            "style": {
+                "color": "#666666"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Chemical Composition"
+            ],
+            "visible": false
+        },
+        "yAxis": {
+            "min": 0,
+            "visible": false,
+            "labels": {
+                "enabled": false
+            }
+        },
+        "colors": [
+            "#FFA500",
+            "#FFD700",
+            "#87CEEB",
+            "#90EE90",
+            "#D3D3D3"
+        ],
+        "plotOptions": {
+            "bar": {
+                "stacking": "percent",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{series.name}: {y}%",
+                    "rotation": -45,
+                    "y": -20,
+                    "style": {
+                        "fontSize": "12px",
+                        "textOutline": "none"
+                    }
+                }
+            }
+        },
+        "tooltip": {
+            "shared": true,
+            "pointFormat": "<span style='color:{point.color}'>\u25cf</span> {series.name}: <b>{point.percentage:.1f}%</b><br/>"
+        },
+        "series": [
+            {
+                "name": "Fructose",
+                "data": [
+                    38.2
+                ],
+                "color": "#FFA500"
+            },
+            {
+                "name": "Glucose",
+                "data": [
+                    31.3
+                ],
+                "color": "#FFD700"
+            },
+            {
+                "name": "Water",
+                "data": [
+                    17.2
+                ],
+                "color": "#87CEEB"
+            },
+            {
+                "name": "Maltose",
+                "data": [
+                    7.1
+                ],
+                "color": "#90EE90"
+            },
+            {
+                "name": "Other",
+                "data": [
+                    6.2
+                ],
+                "color": "#D3D3D3"
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical"
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate composition analysis with five quantitative variables summing to 100%. Synthetic data follows USDA nutritional guidelines with \u00b12% measurement tolerance. The stacked bar chart maximizes data-ink ratio by eliminating axes while maintaining proportional relationships through Cairo's position-length perceptual channel. Color choices follow natural associations (amber for sugars, blue for water) with \u03bc=20% composition spread across components. Data labels use angular positioning to maintain readability in dense layout, with tooltips providing exact values on interaction."
+}

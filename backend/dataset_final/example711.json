@@ -1,0 +1,104 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart titled 'Earth's atmosphere'. The chart should have a subtitle linking to a NASA source. The x-axis should be hidden, and the y-axis should also be hidden with a minimum value of 0. The chart should use a stacking layout in percentage format, with black borders and white columns. Data labels should be enabled, showing the series name and height, with black text and no text outline. The legend should be disabled. The data series should include layers of Earth's atmosphere with their respective heights and additional information provided in tooltips.",
+    "visualization_code": {
+        "chart": {
+            "type": "column"
+        },
+        "title": {
+            "text": "Earth's atmosphere"
+        },
+        "subtitle": {
+            "text": "Source: <a href=\"https://www.nasa.gov/mission_pages/sunearth/science/atmosphere-layers2.html\">nasa.gov</a>"
+        },
+        "xAxis": {
+            "categories": [
+                "Earth's atmosphere"
+            ],
+            "visible": false
+        },
+        "yAxis": {
+            "labels": {
+                "enabled": false
+            },
+            "visible": false,
+            "min": 0,
+            "title": {
+                "text": null
+            }
+        },
+        "tooltip": {
+            "headerFormat": null,
+            "pointFormat": "{point.series.userOptions.info}"
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "percent",
+                "borderColor": "black",
+                "borderWidth": 4,
+                "color": "white",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{series.name}: {point.series.userOptions.height}",
+                    "color": "black",
+                    "style": {
+                        "textOutline": false
+                    }
+                }
+            }
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "name": "Exosphere",
+                "data": [
+                    1
+                ],
+                "height": "up to 10.000km",
+                "info": "This is the upper limit of our atmosphere.<br> It extends from the top of the thermosphere up to 10,000 km (6,200 mi)."
+            },
+            {
+                "name": "Ionosphere",
+                "data": [
+                    1
+                ],
+                "height": "48km",
+                "info": "<b>The ionosphere</b> is an abundant layer of electrons and ionized atoms and molecules <br> that stretches from about 48 kilometers (30 miles) above <br> the surface to the edge of space at about 965 km (600 mi)"
+            },
+            {
+                "name": "Thermosphere",
+                "data": [
+                    1
+                ],
+                "height": "600km",
+                "info": "<b>The thermosphere</b> starts just above the mesosphere <br> and extends to 600 kilometers (372 miles) high"
+            },
+            {
+                "name": "Mesosphere",
+                "data": [
+                    1
+                ],
+                "height": "85m",
+                "info": "<b>The mesosphere</b> starts just above the stratosphere <br> and extends to 85 kilometers (53 miles) high"
+            },
+            {
+                "name": "Stratosphere",
+                "data": [
+                    1
+                ],
+                "height": "50km",
+                "info": "<b>The stratosphere</b> starts just above the troposphere <br> and extends to 50 kilometers (31 miles) high"
+            },
+            {
+                "name": "Troposphere",
+                "data": [
+                    1
+                ],
+                "height": "8 to 14.5km",
+                "info": "<b>The troposphere</b> starts at the Earth's surface <br> and extends 8 to 14.5 kilometers high (5 to 9 miles)"
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a column chart that visualizes the layers of Earth's atmosphere. The chart is titled 'Earth's atmosphere' with a subtitle linking to a NASA source for additional information. The x-axis is hidden, and the y-axis is also hidden with a minimum value of 0, ensuring that the focus is on the stacked columns. The columns are stacked in percentage format, with each column having a black border and white fill. Data labels are enabled, displaying the series name and height in black text without an outline. The legend is disabled, and each data series represents a layer of Earth's atmosphere, with additional information provided in tooltips when hovering over the columns. This setup effectively communicates the relative heights and descriptions of the atmospheric layers."
+}

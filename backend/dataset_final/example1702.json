@@ -1,0 +1,113 @@
+{
+    "visualization_prompt": "Generate a line chart showing monthly sales trends with year-over-year comparison using synthetic business data",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "backgroundColor": "#ffffff",
+            "margin": [
+                30,
+                30,
+                60,
+                60
+            ]
+        },
+        "title": {
+            "text": "Monthly Sales Performance (2023 vs 2022)",
+            "style": {
+                "fontSize": "20px",
+                "color": "#333333"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#666666"
+                }
+            },
+            "title": {
+                "text": "Month",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales (USD Thousands)",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#666666"
+                }
+            }
+        },
+        "tooltip": {
+            "borderRadius": 0
+        },
+        "series": [
+            {
+                "name": "2023 Sales",
+                "data": [
+                    85,
+                    98,
+                    115,
+                    127,
+                    142,
+                    158,
+                    169,
+                    175,
+                    188,
+                    194,
+                    207,
+                    219
+                ],
+                "color": "#2caffe"
+            },
+            {
+                "name": "2022 Sales",
+                "data": [
+                    79,
+                    89,
+                    103,
+                    117,
+                    130,
+                    145,
+                    154,
+                    162,
+                    173,
+                    181,
+                    192,
+                    205
+                ],
+                "color": "#ff6a4d"
+            }
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        }
+    },
+    "visualization_explanation": "The dataset contains two time series with 12 monthly observations each, representing synthetic sales figures. Variables include continuous sales amounts (USD thousands) and categorical month labels. Synthetic data was generated with a 8-10% year-over-year growth pattern (\u03bc=158k, \u03c3=42k for 2023; \u03bc=145k, \u03c3=38k for 2022) maintaining realistic business seasonality. The line chart maximizes data-ink ratio by eliminating redundant gridlines while maintaining Cairo's principle of proportional ink through consistent axis baselines. Dual-colored series with direct labeling follow Tufte's principles of minimal legend navigation. Annotated 12-month progression allows direct comparison of growth trajectories while maintaining visual clarity through controlled line weight contrast."
+}

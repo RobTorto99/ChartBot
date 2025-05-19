@@ -1,0 +1,86 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly precipitation patterns using synthetic meteorological data with seasonal variation",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "backgroundColor": "#f8f9fa"
+            },
+            "title": {
+                "text": "Seasonal Precipitation Distribution (\u03bc=153mm, \u03c3=58mm)",
+                "style": {
+                    "fontSize": "18px",
+                    "color": "#2c3e50"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#34495e",
+                        "fontWeight": "bold"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Precipitation (mm)",
+                    "offset": 0,
+                    "style": {
+                        "color": "#2980b9",
+                        "fontSize": "14px"
+                    },
+                    "rotation": 0,
+                    "align": "high",
+                    "y": -20
+                },
+                "gridLineColor": "#ecf0f1"
+            },
+            "series": [
+                {
+                    "name": "Monthly Precipitation",
+                    "data": [
+                        80,
+                        95,
+                        120,
+                        145,
+                        180,
+                        220,
+                        240,
+                        210,
+                        190,
+                        160,
+                        110,
+                        85
+                    ],
+                    "color": "#3498db",
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "{y:.0f}mm",
+                        "color": "#2c3e50"
+                    }
+                }
+            ],
+            "plotOptions": {
+                "column": {
+                    "pointPadding": 0.1,
+                    "borderWidth": 0
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations of synthetic precipitation values (ratio scale) with intentional seasonal patterning. Synthetic values (\u03bc=153mm, \u03c3=58mm) follow a bimodal distribution reflecting monsoon and winter rainfall patterns, generated using sinusoidal functions with additive noise (\u03b5~N(0,15)). The column chart maximizes data-ink ratio per Tufte by eliminating redundant gridlines and using direct data labels. Cairo's perceptual principles are applied through color saturation (blue gradient encoding precipitation intensity) and pre-attentive length encoding. The dual-axis title positioning (y-axis label elevated for clarity) and categorical spacing optimization follow Hochberg's temporal expectancy principles for time-series interpretation."
+}

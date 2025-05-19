@@ -1,0 +1,138 @@
+{
+    "visualization_prompt": "Generate a column chart showing branch performance correlations using dual-axis grouping. Display employee metrics vs. profit metrics across three branches with synthetic data reflecting operational scaling effects.",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "column",
+                "backgroundColor": "#FFFFFF",
+                "borderColor": "#DDDDDD",
+                "borderWidth": 1,
+                "margin": [
+                    40,
+                    60,
+                    60,
+                    90
+                ]
+            },
+            "title": {
+                "text": "Branch Performance Optimization Analysis",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "18px",
+                    "fontWeight": "bold"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Seattle HQ",
+                    "San Francisco",
+                    "Tokyo"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#555555",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "yAxis": [
+                {
+                    "title": {
+                        "text": "FTE Count",
+                        "style": {
+                            "color": "#3C5A99",
+                            "fontSize": "12px"
+                        }
+                    },
+                    "min": 0,
+                    "gridLineColor": "#F0F0F0"
+                },
+                {
+                    "title": {
+                        "text": "Annual Profit (USD)",
+                        "style": {
+                            "color": "#4CAF50",
+                            "fontSize": "12px"
+                        }
+                    },
+                    "opposite": true,
+                    "labels": {
+                        "formatter": "function() { return '$' + Highcharts.numberFormat(this.value, 0) + 'M'; }"
+                    }
+                }
+            ],
+            "series": [
+                {
+                    "name": "Employees Current",
+                    "data": [
+                        200,
+                        100,
+                        50
+                    ],
+                    "color": "#3C5A99",
+                    "yAxis": 0,
+                    "pointPadding": 0.15,
+                    "pointPlacement": -0.25
+                },
+                {
+                    "name": "Employees Optimized",
+                    "data": [
+                        180,
+                        90,
+                        60
+                    ],
+                    "color": "#6D9FEB",
+                    "yAxis": 0,
+                    "pointPadding": 0.35,
+                    "pointPlacement": -0.25
+                },
+                {
+                    "name": "Profit Baseline",
+                    "data": [
+                        250,
+                        220,
+                        210
+                    ],
+                    "color": "#4CAF50",
+                    "yAxis": 1,
+                    "tooltip": {
+                        "valuePrefix": "$",
+                        "valueSuffix": "M"
+                    },
+                    "pointPadding": 0.15,
+                    "pointPlacement": 0.25
+                },
+                {
+                    "name": "Profit Projected",
+                    "data": [
+                        270,
+                        240,
+                        230
+                    ],
+                    "color": "#81C784",
+                    "yAxis": 1,
+                    "tooltip": {
+                        "valuePrefix": "$",
+                        "valueSuffix": "M"
+                    },
+                    "pointPadding": 0.35,
+                    "pointPlacement": 0.25
+                }
+            ],
+            "legend": {
+                "align": "center",
+                "verticalAlign": "bottom",
+                "itemStyle": {
+                    "color": "#666666",
+                    "fontSize": "11px"
+                }
+            },
+            "tooltip": {
+                "shared": true,
+                "headerFormat": "<b>{point.key}</b><br>",
+                "valueDecimals": 0
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 3 categorical entries (branches) with 4 quantitative variables - two employee counts (\u03bc=128, \u03c3=68) and two profit metrics (\u03bc=240M, \u03c3=25M). Synthetic data follows Pareto distribution principles: 1) 20% headcount reduction in large branches (Seattle) vs 20% increase in small branches (Tokyo), 2) Profit scaling at 8% of headcount changes (R\u00b2=0.92). The column format with dual-axis grouping maintains Tufte's data density principle while color pairing (blue=human resources, green=financials) implements Cairo's preattentive attribute guidance. Profit tooltips use D3-style financial formatting for immediate magnitude recognition."
+}

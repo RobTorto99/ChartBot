@@ -1,0 +1,88 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a 3D column chart with the following specifications: Chart type: column, Chart title: 'Stacked 3D Column Chart', Axes and labels styling: Use a dark theme with white text for labels and titles, Data series: Three series with data [1, 2, 4], [5, 6, 3], and [7, 9, 8], Custom colors: Use shades of blue for the first two series and green for the third, Additional configurations: Enable 3D options with alpha, beta, and depth settings, and enable stacking for the columns.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "margin": 75,
+            "options3d": {
+                "enabled": true,
+                "alpha": 15,
+                "beta": 15,
+                "depth": 60
+            }
+        },
+        "title": {
+            "text": "Stacked 3D Column Chart",
+            "style": {
+                "color": "#FFFFFF"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#FFFFFF"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#FFFFFF"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#FFFFFF"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "depth": 40,
+                "stacking": true
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    1,
+                    2,
+                    4
+                ],
+                "stack": 0,
+                "color": "#1f77b4"
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    5,
+                    6,
+                    3
+                ],
+                "stack": 0,
+                "color": "#aec7e8"
+            },
+            {
+                "name": "Series 3",
+                "data": [
+                    7,
+                    9,
+                    8
+                ],
+                "stack": 1,
+                "color": "#2ca02c"
+            }
+        ],
+        "legend": {
+            "itemStyle": {
+                "color": "#FFFFFF"
+            }
+        },
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a 3D column chart with stacked columns. The chart is titled 'Stacked 3D Column Chart' with white text to contrast against a dark theme. The x-axis and y-axis labels, as well as the axis titles, are styled with white text. The chart includes three data series: 'Series 1' with data [1, 2, 4], 'Series 2' with data [5, 6, 3], and 'Series 3' with data [7, 9, 8]. The first two series use shades of blue, while the third series uses a green color. The 3D options are enabled with specific alpha, beta, and depth settings to give the chart a three-dimensional appearance. The columns are configured to stack, allowing for a clear visual comparison of the cumulative values across the series."
+}

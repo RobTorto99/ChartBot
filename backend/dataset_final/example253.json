@@ -1,0 +1,110 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object that renders a column chart and a pie chart. The column chart should have a title 'Column chart' and display a series with data [1, 3, 2, 4]. The pie chart should have a title 'Pie chart' and display a series with data [1, 3, 2, 4], with data labels disabled and an inner size of 80%. Both charts should have custom class names for styling purposes: 'the-column' for the column chart and 'the-pie' for the pie chart. Additionally, the charts should have specific styling for axes and labels, including font sizes and colors. The charts should also have custom colors for the data series and additional configurations such as chart margins and background.",
+    "visualization_code": {
+        "chartOptions1": {
+            "chart": {
+                "type": "column",
+                "className": "the-column"
+            },
+            "title": {
+                "text": "Column chart",
+                "style": {
+                    "fontSize": "18px",
+                    "color": "#333333"
+                }
+            },
+            "xAxis": {
+                "labels": {
+                    "style": {
+                        "fontSize": "12px",
+                        "color": "#666666"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Values",
+                    "style": {
+                        "fontSize": "14px",
+                        "color": "#444444"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "fontSize": "12px",
+                        "color": "#666666"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Data Series 1",
+                    "data": [
+                        1,
+                        3,
+                        2,
+                        4
+                    ],
+                    "color": "#008080"
+                }
+            ],
+            "legend": {
+                "enabled": false
+            },
+            "plotOptions": {
+                "column": {
+                    "borderWidth": 0
+                }
+            },
+            "credits": {
+                "enabled": false
+            }
+        },
+        "chartOptions2": {
+            "chart": {
+                "type": "pie",
+                "className": "the-pie"
+            },
+            "title": {
+                "text": "Pie chart",
+                "style": {
+                    "fontSize": "18px",
+                    "color": "#333333"
+                }
+            },
+            "series": [
+                {
+                    "name": "Data Series 2",
+                    "data": [
+                        1,
+                        3,
+                        2,
+                        4
+                    ],
+                    "dataLabels": {
+                        "enabled": false
+                    },
+                    "innerSize": "80%",
+                    "colors": [
+                        "#FF6347",
+                        "#FFD700",
+                        "#32CD32",
+                        "#4169E1"
+                    ]
+                }
+            ],
+            "legend": {
+                "enabled": false
+            },
+            "plotOptions": {
+                "pie": {
+                    "borderWidth": 0
+                }
+            },
+            "credits": {
+                "enabled": false
+            }
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is designed to render two distinct charts: a column chart and a pie chart. The column chart is configured with a title 'Column chart' and displays a single series with data [1, 3, 2, 4]. The pie chart is configured with a title 'Pie chart' and also displays a single series with the same data, but with data labels disabled and an inner size of 80%. Both charts have custom class names ('the-column' and 'the-pie') to facilitate specific styling and event handling. The styling includes font sizes and colors for titles, axes, and labels, ensuring a consistent and visually appealing appearance. Additionally, custom colors are applied to the data series in both charts, and the legend is disabled for a cleaner look. The charts are also configured to hide the Highcharts credits, and the column and pie plot options include settings to remove borders for a more modern aesthetic."
+}

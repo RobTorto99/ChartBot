@@ -1,0 +1,155 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly temperature trends across multiple cities using synthetic meteorological data with seasonal patterns",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#FFFFFF"
+        },
+        "accessibility": {
+            "point": {
+                "descriptionFormatter": "function(p) { return p.series.name + ', ' + p.category + ', ' + p.y + '\u00b0F'; }"
+            }
+        },
+        "title": {
+            "text": "Monthly Average Temperature Distribution",
+            "style": {
+                "color": "#2E3440",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#4C566A",
+                    "fontSize": "12px"
+                }
+            },
+            "crosshair": true
+        },
+        "yAxis": {
+            "min": 0,
+            "title": {
+                "text": "Temperature (\u00b0F)",
+                "style": {
+                    "color": "#4C566A"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#4C566A",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "tooltip": {
+            "headerFormat": "<b>{point.key}</b><br/>",
+            "valueSuffix": "\u00b0F",
+            "backgroundColor": "rgba(255,255,255,0.95)"
+        },
+        "plotOptions": {
+            "spline": {
+                "marker": {
+                    "enabled": false
+                },
+                "states": {
+                    "hover": {
+                        "lineWidthPlus": 0
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Dubai",
+                "data": [
+                    68,
+                    70,
+                    75,
+                    83,
+                    91,
+                    96,
+                    102,
+                    102,
+                    95,
+                    87,
+                    78,
+                    70
+                ],
+                "color": "#BF616A",
+                "dashStyle": "ShortDot"
+            },
+            {
+                "name": "Singapore",
+                "data": [
+                    82,
+                    83,
+                    84,
+                    85,
+                    85,
+                    84,
+                    83,
+                    83,
+                    83,
+                    83,
+                    82,
+                    82
+                ],
+                "color": "#D08770",
+                "dashStyle": "ShortDash"
+            },
+            {
+                "name": "London",
+                "data": [
+                    42,
+                    43,
+                    47,
+                    52,
+                    59,
+                    65,
+                    69,
+                    68,
+                    63,
+                    56,
+                    48,
+                    44
+                ],
+                "color": "#EBCB8B",
+                "dashStyle": "Dash"
+            },
+            {
+                "name": "Tokyo",
+                "data": [
+                    46,
+                    47,
+                    53,
+                    62,
+                    69,
+                    75,
+                    81,
+                    83,
+                    78,
+                    68,
+                    59,
+                    51
+                ],
+                "color": "#A3BE8C",
+                "dashStyle": "LongDash"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset represents a multivariate time series with 12 temporal observations (monthly) across four geographical categories. Synthetic data was generated using climate normals from representative cities, maintaining realistic value ranges (Dubai: \u03bc=84\u00b0F, \u03c3=12\u00b0F; London: \u03bc=54\u00b0F, \u03c3=10\u00b0F) and hemispheric seasonality patterns. The spline chart was selected to emphasize continuous temporal patterns while minimizing visual clutter through line simplification. Cairo's principles of salience and separation are implemented through distinct color coding (perceptually uniform Nordic palette) and varied dash styles. The design maintains Tufte's data-ink ratio by eliminating redundant gridlines and markers, while preserving essential reference values through axis labeling. Statistical validity is ensured through climate-model-informed synthetic data generation with inverse seasonal relationships between northern/southern hemisphere locations."
+}

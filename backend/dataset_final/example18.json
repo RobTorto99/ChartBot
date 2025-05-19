@@ -1,0 +1,66 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a pie chart. The chart should display the February 2020 Norway passenger auto registrations. The chart should have a title 'February 2020 Norway passenger auto registrations' and a subtitle with a source link. The pie chart should have four data series representing EV, Hybrids, Diesel, and Petrol registrations, each with specific percentages. The chart should use custom colors and include accessibility features such as point value suffixes. Additionally, the chart should allow point selection, show data labels, and display a legend.",
+    "visualization_code": {
+        "colors": [
+            "#10487F",
+            "#346DA4",
+            "#7CB5EC",
+            "#a9cef2"
+        ],
+        "chart": {
+            "type": "pie"
+        },
+        "title": {
+            "text": "February 2020 Norway passenger auto registrations"
+        },
+        "accessibility": {
+            "point": {
+                "valueSuffix": "%"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href=\"https://cleantechnica.com/2020/03/07/pioneering-norway-rises-above-68-plug-in-vehicle-market-share-in-february/\">CleanTechnica</a>"
+        },
+        "tooltip": {
+            "pointFormat": "{series.name}: <b>{point.percentage:.1f}%</b>"
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "connectorColor": "#888",
+                    "format": "{point.name}: {y} %"
+                },
+                "showInLegend": true
+            }
+        },
+        "series": [
+            {
+                "name": "Registrations",
+                "colorByPoint": true,
+                "innerSize": "75%",
+                "data": [
+                    {
+                        "name": "EV",
+                        "y": 68.1
+                    },
+                    {
+                        "name": "Hybrids",
+                        "y": 11.0
+                    },
+                    {
+                        "name": "Diesel",
+                        "y": 11.2
+                    },
+                    {
+                        "name": "Petrol",
+                        "y": 9.7
+                    }
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a pie chart to visualize the February 2020 Norway passenger auto registrations. The chart is titled 'February 2020 Norway passenger auto registrations' and includes a subtitle with a link to the source data. The pie chart displays four data series: EV, Hybrids, Diesel, and Petrol, each represented by a specific percentage. Custom colors are applied to the chart segments, enhancing visual distinction. The chart includes accessibility features such as point value suffixes for better readability. Additionally, the chart allows users to select points, shows data labels with a connector color, and displays a legend for easy identification of each segment. The overall design ensures clarity and accessibility, making the data easily interpretable."
+}

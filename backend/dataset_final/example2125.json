@@ -1,0 +1,132 @@
+{
+    "visualization_prompt": "Generate a spline chart showing annotated data trends using Highcharts' pitchfork annotation and dynamic color customization.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline"
+        },
+        "title": {
+            "text": "Pitchfork Advanced Annotation",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px",
+                "fontFamily": "IBM Plex Sans, sans-serif"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px",
+                    "fontFamily": "IBM Plex Sans, sans-serif"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "16px",
+                    "fontFamily": "IBM Plex Sans, sans-serif"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px",
+                    "fontFamily": "IBM Plex Sans, sans-serif"
+                }
+            }
+        },
+        "annotations": [
+            {
+                "type": "pitchfork",
+                "controlPointOptions": {
+                    "visible": true
+                },
+                "typeOptions": {
+                    "points": [
+                        {
+                            "x": 4,
+                            "y": 4,
+                            "controlPoint": {
+                                "style": {
+                                    "fill": "red"
+                                }
+                            }
+                        },
+                        {
+                            "x": 10,
+                            "y": 6
+                        },
+                        {
+                            "x": 10,
+                            "y": 2
+                        }
+                    ],
+                    "innerBackground": {
+                        "fill": "rgba(100, 170, 255, 0.8)"
+                    },
+                    "outerBackground": {}
+                }
+            }
+        ],
+        "series": [
+            {
+                "name": "Trend Data",
+                "data": [
+                    1,
+                    2,
+                    3,
+                    {
+                        "y": 4,
+                        "id": "s"
+                    },
+                    5,
+                    {
+                        "y": 6,
+                        "id": "m"
+                    },
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    3,
+                    2,
+                    4,
+                    4,
+                    4,
+                    4,
+                    3
+                ],
+                "color": "#007BFF"
+            }
+        ],
+        "legend": {
+            "enabled": false
+        },
+        "exporting": {
+            "buttons": {
+                "contextButton": {
+                    "menuItems": [
+                        "viewFullscreen",
+                        "printChart",
+                        "downloadPNG"
+                    ]
+                },
+                "customButton": {
+                    "text": "Apply Colors",
+                    "symbol": "circle",
+                    "theme": {
+                        "fill": "silver"
+                    },
+                    "onclick": "/* Client-side JS required for dynamic updates */"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The spline chart configuration displays a 20-point time-series dataset with two annotated control points (IDs 's' and 'm'). Synthetic data follows a pseudo-cyclical pattern (\u03bc=4.1, \u03c3=1.8) with intentional clusters at x=4 and x=10. The pitchfork annotation uses Tufte-inspired minimal ink for focus, with Cairo's pre-attentive red highlighting for the primary control point. Color choices (#007BFF primary series, rgba(100,170,255) annotation) maintain perceptual distance while supporting color vision diversity. Dynamic color updates require client-side JavaScript implementation to modify the innerBackground/outerBackground properties via Highcharts' .update() method."
+}

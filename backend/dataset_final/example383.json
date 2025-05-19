@@ -1,0 +1,98 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a 3D column chart with grouped and stacked columns. The chart should display electricity production data for different countries, grouped by continent. The chart should have a title, styled axes and labels, and specific data series for each country. Additionally, the chart should include custom colors and other configurations such as chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "options3d": {
+                "enabled": true,
+                "alpha": 15,
+                "beta": 15,
+                "viewDistance": 25,
+                "depth": 40
+            }
+        },
+        "title": {
+            "text": "Electricity production in countries, grouped by continent",
+            "align": "left"
+        },
+        "xAxis": {
+            "labels": {
+                "skew3d": true,
+                "style": {
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "yAxis": {
+            "allowDecimals": false,
+            "min": 0,
+            "title": {
+                "text": "TWh",
+                "skew3d": true,
+                "style": {
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "tooltip": {
+            "headerFormat": "<b>{point.key}</b><br>",
+            "pointFormat": "<span style=\"color:{series.color}\">\u25cf</span> {series.name}: {point.y} / {point.stackTotal}"
+        },
+        "plotOptions": {
+            "series": {
+                "pointStart": 2018
+            },
+            "column": {
+                "stacking": "normal",
+                "depth": 40
+            }
+        },
+        "series": [
+            {
+                "name": "South Korea",
+                "data": [
+                    590,
+                    582,
+                    571,
+                    606,
+                    625
+                ],
+                "stack": "Asia"
+            },
+            {
+                "name": "Germany",
+                "data": [
+                    643,
+                    612,
+                    572,
+                    588,
+                    578
+                ],
+                "stack": "Europe"
+            },
+            {
+                "name": "Saudi Arabia",
+                "data": [
+                    378,
+                    367,
+                    363,
+                    408,
+                    433
+                ],
+                "stack": "Asia"
+            },
+            {
+                "name": "France",
+                "data": [
+                    582,
+                    571,
+                    533,
+                    555,
+                    473
+                ],
+                "stack": "Europe"
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a 3D column chart to display electricity production data for various countries, grouped by continent. The chart type is set to 'column' with 3D options enabled, including settings for rotation angles (alpha and beta), view distance, and depth. The title of the chart is 'Electricity production in countries, grouped by continent', aligned to the left. The x-axis and y-axis labels are styled with a font size of 16px and are skewed in 3D. The tooltip displays detailed information about each data point, including the series color, name, and values. The plot options include settings for series point start year and column stacking. The data series include specific countries with their respective electricity production data, grouped into stacks by continent. This configuration ensures a visually appealing and informative 3D column chart."
+}

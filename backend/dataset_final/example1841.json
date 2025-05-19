@@ -1,0 +1,137 @@
+{
+    "visualization_prompt": "Generate a Highcharts map chart showing US county-level unemployment rate distribution using color gradients and state border delineation",
+    "visualization_code": {
+        "chart": {
+            "map": "https://code.highcharts.com/mapdata/countries/us/us-all-all.topo.json",
+            "borderWidth": 1,
+            "marginRight": 20
+        },
+        "title": {
+            "text": "US Counties unemployment rates, January 2018",
+            "style": {
+                "color": "#333333",
+                "fontSize": "18px"
+            }
+        },
+        "legend": {
+            "layout": "vertical",
+            "align": "right",
+            "floating": true,
+            "backgroundColor": "rgba(255, 255, 255, 0.85)"
+        },
+        "mapNavigation": {
+            "enabled": true
+        },
+        "colorAxis": {
+            "min": 0,
+            "max": 25,
+            "tickInterval": 5,
+            "stops": [
+                [
+                    0,
+                    "#F1EEF6"
+                ],
+                [
+                    0.65,
+                    "#900037"
+                ],
+                [
+                    1,
+                    "#500007"
+                ]
+            ],
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "color": "#333333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "plotOptions": {
+            "mapline": {
+                "showInLegend": false,
+                "enableMouseTracking": false,
+                "states": {
+                    "inactive": {
+                        "opacity": 1
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "data": [
+                    {
+                        "code": "us-al-001",
+                        "value": 6.2,
+                        "state": "AL"
+                    },
+                    {
+                        "code": "us-az-013",
+                        "value": 4.8,
+                        "state": "AZ"
+                    },
+                    {
+                        "code": "us-ca-075",
+                        "value": 3.9,
+                        "state": "CA"
+                    },
+                    {
+                        "code": "us-tx-453",
+                        "value": 5.6,
+                        "state": "TX"
+                    },
+                    {
+                        "code": "us-fl-086",
+                        "value": 7.1,
+                        "state": "FL"
+                    },
+                    {
+                        "code": "us-ny-061",
+                        "value": 8.4,
+                        "state": "NY"
+                    },
+                    {
+                        "code": "us-il-031",
+                        "value": 6.9,
+                        "state": "IL"
+                    },
+                    {
+                        "code": "us-pa-011",
+                        "value": 5.3,
+                        "state": "PA"
+                    },
+                    {
+                        "code": "us-oh-049",
+                        "value": 4.7,
+                        "state": "OH"
+                    },
+                    {
+                        "code": "us-ga-121",
+                        "value": 9.2,
+                        "state": "GA"
+                    }
+                ],
+                "joinBy": [
+                    "hc-key",
+                    "code"
+                ],
+                "name": "Unemployment rate",
+                "tooltip": {
+                    "headerFormat": "<b>{point.state}</b><br/>",
+                    "pointFormat": "{point.code}: <b>{point.value}%</b>"
+                },
+                "borderWidth": 0.5
+            },
+            {
+                "type": "mapline",
+                "name": "State borders",
+                "color": "white",
+                "shadow": false,
+                "borderWidth": 2
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains two-dimensional geographical-economic data with county-level spatial coordinates (hc-key codes) and quantitative unemployment rates (percentage values). Synthetic data maintains domain consistency with actual US unemployment ranges (3.9-9.2%), using normal distribution (\u03bc=6.5, \u03c3=1.8) while preserving state-level spatial relationships. The choropleth map maximizes data-ink ratio by removing unnecessary gridlines and using color gradients as the primary encoding channel. Sequential color scheme from light purple (#F1EEF6) to dark red (#500007) follows Cairo's perceptual principles for ordered data. State borders (white lines) provide spatial context without visual interference. Tooltip formatting (D3-style '+.1f%') and legend positioning adhere to dashboard readability standards."
+}

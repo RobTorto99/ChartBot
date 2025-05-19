@@ -1,0 +1,102 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly value distributions using contrasting data label styling",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "styledMode": true
+        },
+        "title": {
+            "text": "Data Labels with Contrast"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Metric (Units)",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Operational Performance",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "style": {
+                        "color": "contrast",
+                        "textOutline": "2px contrast",
+                        "fontWeight": "bold"
+                    }
+                },
+                "colorByPoint": true
+            }
+        ],
+        "colors": [
+            "#1e88e5",
+            "#ff9800",
+            "#4caf50",
+            "#e53935",
+            "#8e24aa",
+            "#00acc1",
+            "#fdd835",
+            "#6d4c41",
+            "#3949ab",
+            "#d81b60",
+            "#00897b",
+            "#fb8c00"
+        ],
+        "plotOptions": {
+            "column": {
+                "borderWidth": 0,
+                "pointPadding": 0.1,
+                "groupPadding": 0.15
+            }
+        },
+        "legend": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate time series with 12 monthly observations of operational metrics. Synthetic data follows a bimodal distribution (\u03bc=125.13, \u03c3=57.82) with intentional mid-year seasonality, showing 246% variance between minimum (29.9) and maximum (216.4) values. The column chart maximizes data-ink ratio by eliminating legend and using direct value labels with dual-contrast styling (dark text + white outline) following Cairo's preattentive processing principles. Color-by-point encoding helps maintain categorical distinction while the constrained group spacing (15%) ensures accurate magnitude comparisons per Tufte's lie factor constraints."
+}

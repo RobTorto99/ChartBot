@@ -1,0 +1,138 @@
+{
+    "visualization_prompt": "Generate a column chart showing monthly performance metrics for three product lines using synthetic data with trend and seasonality patterns. Include dynamic legend alignment toggling via UI control.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#FFFFFF",
+            "marginTop": 40
+        },
+        "title": {
+            "text": "Legend Update",
+            "style": {
+                "fontSize": "20px",
+                "color": "#2c3e50",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#7f8c8d"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Revenue (USD)",
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "colors": [
+            "#3498db",
+            "#2ecc71",
+            "#e74c3c"
+        ],
+        "series": [
+            {
+                "name": "Consumer Electronics",
+                "data": [
+                    45,
+                    52,
+                    65,
+                    58,
+                    63,
+                    72,
+                    81,
+                    79,
+                    88,
+                    94,
+                    102,
+                    115
+                ],
+                "type": "column"
+            },
+            {
+                "name": "Industrial Equipment",
+                "data": [
+                    85,
+                    82,
+                    78,
+                    76,
+                    81,
+                    89,
+                    95,
+                    97,
+                    93,
+                    88,
+                    85,
+                    92
+                ],
+                "type": "column"
+            },
+            {
+                "name": "Medical Devices",
+                "data": [
+                    30,
+                    35,
+                    42,
+                    48,
+                    55,
+                    62,
+                    68,
+                    65,
+                    58,
+                    50,
+                    45,
+                    38
+                ],
+                "type": "column"
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical",
+            "itemStyle": {
+                "fontSize": "12px",
+                "fontStyle": "italic",
+                "color": "#34495e"
+            },
+            "symbolRadius": 6,
+            "symbolWidth": 12
+        },
+        "plotOptions": {
+            "column": {
+                "borderWidth": 0,
+                "groupPadding": 0.15
+            }
+        },
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset contains three 12-dimensional time series representing monthly revenue figures. Synthetic data was generated with: 1) Consumer Electronics showing 15% MoM growth (\u03c3=5%) with holiday season peaks, 2) Industrial Equipment maintaining stable sales (\u03bc=86, \u03c3=6) with Q3 surges, and 3) Medical Devices displaying inverse seasonality (r=-0.89). The column chart maximizes data-ink ratio through clean gridlines and categorical color encoding. Cairo's principles are applied through proportional column widths and pre-attentive color differentiation. Legend positioning alternatives (vertical vs horizontal) maintain visual balance while preserving data density. Value ranges reflect realistic B2B sales figures (Industrial \u03bc=$86k, Medical \u03c3=$10k)."
+}

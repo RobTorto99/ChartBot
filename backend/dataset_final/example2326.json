@@ -1,0 +1,111 @@
+{
+    "visualization_prompt": "Generate a stacked column chart showing monthly sales trends for 2022-2023 using comparative temporal analysis",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "#ffffff",
+            "margin": 50
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "fontFamily": "Arial",
+                "fontSize": "16px",
+                "color": "#000000"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "fontFamily": "Arial",
+                    "fontSize": "12px",
+                    "color": "#333333"
+                }
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "style": {
+                    "fontFamily": "Arial",
+                    "fontSize": "12px",
+                    "color": "#333333"
+                }
+            },
+            "stackLabels": {
+                "enabled": true,
+                "style": {
+                    "fontFamily": "Arial",
+                    "fontSize": "12px",
+                    "color": "#333333"
+                }
+            }
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "normal",
+                "dataLabels": {
+                    "enabled": true,
+                    "color": "#FFFFFF"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "2022 Sales",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#7cb5ec"
+            },
+            {
+                "name": "2023 Sales",
+                "data": [
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4,
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2
+                ],
+                "color": "#434348"
+            }
+        ],
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom"
+        }
+    },
+    "visualization_explanation": "The dataset contains two temporal series (2022/2023 sales) across 12 monthly categories. Synthetic data maintains realistic retail patterns with summer peaks (June 2022: 176) and winter troughs (Dec 2022: 54.4). The stacked column format optimizes data-ink ratio by directly comparing annual performance through color-coded vertical alignment. Perceptual grouping is enhanced by sequential monochromatic coloring (blue for 2022, gray for 2023) and direct data labeling. Statistical validity is maintained through proportional scaling (2023 mean 123.4 vs 2022 mean 121.9), with visible Q4 sales migration between years demonstrating intentional pattern variation."
+}

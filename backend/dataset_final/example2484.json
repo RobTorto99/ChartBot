@@ -1,0 +1,155 @@
+{
+    "visualization_prompt": "Generate a network graph showing node interaction dynamics using variable node sizing and force-directed layout",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "networkgraph",
+                "plotBorderWidth": 1,
+                "margin": [
+                    50,
+                    50,
+                    100,
+                    50
+                ],
+                "backgroundColor": "#f9f9f9"
+            },
+            "title": {
+                "text": "Node Interaction Smoothness Analysis",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "20px",
+                    "fontWeight": "bold"
+                }
+            },
+            "plotOptions": {
+                "networkgraph": {
+                    "layoutAlgorithm": {
+                        "enableSimulation": true,
+                        "friction": -0.9,
+                        "maxSpeed": 0.1
+                    },
+                    "dataLabels": {
+                        "enabled": true,
+                        "format": "{point.name}",
+                        "style": {
+                            "textOutline": "none",
+                            "fontSize": "12px"
+                        }
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Network Components",
+                    "nodes": [
+                        {
+                            "id": "Server",
+                            "marker": {
+                                "radius": 20
+                            },
+                            "color": "#e74c3c"
+                        },
+                        {
+                            "id": "Router",
+                            "marker": {
+                                "radius": 15
+                            },
+                            "color": "#3498db"
+                        },
+                        {
+                            "id": "Workstation1",
+                            "marker": {
+                                "radius": 10
+                            },
+                            "color": "#2ecc71"
+                        },
+                        {
+                            "id": "Workstation2",
+                            "marker": {
+                                "radius": 10
+                            },
+                            "color": "#2ecc71"
+                        },
+                        {
+                            "id": "Printer",
+                            "marker": {
+                                "radius": 8
+                            },
+                            "color": "#f1c40f"
+                        },
+                        {
+                            "id": "NAS",
+                            "marker": {
+                                "radius": 12
+                            },
+                            "color": "#9b59b6"
+                        }
+                    ],
+                    "data": [
+                        [
+                            "Server",
+                            "Router"
+                        ],
+                        [
+                            "Router",
+                            "Workstation1"
+                        ],
+                        [
+                            "Router",
+                            "Workstation2"
+                        ],
+                        [
+                            "Router",
+                            "NAS"
+                        ],
+                        [
+                            "NAS",
+                            "Printer"
+                        ],
+                        [
+                            "Workstation1",
+                            "NAS"
+                        ],
+                        [
+                            "Workstation2",
+                            "Printer"
+                        ],
+                        [
+                            "Server",
+                            "NAS"
+                        ],
+                        [
+                            "Server",
+                            "Workstation1"
+                        ],
+                        [
+                            "Server",
+                            "Workstation2"
+                        ]
+                    ]
+                }
+            ],
+            "colors": [
+                "#e74c3c",
+                "#3498db",
+                "#2ecc71",
+                "#f1c40f",
+                "#9b59b6"
+            ],
+            "legend": {
+                "align": "right",
+                "verticalAlign": "middle",
+                "itemStyle": {
+                    "color": "#34495e"
+                }
+            },
+            "xAxis": {
+                "visible": false
+            },
+            "yAxis": {
+                "visible": false
+            }
+        }
+    },
+    "visualization_explanation": "This network graph visualization employs a force-directed layout to demonstrate interaction dynamics between nodes of varying sizes. The dataset contains 6 categorical nodes (network components) and 10 directional connections, with synthetic radii following a logarithmic distribution (\u03bc=12.5, \u03c3=4.2) to represent device significance. Node sizes were generated using domain-appropriate scaling where infrastructure components show 2:1 size ratio relative to endpoints. The force-directed algorithm implementation creates emergent cluster patterns while maintaining central hub connectivity. Color coding follows Cairo's preattentive processing principles, using high-contrast hues for critical components. The visualization optimizes Tufte's data-ink ratio by removing axis lines while preserving interactivity metrics through dynamic node repositioning and collision detection physics."
+}

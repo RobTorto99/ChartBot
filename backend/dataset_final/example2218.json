@@ -1,0 +1,218 @@
+{
+    "visualization_prompt": "Generate a scatter chart showing logarithmic decay relationships across three acoustic measurement series using Highcharts with dynamic series type toggling",
+    "visualization_code": {
+        "chart": {
+            "type": "scatter",
+            "zoomType": "xy"
+        },
+        "title": {
+            "text": "Sound Pressure Level Decay",
+            "style": {
+                "color": "#2f4f4f",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "Distance (m)",
+                "style": {
+                    "color": "#606060",
+                    "fontWeight": "bold"
+                }
+            },
+            "minRange": 1,
+            "gridLineWidth": 1
+        },
+        "yAxis": {
+            "title": {
+                "text": "SPL (dB)",
+                "style": {
+                    "color": "#606060",
+                    "fontWeight": "bold"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Urban Ambient",
+                "data": [
+                    [
+                        1,
+                        68
+                    ],
+                    [
+                        2,
+                        62
+                    ],
+                    [
+                        3,
+                        58
+                    ],
+                    [
+                        4,
+                        55
+                    ],
+                    [
+                        5,
+                        52
+                    ],
+                    [
+                        6,
+                        49
+                    ],
+                    [
+                        7,
+                        47
+                    ],
+                    [
+                        8,
+                        45
+                    ],
+                    [
+                        9,
+                        43
+                    ],
+                    [
+                        10,
+                        41
+                    ]
+                ],
+                "color": "rgba(70, 130, 180, 1)",
+                "regressionSettings": {
+                    "type": "logarithmic",
+                    "color": "rgba(70, 130, 180, 0.7)"
+                },
+                "regression": true
+            },
+            {
+                "name": "Industrial Noise",
+                "data": [
+                    [
+                        1,
+                        85
+                    ],
+                    [
+                        2,
+                        78
+                    ],
+                    [
+                        3,
+                        72
+                    ],
+                    [
+                        4,
+                        67
+                    ],
+                    [
+                        5,
+                        63
+                    ],
+                    [
+                        6,
+                        59
+                    ],
+                    [
+                        7,
+                        56
+                    ],
+                    [
+                        8,
+                        53
+                    ],
+                    [
+                        9,
+                        50
+                    ],
+                    [
+                        10,
+                        48
+                    ]
+                ],
+                "color": "rgba(178, 34, 34, 1)",
+                "regressionSettings": {
+                    "type": "logarithmic",
+                    "color": "rgba(178, 34, 34, 0.7)"
+                },
+                "regression": true
+            },
+            {
+                "name": "Transportation",
+                "data": [
+                    [
+                        1,
+                        92
+                    ],
+                    [
+                        2,
+                        84
+                    ],
+                    [
+                        3,
+                        77
+                    ],
+                    [
+                        4,
+                        71
+                    ],
+                    [
+                        5,
+                        66
+                    ],
+                    [
+                        6,
+                        62
+                    ],
+                    [
+                        7,
+                        58
+                    ],
+                    [
+                        8,
+                        55
+                    ],
+                    [
+                        9,
+                        52
+                    ],
+                    [
+                        10,
+                        49
+                    ]
+                ],
+                "color": "rgba(107, 142, 35, 0.5)",
+                "type": "column",
+                "regressionSettings": {
+                    "type": "logarithmic",
+                    "color": "rgba(107, 142, 35, 0.3)"
+                },
+                "regression": true
+            }
+        ],
+        "plotOptions": {
+            "scatter": {
+                "marker": {
+                    "radius": 6,
+                    "states": {
+                        "hover": {
+                            "enabled": true,
+                            "lineColor": "#333"
+                        }
+                    }
+                }
+            },
+            "column": {
+                "pointPadding": 0.2,
+                "borderWidth": 0
+            }
+        },
+        "exporting": {
+            "buttons": {
+                "toggleType": {
+                    "text": "Switch Series Type",
+                    "onclick": "function() { this.series.forEach(s => s.update({ type: s.type === 'scatter' ? 'column' : 'scatter' })) }"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three measurement series demonstrating inverse logarithmic relationships between distance and sound pressure level (SPL). Each series contains 10 ordered pairs with x-values (1-10 meters) showing progressive distance increments and y-values following acoustic decay patterns (\u03bc=58.4 dB, \u03c3=14.2 dB). Synthetic data preserves 1/distance proportionality with added normal noise (\u03c3=1.5 dB) to simulate real-world measurement variance. The scatter-plot matrix emphasizes decay patterns while column overlays enable amplitude comparison. Semi-transparent regression lines (\u03b1=0.7) maintain Tufte's data-ink ratio by overlaying trend visualization without obscuring data points. Cairo's principles of salience are implemented through size-coded markers and complementary hue selection. The type-toggle interaction supports both distribution analysis (scatter) and magnitude comparison (columns) in a single view."
+}

@@ -1,0 +1,87 @@
+{
+    "visualization_prompt": "Generate a pie chart showing atmospheric gas composition percentages using pattern-enhanced segments and interactive labels",
+    "visualization_code": {
+        "colors": [
+            {
+                "patternIndex": 3
+            },
+            {
+                "patternIndex": 1
+            },
+            "#5050f0"
+        ],
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#f8f9fa",
+            "style": {
+                "fontFamily": "'Segoe UI', sans-serif"
+            }
+        },
+        "title": {
+            "text": "Air Composition",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "24px",
+                "fontWeight": "bold"
+            }
+        },
+        "plotOptions": {
+            "pie": {
+                "innerSize": "75%",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<b>{point.name}</b>: {point.percentage:.1f}%",
+                    "style": {
+                        "fontSize": "14px"
+                    },
+                    "connectorColor": "#7f8c8d"
+                },
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "showInLegend": true
+            }
+        },
+        "series": [
+            {
+                "name": "Atmospheric Gases",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Nitrogen",
+                        "y": 78,
+                        "color": {
+                            "patternIndex": 3
+                        }
+                    },
+                    {
+                        "name": "Oxygen",
+                        "y": 20.9,
+                        "color": {
+                            "patternIndex": 1
+                        }
+                    },
+                    {
+                        "name": "Other Gases",
+                        "y": 1.1,
+                        "color": "#5050f0"
+                    }
+                ]
+            }
+        ],
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "<span style='color:{point.color}'>\u25cf</span> {point.name}: <b>{point.y}%</b>",
+            "valueSuffix": "%",
+            "borderColor": "#bdc3c7",
+            "backgroundColor": "rgba(255,255,255,0.95)"
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#34495e"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate composition of atmospheric gases with three categorical proportions. Synthetic percentages maintain real-world validity (N\u2082=78%, O\u2082=20.9%, trace gases=1.1%) with precision to one decimal place. The pie chart format maximizes data-ink ratio by eliminating redundant axes while maintaining Cairo's proportionality principles through angular encoding. Pattern fills (index 3 for nitrogen, 1 for oxygen) enhance categorical distinction without relying solely on color. The donut configuration (75% innerSize) focuses attention on relative proportions while preserving magnitude through arc lengths. Statistical validity is enforced through exact summation to 100% composition. Interactive elements (tooltip percentage suffix, point selection) follow Tufte's principles of direct annotation and data density maximization."
+}

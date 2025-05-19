@@ -1,0 +1,126 @@
+{
+    "visualization_prompt": "Create a Highcharts chart with the following specifications: Chart type: spline, Chart title: 'Monthly Sales Data', Axes and labels styling: Use a dark blue color for the title, labels, and axes with a font size of 14px. Data series: Include three series with the names 'Product A', 'Product B', and 'Product C', each with monthly sales data from January to December. Custom colors: Use green, blue, and red for the series respectively. Additional configurations: Set the chart background to light gray, add a legend with a margin of 20px, and set the chart margins to 50px on all sides.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f0f0f0",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#00008B",
+                "fontSize": "14px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#00008B",
+                    "fontSize": "14px"
+                }
+            },
+            "title": {
+                "text": "Month",
+                "style": {
+                    "color": "#00008B",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales",
+                "style": {
+                    "color": "#00008B",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#00008B",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Product A",
+                "data": [
+                    50,
+                    60,
+                    70,
+                    80,
+                    90,
+                    100,
+                    110,
+                    120,
+                    130,
+                    140,
+                    150,
+                    160
+                ],
+                "color": "green"
+            },
+            {
+                "name": "Product B",
+                "data": [
+                    40,
+                    50,
+                    60,
+                    70,
+                    80,
+                    90,
+                    100,
+                    110,
+                    120,
+                    130,
+                    140,
+                    150
+                ],
+                "color": "blue"
+            },
+            {
+                "name": "Product C",
+                "data": [
+                    30,
+                    40,
+                    50,
+                    60,
+                    70,
+                    80,
+                    90,
+                    100,
+                    110,
+                    120,
+                    130,
+                    140
+                ],
+                "color": "red"
+            }
+        ],
+        "legend": {
+            "margin": 20
+        }
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a spline chart titled 'Monthly Sales Data'. The chart includes three data series named 'Product A', 'Product B', and 'Product C', each representing monthly sales data from January to December. The series are color-coded with green, blue, and red respectively. The chart's background is set to light gray, and the margins are adjusted to 50px on all sides for better spacing. The title, axes labels, and axes titles are styled with a dark blue color and a font size of 14px for clarity. A legend is included with a margin of 20px to provide additional context for the data series."
+}

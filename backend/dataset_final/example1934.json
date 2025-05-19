@@ -1,0 +1,152 @@
+{
+    "visualization_prompt": "Generate a sankey diagram showing energy flow relationships between U.S. energy sources and consumption sectors using CSS-styled nodes and flow paths",
+    "visualization_code": {
+        "chart": {
+            "type": "sankey",
+            "styledMode": true
+        },
+        "title": {
+            "text": "Energy in the United States"
+        },
+        "series": [
+            {
+                "name": "Energy Flow (Quadrillion BTU)",
+                "keys": [
+                    "from",
+                    "to",
+                    "weight"
+                ],
+                "data": [
+                    [
+                        "Oil",
+                        "Transportation",
+                        94
+                    ],
+                    [
+                        "Natural Gas",
+                        "Transportation",
+                        3
+                    ],
+                    [
+                        "Coal",
+                        "Transportation",
+                        0
+                    ],
+                    [
+                        "Renewable",
+                        "Transportation",
+                        0
+                    ],
+                    [
+                        "Nuclear",
+                        "Transportation",
+                        3
+                    ],
+                    [
+                        "Oil",
+                        "Industrial",
+                        41
+                    ],
+                    [
+                        "Natural Gas",
+                        "Industrial",
+                        40
+                    ],
+                    [
+                        "Coal",
+                        "Industrial",
+                        7
+                    ],
+                    [
+                        "Renewable",
+                        "Industrial",
+                        11
+                    ],
+                    [
+                        "Nuclear",
+                        "Industrial",
+                        0
+                    ],
+                    [
+                        "Oil",
+                        "R&C",
+                        17
+                    ],
+                    [
+                        "Natural Gas",
+                        "R&C",
+                        76
+                    ],
+                    [
+                        "Coal",
+                        "R&C",
+                        1
+                    ],
+                    [
+                        "Renewable",
+                        "R&C",
+                        7
+                    ],
+                    [
+                        "Nuclear",
+                        "R&C",
+                        0
+                    ],
+                    [
+                        "Oil",
+                        "Electric Power",
+                        1
+                    ],
+                    [
+                        "Natural Gas",
+                        "Electric Power",
+                        18
+                    ],
+                    [
+                        "Coal",
+                        "Electric Power",
+                        48
+                    ],
+                    [
+                        "Renewable",
+                        "Electric Power",
+                        11
+                    ],
+                    [
+                        "Nuclear",
+                        "Electric Power",
+                        22
+                    ]
+                ],
+                "nodes": [
+                    {
+                        "id": "Oil",
+                        "colorIndex": 0
+                    },
+                    {
+                        "id": "Natural Gas",
+                        "colorIndex": 1
+                    },
+                    {
+                        "id": "Coal",
+                        "colorIndex": 2
+                    },
+                    {
+                        "id": "Renewable",
+                        "colorIndex": 3
+                    },
+                    {
+                        "id": "Nuclear",
+                        "colorIndex": 4
+                    },
+                    {
+                        "id": "R&C",
+                        "name": "Residential & Commercial"
+                    }
+                ],
+                "type": "sankey"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains 5 energy sources and 4 consumption sectors connected through 20 weighted flow relationships. Synthetic data follows EIA energy flow patterns with proportional conservation (\u2211 inputs = \u2211 outputs per node). Oil dominates transportation (94/100 units) while coal primarily feeds electric power (48 units), reflecting real-world energy economics. The Sankey diagram maximizes data-ink ratio by encoding flow quantities directly in link widths, following Tufte's principles. Color indices create categorical separation aligned with Cairo's pre-attentive processing theory. Flow weights maintain mass balance (\u2211Oil outputs = 153 units across sectors) while node positions optimize link readability through vertical stratification of sources and sectors."
+}

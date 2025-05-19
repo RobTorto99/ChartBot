@@ -1,0 +1,80 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Monthly Sales Data'. The chart should have two data series: '2022 Sales' with data [4, 5, 6, 5, 7, 9, 11, 13] and '2023 Sales' with data [1, 3, 4, 2]. The axes and labels should be styled with a dark blue color (#25386f) and a font size of 14px. The chart should have a white background and a legend positioned at the bottom. Additionally, the chart should include sonification settings to play the series in sequence with a duration of 3000ms.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "align": "left",
+            "margin": 25,
+            "style": {
+                "color": "#25386f",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#25386f",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales",
+                "style": {
+                    "color": "#25386f",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#25386f",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "legend": {
+            "enabled": true,
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#25386f",
+                "fontSize": "14px"
+            }
+        },
+        "sonification": {
+            "order": "sequential",
+            "duration": 3000
+        },
+        "series": [
+            {
+                "name": "2022 Sales",
+                "data": [
+                    4,
+                    5,
+                    6,
+                    5,
+                    7,
+                    9,
+                    11,
+                    13
+                ]
+            },
+            {
+                "name": "2023 Sales",
+                "data": [
+                    1,
+                    3,
+                    4,
+                    2
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart titled 'Monthly Sales Data'. The chart includes two data series: '2022 Sales' and '2023 Sales', each with their respective data points. The axes and labels are styled with a dark blue color (#25386f) and a font size of 14px, ensuring readability and consistency. The chart has a white background, which contrasts well with the dark blue text and provides a clean visual appearance. The legend is enabled and positioned at the bottom of the chart, allowing users to easily identify each series. Additionally, the chart includes sonification settings to play the series in sequence with a duration of 3000ms, enhancing accessibility for users who may benefit from auditory feedback. Overall, the configuration ensures a visually appealing and accessible chart that effectively communicates the monthly sales data."
+}

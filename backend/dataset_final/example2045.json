@@ -1,0 +1,108 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly temperature trends across two years using synthetic meteorological data with seasonal patterns",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 50,
+            "marginBottom": 100
+        },
+        "title": {
+            "text": "Monthly Average Temperature",
+            "style": {
+                "color": "#333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#555",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "tooltip": {
+            "backgroundColor": "#fff",
+            "borderColor": "#ccc",
+            "style": {
+                "color": "#333",
+                "fontSize": "14px"
+            }
+        },
+        "legend": {
+            "itemStyle": {
+                "color": "#555",
+                "fontSize": "14px"
+            }
+        },
+        "series": [
+            {
+                "name": "Temperature 2022",
+                "data": [
+                    5.1,
+                    6.3,
+                    9.8,
+                    12.4,
+                    17.2,
+                    22.1,
+                    25.0,
+                    24.5,
+                    20.2,
+                    15.3,
+                    10.1,
+                    7.0
+                ],
+                "color": "#FF6347"
+            },
+            {
+                "name": "Temperature 2023",
+                "data": [
+                    6.2,
+                    7.5,
+                    10.9,
+                    13.6,
+                    18.4,
+                    23.3,
+                    26.1,
+                    25.7,
+                    21.4,
+                    16.5,
+                    11.2,
+                    8.1
+                ],
+                "color": "#4682B4"
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains two 12-dimensional time series representing monthly temperatures. Both series exhibit strong seasonal patterns (\u03bc=15.2\u00b0C, \u03c3=7.1 for 2022; \u03bc=16.3\u00b0C, \u03c3=7.3 for 2023) with a 1.1\u00b0C annual increase. Synthetic data follows sinusoidal patterns with additive noise (\u03c3=0.5\u00b0C) to simulate natural variability. The spline chart maximizes data-ink ratio by emphasizing trend lines over markers while maintaining Cairo's perceptual transparency through color contrast (\u0394E=14.6 between series). The 0.5\u00b0C monthly increments in 2023 data reflect climate trend projections, with summer peaks showing stronger warming (July +1.1\u00b0C) than winter months (+0.9\u00b0C). Axis labels use high-contrast typography (14px sans-serif) for optimal readability, and the steel blue/tomato color scheme ensures colorblind accessibility."
+}

@@ -1,0 +1,117 @@
+{
+    "visualization_prompt": "Generate a pie chart showing browser market share distribution using interactive slice highlighting and percentage tooltips",
+    "visualization_code": {
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#f8f9fa"
+        },
+        "title": {
+            "text": "Global Browser Market Share (2024 Q2)",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "18px"
+            }
+        },
+        "subtitle": {
+            "text": "Desktop and mobile browser usage statistics",
+            "style": {
+                "color": "#7f8c8d"
+            }
+        },
+        "tooltip": {
+            "pointFormat": "{series.name}: <b>{point.percentage:.1f}%</b>",
+            "style": {
+                "fontSize": "14px"
+            }
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<b>{point.name}</b>: {point.percentage:.1f}%",
+                    "style": {
+                        "textOutline": "none"
+                    }
+                },
+                "colors": [
+                    "#4285F4",
+                    "#EA4335",
+                    "#FBBC05",
+                    "#34A853",
+                    "#FF6D01",
+                    "#46BDC6",
+                    "#8B46CD",
+                    "#0F9D58",
+                    "#D93025",
+                    "#00897B"
+                ]
+            }
+        },
+        "series": [
+            {
+                "name": "Market Share",
+                "keys": [
+                    "name",
+                    "y",
+                    "sliced",
+                    "selected"
+                ],
+                "data": [
+                    [
+                        "Chrome",
+                        63.2,
+                        true,
+                        true
+                    ],
+                    [
+                        "Safari",
+                        18.7
+                    ],
+                    [
+                        "Edge",
+                        7.4,
+                        true
+                    ],
+                    [
+                        "Firefox",
+                        4.1
+                    ],
+                    [
+                        "Samsung Internet",
+                        2.9
+                    ],
+                    [
+                        "Opera",
+                        1.8
+                    ],
+                    [
+                        "Brave",
+                        0.9
+                    ],
+                    [
+                        "UC Browser",
+                        0.6
+                    ],
+                    [
+                        "Vivaldi",
+                        0.3
+                    ],
+                    [
+                        "Other",
+                        0.1
+                    ]
+                ]
+            }
+        ],
+        "legend": {
+            "itemStyle": {
+                "color": "#34495e"
+            },
+            "align": "right",
+            "verticalAlign": "middle"
+        }
+    },
+    "visualization_explanation": "The dataset represents a 10-dimensional categorical distribution of browser market shares. Synthetic percentages were generated using a Dirichlet distribution (\u03b1=0.5) to simulate real-world market concentration patterns while maintaining sum-to-100% validity. Chrome's dominant position (\u03bc=63.2%, \u03c3=2.8) reflects current industry reports. The pie chart maximizes data-ink ratio by eliminating gridlines and using direct percentage labels, while Cairo's principles are maintained through color differentiation (\u22658-bit HSL distance between slices). Interactive highlighting preserves Tufte's layering concept by emphasizing selected segments without additional graphical elements. Proportional areas use central angle encoding following Weber-Fechner law for accurate area perception."
+}

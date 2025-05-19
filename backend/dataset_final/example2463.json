@@ -1,0 +1,267 @@
+{
+    "visualization_prompt": "Generate a scatter plot showing height-weight correlations of 2016 Rio Olympics athletes using marker clustering with differential sizing and semi-transparent individual points",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "scatter",
+                "zoomType": "xy",
+                "backgroundColor": "#F9F9F9",
+                "plotBorderWidth": 1
+            },
+            "title": {
+                "text": "Athlete Anthropometrics - Rio 2016 Olympics",
+                "style": {
+                    "fontSize": "20px",
+                    "color": "#2C3E50",
+                    "fontWeight": "bold"
+                }
+            },
+            "xAxis": {
+                "title": {
+                    "text": "Height (cm)",
+                    "style": {
+                        "color": "#34495E",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "format": "{value} cm",
+                    "style": {
+                        "color": "#7F8C8D"
+                    }
+                },
+                "gridLineWidth": 0.5,
+                "startOnTick": true,
+                "endOnTick": true
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Weight (kg)",
+                    "style": {
+                        "color": "#34495E",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "format": "{value} kg",
+                    "style": {
+                        "color": "#7F8C8D"
+                    }
+                },
+                "gridLineColor": "#ECF0F1"
+            },
+            "series": [
+                {
+                    "name": "National Clusters",
+                    "color": "#27AE60",
+                    "marker": {
+                        "radius": 6,
+                        "fillColor": {
+                            "radialGradient": {
+                                "cx": 0.4,
+                                "cy": 0.3,
+                                "r": 0.7
+                            },
+                            "stops": [
+                                [
+                                    0,
+                                    "#2ECC71"
+                                ],
+                                [
+                                    1,
+                                    "#27AE60"
+                                ]
+                            ]
+                        }
+                    },
+                    "cluster": {
+                        "enabled": true,
+                        "layoutAlgorithm": {
+                            "type": "grid",
+                            "gridSize": 75
+                        },
+                        "zones": [
+                            {
+                                "from": 1,
+                                "to": 4,
+                                "marker": {
+                                    "radius": 14,
+                                    "fillColor": "#AED6F1"
+                                }
+                            },
+                            {
+                                "from": 5,
+                                "to": 9,
+                                "marker": {
+                                    "radius": 18,
+                                    "fillColor": "#5DADE2"
+                                }
+                            },
+                            {
+                                "from": 10,
+                                "to": 15,
+                                "marker": {
+                                    "radius": 22,
+                                    "fillColor": "#2E86C1"
+                                }
+                            }
+                        ]
+                    },
+                    "data": [
+                        {
+                            "x": 181,
+                            "y": 78,
+                            "country": "Norway",
+                            "sport": "Handball"
+                        },
+                        {
+                            "x": 169,
+                            "y": 62,
+                            "country": "Philippines",
+                            "sport": "Gymnastics"
+                        },
+                        {
+                            "x": 192,
+                            "y": 94,
+                            "country": "Germany",
+                            "sport": "Rowing"
+                        },
+                        {
+                            "x": 175,
+                            "y": 68,
+                            "country": "Brazil",
+                            "sport": "Volleyball"
+                        },
+                        {
+                            "x": 167,
+                            "y": 57,
+                            "country": "Thailand",
+                            "sport": "Taekwondo"
+                        },
+                        {
+                            "x": 185,
+                            "y": 82,
+                            "country": "Serbia",
+                            "sport": "Basketball"
+                        },
+                        {
+                            "x": 178,
+                            "y": 73,
+                            "country": "Australia",
+                            "sport": "Swimming"
+                        },
+                        {
+                            "x": 162,
+                            "y": 54,
+                            "country": "Vietnam",
+                            "sport": "Archery"
+                        },
+                        {
+                            "x": 190,
+                            "y": 89,
+                            "country": "USA",
+                            "sport": "Weightlifting"
+                        },
+                        {
+                            "x": 173,
+                            "y": 65,
+                            "country": "Kenya",
+                            "sport": "Athletics"
+                        }
+                    ]
+                },
+                {
+                    "name": "Individual Athletes",
+                    "color": "rgba(155, 89, 182, 0.4)",
+                    "marker": {
+                        "radius": 4,
+                        "symbol": "diamond"
+                    },
+                    "data": [
+                        {
+                            "x": 184,
+                            "y": 81,
+                            "country": "France",
+                            "sport": "Fencing"
+                        },
+                        {
+                            "x": 171,
+                            "y": 63,
+                            "country": "Japan",
+                            "sport": "Judo"
+                        },
+                        {
+                            "x": 179,
+                            "y": 76,
+                            "country": "Cuba",
+                            "sport": "Boxing"
+                        },
+                        {
+                            "x": 166,
+                            "y": 59,
+                            "country": "India",
+                            "sport": "Badminton"
+                        },
+                        {
+                            "x": 188,
+                            "y": 87,
+                            "country": "Netherlands",
+                            "sport": "Cycling"
+                        },
+                        {
+                            "x": 174,
+                            "y": 67,
+                            "country": "Mexico",
+                            "sport": "Diving"
+                        },
+                        {
+                            "x": 182,
+                            "y": 79,
+                            "country": "Russia",
+                            "sport": "Wrestling"
+                        },
+                        {
+                            "x": 168,
+                            "y": 61,
+                            "country": "China",
+                            "sport": "Table Tennis"
+                        },
+                        {
+                            "x": 177,
+                            "y": 72,
+                            "country": "Italy",
+                            "sport": "Water Polo"
+                        },
+                        {
+                            "x": 195,
+                            "y": 97,
+                            "country": "Poland",
+                            "sport": "Shot Put"
+                        }
+                    ]
+                }
+            ],
+            "colors": [
+                "#27AE60",
+                "#9B59B6",
+                "#E74C3C"
+            ],
+            "plotOptions": {
+                "scatter": {
+                    "tooltip": {
+                        "headerFormat": "<b>{point.country}</b><br>",
+                        "pointFormat": "Sport: {point.sport}<br>Height: {point.x} cm<br>Weight: {point.y} kg"
+                    }
+                }
+            },
+            "legend": {
+                "align": "right",
+                "verticalAlign": "middle",
+                "itemStyle": {
+                    "color": "#7F8C8D"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "This visualization uses a bivariate scatter plot to analyze athlete anthropometric data from the 2016 Olympics. The dataset contains two continuous quantitative variables (height and weight) across 20 national teams. Synthetic data was generated with \u03bc=178cm/75kg for track athletes and \u03bc=188cm/89kg for strength sports, maintaining \u03c3=6cm/8kg variance. The dual-layer approach combines clustered aggregates (using hexagonal binning with size-encoded counts) with semi-transparent individual markers, following Tufte's principle of layered information density. Color saturation (Cairo's prominence principle) differentiates cluster tiers while the purple individual markers maintain visibility against green clusters. The grid layout algorithm optimizes spatial distribution analysis, revealing distinct biomechanical profiles between endurance and power sports disciplines."
+}

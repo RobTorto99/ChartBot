@@ -1,0 +1,77 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a packed bubble chart with the following specifications: Chart type: packedbubble, Chart title: 'Bubble Chart Example', Axes and labels styling: Use a dark background with white text for labels and titles, Data series: One series with data [1, 75, 112, 180, 20, 3000], Custom colors: Use a gradient from blue to green, Additional configurations: Set chart margins to 50px, add a legend at the bottom, and enable exporting.",
+    "visualization_code": {
+        "chart": {
+            "type": "packedbubble",
+            "backgroundColor": "#2c3e50",
+            "marginTop": 50,
+            "marginBottom": 50,
+            "marginLeft": 50,
+            "marginRight": 50
+        },
+        "title": {
+            "text": "Bubble Chart Example",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": "18px"
+            }
+        },
+        "plotOptions": {
+            "packedbubble": {
+                "minPointSize": 15,
+                "maxPointSize": 300,
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.name}",
+                    "style": {
+                        "color": "#ffffff",
+                        "fontSize": "12px"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Data Series",
+                "data": [
+                    1,
+                    75,
+                    112,
+                    180,
+                    20,
+                    3000
+                ],
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "x2": 0,
+                        "y1": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#007acc"
+                        ],
+                        [
+                            1,
+                            "#00b300"
+                        ]
+                    ]
+                }
+            }
+        ],
+        "legend": {
+            "enabled": true,
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#ffffff"
+            }
+        },
+        "exporting": {
+            "enabled": true
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a packed bubble chart with a dark background and white text for labels and titles. The chart type is set to 'packedbubble', and the title is 'Bubble Chart Example'. The data series includes one series with values [1, 75, 112, 180, 20, 3000], and the bubbles are colored with a gradient from blue to green. The chart has custom margins set to 50px on all sides, and a legend is placed at the bottom of the chart. Additionally, exporting functionality is enabled, allowing users to download the chart as an image or PDF."
+}

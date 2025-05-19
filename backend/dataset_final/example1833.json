@@ -1,0 +1,92 @@
+{
+    "visualization_prompt": "Generate a pie chart showing proportional composition of egg yolk components using categorical segmentation with interactive selection",
+    "visualization_code": {
+        "colors": [
+            "#10487F",
+            "#406D99",
+            "#668AAD",
+            "#85A1BD",
+            "#C1CFDD"
+        ],
+        "chart": {
+            "type": "pie",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Egg Yolk Composition",
+            "style": {
+                "color": "#2A2A2A",
+                "fontSize": "20px"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://www.mdpi.com/2072-6643/11/3/684/htm' target='_blank'>MDPI Nutrients 2019</a>",
+            "useHTML": true
+        },
+        "plotOptions": {
+            "pie": {
+                "allowPointSelect": true,
+                "cursor": "pointer",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<b>{point.name}</b>: {point.percentage:.1f}%",
+                    "distance": 20,
+                    "style": {
+                        "textOutline": "none"
+                    }
+                },
+                "showInLegend": true,
+                "borderWidth": 1,
+                "borderColor": "#FFFFFF"
+            }
+        },
+        "tooltip": {
+            "headerFormat": "",
+            "pointFormat": "<span style='color:{point.color}'>\u25cf</span> {point.name}: <b>{point.y}%</b>"
+        },
+        "series": [
+            {
+                "name": "Composition",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Water",
+                        "y": 55.02,
+                        "color": "#10487F"
+                    },
+                    {
+                        "name": "Fat",
+                        "y": 26.71,
+                        "sliced": true,
+                        "selected": true,
+                        "color": "#406D99"
+                    },
+                    {
+                        "name": "Protein",
+                        "y": 15.5,
+                        "color": "#668AAD"
+                    },
+                    {
+                        "name": "Carbohydrates",
+                        "y": 1.09,
+                        "color": "#85A1BD"
+                    },
+                    {
+                        "name": "Ash",
+                        "y": 1.68,
+                        "color": "#C1CFDD"
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical",
+            "itemStyle": {
+                "color": "#333333"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate composition analysis with five categorical variables (macronutrients) quantified as percentages. Synthetic data preserves nutritional biochemistry constraints (\u2211=100% \u00b10.02% rounding tolerance), mirroring peer-reviewed values from food science literature. The pie chart maximizes data-ink ratio through Tufte-inspired minimal borders and direct percentage labeling, while Cairo's perceptual topology is maintained through: 1) Monochromatic color progression ensuring luminance differentiation 2) Proactive label collision prevention 3) Legend redundancy for color-impaired users. Interactive slicing (\u03c3=2 component emphasis) follows Shneiderman's visual information-seeking mantra. Macronutrient distribution (\u03bc=19.8%, \u03c3=20.8%) reflects biological plausibility with water as majority component."
+}

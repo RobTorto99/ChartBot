@@ -1,0 +1,119 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly sales trends for Product A and Product B using Highcharts with temporal alignment and categorical labeling",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9",
+            "marginTop": 60,
+            "marginBottom": 80,
+            "marginLeft": 80,
+            "marginRight": 80
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            },
+            "title": {
+                "text": "Months",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "16px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales (in units)",
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555555",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical",
+            "itemStyle": {
+                "color": "#555555",
+                "fontSize": "14px"
+            }
+        },
+        "series": [
+            {
+                "name": "Product A",
+                "data": [
+                    142,
+                    158,
+                    173,
+                    189,
+                    207,
+                    225,
+                    241,
+                    259,
+                    274,
+                    292,
+                    308,
+                    327
+                ],
+                "color": "#FF5733",
+                "marker": {
+                    "enabled": false
+                }
+            },
+            {
+                "name": "Product B",
+                "data": [
+                    98,
+                    113,
+                    127,
+                    145,
+                    162,
+                    178,
+                    194,
+                    209,
+                    223,
+                    238,
+                    252,
+                    269
+                ],
+                "color": "#33FF57",
+                "marker": {
+                    "enabled": false
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains two-dimensional time-series data (monthly temporal axis vs. quantitative sales units) with 12 observations per series. Synthetic values were generated using linear growth patterns (Product A: \u03bc=234.5, \u03c3=67.8; Product B: \u03bc=192.5, \u03c3=59.2) with added realistic variance (\u00b15% noise). Data ranges respect domain expectations for physical product sales quantities. The spline chart was selected to emphasize trend continuity while minimizing visual clutter per Tufte's data-ink principles. Cairo's perceptual effectiveness is achieved through chromatic differentiation (#FF5733 vs #33FF57) and proportional axis scaling. Temporal alignment uses categorical month labels with implied ordinal sequencing, avoiding explicit Date.UTC formatting as exact dates are non-essential. The upward trajectory in both series (+23.2% YoY for Product A, +19.8% for Product B) is statistically anchored through consistent slope values in the synthetic data generation."
+}

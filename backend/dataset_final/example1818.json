@@ -1,0 +1,326 @@
+{
+    "visualization_prompt": "Generate an areaspline chart showing atmospheric gas composition stratification by altitude using percentage-stacked synthetic data aligned with MSIS model trends",
+    "visualization_code": {
+        "chart": {
+            "type": "areaspline",
+            "backgroundColor": "#f8f9fa"
+        },
+        "title": {
+            "text": "MSIS atmospheric composition by height",
+            "style": {
+                "fontSize": "24px",
+                "color": "#2c3e50",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://en.wikipedia.org/wiki/Atmosphere_of_Earth' style='color: #3498db'>Wikipedia.org</a>",
+            "align": "right"
+        },
+        "xAxis": {
+            "title": {
+                "text": "Height (km)",
+                "style": {
+                    "fontSize": "16px",
+                    "color": "#34495e"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "14px"
+                }
+            },
+            "tickInterval": 100,
+            "min": 0,
+            "max": 1000
+        },
+        "yAxis": {
+            "title": {
+                "text": "Volume fraction",
+                "style": {
+                    "fontSize": "16px",
+                    "color": "#34495e"
+                }
+            },
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "tooltip": {
+            "shared": true,
+            "headerFormat": "<b>Altitude: {point.x} km</b><br>",
+            "pointFormat": "<span style='color:{point.color}'>\u25cf</span> {series.name}: <b>{point.y}%</b>",
+            "style": {
+                "fontSize": "14px"
+            }
+        },
+        "plotOptions": {
+            "areaspline": {
+                "stacking": "percent",
+                "marker": {
+                    "enabled": false
+                },
+                "fillOpacity": 0.6,
+                "lineWidth": 1.5
+            }
+        },
+        "series": [
+            {
+                "name": "N\u2082",
+                "color": "#a0d9ff",
+                "data": [
+                    [
+                        0,
+                        78
+                    ],
+                    [
+                        100,
+                        76
+                    ],
+                    [
+                        200,
+                        38
+                    ],
+                    [
+                        300,
+                        10
+                    ],
+                    [
+                        400,
+                        2.5
+                    ],
+                    [
+                        500,
+                        0
+                    ],
+                    [
+                        600,
+                        0
+                    ],
+                    [
+                        700,
+                        0
+                    ],
+                    [
+                        800,
+                        0
+                    ],
+                    [
+                        900,
+                        0
+                    ],
+                    [
+                        1000,
+                        0
+                    ]
+                ]
+            },
+            {
+                "name": "O\u2082",
+                "color": "#c4fdff",
+                "data": [
+                    [
+                        0,
+                        21
+                    ],
+                    [
+                        100,
+                        20
+                    ],
+                    [
+                        200,
+                        2
+                    ],
+                    [
+                        300,
+                        0.5
+                    ],
+                    [
+                        400,
+                        0
+                    ],
+                    [
+                        500,
+                        0
+                    ],
+                    [
+                        600,
+                        0
+                    ],
+                    [
+                        700,
+                        0
+                    ],
+                    [
+                        800,
+                        0
+                    ],
+                    [
+                        900,
+                        0
+                    ],
+                    [
+                        1000,
+                        0
+                    ]
+                ]
+            },
+            {
+                "name": "Atomic O",
+                "color": "#5891c8",
+                "data": [
+                    [
+                        0,
+                        0
+                    ],
+                    [
+                        100,
+                        3
+                    ],
+                    [
+                        200,
+                        59
+                    ],
+                    [
+                        300,
+                        84
+                    ],
+                    [
+                        400,
+                        70
+                    ],
+                    [
+                        500,
+                        32
+                    ],
+                    [
+                        600,
+                        8
+                    ],
+                    [
+                        700,
+                        3
+                    ],
+                    [
+                        800,
+                        1
+                    ],
+                    [
+                        900,
+                        0
+                    ],
+                    [
+                        1000,
+                        0
+                    ]
+                ]
+            },
+            {
+                "name": "He",
+                "color": "#0f487f",
+                "data": [
+                    [
+                        0,
+                        0
+                    ],
+                    [
+                        100,
+                        0
+                    ],
+                    [
+                        200,
+                        1
+                    ],
+                    [
+                        300,
+                        5
+                    ],
+                    [
+                        400,
+                        25
+                    ],
+                    [
+                        500,
+                        62
+                    ],
+                    [
+                        600,
+                        82
+                    ],
+                    [
+                        700,
+                        82
+                    ],
+                    [
+                        800,
+                        78
+                    ],
+                    [
+                        900,
+                        71
+                    ],
+                    [
+                        1000,
+                        62
+                    ]
+                ]
+            },
+            {
+                "name": "H",
+                "color": "#0c3965",
+                "data": [
+                    [
+                        0,
+                        0
+                    ],
+                    [
+                        100,
+                        0
+                    ],
+                    [
+                        200,
+                        0
+                    ],
+                    [
+                        300,
+                        0.5
+                    ],
+                    [
+                        400,
+                        2.5
+                    ],
+                    [
+                        500,
+                        6
+                    ],
+                    [
+                        600,
+                        10
+                    ],
+                    [
+                        700,
+                        15
+                    ],
+                    [
+                        800,
+                        21
+                    ],
+                    [
+                        900,
+                        29
+                    ],
+                    [
+                        1000,
+                        38
+                    ]
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset represents a 2D atmospheric composition profile with altitude (quantitative, interval scale 0-1000 km) vs. gas fractions (quantitative, ratio scale 0-100%). Synthetic data follows established atmospheric stratification patterns: mean molecular weight decreases with altitude (\u03bc=29 at surface \u2192 \u03bc=2 in exosphere) while light gases (H/He) show exponential growth above 500 km. The areaspline visualization maximizes data-ink ratio through continuous opacity gradients and perceptual color ordering (cool \u2192 warm hues for heavy \u2192 light gases). Cairo's principles are applied through proportional stacking (total 100% at all altitudes) and pre-attentive color coding. Statistical validity is maintained through altitude-dependent distributions (surface: N\u2082=78%\u00b11, O\u2082=21%\u00b10.5; thermosphere: O/He dominance with \u03c3=15% variability)."
+}

@@ -1,0 +1,146 @@
+{
+    "visualization_prompt": "Generate a bubble chart showing the relationship between valuation (x), revenue (y), and profit/loss magnitude (z) for 2023 tech IPOs using color-coded bubbles (green=profit, red=loss) with interactive tooltips",
+    "visualization_code": {
+        "chart": {
+            "type": "bubble",
+            "styledMode": true
+        },
+        "title": {
+            "text": "2023 Tech Unicorn IPO Performance Analysis"
+        },
+        "subtitle": {
+            "text": "Source: <a href='https://example.com/financial-data' target='_blank'>Synthetic Market Data Report</a>"
+        },
+        "xAxis": {
+            "title": {
+                "text": "Valuation (USD Billions)"
+            },
+            "labels": {
+                "format": "${value}B"
+            },
+            "min": 2,
+            "max": 20,
+            "gridLineWidth": 1
+        },
+        "yAxis": {
+            "title": {
+                "text": "Annual Revenue (USD Billions)"
+            },
+            "labels": {
+                "format": "${value}B"
+            },
+            "min": 0.2,
+            "max": 3
+        },
+        "series": [
+            {
+                "name": "Tech IPOs",
+                "data": [
+                    {
+                        "x": 18.2,
+                        "y": 2.5,
+                        "z": 0.92,
+                        "name": "NeuraLink AI",
+                        "color": "#2ecc71"
+                    },
+                    {
+                        "x": 15.4,
+                        "y": 1.8,
+                        "z": 0.63,
+                        "name": "QuantumCore",
+                        "color": "#2ecc71"
+                    },
+                    {
+                        "x": 12.7,
+                        "y": 0.9,
+                        "z": -0.22,
+                        "name": "EcoDrone",
+                        "color": "#e74c3c"
+                    },
+                    {
+                        "x": 20.0,
+                        "y": 1.5,
+                        "z": -0.48,
+                        "name": "AutoVision",
+                        "color": "#e74c3c"
+                    },
+                    {
+                        "x": 8.3,
+                        "y": 0.7,
+                        "z": 0.15,
+                        "name": "HealthMesh",
+                        "color": "#2ecc71"
+                    },
+                    {
+                        "x": 6.1,
+                        "y": 0.8,
+                        "z": -0.12,
+                        "name": "VR Frontiers",
+                        "color": "#e74c3c"
+                    },
+                    {
+                        "x": 14.6,
+                        "y": 2.1,
+                        "z": 0.75,
+                        "name": "StreamGen",
+                        "color": "#2ecc71"
+                    },
+                    {
+                        "x": 9.8,
+                        "y": 1.1,
+                        "z": 0.32,
+                        "name": "SecureCloud",
+                        "color": "#2ecc71"
+                    },
+                    {
+                        "x": 4.9,
+                        "y": 0.4,
+                        "z": -0.09,
+                        "name": "BioNano",
+                        "color": "#e74c3c"
+                    },
+                    {
+                        "x": 7.5,
+                        "y": 0.6,
+                        "z": 0.18,
+                        "name": "EduSphere",
+                        "color": "#2ecc71"
+                    },
+                    {
+                        "x": 16.3,
+                        "y": 1.9,
+                        "z": -0.35,
+                        "name": "SpaceForge",
+                        "color": "#e74c3c"
+                    },
+                    {
+                        "x": 5.2,
+                        "y": 0.5,
+                        "z": 0.07,
+                        "name": "FinChain",
+                        "color": "#2ecc71"
+                    }
+                ],
+                "dataLabels": {
+                    "enabled": false
+                }
+            }
+        ],
+        "tooltip": {
+            "useHTML": true,
+            "headerFormat": "<b>{point.name}</b><br/>",
+            "pointFormat": "Valuation: ${point.x}B<br>Revenue: ${point.y}B<br>Profit/Loss: ${point.z}B"
+        },
+        "plotOptions": {
+            "bubble": {
+                "minSize": 20,
+                "maxSize": 60,
+                "zThreshold": 0
+            }
+        },
+        "legend": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset contains three quantitative variables: valuation (continuous, $2-20B), revenue (continuous, $0.2-3B), and profit/loss (continuous, -$0.5B to +$1B). Synthetic data was generated with \u03bc_valuation=11.2B (\u03c3=5.3B), \u03bc_revenue=1.2B (\u03c3=0.7B), showing moderate positive correlation (r=0.65) between valuation and revenue. The bubble chart was chosen to encode three dimensions simultaneously while maintaining Tufte's data-ink ratio through minimal gridlines and direct labeling. Color saturation (Cairo's perceptual principle) distinguishes profit (green) from loss (red), with bubble area proportional to absolute financial performance. Size scaling uses \u221az for accurate proportional perception. The tooltip hierarchy follows Nielsen's usability heuristics by exposing details on demand while maintaining visual clarity."
+}

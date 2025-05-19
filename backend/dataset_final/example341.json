@@ -1,0 +1,64 @@
+{
+    "visualization_prompt": "Create a Highcharts 3D Funnel chart with the following specifications: Chart type should be 'funnel3d'. The chart title should be 'Highcharts Funnel3D Chart'. The axes and labels should have specific styling including colors, font sizes, and styles. The data series should include the name 'Unique users' with data points ['Website visits', 15654], ['Downloads', 4064], ['Requested price list', 1987], ['Invoice sent', 976], ['Finalized', 846]. Custom colors are not specified, so use default Highcharts colors. Additional configurations include enabling 3D options, setting the neck width and height, and enabling data labels with specific formatting.",
+    "visualization_code": {
+        "chart": {
+            "type": "funnel3d",
+            "options3d": {
+                "enabled": true,
+                "alpha": 10,
+                "depth": 50,
+                "viewDistance": 50
+            }
+        },
+        "title": {
+            "text": "Highcharts Funnel3D Chart"
+        },
+        "accessibility": {
+            "screenReaderSection": {
+                "beforeChartFormat": "<{headingTagName}>{chartTitle}</{headingTagName}><div>{typeDescription}</div><div>{chartSubtitle}</div><div>{chartLongdesc}</div>"
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "<b>{point.name}</b> ({point.y:,.0f})",
+                    "allowOverlap": true,
+                    "y": 10
+                },
+                "neckWidth": "30%",
+                "neckHeight": "25%",
+                "width": "80%",
+                "height": "80%"
+            }
+        },
+        "series": [
+            {
+                "name": "Unique users",
+                "data": [
+                    [
+                        "Website visits",
+                        15654
+                    ],
+                    [
+                        "Downloads",
+                        4064
+                    ],
+                    [
+                        "Requested price list",
+                        1987
+                    ],
+                    [
+                        "Invoice sent",
+                        976
+                    ],
+                    [
+                        "Finalized",
+                        846
+                    ]
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a 3D Funnel chart with specific settings. The chart type is set to 'funnel3d', which enables a 3D rendering of the funnel. The title of the chart is 'Highcharts Funnel3D Chart'. The accessibility section ensures that the chart is readable by screen readers, providing a formatted description before the chart. The plot options include enabling data labels with a specific format that displays the point name and its value, allowing overlap, and positioning the labels 10 pixels from the top. The neck width and height are set to 30% and 25% respectively, and the width and height of the funnel are set to 80%. The data series includes one series named 'Unique users' with data points representing various stages of a sales funnel, such as 'Website visits', 'Downloads', 'Requested price list', 'Invoice sent', and 'Finalized'."
+}

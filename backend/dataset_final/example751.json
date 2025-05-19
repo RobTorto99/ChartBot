@@ -1,0 +1,234 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a wind rose chart. The chart should display wind direction frequencies categorized by wind speed ranges. The chart should have a title, styled axes and labels, and use specific colors for each wind speed range. Additional configurations include polar chart settings, legend placement, and tooltip formatting.",
+    "visualization_code": {
+        "chart": {
+            "renderTo": "container",
+            "polar": true,
+            "type": "column"
+        },
+        "title": {
+            "text": "Wind rose for South Shore Met Station, Oregon",
+            "style": {
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "color": "#333333"
+            }
+        },
+        "subtitle": {
+            "text": "Source: or.water.usgs.gov",
+            "style": {
+                "fontSize": "14px",
+                "color": "#666666"
+            }
+        },
+        "pane": {
+            "size": "85%"
+        },
+        "legend": {
+            "reversed": true,
+            "align": "right",
+            "verticalAlign": "top",
+            "y": 100,
+            "layout": "vertical"
+        },
+        "xAxis": {
+            "tickmarkPlacement": "on",
+            "labels": {
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#555555"
+                }
+            }
+        },
+        "yAxis": {
+            "min": 0,
+            "endOnTick": false,
+            "showLastLabel": true,
+            "title": {
+                "text": "Frequency (%)",
+                "style": {
+                    "fontSize": "14px",
+                    "color": "#444444"
+                }
+            },
+            "labels": {
+                "formatter": "function () { return this.value + '%'; }",
+                "style": {
+                    "fontSize": "12px",
+                    "color": "#555555"
+                }
+            }
+        },
+        "tooltip": {
+            "valueSuffix": "%"
+        },
+        "plotOptions": {
+            "series": {
+                "stacking": "normal",
+                "shadow": false,
+                "groupPadding": 0,
+                "pointPlacement": "on",
+                "dataLabels": {
+                    "enabled": false
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "< 0.5 m/s",
+                "data": [
+                    1.81,
+                    0.62,
+                    0.82,
+                    0.59,
+                    0.62,
+                    1.22,
+                    1.61,
+                    2.04,
+                    2.66,
+                    2.96,
+                    2.53,
+                    1.97,
+                    1.64,
+                    1.32,
+                    1.58,
+                    1.51
+                ],
+                "color": "#FFCCCB"
+            },
+            {
+                "name": "0.5-2 m/s",
+                "data": [
+                    1.78,
+                    1.09,
+                    0.82,
+                    1.22,
+                    2.2,
+                    2.01,
+                    3.06,
+                    3.42,
+                    4.74,
+                    4.14,
+                    4.01,
+                    2.66,
+                    1.71,
+                    2.4,
+                    4.28,
+                    5.0
+                ],
+                "color": "#FFA07A"
+            },
+            {
+                "name": "2-4 m/s",
+                "data": [
+                    0.16,
+                    0.0,
+                    0.07,
+                    0.07,
+                    0.49,
+                    1.55,
+                    2.37,
+                    1.97,
+                    0.43,
+                    0.26,
+                    1.22,
+                    1.97,
+                    0.92,
+                    0.99,
+                    1.28,
+                    1.32
+                ],
+                "color": "#FF7F50"
+            },
+            {
+                "name": "4-6 m/s",
+                "data": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.3,
+                    2.14,
+                    0.86,
+                    0.0,
+                    0.0,
+                    0.49,
+                    0.79,
+                    1.45,
+                    1.61,
+                    0.76,
+                    0.13
+                ],
+                "color": "#FF6347"
+            },
+            {
+                "name": "6-8 m/s",
+                "data": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.13,
+                    1.74,
+                    0.53,
+                    0.0,
+                    0.0,
+                    0.13,
+                    0.3,
+                    0.26,
+                    0.33,
+                    0.66,
+                    0.23
+                ],
+                "color": "#FF4500"
+            },
+            {
+                "name": "8-10 m/s",
+                "data": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.39,
+                    0.49,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.1,
+                    0.0,
+                    0.69,
+                    0.13
+                ],
+                "color": "#FF0000"
+            },
+            {
+                "name": "> 10 m/s",
+                "data": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.13,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.03,
+                    0.07
+                ],
+                "color": "#8B0000"
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a wind rose chart, which is a polar column chart. The chart displays wind direction frequencies categorized by wind speed ranges. The title and subtitle are styled with specific font sizes and colors. The x-axis and y-axis labels are also styled, and the y-axis title indicates that the values represent percentages. The legend is reversed and positioned at the top right of the chart. The tooltip displays the frequency values with a '%' suffix. The plot options include stacking the columns normally, disabling shadows, and setting point placement on the axis. Each series represents a wind speed range, and specific colors are assigned to each range to differentiate them visually."
+}

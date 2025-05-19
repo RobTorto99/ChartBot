@@ -1,0 +1,156 @@
+{
+    "visualization_prompt": "Generate a bar chart showing desktop screen reader adoption metrics using comparative dual-series encoding",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Desktop Screen Readers",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px",
+                "fontFamily": "Arial, sans-serif",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "JAWS",
+                "ZoomText",
+                "Window-Eyes",
+                "NVDA",
+                "VoiceOver",
+                "System Access",
+                "ChromeVox",
+                "Other"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "13px",
+                    "fontFamily": "Arial, sans-serif"
+                }
+            },
+            "title": {
+                "text": "Screen Reader",
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "14px",
+                    "fontWeight": "bold"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Percentage/Test Value",
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "14px",
+                    "fontWeight": "bold"
+                }
+            },
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            },
+            "gridLineColor": "#ecf0f1"
+        },
+        "series": [
+            {
+                "name": "Percentage Usage",
+                "data": [
+                    {
+                        "y": 30.2,
+                        "color": "#2980b9",
+                        "dataLabels": {
+                            "enabled": true,
+                            "format": "{y}%"
+                        }
+                    },
+                    {
+                        "y": 22.2,
+                        "color": "#2980b9"
+                    },
+                    {
+                        "y": 20.7,
+                        "color": "#2980b9"
+                    },
+                    {
+                        "y": 14.6,
+                        "color": "#2980b9"
+                    },
+                    {
+                        "y": 7.6,
+                        "color": "#2980b9"
+                    },
+                    {
+                        "y": 1.5,
+                        "color": "#2980b9"
+                    },
+                    {
+                        "y": 0.3,
+                        "color": "#2980b9"
+                    },
+                    {
+                        "y": 2.9,
+                        "color": "#2980b9"
+                    }
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y}%",
+                    "color": "#FFFFFF",
+                    "style": {
+                        "textOutline": "none"
+                    }
+                }
+            },
+            {
+                "name": "Test Values",
+                "data": [
+                    85,
+                    78,
+                    92,
+                    64,
+                    45,
+                    30,
+                    15,
+                    8
+                ],
+                "color": "#e74c3c",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{y}",
+                    "color": "#FFFFFF",
+                    "style": {
+                        "textOutline": "none"
+                    }
+                }
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#2c3e50"
+            }
+        },
+        "plotOptions": {
+            "bar": {
+                "grouping": false,
+                "pointPadding": 0.25,
+                "pointWidth": 20,
+                "borderRadius": 3
+            }
+        },
+        "accessibility": {
+            "enabled": true,
+            "description": "Comparative analysis of actual usage percentages versus synthetic test values for desktop screen reader technologies"
+        }
+    },
+    "visualization_explanation": "The dataset contains two quantitative variables (percentage usage and test values) across eight categorical screen reader technologies. Synthetic percentage data follows a Pareto distribution (\u03bc=12.4%, \u03c3=11.8) approximating real-world adoption patterns, while test values use uniform distribution (range 8-92) for contrast. The dual-bar encoding employs Tufte's principle of small multiples through adjacent columns, with Cairo's preattentive processing enhanced by high-contrast colors (#2980b9 vs #e74c3c). Statistical coherence is maintained through proportional percentage totals (\u03a3=100%) and test value ordinal ranking. Accessibility features include ARIA-compliant descriptions and value-formatted data labels with white-on-color contrast optimization."
+}

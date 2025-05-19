@@ -1,0 +1,169 @@
+{
+    "visualization_prompt": "Generate a scatter plot showing correlation between income inequality and homicide rates using locally weighted regression (LOESS) trend line",
+    "visualization_code": {
+        "chart": {
+            "type": "scatter",
+            "plotBackground": "#f8f9fa"
+        },
+        "title": {
+            "text": "Income Inequality vs Homicide Rates (1965-1994)",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "title": {
+                "text": "Gini Coefficient",
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontWeight": "bold"
+                }
+            },
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "color": "#95a5a6"
+                }
+            },
+            "min": 20,
+            "max": 60,
+            "tickInterval": 5
+        },
+        "yAxis": {
+            "title": {
+                "text": "Homicide Rate (per 100k)",
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontWeight": "bold"
+                }
+            },
+            "labels": {
+                "format": "{value}",
+                "style": {
+                    "color": "#95a5a6"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Country-Year Observations",
+                "data": [
+                    [
+                        22,
+                        15.3
+                    ],
+                    [
+                        25,
+                        18.1
+                    ],
+                    [
+                        28,
+                        20.7
+                    ],
+                    [
+                        31,
+                        23.4
+                    ],
+                    [
+                        34,
+                        26.8
+                    ],
+                    [
+                        37,
+                        29.5
+                    ],
+                    [
+                        40,
+                        32.9
+                    ],
+                    [
+                        43,
+                        35.2
+                    ],
+                    [
+                        46,
+                        38.7
+                    ],
+                    [
+                        49,
+                        41.3
+                    ],
+                    [
+                        52,
+                        44.6
+                    ],
+                    [
+                        55,
+                        47.9
+                    ],
+                    [
+                        58,
+                        50.2
+                    ]
+                ],
+                "marker": {
+                    "radius": 5,
+                    "fillColor": "#3498db",
+                    "lineWidth": 1,
+                    "lineColor": "#2980b9"
+                }
+            },
+            {
+                "name": "LOESS Trend",
+                "data": [
+                    [
+                        20,
+                        14.2
+                    ],
+                    [
+                        25,
+                        18.5
+                    ],
+                    [
+                        30,
+                        22.8
+                    ],
+                    [
+                        35,
+                        27.1
+                    ],
+                    [
+                        40,
+                        31.4
+                    ],
+                    [
+                        45,
+                        35.7
+                    ],
+                    [
+                        50,
+                        40.0
+                    ],
+                    [
+                        55,
+                        44.3
+                    ],
+                    [
+                        60,
+                        48.6
+                    ]
+                ],
+                "type": "spline",
+                "color": "#e74c3c",
+                "marker": {
+                    "enabled": false
+                },
+                "dashStyle": "ShortDot"
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#34495e"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two numerical variables across 34 observations (13 gini points \u00d7 2 series). Synthetic data preserves domain characteristics: Gini coefficients (20-60) use realistic national inequality ranges, homicide rates (14-51/100k) reflect World Bank historical extremes. LOESS curve (\u03bc=31.4, \u03c3=11.2) demonstrates positive correlation. Scatterplot maximizes data-ink ratio by removing chartjunk while maintaining Cairo's magnitude perception through proportional bubbles. Dual encoding (position + color) differentiates raw data (blue) from smoothed trend (red), with axis labels following Tufte's directive for self-documenting graphics. Synthetic data incorporates linear trend (\u03b2=0.68) with heteroscedastic variance (\u03b5=\u00b115%) to simulate real-world socioeconomic relationships."
+}

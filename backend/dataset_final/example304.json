@@ -1,0 +1,85 @@
+{
+    "visualization_prompt": "Create a Highcharts Polar Chart with the following specifications: Chart type: Polar, Chart title: 'Highcharts Polar Chart', Axes and labels styling: X-axis labels should be formatted as degrees (e.g., '45\u00b0'), Y-axis should have a minimum value of 0, Data series: Three series with types 'column', 'line', and 'area', each with specific data points, Custom colors: Not specified, Additional configurations: Polar chart settings, subtitle 'Also known as Radar Chart', and series-specific configurations like pointStart and pointInterval.",
+    "visualization_code": {
+        "chart": {
+            "polar": true
+        },
+        "title": {
+            "text": "Highcharts Polar Chart"
+        },
+        "subtitle": {
+            "text": "Also known as Radar Chart"
+        },
+        "pane": {
+            "startAngle": 0,
+            "endAngle": 360
+        },
+        "xAxis": {
+            "tickInterval": 45,
+            "min": 0,
+            "max": 360,
+            "labels": {
+                "format": "{value}\u00b0"
+            }
+        },
+        "yAxis": {
+            "min": 0
+        },
+        "plotOptions": {
+            "series": {
+                "pointStart": 0,
+                "pointInterval": 45
+            },
+            "column": {
+                "pointPadding": 0,
+                "groupPadding": 0
+            }
+        },
+        "series": [
+            {
+                "type": "column",
+                "name": "Column",
+                "data": [
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                ],
+                "pointPlacement": "between"
+            },
+            {
+                "type": "line",
+                "name": "Line",
+                "data": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            },
+            {
+                "type": "area",
+                "name": "Area",
+                "data": [
+                    1,
+                    8,
+                    2,
+                    7,
+                    3,
+                    6,
+                    4,
+                    5
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts configuration is designed to render a Polar Chart, also known as a Radar Chart. This type of chart is useful for comparing multivariate data sets. The chart is configured with a polar setting, which wraps the X-axis around the perimeter. The X-axis labels are formatted to display degrees, and the Y-axis starts from 0. The chart includes three series: 'Column', 'Line', and 'Area', each with specific data points. The 'Column' series uses 'pointPlacement' to place points between ticks, while the 'Line' and 'Area' series follow the default placement. Additional configurations include a subtitle to clarify the chart type and series-specific settings like 'pointStart' and 'pointInterval' to control the data point distribution."
+}

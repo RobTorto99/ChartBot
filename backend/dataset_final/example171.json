@@ -1,0 +1,81 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a chart with the following specifications: Chart type: line and pie, Chart title: 'Series and point color index', Axes and labels styling: x-axis categories are ['Monday', 'Tuesday', 'Wednesday', 'Thursday'], y-axis title is null, Data series: 'Apples' series with data [0, -1, 1, 0], 'Oranges' series with data [1, 2, 6, 7], 'Chilis' series with data [1, 1, 3, 2], and a pie series named 'Totals' with data [{ name: 'Chilis', y: 6 }, { name: 'Oranges', y: 16 }], Custom colors: green for the first series, orange for the second, and red for the third, Additional configurations: styledMode enabled, pie series size is '30%' and centered at ['20%', '30%'].",
+    "visualization_code": {
+        "chart": {
+            "styledMode": true
+        },
+        "title": {
+            "text": "Series and point color index"
+        },
+        "xAxis": {
+            "categories": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday"
+            ]
+        },
+        "yAxis": {
+            "title": {
+                "text": null
+            }
+        },
+        "series": [
+            {
+                "type": "line",
+                "name": "Apples",
+                "data": [
+                    0,
+                    -1,
+                    1,
+                    0
+                ],
+                "colorIndex": 0
+            },
+            {
+                "type": "line",
+                "name": "Oranges",
+                "data": [
+                    1,
+                    2,
+                    6,
+                    7
+                ],
+                "colorIndex": 1
+            },
+            {
+                "type": "line",
+                "name": "Chilis",
+                "data": [
+                    1,
+                    1,
+                    3,
+                    2
+                ],
+                "colorIndex": 2
+            },
+            {
+                "type": "pie",
+                "name": "Totals",
+                "data": [
+                    {
+                        "name": "Chilis",
+                        "y": 6,
+                        "colorIndex": 2
+                    },
+                    {
+                        "name": "Oranges",
+                        "y": 16,
+                        "colorIndex": 1
+                    }
+                ],
+                "size": "30%",
+                "center": [
+                    "20%",
+                    "30%"
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a mixed chart with both line and pie series. The chart title is set to 'Series and point color index'. The x-axis is labeled with days of the week, and the y-axis title is null. There are three line series: 'Apples', 'Oranges', and 'Chilis', each with specified data points and color indices corresponding to green, orange, and red, respectively. Additionally, a pie series named 'Totals' is included, displaying the total values for 'Chilis' and 'Oranges' with the same color indices. The pie series is sized at 30% and positioned at the center of the chart at ['20%', '30%']. The chart is rendered in styled mode, allowing for custom CSS styling as defined in the provided CSS."
+}

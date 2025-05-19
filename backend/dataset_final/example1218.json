@@ -1,0 +1,90 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly temperature trends using smoothed interpolation with meteorological consistency",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f8f9fa"
+        },
+        "title": {
+            "text": "Northern Hemisphere Temperature Trends 2023",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            },
+            "lineColor": "#bdc3c7"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            },
+            "gridLineColor": "#ecf0f1"
+        },
+        "series": [
+            {
+                "name": "Average Temperature",
+                "data": [
+                    3.2,
+                    4.1,
+                    8.9,
+                    14.3,
+                    18.7,
+                    22.1,
+                    24.5,
+                    23.8,
+                    20.2,
+                    14.7,
+                    9.3,
+                    4.8
+                ],
+                "color": "#e74c3c",
+                "marker": {
+                    "radius": 4
+                }
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#34495e"
+            }
+        },
+        "tooltip": {
+            "valueSuffix": "\u00b0C",
+            "headerFormat": "<b>{point.x}</b><br/>"
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate time series with 12 monthly observations of temperature values. Synthetic data follows northern hemisphere seasonal patterns (\u03bc=14.5\u00b0C, \u03c3=8.2\u00b0C) with realistic summer peaks and winter lows. The spline chart was selected to emphasize smooth seasonal transitions while maintaining Tufte's data-ink ratio through minimal gridlines. Cairo's perceptual principles are applied through: 1) Color contrast between red series and blue-gray axes 2) Proportional marker sizing for preattentive processing 3) Axis label formatting matching measurement units. Statistical validity is maintained through synthetic data generation using sinusoidal base (annual period) + normal distribution residuals (\u03c3=1.5\u00b0C)."
+}

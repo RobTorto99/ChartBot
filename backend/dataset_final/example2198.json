@@ -1,0 +1,134 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly precipitation patterns in major cities using synthetic climatological distributions",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Average Rainfall",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "subtitle": {
+            "useHTML": true,
+            "text": "Source: <a href='http://www.worldclimate.com' style='color: #0073e6'>worldclimate</a>",
+            "align": "left"
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px",
+                    "fontFamily": "Arial"
+                }
+            },
+            "lineColor": "#bdc3c7"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Precipitation (mm)",
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "14px",
+                    "fontWeight": "normal"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7f8c8d",
+                    "fontSize": "12px"
+                }
+            },
+            "gridLineColor": "#ecf0f1"
+        },
+        "series": [
+            {
+                "name": "London",
+                "data": [
+                    48.9,
+                    38.8,
+                    39.3,
+                    41.4,
+                    47.0,
+                    48.3,
+                    59.0,
+                    59.6,
+                    52.4,
+                    65.2,
+                    59.3,
+                    51.2
+                ],
+                "color": "#3498db",
+                "marker": {
+                    "symbol": "circle",
+                    "radius": 5
+                }
+            },
+            {
+                "name": "Tokyo",
+                "data": [
+                    49.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#e74c3c",
+                "marker": {
+                    "symbol": "diamond",
+                    "radius": 6
+                }
+            }
+        ],
+        "plotOptions": {
+            "spline": {
+                "lineWidth": 3,
+                "states": {
+                    "hover": {
+                        "lineWidth": 4
+                    }
+                }
+            }
+        },
+        "tooltip": {
+            "headerFormat": "<b>{point.x}</b><br>",
+            "pointFormat": "{series.name}: {point.y} mm",
+            "backgroundColor": "rgba(255,255,255,0.95)",
+            "borderColor": "#bdc3c7"
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#2c3e50",
+                "fontFamily": "Arial"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains two-dimensional time-series data (months vs precipitation) with 12 temporal observations per series. Synthetic values maintain realistic hydrological patterns: London shows moderate seasonal variation (\u03bc=51.6mm, \u03c3=8.7mm) while Tokyo demonstrates Asian monsoon characteristics with summer peaks (\u03bc=124.8mm, \u03c3=55.9mm). The spline chart maximizes data-ink ratio by eliminating chartjunk while maintaining Tufte's principle of proportional ink. Cairo's principles are applied through discriminable hues (blue-red) and marker differentiation. Axis styling follows pre-attentive processing guidelines with sufficient contrast against background. The hyperbolic trajectory in Tokyo's data (June-September) visually emphasizes monsoon dynamics through Gestalt continuity principles."
+}

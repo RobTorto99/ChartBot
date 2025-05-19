@@ -1,0 +1,122 @@
+{
+    "visualization_prompt": "Generate a pie chart showing pattern fill variations using Highcharts pattern-fill plugin with 10 default patterns and 1 custom image pattern",
+    "visualization_code": {
+        "chart": {
+            "type": "pie"
+        },
+        "title": {
+            "text": "Highcharts Pattern Fill Demonstration",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "plotOptions": {
+            "pie": {
+                "borderColor": "#2c3e50",
+                "dataLabels": {
+                    "connectorColor": "#2c3e50",
+                    "distance": 30,
+                    "formatter": "function() { return this.point.index > 9 ? 'Custom Dollar Bill' : 'Pattern ' + this.point.index; }"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Pattern Variations",
+                "showInLegend": true,
+                "data": [
+                    {
+                        "name": "Pattern 0",
+                        "y": 1,
+                        "color": {
+                            "patternIndex": 0
+                        }
+                    },
+                    {
+                        "name": "Pattern 1",
+                        "y": 1,
+                        "color": {
+                            "patternIndex": 1
+                        }
+                    },
+                    {
+                        "name": "Pattern 2",
+                        "y": 1,
+                        "color": {
+                            "patternIndex": 2
+                        }
+                    },
+                    {
+                        "name": "Pattern 3",
+                        "y": 1,
+                        "color": {
+                            "patternIndex": 3
+                        }
+                    },
+                    {
+                        "name": "Pattern 4",
+                        "y": 1,
+                        "color": {
+                            "patternIndex": 4
+                        }
+                    },
+                    {
+                        "name": "Pattern 5",
+                        "y": 1,
+                        "color": {
+                            "patternIndex": 5
+                        }
+                    },
+                    {
+                        "name": "Pattern 6",
+                        "y": 1,
+                        "color": {
+                            "patternIndex": 6
+                        }
+                    },
+                    {
+                        "name": "Pattern 7",
+                        "y": 1,
+                        "color": {
+                            "patternIndex": 7
+                        }
+                    },
+                    {
+                        "name": "Pattern 8",
+                        "y": 1,
+                        "color": {
+                            "patternIndex": 8
+                        }
+                    },
+                    {
+                        "name": "Pattern 9",
+                        "y": 1,
+                        "color": {
+                            "patternIndex": 9
+                        }
+                    },
+                    {
+                        "name": "Custom Pattern",
+                        "y": 1,
+                        "color": {
+                            "pattern": {
+                                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/United_States_one_dollar_bill%2C_obverse.jpg/320px-United_States_one_dollar_bill%2C_obverse.jpg",
+                                "aspectRatio": 2.25
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#34495e"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 11 categorical data points representing different pattern variations in a pie chart format. Each slice has equal value (y=1) to demonstrate visual differentiation through patterns rather than quantitative comparison. Synthetic data was created with uniform distribution to focus on pattern demonstration rather than numerical relationships. The custom pattern uses a dollar bill image with calculated aspect ratio preservation. The pie chart was selected to maximize pattern visibility through slice areas while maintaining Tufte's data-ink ratio by eliminating unnecessary gridlines and borders. Cairo's perceptual principles are applied through pattern variety and clear legend association. Uniform value distribution (\u03bc=1, \u03c3=0) ensures equal visual weight for pattern comparison, with the custom pattern maintaining proportional scaling through its 9:4 aspect ratio calculation."
+}

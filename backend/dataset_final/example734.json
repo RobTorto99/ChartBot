@@ -1,0 +1,189 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Polio (Pol3) immunization coverage among 1-year-olds (%)'. The chart should have four series: 'Global', 'Africa', 'Europe', and 'South-East Asia'. Each series should start from the year 2000 and display the provided data. The axes and labels should be styled with specific colors and font sizes. The chart should have custom colors for the series and additional configurations such as chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "otherChartsFollowAxes": true,
+            "zooming": {
+                "type": "xy"
+            },
+            "marginLeft": 50,
+            "spacingTop": 20,
+            "spacingBottom": 20
+        },
+        "title": {
+            "text": "Polio (Pol3) immunization coverage among 1-year-olds (%)"
+        },
+        "subtitle": {
+            "text": "Source: https://apps.who.int/gho/data/"
+        },
+        "xAxis": {
+            "title": {
+                "text": "Year",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Coverage (%)",
+                "style": {
+                    "color": "#333",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#555",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical",
+            "itemStyle": {
+                "color": "#333",
+                "fontSize": "12px"
+            }
+        },
+        "colors": [
+            "#36096D",
+            "#8B5A2B",
+            "#228B22",
+            "#FF6347"
+        ],
+        "plotOptions": {
+            "spline": {
+                "marker": {
+                    "enabled": true
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Global",
+                "data": [
+                    73,
+                    73,
+                    74,
+                    75,
+                    76,
+                    78,
+                    79,
+                    80,
+                    82,
+                    83,
+                    83,
+                    84,
+                    84,
+                    84,
+                    85,
+                    85,
+                    85,
+                    85,
+                    85,
+                    86,
+                    82,
+                    80
+                ],
+                "pointStart": 2000
+            },
+            {
+                "name": "Africa",
+                "data": [
+                    54,
+                    55,
+                    59,
+                    61,
+                    62,
+                    65,
+                    66,
+                    69,
+                    71,
+                    74,
+                    72,
+                    70,
+                    71,
+                    70,
+                    71,
+                    72,
+                    73,
+                    73,
+                    73,
+                    74,
+                    71,
+                    70
+                ],
+                "pointStart": 2000
+            },
+            {
+                "name": "Europe",
+                "data": [
+                    94,
+                    94,
+                    93,
+                    92,
+                    95,
+                    95,
+                    95,
+                    96,
+                    96,
+                    95,
+                    95,
+                    95,
+                    95,
+                    96,
+                    94,
+                    94,
+                    94,
+                    93,
+                    94,
+                    95,
+                    94,
+                    94
+                ],
+                "pointStart": 2000
+            },
+            {
+                "name": "South-East Asia",
+                "data": [
+                    64,
+                    65,
+                    65,
+                    66,
+                    66,
+                    71,
+                    72,
+                    73,
+                    75,
+                    78,
+                    80,
+                    82,
+                    83,
+                    85,
+                    87,
+                    88,
+                    87,
+                    90,
+                    91,
+                    90,
+                    85,
+                    82
+                ],
+                "pointStart": 2000
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart with the specified title and subtitle. The chart includes four series: 'Global', 'Africa', 'Europe', and 'South-East Asia', each starting from the year 2000 and displaying the respective data. The axes and labels are styled with specific colors and font sizes to enhance readability. The chart uses custom colors for the series, and additional configurations such as chart margins, background, and legend settings are applied to improve the overall appearance and functionality of the chart. The legend is enabled and positioned to the right, with vertical alignment and a vertical layout. The spline plot options include markers to highlight each data point. This configuration ensures that the chart is visually appealing and informative, providing a clear representation of the Polio immunization coverage data over time."
+}

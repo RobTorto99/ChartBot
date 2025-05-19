@@ -1,0 +1,103 @@
+{
+    "visualization_prompt": "Generate a column chart showing atmospheric layer composition using percentage stacking with annotated scientific metadata",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "backgroundColor": "white"
+        },
+        "title": {
+            "text": "Earth's Atmospheric Layers"
+        },
+        "subtitle": {
+            "text": "Source: NASA Atmospheric Science Division",
+            "useHTML": true
+        },
+        "xAxis": {
+            "categories": [
+                "Atmospheric Composition"
+            ],
+            "visible": false
+        },
+        "yAxis": {
+            "visible": false,
+            "min": 0,
+            "title": {
+                "text": null
+            }
+        },
+        "tooltip": {
+            "headerFormat": null,
+            "pointFormat": "{point.series.options.custom.info}",
+            "useHTML": true
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "percent",
+                "borderColor": "#333",
+                "borderWidth": 2,
+                "color": "rgba(255,255,255,0.01)",
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{series.name}: {point.series.options.custom.height}",
+                    "color": "#2c3e50",
+                    "style": {
+                        "fontWeight": "bold"
+                    }
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Exosphere",
+                "data": [
+                    1
+                ],
+                "custom": {
+                    "height": "10,000 km upper boundary",
+                    "info": "Transitional zone to space: 700-10,000 km altitude<br>Contains: Atomic oxygen, hydrogen/helium coronas"
+                }
+            },
+            {
+                "name": "Thermosphere",
+                "data": [
+                    1
+                ],
+                "custom": {
+                    "height": "80-700 km",
+                    "info": "Aurora formation layer<br>Temperature reaches 2,500\u00b0C<br>International Space Station orbit"
+                }
+            },
+            {
+                "name": "Mesosphere",
+                "data": [
+                    1
+                ],
+                "custom": {
+                    "height": "50-85 km",
+                    "info": "Meteor ablation layer<br>Coldest atmospheric zone (-90\u00b0C)<br>Noctilucent clouds formation"
+                }
+            },
+            {
+                "name": "Stratosphere",
+                "data": [
+                    1
+                ],
+                "custom": {
+                    "height": "12-50 km",
+                    "info": "Ozone layer location<br>Temperature inversion profile<br>Commercial jet altitude"
+                }
+            },
+            {
+                "name": "Troposphere",
+                "data": [
+                    1
+                ],
+                "custom": {
+                    "height": "0-12 km",
+                    "info": "Weather systems layer<br>Contains 75-80% atmospheric mass<br>Temperature decreases with altitude"
+                }
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset represents a nominal composition of Earth's atmospheric layers through equal proportional stacking. This one-dimensional categorical data uses ordinal positioning to reflect vertical atmospheric stratification. Synthetic values maintain domain accuracy through NASA-derived layer boundaries and scientific properties. The visualization employs Tufte's principle of minimal grid structure by hiding axes, maximizing data-ink ratio through direct annotation. Cairo's perceptual transparency is achieved through: 1) Monochromatic border emphasis on text labels 2) Positional encoding matching real-world layer sequence 3) Interactive tooltip augmentation. Equal segment distribution (\u03bc=16.67%, \u03c3=0%) simplifies comparative analysis while maintaining proportional relationships through stacking topology. DataLabels use Highcharts' direct annotation pattern to bypass traditional axis decoding."
+}

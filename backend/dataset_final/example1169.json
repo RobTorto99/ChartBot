@@ -1,0 +1,118 @@
+{
+    "visualization_prompt": "Generate a column chart showing product category market share distribution using proportional data with annotated outliers",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "renderTo": "container"
+        },
+        "title": {
+            "text": "Global Market Share by Product Category",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "type": "category",
+            "labels": {
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Market Share (%)"
+            },
+            "labels": {
+                "format": "{value}%",
+                "style": {
+                    "color": "#34495e",
+                    "fontSize": "12px"
+                }
+            },
+            "max": 100
+        },
+        "colors": [
+            "#3498db",
+            "#2ecc71",
+            "#e74c3c",
+            "#9b59b6",
+            "#f1c40f",
+            "#1abc9c",
+            "#e67e22",
+            "#95a5a6",
+            "#d35400",
+            "#7f8c8d"
+        ],
+        "series": [
+            {
+                "name": "Market Share",
+                "data": [
+                    {
+                        "name": "Electronics",
+                        "y": 22,
+                        "dataLabels": {
+                            "enabled": true
+                        }
+                    },
+                    {
+                        "name": "Apparel",
+                        "y": 18
+                    },
+                    {
+                        "name": "Home & Garden",
+                        "y": 15
+                    },
+                    {
+                        "name": "Beauty",
+                        "y": 12
+                    },
+                    {
+                        "name": "Sports",
+                        "y": 10
+                    },
+                    {
+                        "name": "Books",
+                        "y": 8
+                    },
+                    {
+                        "name": "Automotive",
+                        "y": 6
+                    },
+                    {
+                        "name": "Toys",
+                        "y": 5
+                    },
+                    {
+                        "name": "Pet Supplies",
+                        "y": 3
+                    },
+                    {
+                        "name": "Other",
+                        "y": 1,
+                        "color": "#ff4444"
+                    }
+                ],
+                "dataLabels": {
+                    "enabled": true,
+                    "format": "{point.y}%",
+                    "style": {
+                        "textOutline": "none"
+                    }
+                }
+            }
+        ],
+        "plotOptions": {
+            "column": {
+                "borderWidth": 0,
+                "pointPadding": 0.1
+            }
+        },
+        "legend": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The dataset contains 10 categorical observations representing market share percentages across product categories. Synthetic data was constructed with \u03bc=10% per category (\u03c3=7.2%) while maintaining a total sum of 100%, simulating Pareto distribution observed in real-world market dynamics. The column chart maximizes data-ink ratio by eliminating redundant gridlines while using contrasting colors for outlier detection. Cairo's pop-out effect is applied to the 'Electronics' and 'Other' categories through strategic color selection and data labeling, directing attention to market leaders and niche segments. Value formatting follows D3-style percentage conventions for immediate magnitude recognition."
+}

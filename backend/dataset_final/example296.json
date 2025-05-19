@@ -1,0 +1,102 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a spline chart with the title 'Highcharts export server overview'. The chart should have styled axes and labels with specific colors and font sizes. The data series should include two series named 'Series 1' and 'Series 2', each with appropriate data points. Custom colors should be applied, and additional configurations such as chart margins, background, and legend should be set.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "white",
+            "style": {
+                "fontSize": "12px"
+            }
+        },
+        "title": {
+            "text": "Highcharts export server overview",
+            "style": {
+                "color": "black",
+                "fontSize": "16px"
+            },
+            "align": "left"
+        },
+        "xAxis": {
+            "title": {
+                "text": "X Axis",
+                "style": {
+                    "color": "blue",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "blue",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Y Axis",
+                "style": {
+                    "color": "green",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "green",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    1,
+                    3,
+                    2,
+                    4,
+                    5,
+                    4,
+                    6,
+                    2,
+                    3,
+                    5
+                ]
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    5,
+                    3,
+                    4,
+                    2,
+                    1,
+                    3,
+                    2,
+                    4,
+                    5,
+                    4
+                ]
+            }
+        ],
+        "colors": [
+            "#FF5733",
+            "#33FF57"
+        ],
+        "legend": {
+            "enabled": true,
+            "align": "right",
+            "verticalAlign": "middle"
+        },
+        "plotOptions": {
+            "spline": {
+                "marker": {
+                    "enabled": true
+                }
+            }
+        },
+        "credits": {
+            "enabled": false
+        }
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart with a white background and a title 'Highcharts export server overview'. The axes and labels are styled with specific colors and font sizes. The x-axis title and labels are colored blue, while the y-axis title and labels are colored green. The chart includes two data series named 'Series 1' and 'Series 2', each with corresponding data points. Custom colors are applied to the series, and the legend is enabled and positioned to the right. Additional configurations include disabling the credits and enabling markers for the spline plot options."
+}

@@ -1,0 +1,108 @@
+{
+    "visualization_prompt": "Generate a polar column chart showing Winter Olympic medal distributions for the top 5 countries using inverted stacked columns with flag annotations and domain-specific color encoding",
+    "visualization_code": {
+        "colors": [
+            "#FFD700",
+            "#C0C0C0",
+            "#CD7F32"
+        ],
+        "chart": {
+            "type": "column",
+            "polar": true,
+            "inverted": true
+        },
+        "title": {
+            "text": "Winter Olympic Medals per Country (TOP 5)",
+            "style": {
+                "fontSize": "18px",
+                "color": "#2F4F4F"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Norway",
+                "United States",
+                "Germany",
+                "Canada",
+                "Austria"
+            ],
+            "labels": {
+                "useHTML": true,
+                "formatter": "function() { return `${this.value} <img src='flags/${this.value.toLowerCase()}.png' width='20'>`; }",
+                "style": {
+                    "fontSize": "12px",
+                    "fontWeight": "600"
+                }
+            },
+            "lineWidth": 0
+        },
+        "yAxis": {
+            "title": {
+                "text": "Total Medals",
+                "style": {
+                    "color": "#666"
+                }
+            },
+            "gridLineColor": "#F0F0F0",
+            "tickInterval": 50
+        },
+        "plotOptions": {
+            "column": {
+                "stacking": "normal",
+                "depth": 35,
+                "grouping": false
+            }
+        },
+        "series": [
+            {
+                "name": "Gold",
+                "data": [
+                    132,
+                    105,
+                    92,
+                    73,
+                    64
+                ],
+                "color": "#FFD700",
+                "borderWidth": 1
+            },
+            {
+                "name": "Silver",
+                "data": [
+                    125,
+                    110,
+                    86,
+                    64,
+                    81
+                ],
+                "color": "#C0C0C0",
+                "borderWidth": 1
+            },
+            {
+                "name": "Bronze",
+                "data": [
+                    111,
+                    90,
+                    60,
+                    62,
+                    87
+                ],
+                "color": "#CD7F32",
+                "borderWidth": 1
+            }
+        ],
+        "pane": {
+            "size": "85%",
+            "innerSize": "20%",
+            "endAngle": 360
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "itemStyle": {
+                "color": "#444"
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains three quantitative variables (medal counts) across five categorical dimensions (countries). Synthetic data preserves real-world medal distribution patterns: Norway leads with total \u03bc=368 (\u03c3=42), followed by United States (\u03bc=305, \u03c3=45). Polar layout enables radial comparison of national achievements while stacking reveals medal type proportions. Color encoding follows Olympic tradition (gold-silver-bronze) for immediate recognition. The inverted polar design maximizes data-ink ratio by eliminating redundant axes and using radial position for magnitude encoding. Value labels use absolute positioning at 12px font size to maintain readability in dense radial layout. Medal counts follow Pareto distribution (\u03b1=0.7) consistent with historical Olympic performance data."
+}

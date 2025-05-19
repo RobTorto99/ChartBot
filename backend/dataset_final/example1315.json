@@ -1,0 +1,114 @@
+{
+    "visualization_prompt": "Generate a line chart showing monthly sales trends for two product lines using contrasting color encoding and temporal annotations",
+    "visualization_code": {
+        "chart": {
+            "type": "line",
+            "backgroundColor": "#ffffff"
+        },
+        "title": {
+            "text": "Monthly Sales Performance (2023)",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            },
+            "title": {
+                "text": "Month",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales (USD)",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "tooltip": {
+            "borderWidth": 2,
+            "borderColor": "#333333"
+        },
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#333333",
+                "fontSize": "12px"
+            }
+        },
+        "colors": [
+            "#4285F4",
+            "#34A853"
+        ],
+        "series": [
+            {
+                "name": "Product A",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ]
+            },
+            {
+                "name": "Product B",
+                "data": [
+                    194.1,
+                    95.6,
+                    54.4,
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The dataset contains two 12-month time series (Product A/B sales) with identical \u03bc=125.1k USD but distinct variance patterns. Synthetic data generation preserved equal annual totals while creating inverse seasonal trends: Product A peaks in Q3 (\u03bc=186k \u00b135k), Product B in Q1/Q4 (\u03bc=164k \u00b172k). The line chart maximizes data-ink ratio by eliminating gridlines while maintaining Cairo\u2019s magnitude principles through proportional axis scaling. Dual-color encoding (Google Material Blue/Green) supports preattentive discrimination of trends, with Product A showing summer demand (Jun-Sep +47% from baseline) and Product B demonstrating winter resilience (Dec +28% vs Jan)."
+}

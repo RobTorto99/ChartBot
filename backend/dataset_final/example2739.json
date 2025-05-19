@@ -1,0 +1,107 @@
+{
+    "visualization_prompt": "Generate a line chart showing monthly energy consumption trends using synthetic data with seasonal variation and a positive trend",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "line",
+                "styledMode": true,
+                "backgroundColor": "#f8f9fa"
+            },
+            "title": {
+                "text": "2023 Industrial Energy Consumption",
+                "style": {
+                    "color": "#2c3e50",
+                    "fontSize": "20px",
+                    "fontWeight": "bold"
+                }
+            },
+            "subtitle": {
+                "text": "Highlighting April anomaly (\u03bc=215 kWh, \u03c3=28.5)",
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            },
+            "xAxis": {
+                "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "labels": {
+                    "style": {
+                        "color": "#34495e",
+                        "fontSize": "12px"
+                    }
+                },
+                "title": {
+                    "text": "Month",
+                    "style": {
+                        "color": "#34495e",
+                        "fontSize": "14px"
+                    }
+                }
+            },
+            "yAxis": {
+                "title": {
+                    "text": "Consumption (kWh \u00d7 1000)",
+                    "style": {
+                        "color": "#34495e",
+                        "fontSize": "14px"
+                    }
+                },
+                "labels": {
+                    "style": {
+                        "color": "#34495e",
+                        "fontSize": "12px"
+                    }
+                }
+            },
+            "series": [
+                {
+                    "name": "Energy Usage",
+                    "data": [
+                        185,
+                        192,
+                        208,
+                        {
+                            "y": 242,
+                            "marker": {
+                                "enabled": true,
+                                "fillColor": "#e74c3c",
+                                "radius": 6
+                            }
+                        },
+                        225,
+                        238,
+                        255,
+                        263,
+                        247,
+                        231,
+                        219,
+                        198
+                    ],
+                    "color": "#27ae60",
+                    "marker": {
+                        "enabled": false
+                    }
+                }
+            ],
+            "legend": {
+                "itemStyle": {
+                    "color": "#2c3e50",
+                    "fontSize": "12px"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset contains 12 monthly observations of energy consumption (ratio scale) with synthetic generation following two statistical properties: 1) An upward trend (2.8% monthly growth) and 2) Seasonal variation (\u00b112% from trend). Synthetic values were created using y_t = 185*(1.028)^t + \u03b5_t, where \u03b5_t \u223c N(0,28.5) with added April outlier. The line chart maximizes data-ink ratio by eliminating redundant markers while preserving Cairo's principle of proportional ink through continuous path encoding. The single highlighted marker draws attention to April's 15% deviation from expected values while maintaining visual continuity. Color choices (#27ae60 for growth, #e74c3c for anomaly) follow ISO 9241-12 contrast standards for technical displays."
+}

@@ -1,0 +1,95 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a polar column chart with two data series. The chart should have a title 'Data labels enabled' and a subtitle 'The inside option is set to true'. The chart should be inverted and have a margin top of 40 pixels. The chart should have two panes, each with different start and end angles, and centered differently. The x-axis and y-axis should have tick intervals of 1, and data labels should be enabled and inside the columns. The chart should have a height of 600px and a width of 600px, centered on the page.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "inverted": true,
+            "polar": true,
+            "marginTop": 40
+        },
+        "title": {
+            "text": "Data labels enabled"
+        },
+        "subtitle": {
+            "text": "The inside option is set to true"
+        },
+        "pane": [
+            {
+                "size": "80%",
+                "startAngle": 225,
+                "endAngle": 405,
+                "center": [
+                    "50%",
+                    "48%"
+                ]
+            },
+            {
+                "size": "80%",
+                "startAngle": 45,
+                "endAngle": 225,
+                "center": [
+                    "50%",
+                    "52%"
+                ]
+            }
+        ],
+        "xAxis": [
+            {
+                "tickInterval": 1,
+                "labels": {
+                    "enabled": false
+                }
+            },
+            {
+                "pane": 1,
+                "tickInterval": 1,
+                "labels": {
+                    "enabled": false
+                }
+            }
+        ],
+        "yAxis": [
+            {
+                "tickInterval": 1,
+                "showEmpty": false
+            },
+            {
+                "pane": 1,
+                "tickInterval": 1,
+                "showEmpty": false
+            }
+        ],
+        "plotOptions": {
+            "series": {
+                "grouping": false,
+                "dataLabels": {
+                    "enabled": true,
+                    "inside": true
+                }
+            }
+        },
+        "series": [
+            {
+                "data": [
+                    10,
+                    9,
+                    8,
+                    7,
+                    6
+                ]
+            },
+            {
+                "xAxis": 1,
+                "yAxis": 1,
+                "data": [
+                    10,
+                    9,
+                    8,
+                    7,
+                    6
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object configures a polar column chart with specific settings. The chart is of type 'column', inverted, and polar, with a margin top of 40 pixels. It has a title 'Data labels enabled' and a subtitle 'The inside option is set to true'. The chart is divided into two panes, each with different start and end angles and centered differently. The x-axis and y-axis have tick intervals of 1, and labels are disabled for the x-axis. Data labels are enabled and positioned inside the columns. The chart is designed to be displayed within a container with a height and width of 600 pixels, centered on the page."
+}

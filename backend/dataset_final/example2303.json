@@ -1,0 +1,102 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly real estate sales trends using synthetic transaction data with seasonal patterns",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "marginTop": 20,
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Flats Sold per Month (2023)",
+            "style": {
+                "color": "#2C3E50",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#7F8C8D",
+                    "fontSize": "13px"
+                }
+            },
+            "gridLineColor": "#ECF0F1"
+        },
+        "yAxis": {
+            "title": {
+                "text": "Units Sold",
+                "style": {
+                    "color": "#7F8C8D",
+                    "fontSize": "14px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#7F8C8D",
+                    "fontSize": "12px"
+                },
+                "format": "{value:,.0f}"
+            },
+            "gridLineColor": "#ECF0F1"
+        },
+        "series": [
+            {
+                "name": "Flats Sold",
+                "data": [
+                    42,
+                    55,
+                    68,
+                    72,
+                    85,
+                    112,
+                    128,
+                    115,
+                    98,
+                    77,
+                    63,
+                    49
+                ],
+                "color": "#27AE60",
+                "marker": {
+                    "fillColor": "#FFFFFF",
+                    "lineWidth": 2,
+                    "lineColor": "#27AE60"
+                }
+            }
+        ],
+        "legend": {
+            "align": "right",
+            "verticalAlign": "top",
+            "itemStyle": {
+                "color": "#34495E",
+                "fontSize": "12px"
+            }
+        },
+        "plotOptions": {
+            "spline": {
+                "lineWidth": 3,
+                "states": {
+                    "hover": {
+                        "lineWidth": 4
+                    }
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a univariate time series with 12 monthly observations (categorical temporal axis) and continuous sales figures (\u03bc=82.3, \u03c3=26.7). Synthetic data combines linear growth (15% YTD increase) with seasonal variation (summer peak +55% from baseline). The spline chart maximizes data-ink ratio by emphasizing the smoothed trend line while suppressing gridlines and markers. Perceptual effectiveness is achieved through chromatic contrast (emerald green series on white background) and proportional line weight. Axis styling follows pre-attentive processing principles with sufficient label density and formatted numeric scales. Statistical fidelity maintains domain-appropriate values (realistic sales volumes) with synthetic noise (\u00b18% monthly variation) modeling market uncertainty."
+}

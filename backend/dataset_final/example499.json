@@ -1,0 +1,39 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a stock chart with the following specifications: Chart type: spline, Chart title: '2 Years of AAPL Stock Price', Axes and labels styling: X-axis should be datetime type with a crosshair enabled, Y-axis labels should be formatted as '${value}' with no title, Data series: AAPL stock price data fetched from 'https://demo-live-data.highcharts.com/aapl-c.json', Custom colors: Crosshair color should be '#9080a0', Additional configurations: Chart background should be transparent, legend should be disabled.",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "transparent"
+        },
+        "title": {
+            "text": "2 Years of AAPL Stock Price",
+            "align": "left"
+        },
+        "xAxis": {
+            "type": "datetime",
+            "crosshair": {
+                "enabled": true,
+                "width": 3,
+                "color": "#9080a0"
+            }
+        },
+        "yAxis": {
+            "labels": {
+                "format": "${value}"
+            },
+            "title": {
+                "enabled": false
+            }
+        },
+        "legend": {
+            "enabled": false
+        },
+        "series": [
+            {
+                "name": "AAPL",
+                "data": []
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a spline chart displaying the stock price of AAPL over two years. The chart's background is set to transparent, and the title is aligned to the left. The X-axis is of datetime type, with a crosshair feature enabled to highlight specific points on the chart. The Y-axis labels are formatted to display values in a currency format, with the title disabled. The legend is also disabled to simplify the chart. The data series is named 'AAPL' and is expected to be populated with stock price data fetched from a specified URL. The crosshair color is customized to '#9080a0'. This configuration is designed to create a clean and informative stock chart with minimal visual clutter."
+}

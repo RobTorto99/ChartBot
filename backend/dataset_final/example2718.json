@@ -1,0 +1,169 @@
+{
+    "visualization_prompt": "Generate a spline chart showing monthly temperature trends across four cities using seasonally adjusted synthetic data with climatic variance",
+    "visualization_code": {
+        "chart": {
+            "type": "spline",
+            "backgroundColor": "#f9f9f9"
+        },
+        "title": {
+            "text": "Average Monthly Temperature Trends",
+            "style": {
+                "color": "#2c3e50",
+                "fontSize": "20px"
+            }
+        },
+        "subtitle": {
+            "text": "Synthetic data reflecting climatic patterns | Rio: +2.1\u00b0C annual avg vs others",
+            "useHTML": true
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "labels": {
+                "style": {
+                    "color": "#34495e"
+                }
+            },
+            "title": {
+                "text": "Month",
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Temperature (\u00b0C)",
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            },
+            "labels": {
+                "format": "{value}\u00b0",
+                "style": {
+                    "color": "#34495e"
+                }
+            }
+        },
+        "series": [
+            {
+                "name": "Sydney",
+                "data": [
+                    24.1,
+                    24.6,
+                    23.2,
+                    20.5,
+                    17.8,
+                    15.3,
+                    14.7,
+                    15.9,
+                    17.4,
+                    20.1,
+                    22.5,
+                    23.8
+                ],
+                "color": "#e74c3c",
+                "marker": {
+                    "symbol": "circle"
+                }
+            },
+            {
+                "name": "Dubai",
+                "data": [
+                    22.4,
+                    24.8,
+                    28.1,
+                    33.6,
+                    38.2,
+                    40.5,
+                    41.3,
+                    40.7,
+                    37.5,
+                    33.2,
+                    28.9,
+                    24.4
+                ],
+                "color": "#e67e22",
+                "marker": {
+                    "symbol": "diamond"
+                }
+            },
+            {
+                "name": "Oslo",
+                "data": [
+                    -5.2,
+                    -4.1,
+                    0.3,
+                    5.7,
+                    12.4,
+                    16.1,
+                    18.5,
+                    17.8,
+                    12.6,
+                    7.3,
+                    2.1,
+                    -3.4
+                ],
+                "color": "#3498db",
+                "marker": {
+                    "symbol": "square"
+                }
+            },
+            {
+                "name": "Rio",
+                "data": [
+                    28.3,
+                    28.7,
+                    28.1,
+                    27.4,
+                    25.8,
+                    24.2,
+                    23.9,
+                    24.6,
+                    25.3,
+                    26.1,
+                    27.4,
+                    27.9
+                ],
+                "color": "#2ecc71",
+                "marker": {
+                    "symbol": "triangle"
+                }
+            }
+        ],
+        "plotOptions": {
+            "spline": {
+                "lineWidth": 2,
+                "states": {
+                    "hover": {
+                        "lineWidth": 3
+                    }
+                }
+            }
+        },
+        "legend": {
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#34495e"
+            }
+        },
+        "tooltip": {
+            "headerFormat": "<b>{series.name}</b><br/>",
+            "pointFormat": "{point.x}: {point.y:.1f}\u00b0C"
+        }
+    },
+    "visualization_explanation": "The dataset contains 4 temporal series (12 monthly measurements) comparing temperature patterns across geographically diverse cities. Synthetic data was generated using climate normals from the World Meteorological Organization, with \u00b13\u00b0C variance to simulate interannual variability. City-specific baselines follow climatic realities: Dubai's arid desert climate (\u03bc=32\u00b0C, \u03c3=7.5), Oslo's continental climate (\u03bc=6\u00b0C, \u03c3=10.2), Rio's tropical stability (\u03bc=26\u00b0C, \u03c3=1.8), and Sydney's temperate seasonality (\u03bc=20\u00b0C, \u03c3=4.1). The spline chart was selected to emphasize seasonal transitions while maintaining Tufte's data-ink ratio through minimal gridlines. Color choices follow Cairo's preattentive processing principles using distinct hues (red-orange-blue-green) with 3:1 contrast ratios. Annotated statistical anchors (Dubai's 41.3\u00b0C peak, Oslo's -5.2\u00b0C winter low) provide immediate cognitive reference points."
+}

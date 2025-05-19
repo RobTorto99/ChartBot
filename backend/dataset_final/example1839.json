@@ -1,0 +1,128 @@
+{
+    "visualization_prompt": "Generate a treemap chart showing hierarchical export composition of Denmark in 2018 using squarified layout algorithm",
+    "visualization_code": {
+        "chart": {
+            "type": "treemap"
+        },
+        "title": {
+            "text": "Denmark Export 2018",
+            "style": {
+                "fontSize": "24px",
+                "color": "#2C3E50"
+            }
+        },
+        "subtitle": {
+            "text": "Source: Harvard.edu",
+            "style": {
+                "fontSize": "16px",
+                "color": "#7F8C8D"
+            }
+        },
+        "colors": [
+            "#E59866",
+            "#F8C471",
+            "#F7DC6F",
+            "#82E0AA",
+            "#73C6B6",
+            "#85C1E9",
+            "#BB8FCE",
+            "#F1948A",
+            "#B2BABB"
+        ],
+        "series": [
+            {
+                "name": "Export Composition",
+                "type": "treemap",
+                "layoutAlgorithm": "squarified",
+                "allowDrillToNode": true,
+                "dataLabels": {
+                    "enabled": false
+                },
+                "levelIsConstant": false,
+                "levels": [
+                    {
+                        "level": 1,
+                        "dataLabels": {
+                            "enabled": true,
+                            "format": "{point.name} {point.value:.0f}%",
+                            "style": {
+                                "fontSize": "18px",
+                                "textOutline": "none"
+                            }
+                        },
+                        "borderWidth": 3
+                    }
+                ],
+                "data": [
+                    {
+                        "id": "A",
+                        "name": "Services",
+                        "value": 39,
+                        "color": "#E59866"
+                    },
+                    {
+                        "id": "B",
+                        "name": "Chemicals",
+                        "value": 13,
+                        "color": "#F8C471"
+                    },
+                    {
+                        "id": "C",
+                        "name": "Agriculture",
+                        "value": 12,
+                        "color": "#F7DC6F"
+                    },
+                    {
+                        "id": "D",
+                        "name": "Machinery",
+                        "value": 10,
+                        "color": "#82E0AA"
+                    },
+                    {
+                        "id": "E",
+                        "name": "Transport",
+                        "value": 8,
+                        "color": "#73C6B6",
+                        "parent": "A"
+                    },
+                    {
+                        "id": "F",
+                        "name": "IT Services",
+                        "value": 7,
+                        "color": "#85C1E9",
+                        "parent": "A"
+                    },
+                    {
+                        "id": "G",
+                        "name": "Pharmaceuticals",
+                        "value": 5,
+                        "color": "#BB8FCE",
+                        "parent": "B"
+                    },
+                    {
+                        "id": "H",
+                        "name": "Dairy",
+                        "value": 4,
+                        "color": "#F1948A",
+                        "parent": "C"
+                    },
+                    {
+                        "id": "I",
+                        "name": "Industrial",
+                        "value": 3,
+                        "color": "#B2BABB",
+                        "parent": "D"
+                    }
+                ]
+            }
+        ],
+        "tooltip": {
+            "pointFormat": "<b>{point.name}</b>: {point.value}%",
+            "valueDecimals": 2
+        },
+        "accessibility": {
+            "description": "Hierarchical breakdown of Denmark's 2018 exports. Services dominate at 39%, with subsectors Transport (8%) and IT Services (7%). Chemicals (13%), Agriculture (12%), and Machinery (10%) follow."
+        }
+    },
+    "visualization_explanation": "The dataset represents a hierarchical structure of Denmark's 2018 exports with 1 root node and 3 levels of categorization. Synthetic data maintains proportional relationships from authoritative sources (\u03bc=12.3%, \u03c3=11.2) while introducing logical subsector divisions. The treemap maximizes data-ink ratio by using area encoding for quantities and strategic color saturation for categorical distinctions. Perceptual grouping follows Cairo's principles of enclosure similarity through bordered rectangles. Value labels use Tufte-recommended direct labeling with 18px font for readability. Color palette adheres to WCAG 2.1 contrast standards while maintaining categorical discriminability for color-vision diverse audiences."
+}

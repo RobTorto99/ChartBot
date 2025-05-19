@@ -1,0 +1,93 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object that renders a bar chart with the following specifications: The chart type should be 'bar'. The chart title should be 'Monthly Average Rainfall'. The axes and labels should be styled with specific colors and font sizes: the title font size should be 18px, the axis labels font size should be 14px, and the axis title color should be '#333333'. The data series should include one series named 'Rainfall' with the data provided in the JavaScript code. Custom colors for the bars should be '#008000' (green). Additional configurations should include setting the chart margins to 50px, a white background for the chart, and a legend with a vertical layout, floating, white background, aligned to the right, and positioned at the top with an offset.",
+    "visualization_code": {
+        "chart": {
+            "type": "bar",
+            "marginTop": 50,
+            "marginRight": 50,
+            "marginBottom": 50,
+            "marginLeft": 50,
+            "backgroundColor": "#FFFFFF"
+        },
+        "title": {
+            "text": "Monthly Average Rainfall",
+            "style": {
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ],
+            "title": {
+                "text": "Months",
+                "style": {
+                    "color": "#333333"
+                }
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Rainfall (mm)",
+                "style": {
+                    "color": "#333333"
+                }
+            },
+            "labels": {
+                "style": {
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "legend": {
+            "layout": "vertical",
+            "floating": true,
+            "backgroundColor": "#FFFFFF",
+            "align": "right",
+            "verticalAlign": "top",
+            "y": 60,
+            "x": -60
+        },
+        "tooltip": {
+            "headerFormat": "<b>{series.name}</b><br/>",
+            "pointFormat": "{point.category}: {point.y}"
+        },
+        "series": [
+            {
+                "name": "Rainfall",
+                "data": [
+                    29.9,
+                    71.5,
+                    106.4,
+                    129.2,
+                    144.0,
+                    176.0,
+                    135.6,
+                    148.5,
+                    216.4,
+                    194.1,
+                    95.6,
+                    54.4
+                ],
+                "color": "#008000"
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a bar chart with specific settings. The chart type is set to 'bar', and it includes a title 'Monthly Average Rainfall' with a font size of 18px. The x-axis and y-axis are labeled with 'Months' and 'Rainfall (mm)' respectively, both styled with a font size of 14px and a title color of '#333333'. The data series includes one series named 'Rainfall' with the given monthly rainfall data, and the bars are colored green ('#008000'). The chart has custom margins set to 50px on all sides and a white background. The legend is configured to be vertical, floating, with a white background, aligned to the right, and positioned at the top with an offset. The tooltip displays the series name and the specific data point when hovered over."
+}

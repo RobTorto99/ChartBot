@@ -1,0 +1,105 @@
+{
+    "visualization_prompt": "Create a Highcharts spiderweb chart (radar chart) to compare the allocated budget against actual spending within an organization. The chart should have six spokes, each representing a department: Sales, Marketing, Development, Customer Support, Information Technology, and Administration. The chart should include two series: 'Allocated Budget' and 'Actual Spending'. The title of the chart should be 'Budget vs Spending'. The axes and labels should be styled with specific colors and font sizes. The chart should also include a tooltip that displays the data points upon hovering. Additionally, the chart should be responsive, adjusting the legend and pane size for smaller screens.",
+    "visualization_code": {
+        "chart": {
+            "polar": true,
+            "type": "line"
+        },
+        "accessibility": {
+            "description": "A spiderweb chart compares the allocated budget against actual spending within an organization. The spider chart has six spokes. Each spoke represents one of the 6 departments within the organization: sales, marketing, development, customer support, information technology and administration. The chart is interactive, and each data point is displayed upon hovering. The chart clearly shows that 4 of the 6 departments have overspent their budget with Marketing responsible for the greatest overspend of $20,000. The allocated budget and actual spending data points for each department are as follows: Sales. Budget equals $43,000; spending equals $50,000. Marketing. Budget equals $19,000; spending equals $39,000. Development. Budget equals $60,000; spending equals $42,000. Customer support. Budget equals $35,000; spending equals $31,000. Information technology. Budget equals $17,000; spending equals $26,000. Administration. Budget equals $10,000; spending equals $14,000."
+        },
+        "title": {
+            "text": "Budget vs Spending",
+            "x": -80
+        },
+        "pane": {
+            "size": "80%"
+        },
+        "xAxis": {
+            "categories": [
+                "Sales",
+                "Marketing",
+                "Development",
+                "Customer Support",
+                "Information Technology",
+                "Administration"
+            ],
+            "tickmarkPlacement": "on",
+            "lineWidth": 0,
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "yAxis": {
+            "gridLineInterpolation": "polygon",
+            "lineWidth": 0,
+            "min": 0,
+            "labels": {
+                "style": {
+                    "color": "#333",
+                    "fontSize": "12px"
+                }
+            }
+        },
+        "tooltip": {
+            "shared": true,
+            "pointFormat": "<span style=\"color:{series.color}\">{series.name}: <b>${point.y:,.0f}</b><br/>"
+        },
+        "legend": {
+            "align": "right",
+            "verticalAlign": "middle",
+            "layout": "vertical"
+        },
+        "series": [
+            {
+                "name": "Allocated Budget",
+                "data": [
+                    43000,
+                    19000,
+                    60000,
+                    35000,
+                    17000,
+                    10000
+                ],
+                "pointPlacement": "on",
+                "color": "#008000"
+            },
+            {
+                "name": "Actual Spending",
+                "data": [
+                    50000,
+                    39000,
+                    42000,
+                    31000,
+                    26000,
+                    14000
+                ],
+                "pointPlacement": "on",
+                "color": "#FF0000"
+            }
+        ],
+        "responsive": {
+            "rules": [
+                {
+                    "condition": {
+                        "maxWidth": 500
+                    },
+                    "chartOptions": {
+                        "legend": {
+                            "align": "center",
+                            "verticalAlign": "bottom",
+                            "layout": "horizontal"
+                        },
+                        "pane": {
+                            "size": "70%"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "visualization_explanation": "The provided Highcharts configuration creates a spiderweb chart (radar chart) that visually compares the allocated budget against actual spending for six departments within an organization. The chart is titled 'Budget vs Spending' and includes two data series: 'Allocated Budget' and 'Actual Spending'. Each series is represented by a different color: green for the allocated budget and red for the actual spending. The chart is designed to be interactive, with tooltips displaying detailed information when hovering over data points. The axes and labels are styled with a dark color and a font size of 12px for better readability. The chart is also responsive, adjusting the legend and pane size for smaller screens to ensure optimal viewing experience across different devices."
+}

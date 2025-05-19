@@ -1,0 +1,129 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render a column chart with the title 'Monthly Sales Data'. The chart should have styled axes and labels with specific colors and font sizes. The data series should include the names 'First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', and 'Ninth', each with corresponding data points. The chart should also have custom colors and additional configurations such as chart margins, background, and legend settings.",
+    "visualization_code": {
+        "chart": {
+            "type": "column",
+            "marginBottom": 120,
+            "width": 500
+        },
+        "title": {
+            "text": "Monthly Sales Data",
+            "style": {
+                "color": "#333333",
+                "fontSize": "20px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Sales",
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "16px"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#666666",
+                    "fontSize": "14px"
+                }
+            }
+        },
+        "legend": {
+            "align": "center",
+            "verticalAlign": "bottom",
+            "layout": "horizontal"
+        },
+        "series": [
+            {
+                "name": "First",
+                "data": [
+                    6,
+                    4,
+                    2
+                ],
+                "color": "#FF6384"
+            },
+            {
+                "name": "Second",
+                "data": [
+                    7,
+                    3,
+                    2
+                ],
+                "color": "#36A2EB"
+            },
+            {
+                "name": "Third",
+                "data": [
+                    9,
+                    4,
+                    8
+                ],
+                "color": "#FFCE56"
+            },
+            {
+                "name": "Fourth",
+                "data": [
+                    1,
+                    2,
+                    6
+                ],
+                "color": "#4BC0C0"
+            },
+            {
+                "name": "Fifth",
+                "data": [
+                    4,
+                    6,
+                    4
+                ],
+                "color": "#9966FF"
+            },
+            {
+                "name": "Sixth",
+                "data": [
+                    1,
+                    2,
+                    7
+                ],
+                "color": "#C9CBCF"
+            },
+            {
+                "name": "Seventh",
+                "data": [
+                    4,
+                    2,
+                    5
+                ],
+                "color": "#FF9F40"
+            },
+            {
+                "name": "Eighth",
+                "data": [
+                    8,
+                    3,
+                    2
+                ],
+                "color": "#5B5F97"
+            },
+            {
+                "name": "Ninth",
+                "data": [
+                    4,
+                    5,
+                    6
+                ],
+                "color": "#BADC58"
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render a column chart titled 'Monthly Sales Data'. The chart includes specific styling for the title, axes, and labels, with defined colors and font sizes. The data series consists of nine series, each with a unique name and corresponding data points. Custom colors are assigned to each series to differentiate them visually. Additional configurations include setting the chart's bottom margin to 120 pixels, a fixed width of 500 pixels, and a legend that is horizontally aligned at the bottom of the chart."
+}

@@ -1,0 +1,87 @@
+{
+    "visualization_prompt": "Generate a solid gauge chart showing single KPI completion rate using concentric arc encoding with rounded border radius",
+    "visualization_code": {
+        "chartOptions": {
+            "chart": {
+                "type": "solidgauge",
+                "height": "120%",
+                "marginTop": 20
+            },
+            "title": {
+                "text": "Project Completion Status",
+                "style": {
+                    "fontSize": "20px",
+                    "color": "#2c3e50"
+                }
+            },
+            "subtitle": {
+                "text": "Q3 2024 Milestone",
+                "style": {
+                    "color": "#7f8c8d"
+                }
+            },
+            "pane": {
+                "startAngle": -90,
+                "endAngle": 90,
+                "background": [
+                    {
+                        "innerRadius": "75%",
+                        "outerRadius": "110%",
+                        "shape": "arc",
+                        "borderRadius": 50,
+                        "borderWidth": 2,
+                        "borderColor": "#bdc3c7"
+                    }
+                ],
+                "center": [
+                    "50%",
+                    "80%"
+                ],
+                "size": "140%"
+            },
+            "yAxis": {
+                "min": 0,
+                "max": 100,
+                "tickInterval": 10,
+                "labels": {
+                    "distance": 20,
+                    "style": {
+                        "color": "#95a5a6",
+                        "fontSize": "12px"
+                    }
+                },
+                "lineColor": "#ecf0f1",
+                "minorTickWidth": 0
+            },
+            "series": [
+                {
+                    "name": "Implementation Progress",
+                    "data": [
+                        38
+                    ],
+                    "dataLabels": {
+                        "format": "<div style='text-align:center'>{y}%<br/><span style='font-size:12px'>of target</span></div>",
+                        "verticalAlign": "middle",
+                        "borderWidth": 0,
+                        "style": {
+                            "fontSize": "28px",
+                            "color": "#2c3e50",
+                            "textOutline": "none"
+                        },
+                        "y": -20
+                    },
+                    "innerRadius": "85%",
+                    "borderRadius": 15,
+                    "color": "#3498db"
+                }
+            ],
+            "plotOptions": {
+                "solidgauge": {
+                    "rounded": true,
+                    "linecap": "round"
+                }
+            }
+        }
+    },
+    "visualization_explanation": "The dataset represents a single quantitative metric (38%) within a 0-100 scale, structured as univariate continuous data. Synthetic value maintains domain validity for percentage completion metrics, with fixed precision to avoid decimal artifacts. The solid gauge visualization employs Tufte's data-ink maximization by removing redundant gridlines while preserving meaningful scale markers. Cairo's preattentive processing is leveraged through: 1) Radial position encoding (angle = magnitude), 2) Contrast-enhanced center label, 3) Color saturation progression. Statistical anchoring shows synthetic data preserves ratio scaling (\u03bc=38, \u03c3=0) while maintaining contextual plausibility through constrained value ranges. The concentric border radius (15px) improves shape perception through closure principle while maintaining proportional area accuracy."
+}

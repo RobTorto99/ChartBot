@@ -1,0 +1,121 @@
+{
+    "visualization_prompt": "Create a Highcharts chartOptions object to render an areaspline chart with the following specifications: Chart type: areaspline, Chart title: 'Sample Areaspline Chart', Axes and labels styling: Use a dark theme with white text for labels and titles, Data series: Three series with the provided data, Custom colors: Use a gradient from blue to green for the fill color, Additional configurations: Set chart margins to 50px, add a legend at the bottom, and use a dark background.",
+    "visualization_code": {
+        "chart": {
+            "type": "areaspline",
+            "backgroundColor": "#2c3e50",
+            "margin": [
+                50,
+                50,
+                50,
+                50
+            ]
+        },
+        "title": {
+            "text": "Sample Areaspline Chart",
+            "style": {
+                "color": "#ffffff",
+                "fontSize": "18px"
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "style": {
+                    "color": "#ffffff"
+                }
+            }
+        },
+        "yAxis": {
+            "title": {
+                "text": "Values",
+                "style": {
+                    "color": "#ffffff"
+                }
+            },
+            "labels": {
+                "style": {
+                    "color": "#ffffff"
+                }
+            }
+        },
+        "plotOptions": {
+            "series": {
+                "stacking": "normal",
+                "fillOpacity": 0.3,
+                "connectNulls": true,
+                "color": {
+                    "linearGradient": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 0,
+                        "y2": 1
+                    },
+                    "stops": [
+                        [
+                            0,
+                            "#0073e6"
+                        ],
+                        [
+                            1,
+                            "#00b300"
+                        ]
+                    ]
+                }
+            }
+        },
+        "legend": {
+            "layout": "horizontal",
+            "align": "center",
+            "verticalAlign": "bottom",
+            "itemStyle": {
+                "color": "#ffffff"
+            }
+        },
+        "series": [
+            {
+                "name": "Series 1",
+                "data": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                ],
+                "pointStart": 2
+            },
+            {
+                "name": "Series 2",
+                "data": [
+                    1,
+                    2,
+                    null,
+                    2,
+                    1,
+                    1
+                ]
+            },
+            {
+                "name": "Series 3",
+                "data": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                ]
+            }
+        ]
+    },
+    "visualization_explanation": "The provided Highcharts chartOptions object is configured to render an areaspline chart with a dark theme. The chart title is set to 'Sample Areaspline Chart' with white text and a font size of 18px. The axes labels and titles are styled with white text to contrast with the dark background. The data series include three sets of data, each with a unique name and specific data points. The areaspline series are stacked normally, with a fill opacity of 0.3 and null values connected to maintain continuity. The fill color for the series is a gradient from blue to green, enhancing the visual appeal. Additional configurations include setting the chart margins to 50px on all sides, positioning the legend at the bottom center, and using a dark background color for the chart area."
+}
