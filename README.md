@@ -22,7 +22,7 @@ Este repositorio contiene un **ChatBot** capaz de recibir texto y/o un archivo C
 
 ```bash
 git clone https://github.com/RobTorto99/ChartBot.git
-cd Proyecto-de-TFG
+cd Chartbot_TFG
 ```
 
 ### 2. Backend
@@ -100,5 +100,7 @@ cd Proyecto-de-TFG
 ## Contacto
 
 **Roberto Tortoledo**
+
 [roberto7tortoledo@gmail.com](mailto:roberto7tortoledo@gmail.com)
+
 TFG: “Desarrollo de aplicación web para implementar Inteligencia Artificial Generativa ajustada vía QLoRA en la creación de visualizaciones de datos”
