@@ -3,7 +3,7 @@
 Este repositorio contiene un **ChatBot** capaz de recibir texto y/o un archivo CSV/Excel y, opcionalmente, generar gráficos interactivos con Highcharts. El sistema consta de:
 
 * **Backend** en Flask + PyTorch + Unsloth.
-* **Frontend** con React (Vite + TailwindCSS).
+* **Frontend** con TypeScript, React (Vite + TailwindCSS).
 
 ---
 
