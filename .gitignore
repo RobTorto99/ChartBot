@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 
+output_logs_QLoRA/*
 dataset_final/*
 
 **/venv/
