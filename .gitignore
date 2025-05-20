@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 
-**/dataset_final/*
+dataset_final/*
 
 **/venv/
 # Editor directories and files
